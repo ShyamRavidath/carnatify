@@ -1,0 +1,24 @@
+"""Central configuration for Carnatify."""
+
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+DATA_DIR = PROJECT_ROOT / "data"
+SARAGA_DIR = DATA_DIR / "saraga"
+LYRICS_DB_DIR = DATA_DIR / "lyrics_db"
+MODELS_DIR = PROJECT_ROOT / "models"
+
+LYRICS_DB_PATH = LYRICS_DB_DIR / "lyrics.db"
+MEANINGS_CACHE_PATH = LYRICS_DB_DIR / "meanings_cache.json"
+
+SAMPLE_RATE = 44100
+HOP_SIZE = 128
+FRAME_SIZE = 2048
+
+MIN_AUDIO_DURATION_SECONDS = 10
+DEFAULT_QUERY_DURATION_SECONDS = 30
+
+TOP_K_RESULTS = 3
+RAGA_CONFIDENCE_THRESHOLD = 0.3
+TALA_CONFIDENCE_THRESHOLD = 0.4
+COMPOSITION_CONFIDENCE_THRESHOLD = 0.5
