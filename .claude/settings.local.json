@@ -3,7 +3,14 @@
     "allow": [
       "Bash(git init *)",
       "Bash(git add *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Skill(claude-api)",
+      "Bash(python -c \"import librosa, numpy, mirdata; print\\('deps ok'\\)\")",
+      "Bash(python3 -c \"import librosa, numpy, mirdata; print\\('deps ok'\\)\")",
+      "Bash(python3 -m py_compile src/carnatify/audio/utils.py src/carnatify/audio/data_loader.py src/carnatify/audio/feature_extractor.py src/carnatify/audio/catalog.py tests/test_audio.py)",
+      "Bash(python3 -c \"import numpy\")",
+      "Bash(python3 *)",
+      "Bash(python3 -m pip install librosa mirdata soundfile pytest --quiet)"
     ]
   }
 }
