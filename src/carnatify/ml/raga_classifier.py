@@ -1,19 +1,27 @@
-"""High-level raga classification inference API."""
+"""High-level raga classification inference API.
+
+Two entry points:
+  - RagaClassifier  : PyTorch-based classifier (CNN or TDNN) using AudioFeatures
+  - predict_raga()  : sklearn-based function using the joblib pkl models produced
+                      by train_raga.py — takes raw F0 arrays directly
+"""
 
 from __future__ import annotations
 
 from pathlib import Path
+from functools import lru_cache
 
 import numpy as np
 from numpy.typing import NDArray
 import torch
 
 from carnatify.audio.feature_extractor import FeatureExtractor
-from carnatify.config import RAGA_CONFIDENCE_THRESHOLD, TOP_K_RESULTS
+from carnatify.config import MODELS_DIR, RAGA_CONFIDENCE_THRESHOLD, TOP_K_RESULTS
 from carnatify.schemas import AudioFeatures, RagaPrediction
 
 from carnatify.ml.raga_dataset import RagaLabelEncoder
 from carnatify.ml.raga_model import RagaCNN, RagaTDNN
+from carnatify.ml.raga_features import extract_features
 
 _MODELS = {"pcd": RagaTDNN, "contour": RagaCNN}
 
@@ -80,3 +88,86 @@ class RagaClassifier:
         if not predictions:
             return True
         return predictions[0].confidence < self.confidence_threshold
+
+
+# ── sklearn-based predict_raga() ──────────────────────────────────────────────
+
+_DEFAULT_MODEL_PATH = MODELS_DIR / "raga_classifier.pkl"
+_DEFAULT_ENCODER_PATH = MODELS_DIR / "raga_label_encoder.pkl"
+
+
+@lru_cache(maxsize=1)
+def _load_sklearn_model(model_path: str, encoder_path: str):
+    """Load and cache the joblib sklearn bundle (called once per path pair)."""
+    import joblib  # optional dep; only needed for sklearn inference
+
+    bundle = joblib.load(model_path)
+    le = joblib.load(encoder_path)
+    return bundle["model"], le, bundle.get("metadata", {})
+
+
+def predict_raga(
+    frequencies: NDArray[np.float32 | np.float64],
+    tonic: float,
+    model_path: str | Path = _DEFAULT_MODEL_PATH,
+    label_encoder_path: str | Path = _DEFAULT_ENCODER_PATH,
+    top_k: int = TOP_K_RESULTS,
+) -> list[RagaPrediction]:
+    """Return top-k raga predictions from a raw F0 contour.
+
+    Uses the sklearn model produced by ``train_raga.py``, not the PyTorch
+    models. Designed for direct use when only a pitch array is available
+    (e.g. from mirdata track objects or Essentia output).
+
+    Parameters
+    ----------
+    frequencies:
+        F0 array in Hz (voiced frames > 0; silence / unvoiced = 0 or NaN).
+    tonic:
+        Estimated tonic frequency in Hz.
+    model_path:
+        Path to ``raga_classifier.pkl`` (joblib bundle with ``model`` and
+        ``metadata`` keys).
+    label_encoder_path:
+        Path to ``raga_label_encoder.pkl`` (sklearn LabelEncoder).
+    top_k:
+        Number of predictions to return (default 3).
+
+    Returns
+    -------
+    Sorted list of :class:`RagaPrediction` (highest confidence first).
+    Returns an empty list if the model files are absent or feature extraction
+    fails (e.g. clip is too short / all-silence).
+    """
+    model_path = Path(model_path)
+    label_encoder_path = Path(label_encoder_path)
+
+    if not model_path.exists() or not label_encoder_path.exists():
+        return []
+
+    feat = extract_features(frequencies, tonic)
+    if feat is None:
+        return []
+
+    clf, le, meta = _load_sklearn_model(str(model_path), str(label_encoder_path))
+
+    # Some sklearn classifiers expose predict_proba; fall back to a one-hot
+    # hard decision if the model was fitted without probability support.
+    X = feat.reshape(1, -1)
+    if hasattr(clf, "predict_proba"):
+        probs = clf.predict_proba(X)[0]
+    else:
+        idx = int(clf.predict(X)[0])
+        probs = np.zeros(len(le.classes_), dtype=np.float64)
+        probs[idx] = 1.0
+
+    k = min(top_k, len(probs))
+    top_idx = np.argsort(probs)[::-1][:k]
+
+    return [
+        RagaPrediction(
+            raga_name=str(le.inverse_transform([i])[0]),
+            confidence=float(probs[i]),
+        )
+        for i in top_idx
+    ]
