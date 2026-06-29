@@ -12,7 +12,7 @@ GET  /tracks             → [{track_id, title, raga, tonic}, ...]
 POST /predict {track_id} → {raga: [{name, confidence}], matches: [{title, score, track_id}]}
 GET  /meaning/{title}    → {title, composer, meaning}
 
-The Anthropic API key is read from the ANTHROPIC_API_KEY environment variable
+The Gemini API key is read from the GEMINI_API_KEY environment variable
 (set as a HuggingFace Space secret) — it never leaves the backend.
 """
 

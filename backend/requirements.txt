@@ -15,5 +15,5 @@ torch>=2.2                    # heavy but imported by raga_classifier; CPU wheel
 librosa>=0.10                 # imported by audio.feature_extractor
 dtaidistance>=2.3            # imported by ml.dtw_matcher
 
-anthropic>=0.25             # lyrics meaning generation
+google-generativeai>=0.8    # lyrics meaning generation (Gemini 2.0 Flash)
 # essentia intentionally omitted — feature_extractor imports it under try/except

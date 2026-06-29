@@ -1,7 +1,7 @@
 # Deploying Carnatify
 
 Two independent deploys: the **backend** (FastAPI → HuggingFace Spaces, Docker SDK)
-and the **frontend** (Next.js → Vercel). The Anthropic API key lives only on the
+and the **frontend** (Next.js → Vercel). The Gemini API key lives only on the
 backend; the frontend only knows the backend's public URL.
 
 ```
@@ -45,7 +45,7 @@ cd carnatify-api && git add -A && git commit -m "Carnatify API" && git push
 ### c. Space settings → Variables and secrets
 | Name                | Kind     | Value                                   |
 |---------------------|----------|-----------------------------------------|
-| `ANTHROPIC_API_KEY` | secret   | your Anthropic key (enables `/meaning`) |
+| `GEMINI_API_KEY`    | secret   | your Google Gemini key (enables `/meaning`) |
 | `FRONTEND_ORIGIN`   | variable | your Vercel URL, e.g. `https://carnatify.vercel.app` |
 
 The Space rebuilds on push. Verify: `curl https://<user>-carnatify-api.hf.space/health`.
@@ -78,7 +78,7 @@ cd frontend && npm install && npm run dev
 ---
 
 ## Notes
-- The Anthropic key is **never** referenced in `frontend/` — meaning generation
+- The Gemini key is **never** referenced in `frontend/` — meaning generation
   happens server-side in `/meaning`.
 - `/meaning` generates on demand and caches into `data/lyrics.db`. On an
   ephemeral Space filesystem the cache resets on rebuild; that's fine for a demo.

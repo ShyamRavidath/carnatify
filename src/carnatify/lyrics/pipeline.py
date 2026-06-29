@@ -227,11 +227,11 @@ class LyricsCatalog:
     def generate_meaning(self, title: str) -> str | None:
         """Return an English meaning for *title*, generating it if not cached.
 
-        Calls the Anthropic API (claude-sonnet-4-6) on first request, then
+        Calls the Gemini API (gemini-2.0-flash) on first request, then
         stores the result so subsequent calls are instant. Skips the API if a
         meaning is already stored.
 
-        Requires ANTHROPIC_API_KEY to be set in the environment.
+        Requires GEMINI_API_KEY to be set in the environment.
 
         Returns the meaning string, or None if *title* is not in the catalog.
         """
@@ -245,10 +245,9 @@ class LyricsCatalog:
         if row["meaning_en"]:
             return row["meaning_en"]
 
-        import anthropic
+        import google.generativeai as genai
 
-        api_key = os.environ.get("ANTHROPIC_API_KEY")
-        client = anthropic.Anthropic(api_key=api_key) if api_key else anthropic.Anthropic()
+        genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 
         raga = row["raga"] or "an unspecified raga"
         composer = row["composer"]
@@ -272,20 +271,16 @@ class LyricsCatalog:
                 "this raga in Carnatic tradition. Keep it to 2-3 short paragraphs."
             )
 
-        response = client.messages.create(
-            model="claude-sonnet-4-6",
-            max_tokens=1024,
-            system=(
+        model = genai.GenerativeModel(
+            "gemini-2.5-flash",
+            system_instruction=(
                 "You are a scholar of Carnatic music and its devotional poetry. "
                 "Explain compositions clearly for a general audience. "
                 "Write in plain English — no headers, no bullet points."
             ),
-            messages=[{"role": "user", "content": user_msg}],
         )
-
-        meaning = "".join(
-            block.text for block in response.content if block.type == "text"
-        ).strip()
+        response = model.generate_content(user_msg)
+        meaning = response.text.strip()
 
         self._conn.execute(
             """
