@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from pathlib import Path
+
 import numpy as np
 from numpy.typing import NDArray
 
@@ -40,3 +42,44 @@ class TalaDetector:
 
         features = FeatureExtractor().extract(audio, sr)
         return self.detect(features)
+
+
+# ── Standalone function API ───────────────────────────────────────────────────
+
+def detect_tala(audio_path: str | Path) -> dict[str, object]:
+    """Detect the tala of an audio file.
+
+    Loads the audio from ``audio_path``, runs librosa beat tracking, then uses
+    autocorrelation of inter-beat intervals to estimate the number of beats per
+    tala cycle. The beat count is mapped to a named Carnatic tala.
+
+    Parameters
+    ----------
+    audio_path:
+        Path to any audio file supported by librosa (MP3, WAV, FLAC, …).
+
+    Returns
+    -------
+    dict with keys:
+        ``"tala"``           – name string (e.g. ``"Adi"``, ``"Unknown"``)
+        ``"beats_per_cycle"``– estimated integer beats per cycle (0 if unknown)
+        ``"confidence"``     – float in [0, 1]
+    """
+    import librosa  # lazy import — not needed unless this function is called
+
+    audio, sr = librosa.load(str(audio_path), sr=22050, mono=True)
+    _, beat_frames = librosa.beat.beat_track(y=audio, sr=sr)
+    beat_times = librosa.frames_to_time(beat_frames, sr=sr)
+
+    # Extended range covers 14-beat Misra cycles; default cap of 12 misses them.
+    analyzer = TalaAnalyzer(max_beats_per_cycle=16)
+    cycle_duration = analyzer.estimate_cycle_length(beat_times)
+    beats_per_cycle = analyzer.estimate_beats_per_cycle(beat_times, cycle_duration)
+    tempo_bpm = analyzer.estimate_tempo(beat_times)
+    tala_name, confidence = analyzer.classify_tala(beats_per_cycle, cycle_duration, tempo_bpm)
+
+    return {
+        "tala": tala_name,
+        "beats_per_cycle": beats_per_cycle,
+        "confidence": float(confidence),
+    }

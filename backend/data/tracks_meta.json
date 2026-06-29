@@ -1,0 +1,1381 @@
+[
+  {
+    "track_id": "13_Thillana_Purnachandrika",
+    "key": "t0",
+    "title": "Thillana",
+    "tonic": 138.591315,
+    "raga": "Pūrṇacandrika"
+  },
+  {
+    "track_id": "14_Angakaram",
+    "key": "t1",
+    "title": "Angarakam Ashrayamyaham",
+    "tonic": 138.591315,
+    "raga": "Suraṭi"
+  },
+  {
+    "track_id": "15_Samajavarada",
+    "key": "t2",
+    "title": "Samaja Varada Neeku",
+    "tonic": 138.591315,
+    "raga": "Śudda sāvēri"
+  },
+  {
+    "track_id": "16_Evarura",
+    "key": "t3",
+    "title": "Evarura Ninu Vina",
+    "tonic": 138.591315,
+    "raga": "Mōhanaṁ"
+  },
+  {
+    "track_id": "17_Eranapai",
+    "key": "t4",
+    "title": "Eranapai",
+    "tonic": 138.591315,
+    "raga": "Tōḍi"
+  },
+  {
+    "track_id": "18_Parama_Purusham",
+    "key": "t5",
+    "title": "Parama purusham hrudaya",
+    "tonic": 138.591315,
+    "raga": "Lalita pancamaṁ"
+  },
+  {
+    "track_id": "19_Marubari",
+    "key": "t6",
+    "title": "Marubari",
+    "tonic": 137.793088,
+    "raga": "Kamās"
+  },
+  {
+    "track_id": "20_Aparadhamula",
+    "key": "t7",
+    "title": "Aparadhamulanniyu manninchi",
+    "tonic": 138.591315,
+    "raga": "Latāngi"
+  },
+  {
+    "track_id": "21_Sadabalarupapi_Shlokam",
+    "key": "t8",
+    "title": "Sadabalarupapi Shlokam",
+    "tonic": 207.652349,
+    "raga": "Hamsadhvani"
+  },
+  {
+    "track_id": "22_Hiranmayeem_Lakshmeem",
+    "key": "t9",
+    "title": "Hiranmayi",
+    "tonic": 147.682975,
+    "raga": "Lalita"
+  },
+  {
+    "track_id": "23_Niraimadi_Mugam_Thiruppugazh",
+    "key": "t10",
+    "title": "Niraimadimugam(Thirupugazh)",
+    "tonic": 147.682975,
+    "raga": "Haṁsānandi"
+  },
+  {
+    "track_id": "24_Evvari_Bodhana",
+    "key": "t11",
+    "title": "Evari Bodhana",
+    "tonic": 147.682975,
+    "raga": "Ābhōgi"
+  },
+  {
+    "track_id": "25_Sanchara_Dhadhara",
+    "key": "t12",
+    "title": "Sanchara Dadhara",
+    "tonic": 195.997718,
+    "raga": "Rāgamālika"
+  },
+  {
+    "track_id": "26_Lokavana_Chatura",
+    "key": "t13",
+    "title": "Lokavanachatura",
+    "tonic": 147.682975,
+    "raga": "Bēgaḍa"
+  },
+  {
+    "track_id": "27_Idhuthaano_Thillai_Sthalam",
+    "key": "t14",
+    "title": "Idhu Thaano Thillai Sthalam",
+    "tonic": 146.832384,
+    "raga": "Behāg"
+  },
+  {
+    "track_id": "28_Amba_Kamakshi",
+    "key": "t15",
+    "title": "Amba Kamakshi",
+    "tonic": 146.832384,
+    "raga": "Bhairavi"
+  },
+  {
+    "track_id": "29_Vitthala_Salaho_Swamy",
+    "key": "t16",
+    "title": "Vitthala salaho swami",
+    "tonic": 146.832384,
+    "raga": "Dēś"
+  },
+  {
+    "track_id": "30_Pavamana_Suthudu_Mangalam",
+    "key": "t17",
+    "title": "Pavamana Suthudu",
+    "tonic": 147.682975,
+    "raga": "Saurāṣtraṁ"
+  },
+  {
+    "track_id": "31_Karuna_Ela_Gante",
+    "key": "t18",
+    "title": "Karuna Yela Kante",
+    "tonic": 147.682975,
+    "raga": "Varāḷi"
+  },
+  {
+    "track_id": "32_Gopanandana",
+    "key": "t19",
+    "title": "Gopanandana",
+    "tonic": 221.274447,
+    "raga": "Bhūṣāvaḷi"
+  },
+  {
+    "track_id": "33_Entara_Nitana",
+    "key": "t20",
+    "title": "Entara Neetana",
+    "tonic": 146.832384,
+    "raga": "Harikāmbhōji"
+  },
+  {
+    "track_id": "34_Teerthakarayinile",
+    "key": "t21",
+    "title": "Viruttham",
+    "tonic": 146.832384,
+    "raga": "Kamās"
+  },
+  {
+    "track_id": "35_Thillana_Dhanashri",
+    "key": "t22",
+    "title": "Thillana",
+    "tonic": 147.682975,
+    "raga": "Dhanaśrī"
+  },
+  {
+    "track_id": "36_Ozhukkam_Uyirinum",
+    "key": "t23",
+    "title": "Ozhukkam Uyirinum",
+    "tonic": 146.832384,
+    "raga": "Kuntalavarāḷi"
+  },
+  {
+    "track_id": "37_Undan_Paada_Pankayam",
+    "key": "t24",
+    "title": "Undan Paada Pankayam",
+    "tonic": 146.832384,
+    "raga": "Śankarābharaṇaṁ"
+  },
+  {
+    "track_id": "38_Raagam_Thaanam_Pallavi",
+    "key": "t25",
+    "title": "Ragam Thanam Pallavi",
+    "tonic": 146.832384,
+    "raga": "Kāpi"
+  },
+  {
+    "track_id": "39_Pavamana_Suthudu",
+    "key": "t26",
+    "title": "Pavamana Suthudu",
+    "tonic": 147.682975,
+    "raga": "Saurāṣtraṁ"
+  },
+  {
+    "track_id": "40_Kamakshi",
+    "key": "t27",
+    "title": "Amba Kamakshi",
+    "tonic": 146.832384,
+    "raga": "Bhairavi"
+  },
+  {
+    "track_id": "41_Soundararajam",
+    "key": "t28",
+    "title": "Soundararajam",
+    "tonic": 146.832384,
+    "raga": "Bṛndāvana sāranga"
+  },
+  {
+    "track_id": "42_Payum_Oli_Nee_Yenakku",
+    "key": "t29",
+    "title": "Payum Oli Nee Enakku",
+    "tonic": 146.832384,
+    "raga": "Kamās"
+  },
+  {
+    "track_id": "43_Shatre_Vilagi_Irum",
+    "key": "t30",
+    "title": "Shatre vilagi irum pillai sannidhanam",
+    "tonic": 145.986692,
+    "raga": "Pūrvīkaḷyāṇi"
+  },
+  {
+    "track_id": "44_Maname_Ramanai_Paada",
+    "key": "t31",
+    "title": "Maname Ramani Paada",
+    "tonic": 146.832384,
+    "raga": "Sindhubhairavi"
+  },
+  {
+    "track_id": "45_Apparama_Bhakti",
+    "key": "t32",
+    "title": "Appa rama bhakti",
+    "tonic": 195.997718,
+    "raga": "kamavardani"
+  },
+  {
+    "track_id": "46_Manadirkkugandhadu",
+    "key": "t33",
+    "title": "Manadhirkkugandadu",
+    "tonic": 195.997718,
+    "raga": "sindhubhairavi"
+  },
+  {
+    "track_id": "47_Koti_Janmani",
+    "key": "t34",
+    "title": "Koti Janmani",
+    "tonic": 130.059356,
+    "raga": "riti gaula"
+  },
+  {
+    "track_id": "48_Brova_Barama",
+    "key": "t35",
+    "title": "Brova Bharama",
+    "tonic": 195.997718,
+    "raga": "bahudari"
+  },
+  {
+    "track_id": "49_Shankari_Shankuru",
+    "key": "t36",
+    "title": "Shankari Shankuru",
+    "tonic": 195.997718,
+    "raga": "saveri"
+  },
+  {
+    "track_id": "50_Karunimpa_Idi",
+    "key": "t37",
+    "title": "Karunimpa",
+    "tonic": 195.997718,
+    "raga": "sahana"
+  },
+  {
+    "track_id": "51_Pavamana_Suthudu_Mangalam",
+    "key": "t38",
+    "title": "Pavamana Suthudu",
+    "tonic": 195.997718,
+    "raga": "saurashtram"
+  },
+  {
+    "track_id": "52_Geeta_Nayakan",
+    "key": "t39",
+    "title": "Geeta Nayakan",
+    "tonic": 130.059356,
+    "raga": "ragamalika"
+  },
+  {
+    "track_id": "53_Siddhi_Vinayakam",
+    "key": "t40",
+    "title": "Siddhi Vinayakam",
+    "tonic": 195.997718,
+    "raga": "shanmukhapriya"
+  },
+  {
+    "track_id": "54_Thillana_Pahadi",
+    "key": "t41",
+    "title": "Thillana",
+    "tonic": 130.812783,
+    "raga": "pahadi"
+  },
+  {
+    "track_id": "55_Enadhu_Manam_Kavalai",
+    "key": "t42",
+    "title": "Enadu Manam",
+    "tonic": 170.625924,
+    "raga": "harikambhoji"
+  },
+  {
+    "track_id": "56_Purahara_Nandana",
+    "key": "t43",
+    "title": "Purahara Nandana",
+    "tonic": 170.625924,
+    "raga": "hameer kalyani"
+  },
+  {
+    "track_id": "57_Nannu_Brova_Neeku",
+    "key": "t44",
+    "title": "Nannu Brova nee",
+    "tonic": 226.446492,
+    "raga": "abhogi"
+  },
+  {
+    "track_id": "58_Nera_Nammiti",
+    "key": "t45",
+    "title": "Nere nambide ninna charana",
+    "tonic": 227.758283,
+    "raga": "ragamalika"
+  },
+  {
+    "track_id": "59_Parvathi_Ninnu_Neranammiti",
+    "key": "t46",
+    "title": "Parvathi Ninnu",
+    "tonic": 169.643191,
+    "raga": "kalgada"
+  },
+  {
+    "track_id": "60_Geetha_Vaadya_Natana",
+    "key": "t47",
+    "title": "Geetha Vaadya Natana",
+    "tonic": 170.625924,
+    "raga": "natakapriya"
+  },
+  {
+    "track_id": "61_Sudhaamayee",
+    "key": "t48",
+    "title": "Sudhamayi",
+    "tonic": 113.223246,
+    "raga": "amritavarshini"
+  },
+  {
+    "track_id": "62_Shloka_Namaste_Sarvalokaanam",
+    "key": "t49",
+    "title": "Namaste Sarvalokaanam",
+    "tonic": 226.446492,
+    "raga": ""
+  },
+  {
+    "track_id": "63_Vanajaksha_Ninne_Nammiti",
+    "key": "t50",
+    "title": "Vanajaksha Ninne Nammitti",
+    "tonic": 113.223246,
+    "raga": "behag"
+  },
+  {
+    "track_id": "64_Jaya_Jaya_Padmanabhanujese",
+    "key": "t51",
+    "title": "Jaya Jaya Padmanabanujese",
+    "tonic": 169.643191,
+    "raga": "manirangu"
+  },
+  {
+    "track_id": "65_Devadi_Devanukku_Jaya_Mangalam",
+    "key": "t52",
+    "title": "Devadidevanukku Mangalam",
+    "tonic": 170.625924,
+    "raga": "surati"
+  },
+  {
+    "track_id": "66_Kannanai_Paadu_Maname",
+    "key": "t53",
+    "title": "Kannanai Padu Maname",
+    "tonic": 227.758283,
+    "raga": "kalyani"
+  },
+  {
+    "track_id": "67_Paahi_Maam_Sri",
+    "key": "t54",
+    "title": "Paahi Maam Sri",
+    "tonic": 170.625924,
+    "raga": "janaranjani"
+  },
+  {
+    "track_id": "68_Eppadi_Manam_Thunindhadho",
+    "key": "t55",
+    "title": "Eppadi Manam",
+    "tonic": 113.223246,
+    "raga": "huseni"
+  },
+  {
+    "track_id": "69_Munnu_Ravana",
+    "key": "t56",
+    "title": "Munnu Ravana Badha Norvaka Vibhishanudu",
+    "tonic": 170.625924,
+    "raga": "thodi"
+  },
+  {
+    "track_id": "70_Shlokham",
+    "key": "t57",
+    "title": "Malmaruga Shanmukha",
+    "tonic": 170.625924,
+    "raga": ""
+  },
+  {
+    "track_id": "71_Pranamamyaham_Sri_Prananatham",
+    "key": "t58",
+    "title": "Pranamamyaham",
+    "tonic": 170.625924,
+    "raga": "ranjani"
+  },
+  {
+    "track_id": "72_Ni_Ninaindhal_Aagadhadhu",
+    "key": "t59",
+    "title": "Nee Ninaindal",
+    "tonic": 169.643191,
+    "raga": "jaunpuri"
+  },
+  {
+    "track_id": "73_Chandrashekharam_Sada_Bhajeham",
+    "key": "t60",
+    "title": "Chandrashekharam Sada Bhajeham",
+    "tonic": 168.666118,
+    "raga": "margahindolam"
+  },
+  {
+    "track_id": "74_Sri_Jalandara",
+    "key": "t61",
+    "title": "Sri Jalandhara",
+    "tonic": 169.643191,
+    "raga": "gambhira nata"
+  },
+  {
+    "track_id": "75_Amba_Nilambari",
+    "key": "t62",
+    "title": "Amba Nilambari",
+    "tonic": 170.625924,
+    "raga": "nilambari"
+  },
+  {
+    "track_id": "76_Ninnuvina_Marigalada",
+    "key": "t63",
+    "title": "Ninnuvina",
+    "tonic": 170.625924,
+    "raga": "riti gaula"
+  },
+  {
+    "track_id": "77_Avani_Sutha",
+    "key": "t64",
+    "title": "Avani suta natha",
+    "tonic": 170.625924,
+    "raga": "nadanamakriya"
+  },
+  {
+    "track_id": "78_Rama_Neepai",
+    "key": "t65",
+    "title": "Rama Neepai",
+    "tonic": 180.771869,
+    "raga": "kedaram"
+  },
+  {
+    "track_id": "79_Etulabrotuva",
+    "key": "t66",
+    "title": "Etula brotuvo",
+    "tonic": 180.771869,
+    "raga": "chakravakam"
+  },
+  {
+    "track_id": "80_Lokavana_Chatura",
+    "key": "t67",
+    "title": "Lokavanachatura",
+    "tonic": 180.771869,
+    "raga": "begada"
+  },
+  {
+    "track_id": "81_Enthavedukonthu_Raghava",
+    "key": "t68",
+    "title": "Entha Vedukondu Raghava",
+    "tonic": 180.771869,
+    "raga": "saraswati manohari"
+  },
+  {
+    "track_id": "82_Koluvamaregatha",
+    "key": "t69",
+    "title": "Koluvamaregada kodandapani",
+    "tonic": 180.771869,
+    "raga": "thodi"
+  },
+  {
+    "track_id": "83_Neevada_Negana",
+    "key": "t70",
+    "title": "Nivada Negana",
+    "tonic": 179.7307,
+    "raga": "saranga"
+  },
+  {
+    "track_id": "84_Vara_Leela_Gana_Lola",
+    "key": "t71",
+    "title": "Vara Leela Gana Lola",
+    "tonic": 180.771869,
+    "raga": "sankarabharanam"
+  },
+  {
+    "track_id": "85_Chinnanchiru_Kiliye",
+    "key": "t72",
+    "title": "Chinnajirukiliye Kannama",
+    "tonic": 190.418043,
+    "raga": "ragamalika"
+  },
+  {
+    "track_id": "86_Gopi_Gopala_Bala",
+    "key": "t73",
+    "title": "Gopi Gopala Bala",
+    "tonic": 127.088797,
+    "raga": ""
+  },
+  {
+    "track_id": "87_Pavamana_Suttudu_Pattu",
+    "key": "t74",
+    "title": "Pavamana Suthudu",
+    "tonic": 190.418043,
+    "raga": "saurashtram"
+  },
+  {
+    "track_id": "88_Kannallavo_Swami",
+    "key": "t75",
+    "title": "Kannallavo Swami",
+    "tonic": 190.418043,
+    "raga": "surati"
+  },
+  {
+    "track_id": "89_Padavini",
+    "key": "t76",
+    "title": "Padavini",
+    "tonic": 190.418043,
+    "raga": "salaga bhairavi"
+  },
+  {
+    "track_id": "90_Vandu_Ketpaar_Illayo",
+    "key": "t77",
+    "title": "Vandu Ketpaar Illayo",
+    "tonic": 127.088797,
+    "raga": "ragamalika"
+  },
+  {
+    "track_id": "91_Ragam_Tanam_Pallavi",
+    "key": "t78",
+    "title": "Ragam Tanam Pallavi",
+    "tonic": 190.418043,
+    "raga": "shanmukhapriya"
+  },
+  {
+    "track_id": "92_Tillana",
+    "key": "t79",
+    "title": "Tillana",
+    "tonic": 190.418043,
+    "raga": "dvijavanti"
+  },
+  {
+    "track_id": "93_Sharanagatha_Vatsale",
+    "key": "t80",
+    "title": "Sharanagatha Vatsale",
+    "tonic": 127.088797,
+    "raga": "kadanakutuhulam"
+  },
+  {
+    "track_id": "94_Hiranmayeem",
+    "key": "t81",
+    "title": "Hiranmayi",
+    "tonic": 127.088797,
+    "raga": "lalitha"
+  },
+  {
+    "track_id": "100_Pavamaana_Suthudu_Pattu",
+    "key": "t82",
+    "title": "Pavamana Suthudu",
+    "tonic": 147.682975,
+    "raga": "Saurāṣtraṁ"
+  },
+  {
+    "track_id": "101_Maname_Kanamum",
+    "key": "t83",
+    "title": "Maname kanamum",
+    "tonic": 147.682975,
+    "raga": "Karṇāṭaka dēvagāndhāri"
+  },
+  {
+    "track_id": "102_Ennadu_Jootuno",
+    "key": "t84",
+    "title": "Ennadu Jutuno",
+    "tonic": 147.682975,
+    "raga": "Kalāvati"
+  },
+  {
+    "track_id": "103_Paarengum",
+    "key": "t85",
+    "title": "Parengum Paarthaalum",
+    "tonic": 147.682975,
+    "raga": "Kalyāṇi"
+  },
+  {
+    "track_id": "104_Saravanabhava_Enum",
+    "key": "t86",
+    "title": "Saravanabhava Enum",
+    "tonic": 147.682975,
+    "raga": "Ṣanmukhapriya"
+  },
+  {
+    "track_id": "105_Karuvutranaal_Mudalaaga",
+    "key": "t87",
+    "title": "Karuvutranaal Mudalaaga",
+    "tonic": 147.682975,
+    "raga": "Rāgamālika"
+  },
+  {
+    "track_id": "106_Aru_marundu",
+    "key": "t88",
+    "title": "Arumarundhoru",
+    "tonic": 147.682975,
+    "raga": "Kāṁbhōji"
+  },
+  {
+    "track_id": "107_Eranapai",
+    "key": "t89",
+    "title": "Eranapai",
+    "tonic": 147.682975,
+    "raga": "Tōḍi"
+  },
+  {
+    "track_id": "108_Pullum_Silambena_Kan",
+    "key": "t90",
+    "title": "Pullum Silambena",
+    "tonic": 147.682975,
+    "raga": "Śankarābharaṇaṁ"
+  },
+  {
+    "track_id": "109_Sri_Raghuvara_Sugunaalaya",
+    "key": "t91",
+    "title": "Shri Raghuvara Sugunalaya",
+    "tonic": 147.682975,
+    "raga": "Bhairavi"
+  },
+  {
+    "track_id": "110_Ragam_Thanam_Pallavi_-_Shanmukhapriya",
+    "key": "t92",
+    "title": "Ragam Thanam Pallavi",
+    "tonic": 147.682975,
+    "raga": "Ṣanmukhapriya"
+  },
+  {
+    "track_id": "111_Sarasadalanayana",
+    "key": "t93",
+    "title": "Sarasadala Nayana",
+    "tonic": 147.682975,
+    "raga": "Kamās"
+  },
+  {
+    "track_id": "112_Rama_Rama_Guna_Seema",
+    "key": "t94",
+    "title": "Rama Rama Gunasima",
+    "tonic": 135.425885,
+    "raga": "simhendra madhyamam"
+  },
+  {
+    "track_id": "113_Prathi_Vaaram_Vaaram",
+    "key": "t95",
+    "title": "Prathi Varam Varam",
+    "tonic": 136.2104,
+    "raga": "padi"
+  },
+  {
+    "track_id": "114_Varashiki_Vahana",
+    "key": "t96",
+    "title": "Varashiki Vahana",
+    "tonic": 135.425885,
+    "raga": ""
+  },
+  {
+    "track_id": "115_Idhu_Thaano_Thillai_Sthalam",
+    "key": "t97",
+    "title": "Idhu Thaano Thillai Sthalam",
+    "tonic": 136.2104,
+    "raga": "behag"
+  },
+  {
+    "track_id": "116_Bhuvini_Dasudane",
+    "key": "t98",
+    "title": "Bhuvini Dasudane",
+    "tonic": 201.74089,
+    "raga": "shri ranjani"
+  },
+  {
+    "track_id": "117_Karuna_Nidhi_Illalo",
+    "key": "t99",
+    "title": "Karuna Nidhi Illalo",
+    "tonic": 135.425885,
+    "raga": "thodi"
+  },
+  {
+    "track_id": "118_Tulasi_Bilva",
+    "key": "t100",
+    "title": "Tulasi Bilva",
+    "tonic": 135.425885,
+    "raga": "kedaragaula"
+  },
+  {
+    "track_id": "119_Shlokam_-_Shivah_Shaktyayukto",
+    "key": "t101",
+    "title": "Shlokam - Shivah Shaktyayukto",
+    "tonic": 135.425885,
+    "raga": "madyamavati"
+  },
+  {
+    "track_id": "120_Velum_Mayilume",
+    "key": "t102",
+    "title": "Velum Mayilume",
+    "tonic": 135.425885,
+    "raga": "sucharitra"
+  },
+  {
+    "track_id": "130_Ghandhamu_Poyyaruga",
+    "key": "t103",
+    "title": "Gandhamu Poyyaruga",
+    "tonic": 173.608412,
+    "raga": "punnaga varali"
+  },
+  {
+    "track_id": "131_Koluvaiyunnade",
+    "key": "t104",
+    "title": "Koluvaiyunnade",
+    "tonic": 130.812783,
+    "raga": "devagandhari"
+  },
+  {
+    "track_id": "132_Entha_Muddo",
+    "key": "t105",
+    "title": "Enta Muddu",
+    "tonic": 130.812783,
+    "raga": ""
+  },
+  {
+    "track_id": "133_Paramatmudu",
+    "key": "t106",
+    "title": "Paramathmudu",
+    "tonic": 130.812783,
+    "raga": "vagadeeswari"
+  },
+  {
+    "track_id": "134_Giriraja_Suta",
+    "key": "t107",
+    "title": "Giriraja suta tanaya sadaya",
+    "tonic": 130.812783,
+    "raga": ""
+  },
+  {
+    "track_id": "135_Paraloka_Bhaya",
+    "key": "t108",
+    "title": "Paraloka Bhayamu",
+    "tonic": 130.812783,
+    "raga": "mandhari"
+  },
+  {
+    "track_id": "136_Dudukugala",
+    "key": "t109",
+    "title": "Duduku Gala",
+    "tonic": 130.812783,
+    "raga": "gaula"
+  },
+  {
+    "track_id": "137_Telisi_Rama",
+    "key": "t110",
+    "title": "Telisi Rama",
+    "tonic": 130.812783,
+    "raga": "purna chandrika"
+  },
+  {
+    "track_id": "138_Eramuni",
+    "key": "t111",
+    "title": "Eramuni Nammitino",
+    "tonic": 130.812783,
+    "raga": "vakulabharanam"
+  },
+  {
+    "track_id": "139_Mangalam_Avanisutanatha",
+    "key": "t112",
+    "title": "Avani suta natha",
+    "tonic": 173.608412,
+    "raga": "nadanamakriya"
+  },
+  {
+    "track_id": "140_Edari_Sancharintura",
+    "key": "t113",
+    "title": "E Dari Sancharintura",
+    "tonic": 195.997718,
+    "raga": ""
+  },
+  {
+    "track_id": "141_Rama_Namam_Bhajare",
+    "key": "t114",
+    "title": "Rama Namam Bhajare",
+    "tonic": 130.812783,
+    "raga": "madyamavati"
+  },
+  {
+    "track_id": "142_Shobillu_Saptasvara",
+    "key": "t115",
+    "title": "Sobhillu Sapthaswara",
+    "tonic": 130.812783,
+    "raga": "jaganmohini"
+  },
+  {
+    "track_id": "143_Sundari_Nee_Divya",
+    "key": "t116",
+    "title": "Sundari Nee Divya",
+    "tonic": 130.812783,
+    "raga": "kalyani"
+  },
+  {
+    "track_id": "152_Vanajakshi_-_Varnam",
+    "key": "t117",
+    "title": "Vanajakshi",
+    "tonic": 145.986692,
+    "raga": "Kalyāṇi"
+  },
+  {
+    "track_id": "153_Teerthakarayinile",
+    "key": "t118",
+    "title": "Teertha Karaiyinile",
+    "tonic": 145.14587,
+    "raga": ""
+  },
+  {
+    "track_id": "154_Innamum_Oru_thalam",
+    "key": "t119",
+    "title": "Innamum Oru Thalam",
+    "tonic": 145.986692,
+    "raga": "Behāg"
+  },
+  {
+    "track_id": "155_Nadopasana",
+    "key": "t120",
+    "title": "Nadopasana",
+    "tonic": 145.986692,
+    "raga": "Bēgaḍa"
+  },
+  {
+    "track_id": "156_Ganta_mani_aadudhu",
+    "key": "t121",
+    "title": "Gantamani Aadudhey",
+    "tonic": 145.14587,
+    "raga": "Kānaḍa"
+  },
+  {
+    "track_id": "157_Janani",
+    "key": "t122",
+    "title": "Janani Ninnuvina",
+    "tonic": 145.986692,
+    "raga": "Rītigauḷa"
+  },
+  {
+    "track_id": "158_Oorilen_Kaani_Illai",
+    "key": "t123",
+    "title": "Oorilen Kaani Illai",
+    "tonic": 145.14587,
+    "raga": "Behāg"
+  },
+  {
+    "track_id": "159_Ramakrishnaru_Manaegae",
+    "key": "t124",
+    "title": "Ramakrishnaru Managae",
+    "tonic": 145.14587,
+    "raga": "Tillāng"
+  },
+  {
+    "track_id": "160_Uppum_karpuramum",
+    "key": "t125",
+    "title": "Uppum Karpooramum",
+    "tonic": 145.14587,
+    "raga": "Kānaḍa"
+  },
+  {
+    "track_id": "161_Chalamelara_Saketha_Rama",
+    "key": "t126",
+    "title": "Chalamelara Saketa",
+    "tonic": 145.986692,
+    "raga": "Mārgahindōḷaṁ"
+  },
+  {
+    "track_id": "162_Kalilo_Hari_Smrana",
+    "key": "t127",
+    "title": "Kalilo Hari Smaranam",
+    "tonic": 145.14587,
+    "raga": "Kāpi"
+  },
+  {
+    "track_id": "163_Ninnaiye_rathi",
+    "key": "t128",
+    "title": "Ninnaye",
+    "tonic": 145.14587,
+    "raga": "Bāgēśrī"
+  },
+  {
+    "track_id": "164_Mangalam",
+    "key": "t129",
+    "title": "Pavamana Suthudu",
+    "tonic": 145.14587,
+    "raga": "Saurāṣtraṁ"
+  },
+  {
+    "track_id": "165_Deenarakshaka",
+    "key": "t130",
+    "title": "Deenarakshaka",
+    "tonic": 145.14587,
+    "raga": "Āhiri"
+  },
+  {
+    "track_id": "166_O_Rangashayee",
+    "key": "t131",
+    "title": "O Rangashayee",
+    "tonic": 145.986692,
+    "raga": "Kāṁbhōji"
+  },
+  {
+    "track_id": "167_Sama_geeta_priyan",
+    "key": "t132",
+    "title": "Sama Geeta Priyan",
+    "tonic": 145.986692,
+    "raga": "Gauḷa"
+  },
+  {
+    "track_id": "168_Karupuram_Naarumo",
+    "key": "t133",
+    "title": "Karpuram Naarumo",
+    "tonic": 145.986692,
+    "raga": "Kamās"
+  },
+  {
+    "track_id": "169_Va_vela_va",
+    "key": "t134",
+    "title": "Va Velava",
+    "tonic": 145.986692,
+    "raga": "Tanarūpi"
+  },
+  {
+    "track_id": "170_Gange_Maam_Pahi",
+    "key": "t135",
+    "title": "Gange Mampahi",
+    "tonic": 145.986692,
+    "raga": ""
+  },
+  {
+    "track_id": "171_Arul_Seya_Vendum_Ayya",
+    "key": "t136",
+    "title": "Arul Seiya Vendum Ayya",
+    "tonic": 146.832384,
+    "raga": "rasikapriya"
+  },
+  {
+    "track_id": "172_Kaalaharanamelara",
+    "key": "t137",
+    "title": "Kalaharanamelara",
+    "tonic": 146.832384,
+    "raga": "shuddhadhanyasi"
+  },
+  {
+    "track_id": "173_Vasudeva_Sutam_Devam",
+    "key": "t138",
+    "title": "Vasudeva Sutam Devam",
+    "tonic": 146.832384,
+    "raga": ""
+  },
+  {
+    "track_id": "174_Brochevarevarura",
+    "key": "t139",
+    "title": "Brochevaarevaruraa Ninnuvina",
+    "tonic": 145.986692,
+    "raga": "kamas"
+  },
+  {
+    "track_id": "175_Thappi_Bratikipova",
+    "key": "t140",
+    "title": "Thappi Bratikipova",
+    "tonic": 146.832384,
+    "raga": "thodi"
+  },
+  {
+    "track_id": "176_Krishna_Nee_Begane_Baaro",
+    "key": "t141",
+    "title": "Krishna Nee Begane",
+    "tonic": 146.832384,
+    "raga": "yamuna kalyani"
+  },
+  {
+    "track_id": "177_Kari_Kalabha_Mukham",
+    "key": "t142",
+    "title": "Kari Kalabha Mukham",
+    "tonic": 146.832384,
+    "raga": "saveri"
+  },
+  {
+    "track_id": "178_Muruga_Muruga_Muruga",
+    "key": "t143",
+    "title": "Muruga Muruga Muruga",
+    "tonic": 138.591315,
+    "raga": "ragamalika"
+  },
+  {
+    "track_id": "179_Chenduril_Nindradum_Kanda",
+    "key": "t144",
+    "title": "Tiruchenduril nindradum",
+    "tonic": 138.591315,
+    "raga": "maund"
+  },
+  {
+    "track_id": "180_Ninne_Bhajana",
+    "key": "t145",
+    "title": "Ninne Bhajana",
+    "tonic": 138.591315,
+    "raga": "nata"
+  },
+  {
+    "track_id": "181_Nera_Nammiti",
+    "key": "t146",
+    "title": "Nera Nammiti",
+    "tonic": 138.591315,
+    "raga": "kanada"
+  },
+  {
+    "track_id": "182_Dinamani_Vamsa",
+    "key": "t147",
+    "title": "Dinamani Vamsha",
+    "tonic": 138.591315,
+    "raga": "harikambhoji"
+  },
+  {
+    "track_id": "183_Chakkani_Raja",
+    "key": "t148",
+    "title": "Chakkani Raja",
+    "tonic": 138.591315,
+    "raga": "karaharapriya"
+  },
+  {
+    "track_id": "184_Ardhanareeshwaram",
+    "key": "t149",
+    "title": "Ardhanarishwaram",
+    "tonic": 138.591315,
+    "raga": "kumudakriya"
+  },
+  {
+    "track_id": "185_Pavamana_Suthudu_Pattu",
+    "key": "t150",
+    "title": "Pavamana Suthudu",
+    "tonic": 138.591315,
+    "raga": "saurashtram"
+  },
+  {
+    "track_id": "186_Shloka",
+    "key": "t151",
+    "title": "Shloka",
+    "tonic": 138.591315,
+    "raga": "mohanam"
+  },
+  {
+    "track_id": "187_Aaniraimekkani",
+    "key": "t152",
+    "title": "Aaniraimekkani (Viruttham)",
+    "tonic": 191.521124,
+    "raga": "ragamalika"
+  },
+  {
+    "track_id": "188_Vanajaksha_Ninne_Kori",
+    "key": "t153",
+    "title": "Vanajaksha",
+    "tonic": 127.088797,
+    "raga": "riti gaula"
+  },
+  {
+    "track_id": "189_Karuninchutakidi",
+    "key": "t154",
+    "title": "Karuninchutakidi",
+    "tonic": 191.521124,
+    "raga": "sindhumandari"
+  },
+  {
+    "track_id": "190_Va_Va_Brindavana",
+    "key": "t155",
+    "title": "Va Va Brindavana",
+    "tonic": 190.418043,
+    "raga": "sindhubhairavi"
+  },
+  {
+    "track_id": "191_Mati_Matiki",
+    "key": "t156",
+    "title": "Mati Matiki",
+    "tonic": 191.521124,
+    "raga": "mohanam"
+  },
+  {
+    "track_id": "192_Sri_Guru_Na_Palitosmi",
+    "key": "t157",
+    "title": "Sri Guruna Palitosmi",
+    "tonic": 191.521124,
+    "raga": "padi"
+  },
+  {
+    "track_id": "193_Thoomani_Madatthu",
+    "key": "t158",
+    "title": "Thoomani Madatthu",
+    "tonic": 191.521124,
+    "raga": "hameer kalyani"
+  },
+  {
+    "track_id": "194_Ramabhi_Rama_Manasu",
+    "key": "t159",
+    "title": "Ramabhirama Manasu",
+    "tonic": 191.521124,
+    "raga": "dhanyasi"
+  },
+  {
+    "track_id": "195_Mangalam_Kosalendraya",
+    "key": "t160",
+    "title": "Kosalendraya",
+    "tonic": 191.521124,
+    "raga": "surati"
+  },
+  {
+    "track_id": "196_Sri_Vidhya_Rajagopala",
+    "key": "t161",
+    "title": "Sri Vidya Rajagopalam",
+    "tonic": 191.521124,
+    "raga": "jaganmohini"
+  },
+  {
+    "track_id": "214_Parvathi_Ninu_Ne_Nera_Nammithi",
+    "key": "t162",
+    "title": "Parvathi Ninnu",
+    "tonic": 180.771869,
+    "raga": "kalgada"
+  },
+  {
+    "track_id": "215_Nee_Sari_evvaramma",
+    "key": "t163",
+    "title": "Nee Sari evvaramma",
+    "tonic": 180.771869,
+    "raga": "bhairavi"
+  },
+  {
+    "track_id": "216_Jaya_Jaya_Janaki_Kantha",
+    "key": "t164",
+    "title": "Jaya Jaya Janaki Kantha",
+    "tonic": 180.771869,
+    "raga": "nata"
+  },
+  {
+    "track_id": "217_Santhamu_leka_Sowkyamu_ledu",
+    "key": "t165",
+    "title": "Santhamu leka Sowkyamu ledu",
+    "tonic": 180.771869,
+    "raga": "sama"
+  },
+  {
+    "track_id": "218_Sarasuda_Ninne_Kori",
+    "key": "t166",
+    "title": "Sarasuda Ninne Kori",
+    "tonic": 180.771869,
+    "raga": "saveri"
+  },
+  {
+    "track_id": "219_Gnanamosaga_Rada",
+    "key": "t167",
+    "title": "Gnanamosaga Rada",
+    "tonic": 180.771869,
+    "raga": "Gamakakriya"
+  },
+  {
+    "track_id": "220_Nenindal_Agaadadu_undo",
+    "key": "t168",
+    "title": "Nee Ninaindal",
+    "tonic": 180.771869,
+    "raga": "jaunpuri"
+  },
+  {
+    "track_id": "221_Sri_Dundurge_Siva_Samsaare",
+    "key": "t169",
+    "title": "Sri Dundurge Siva Samsaare",
+    "tonic": 266.1987,
+    "raga": "shri ranjani"
+  },
+  {
+    "track_id": "222_Madhava_Mamava",
+    "key": "t170",
+    "title": "Madhava Mamava Deva",
+    "tonic": 130.812783,
+    "raga": "Nīlāṁbari"
+  },
+  {
+    "track_id": "223_Ramachandraya_Mangalam",
+    "key": "t171",
+    "title": "Ramachandraya",
+    "tonic": 174.614116,
+    "raga": "Navrōj"
+  },
+  {
+    "track_id": "224_Sapasyat_Kausalya",
+    "key": "t172",
+    "title": "Sapashyat",
+    "tonic": 130.812783,
+    "raga": "Jōnpuri"
+  },
+  {
+    "track_id": "225_Seetapati_Namanasuna",
+    "key": "t173",
+    "title": "Sitapate na manasuna",
+    "tonic": 130.812783,
+    "raga": "Kamās"
+  },
+  {
+    "track_id": "226_Karunimpa_Idi",
+    "key": "t174",
+    "title": "Karunimpa",
+    "tonic": 130.059356,
+    "raga": "Sahānā"
+  },
+  {
+    "track_id": "227_Endaro_Mahanubhavulu",
+    "key": "t175",
+    "title": "Endaro Mahanubhavulu",
+    "tonic": 130.812783,
+    "raga": "Śrī"
+  },
+  {
+    "track_id": "228_Bhogeendra_Shayinam",
+    "key": "t176",
+    "title": "Bhogindra Shayinam",
+    "tonic": 130.812783,
+    "raga": "Kuntalavarāḷi"
+  },
+  {
+    "track_id": "229_Thillana_Senchurutti",
+    "key": "t177",
+    "title": "Thillana",
+    "tonic": 130.812783,
+    "raga": "Sencuruṭṭi"
+  },
+  {
+    "track_id": "230_Chintayama_Kanda",
+    "key": "t178",
+    "title": "chintayama kanda",
+    "tonic": 130.812783,
+    "raga": "Bhairavi"
+  },
+  {
+    "track_id": "231_Emani_Migula",
+    "key": "t179",
+    "title": "Emani Migula",
+    "tonic": 130.812783,
+    "raga": "Tōḍi"
+  },
+  {
+    "track_id": "232_Saraguna_Palimpa",
+    "key": "t180",
+    "title": "Saraguna Paalimpa",
+    "tonic": 130.812783,
+    "raga": "Kēdāragauḷa"
+  },
+  {
+    "track_id": "233_Nadatanum_Anisham",
+    "key": "t181",
+    "title": "Nadatanum Anisham",
+    "tonic": 197.133121,
+    "raga": "chittaranjani"
+  },
+  {
+    "track_id": "234_Seethamma",
+    "key": "t182",
+    "title": "Seethamma mayamma",
+    "tonic": 197.133121,
+    "raga": "vasanta"
+  },
+  {
+    "track_id": "235_Janakipathe_Jaya_Karunya_Jaladhe",
+    "key": "t183",
+    "title": "Janakipathe Jaya",
+    "tonic": 197.133121,
+    "raga": "karaharapriya"
+  },
+  {
+    "track_id": "236_Eppadi_Padinaro",
+    "key": "t184",
+    "title": "Eppadi Padinaro",
+    "tonic": 197.133121,
+    "raga": "karnataka devagandhari"
+  },
+  {
+    "track_id": "237_Manasaramathi",
+    "key": "t185",
+    "title": "Manasaramathi",
+    "tonic": 197.133121,
+    "raga": "saramathi"
+  },
+  {
+    "track_id": "238_Tillana",
+    "key": "t186",
+    "title": "Thillana",
+    "tonic": 213.737027,
+    "raga": ""
+  },
+  {
+    "track_id": "239_Bhavamulona",
+    "key": "t187",
+    "title": "Bhavamulona",
+    "tonic": 197.133121,
+    "raga": "shuddhadhanyasi"
+  },
+  {
+    "track_id": "240_Ardhanarishwaram",
+    "key": "t188",
+    "title": "Ardhanarishwaram",
+    "tonic": 197.133121,
+    "raga": "kumudakriya"
+  },
+  {
+    "track_id": "241_Shri_Subramanyaya_Namaste",
+    "key": "t189",
+    "title": "Shri subrahmanyaya namaste manasija koti lavanya",
+    "tonic": 197.133121,
+    "raga": "Kāṁbhōji"
+  },
+  {
+    "track_id": "242_Mamava_Pattabhi_Rama",
+    "key": "t190",
+    "title": "Mamava Pattabhi Rama",
+    "tonic": 130.812783,
+    "raga": "Maṇirangu"
+  },
+  {
+    "track_id": "243_Kamalamba_Samrakshatu",
+    "key": "t191",
+    "title": "Kamalamba",
+    "tonic": 197.133121,
+    "raga": "Ānandabhairavi"
+  },
+  {
+    "track_id": "244_Govardhana_Girisham",
+    "key": "t192",
+    "title": "Govardhana Girisham",
+    "tonic": 130.812783,
+    "raga": "Hindōḷaṁ"
+  },
+  {
+    "track_id": "245_Ardhanareeshwaram",
+    "key": "t193",
+    "title": "Ardhanarishwaram",
+    "tonic": 197.133121,
+    "raga": ""
+  },
+  {
+    "track_id": "246_Anandaamrutakarshini",
+    "key": "t194",
+    "title": "Anandamruta Karshini",
+    "tonic": 197.133121,
+    "raga": "Amṛtavarṣiṇi"
+  },
+  {
+    "track_id": "247_Rakta_Ganapatim",
+    "key": "t195",
+    "title": "Rakta Ganapatim",
+    "tonic": 197.133121,
+    "raga": "Mōhanaṁ"
+  },
+  {
+    "track_id": "248_Gange_Maampahi",
+    "key": "t196",
+    "title": "Gange Mampahi",
+    "tonic": 130.812783,
+    "raga": ""
+  }
+]

@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-ivory text-ink font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-saffron/20 text-burgundy;
+  }
+}
+
+@layer components {
+  /* Microscopic pill-shaped label that precedes major headings. */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-gold/40
+           bg-white/50 px-3 py-1 text-[10px] font-semibold uppercase
+           tracking-eyebrow text-burgundy/80 backdrop-blur-sm;
+  }
+
+  /* Nested "double-bezel" card: a hairline tray holding an inner core. */
+  .bezel {
+    @apply rounded-[2rem] border border-gold/30 bg-white/40 p-1.5
+           shadow-[0_24px_60px_-30px_rgba(139,0,0,0.25)] backdrop-blur-sm;
+  }
+  .bezel-core {
+    @apply rounded-[calc(2rem-0.375rem)] bg-ivory/90
+           shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)];
+  }
+
+  /* Island CTA button with a nested circular trailing icon. */
+  .cta {
+    @apply inline-flex items-center gap-3 rounded-full bg-burgundy
+           pl-6 pr-2 py-2.5 text-sm font-semibold text-ivory
+           transition-all duration-500 ease-fluid hover:bg-saffron
+           hover:shadow-[0_18px_40px_-18px_rgba(255,107,0,0.7)];
+  }
+  .cta-icon {
+    @apply flex h-8 w-8 items-center justify-center rounded-full bg-ivory/20
+           transition-transform duration-500 ease-fluid
+           group-hover:translate-x-0.5;
+  }
+}
+
+/* ── Film-grain overlay (physical paper feel, editorial-luxury) ───────────── */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ── Scroll-driven hero waveform (pure CSS, fully reversible) ─────────────── */
+.wave-draw {
+  stroke-dasharray: 2400;
+  stroke-dashoffset: 2400;
+}
+.glyph-fade {
+  opacity: 0;
+}
+
+@supports (animation-timeline: scroll()) {
+  .wave-draw {
+    animation: wave-stroke linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 70vh;
+  }
+  .glyph-fade {
+    animation: glyph-reveal linear both;
+    animation-timeline: scroll(root);
+    animation-range: 35vh 85vh;
+  }
+}
+
+@keyframes wave-stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes glyph-reveal {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Browsers without scroll-timeline support get the fully-drawn state. */
+@supports not (animation-timeline: scroll()) {
+  .wave-draw {
+    stroke-dashoffset: 0;
+  }
+  .glyph-fade {
+    opacity: 1;
+  }
+}
+
+/* ── Reveal-on-scroll (IntersectionObserver toggles .is-visible) ──────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.32, 0.72, 0, 1),
+    transform 0.8s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Confidence / score bar fill. */
+.bar-fill {
+  transform-origin: left;
+  transition: width 1s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+/* Skeleton shimmer for loading states. */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.55),
+    transparent
+  );
+  animation: shimmer 1.6s infinite;
+}
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Waveform skeleton bar pulse. */
+@keyframes wave-pulse {
+  0%,
+  100% {
+    transform: scaleY(0.4);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 0.9;
+  }
+}
+
+/* ── Respect reduced motion everywhere ────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .wave-draw {
+    stroke-dashoffset: 0;
+  }
+  .glyph-fade {
+    opacity: 1;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

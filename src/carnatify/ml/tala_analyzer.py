@@ -16,6 +16,7 @@ from carnatify.schemas import AudioFeatures, TalaPrediction
 # most common Carnatic tala, so an 8-beat cycle is the most reliable inference.
 _BEATS_TO_TALA: dict[int, tuple[str, float]] = {
     8: ("Adi", 0.9),
+    14: ("Misra", 0.7),
     7: ("Misra Chapu", 0.75),
     6: ("Rupaka", 0.7),
     5: ("Khanda Chapu", 0.75),
