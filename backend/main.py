@@ -170,7 +170,14 @@ async def predict_audio(file: UploadFile = File(...)):
     if len(data) > 30 * 1024 * 1024:
         raise HTTPException(status_code=413, detail="File too large (30 MB limit)")
 
-    y, sr = librosa.load(io.BytesIO(data), sr=22050, mono=True, duration=60.0)
+    try:
+        y, sr = librosa.load(io.BytesIO(data), sr=22050, mono=True, duration=60.0)
+    except Exception as exc:
+        raise HTTPException(
+            status_code=422,
+            detail=f"Could not decode audio — unsupported format or corrupt file: {exc}",
+        )
+
     duration = float(len(y) / sr)
     if duration < 5.0:
         raise HTTPException(status_code=422, detail="clip too short, need at least 15 seconds")
@@ -181,6 +188,12 @@ async def predict_audio(file: UploadFile = File(...)):
 
     f0 = librosa.yin(y, fmin=60, fmax=1000, sr=sr)
     frequencies = f0[f0 > 0].astype(np.float64)
+
+    if len(frequencies) < 10:
+        raise HTTPException(
+            status_code=422,
+            detail="Recording contained too little pitched audio — try singing or playing closer to the mic",
+        )
 
     def _raga():
         if not (_RAGA_MODEL.exists() and _RAGA_ENC.exists()):
