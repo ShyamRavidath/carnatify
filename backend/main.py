@@ -18,9 +18,12 @@ The Gemini API key is read from the GEMINI_API_KEY environment variable
 
 from __future__ import annotations
 
+import asyncio
 import io
 import json
 import os
+import shutil
+import subprocess
 import sys
 import tempfile
 from concurrent.futures import ThreadPoolExecutor
@@ -162,6 +165,29 @@ def predict(req: PredictRequest) -> dict:
     }
 
 
+def _separate_vocals_sync(audio_path: str, out_dir: str) -> str:
+    """Run Demucs htdemucs vocal separation; returns path to vocals.wav."""
+    result = subprocess.run(
+        [
+            sys.executable, "-m", "demucs",
+            "--two-stems=vocals",
+            "--model", "htdemucs",
+            "-o", out_dir,
+            audio_path,
+        ],
+        capture_output=True,
+        text=True,
+        timeout=180,
+    )
+    if result.returncode != 0:
+        raise RuntimeError(f"Demucs failed: {result.stderr[-500:]}")
+    track_name = Path(audio_path).stem
+    vocal_path = Path(out_dir) / "htdemucs" / track_name / "vocals.wav"
+    if not vocal_path.exists():
+        raise RuntimeError(f"Vocals file not found at {vocal_path}")
+    return str(vocal_path)
+
+
 @app.post("/predict-audio")
 async def predict_audio(file: UploadFile = File(...)):
     import librosa
@@ -185,24 +211,45 @@ async def predict_audio(file: UploadFile = File(...)):
     else:
         suffix = ".audio"
 
-    # Write to a temp file so librosa can invoke ffmpeg (BytesIO skips the
-    # audioread/ffmpeg backend and only tries soundfile, missing WebM/M4A/OGG).
     tmp_path = None
+    demucs_dir = None
     try:
         with tempfile.NamedTemporaryFile(suffix=suffix, delete=False) as tmp:
             tmp.write(data)
             tmp_path = tmp.name
 
+        # Decode to confirm it's valid audio before running the expensive Demucs step.
         try:
-            y, sr = librosa.load(tmp_path, sr=22050, mono=True, duration=60.0)
+            y_check, sr_check = librosa.load(tmp_path, sr=22050, mono=True, duration=5.0)
         except Exception as exc:
             raise HTTPException(
                 status_code=422,
                 detail=f"Could not decode audio — unsupported format or corrupt file: {exc}",
             )
+        if len(y_check) / sr_check < 5.0:
+            raise HTTPException(status_code=422, detail="clip too short, need at least 15 seconds")
+
+        # Separate vocals with Demucs; run in thread so async loop stays free.
+        demucs_dir = tempfile.mkdtemp()
+        try:
+            loop = asyncio.get_running_loop()
+            vocal_path = await loop.run_in_executor(
+                None, lambda: _separate_vocals_sync(tmp_path, demucs_dir)
+            )
+        except RuntimeError as exc:
+            raise HTTPException(status_code=422, detail=str(exc))
+
+        # Load the isolated vocal track for pitch extraction.
+        try:
+            y, sr = librosa.load(vocal_path, sr=22050, mono=True, duration=60.0)
+        except Exception as exc:
+            raise HTTPException(status_code=422, detail=f"Could not load separated vocals: {exc}")
+
     finally:
         if tmp_path and os.path.exists(tmp_path):
             os.unlink(tmp_path)
+        if demucs_dir:
+            shutil.rmtree(demucs_dir, ignore_errors=True)
 
     duration = float(len(y) / sr)
     if duration < 5.0:

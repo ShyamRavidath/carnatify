@@ -49,6 +49,9 @@ export default function DemoPage() {
   const [recordedDuration, setRecordedDuration] = useState(0);
 
   // ── refs ─────────────────────────────────────────────────────────────────
+  const [loadingMsg, setLoadingMsg] = useState("Tracing the contour · matching phrases");
+  const loadingTimersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const audioCtxRef = useRef<AudioContext | null>(null);
   const rafIdRef = useRef<number | null>(null);
@@ -254,6 +257,11 @@ export default function DemoPage() {
     setStatus("loading");
     setResult(null);
     setError(null);
+    setLoadingMsg("Uploading recording…");
+
+    const t1 = setTimeout(() => setLoadingMsg("Separating vocals…"), 2000);
+    const t2 = setTimeout(() => setLoadingMsg("Analysing raga…"), 60000);
+    loadingTimersRef.current = [t1, t2];
 
     try {
       const r = await predictAudio(blob);
@@ -262,6 +270,9 @@ export default function DemoPage() {
     } catch (e) {
       setError((e as Error).message);
       setStatus("error");
+    } finally {
+      loadingTimersRef.current.forEach(clearTimeout);
+      loadingTimersRef.current = [];
     }
   }
 
@@ -269,6 +280,7 @@ export default function DemoPage() {
   async function analyseArchive() {
     if (!selected) return;
     setStatus("loading");
+    setLoadingMsg("Tracing the contour · matching phrases");
     setResult(null);
     setError(null);
     try {
@@ -478,7 +490,7 @@ export default function DemoPage() {
         {status === "loading" && (
           <div className="bezel">
             <div className="bezel-core">
-              <WaveSkeleton label="Tracing the contour · matching phrases" />
+              <WaveSkeleton label={loadingMsg} />
             </div>
           </div>
         )}

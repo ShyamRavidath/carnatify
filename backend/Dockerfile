@@ -13,7 +13,7 @@ WORKDIR /app
 # Install CPU-only torch first (much smaller than the default CUDA build),
 # then the rest of the requirements.
 COPY requirements.txt .
-RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu \
+RUN pip install --no-cache-dir torch torchaudio --index-url https://download.pytorch.org/whl/cpu \
     && pip install --no-cache-dir -r requirements.txt
 
 # Application code + bundled ML assets. These dirs must be present in the Space
