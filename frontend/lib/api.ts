@@ -26,6 +26,8 @@ export interface CompositionMatch {
 export interface PredictResult {
   raga: RagaPrediction[];
   matches: CompositionMatch[];
+  tonic?: number;    // only present from /predict-audio
+  duration?: number; // only present from /predict-audio
 }
 
 export interface MeaningResult {
@@ -58,6 +60,17 @@ export async function predict(trackId: string): Promise<PredictResult> {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ track_id: trackId }),
+    })
+  );
+}
+
+export async function predictAudio(blob: Blob): Promise<PredictResult> {
+  const form = new FormData();
+  form.append("file", blob, "recording.webm");
+  return asJson<PredictResult>(
+    await fetch(`${BASE}/predict-audio`, {
+      method: "POST",
+      body: form,
     })
   );
 }
