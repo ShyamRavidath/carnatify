@@ -18,13 +18,13 @@ The Gemini API key is read from the GEMINI_API_KEY environment variable
 
 from __future__ import annotations
 
+import io
 import json
 import os
 import sys
+import tempfile
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
-
-import io
 
 import numpy as np
 from fastapi import FastAPI, HTTPException, UploadFile, File
@@ -170,13 +170,39 @@ async def predict_audio(file: UploadFile = File(...)):
     if len(data) > 30 * 1024 * 1024:
         raise HTTPException(status_code=413, detail="File too large (30 MB limit)")
 
+    # Determine file suffix from content-type so ffmpeg picks the right demuxer.
+    ct = (file.content_type or "").lower()
+    if "ogg" in ct or "opus" in ct:
+        suffix = ".ogg"
+    elif "mp4" in ct or "m4a" in ct or "aac" in ct:
+        suffix = ".m4a"
+    elif "webm" in ct:
+        suffix = ".webm"
+    elif "mpeg" in ct or "mp3" in ct:
+        suffix = ".mp3"
+    elif "wav" in ct:
+        suffix = ".wav"
+    else:
+        suffix = ".audio"
+
+    # Write to a temp file so librosa can invoke ffmpeg (BytesIO skips the
+    # audioread/ffmpeg backend and only tries soundfile, missing WebM/M4A/OGG).
+    tmp_path = None
     try:
-        y, sr = librosa.load(io.BytesIO(data), sr=22050, mono=True, duration=60.0)
-    except Exception as exc:
-        raise HTTPException(
-            status_code=422,
-            detail=f"Could not decode audio — unsupported format or corrupt file: {exc}",
-        )
+        with tempfile.NamedTemporaryFile(suffix=suffix, delete=False) as tmp:
+            tmp.write(data)
+            tmp_path = tmp.name
+
+        try:
+            y, sr = librosa.load(tmp_path, sr=22050, mono=True, duration=60.0)
+        except Exception as exc:
+            raise HTTPException(
+                status_code=422,
+                detail=f"Could not decode audio — unsupported format or corrupt file: {exc}",
+            )
+    finally:
+        if tmp_path and os.path.exists(tmp_path):
+            os.unlink(tmp_path)
 
     duration = float(len(y) / sr)
     if duration < 5.0:
