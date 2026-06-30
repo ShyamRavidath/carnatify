@@ -24,8 +24,10 @@ import sys
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
+import io
+
 import numpy as np
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
@@ -157,6 +159,56 @@ def predict(req: PredictRequest) -> dict:
             {"title": title, "score": float(score), "track_id": tid}
             for title, score, tid in comp_matches
         ],
+    }
+
+
+@app.post("/predict-audio")
+async def predict_audio(file: UploadFile = File(...)):
+    import librosa
+
+    data = await file.read()
+    if len(data) > 30 * 1024 * 1024:
+        raise HTTPException(status_code=413, detail="File too large (30 MB limit)")
+
+    y, sr = librosa.load(io.BytesIO(data), sr=22050, mono=True, duration=60.0)
+    duration = float(len(y) / sr)
+    if duration < 5.0:
+        raise HTTPException(status_code=422, detail="clip too short, need at least 15 seconds")
+
+    f0_full = librosa.yin(y, fmin=60, fmax=500, sr=sr)
+    voiced = f0_full[f0_full > 0]
+    tonic = float(np.median(voiced)) if len(voiced) else 130.0
+
+    f0 = librosa.yin(y, fmin=60, fmax=1000, sr=sr)
+    frequencies = f0[f0 > 0].astype(np.float64)
+
+    def _raga():
+        if not (_RAGA_MODEL.exists() and _RAGA_ENC.exists()):
+            return []
+        try:
+            return predict_raga(
+                frequencies, tonic,
+                model_path=_RAGA_MODEL, label_encoder_path=_RAGA_ENC, top_k=3,
+            )
+        except Exception:
+            return []
+
+    def _comp():
+        try:
+            return match_composition(frequencies, tonic, top_k=3)
+        except Exception:
+            return []
+
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        f_raga = pool.submit(_raga)
+        f_comp = pool.submit(_comp)
+        raga_preds, comp_matches = f_raga.result(), f_comp.result()
+
+    return {
+        "raga": [{"name": p.raga_name, "confidence": float(p.confidence)} for p in raga_preds],
+        "matches": [{"title": title, "score": float(score), "track_id": tid} for title, score, tid in comp_matches],
+        "tonic": tonic,
+        "duration": duration,
     }
 
 
