@@ -14,6 +14,7 @@ import {
 import {
   getTracks,
   predict,
+  predictAudio,
   getMeaning,
   type Track,
   type PredictResult,
@@ -26,21 +27,6 @@ type Status = "idle" | "loading" | "done" | "error";
 type Tab = "archive" | "record";
 type RecordState = "idle" | "recording" | "recorded" | "error";
 
-// MOCK — replace body of analyseAudio with `await predictAudio(blob)` once backend is deployed
-const MOCK_RESULT: PredictResult = {
-  raga: [
-    { name: "Bhairavi", confidence: 0.31 },
-    { name: "Tōḍi", confidence: 0.22 },
-    { name: "Śankarābharaṇaṁ", confidence: 0.15 },
-  ],
-  matches: [
-    { title: "Ninnuvina", score: 0.91, track_id: "mock_1" },
-    { title: "Koluvaiyunnade", score: 0.87, track_id: "mock_2" },
-    { title: "Brova Bharama", score: 0.82, track_id: "mock_3" },
-  ],
-  tonic: 147.0,
-  duration: 30.0,
-};
 
 export default function DemoPage() {
   const [tab, setTab] = useState<Tab>("archive");
@@ -270,9 +256,8 @@ export default function DemoPage() {
     setError(null);
 
     try {
-      // MOCK — swap for `await predictAudio(blob)` once backend is deployed
-      await new Promise<void>((resolve) => setTimeout(resolve, 2000));
-      setResult(MOCK_RESULT);
+      const r = await predictAudio(blob);
+      setResult(r);
       setStatus("done");
     } catch (e) {
       setError((e as Error).message);
