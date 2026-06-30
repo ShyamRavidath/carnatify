@@ -171,7 +171,7 @@ def _separate_vocals_sync(audio_path: str, out_dir: str) -> str:
         [
             sys.executable, "-m", "demucs",
             "--two-stems=vocals",
-            "--model", "htdemucs",
+            "-n", "htdemucs",
             "-o", out_dir,
             audio_path,
         ],
