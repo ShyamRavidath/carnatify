@@ -21,11 +21,13 @@ from __future__ import annotations
 import asyncio
 import io
 import json
+import logging
 import os
 import shutil
 import subprocess
 import sys
 import tempfile
+import time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -33,6 +35,9 @@ import numpy as np
 from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
+logger = logging.getLogger("carnatify")
 
 # ── resource resolution ─────────────────────────────────────────────────────
 # In the Docker image, src/ models/ and lyrics.db are copied next to this file.
@@ -167,24 +172,28 @@ def predict(req: PredictRequest) -> dict:
 
 def _separate_vocals_sync(audio_path: str, out_dir: str) -> str:
     """Run Demucs htdemucs vocal separation; returns path to vocals.wav."""
-    result = subprocess.run(
-        [
-            sys.executable, "-m", "demucs",
-            "--two-stems=vocals",
-            "-n", "htdemucs",
-            "-o", out_dir,
-            audio_path,
-        ],
-        capture_output=True,
-        text=True,
-        timeout=180,
+    cmd = [
+        sys.executable, "-m", "demucs",
+        "--two-stems=vocals",
+        "-n", "htdemucs",
+        "-o", out_dir,
+        audio_path,
+    ]
+    logger.info("Demucs: launching %s", " ".join(cmd))
+    started = time.monotonic()
+    result = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
+    elapsed = time.monotonic() - started
+    logger.info(
+        "Demucs: finished in %.1fs, returncode=%d, stderr_tail=%r",
+        elapsed, result.returncode, result.stderr[-500:],
     )
     if result.returncode != 0:
-        raise RuntimeError(f"Demucs failed: {result.stderr[-500:]}")
+        raise RuntimeError(f"Demucs failed (rc={result.returncode}): {result.stderr[-500:]}")
     track_name = Path(audio_path).stem
     vocal_path = Path(out_dir) / "htdemucs" / track_name / "vocals.wav"
     if not vocal_path.exists():
         raise RuntimeError(f"Vocals file not found at {vocal_path}")
+    logger.info("Demucs: vocals written to %s", vocal_path)
     return str(vocal_path)
 
 
@@ -231,12 +240,15 @@ async def predict_audio(file: UploadFile = File(...)):
 
         # Separate vocals with Demucs; run in thread so async loop stays free.
         demucs_dir = tempfile.mkdtemp()
+        logger.info("Starting Demucs separation for %s (%d bytes)", tmp_path, len(data))
         try:
             loop = asyncio.get_running_loop()
             vocal_path = await loop.run_in_executor(
                 None, lambda: _separate_vocals_sync(tmp_path, demucs_dir)
             )
+            logger.info("Demucs separation done, vocal path: %s", vocal_path)
         except RuntimeError as exc:
+            logger.error("Demucs FAILED: %s", exc)
             raise HTTPException(status_code=422, detail=str(exc))
 
         # Load the isolated vocal track for pitch extraction.
