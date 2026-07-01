@@ -1,9 +1,10 @@
 """Train + 5-fold CV both retrain candidates and report results side by side.
 
-Reads the caches built by train_raga_v2_saraga.py (Model A: real audio,
-Demucs+pyin, matches inference exactly) and train_raga_v2_compmusic.py
-(Model B: CompMusic's own pitch extraction, reference/comparison only -- see
-that script's docstring for why it isn't a true pipeline-matched candidate).
+Reads the caches built by train_raga_v2_saraga.py + train_raga_v2_archive.py
+(Model A: real audio, Demucs+pyin, matches inference exactly -- combined
+across both real-audio sources) and train_raga_v2_compmusic.py (Model B:
+CompMusic's own pitch extraction, reference/comparison only -- see that
+script's docstring for why it isn't a true pipeline-matched candidate).
 
 Does NOT overwrite models/raga_classifier.pkl (the production model) --
 saves each candidate to models/raga_classifier_<name>.pkl instead so the
@@ -30,16 +31,20 @@ CACHE_DIR = ROOT / "data" / "raga_v2_cache"
 MODELS_DIR = ROOT / "models"
 
 
-def load_saraga_cache() -> tuple[np.ndarray, list[str], list[str]]:
+def load_realaudio_cache() -> tuple[np.ndarray, list[str], list[str]]:
+    """Combines both real-audio sources (Saraga Carnatic + archive.org downloads) --
+    both went through the identical Demucs+pyin pipeline via raga_v2_pipeline.py, so
+    they're directly poolable into one dataset."""
     X, y_labels, track_ids = [], [], []
-    for npz_path in sorted((CACHE_DIR / "saraga").glob("*.npz")):
-        d = np.load(npz_path, allow_pickle=True)
-        raga = str(d["raga"])
-        tid = str(d["track_id"])
-        for row in d["X"]:
-            X.append(row)
-            y_labels.append(raga)
-            track_ids.append(tid)
+    for subdir in ("saraga", "archive"):
+        for npz_path in sorted((CACHE_DIR / subdir).glob("*.npz")):
+            d = np.load(npz_path, allow_pickle=True)
+            raga = str(d["raga"])
+            tid = str(d["track_id"])
+            for row in d["X"]:
+                X.append(row)
+                y_labels.append(raga)
+                track_ids.append(tid)
     return np.array(X), y_labels, track_ids
 
 
@@ -109,11 +114,12 @@ def main() -> None:
 
     results = []
 
-    Xa, ya, tida = load_saraga_cache()
+    Xa, ya, tida = load_realaudio_cache()
     if len(Xa):
-        results.append(evaluate("saraga_v2_realaudio", Xa, ya, tida))
+        results.append(evaluate("realaudio_v2", Xa, ya, tida))
     else:
-        print("\nNo Saraga cache found yet -- run train_raga_v2_saraga.py first.")
+        print("\nNo real-audio cache found yet -- run train_raga_v2_saraga.py "
+              "and/or train_raga_v2_archive.py first.")
 
     Xb, yb, tidb = load_compmusic_cache()
     if len(Xb):
