@@ -267,12 +267,11 @@ async def predict_audio(file: UploadFile = File(...)):
     if duration < 5.0:
         raise HTTPException(status_code=422, detail="clip too short, need at least 15 seconds")
 
-    f0_full = librosa.yin(y, fmin=60, fmax=500, sr=sr)
-    voiced = f0_full[f0_full > 0]
-    tonic = float(np.median(voiced)) if len(voiced) else 130.0
-
-    f0 = librosa.yin(y, fmin=60, fmax=1000, sr=sr)
-    frequencies = f0[f0 > 0].astype(np.float64)
+    # pyin (not yin) to match the raga classifier's training pipeline exactly —
+    # see train_raga_v2_saraga.py, which extracts features the same way.
+    f0, voiced_flag, _ = librosa.pyin(y, fmin=60, fmax=1000, sr=sr)
+    frequencies = f0[voiced_flag].astype(np.float64)
+    tonic = float(np.median(frequencies)) if len(frequencies) else 130.0
 
     if len(frequencies) < 10:
         raise HTTPException(

@@ -6,6 +6,8 @@ Indian Art Music Raga Recognition Dataset (features).zip
 
 # ── Python ──
 /venv/
+/venv_train/
+/data/raga_v2_cache/
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -27,3 +29,5 @@ out/
 *.log
 __pycache__/
 *.pyc
+.vercel
+.env*
