@@ -30,6 +30,10 @@ ROOT = Path(__file__).parent
 AUDIO_DIR = ROOT / "data" / "concert_audio"
 CACHE_DIR = ROOT / "data" / "raga_v2_cache" / "archive"
 
+# Forms, not ragas — a ragamalika moves through several ragas in one piece,
+# so its tracks carry no single-raga label and would poison training.
+EXCLUDED_LABELS = {"Rāgamālika"}
+
 
 def main() -> None:
     parser = argparse.ArgumentParser()
@@ -39,7 +43,7 @@ def main() -> None:
     candidates = []
     counts = Counter()
     for raga_dir in sorted(AUDIO_DIR.iterdir()):
-        if not raga_dir.is_dir():
+        if not raga_dir.is_dir() or raga_dir.name in EXCLUDED_LABELS:
             continue
         raga = raga_dir.name
         for mp3_path in sorted(raga_dir.glob("*.mp3")):
