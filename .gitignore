@@ -28,6 +28,9 @@ out/
 /models/candidates/
 /models/*_v2*.pkl
 
+# ── Evaluation outputs ──
+/tala_eval_results.json
+
 # ── Test screenshots & browser session cruft ──
 /*.png
 /.playwright-mcp/

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import unicodedata
 from typing import Any
 
 import numpy as np
@@ -53,7 +54,14 @@ def normalize_tala_name(name: str) -> str:
     """
     if not name:
         return ""
-    key = " ".join(name.strip().lower().split())
+    # Saraga metadata spells talas with diacritics ("Ādi", "Rūpaka"); fold to
+    # ASCII before alias lookup or nothing ever matches.
+    folded = "".join(
+        c
+        for c in unicodedata.normalize("NFD", name)
+        if not unicodedata.combining(c)
+    )
+    key = " ".join(folded.strip().lower().split())
     for canonical, aliases in _TALA_ALIASES.items():
         if key == canonical or key in aliases:
             return canonical

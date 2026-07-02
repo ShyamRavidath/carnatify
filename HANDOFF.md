@@ -77,13 +77,14 @@ This is the fundamental reason the live-audio raga classifier underperforms. A K
 - `src/carnatify/ml/tala_validator.py`: Evaluation against Saraga ground truth annotations.
 - `detect_tala()` standalone function.
 
-**What is broken:** **Near-zero accuracy on Saraga ground truth.** The Saraga `beats_per_cycle` annotation encodes **subdivisions** (aksharas), not beats. Adi tala = 8 beats × 4 aksharas/beat = 32 subdivisions in the ground truth file, but the code's `_BEATS_TO_TALA` maps `8 → "Adi"` and expects the beat count directly. The autocorrelation algorithm operating on inter-beat intervals (at the beat level) will find 8 beats per cycle, but the ground truth says `32`, so every valid Adi detection is scored as wrong.
+**What is broken — measured 2026-07-01 (this supersedes the earlier "subdivision mismatch" theory, which was wrong):**
 
-This was identified as the root cause (see original HANDOFF) but **the fix was never implemented.** The tala detector was effectively abandoned rather than fixed.
+The earlier handoff claimed the Saraga ground truth encodes aksharas (Adi = 32) and that predictions were scored against the wrong granularity. That is not how the validator works: `tala_validator.py` compares tala **names** from each track's `.json` metadata (`taala[0].name`), and the `.sama-manual.txt` files contain cycle-start timestamps (seconds), not beat counts. Two real problems were found instead:
 
-**What was explicitly deferred:** Tala detection was removed from the live inference pipeline entirely. The web app frontend does not display tala results. `/predict` and `/predict-audio` return no tala field.
+1. **Diacritics bug (fixed):** Saraga metadata spells talas with diacritics ("Ādi", "Rūpaka"), which `normalize_tala_name` never matched against the plain-ASCII alias table — every prediction scored wrong regardless of the beat math. Fixed with unicode folding in `tala_validator.py`.
+2. **The estimator itself is weak (not fixed — fundamental):** Evaluated honestly via `evaluate_tala.py` over 170 Saraga tracks (adi 122, rupaka 25, misra chapu 16, khanda chapu 7): **16.5% overall**. Diagnosis from the sama annotations: the inter-beat-interval autocorrelation finds sub-periods — median estimated cycle is 0.51× the true cycle — and librosa's beat tracker makes octave (double/half tempo) errors on concert audio. A second attempt (onset-envelope autocorrelation scored at candidate cycle lags, octave-folded classes {4,8,16}→Adi / {3,6,12}→Rupaka / {7,14}→Misra Chapu / {5,10}→Khanda Chapu) reached **32.9%**, still below the 72% majority-class baseline (always guess Adi), with an uninformative confidence margin.
 
-**Fix required:** Divide ground truth `beats_per_cycle` by the correct subdivision factor (4 for Adi, 2 for Rupaka, 3 for Misra Chapu, 5 for Khanda Chapu) before comparison, or re-read the Saraga annotation format documentation carefully.
+**Conclusion:** Unsupervised beat tracking + cycle periodicity cannot discriminate these talas on real concert recordings (mridangam improvisation, tempo drift, sparse cycle-level accents). Tala detection stays out of the API — `/predict` and `/predict-audio` return no tala field, and the frontend does not display one. The credible path is supervised meter tracking trained on the sama annotations (132 of 184 labeled tracks have them) — a research-scale effort, not a bug fix.
 
 ---
 
@@ -355,12 +356,12 @@ The live HF Space is assembled in `/tmp/hf-space/` on the dev machine. Its git r
 **What was tried:** (1) CompMusic `.pitch_post_processed` + augmentation → 77.2% (no improvement). (2) Real-audio Saraga + archive.org → 5% (data sparsity). (3) Email to mtg-info@upf.edu for CompMusic audio — not yet sent.  
 **Fix:** Get CompMusic audio (mtg-info@upf.edu), run Demucs+pyin over all 477 tracks, retrain. Expected result: 77%+ accuracy on a genuinely pipeline-matched training set. Use `train_raga_v2_evaluate.py` structure with `raga_v2_pipeline.py`.
 
-### Bug 2 — Tala detector near-zero accuracy (blocks tala feature)
-**Description:** `TalaAnalyzer.estimate_beats_per_cycle()` returns the right number (8 for Adi) but the Saraga ground truth `beats_per_cycle` encodes subdivisions (aksharas): Adi = 32 (8 beats × 4 aksharas). Every Adi prediction is scored as wrong because `8 ≠ 32`.  
-**Root cause:** Misread of the Saraga annotation format. The field is `beats_per_cycle` but its value is aksharas-per-cycle.  
-**Severity:** Blocks tala detection. Feature is entirely absent from the web UI as a result.  
-**What was tried:** The validator code was written but the annotation mismatch was identified and not fixed (task was abandoned).  
-**Fix:** In `tala_validator.py`, convert ground truth by dividing by the aksharas-per-beat for the tala. Alternatively, reread the Saraga annotation schema at `saraga_carnatic/annotations/beats/` to get the actual format (may use `beats` files with beat times rather than `beats_per_cycle` integers).
+### Bug 2 — Tala detector low accuracy (blocks tala feature) — INVESTIGATED 2026-07-01, feature stays deferred
+**Description:** Measured 16.5% accuracy (analyzer as shipped) / 32.9% (improved octave-folded variant) over 170 labeled Saraga tracks, vs a 72% always-guess-Adi baseline. See section 2.2 for full numbers.  
+**Root cause:** Two-fold. (1) A diacritics bug in `normalize_tala_name` ("Ādi" ≠ "adi") made the validator score everything wrong — fixed. (2) The estimator is fundamentally weak: inter-beat-interval autocorrelation finds sub-periods of the true cycle (median 0.51×, verified against `.sama-manual.txt` cycle timestamps), and beat tracking makes octave errors on concert audio. The earlier theory (ground truth encodes aksharas, 8 vs 32) was wrong — the validator compares names, not counts.  
+**Severity:** Blocks tala detection. Feature remains absent from the API and web UI — correctly so.  
+**What was tried:** Diacritics fix; honest evaluation (`evaluate_tala.py`); onset-envelope autocorrelation with octave-folded beat classes (32.9%, confidence margin uninformative).  
+**Fix (future):** Supervised meter tracking trained on the sama annotations (132 tracks have them). Do not ship any tala output until it beats the 72% majority baseline convincingly.
 
 ### Bug 3 — Composition matcher data ceiling (degrades quality)
 **Description:** 16% top-1 accuracy on compositions with ≥2 renditions in the 197-track catalog.  
@@ -580,7 +581,7 @@ Steps:
 | Raga top-3 accuracy | Unknown | ≥95% | Likely higher than top-1 but not measured |
 | Composition matching (top-1) | 16% on 19 compositions with ≥2 renditions | ≥70% | Data ceiling. Need catalog expansion + multi-rendition averaging |
 | Composition matching (top-5) | 24% | ≥85% | Same |
-| Tala detection | ~2% (broken) | ≥70% on Saraga ground truth | Fix the ground-truth annotation mismatch |
+| Tala detection | 16.5% measured (32.9% best variant; 72% majority baseline) | ≥70% on Saraga ground truth | Needs supervised meter tracking on sama annotations; deferred |
 | Inference latency `/predict-audio` | ~65s (30s clip, CPU) | ≤10s | GPU tier or vocal-separation bypass |
 | Meanings coverage | 8 / 3,252 = 0.25% | 100% | Run generate_meanings.py when quota available |
 
