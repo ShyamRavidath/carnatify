@@ -24,6 +24,14 @@ out/
 /backend/models/
 /backend/data/lyrics.db
 
+# ── Experiment artifacts (retrain candidates; do not ship) ──
+/models/candidates/
+/models/*_v2*.pkl
+
+# ── Test screenshots & browser session cruft ──
+/*.png
+/.playwright-mcp/
+
 # ── Local-only config & OS cruft ──
 .claude/settings.local.json
 .DS_Store
