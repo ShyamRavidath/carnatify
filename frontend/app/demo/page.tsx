@@ -173,7 +173,11 @@ export default function DemoPage() {
       // If switchTab detached us, skip all state updates
       if (mediaRecorderRef.current !== mr) return;
 
-      const blob = new Blob(chunksRef.current, { type: "audio/webm" });
+      // Keep the recorder's real mime type — Safari records mp4, Firefox ogg;
+      // the backend picks its decoder from this.
+      const blob = new Blob(chunksRef.current, {
+        type: mr.mimeType || "audio/webm",
+      });
       blobRef.current = blob;
       const dur = Math.round((Date.now() - startTimeRef.current) / 1000);
       setRecordedDuration(dur);
@@ -261,7 +265,14 @@ export default function DemoPage() {
 
     const t1 = setTimeout(() => setLoadingMsg("Separating vocals…"), 2000);
     const t2 = setTimeout(() => setLoadingMsg("Analysing raga…"), 60000);
-    loadingTimersRef.current = [t1, t2];
+    const t3 = setTimeout(
+      () =>
+        setLoadingMsg(
+          "Still working — the model is warming up (first request can take 2–3 minutes)…"
+        ),
+      90000
+    );
+    loadingTimersRef.current = [t1, t2, t3];
 
     try {
       const r = await predictAudio(blob);

@@ -64,15 +64,42 @@ export async function predict(trackId: string): Promise<PredictResult> {
   );
 }
 
+/** MediaRecorder output differs by browser: Chrome webm, Safari mp4, Firefox ogg. */
+function audioExtension(mimeType: string): string {
+  const t = mimeType.toLowerCase();
+  if (t.includes("mp4") || t.includes("aac")) return "m4a";
+  if (t.includes("ogg") || t.includes("opus")) return "ogg";
+  if (t.includes("mpeg") || t.includes("mp3")) return "mp3";
+  if (t.includes("wav")) return "wav";
+  return "webm";
+}
+
 export async function predictAudio(blob: Blob): Promise<PredictResult> {
   const form = new FormData();
-  form.append("file", blob, "recording.webm");
-  return asJson<PredictResult>(
-    await fetch(`${BASE}/predict-audio`, {
-      method: "POST",
-      body: form,
-    })
-  );
+  form.append("file", blob, `recording.${audioExtension(blob.type)}`);
+
+  // First request after the Space cold-starts can take 2–4 minutes (model
+  // download + container init); cap the wait so the UI never hangs silently.
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 5 * 60 * 1000);
+  try {
+    return await asJson<PredictResult>(
+      await fetch(`${BASE}/predict-audio`, {
+        method: "POST",
+        body: form,
+        signal: controller.signal,
+      })
+    );
+  } catch (e) {
+    if ((e as Error).name === "AbortError") {
+      throw new Error(
+        "Analysis timed out after 5 minutes — the server may be busy. Please try again in a moment."
+      );
+    }
+    throw e;
+  } finally {
+    clearTimeout(timer);
+  }
 }
 
 export async function getMeaning(title: string): Promise<MeaningResult> {

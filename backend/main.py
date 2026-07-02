@@ -32,9 +32,11 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import numpy as np
-from fastapi import FastAPI, HTTPException, UploadFile, File
+from fastapi import FastAPI, HTTPException, Request, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.errors import RateLimitExceeded
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
 logger = logging.getLogger("carnatify")
@@ -65,7 +67,21 @@ _PITCH_NPZ = _HERE / "data" / "tracks_pitch.npz"
 _TRACKS_META = _HERE / "data" / "tracks_meta.json"
 _LYRICS_DB = _resolve("data/lyrics.db")
 
-_FRONTEND_ORIGIN = os.environ.get("FRONTEND_ORIGIN", "*")
+# Deliberate default rather than "*": if the env var is missing on the Space,
+# we still only serve the production frontend (plus localhost for dev).
+_FRONTEND_ORIGIN = os.environ.get("FRONTEND_ORIGIN", "https://carnatify.vercel.app")
+_ALLOWED_ORIGINS = [_FRONTEND_ORIGIN, "http://localhost:3000", "http://127.0.0.1:3000"]
+
+# HF Spaces sits behind a proxy, so the client IP arrives in X-Forwarded-For.
+def _client_ip(request: Request) -> str:
+    fwd = request.headers.get("x-forwarded-for")
+    if fwd:
+        return fwd.split(",")[0].strip()
+    return request.client.host if request.client else "unknown"
+
+
+# Demucs saturates the 2-vCPU Space; never run two separations at once.
+_DEMUCS_SEM = asyncio.Semaphore(1)
 
 # ── lazily-loaded singletons ────────────────────────────────────────────────
 _tracks: list[dict] | None = None
@@ -107,11 +123,15 @@ class PredictRequest(BaseModel):
 app = FastAPI(title="Carnatify API", version="1.0.0")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[_FRONTEND_ORIGIN] if _FRONTEND_ORIGIN != "*" else ["*"],
+    allow_origins=_ALLOWED_ORIGINS,
     allow_credentials=False,
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
+
+limiter = Limiter(key_func=_client_ip)
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 
 @app.get("/health")
@@ -198,7 +218,8 @@ def _separate_vocals_sync(audio_path: str, out_dir: str) -> str:
 
 
 @app.post("/predict-audio")
-async def predict_audio(file: UploadFile = File(...)):
+@limiter.limit("2/minute")
+async def predict_audio(request: Request, file: UploadFile = File(...)):
     import librosa
 
     data = await file.read()
@@ -218,7 +239,11 @@ async def predict_audio(file: UploadFile = File(...)):
     elif "wav" in ct:
         suffix = ".wav"
     else:
-        suffix = ".audio"
+        raise HTTPException(
+            status_code=415,
+            detail=f"Unsupported audio content-type: {file.content_type or 'none'}. "
+            "Send webm, ogg, m4a, mp3, or wav.",
+        )
 
     tmp_path = None
     demucs_dir = None
@@ -243,9 +268,10 @@ async def predict_audio(file: UploadFile = File(...)):
         logger.info("Starting Demucs separation for %s (%d bytes)", tmp_path, len(data))
         try:
             loop = asyncio.get_running_loop()
-            vocal_path = await loop.run_in_executor(
-                None, lambda: _separate_vocals_sync(tmp_path, demucs_dir)
-            )
+            async with _DEMUCS_SEM:
+                vocal_path = await loop.run_in_executor(
+                    None, lambda: _separate_vocals_sync(tmp_path, demucs_dir)
+                )
             logger.info("Demucs separation done, vocal path: %s", vocal_path)
         except RuntimeError as exc:
             logger.error("Demucs FAILED: %s", exc)
