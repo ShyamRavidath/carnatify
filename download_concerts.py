@@ -1,6 +1,6 @@
 """Download concert audio from archive.org, paired with raga labels from
-data/scraped_compositions.json, for ragas in the current 40-raga vocabulary
-(models/raga_label_encoder.pkl).
+data/scraped_compositions.json, for every canonical raga with at least
+MIN_RECORDS_PER_RAGA scraped renditions (vocabulary expansion included).
 
 This grows the pool of real, locally-available raga-labeled audio beyond
 Saraga Carnatic (only ~3 tracks/raga after filtering -- see
@@ -37,12 +37,10 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from urllib.parse import quote
 
-import joblib
 import requests
 
 ROOT = Path(__file__).parent
 COMPOSITIONS_PATH = ROOT / "data" / "scraped_compositions.json"
-LABEL_ENCODER_PATH = ROOT / "models" / "raga_label_encoder.pkl"
 OUT_DIR = ROOT / "data" / "concert_audio"
 METADATA_CACHE_DIR = ROOT / "data" / "raga_v2_cache" / "archive_metadata"
 
@@ -50,8 +48,13 @@ USER_AGENT = (
     "CarnatifyResearchBot/1.0 (+https://carnatify.vercel.app; "
     "educational raga-classification research; contact: dpti0904@gmail.com)"
 )
-MAX_PER_RAGA = 10
-MAX_TOTAL = 400
+# Caps raised 2026-07-01: the first pass (10/raga, 400 total) produced only
+# 224 files and led to the false conclusion that shankarkrish data was too
+# sparse to retrain on. The scrape actually holds 3,009 raga-labeled records
+# across 101 ragas (58 ragas with >=20). ~8 MB/track, so 1,500 =~ 12 GB.
+MAX_PER_RAGA = 30
+MAX_TOTAL = 1500
+MIN_RECORDS_PER_RAGA = 12  # only target ragas with enough renditions to learn from
 DOWNLOAD_SLEEP_S = 2.0
 METADATA_SLEEP_S = 0.5
 
@@ -99,12 +102,20 @@ def main() -> None:
     session = requests.Session()
     session.headers.update({"User-Agent": USER_AGENT})
 
-    le = joblib.load(LABEL_ENCODER_PATH)
-    target_ragas = set(le.classes_.tolist())
-
     compositions = json.loads(COMPOSITIONS_PATH.read_text())
+
+    # Target any canonical raga with enough scraped renditions — not just the
+    # current 40-raga vocabulary. The retrain fits a fresh label encoder, and
+    # this is how OOV ragas (Saveri, Purvikalyani, ...) enter the vocabulary.
+    raga_counts = Counter(
+        c["raga_canonical"] for c in compositions if c.get("raga_canonical")
+    )
+    target_ragas = {r for r, n in raga_counts.items() if n >= MIN_RECORDS_PER_RAGA}
     matching = [c for c in compositions if c.get("raga_canonical") in target_ragas]
-    print(f"Compositions in 40-raga vocabulary: {len(matching)} / {len(compositions)}")
+    print(
+        f"Target ragas (>= {MIN_RECORDS_PER_RAGA} records): {len(target_ragas)}; "
+        f"matching compositions: {len(matching)} / {len(compositions)}"
+    )
 
     by_source_url: dict[str, list[dict]] = defaultdict(list)
     for c in matching:
