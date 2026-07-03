@@ -28,7 +28,8 @@ from raga_v2_pipeline import process_track
 
 ROOT = Path(__file__).parent
 AUDIO_DIR = ROOT / "data" / "concert_audio"
-CACHE_DIR = ROOT / "data" / "raga_v2_cache" / "archive"
+# v3: essentia drone-based tonic (see raga_v2_pipeline.estimate_tonic_from_mix)
+CACHE_DIR = ROOT / "data" / "raga_v2_cache" / "archive_v3"
 
 # Forms, not ragas — a ragamalika moves through several ragas in one piece,
 # so its tracks carry no single-raga label and would poison training.

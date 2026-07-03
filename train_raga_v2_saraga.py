@@ -42,7 +42,10 @@ import mirdata
 from raga_v2_pipeline import process_track
 
 ROOT = Path(__file__).parent
-CACHE_DIR = ROOT / "data" / "raga_v2_cache" / "saraga"
+# v3: correct tonic handling (annotated where available, essentia drone
+# estimation otherwise). The old saraga/ cache used median-F0 tonics, which
+# were within ±50 cents of true Sa only 10% of the time.
+CACHE_DIR = ROOT / "data" / "raga_v2_cache" / "saraga_v3"
 
 
 def main() -> None:
@@ -64,7 +67,12 @@ def main() -> None:
             continue
         name = raagas[0]["name"]
         counts[name] += 1
-        candidates.append((tid, name, t.audio_path))
+        tonic = None
+        try:
+            tonic = t.tonic  # annotated ground truth where the dataset has it
+        except Exception:
+            pass
+        candidates.append((tid, name, t.audio_path, tonic))
 
     keep_ragas = {r for r, n in counts.items() if n >= args.min_tracks_per_raga}
     candidates = [c for c in candidates if c[1] in keep_ragas]
@@ -77,9 +85,9 @@ def main() -> None:
 
     n_ok, n_skip, n_cached = 0, 0, 0
     t_start = time.time()
-    for i, (tid, raga, audio_path) in enumerate(candidates, 1):
+    for i, (tid, raga, audio_path, tonic) in enumerate(candidates, 1):
         try:
-            result = process_track(tid, raga, audio_path, CACHE_DIR)
+            result = process_track(tid, raga, audio_path, CACHE_DIR, tonic_hz=tonic)
         except Exception as exc:
             print(f"[{i}/{len(candidates)}] {tid} FAILED: {exc}")
             n_skip += 1

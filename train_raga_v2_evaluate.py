@@ -42,7 +42,9 @@ def load_realaudio_cache() -> tuple[np.ndarray, list[str], list[str]]:
     both went through the identical Demucs+pyin pipeline via raga_v2_pipeline.py, so
     they're directly poolable into one dataset."""
     X, y_labels, track_ids = [], [], []
-    for subdir in ("saraga", "archive"):
+    # v3 caches only — the unsuffixed saraga/ and archive/ dirs hold the old
+    # median-F0-tonic features (10% tonic accuracy; 9% CV) kept for reference.
+    for subdir in ("saraga_v3", "archive_v3"):
         for npz_path in sorted((CACHE_DIR / subdir).glob("*.npz")):
             d = np.load(npz_path, allow_pickle=True)
             raga = str(d["raga"])

@@ -19,4 +19,4 @@ dtaidistance>=2.3            # imported by ml.dtw_matcher
 demucs>=4.0.0                # vocal source separation for /predict-audio
 
 google-generativeai>=0.8    # lyrics meaning generation (Gemini 2.0 Flash)
-# essentia intentionally omitted — feature_extractor imports it under try/except
+essentia>=2.1b6              # TonicIndianArtMusic — drone-based Sa estimation in /predict-audio

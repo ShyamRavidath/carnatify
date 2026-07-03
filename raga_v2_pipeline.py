@@ -34,6 +34,13 @@ PYIN_FMIN, PYIN_FMAX = 60, 1000
 TARGET_SR = 22050
 NOISE_SNR_DB = 20.0
 
+# Tonic estimation window — longer than the feature segment because the
+# drone-based estimator needs more evidence (87% within ±50 cents at 180s on
+# Saraga vs 70% at 60s; the residual errors are Sa/Pa confusions).
+TONIC_OFFSET_S = 30.0
+TONIC_LEN_S = 180.0
+TONIC_MIN_HZ, TONIC_MAX_HZ = 80.0, 400.0
+
 
 def _pitch_shift_sign(track_id: str) -> int:
     """Deterministic +-1 semitone choice per track (reproducible, no RNG state needed)."""
@@ -41,13 +48,37 @@ def _pitch_shift_sign(track_id: str) -> int:
     return 1 if h % 2 == 0 else -1
 
 
-def _pyin_tonic_and_frequencies(y: np.ndarray, sr: int) -> tuple[float | None, np.ndarray]:
+def _pyin_frequencies(y: np.ndarray, sr: int) -> np.ndarray:
     f0, voiced_flag, _ = librosa.pyin(y, fmin=PYIN_FMIN, fmax=PYIN_FMAX, sr=sr)
-    frequencies = f0[voiced_flag].astype(np.float64)
-    if len(frequencies) < 10:
-        return None, frequencies
-    tonic = float(np.median(frequencies))
-    return tonic, frequencies
+    return f0[voiced_flag].astype(np.float64)
+
+
+def estimate_tonic_from_mix(audio_path: str) -> float | None:
+    """Drone-based tonic (Sa) estimation on the *mixed* recording.
+
+    Must run before vocal separation — Demucs strips the tambura drone the
+    estimator relies on. Validated on Saraga annotated tonics: 87% within
+    ±50 cents (residual errors are Sa/Pa fifth confusions). The previous
+    median-of-voiced-F0 "tonic" was within ±50 cents only 10% of the time,
+    which rotated every tonic-normalized feature by a random offset and sank
+    the first real-audio retrain (5-9% CV).
+    """
+    try:
+        import essentia.standard as es
+    except ImportError:
+        return None
+    try:
+        info = sf.info(audio_path)
+        start_s = min(TONIC_OFFSET_S, max(0.0, info.duration - TONIC_LEN_S))
+        y, _ = librosa.load(
+            audio_path, sr=44100, mono=True, offset=start_s, duration=TONIC_LEN_S
+        )
+        if len(y) < 44100 * 10:
+            return None
+        tonic = float(es.TonicIndianArtMusic()(y.astype(np.float32)))
+    except Exception:
+        return None
+    return tonic if TONIC_MIN_HZ <= tonic <= TONIC_MAX_HZ else None
 
 
 def _add_white_noise(y: np.ndarray, snr_db: float) -> np.ndarray:
@@ -76,7 +107,19 @@ def _separate_vocals(audio_path: str, out_dir: str) -> str:
     return str(vocal_path)
 
 
-def process_track(track_id: str, raga: str, audio_path: str, cache_dir: Path) -> dict | None:
+def process_track(
+    track_id: str,
+    raga: str,
+    audio_path: str,
+    cache_dir: Path,
+    tonic_hz: float | None = None,
+) -> dict | None:
+    """Extract 480-dim features for one track.
+
+    ``tonic_hz``: ground-truth tonic when available (Saraga annotations);
+    otherwise the tonic is estimated from the mixed audio via essentia, with
+    median-of-voiced-F0 as a last-resort fallback.
+    """
     cache_dir.mkdir(parents=True, exist_ok=True)
     cache_path = cache_dir / f"{track_id}.npz"
     if cache_path.exists():
@@ -109,29 +152,45 @@ def process_track(track_id: str, raga: str, audio_path: str, cache_dir: Path) ->
 
         y, sr = librosa.load(vocal_path, sr=TARGET_SR, mono=True)
 
-    tonic, frequencies = _pyin_tonic_and_frequencies(y, sr)
-    if tonic is None:
+    frequencies = _pyin_frequencies(y, sr)
+    if len(frequencies) < 10:
         return None
+
+    # Tonic: annotated > drone-estimated (on the mix) > median-F0 fallback.
+    if tonic_hz is not None:
+        tonic, tonic_method = float(tonic_hz), "annotated"
+    else:
+        est = estimate_tonic_from_mix(audio_path)
+        if est is not None:
+            tonic, tonic_method = est, "essentia"
+        else:
+            tonic, tonic_method = float(np.median(frequencies)), "median_f0"
+
     feat = extract_features(frequencies, tonic)
     if feat is None:
         return None
 
-    # ── Augmentation 1: pitch shift +-1 semitone, re-run the full pyin step ──
+    # ── Augmentation 1: pitch shift ±1 semitone; the tonic shifts with it ──
     shift = _pitch_shift_sign(track_id)
     y_shift = librosa.effects.pitch_shift(y, sr=sr, n_steps=shift)
-    tonic_shift, freq_shift = _pyin_tonic_and_frequencies(y_shift, sr)
-    feat_shift = extract_features(freq_shift, tonic_shift) if tonic_shift else None
+    freq_shift = _pyin_frequencies(y_shift, sr)
+    tonic_shift = tonic * (2.0 ** (shift / 12.0))
+    feat_shift = (
+        extract_features(freq_shift, tonic_shift) if len(freq_shift) >= 10 else None
+    )
 
-    # ── Augmentation 2: light white noise (~20dB SNR), re-run the full pyin step ──
+    # ── Augmentation 2: light white noise (~20dB SNR); tonic unchanged ──
     y_noisy = _add_white_noise(y, NOISE_SNR_DB)
-    tonic_noisy, freq_noisy = _pyin_tonic_and_frequencies(y_noisy, sr)
-    feat_noisy = extract_features(freq_noisy, tonic_noisy) if tonic_noisy else None
+    freq_noisy = _pyin_frequencies(y_noisy, sr)
+    feat_noisy = (
+        extract_features(freq_noisy, tonic) if len(freq_noisy) >= 10 else None
+    )
 
     variants = [("orig", feat, tonic)]
     if feat_shift is not None:
         variants.append(("pitch_shift", feat_shift, tonic_shift))
     if feat_noisy is not None:
-        variants.append(("noise", feat_noisy, tonic_noisy))
+        variants.append(("noise", feat_noisy, tonic))
 
     X = np.stack([v[1] for v in variants])
     kinds = np.array([v[0] for v in variants])
@@ -140,5 +199,6 @@ def process_track(track_id: str, raga: str, audio_path: str, cache_dir: Path) ->
     np.savez_compressed(
         cache_path, X=X, kinds=kinds, tonics=tonics,
         raga=raga, track_id=track_id, segment_start_s=start_s,
+        frequencies=frequencies, tonic_method=tonic_method,
     )
-    return {"status": "ok", "n_variants": len(variants)}
+    return {"status": "ok", "n_variants": len(variants), "tonic_method": tonic_method}
