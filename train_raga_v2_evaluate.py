@@ -30,6 +30,12 @@ ROOT = Path(__file__).parent
 CACHE_DIR = ROOT / "data" / "raga_v2_cache"
 MODELS_DIR = ROOT / "models"
 
+# A RandomForest cannot generalize from 1-4 source tracks per class under
+# grouped CV — classes that thin are what drove the 5% Candidate B result.
+MIN_TRACKS_PER_CLASS = 5
+# Forms, not ragas (defense in depth; extraction already skips these).
+EXCLUDED_LABELS = {"Rāgamālika"}
+
 
 def load_realaudio_cache() -> tuple[np.ndarray, list[str], list[str]]:
     """Combines both real-audio sources (Saraga Carnatic + archive.org downloads) --
@@ -40,6 +46,8 @@ def load_realaudio_cache() -> tuple[np.ndarray, list[str], list[str]]:
         for npz_path in sorted((CACHE_DIR / subdir).glob("*.npz")):
             d = np.load(npz_path, allow_pickle=True)
             raga = str(d["raga"])
+            if raga in EXCLUDED_LABELS:
+                continue
             tid = str(d["track_id"])
             for row in d["X"]:
                 X.append(row)
@@ -54,6 +62,22 @@ def load_compmusic_cache() -> tuple[np.ndarray, list[str], list[str]]:
 
 
 def evaluate(name: str, X: np.ndarray, y_labels: list[str], track_ids: list[str]) -> dict:
+    # Drop classes with too few source tracks to learn from before training —
+    # keeping them poisons every fold with unlearnable classes.
+    n_tracks_by_class = {
+        label: len({t for t, lbl in zip(track_ids, y_labels) if lbl == label})
+        for label in set(y_labels)
+    }
+    kept = {label for label, n in n_tracks_by_class.items() if n >= MIN_TRACKS_PER_CLASS}
+    dropped = sorted(set(y_labels) - kept)
+    if dropped:
+        print(f"\n  [{name}] dropping {len(dropped)} ragas with "
+              f"< {MIN_TRACKS_PER_CLASS} source tracks: {', '.join(dropped)}")
+        mask = np.array([lbl in kept for lbl in y_labels])
+        X = X[mask]
+        track_ids = [t for t, m in zip(track_ids, mask) if m]
+        y_labels = [lbl for lbl, m in zip(y_labels, mask) if m]
+
     le = LabelEncoder()
     y = le.fit_transform(y_labels)
 
