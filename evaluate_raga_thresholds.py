@@ -1,5 +1,6 @@
 """RF accuracy vs min-tracks-per-raga threshold, track-level top1/top3, grouped CV."""
 import sys
+import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
 import numpy as np
@@ -8,11 +9,24 @@ from sklearn.model_selection import StratifiedGroupKFold
 from sklearn.preprocessing import LabelEncoder
 
 CACHE_DIR = Path('/Users/shyamravidath/carnatify/data/raga_v2_cache')
+
+
+def _fold(name: str) -> str:
+    d = unicodedata.normalize("NFKD", name)
+    s = "".join(c for c in d if not unicodedata.combining(c))
+    return "".join(c for c in s.lower() if c.isalnum())
+
+
+def canonical_label(raga: str, _seen: dict = {}) -> str:
+    """Merge diacritic spelling dupes (e.g. Ābhōgi/Ābhōgī) onto first-seen form."""
+    return _seen.setdefault(_fold(raga), raga)
+
+
 X, y_labels, track_ids = [], [], []
 for subdir in ("saraga_v3", "archive_v3"):
     for p in sorted((CACHE_DIR / subdir).glob("*.npz")):
         d = np.load(p, allow_pickle=True)
-        raga = str(d["raga"])
+        raga = canonical_label(str(d["raga"]))
         if raga == "Rāgamālika":
             continue
         for row in d["X"]:
