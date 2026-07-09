@@ -43,3 +43,5 @@ __pycache__/
 *.pyc
 .vercel
 .env*
+/models/raga_v3_tdms_rf.pkl
+/models/raga_v3_hist_rf.pkl
