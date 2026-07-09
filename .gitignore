@@ -45,3 +45,4 @@ __pycache__/
 .env*
 /models/raga_v3_tdms_rf.pkl
 /models/raga_v3_hist_rf.pkl
+/models/raga_clip_rf.pkl
