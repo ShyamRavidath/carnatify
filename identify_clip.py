@@ -80,40 +80,70 @@ def tokens(s: str, minlen: int = 4) -> list[str]:
 
 # ------------------------------------------------------------------- catalog
 
+REGISTRY = ROOT / 'data' / 'composition_registry.json'
+
+
 def load_targets():
-    """Folded-title -> display title, plus folded-title -> folded lyrics head."""
-    targets: dict[str, str] = {}
+    """Composition registry entries for matching.
+
+    Returns (entries, _) where each entry is
+      {'canonical', 'ragas', 'variants': [folded title strings],
+       'lyr': folded lyrics head or ''}.
+    Falls back to raw catalog+lyrics.db titles if the registry is missing
+    (rebuild with build_composition_registry.py).
+    """
+    lyr_by_fold: dict[str, str] = {}
+    con = sqlite3.connect(ROOT / 'data' / 'lyrics.db')
+    for title, ly in con.execute(
+            'select title, lyrics_original from lyrics_catalog'):
+        if ly:
+            lyr_by_fold[fold(title)] = fold(ly)[:400]
+    con.close()
+
+    entries = []
+    if REGISTRY.exists():
+        for r in json.loads(REGISTRY.read_text()):
+            variants = [r['canonical']] + r['aliases']
+            folded = [fold(v) for v in variants]
+            lyr = next((lyr_by_fold[f] for f in folded if f in lyr_by_fold),
+                       '')
+            entries.append({'canonical': r['canonical'],
+                            'ragas': r.get('ragas', []),
+                            'variants': [f for f in folded if len(f) >= 6],
+                            'lyr': lyr})
+        entries = [e for e in entries if e['variants']]
+        return entries, None
+
+    # legacy fallback: one entry per unique folded title
+    seen: dict[str, str] = {}
     meta = json.loads((MODELS / 'qmax_catalog_meta.json').read_text())
     for m in meta:
         k = fold(m['title'])
         if len(k) >= 6:
-            targets.setdefault(k, m['title'])
-    lyr: dict[str, str] = {}
-    con = sqlite3.connect(ROOT / 'data' / 'lyrics.db')
-    for title, ly in con.execute(
-            'select title, lyrics_original from lyrics_catalog'):
-        k = fold(title)
+            seen.setdefault(k, m['title'])
+    for k, ly in lyr_by_fold.items():
         if len(k) >= 6:
-            targets.setdefault(k, title)
-            lyr[k] = fold(ly or '')[:400]
-    con.close()
-    return targets, lyr
+            seen.setdefault(k, k)
+    entries = [{'canonical': disp, 'ragas': [], 'variants': [k],
+                'lyr': lyr_by_fold.get(k, '')} for k, disp in seen.items()]
+    return entries, None
 
 
 # ------------------------------------------------------------- lyrics scorer
 
-def lyr_score(k: str, lyr: dict[str, str], tl: list[str],
+def lyr_score(k: str, lyr_head: str, tl: list[str],
               tfreq: Counter) -> float:
     """Token coverage + repetition bonus + order bonus (the 6/8 top-5 scorer)."""
     ktoks = tokens(k)
     kt_title = list(dict.fromkeys(ktoks))
-    if k in lyr and lyr[k]:
-        ktoks = ktoks + tokens(lyr[k])[:6]
+    if lyr_head:
+        ktoks = ktoks + tokens(lyr_head)[:6]
     ktoks = list(dict.fromkeys(ktoks))[:9]
     if not ktoks:
         return 0.0
     hits = 0.0
     freq_bonus = 0.0
+    hit_ratios = []
     for kt in ktoks:
         best = 0
         btok = None
@@ -124,15 +154,23 @@ def lyr_score(k: str, lyr: dict[str, str], tl: list[str],
                 btok = tt
         if best >= 75:
             hits += 1
+            hit_ratios.append(best)
             if kt in kt_title:
                 freq_bonus += min(tfreq[btok], 6) * 0.05
         elif best >= 65:
             hits += 0.5
+            hit_ratios.append(best)
     order = 0.0
     if len(kt_title) >= 2 and _partial(' '.join(kt_title[:3]),
                                        ' '.join(tl)) >= 80:
         order = 0.15
-    return (hits / len(ktoks)) * min(1.0, 0.4 + 0.2 * hits) + freq_bonus + order
+    # epsilon tie-break only: exact-matching titles beat fuzzy-junk titles
+    # that reach the same coverage score (max shift 0.001, invisible in the
+    # rounded display, decisive on exact ties)
+    quality = (sum(hit_ratios) / len(hit_ratios) / 100_000 if hit_ratios
+               else 0.0)
+    return ((hits / len(ktoks)) * min(1.0, 0.4 + 0.2 * hits)
+            + freq_bonus + order + quality)
 
 
 def _ratio(a, b):
@@ -145,25 +183,21 @@ def _partial(a, b):
     return fuzz.partial_ratio(a, b)
 
 
-def match_lyrics(transcript: str, targets: dict[str, str],
-                 lyr: dict[str, str], topn: int = 5):
-    """Score every target, dedup spelling variants, return top-n."""
+def match_lyrics(transcript: str, entries: list[dict],
+                 _unused=None, topn: int = 5):
+    """Score every registry entry (max over its spelling variants), top-n."""
     tl = tokens(transcript)
     if not tl:
         return [], 0
     tfreq = Counter(tl)
-    scored = sorted(((lyr_score(k, lyr, tl, tfreq), k) for k in targets),
-                    reverse=True)
-    seen: set[str] = set()
-    out = []
-    for s, k in scored:
-        sk = skey(targets[k])
-        if any(_ratio(sk, x) >= 88 for x in seen):
-            continue
-        seen.add(sk)
-        out.append({'title': targets[k], 'score': round(float(s), 3)})
-        if len(out) == topn:
-            break
+    scored = []
+    for e in entries:
+        s = max(lyr_score(v, e['lyr'], tl, tfreq) for v in e['variants'])
+        scored.append((s, e))
+    scored.sort(key=lambda x: -x[0])
+    out = [{'title': e['canonical'], 'score': round(float(s), 3),
+            'ragas': e['ragas']}
+           for s, e in scored[:topn]]
     return out, (max(tfreq.values()) if tfreq else 0)
 
 
