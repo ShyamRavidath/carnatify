@@ -381,6 +381,125 @@ async def predict_audio(request: Request, file: UploadFile = File(...)):
     }
 
 
+@app.post("/identify")
+@limiter.limit("2/minute")
+async def identify(request: Request, file: UploadFile = File(...), fast: bool = False):
+    """Lyrics-first clip identification (SoundHound mode).
+
+    Pipeline: upload -> whisper on original -> (unless fast) demucs vocals ->
+    whisper on stem -> registry matcher picks best variant -> top-5 with
+    honest confidence. Raga top-3 rides along from the existing classifier.
+    Wild-clip validated 2026-07-11: comp top-1 4/10, top-5 6/10, 0 bluffs.
+    """
+    import librosa
+    import clip_identify
+
+    data = await file.read()
+    if len(data) > 30 * 1024 * 1024:
+        raise HTTPException(status_code=413, detail="File too large (30 MB limit)")
+
+    ct = (file.content_type or "").lower()
+    suffix = next((s for k, s in (("ogg", ".ogg"), ("opus", ".ogg"), ("mp4", ".m4a"),
+                                  ("m4a", ".m4a"), ("aac", ".m4a"), ("webm", ".webm"),
+                                  ("mpeg", ".mp3"), ("mp3", ".mp3"), ("wav", ".wav"))
+                   if k in ct), None)
+    if suffix is None:
+        raise HTTPException(status_code=415, detail=f"Unsupported content-type: {ct or 'none'}")
+
+    tmp_path = None
+    demucs_dir = None
+    try:
+        with tempfile.NamedTemporaryFile(suffix=suffix, delete=False) as tmp:
+            tmp.write(data)
+            tmp_path = tmp.name
+        try:
+            y16, _ = librosa.load(tmp_path, sr=16000, mono=True, duration=90.0)
+        except Exception as exc:
+            raise HTTPException(status_code=422, detail=f"Could not decode audio: {exc}")
+        if len(y16) < 16000 * 15:
+            raise HTTPException(status_code=422, detail="clip too short, need at least 15 seconds")
+        y16 = y16.astype(np.float32)
+
+        tonic_est = _estimate_tonic_mix(tmp_path)
+
+        loop = asyncio.get_running_loop()
+        variants: dict[str, str] = {}
+        variants["orig"] = await loop.run_in_executor(
+            None, lambda: clip_identify.transcribe_multi(y16))
+
+        if not fast:
+            import soundfile as sf_write
+            demucs_dir = tempfile.mkdtemp()
+            y_mix, sr_mix = librosa.load(tmp_path, sr=44100, mono=True, duration=90.0)
+            demucs_in = os.path.join(demucs_dir, "input.wav")
+            sf_write.write(demucs_in, np.repeat(y_mix[:, None], 2, axis=1), sr_mix)
+            try:
+                async with _DEMUCS_SEM:
+                    vocal_path = await loop.run_in_executor(
+                        None, lambda: _separate_vocals_sync(demucs_in, demucs_dir))
+                v16, _ = librosa.load(vocal_path, sr=16000, mono=True)
+                v16 = v16.astype(np.float32)
+                variants["stem"] = await loop.run_in_executor(
+                    None, lambda: clip_identify.transcribe_multi(v16))
+            except Exception as exc:
+                logger.warning("Stem ASR pass failed, continuing with original-only: %s", exc)
+
+        result = clip_identify.identify_from_variants(variants)
+
+        # raga (existing production classifier) as secondary, honest-low display
+        y22, sr22 = librosa.load(tmp_path, sr=22050, mono=True, duration=60.0)
+        raga_preds = []
+        try:
+            f0, voiced_flag, _ = librosa.pyin(y22, fmin=60, fmax=1000, sr=sr22)
+            frequencies = f0[voiced_flag].astype(np.float64)
+            tonic = tonic_est if tonic_est else (
+                float(np.median(frequencies)) if len(frequencies) else 130.0)
+            if len(frequencies) >= 10 and _RAGA_MODEL.exists() and _RAGA_ENC.exists():
+                raga_preds = predict_raga(
+                    frequencies, tonic,
+                    model_path=_RAGA_MODEL, label_encoder_path=_RAGA_ENC, top_k=3)
+        except Exception as exc:
+            logger.warning("Raga pass failed: %s", exc)
+    finally:
+        if tmp_path and os.path.exists(tmp_path):
+            os.unlink(tmp_path)
+        if demucs_dir:
+            shutil.rmtree(demucs_dir, ignore_errors=True)
+
+    query_id = clip_identify.log_query(result, {
+        "fast": fast, "ip": _client_ip(request),
+        "n_variants": len(variants)})
+    return {
+        "query_id": query_id,
+        **result,
+        "raga": [{"name": p.raga_name, "confidence": float(p.confidence)}
+                 for p in raga_preds],
+        "raga_confidence": "low",  # wild-clip measured: never claim more
+    }
+
+
+class FeedbackRequest(BaseModel):
+    query_id: str
+    verdict: str  # "confirmed" | "rejected" | "not_in_catalog"
+    chosen_title: str | None = None   # which top-5 entry was right
+    user_title: str | None = None     # free text when not_in_catalog
+    user_raga: str | None = None
+
+
+@app.post("/feedback")
+@limiter.limit("10/minute")
+def feedback(request: Request, req: FeedbackRequest) -> dict:
+    """User confirmations = labeled wild clips = the data moat. Store all."""
+    import clip_identify
+    if req.verdict not in ("confirmed", "rejected", "not_in_catalog"):
+        raise HTTPException(status_code=422, detail="verdict must be confirmed|rejected|not_in_catalog")
+    clip_identify.log_feedback({
+        "query_id": req.query_id, "verdict": req.verdict,
+        "chosen_title": req.chosen_title, "user_title": req.user_title,
+        "user_raga": req.user_raga, "ip": _client_ip(request)})
+    return {"status": "recorded", "thanks": True}
+
+
 @app.get("/meaning/{title:path}")
 def meaning(title: str) -> dict:
     catalog = _get_catalog()

@@ -13,9 +13,19 @@ echo "Assembling Space in $HERE …"
 
 rm -rf "$HERE/src" "$HERE/models"
 cp -r "$ROOT/src" "$HERE/src"
-cp -r "$ROOT/models" "$HERE/models"
+mkdir -p "$HERE/models"
+# only the models the API actually loads — raga_clip_rf.pkl (1.1 GB) and the
+# raga_v3 candidates must NOT enter the image
+for f in raga_classifier.pkl raga_label_encoder.pkl composition_catalog.npz \
+         composition_catalog_meta.json qmax_catalog_meta.json; do
+  cp "$ROOT/models/$f" "$HERE/models/$f"
+done
 mkdir -p "$HERE/data"
 cp "$ROOT/data/lyrics.db" "$HERE/data/lyrics.db"
+cp "$ROOT/data/composition_registry.json" "$HERE/data/composition_registry.json"
+# clip identification: matcher lives in identify_clip.py (single source of
+# truth), served by clip_identify.py
+cp "$ROOT/identify_clip.py" "$HERE/identify_clip.py"
 
 # Drop compiled caches so they don't bloat the image.
 find "$HERE/src" -name "__pycache__" -type d -prune -exec rm -rf {} +

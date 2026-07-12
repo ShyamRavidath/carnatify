@@ -46,3 +46,6 @@ __pycache__/
 /models/raga_v3_tdms_rf.pkl
 /models/raga_v3_hist_rf.pkl
 /models/raga_clip_rf.pkl
+/backend/data/composition_registry.json
+/backend/identify_clip.py
+/backend/data/feedback/

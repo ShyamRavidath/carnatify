@@ -20,3 +20,8 @@ demucs>=4.0.0                # vocal source separation for /predict-audio
 
 google-generativeai>=0.8    # lyrics meaning generation (Gemini 2.0 Flash)
 essentia>=2.1b6              # TonicIndianArtMusic — drone-based Sa estimation in /predict-audio
+
+faster-whisper>=1.2         # /identify ASR (int8 CPU); clip_identify falls back to openai-whisper
+rapidfuzz>=3.0              # lyrics matcher (identify_clip.py)
+huggingface_hub>=0.23       # feedback persistence to private HF dataset
+soundfile>=0.12             # wav re-encode before demucs
