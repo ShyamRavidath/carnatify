@@ -47,8 +47,31 @@ cd carnatify-api && git add -A && git commit -m "Carnatify API" && git push
 |---------------------|----------|-----------------------------------------|
 | `GEMINI_API_KEY`    | secret   | your Google Gemini key (enables `/meaning`) |
 | `FRONTEND_ORIGIN`   | variable | your Vercel URL, e.g. `https://carnatify.vercel.app` |
+| `HF_TOKEN`          | secret   | write-scoped token (enables feedback persistence) |
+| `FEEDBACK_REPO`     | variable | private dataset repo, e.g. `<user>/carnatify-feedback` |
 
 The Space rebuilds on push. Verify: `curl https://<user>-carnatify-api.hf.space/health`.
+
+### d. Clip identification (`/identify` + `/feedback`)
+The lyrics-first clip ID pipeline (wild-clip validated: comp top-1 4/10,
+top-5 6/10, zero bluffs — see HANDOFF_CLIP_ID.md scoreboard lineage):
+
+```
+POST /identify           multipart file upload; ?fast=true skips demucs stem pass
+POST /feedback           {query_id, verdict: confirmed|rejected|not_in_catalog,
+                          chosen_title?, user_title?, user_raga?}
+```
+
+- First `/identify` call downloads whisper large-v3-turbo (~1.6 GB) into the
+  container; expect a slow cold start. Latency on CPU basic: ~2-4 min per
+  60s clip with the stem pass, roughly half with `?fast=true`.
+- `verdict` events are the data flywheel: create the private dataset repo
+  BEFORE going live (`huggingface-cli repo create carnatify-feedback
+  --type dataset --private`), set `HF_TOKEN` + `FEEDBACK_REPO`, and every
+  query/confirmation survives Space restarts as `logs/*.jsonl` there.
+- UI contract: always render top-5 with `composition_confidence`; when
+  `clip_type` is `no_lyrics`, show `message` and the raga list labelled
+  low-confidence — never present raga as certain.
 
 ---
 
