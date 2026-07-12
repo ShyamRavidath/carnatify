@@ -62,12 +62,17 @@ def _load_asr():
     global _asr_model, _asr_engine
     if _asr_model is not None:
         return
-    try:
+    # openai-whisper is the wild-clip-validated default. faster-whisper int8
+    # measured ~1x realtime with garbage output on macOS ARM (2026-07-11);
+    # its 4-8x speedup claims are x86-specific. Opt in with
+    # ASR_ENGINE=faster-whisper only after benchmarking ON the Space, and
+    # re-run the wild-clip suite against its transcripts before trusting it.
+    if os.environ.get("ASR_ENGINE") == "faster-whisper":
         from faster_whisper import WhisperModel
         _asr_model = WhisperModel("large-v3-turbo", device="cpu",
                                   compute_type="int8")
         _asr_engine = "faster-whisper-int8"
-    except ImportError:
+    else:
         import whisper
         _asr_model = whisper.load_model("large-v3-turbo")
         _asr_engine = "openai-whisper"
