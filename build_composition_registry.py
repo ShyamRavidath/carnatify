@@ -1,8 +1,13 @@
 """Build the canonical composition registry (title hygiene + alias merge).
 
-Sources: models/qmax_catalog_meta.json titles + data/lyrics.db titles.
+Sources: models/qmax_catalog_meta.json titles + data/lyrics.db titles
+  + data/karnatik_lyrics.json (scrape_karnatik.py — titles, ragas, full
+  lyric text and meanings for ~8k songs).
 Output: data/composition_registry.json —
-  [{id, canonical, aliases, ragas, composers, has_lyrics, n_tracks}]
+  [{id, canonical, aliases, ragas, composers, has_lyrics, n_tracks,
+    karnatik_pages}]
+karnatik_pages links an entry to its lyric records in karnatik_lyrics.json
+(the matcher loads lyric text from there; the registry stays title-sized).
 
 Cleaning: strips leading track numbers / timestamps, drops uploader-junk and
 too-short titles. Merging: soft-phonetic key + fuzzy >= 88 (same fold the
@@ -102,6 +107,25 @@ def main() -> None:
             d['composers'].add(composer)
     con.close()
 
+    kar_path = ROOT / 'data' / 'karnatik_lyrics.json'
+    if kar_path.exists():
+        for k in json.loads(kar_path.read_text()):
+            t = clean_title(k['title'])
+            if not t:
+                continue
+            d = infos.setdefault(t, {'ragas': set(), 'composers': set(),
+                                     'has_lyrics': False, 'n_tracks': 0,
+                                     'from_lyricsdb': False,
+                                     'karnatik_pages': set()})
+            d.setdefault('karnatik_pages', set())
+            if k['lyrics']:
+                d['karnatik_pages'].add(k['page'])
+                d['has_lyrics'] = True
+            if k.get('raga_index'):
+                d['ragas'].add(k['raga_index'])
+            if k.get('composer_index'):
+                d['composers'].add(k['composer_index'])
+
     # merge by soft-phonetic key, then fuzzy sweep over key buckets
     by_key: dict[str, list[str]] = {}
     for t in infos:
@@ -144,6 +168,9 @@ def main() -> None:
             'composers': composers,
             'has_lyrics': any(infos[t]['has_lyrics'] for t in titles),
             'n_tracks': sum(infos[t]['n_tracks'] for t in titles),
+            'karnatik_pages': sorted({p for t in titles
+                                      for p in infos[t].get('karnatik_pages',
+                                                            ())}),
         })
 
     out = ROOT / 'data' / 'composition_registry.json'

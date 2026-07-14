@@ -49,3 +49,4 @@ __pycache__/
 /backend/data/composition_registry.json
 /backend/identify_clip.py
 /backend/data/feedback/
+data/karnatik_html/

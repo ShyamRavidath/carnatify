@@ -23,6 +23,9 @@ done
 mkdir -p "$HERE/data"
 cp "$ROOT/data/lyrics.db" "$HERE/data/lyrics.db"
 cp "$ROOT/data/composition_registry.json" "$HERE/data/composition_registry.json"
+# full-lyrics matcher channel (identify_clip degrades gracefully without it,
+# but the Space must match local accuracy)
+cp "$ROOT/data/karnatik_lyrics.json" "$HERE/data/karnatik_lyrics.json"
 # clip identification: matcher lives in identify_clip.py (single source of
 # truth), served by clip_identify.py
 cp "$ROOT/identify_clip.py" "$HERE/identify_clip.py"

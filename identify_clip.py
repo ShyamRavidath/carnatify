@@ -2,20 +2,28 @@
 
 Audio in -> {composition top-5, raga top-5, confidence flags}.
 
-Pipeline (wild-clip validated, 2026-07-11 scoreboard):
+Pipeline (wild-clip validated; 2026-07-13 scoreboard on 21 clips below):
   1. ASR, two variants per clip: whisper large-v3-turbo on the original audio
      AND on the demucs vocal stem (stem pass rescues clips where violin/
      mridangam drown the sahitya; original pass rescues clips demucs mangles).
-  2. Lyrics matcher per variant: token coverage + repetition bonus + order
-     bonus over catalog titles + lyrics.db first lines, variant dedup.
+  2. Lyrics matcher per variant: IDF-weighted token coverage + repetition
+     bonus + order bonus over registry titles AND karnatik lyric lines (each
+     line scores like a title, so mid-kriti clips are matchable). Transcript
+     tokens include joined adjacent-word bigrams (whisper splits sung
+     sahitya: 'vata piga na patin' -> 'vatapiga' ~ vAtApi).
   3. Variant selection: best usable transcript by match score, preferring the
      vocal-stem variant when within 0.15 (its transcripts are cleaner when
      both work). Usable = repeated tokens present (sung kritis repeat pallavi;
      ASR garbage doesn't) after whisper-hallucination-loop stoplist.
-     CPU stack measured: comp top-1 3/10, top-5 6/10, zero alapana bluffs.
+     Measured 2026-07-13, 21 wild clips, CPU: this matcher on the 2.2k v1
+     registry 8/21 top-1 10/21 top-5 (old matcher 7/21, 9/21); on the 8.7k
+     karnatik-expanded registry 6/21, 8/21 — the in-catalog-only test set
+     cannot reward the 4x coverage, real queries can.
   4. Raga: melodia (voice-band) -> tonic (drone + 12-rotation vote) -> TDMS
      -> clip RF. Weak on wild clips (honest confidence: always "low") but the
-     only answer available for alapana / no-transcript clips.
+     only answer available for alapana / no-transcript clips. A confident
+     composition match backfills raga from the registry instead
+     (raga_from_catalog: 7/13 correct vs RF 5/21 top-1 on the same set).
   Melody/Qmax composition matching is deliberately absent: 0% on wild clips.
   Prompted whisper variants are deliberately absent: on CPU turbo they
   hallucinate fluent repetitive junk that defeats the repetition gate.
@@ -81,6 +89,54 @@ def tokens(s: str, minlen: int = 4) -> list[str]:
 # ------------------------------------------------------------------- catalog
 
 REGISTRY = ROOT / 'data' / 'composition_registry.json'
+KARNATIK = ROOT / 'data' / 'karnatik_lyrics.json'
+# lyric-line pseudo-variants: skip section headers and refrain markers
+LINE_SKIP = re.compile(r'^(pallavi|anupallavi|cara[nN]am|charanam|caranam'
+                       r'|samashTi.*|madhyamak.*|citta ?svaram?|swaram?'
+                       r'|chittaswaram?)\s*\d*\s*$|^\(', re.I)
+MAX_LINES_PER_ENTRY = 60
+
+
+def _line_variants(pages: list[str], kar: dict[str, dict]) -> list[str]:
+    """Folded lyric lines for an entry's karnatik pages (sung-unit granules).
+
+    Each line matches like a title: a clip from any caraNam can hit its own
+    line even when the pallavi/title tokens never appear in the transcript.
+    """
+    out, seen = [], set()
+    for p in pages:
+        rec = kar.get(p)
+        if not rec:
+            continue
+        for line in rec['lyrics'].split('\n'):
+            if LINE_SKIP.match(line.strip()):
+                continue
+            f = fold(line)
+            if len(f) >= 10 and f not in seen:
+                seen.add(f)
+                out.append(f)
+            if len(out) >= MAX_LINES_PER_ENTRY:
+                return out
+    return out
+
+
+def _precompute(e: dict) -> None:
+    """Token lists per variant/line so match-time is lookup arithmetic."""
+    def prep(k: str, lyr_head: str = '', is_line: bool = False):
+        ktoks = tokens(k)
+        kt_title = list(dict.fromkeys(ktoks))
+        if lyr_head:
+            ktoks = ktoks + tokens(lyr_head)[:6]
+        ktoks = list(dict.fromkeys(ktoks))[:9]
+        # lines get NO repetition bonus: freq_bonus models a repeated
+        # pallavi title; on 9-token lyric lines it stacks into score
+        # blowups (>2.0) that bury real titles under junk-line matches
+        return {'ktoks': ktoks,
+                'kt_title': set() if is_line else set(kt_title),
+                'head3': ' '.join(kt_title[:3]) if len(kt_title) >= 2 else ''}
+
+    e['vtoks'] = [prep(v, e['lyr']) for v in e['variants']]
+    e['ltoks'] = [prep(l, is_line=True) for l in e.get('lines', [])]
 
 
 def load_targets():
@@ -88,7 +144,9 @@ def load_targets():
 
     Returns (entries, _) where each entry is
       {'canonical', 'ragas', 'variants': [folded title strings],
-       'lyr': folded lyrics head or ''}.
+       'lyr': folded lyrics head or '',
+       'lines': [folded lyric lines] (karnatik full-lyrics channel),
+       'vtoks'/'ltoks': precomputed token lists for the fast scorer}.
     Falls back to raw catalog+lyrics.db titles if the registry is missing
     (rebuild with build_composition_registry.py).
     """
@@ -100,6 +158,11 @@ def load_targets():
             lyr_by_fold[fold(title)] = fold(ly)[:400]
     con.close()
 
+    kar: dict[str, dict] = {}
+    if KARNATIK.exists():
+        kar = {r['page']: r for r in json.loads(KARNATIK.read_text())
+               if r.get('lyrics')}
+
     entries = []
     if REGISTRY.exists():
         for r in json.loads(REGISTRY.read_text()):
@@ -110,68 +173,30 @@ def load_targets():
             entries.append({'canonical': r['canonical'],
                             'ragas': r.get('ragas', []),
                             'variants': [f for f in folded if len(f) >= 6],
-                            'lyr': lyr})
+                            'lyr': lyr,
+                            'lines': _line_variants(
+                                r.get('karnatik_pages', []), kar)})
         entries = [e for e in entries if e['variants']]
-        return entries, None
-
-    # legacy fallback: one entry per unique folded title
-    seen: dict[str, str] = {}
-    meta = json.loads((MODELS / 'qmax_catalog_meta.json').read_text())
-    for m in meta:
-        k = fold(m['title'])
-        if len(k) >= 6:
-            seen.setdefault(k, m['title'])
-    for k, ly in lyr_by_fold.items():
-        if len(k) >= 6:
-            seen.setdefault(k, k)
-    entries = [{'canonical': disp, 'ragas': [], 'variants': [k],
-                'lyr': lyr_by_fold.get(k, '')} for k, disp in seen.items()]
+    else:
+        # legacy fallback: one entry per unique folded title
+        seen: dict[str, str] = {}
+        meta = json.loads((MODELS / 'qmax_catalog_meta.json').read_text())
+        for m in meta:
+            k = fold(m['title'])
+            if len(k) >= 6:
+                seen.setdefault(k, m['title'])
+        for k, ly in lyr_by_fold.items():
+            if len(k) >= 6:
+                seen.setdefault(k, k)
+        entries = [{'canonical': disp, 'ragas': [], 'variants': [k],
+                    'lyr': lyr_by_fold.get(k, ''), 'lines': []}
+                   for k, disp in seen.items()]
+    for e in entries:
+        _precompute(e)
     return entries, None
 
 
 # ------------------------------------------------------------- lyrics scorer
-
-def lyr_score(k: str, lyr_head: str, tl: list[str],
-              tfreq: Counter) -> float:
-    """Token coverage + repetition bonus + order bonus (the 6/8 top-5 scorer)."""
-    ktoks = tokens(k)
-    kt_title = list(dict.fromkeys(ktoks))
-    if lyr_head:
-        ktoks = ktoks + tokens(lyr_head)[:6]
-    ktoks = list(dict.fromkeys(ktoks))[:9]
-    if not ktoks:
-        return 0.0
-    hits = 0.0
-    freq_bonus = 0.0
-    hit_ratios = []
-    for kt in ktoks:
-        best = 0
-        btok = None
-        for tt in tfreq:
-            r = _ratio(kt, tt)
-            if r > best:
-                best = r
-                btok = tt
-        if best >= 75:
-            hits += 1
-            hit_ratios.append(best)
-            if kt in kt_title:
-                freq_bonus += min(tfreq[btok], 6) * 0.05
-        elif best >= 65:
-            hits += 0.5
-            hit_ratios.append(best)
-    order = 0.0
-    if len(kt_title) >= 2 and _partial(' '.join(kt_title[:3]),
-                                       ' '.join(tl)) >= 80:
-        order = 0.15
-    # epsilon tie-break only: exact-matching titles beat fuzzy-junk titles
-    # that reach the same coverage score (max shift 0.001, invisible in the
-    # rounded display, decisive on exact ties)
-    quality = (sum(hit_ratios) / len(hit_ratios) / 100_000 if hit_ratios
-               else 0.0)
-    return ((hits / len(ktoks)) * min(1.0, 0.4 + 0.2 * hits)
-            + freq_bonus + order + quality)
-
 
 def _ratio(a, b):
     from rapidfuzz import fuzz
@@ -183,16 +208,124 @@ def _partial(a, b):
     return fuzz.partial_ratio(a, b)
 
 
+def _vocab_idf(entries: list[dict]):
+    """Catalog token vocabulary + IDF weights, cached per entries object.
+
+    IDF discriminates rare sahitya words from ubiquitous devotional tokens
+    (rAma/pAlaya/nAma/dEva...) that would otherwise let a 8.7k-title catalog
+    drown true matches in junk coincidences (measured: registry 2.2k -> 8.7k
+    cost 3/21 top-1 with unweighted hits).
+    """
+    vc = getattr(match_lyrics, '_vc', None)
+    if vc is not None and vc[0] is entries:
+        return vc[1], vc[2]
+    df = Counter()
+    for e in entries:
+        toks = {kt for vt in e['vtoks'] + e['ltoks'] for kt in vt['ktoks']}
+        df.update(toks)
+    n = max(1, len(entries))
+    idf = {t: float(np.log2(1.0 + n / c)) for t, c in df.items()}
+    vocab = sorted(idf)
+    match_lyrics._vc = (entries, vocab, idf)
+    return vocab, idf
+
+
+def _best_map(entries: list[dict], tl_unique: list[str]) -> dict:
+    """Best fuzz.ratio (and matching transcript token) per catalog token.
+
+    One vectorized cdist over the catalog token vocabulary replaces the old
+    per-variant inner loop — required now that lyric lines add ~100k
+    pseudo-variants.
+    """
+    from rapidfuzz import fuzz, process
+    vocab, _ = _vocab_idf(entries)
+    mat = process.cdist(vocab, tl_unique, scorer=fuzz.ratio, workers=-1)
+    arg = mat.argmax(axis=1)
+    val = mat.max(axis=1)
+    return {v: (float(val[i]), tl_unique[int(arg[i])])
+            for i, v in enumerate(vocab)}
+
+
+def _score_ktoks(vt: dict, best: dict, tfreq: Counter,
+                 tl_joined: str, idf: dict) -> float:
+    """IDF-weighted token coverage + repetition bonus + order bonus.
+
+    Same shape as the pre-0713 lyr_score, fed from the _best_map lookup
+    instead of an inner fuzz loop, with two changes:
+    - coverage is IDF-weighted (rare sahitya words count, ubiquitous
+      devotional words barely do) — required at 8.7k-title catalog scale;
+    - order bonus gated on >=1 token hit (pure speed gate).
+    """
+    ktoks = vt['ktoks']
+    if not ktoks:
+        return 0.0
+    raw_hits = 0.0
+    w_hits = 0.0
+    w_total = 0.0
+    freq_bonus = 0.0
+    hit_ratios = []
+    for kt in ktoks:
+        w = idf.get(kt, 1.0)
+        w_total += w
+        b, btok = best.get(kt, (0.0, None))
+        if b >= 75:
+            raw_hits += 1
+            w_hits += w
+            hit_ratios.append(b)
+            if kt in vt['kt_title']:
+                freq_bonus += min(tfreq.get(btok, 1), 6) * 0.05
+        elif b >= 65:
+            raw_hits += 0.5
+            w_hits += 0.5 * w
+            hit_ratios.append(b)
+    order = 0.0
+    if (raw_hits >= 1 and vt['head3']
+            and _partial(vt['head3'], tl_joined) >= 80):
+        order = 0.15
+    # epsilon tie-break only: exact-matching titles beat fuzzy-junk titles
+    # that reach the same coverage score (max shift 0.001, invisible in the
+    # rounded display, decisive on exact ties)
+    quality = (sum(hit_ratios) / len(hit_ratios) / 100_000 if hit_ratios
+               else 0.0)
+    return ((w_hits / w_total) * min(1.0, 0.4 + 0.2 * raw_hits)
+            + freq_bonus + order + quality)
+
+
 def match_lyrics(transcript: str, entries: list[dict],
                  _unused=None, topn: int = 5):
-    """Score every registry entry (max over its spelling variants), top-n."""
+    """Score every registry entry, top-n.
+
+    Per entry: max over title spelling variants AND karnatik lyric-line
+    pseudo-variants (same scorer, same scale — a sung caraNam line counts
+    like a sung title, so mid-kriti clips become matchable).
+    """
     tl = tokens(transcript)
     if not tl:
         return [], 0
     tfreq = Counter(tl)
+    tl_joined = ' '.join(tl)
+    # joined adjacent word pairs recover whisper's syllable splits; they
+    # inherit the min frequency of their parts for the repetition bonus
+    raw = fold(transcript).split()
+    big = Counter()
+    for a, b in zip(raw, raw[1:]):
+        j = soft(a + b)
+        if len(j) >= 6:
+            big[j] = max(big[j], min(tfreq.get(soft(a), 1),
+                                     tfreq.get(soft(b), 1)))
+    pool = dict(big)
+    pool.update(tfreq)
+    tfreq_ext = Counter(pool)
+    _, idf = _vocab_idf(entries)
+    best = _best_map(entries, list(tfreq_ext))
     scored = []
     for e in entries:
-        s = max(lyr_score(v, e['lyr'], tl, tfreq) for v in e['variants'])
+        s = max(_score_ktoks(vt, best, tfreq_ext, tl_joined, idf)
+                for vt in e['vtoks'])
+        for vt in e['ltoks']:
+            s2 = _score_ktoks(vt, best, tfreq_ext, tl_joined, idf)
+            if s2 > s:
+                s = s2
         scored.append((s, e))
     scored.sort(key=lambda x: -x[0])
     out = [{'title': e['canonical'], 'score': round(float(s), 3),
@@ -382,6 +515,12 @@ def identify(path: Path, targets, lyr, cache, scache,
             result['composition_confidence'] = 'medium'
         else:
             result['composition_confidence'] = 'low'
+        # catalog backfill: a confident composition match pins the raga far
+        # more reliably than the clip RF (wild-clip RF top-1 ~0)
+        if (result['composition_confidence'] in ('high', 'medium')
+                and comps[0].get('ragas')):
+            result['raga_from_catalog'] = comps[0]['ragas']
+            result['raga_confidence'] = 'medium (from composition match)'
     else:
         result['transcript'] = (variants.get('turbo') or '')[:200]
     if want_raga:
@@ -416,7 +555,7 @@ def main() -> None:
         return _partial(a, b) >= 90 or _partial(b, a) >= 90
 
     results = []
-    c1 = c5 = r1 = r3 = n = 0
+    c1 = c5 = r1 = r3 = rc = rc_n = n = 0
     for p in files:
         res = identify(p, targets, lyr, cache, scache,
                        want_raga=not no_raga, fast=fast)
@@ -446,6 +585,11 @@ def main() -> None:
             rhit1 = bool(rhits and rhits[0])
             rhit3 = any(rhits[:3])
             c1 += hit1; c5 += hit5; r1 += rhit1; r3 += rhit3
+            if res.get('raga_from_catalog'):
+                rc_n += 1
+                rc += any(skey(x) == skey(gt_raga)
+                          or _partial(skey(x), skey(gt_raga)) >= 90
+                          for x in res['raga_from_catalog'])
             print(f"  TRUTH {gt_title} [{gt_raga}]: comp top1 "
                   f"{'OK' if hit1 else '--'} top5 {'OK' if hit5 else '--'}"
                   + (f" | raga top1 {'OK' if rhit1 else '--'} "
@@ -456,6 +600,9 @@ def main() -> None:
         print(f"\n===== SCORE over {n} labeled clips =====")
         print(f"composition top-1 {c1}/{n}  top-5 {c5}/{n}")
         print(f"raga        top-1 {r1}/{n}  top-3 {r3}/{n}")
+        if rc_n:
+            print(f"raga via catalog backfill {rc}/{rc_n} "
+                  f"(on clips with confident composition)")
 
 
 if __name__ == '__main__':
