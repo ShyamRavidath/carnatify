@@ -555,7 +555,7 @@ def main() -> None:
         return _partial(a, b) >= 90 or _partial(b, a) >= 90
 
     results = []
-    c1 = c5 = r1 = r3 = rc = rc_n = n = 0
+    c1 = c5 = r1 = r3 = rc = rc_n = n = ooc_n = ooc_ok = rn = 0
     for p in files:
         res = identify(p, targets, lyr, cache, scache,
                        want_raga=not no_raga, fast=fast)
@@ -573,33 +573,54 @@ def main() -> None:
             print('  raga top-5 (low confidence on clips): '
                   + ', '.join(f"{r['raga']} {r['p']}" for r in res['ragas']))
         if '__' in p.stem:
-            gt_title, gt_raga = p.stem.split('__', 1)
-            n += 1
-            hits = [truth_match(c['title'], gt_title)
-                    for c in res['compositions']]
-            hit1 = bool(hits and hits[0])
-            hit5 = any(hits)
+            stem = p.stem
+            is_ooc = stem.endswith('__OOC')
+            if is_ooc:
+                stem = stem[: -len('__OOC')]
+            gt_title, gt_raga = stem.split('__', 1)
             rf = fold(gt_raga).replace(' ', '')
+            raga_known = rf not in ('na', 'unknown')
             rhits = [fold(r['raga']).replace(' ', '') == rf
                      for r in res['ragas']]
             rhit1 = bool(rhits and rhits[0])
             rhit3 = any(rhits[:3])
-            c1 += hit1; c5 += hit5; r1 += rhit1; r3 += rhit3
-            if res.get('raga_from_catalog'):
-                rc_n += 1
-                rc += any(skey(x) == skey(gt_raga)
-                          or _partial(skey(x), skey(gt_raga)) >= 90
-                          for x in res['raga_from_catalog'])
-            print(f"  TRUTH {gt_title} [{gt_raga}]: comp top1 "
-                  f"{'OK' if hit1 else '--'} top5 {'OK' if hit5 else '--'}"
-                  + (f" | raga top1 {'OK' if rhit1 else '--'} "
-                     f"top3 {'OK' if rhit3 else '--'}" if res['ragas'] else ''))
+            if raga_known:
+                rn += 1
+                r1 += rhit1; r3 += rhit3
+            raga_txt = (f" | raga top1 {'OK' if rhit1 else '--'} "
+                        f"top3 {'OK' if rhit3 else '--'}"
+                        if res['ragas'] and raga_known else '')
+            if is_ooc:
+                ooc_n += 1
+                rejected = res['composition_confidence'] == 'none'
+                ooc_ok += rejected
+                print(f"  TRUTH {gt_title} [{gt_raga}] OOC: "
+                      f"{'REJECT OK' if rejected else 'BLUFF'}" + raga_txt)
+            else:
+                n += 1
+                hits = [truth_match(c['title'], gt_title)
+                        for c in res['compositions']]
+                hit1 = bool(hits and hits[0])
+                hit5 = any(hits)
+                c1 += hit1; c5 += hit5
+                if res.get('raga_from_catalog'):
+                    rc_n += 1
+                    rc += any(skey(x) == skey(gt_raga)
+                              or _partial(skey(x), skey(gt_raga)) >= 90
+                              for x in res['raga_from_catalog'])
+                print(f"  TRUTH {gt_title} [{gt_raga}]: comp top1 "
+                      f"{'OK' if hit1 else '--'} top5 {'OK' if hit5 else '--'}"
+                      + raga_txt)
     if as_json:
         print(json.dumps(results, ensure_ascii=False, indent=1))
-    elif n:
-        print(f"\n===== SCORE over {n} labeled clips =====")
+    elif n or ooc_n:
+        print(f"\n===== SCORE over {n} in-catalog + {ooc_n} OOC clips =====")
         print(f"composition top-1 {c1}/{n}  top-5 {c5}/{n}")
-        print(f"raga        top-1 {r1}/{n}  top-3 {r3}/{n}")
+        if ooc_n:
+            print(f"OOC reject  {ooc_ok}/{ooc_n}  "
+                  f"(bluffs: {ooc_n - ooc_ok})")
+        print(f"raga        top-1 {r1}/{rn}  top-3 {r3}/{rn}"
+              f"  (clips with known raga truth)")
         if rc_n:
             print(f"raga via catalog backfill {rc}/{rc_n} "
                   f"(on clips with confident composition)")
