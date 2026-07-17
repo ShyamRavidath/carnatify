@@ -122,15 +122,39 @@ while IFS='|' read -r TITLE RAGA URL START TAG; do
   # NOTE: mktemp pre-creates the file (and macOS mktemp doesn't substitute
   # mid-name X's), which made yt-dlp skip with "already downloaded" -> 0-byte
   # temp -> every entry failed. Use a plain per-entry path and delete first.
+  # yt-dlp/ffmpeg get </dev/null (-nostdin) or they eat the heredoc feeding
+  # `read` and truncate the next entry's title.
   TMPFILE="/tmp/carnatify_dl_$n.m4a"
   rm -f "$TMPFILE"
+
+  # What did the search actually pick? Log it so clips can be eyeballed.
+  META=$(yt-dlp --print "%(title)s|%(duration)s|%(webpage_url)s" \
+      --extractor-args "youtube:player_client=default,-tv" \
+      --no-warnings "$URL" </dev/null 2>/dev/null | head -1)
+  VTITLE=${META%%|*}
+  REST=${META#*|}
+  VDUR=${REST%%|*}
+  VURL=${REST#*|}
+
+  # Window: START in the entry is a fallback. When the video duration is
+  # known, cut from 35% in (past intros/alapana openings, before fade-out),
+  # clamped so the full 60s fits.
+  if [ -n "$VDUR" ] && [ "$VDUR" -gt 90 ] 2>/dev/null; then
+    START=$(( VDUR * 35 / 100 ))
+    MAXSTART=$(( VDUR - DURATION - 5 ))
+    [ "$START" -gt "$MAXSTART" ] && START=$MAXSTART
+    [ "$START" -lt 20 ] && START=20
+  fi
+
+  echo "     video: ${VTITLE:-?} (${VDUR:-?}s) -> cutting ${START}s..$((START+DURATION))s"
 
   if yt-dlp -f "bestaudio[ext=m4a]/bestaudio/best" \
       --extractor-args "youtube:player_client=default,-tv" \
       --force-overwrites \
-      -o "$TMPFILE" "$URL" --quiet --no-warnings; then
-    if ffmpeg -y -ss "$START" -i "$TMPFILE" -t "$DURATION" -c:a aac -b:a 128k "$OUTPATH" -loglevel error; then
+      -o "$TMPFILE" "$URL" --quiet --no-warnings </dev/null; then
+    if ffmpeg -nostdin -y -ss "$START" -i "$TMPFILE" -t "$DURATION" -c:a aac -b:a 128k "$OUTPATH" -loglevel error; then
       echo "     -> saved $OUTPATH"
+      printf '%s\t%s\t%s\t%ss @%ss\n' "$FNAME" "${VTITLE:-?}" "${VURL:-$URL}" "${VDUR:-?}" "$START" >> "$OUTDIR/fetch_manifest.tsv"
       ok=$((ok+1))
     else
       echo "     !! ffmpeg trim failed for $TITLE"
