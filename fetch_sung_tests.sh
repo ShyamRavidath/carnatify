@@ -23,6 +23,9 @@
 
 set -uo pipefail
 
+# Optional arg filters by tag: ./fetch_sung_tests.sh OOC  (or IN)
+ONLY_TAG="${1:-}"
+
 OUTDIR="$HOME/sung_tests"
 mkdir -p "$OUTDIR"
 DURATION=60
@@ -96,6 +99,7 @@ n=0
 
 while IFS='|' read -r TITLE RAGA URL START TAG; do
   [ -z "$TITLE" ] && continue
+  [ -n "$ONLY_TAG" ] && [ "$TAG" != "$ONLY_TAG" ] && continue
   n=$((n+1))
   # OOC clips carry a __OOC marker so identify_clip.py scores them as
   # must-abstain instead of in-catalog. RAGA=NA -> raga truth skipped.
@@ -115,10 +119,15 @@ while IFS='|' read -r TITLE RAGA URL START TAG; do
   echo "[$n] ($TAG) $TITLE -> $RAGA"
   echo "     $URL  (start=${START}s, dur=${DURATION}s)"
 
-  TMPFILE=$(mktemp /tmp/carnatify_dl.XXXXXX.m4a)
+  # NOTE: mktemp pre-creates the file (and macOS mktemp doesn't substitute
+  # mid-name X's), which made yt-dlp skip with "already downloaded" -> 0-byte
+  # temp -> every entry failed. Use a plain per-entry path and delete first.
+  TMPFILE="/tmp/carnatify_dl_$n.m4a"
+  rm -f "$TMPFILE"
 
   if yt-dlp -f "bestaudio[ext=m4a]/bestaudio/best" \
       --extractor-args "youtube:player_client=default,-tv" \
+      --force-overwrites \
       -o "$TMPFILE" "$URL" --quiet --no-warnings; then
     if ffmpeg -y -ss "$START" -i "$TMPFILE" -t "$DURATION" -c:a aac -b:a 128k "$OUTPATH" -loglevel error; then
       echo "     -> saved $OUTPATH"
