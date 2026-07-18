@@ -60,6 +60,20 @@ HALLUC = re.compile(r'thank you|subtitles|amaraorg|copyright'
                     r'|like and subscribe|satsang with mooji')
 VARIANT_CLOSE = 0.15
 MIN_ANSWER_SCORE = 0.35
+# whisper decode loops repeat one token verbatim (satish satish satish...);
+# real sung repetition is phrase-level and interleaved (brahmamayam sarvam
+# brahmamayam briyere...) — max same-token run on true transcripts is 2-3
+LOOP_RUN = 4
+
+
+def _max_token_run(txt: str) -> int:
+    best = run = 0
+    prev = None
+    for w in txt.split():
+        run = run + 1 if w == prev else 1
+        prev = w
+        best = max(best, run)
+    return best
 
 # ---------------------------------------------------------------- text utils
 
@@ -490,6 +504,8 @@ def identify(path: Path, targets, lyr, cache, scache,
     for name, txt in variants.items():
         txt = HALLUC.sub(' ', txt or '')
         if len(txt.replace(' ', '')) < MIN_TRANSCRIPT_CHARS:
+            continue
+        if _max_token_run(txt) >= LOOP_RUN:
             continue
         comps, max_rep = match_lyrics(txt, targets, lyr)
         if not comps or max_rep < 2:
