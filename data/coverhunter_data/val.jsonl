@@ -1,0 +1,189 @@
+{"utt": "synth_000002", "wav": "data/coverhunter_data/wav16k/synth_000002.wav", "dur_s": 32.2, "song_id": 2, "version": "aug_data/concert_audio/Kāmavardani/Siva Siva Siva.mp3"}
+{"utt": "synth_000003", "wav": "data/coverhunter_data/wav16k/synth_000003.wav", "dur_s": 24.0, "song_id": 3, "version": "aug_data/concert_audio/Varāḷi/aparAdamula_r2.mp3"}
+{"utt": "synth_000006", "wav": "data/coverhunter_data/wav16k/synth_000006.wav", "dur_s": 33.1, "song_id": 6, "version": "aug_data/concert_audio/Kedāraṁ/Rama Neepai_r3.mp3"}
+{"utt": "synth_000008", "wav": "data/coverhunter_data/wav16k/synth_000008.wav", "dur_s": 30.3, "song_id": 8, "version": "aug_data/concert_audio/Dēvagāndhāri/Ksheerasagara_r2.mp3"}
+{"utt": "synth_000010", "wav": "data/coverhunter_data/wav16k/synth_000010.wav", "dur_s": 24.9, "song_id": 10, "version": "aug_data/concert_audio/Haṁsānandi/viruttam_r3.mp3"}
+{"utt": "synth_000012", "wav": "data/coverhunter_data/wav16k/synth_000012.wav", "dur_s": 58.5, "song_id": 12, "version": "aug_data/concert_audio/Dvijāvanti/78 Vara Narada.mp3"}
+{"utt": "synth_000016", "wav": "data/coverhunter_data/wav16k/synth_000016.wav", "dur_s": 30.1, "song_id": 16, "version": "aug_data/concert_audio/Pūrvīkaḷyāṇi/paralOka sAdanamE_r2.mp3"}
+{"utt": "synth_000017", "wav": "data/coverhunter_data/wav16k/synth_000017.wav", "dur_s": 61.2, "song_id": 17, "version": "aug_data/concert_audio/Bhairavi/nee pAdamulE.mp3"}
+{"utt": "synth_000018", "wav": "data/coverhunter_data/wav16k/synth_000018.wav", "dur_s": 38.3, "song_id": 18, "version": "aug_data/concert_audio/Śrīranjani/03-Sogasuga_r2.mp3"}
+{"utt": "synth_000019", "wav": "data/coverhunter_data/wav16k/synth_000019.wav", "dur_s": 57.9, "song_id": 19, "version": "aug_data/concert_audio/Rītigauḷa/janani ninnuvinA.mp3"}
+{"utt": "synth_000021", "wav": "data/coverhunter_data/wav16k/synth_000021.wav", "dur_s": 21.9, "song_id": 21, "version": "aug_data/concert_audio/Nīlāṁbari/Madhava Mamava.mp3"}
+{"utt": "synth_000022", "wav": "data/coverhunter_data/wav16k/synth_000022.wav", "dur_s": 32.8, "song_id": 22, "version": "aug_data/concert_audio/Gauḷa/01 pranamamyaham.mp3"}
+{"utt": "synth_000026", "wav": "data/coverhunter_data/wav16k/synth_000026.wav", "dur_s": 53.5, "song_id": 26, "version": "aug_data/concert_audio/Lalita/nannubrOvu.mp3"}
+{"utt": "synth_000028", "wav": "data/coverhunter_data/wav16k/synth_000028.wav", "dur_s": 24.8, "song_id": 28, "version": "aug_data/concert_audio/Dhanyāsi/meenalOchani.mp3"}
+{"utt": "synth_000029", "wav": "data/coverhunter_data/wav16k/synth_000029.wav", "dur_s": 53.4, "song_id": 29, "version": "aug_data/concert_audio/Pūrvīkaḷyāṇi/Gnanamosaga Rada.mp3"}
+{"utt": "synth_000030", "wav": "data/coverhunter_data/wav16k/synth_000030.wav", "dur_s": 21.5, "song_id": 30, "version": "aug_data/concert_audio/Bēgaḍa/nAdOpAsana.mp3"}
+{"utt": "synth_000032", "wav": "data/coverhunter_data/wav16k/synth_000032.wav", "dur_s": 33.5, "song_id": 32, "version": "aug_data/concert_audio/Maṇirangu/Mamava Pattabhi Rama.mp3"}
+{"utt": "synth_000035", "wav": "data/coverhunter_data/wav16k/synth_000035.wav", "dur_s": 36.4, "song_id": 35, "version": "aug_data/concert_audio/Varāḷi/Eti janma_r3.mp3"}
+{"utt": "synth_000037", "wav": "data/coverhunter_data/wav16k/synth_000037.wav", "dur_s": 32.7, "song_id": 37, "version": "aug_data/concert_audio/Jōnpuri/veLLai-tAmarai_r3.mp3"}
+{"utt": "synth_000042", "wav": "data/coverhunter_data/wav16k/synth_000042.wav", "dur_s": 50.9, "song_id": 42, "version": "aug_data/concert_audio/Amṛtavarṣiṇi/Evaranee_r2.mp3"}
+{"utt": "synth_000043", "wav": "data/coverhunter_data/wav16k/synth_000043.wav", "dur_s": 55.7, "song_id": 43, "version": "aug_data/concert_audio/Gauḷa/Dudukugala_r2.mp3"}
+{"utt": "synth_000044", "wav": "data/coverhunter_data/wav16k/synth_000044.wav", "dur_s": 26.8, "song_id": 44, "version": "aug_data/concert_audio/Saurāṣtraṁ/sri gaNapati_r2.mp3"}
+{"utt": "synth_000057", "wav": "data/coverhunter_data/wav16k/synth_000057.wav", "dur_s": 23.0, "song_id": 57, "version": "aug_data/concert_audio/Vasanta/Seethamma_r3.mp3"}
+{"utt": "synth_000058", "wav": "data/coverhunter_data/wav16k/synth_000058.wav", "dur_s": 56.0, "song_id": 58, "version": "aug_data/concert_audio/Jaganmōhini/sObillu saptaswara_r2.mp3"}
+{"utt": "synth_000059", "wav": "data/coverhunter_data/wav16k/synth_000059.wav", "dur_s": 20.1, "song_id": 59, "version": "aug_data/concert_audio/Ābhōgī/49 Manasu Nilpa.mp3"}
+{"utt": "synth_000060", "wav": "data/coverhunter_data/wav16k/synth_000060.wav", "dur_s": 24.8, "song_id": 60, "version": "aug_data/concert_audio/Vasanta/Emani pogaDudurA.mp3"}
+{"utt": "synth_000063", "wav": "data/coverhunter_data/wav16k/synth_000063.wav", "dur_s": 52.2, "song_id": 63, "version": "aug_data/concert_audio/Pūrṇacandrika/Telisi Rama_r2.mp3"}
+{"utt": "synth_000067", "wav": "data/coverhunter_data/wav16k/synth_000067.wav", "dur_s": 36.8, "song_id": 67, "version": "aug_data/concert_audio/Jaganmōhini/Shobillu.mp3"}
+{"utt": "synth_000070", "wav": "data/coverhunter_data/wav16k/synth_000070.wav", "dur_s": 35.4, "song_id": 2, "version": "aug_data/concert_audio/Kāmavardani/Siva Siva Siva_r2.mp3"}
+{"utt": "synth_000071", "wav": "data/coverhunter_data/wav16k/synth_000071.wav", "dur_s": 51.0, "song_id": 3, "version": "aug_data/concert_audio/Varāḷi/aparAdamula_r2.mp3"}
+{"utt": "synth_000074", "wav": "data/coverhunter_data/wav16k/synth_000074.wav", "dur_s": 37.0, "song_id": 6, "version": "aug_data/concert_audio/Kedāraṁ/rAmA neepai.mp3"}
+{"utt": "synth_000076", "wav": "data/coverhunter_data/wav16k/synth_000076.wav", "dur_s": 50.2, "song_id": 8, "version": "aug_data/concert_audio/Dēvagāndhāri/Ksheerasagara.mp3"}
+{"utt": "synth_000078", "wav": "data/coverhunter_data/wav16k/synth_000078.wav", "dur_s": 39.8, "song_id": 10, "version": "aug_data/concert_audio/Haṁsānandi/viruttam.mp3"}
+{"utt": "synth_000080", "wav": "data/coverhunter_data/wav16k/synth_000080.wav", "dur_s": 54.2, "song_id": 12, "version": "aug_data/concert_audio/Dvijāvanti/78 Vara Narada_r2.mp3"}
+{"utt": "synth_000084", "wav": "data/coverhunter_data/wav16k/synth_000084.wav", "dur_s": 24.7, "song_id": 16, "version": "aug_data/concert_audio/Pūrvīkaḷyāṇi/paralOka sAdanamE_r2.mp3"}
+{"utt": "synth_000085", "wav": "data/coverhunter_data/wav16k/synth_000085.wav", "dur_s": 41.0, "song_id": 17, "version": "aug_data/concert_audio/Bhairavi/nee pAdamulE.mp3"}
+{"utt": "synth_000086", "wav": "data/coverhunter_data/wav16k/synth_000086.wav", "dur_s": 61.6, "song_id": 18, "version": "aug_data/concert_audio/Śrīranjani/03-Sogasuga.mp3"}
+{"utt": "synth_000087", "wav": "data/coverhunter_data/wav16k/synth_000087.wav", "dur_s": 42.5, "song_id": 19, "version": "aug_data/concert_audio/Rītigauḷa/Janani Ninnuvina_r2.mp3"}
+{"utt": "synth_000089", "wav": "data/coverhunter_data/wav16k/synth_000089.wav", "dur_s": 58.6, "song_id": 21, "version": "aug_data/concert_audio/Nīlāṁbari/Madhava Mamava_r4.mp3"}
+{"utt": "synth_000090", "wav": "data/coverhunter_data/wav16k/synth_000090.wav", "dur_s": 44.0, "song_id": 22, "version": "aug_data/concert_audio/Gauḷa/01 pranamamyaham_r2.mp3"}
+{"utt": "synth_000094", "wav": "data/coverhunter_data/wav16k/synth_000094.wav", "dur_s": 27.4, "song_id": 26, "version": "aug_data/concert_audio/Lalita/nannubrOvu_r2.mp3"}
+{"utt": "synth_000096", "wav": "data/coverhunter_data/wav16k/synth_000096.wav", "dur_s": 33.0, "song_id": 28, "version": "aug_data/concert_audio/Dhanyāsi/meenalOchani_r2.mp3"}
+{"utt": "synth_000097", "wav": "data/coverhunter_data/wav16k/synth_000097.wav", "dur_s": 30.2, "song_id": 29, "version": "aug_data/concert_audio/Pūrvīkaḷyāṇi/Gnanamosaga Rada_r2.mp3"}
+{"utt": "synth_000098", "wav": "data/coverhunter_data/wav16k/synth_000098.wav", "dur_s": 52.0, "song_id": 30, "version": "aug_data/concert_audio/Bēgaḍa/Nadopasana_r4.mp3"}
+{"utt": "synth_000100", "wav": "data/coverhunter_data/wav16k/synth_000100.wav", "dur_s": 24.4, "song_id": 32, "version": "aug_data/concert_audio/Maṇirangu/Mamava Pattabhi Rama.mp3"}
+{"utt": "synth_000103", "wav": "data/coverhunter_data/wav16k/synth_000103.wav", "dur_s": 61.5, "song_id": 35, "version": "aug_data/concert_audio/Varāḷi/Eti janma_r4.mp3"}
+{"utt": "synth_000105", "wav": "data/coverhunter_data/wav16k/synth_000105.wav", "dur_s": 24.1, "song_id": 37, "version": "aug_data/concert_audio/Jōnpuri/veLLai-tAmarai_r2.mp3"}
+{"utt": "synth_000110", "wav": "data/coverhunter_data/wav16k/synth_000110.wav", "dur_s": 36.9, "song_id": 42, "version": "aug_data/concert_audio/Amṛtavarṣiṇi/Evaranee.mp3"}
+{"utt": "synth_000111", "wav": "data/coverhunter_data/wav16k/synth_000111.wav", "dur_s": 40.8, "song_id": 43, "version": "aug_data/concert_audio/Gauḷa/Dudukugala_r3.mp3"}
+{"utt": "synth_000112", "wav": "data/coverhunter_data/wav16k/synth_000112.wav", "dur_s": 54.9, "song_id": 44, "version": "aug_data/concert_audio/Saurāṣtraṁ/sri gaNapati_r2.mp3"}
+{"utt": "synth_000125", "wav": "data/coverhunter_data/wav16k/synth_000125.wav", "dur_s": 34.2, "song_id": 57, "version": "aug_data/concert_audio/Vasanta/Seethamma_r2.mp3"}
+{"utt": "synth_000126", "wav": "data/coverhunter_data/wav16k/synth_000126.wav", "dur_s": 53.6, "song_id": 58, "version": "aug_data/concert_audio/Jaganmōhini/sObillu saptaswara_r3.mp3"}
+{"utt": "synth_000127", "wav": "data/coverhunter_data/wav16k/synth_000127.wav", "dur_s": 27.7, "song_id": 59, "version": "aug_data/concert_audio/Ābhōgī/49 Manasu Nilpa_r2.mp3"}
+{"utt": "synth_000128", "wav": "data/coverhunter_data/wav16k/synth_000128.wav", "dur_s": 25.6, "song_id": 60, "version": "aug_data/concert_audio/Vasanta/Emani pogaDudurA_r2.mp3"}
+{"utt": "synth_000131", "wav": "data/coverhunter_data/wav16k/synth_000131.wav", "dur_s": 27.7, "song_id": 63, "version": "aug_data/concert_audio/Pūrṇacandrika/Telisi Rama.mp3"}
+{"utt": "synth_000135", "wav": "data/coverhunter_data/wav16k/synth_000135.wav", "dur_s": 24.6, "song_id": 67, "version": "aug_data/concert_audio/Jaganmōhini/Shobillu.mp3"}
+{"utt": "synth_000138", "wav": "data/coverhunter_data/wav16k/synth_000138.wav", "dur_s": 25.6, "song_id": 2, "version": "aug_data/concert_audio/Kāmavardani/Siva Siva Siva_r2.mp3"}
+{"utt": "synth_000139", "wav": "data/coverhunter_data/wav16k/synth_000139.wav", "dur_s": 40.2, "song_id": 3, "version": "aug_data/concert_audio/Varāḷi/aparAdamula_r5.mp3"}
+{"utt": "synth_000142", "wav": "data/coverhunter_data/wav16k/synth_000142.wav", "dur_s": 49.6, "song_id": 6, "version": "aug_data/concert_audio/Kedāraṁ/Rama Neepai_r2.mp3"}
+{"utt": "synth_000144", "wav": "data/coverhunter_data/wav16k/synth_000144.wav", "dur_s": 20.2, "song_id": 8, "version": "aug_data/concert_audio/Dēvagāndhāri/Ksheerasagara_r2.mp3"}
+{"utt": "synth_000146", "wav": "data/coverhunter_data/wav16k/synth_000146.wav", "dur_s": 45.0, "song_id": 10, "version": "aug_data/concert_audio/Haṁsānandi/viruttam_r3.mp3"}
+{"utt": "synth_000148", "wav": "data/coverhunter_data/wav16k/synth_000148.wav", "dur_s": 43.2, "song_id": 12, "version": "aug_data/concert_audio/Dvijāvanti/78 Vara Narada.mp3"}
+{"utt": "synth_000152", "wav": "data/coverhunter_data/wav16k/synth_000152.wav", "dur_s": 49.1, "song_id": 16, "version": "aug_data/concert_audio/Pūrvīkaḷyāṇi/paralOka sAdanamE_r2.mp3"}
+{"utt": "synth_000153", "wav": "data/coverhunter_data/wav16k/synth_000153.wav", "dur_s": 38.1, "song_id": 17, "version": "aug_data/concert_audio/Bhairavi/nee pAdamulE.mp3"}
+{"utt": "synth_000154", "wav": "data/coverhunter_data/wav16k/synth_000154.wav", "dur_s": 47.4, "song_id": 18, "version": "aug_data/concert_audio/Śrīranjani/03-Sogasuga_r2.mp3"}
+{"utt": "synth_000155", "wav": "data/coverhunter_data/wav16k/synth_000155.wav", "dur_s": 30.4, "song_id": 19, "version": "aug_data/concert_audio/Rītigauḷa/Janani Ninnuvina_r3.mp3"}
+{"utt": "synth_000157", "wav": "data/coverhunter_data/wav16k/synth_000157.wav", "dur_s": 26.5, "song_id": 21, "version": "aug_data/concert_audio/Nīlāṁbari/Madhava Mamava_r2.mp3"}
+{"utt": "synth_000158", "wav": "data/coverhunter_data/wav16k/synth_000158.wav", "dur_s": 46.5, "song_id": 22, "version": "aug_data/concert_audio/Gauḷa/01 pranamamyaham_r2.mp3"}
+{"utt": "synth_000162", "wav": "data/coverhunter_data/wav16k/synth_000162.wav", "dur_s": 39.3, "song_id": 26, "version": "aug_data/concert_audio/Lalita/nannubrOvu.mp3"}
+{"utt": "synth_000164", "wav": "data/coverhunter_data/wav16k/synth_000164.wav", "dur_s": 45.1, "song_id": 28, "version": "aug_data/concert_audio/Dhanyāsi/meenalOchani_r2.mp3"}
+{"utt": "synth_000165", "wav": "data/coverhunter_data/wav16k/synth_000165.wav", "dur_s": 38.5, "song_id": 29, "version": "aug_data/concert_audio/Pūrvīkaḷyāṇi/Gnanamosaga Rada.mp3"}
+{"utt": "synth_000166", "wav": "data/coverhunter_data/wav16k/synth_000166.wav", "dur_s": 40.2, "song_id": 30, "version": "aug_data/concert_audio/Bēgaḍa/Nadopasana_r4.mp3"}
+{"utt": "synth_000168", "wav": "data/coverhunter_data/wav16k/synth_000168.wav", "dur_s": 50.2, "song_id": 32, "version": "aug_data/concert_audio/Maṇirangu/Mamava Pattabhi Rama.mp3"}
+{"utt": "synth_000171", "wav": "data/coverhunter_data/wav16k/synth_000171.wav", "dur_s": 21.5, "song_id": 35, "version": "aug_data/concert_audio/Varāḷi/Eti Janma.mp3"}
+{"utt": "synth_000173", "wav": "data/coverhunter_data/wav16k/synth_000173.wav", "dur_s": 19.9, "song_id": 37, "version": "aug_data/concert_audio/Jōnpuri/veLLai-tAmarai_r3.mp3"}
+{"utt": "synth_000178", "wav": "data/coverhunter_data/wav16k/synth_000178.wav", "dur_s": 23.6, "song_id": 42, "version": "aug_data/concert_audio/Amṛtavarṣiṇi/Evaranee.mp3"}
+{"utt": "synth_000179", "wav": "data/coverhunter_data/wav16k/synth_000179.wav", "dur_s": 26.1, "song_id": 43, "version": "aug_data/concert_audio/Gauḷa/Dudukugala_r3.mp3"}
+{"utt": "synth_000180", "wav": "data/coverhunter_data/wav16k/synth_000180.wav", "dur_s": 24.6, "song_id": 44, "version": "aug_data/concert_audio/Saurāṣtraṁ/sri gaNapati.mp3"}
+{"utt": "synth_000193", "wav": "data/coverhunter_data/wav16k/synth_000193.wav", "dur_s": 25.7, "song_id": 57, "version": "aug_data/concert_audio/Vasanta/seethamma.mp3"}
+{"utt": "synth_000194", "wav": "data/coverhunter_data/wav16k/synth_000194.wav", "dur_s": 31.8, "song_id": 58, "version": "aug_data/concert_audio/Jaganmōhini/sObillu saptaswara_r3.mp3"}
+{"utt": "synth_000195", "wav": "data/coverhunter_data/wav16k/synth_000195.wav", "dur_s": 24.4, "song_id": 59, "version": "aug_data/concert_audio/Ābhōgī/49 Manasu Nilpa.mp3"}
+{"utt": "synth_000196", "wav": "data/coverhunter_data/wav16k/synth_000196.wav", "dur_s": 47.0, "song_id": 60, "version": "aug_data/concert_audio/Vasanta/Emani pogaDudurA_r2.mp3"}
+{"utt": "synth_000199", "wav": "data/coverhunter_data/wav16k/synth_000199.wav", "dur_s": 69.2, "song_id": 63, "version": "aug_data/concert_audio/Pūrṇacandrika/Telisi Rama.mp3"}
+{"utt": "synth_000203", "wav": "data/coverhunter_data/wav16k/synth_000203.wav", "dur_s": 35.4, "song_id": 67, "version": "aug_data/concert_audio/Jaganmōhini/Shobillu_r2.mp3"}
+{"utt": "synth_000224", "wav": "data/coverhunter_data/wav16k/synth_000224.wav", "dur_s": 40.9, "song_id": 88, "version": "aug_data/concert_audio/Pūrvīkaḷyāṇi/inda parAmukam Edu.mp3"}
+{"utt": "synth_000267", "wav": "data/coverhunter_data/wav16k/synth_000267.wav", "dur_s": 32.5, "song_id": 131, "version": "aug_data/concert_audio/Bilahari/dhorakunaa iTuvanTi sEva.mp3"}
+{"utt": "synth_000270", "wav": "data/coverhunter_data/wav16k/synth_000270.wav", "dur_s": 29.6, "song_id": 134, "version": "aug_data/concert_audio/Bēgaḍa/innum parAmukam.mp3"}
+{"utt": "synth_000281", "wav": "data/coverhunter_data/wav16k/synth_000281.wav", "dur_s": 30.2, "song_id": 145, "version": "aug_data/concert_audio/Bilahari/nAda sudha rasam.mp3"}
+{"utt": "synth_000283", "wav": "data/coverhunter_data/wav16k/synth_000283.wav", "dur_s": 25.1, "song_id": 147, "version": "aug_data/concert_audio/Nāṭa/Sakti gaNapatim.mp3"}
+{"utt": "synth_000289", "wav": "data/coverhunter_data/wav16k/synth_000289.wav", "dur_s": 28.4, "song_id": 153, "version": "aug_data/concert_audio/Cakravākaṁ/vinarAda nAmanavi.mp3"}
+{"utt": "synth_000291", "wav": "data/coverhunter_data/wav16k/synth_000291.wav", "dur_s": 45.6, "song_id": 155, "version": "aug_data/concert_audio/Hindōḷaṁ/05 manasulOni marmamulu.mp3"}
+{"utt": "synth_000293", "wav": "data/coverhunter_data/wav16k/synth_000293.wav", "dur_s": 30.3, "song_id": 157, "version": "aug_data/concert_audio/Karaharapriya/B.mp3"}
+{"utt": "synth_000312", "wav": "data/coverhunter_data/wav16k/synth_000312.wav", "dur_s": 43.8, "song_id": 176, "version": "aug_data/concert_audio/Gauḷa/sri mahA gaNapati.mp3"}
+{"utt": "synth_000313", "wav": "data/coverhunter_data/wav16k/synth_000313.wav", "dur_s": 24.7, "song_id": 177, "version": "aug_data/concert_audio/Ābhōgī/sabhApatikku.mp3"}
+{"utt": "synth_000315", "wav": "data/coverhunter_data/wav16k/synth_000315.wav", "dur_s": 51.3, "song_id": 179, "version": "aug_data/concert_audio/Cakravākaṁ/Melakartha Chakkaram Mayamalavagaula.mp3"}
+{"utt": "synth_000334", "wav": "data/coverhunter_data/wav16k/synth_000334.wav", "dur_s": 17.4, "song_id": 198, "version": "aug_data/concert_audio/Madhyamāvati/A Gopala Adhitama.mp3"}
+{"utt": "synth_000353", "wav": "data/coverhunter_data/wav16k/synth_000353.wav", "dur_s": 31.3, "song_id": 217, "version": "aug_data/concert_audio/Madhyamāvati/kaNNA.mp3"}
+{"utt": "synth_000354", "wav": "data/coverhunter_data/wav16k/synth_000354.wav", "dur_s": 37.7, "song_id": 218, "version": "aug_data/concert_audio/Hindōḷaṁ/sAmagAnalOle.mp3"}
+{"utt": "synth_000363", "wav": "data/coverhunter_data/wav16k/synth_000363.wav", "dur_s": 49.0, "song_id": 227, "version": "aug_data/concert_audio/Yadukula kāṁbōji/hecharika.mp3"}
+{"utt": "synth_000408", "wav": "data/coverhunter_data/wav16k/synth_000408.wav", "dur_s": 21.5, "song_id": 272, "version": "aug_data/concert_audio/Kānaḍa/BhajaraeBhajaManasa.mp3"}
+{"utt": "synth_000415", "wav": "data/coverhunter_data/wav16k/synth_000415.wav", "dur_s": 23.5, "song_id": 279, "version": "aug_data/concert_audio/Hindōḷaṁ/05 neerajAkshi.mp3"}
+{"utt": "synth_000416", "wav": "data/coverhunter_data/wav16k/synth_000416.wav", "dur_s": 49.0, "song_id": 280, "version": "aug_data/concert_audio/Ṣanmukhapriya/Melakartha Chakkaram Syamalangi.mp3"}
+{"utt": "synth_000420", "wav": "data/coverhunter_data/wav16k/synth_000420.wav", "dur_s": 33.4, "song_id": 284, "version": "aug_data/concert_audio/Nāṭa/Paripoorna Garudadhri.mp3"}
+{"utt": "synth_000423", "wav": "data/coverhunter_data/wav16k/synth_000423.wav", "dur_s": 48.6, "song_id": 287, "version": "aug_data/concert_audio/Aṭāna/kAnta tava.mp3"}
+{"utt": "synth_000432", "wav": "data/coverhunter_data/wav16k/synth_000432.wav", "dur_s": 45.6, "song_id": 296, "version": "aug_data/concert_audio/Aṭāna/Sri Maha Ganapathim.mp3"}
+{"utt": "synth_000435", "wav": "data/coverhunter_data/wav16k/synth_000435.wav", "dur_s": 24.1, "song_id": 299, "version": "aug_data/concert_audio/Sāma/Tanake.mp3"}
+{"utt": "synth_000441", "wav": "data/coverhunter_data/wav16k/synth_000441.wav", "dur_s": 20.3, "song_id": 305, "version": "aug_data/concert_audio/Nādanāmakriya/naranAda.mp3"}
+{"utt": "synth_000462", "wav": "data/coverhunter_data/wav16k/synth_000462.wav", "dur_s": 72.0, "song_id": 326, "version": "aug_data/concert_audio/Bhairavi/Veena Dhanammal ottupetra Ananda.mp3"}
+{"utt": "synth_000468", "wav": "data/coverhunter_data/wav16k/synth_000468.wav", "dur_s": 47.4, "song_id": 332, "version": "aug_data/concert_audio/Mukhāri/EmandunE.mp3"}
+{"utt": "synth_000469", "wav": "data/coverhunter_data/wav16k/synth_000469.wav", "dur_s": 40.9, "song_id": 333, "version": "aug_data/concert_audio/Madhyamāvati/nAdupai.mp3"}
+{"utt": "real_0000", "wav": "data/coverhunter_data/wav16k/real_0000.wav", "dur_s": 60.0, "song_id": 42, "version": "real0"}
+{"utt": "real_0001", "wav": "data/coverhunter_data/wav16k/real_0001.wav", "dur_s": 60.0, "song_id": 42, "version": "real1"}
+{"utt": "real_0002", "wav": "data/coverhunter_data/wav16k/real_0002.wav", "dur_s": 60.0, "song_id": 42, "version": "real2"}
+{"utt": "real_0006", "wav": "data/coverhunter_data/wav16k/real_0006.wav", "dur_s": 60.0, "song_id": 17, "version": "real0"}
+{"utt": "real_0007", "wav": "data/coverhunter_data/wav16k/real_0007.wav", "dur_s": 60.0, "song_id": 17, "version": "real1"}
+{"utt": "real_0012", "wav": "data/coverhunter_data/wav16k/real_0012.wav", "dur_s": 60.0, "song_id": 30, "version": "real0"}
+{"utt": "real_0013", "wav": "data/coverhunter_data/wav16k/real_0013.wav", "dur_s": 60.0, "song_id": 30, "version": "real1"}
+{"utt": "real_0014", "wav": "data/coverhunter_data/wav16k/real_0014.wav", "dur_s": 60.0, "song_id": 30, "version": "real2"}
+{"utt": "real_0015", "wav": "data/coverhunter_data/wav16k/real_0015.wav", "dur_s": 60.0, "song_id": 30, "version": "real3"}
+{"utt": "real_0020", "wav": "data/coverhunter_data/wav16k/real_0020.wav", "dur_s": 60.0, "song_id": 28, "version": "real0"}
+{"utt": "real_0021", "wav": "data/coverhunter_data/wav16k/real_0021.wav", "dur_s": 60.0, "song_id": 28, "version": "real1"}
+{"utt": "real_0031", "wav": "data/coverhunter_data/wav16k/real_0031.wav", "dur_s": 60.0, "song_id": 12, "version": "real0"}
+{"utt": "real_0032", "wav": "data/coverhunter_data/wav16k/real_0032.wav", "dur_s": 60.0, "song_id": 12, "version": "real1"}
+{"utt": "real_0035", "wav": "data/coverhunter_data/wav16k/real_0035.wav", "dur_s": 60.0, "song_id": 8, "version": "real0"}
+{"utt": "real_0036", "wav": "data/coverhunter_data/wav16k/real_0036.wav", "dur_s": 60.0, "song_id": 8, "version": "real1"}
+{"utt": "real_0037", "wav": "data/coverhunter_data/wav16k/real_0037.wav", "dur_s": 60.0, "song_id": 22, "version": "real0"}
+{"utt": "real_0038", "wav": "data/coverhunter_data/wav16k/real_0038.wav", "dur_s": 60.0, "song_id": 22, "version": "real1"}
+{"utt": "real_0039", "wav": "data/coverhunter_data/wav16k/real_0039.wav", "dur_s": 60.0, "song_id": 43, "version": "real0"}
+{"utt": "real_0040", "wav": "data/coverhunter_data/wav16k/real_0040.wav", "dur_s": 60.0, "song_id": 43, "version": "real1"}
+{"utt": "real_0041", "wav": "data/coverhunter_data/wav16k/real_0041.wav", "dur_s": 60.0, "song_id": 43, "version": "real2"}
+{"utt": "real_0056", "wav": "data/coverhunter_data/wav16k/real_0056.wav", "dur_s": 60.0, "song_id": 10, "version": "real0"}
+{"utt": "real_0057", "wav": "data/coverhunter_data/wav16k/real_0057.wav", "dur_s": 60.0, "song_id": 10, "version": "real1"}
+{"utt": "real_0058", "wav": "data/coverhunter_data/wav16k/real_0058.wav", "dur_s": 60.0, "song_id": 10, "version": "real2"}
+{"utt": "real_0059", "wav": "data/coverhunter_data/wav16k/real_0059.wav", "dur_s": 60.0, "song_id": 10, "version": "real3"}
+{"utt": "real_0060", "wav": "data/coverhunter_data/wav16k/real_0060.wav", "dur_s": 60.0, "song_id": 10, "version": "real4"}
+{"utt": "real_0068", "wav": "data/coverhunter_data/wav16k/real_0068.wav", "dur_s": 60.0, "song_id": 67, "version": "real0"}
+{"utt": "real_0069", "wav": "data/coverhunter_data/wav16k/real_0069.wav", "dur_s": 60.0, "song_id": 67, "version": "real1"}
+{"utt": "real_0070", "wav": "data/coverhunter_data/wav16k/real_0070.wav", "dur_s": 60.0, "song_id": 58, "version": "real0"}
+{"utt": "real_0071", "wav": "data/coverhunter_data/wav16k/real_0071.wav", "dur_s": 60.0, "song_id": 58, "version": "real1"}
+{"utt": "real_0072", "wav": "data/coverhunter_data/wav16k/real_0072.wav", "dur_s": 60.0, "song_id": 58, "version": "real2"}
+{"utt": "real_0073", "wav": "data/coverhunter_data/wav16k/real_0073.wav", "dur_s": 60.0, "song_id": 58, "version": "real3"}
+{"utt": "real_0081", "wav": "data/coverhunter_data/wav16k/real_0081.wav", "dur_s": 60.0, "song_id": 37, "version": "real0"}
+{"utt": "real_0082", "wav": "data/coverhunter_data/wav16k/real_0082.wav", "dur_s": 60.0, "song_id": 37, "version": "real1"}
+{"utt": "real_0083", "wav": "data/coverhunter_data/wav16k/real_0083.wav", "dur_s": 60.0, "song_id": 37, "version": "real2"}
+{"utt": "real_0092", "wav": "data/coverhunter_data/wav16k/real_0092.wav", "dur_s": 60.0, "song_id": 6, "version": "real0"}
+{"utt": "real_0093", "wav": "data/coverhunter_data/wav16k/real_0093.wav", "dur_s": 60.0, "song_id": 6, "version": "real1"}
+{"utt": "real_0094", "wav": "data/coverhunter_data/wav16k/real_0094.wav", "dur_s": 60.0, "song_id": 6, "version": "real2"}
+{"utt": "real_0095", "wav": "data/coverhunter_data/wav16k/real_0095.wav", "dur_s": 60.0, "song_id": 2, "version": "real0"}
+{"utt": "real_0096", "wav": "data/coverhunter_data/wav16k/real_0096.wav", "dur_s": 60.0, "song_id": 2, "version": "real1"}
+{"utt": "real_0106", "wav": "data/coverhunter_data/wav16k/real_0106.wav", "dur_s": 60.0, "song_id": 26, "version": "real0"}
+{"utt": "real_0107", "wav": "data/coverhunter_data/wav16k/real_0107.wav", "dur_s": 60.0, "song_id": 26, "version": "real1"}
+{"utt": "real_0108", "wav": "data/coverhunter_data/wav16k/real_0108.wav", "dur_s": 60.0, "song_id": 26, "version": "real2"}
+{"utt": "real_0121", "wav": "data/coverhunter_data/wav16k/real_0121.wav", "dur_s": 60.0, "song_id": 32, "version": "real0"}
+{"utt": "real_0122", "wav": "data/coverhunter_data/wav16k/real_0122.wav", "dur_s": 60.0, "song_id": 32, "version": "real1"}
+{"utt": "real_0123", "wav": "data/coverhunter_data/wav16k/real_0123.wav", "dur_s": 60.0, "song_id": 21, "version": "real0"}
+{"utt": "real_0124", "wav": "data/coverhunter_data/wav16k/real_0124.wav", "dur_s": 60.0, "song_id": 21, "version": "real1"}
+{"utt": "real_0125", "wav": "data/coverhunter_data/wav16k/real_0125.wav", "dur_s": 60.0, "song_id": 21, "version": "real2"}
+{"utt": "real_0126", "wav": "data/coverhunter_data/wav16k/real_0126.wav", "dur_s": 60.0, "song_id": 21, "version": "real3"}
+{"utt": "real_0135", "wav": "data/coverhunter_data/wav16k/real_0135.wav", "dur_s": 60.0, "song_id": 29, "version": "real0"}
+{"utt": "real_0136", "wav": "data/coverhunter_data/wav16k/real_0136.wav", "dur_s": 60.0, "song_id": 29, "version": "real1"}
+{"utt": "real_0140", "wav": "data/coverhunter_data/wav16k/real_0140.wav", "dur_s": 60.0, "song_id": 16, "version": "real0"}
+{"utt": "real_0141", "wav": "data/coverhunter_data/wav16k/real_0141.wav", "dur_s": 60.0, "song_id": 16, "version": "real1"}
+{"utt": "real_0145", "wav": "data/coverhunter_data/wav16k/real_0145.wav", "dur_s": 60.0, "song_id": 63, "version": "real0"}
+{"utt": "real_0146", "wav": "data/coverhunter_data/wav16k/real_0146.wav", "dur_s": 60.0, "song_id": 63, "version": "real1"}
+{"utt": "real_0147", "wav": "data/coverhunter_data/wav16k/real_0147.wav", "dur_s": 60.0, "song_id": 19, "version": "real0"}
+{"utt": "real_0148", "wav": "data/coverhunter_data/wav16k/real_0148.wav", "dur_s": 60.0, "song_id": 19, "version": "real1"}
+{"utt": "real_0149", "wav": "data/coverhunter_data/wav16k/real_0149.wav", "dur_s": 60.0, "song_id": 19, "version": "real2"}
+{"utt": "real_0157", "wav": "data/coverhunter_data/wav16k/real_0157.wav", "dur_s": 60.0, "song_id": 44, "version": "real0"}
+{"utt": "real_0158", "wav": "data/coverhunter_data/wav16k/real_0158.wav", "dur_s": 60.0, "song_id": 44, "version": "real1"}
+{"utt": "real_0159", "wav": "data/coverhunter_data/wav16k/real_0159.wav", "dur_s": 60.0, "song_id": 44, "version": "real2"}
+{"utt": "real_0167", "wav": "data/coverhunter_data/wav16k/real_0167.wav", "dur_s": 60.0, "song_id": 3, "version": "real0"}
+{"utt": "real_0168", "wav": "data/coverhunter_data/wav16k/real_0168.wav", "dur_s": 60.0, "song_id": 3, "version": "real1"}
+{"utt": "real_0169", "wav": "data/coverhunter_data/wav16k/real_0169.wav", "dur_s": 60.0, "song_id": 3, "version": "real2"}
+{"utt": "real_0170", "wav": "data/coverhunter_data/wav16k/real_0170.wav", "dur_s": 60.0, "song_id": 3, "version": "real3"}
+{"utt": "real_0171", "wav": "data/coverhunter_data/wav16k/real_0171.wav", "dur_s": 60.0, "song_id": 3, "version": "real4"}
+{"utt": "real_0172", "wav": "data/coverhunter_data/wav16k/real_0172.wav", "dur_s": 60.0, "song_id": 3, "version": "real5"}
+{"utt": "real_0173", "wav": "data/coverhunter_data/wav16k/real_0173.wav", "dur_s": 60.0, "song_id": 35, "version": "real0"}
+{"utt": "real_0174", "wav": "data/coverhunter_data/wav16k/real_0174.wav", "dur_s": 60.0, "song_id": 35, "version": "real1"}
+{"utt": "real_0175", "wav": "data/coverhunter_data/wav16k/real_0175.wav", "dur_s": 60.0, "song_id": 35, "version": "real2"}
+{"utt": "real_0176", "wav": "data/coverhunter_data/wav16k/real_0176.wav", "dur_s": 60.0, "song_id": 35, "version": "real3"}
+{"utt": "real_0177", "wav": "data/coverhunter_data/wav16k/real_0177.wav", "dur_s": 60.0, "song_id": 60, "version": "real0"}
+{"utt": "real_0178", "wav": "data/coverhunter_data/wav16k/real_0178.wav", "dur_s": 60.0, "song_id": 60, "version": "real1"}
+{"utt": "real_0179", "wav": "data/coverhunter_data/wav16k/real_0179.wav", "dur_s": 60.0, "song_id": 57, "version": "real0"}
+{"utt": "real_0180", "wav": "data/coverhunter_data/wav16k/real_0180.wav", "dur_s": 60.0, "song_id": 57, "version": "real1"}
+{"utt": "real_0181", "wav": "data/coverhunter_data/wav16k/real_0181.wav", "dur_s": 60.0, "song_id": 57, "version": "real2"}
+{"utt": "real_0182", "wav": "data/coverhunter_data/wav16k/real_0182.wav", "dur_s": 60.0, "song_id": 59, "version": "real0"}
+{"utt": "real_0183", "wav": "data/coverhunter_data/wav16k/real_0183.wav", "dur_s": 60.0, "song_id": 59, "version": "real1"}
+{"utt": "real_0188", "wav": "data/coverhunter_data/wav16k/real_0188.wav", "dur_s": 60.0, "song_id": 18, "version": "real0"}
+{"utt": "real_0189", "wav": "data/coverhunter_data/wav16k/real_0189.wav", "dur_s": 60.0, "song_id": 18, "version": "real1"}

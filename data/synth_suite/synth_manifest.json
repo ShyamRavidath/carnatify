@@ -1,0 +1,1218 @@
+{
+ "note": "SYNTH robustness suite — same-corpus, stress test only, never merged into ~/sung_tests",
+ "clips": [
+  {
+   "file": "dikku_teriyada__NA.wav",
+   "source": "data/concert_audio/Rāgamālika/dikku teriyada.mp3",
+   "params": {
+    "crop_s": 33.6,
+    "pitch_semitones": -2.79,
+    "stretch": 1.127,
+    "snr_db": 19.2,
+    "phone": {
+     "band": [
+      244,
+      4815
+     ],
+     "sr": 16000
+    }
+   }
+  },
+  {
+   "file": "kaNNanE_en_kaNavan__Kalyāṇi.wav",
+   "source": "data/concert_audio/Kalyāṇi/kaNNanE en kaNavan.mp3",
+   "params": {
+    "crop_s": 38.2,
+    "pitch_semitones": 4.44,
+    "reverb_rt": 0.32,
+    "snr_db": 20.7,
+    "agc_gain": 2.18
+   }
+  },
+  {
+   "file": "jEsinadella__Tōḍi.wav",
+   "source": "data/concert_audio/Tōḍi/jEsinadella.mp3",
+   "params": {
+    "crop_s": 39.8,
+    "pitch_semitones": -4.49,
+    "reverb_rt": 0.2,
+    "snr_db": 15.8,
+    "phone": {
+     "band": [
+      320,
+      7377
+     ],
+     "sr": 8000
+    },
+    "agc_gain": 2.16
+   }
+  },
+  {
+   "file": "teLLa_telindadayyA__NA.wav",
+   "source": "data/concert_audio/Rāgamālika/teLLa telindadayyA.mp3",
+   "params": {
+    "crop_s": 44.9,
+    "pitch_semitones": 1.8,
+    "phone": {
+     "band": [
+      193,
+      6347
+     ],
+     "sr": 11025
+    }
+   }
+  },
+  {
+   "file": "11_vanitaru__Hussēnī.wav",
+   "source": "data/concert_audio/Hussēnī/11 vanitaru.mp3",
+   "params": {
+    "crop_s": 44.7,
+    "pitch_semitones": 1.57,
+    "phone": {
+     "band": [
+      143,
+      5998
+     ],
+     "sr": 8000
+    },
+    "agc_gain": 1.8
+   }
+  },
+  {
+   "file": "B_Marulu_Konnadhira__Kamās.wav",
+   "source": "data/concert_audio/Kamās/B Marulu Konnadhira.mp3",
+   "params": {
+    "crop_s": 21.8,
+    "pitch_semitones": -2.48,
+    "stretch": 0.866,
+    "reverb_rt": 0.4,
+    "snr_db": 18.4,
+    "phone": {
+     "band": [
+      175,
+      7143
+     ],
+     "sr": 8000
+    },
+    "agc_gain": 1.73
+   }
+  },
+  {
+   "file": "kAraNam_kETTu_vADi__Pūrvīkaḷyāṇi.wav",
+   "source": "data/concert_audio/Pūrvīkaḷyāṇi/kAraNam kETTu vADi.mp3",
+   "params": {
+    "crop_s": 30.2,
+    "pitch_semitones": 4.79,
+    "stretch": 0.929,
+    "reverb_rt": 0.18,
+    "snr_db": 18.9,
+    "phone": {
+     "band": [
+      225,
+      4639
+     ],
+     "sr": 11025
+    }
+   }
+  },
+  {
+   "file": "slOkam__Behāg.wav",
+   "source": "data/concert_audio/Behāg/slOkam.mp3",
+   "params": {
+    "crop_s": 29.5,
+    "pitch_semitones": -1.69,
+    "stretch": 1.115,
+    "reverb_rt": 0.52,
+    "snr_db": 19.7
+   }
+  },
+  {
+   "file": "Rama_Neepai__Kedāraṁ.wav",
+   "source": "data/concert_audio/Kedāraṁ/rAmA neepai.mp3",
+   "params": {
+    "crop_s": 39.9,
+    "pitch_semitones": 3.31,
+    "stretch": 1.161,
+    "reverb_rt": 0.24,
+    "phone": {
+     "band": [
+      313,
+      5976
+     ],
+     "sr": 16000
+    }
+   }
+  },
+  {
+   "file": "EmanadichEvo__Sahānā.wav",
+   "source": "data/concert_audio/Sahānā/EmanadichEvo.mp3",
+   "params": {
+    "crop_s": 51.5,
+    "pitch_semitones": 0.95,
+    "reverb_rt": 0.28,
+    "snr_db": 21.4
+   }
+  },
+  {
+   "file": "05_neerajAkshi__Hindōḷaṁ.wav",
+   "source": "data/concert_audio/Hindōḷaṁ/05 neerajAkshi.mp3",
+   "params": {
+    "crop_s": 53.2,
+    "pitch_semitones": 4.97,
+    "snr_db": 22.8,
+    "phone": {
+     "band": [
+      341,
+      3977
+     ],
+     "sr": 8000
+    }
+   }
+  },
+  {
+   "file": "anukalxxx__Ābhōgī.wav",
+   "source": "data/concert_audio/Ābhōgī/anukalxxx.mp3",
+   "params": {
+    "crop_s": 58.7,
+    "pitch_semitones": -1.61,
+    "reverb_rt": 0.39,
+    "phone": {
+     "band": [
+      208,
+      6018
+     ],
+     "sr": 11025
+    },
+    "agc_gain": 1.2
+   }
+  },
+  {
+   "file": "kAtrAt_kEni__Nāṭakurinji.wav",
+   "source": "data/concert_audio/Nāṭakurinji/kAtrAt kEni.mp3",
+   "params": {
+    "crop_s": 44.8,
+    "pitch_semitones": 4.98,
+    "stretch": 0.828,
+    "phone": {
+     "band": [
+      214,
+      3973
+     ],
+     "sr": 8000
+    },
+    "agc_gain": 1.54
+   }
+  },
+  {
+   "file": "Ananda_tAnDavam__Mōhanaṁ.wav",
+   "source": "data/concert_audio/Mōhanaṁ/Ananda tAnDavam.mp3",
+   "params": {
+    "crop_s": 29.4,
+    "pitch_semitones": -4.37,
+    "stretch": 1.102,
+    "phone": {
+     "band": [
+      291,
+      4034
+     ],
+     "sr": 11025
+    }
+   }
+  },
+  {
+   "file": "parAkElanayyA__Sāma.wav",
+   "source": "data/concert_audio/Sāma/parAkElanayyA.mp3",
+   "params": {
+    "crop_s": 44.6,
+    "pitch_semitones": -5.61,
+    "stretch": 1.0,
+    "phone": {
+     "band": [
+      278,
+      5632
+     ],
+     "sr": 16000
+    },
+    "agc_gain": 1.42
+   }
+  },
+  {
+   "file": "kamala_charaNE__Behāg.wav",
+   "source": "data/concert_audio/Behāg/kamala charaNE.mp3",
+   "params": {
+    "crop_s": 58.7,
+    "pitch_semitones": -4.9,
+    "stretch": 1.088,
+    "snr_db": 13.7,
+    "phone": {
+     "band": [
+      250,
+      3681
+     ],
+     "sr": 16000
+    },
+    "agc_gain": 1.18
+   }
+  },
+  {
+   "file": "Paruvam_Parka__Dhanyāsi.wav",
+   "source": "data/concert_audio/Dhanyāsi/Paruvam Parka.mp3",
+   "params": {
+    "crop_s": 33.1,
+    "pitch_semitones": 3.46,
+    "stretch": 0.925,
+    "phone": {
+     "band": [
+      304,
+      3851
+     ],
+     "sr": 8000
+    },
+    "agc_gain": 1.37
+   }
+  },
+  {
+   "file": "tillAna__Haṁsānandi.wav",
+   "source": "data/concert_audio/Haṁsānandi/tillAna.mp3",
+   "params": {
+    "crop_s": 43.6,
+    "pitch_semitones": -3.91,
+    "stretch": 1.134,
+    "reverb_rt": 0.49,
+    "snr_db": 18.1,
+    "phone": {
+     "band": [
+      337,
+      3578
+     ],
+     "sr": 16000
+    }
+   }
+  },
+  {
+   "file": "nAdha_harE__Hamsadhvāni.wav",
+   "source": "data/concert_audio/Hamsadhvāni/nAdha harE.mp3",
+   "params": {
+    "crop_s": 45.7,
+    "pitch_semitones": -5.27,
+    "stretch": 0.981,
+    "snr_db": 23.5,
+    "agc_gain": 1.09
+   }
+  },
+  {
+   "file": "kOTi_nAdulu__Tōḍi.wav",
+   "source": "data/concert_audio/Tōḍi/kOTi nAdulu.mp3",
+   "params": {
+    "crop_s": 31.0,
+    "pitch_semitones": 1.02,
+    "reverb_rt": 0.42,
+    "snr_db": 9.7,
+    "phone": {
+     "band": [
+      271,
+      6999
+     ],
+     "sr": 16000
+    }
+   }
+  },
+  {
+   "file": "raghuvamsa__Kathanakutūhalaṁ.wav",
+   "source": "data/concert_audio/Kathanakutūhalaṁ/raghuvamsa.mp3",
+   "params": {
+    "crop_s": 37.2,
+    "pitch_semitones": -1.03,
+    "reverb_rt": 0.48,
+    "snr_db": 14.4,
+    "phone": {
+     "band": [
+      229,
+      3774
+     ],
+     "sr": 8000
+    },
+    "agc_gain": 1.03
+   }
+  },
+  {
+   "file": "sarOjadhalanEtri__Śankarābharaṇaṁ.wav",
+   "source": "data/concert_audio/Śankarābharaṇaṁ/sarOjadhalanEtri.mp3",
+   "params": {
+    "crop_s": 52.5,
+    "pitch_semitones": 1.04,
+    "stretch": 0.948,
+    "reverb_rt": 0.31,
+    "snr_db": 23.6
+   }
+  },
+  {
+   "file": "ab_tO_prakaT_bhayi__Kāmavardani.wav",
+   "source": "data/concert_audio/Kāmavardani/ab tO prakaT bhayi.mp3",
+   "params": {
+    "crop_s": 24.1,
+    "pitch_semitones": -3.45,
+    "stretch": 0.901,
+    "reverb_rt": 0.53,
+    "snr_db": 11.8
+   }
+  },
+  {
+   "file": "karuNirO__Dhanyāsi.wav",
+   "source": "data/concert_audio/Dhanyāsi/karuNirO.mp3",
+   "params": {
+    "crop_s": 44.4,
+    "pitch_semitones": -5.65,
+    "stretch": 1.143,
+    "snr_db": 11.1,
+    "phone": {
+     "band": [
+      212,
+      3982
+     ],
+     "sr": 16000
+    }
+   }
+  },
+  {
+   "file": "ElAvatara__Mukhāri.wav",
+   "source": "data/concert_audio/Mukhāri/ElAvatara.mp3",
+   "params": {
+    "crop_s": 49.8,
+    "pitch_semitones": -1.49,
+    "stretch": 0.871,
+    "reverb_rt": 0.3,
+    "snr_db": 8.9,
+    "agc_gain": 1.01
+   }
+  },
+  {
+   "file": "tanivi_tIra_lEdE__Aṭāna.wav",
+   "source": "data/concert_audio/Aṭāna/tanivi tIra lEdE.mp3",
+   "params": {
+    "crop_s": 46.5,
+    "pitch_semitones": 1.28,
+    "stretch": 0.897,
+    "reverb_rt": 0.31,
+    "snr_db": 16.3,
+    "phone": {
+     "band": [
+      171,
+      7436
+     ],
+     "sr": 8000
+    },
+    "agc_gain": 1.29
+   }
+  },
+  {
+   "file": "nannu_pAlimpa__Mōhanaṁ.wav",
+   "source": "data/concert_audio/Mōhanaṁ/nannu pAlimpa.mp3",
+   "params": {
+    "crop_s": 50.7,
+    "pitch_semitones": -2.53,
+    "stretch": 1.024,
+    "reverb_rt": 0.21,
+    "snr_db": 22.2,
+    "phone": {
+     "band": [
+      211,
+      6442
+     ],
+     "sr": 11025
+    },
+    "agc_gain": 2.1
+   }
+  },
+  {
+   "file": "pAhi_jagatjanani__Vasanta.wav",
+   "source": "data/concert_audio/Vasanta/pAhi jagatjanani.mp3",
+   "params": {
+    "crop_s": 43.0,
+    "pitch_semitones": -1.15,
+    "stretch": 0.93,
+    "reverb_rt": 0.58,
+    "snr_db": 22.1,
+    "phone": {
+     "band": [
+      220,
+      3834
+     ],
+     "sr": 11025
+    }
+   }
+  },
+  {
+   "file": "Arul_Cheyya__Karaharapriya.wav",
+   "source": "data/concert_audio/Karaharapriya/Arul Cheyya.mp3",
+   "params": {
+    "crop_s": 35.8,
+    "pitch_semitones": 2.95,
+    "stretch": 1.151,
+    "reverb_rt": 0.43,
+    "phone": {
+     "band": [
+      287,
+      6758
+     ],
+     "sr": 8000
+    },
+    "agc_gain": 1.09
+   }
+  },
+  {
+   "file": "Magudi__Puṇṇāgavarāḷi.wav",
+   "source": "data/concert_audio/Puṇṇāgavarāḷi/Magudi.mp3",
+   "params": {
+    "crop_s": 26.9,
+    "pitch_semitones": 3.12,
+    "stretch": 0.88,
+    "snr_db": 20.8,
+    "phone": {
+     "band": [
+      277,
+      7016
+     ],
+     "sr": 16000
+    }
+   }
+  },
+  {
+   "file": "kannulAra_kaNtinipuDu__Dhanyāsi.wav",
+   "source": "data/concert_audio/Dhanyāsi/kannulAra kaNtinipuDu.mp3",
+   "params": {
+    "crop_s": 54.6,
+    "pitch_semitones": -4.19,
+    "stretch": 0.999,
+    "reverb_rt": 0.27,
+    "snr_db": 15.8,
+    "phone": {
+     "band": [
+      311,
+      3715
+     ],
+     "sr": 8000
+    }
+   }
+  },
+  {
+   "file": "eesanE_inDa_Ezhai__Cakravākaṁ.wav",
+   "source": "data/concert_audio/Cakravākaṁ/eesanE inDa Ezhai.mp3",
+   "params": {
+    "crop_s": 38.5,
+    "pitch_semitones": -0.6,
+    "snr_db": 16.1,
+    "agc_gain": 1.95
+   }
+  },
+  {
+   "file": "brahma_kaDigina_pAdamu__Mukhāri.wav",
+   "source": "data/concert_audio/Mukhāri/brahma kaDigina pAdamu.mp3",
+   "params": {
+    "crop_s": 59.3,
+    "pitch_semitones": 0.05,
+    "stretch": 0.911,
+    "reverb_rt": 0.35,
+    "snr_db": 23.6,
+    "phone": {
+     "band": [
+      198,
+      5851
+     ],
+     "sr": 16000
+    }
+   }
+  },
+  {
+   "file": "Mamava_Pattabhi_Rama__Maṇirangu.wav",
+   "source": "data/concert_audio/Maṇirangu/Mamava Pattabhi Rama.mp3",
+   "params": {
+    "crop_s": 33.2,
+    "pitch_semitones": -2.59,
+    "agc_gain": 1.66
+   }
+  },
+  {
+   "file": "Gam_Ganapate__Hamsadhvāni.wav",
+   "source": "data/concert_audio/Hamsadhvāni/Gam Ganapate.mp3",
+   "params": {
+    "crop_s": 56.7,
+    "pitch_semitones": 5.61,
+    "stretch": 0.976,
+    "reverb_rt": 0.57,
+    "snr_db": 13.6,
+    "phone": {
+     "band": [
+      311,
+      6429
+     ],
+     "sr": 16000
+    }
+   }
+  },
+  {
+   "file": "13_Karana__Dvijāvanti.wav",
+   "source": "data/concert_audio/Dvijāvanti/13 Karana.mp3",
+   "params": {
+    "crop_s": 45.8,
+    "pitch_semitones": 0.1,
+    "stretch": 0.939,
+    "snr_db": 21.0,
+    "phone": {
+     "band": [
+      152,
+      3716
+     ],
+     "sr": 8000
+    }
+   }
+  },
+  {
+   "file": "Sakti_gaNapatim__Nāṭa.wav",
+   "source": "data/concert_audio/Nāṭa/Sakti gaNapatim.mp3",
+   "params": {
+    "crop_s": 46.5,
+    "pitch_semitones": 1.17,
+    "stretch": 0.881,
+    "snr_db": 23.3,
+    "phone": {
+     "band": [
+      214,
+      6173
+     ],
+     "sr": 8000
+    }
+   }
+  },
+  {
+   "file": "ceDi_maraivilE__Janaranjani.wav",
+   "source": "data/concert_audio/Janaranjani/ceDi maraivilE.mp3",
+   "params": {
+    "crop_s": 50.1,
+    "pitch_semitones": -0.61,
+    "stretch": 0.939,
+    "snr_db": 22.2,
+    "phone": {
+     "band": [
+      251,
+      5206
+     ],
+     "sr": 11025
+    }
+   }
+  },
+  {
+   "file": "paralOka_sAdanamE__Pūrvīkaḷyāṇi.wav",
+   "source": "data/concert_audio/Pūrvīkaḷyāṇi/paralOka sAdanamE_r2.mp3",
+   "params": {
+    "crop_s": 58.7,
+    "pitch_semitones": 3.62,
+    "stretch": 0.913,
+    "phone": {
+     "band": [
+      144,
+      6868
+     ],
+     "sr": 8000
+    },
+    "agc_gain": 1.89
+   }
+  },
+  {
+   "file": "mudAkaratta__Aṭāna.wav",
+   "source": "data/concert_audio/Aṭāna/mudAkaratta.mp3",
+   "params": {
+    "crop_s": 38.0,
+    "pitch_semitones": -4.23,
+    "stretch": 1.226,
+    "reverb_rt": 0.35,
+    "snr_db": 14.7,
+    "phone": {
+     "band": [
+      349,
+      4937
+     ],
+     "sr": 8000
+    },
+    "agc_gain": 1.03
+   }
+  },
+  {
+   "file": "tirupugazh__Bilahari.wav",
+   "source": "data/concert_audio/Bilahari/tirupugazh.mp3",
+   "params": {
+    "crop_s": 51.7,
+    "pitch_semitones": -5.54,
+    "reverb_rt": 0.52,
+    "snr_db": 8.1,
+    "phone": {
+     "band": [
+      170,
+      4013
+     ],
+     "sr": 16000
+    }
+   }
+  },
+  {
+   "file": "aiyyanE__Kāṁbhōji.wav",
+   "source": "data/concert_audio/Kāṁbhōji/aiyyanE.mp3",
+   "params": {
+    "crop_s": 24.4,
+    "pitch_semitones": -3.15,
+    "stretch": 0.907,
+    "snr_db": 9.1
+   }
+  },
+  {
+   "file": "Ini_Orukkanam_Unnai_Maraven__Śrīranjani.wav",
+   "source": "data/concert_audio/Śrīranjani/Ini Orukkanam Unnai Maraven.mp3",
+   "params": {
+    "crop_s": 45.3,
+    "pitch_semitones": -3.1,
+    "stretch": 0.993,
+    "snr_db": 15.1,
+    "phone": {
+     "band": [
+      240,
+      4878
+     ],
+     "sr": 16000
+    }
+   }
+  },
+  {
+   "file": "tyAgarAja_nee_bhAgyamu__Mukhāri.wav",
+   "source": "data/concert_audio/Mukhāri/tyAgarAja nee bhAgyamu.mp3",
+   "params": {
+    "crop_s": 35.6,
+    "pitch_semitones": -5.48,
+    "stretch": 0.968,
+    "snr_db": 9.1
+   }
+  },
+  {
+   "file": "4SUKHI_EVARO__Kānaḍa.wav",
+   "source": "data/concert_audio/Kānaḍa/4SUKHI EVARO.mp3",
+   "params": {
+    "crop_s": 25.3,
+    "pitch_semitones": 0.55,
+    "reverb_rt": 0.5,
+    "snr_db": 11.1,
+    "phone": {
+     "band": [
+      299,
+      5276
+     ],
+     "sr": 11025
+    },
+    "agc_gain": 1.93
+   }
+  },
+  {
+   "file": "Kumari__Sāma.wav",
+   "source": "data/concert_audio/Sāma/Kumari.mp3",
+   "params": {
+    "crop_s": 32.6,
+    "pitch_semitones": 0.18,
+    "reverb_rt": 0.26,
+    "snr_db": 22.7,
+    "agc_gain": 1.06
+   }
+  },
+  {
+   "file": "brochevArevururA__Kamās.wav",
+   "source": "data/concert_audio/Kamās/brochevArevururA.mp3",
+   "params": {
+    "crop_s": 37.5,
+    "pitch_semitones": 2.92,
+    "reverb_rt": 0.59,
+    "snr_db": 21.6
+   }
+  },
+  {
+   "file": "1224833_aswinsainarain__Behāg.wav",
+   "source": "data/concert_audio/Behāg/1224833 aswinsainarain.mp3",
+   "params": {
+    "crop_s": 37.2,
+    "pitch_semitones": 0.55,
+    "stretch": 0.836,
+    "snr_db": 18.2,
+    "phone": {
+     "band": [
+      222,
+      5233
+     ],
+     "sr": 16000
+    }
+   }
+  },
+  {
+   "file": "Brihaspathe__Aṭāna.wav",
+   "source": "data/concert_audio/Aṭāna/Brihaspathe.mp3",
+   "params": {
+    "crop_s": 44.6,
+    "pitch_semitones": -2.71,
+    "snr_db": 18.8,
+    "phone": {
+     "band": [
+      292,
+      4056
+     ],
+     "sr": 8000
+    },
+    "agc_gain": 1.69
+   }
+  },
+  {
+   "file": "SuryaMoorthae__Saurāṣtraṁ.wav",
+   "source": "data/concert_audio/Saurāṣtraṁ/SuryaMoorthae.mp3",
+   "params": {
+    "crop_s": 21.4,
+    "pitch_semitones": -3.17,
+    "stretch": 0.963,
+    "snr_db": 10.6,
+    "agc_gain": 1.89
+   }
+  },
+  {
+   "file": "dhImnanA_ta_dhiranA_TILLANA__Hindōḷaṁ.wav",
+   "source": "data/concert_audio/Hindōḷaṁ/dhImnanA ta dhiranA TILLANA.mp3",
+   "params": {
+    "crop_s": 41.2,
+    "pitch_semitones": -2.23,
+    "stretch": 1.232,
+    "reverb_rt": 0.23,
+    "snr_db": 12.5,
+    "agc_gain": 1.7
+   }
+  },
+  {
+   "file": "Innamum__Bēgaḍa.wav",
+   "source": "data/concert_audio/Bēgaḍa/Innamum.mp3",
+   "params": {
+    "crop_s": 28.0,
+    "pitch_semitones": 4.23,
+    "stretch": 1.204,
+    "reverb_rt": 0.19,
+    "phone": {
+     "band": [
+      283,
+      5655
+     ],
+     "sr": 11025
+    }
+   }
+  },
+  {
+   "file": "sanyAsam__Sāvēri.wav",
+   "source": "data/concert_audio/Sāvēri/sanyAsam.mp3",
+   "params": {
+    "crop_s": 48.5,
+    "pitch_semitones": 3.52,
+    "stretch": 0.855,
+    "reverb_rt": 0.21,
+    "snr_db": 17.7
+   }
+  },
+  {
+   "file": "rAnidi_rAdu__Maṇirangu.wav",
+   "source": "data/concert_audio/Maṇirangu/rAnidi rAdu.mp3",
+   "params": {
+    "crop_s": 22.6,
+    "pitch_semitones": 6.0,
+    "reverb_rt": 0.5,
+    "snr_db": 13.4,
+    "phone": {
+     "band": [
+      276,
+      4813
+     ],
+     "sr": 16000
+    }
+   }
+  },
+  {
+   "file": "giripai_nelakona_rAmuni__Sahānā.wav",
+   "source": "data/concert_audio/Sahānā/giripai nelakona rAmuni.mp3",
+   "params": {
+    "crop_s": 50.7,
+    "pitch_semitones": -0.81,
+    "reverb_rt": 0.21,
+    "snr_db": 23.9,
+    "phone": {
+     "band": [
+      336,
+      7069
+     ],
+     "sr": 8000
+    },
+    "agc_gain": 1.73
+   }
+  },
+  {
+   "file": "EnODi_inda_kOpam__Kāpi.wav",
+   "source": "data/concert_audio/Kāpi/EnODi inda kOpam.mp3",
+   "params": {
+    "crop_s": 25.0,
+    "pitch_semitones": 1.37,
+    "stretch": 1.088,
+    "reverb_rt": 0.41,
+    "phone": {
+     "band": [
+      314,
+      5711
+     ],
+     "sr": 8000
+    },
+    "agc_gain": 2.13
+   }
+  },
+  {
+   "file": "malarin_mEvu_tiruvE__NA.wav",
+   "source": "data/concert_audio/Rāgamālika/malarin mEvu tiruvE.mp3",
+   "params": {
+    "crop_s": 46.0,
+    "pitch_semitones": -1.0,
+    "stretch": 1.024,
+    "snr_db": 24.3,
+    "phone": {
+     "band": [
+      306,
+      5065
+     ],
+     "sr": 11025
+    },
+    "agc_gain": 0.98
+   }
+  },
+  {
+   "file": "parulenna_mATa__Kāpi.wav",
+   "source": "data/concert_audio/Kāpi/parulenna mATa.mp3",
+   "params": {
+    "crop_s": 36.6,
+    "pitch_semitones": -3.55,
+    "stretch": 0.941
+   }
+  },
+  {
+   "file": "mAjAnaki__Kāṁbhōji.wav",
+   "source": "data/concert_audio/Kāṁbhōji/mAjAnaki.mp3",
+   "params": {
+    "crop_s": 50.4,
+    "pitch_semitones": -2.17,
+    "stretch": 0.92,
+    "reverb_rt": 0.19,
+    "phone": {
+     "band": [
+      341,
+      7099
+     ],
+     "sr": 11025
+    }
+   }
+  },
+  {
+   "file": "endagAni_vAnagAni__Nīlāṁbari.wav",
+   "source": "data/concert_audio/Nīlāṁbari/endagAni vAnagAni.mp3",
+   "params": {
+    "crop_s": 27.6,
+    "pitch_semitones": -0.02,
+    "stretch": 1.024,
+    "reverb_rt": 0.16,
+    "snr_db": 12.1,
+    "phone": {
+     "band": [
+      132,
+      5429
+     ],
+     "sr": 16000
+    }
+   }
+  },
+  {
+   "file": "mAavalla_gAdamma__Sāma.wav",
+   "source": "data/concert_audio/Sāma/mAavalla gAdamma.mp3",
+   "params": {
+    "crop_s": 41.5,
+    "pitch_semitones": -0.83,
+    "phone": {
+     "band": [
+      212,
+      5738
+     ],
+     "sr": 8000
+    },
+    "agc_gain": 1.28
+   }
+  },
+  {
+   "file": "Shobillu__Jaganmōhini.wav",
+   "source": "data/concert_audio/Jaganmōhini/Shobillu_r2.mp3",
+   "params": {
+    "crop_s": 40.2,
+    "pitch_semitones": 0.6,
+    "snr_db": 10.2,
+    "phone": {
+     "band": [
+      303,
+      4790
+     ],
+     "sr": 11025
+    }
+   }
+  },
+  {
+   "file": "bhavanuta__Mōhanaṁ.wav",
+   "source": "data/concert_audio/Mōhanaṁ/bhavanuta.mp3",
+   "params": {
+    "crop_s": 44.1,
+    "pitch_semitones": 0.0,
+    "stretch": 0.862,
+    "reverb_rt": 0.36,
+    "phone": {
+     "band": [
+      334,
+      4706
+     ],
+     "sr": 11025
+    }
+   }
+  },
+  {
+   "file": "Alapana__Kēdāragauḷa.wav",
+   "source": "data/concert_audio/Kēdāragauḷa/Alapana.mp3",
+   "params": {
+    "crop_s": 43.7,
+    "pitch_semitones": 3.94,
+    "stretch": 1.119,
+    "reverb_rt": 0.52,
+    "snr_db": 15.1
+   }
+  },
+  {
+   "file": "jaya_viTTala__Bilahari.wav",
+   "source": "data/concert_audio/Bilahari/jaya viTTala.mp3",
+   "params": {
+    "crop_s": 43.9,
+    "pitch_semitones": 5.6,
+    "snr_db": 20.3,
+    "phone": {
+     "band": [
+      241,
+      6357
+     ],
+     "sr": 11025
+    },
+    "agc_gain": 1.78
+   }
+  },
+  {
+   "file": "Gnanamosaga_Rada__Pūrvīkaḷyāṇi.wav",
+   "source": "data/concert_audio/Pūrvīkaḷyāṇi/Gnanamosaga Rada.mp3",
+   "params": {
+    "crop_s": 42.9,
+    "pitch_semitones": -4.68,
+    "stretch": 0.941,
+    "reverb_rt": 0.46,
+    "snr_db": 16.0,
+    "agc_gain": 1.08
+   }
+  },
+  {
+   "file": "Sri_Rama_Padama_I_guess__Amṛtavarṣiṇi.wav",
+   "source": "data/concert_audio/Amṛtavarṣiṇi/Sri Rama Padama I guess.mp3",
+   "params": {
+    "crop_s": 42.4,
+    "pitch_semitones": -0.26,
+    "stretch": 1.231,
+    "reverb_rt": 0.39
+   }
+  },
+  {
+   "file": "HMV_P_5866_G_C_-8-10152__Kuntalavarāḷi.wav",
+   "source": "data/concert_audio/Kuntalavarāḷi/HMV P 5866 G C -8-10152.mp3",
+   "params": {
+    "crop_s": 44.4,
+    "pitch_semitones": 5.49,
+    "stretch": 0.934
+   }
+  },
+  {
+   "file": "eTulA_brOtuvo__Cakravākaṁ.wav",
+   "source": "data/concert_audio/Cakravākaṁ/eTulA brOtuvo.mp3",
+   "params": {
+    "crop_s": 32.7,
+    "pitch_semitones": 0.73,
+    "snr_db": 17.7,
+    "phone": {
+     "band": [
+      345,
+      6755
+     ],
+     "sr": 8000
+    },
+    "agc_gain": 1.27
+   }
+  },
+  {
+   "file": "sogasugA__Śrīranjani.wav",
+   "source": "data/concert_audio/Śrīranjani/sogasugA.mp3",
+   "params": {
+    "crop_s": 33.9,
+    "pitch_semitones": 1.87,
+    "reverb_rt": 0.52,
+    "snr_db": 10.3,
+    "agc_gain": 0.97
+   }
+  },
+  {
+   "file": "srinivAsa_mAmpAhi__Bēgaḍa.wav",
+   "source": "data/concert_audio/Bēgaḍa/srinivAsa mAmpAhi.mp3",
+   "params": {
+    "crop_s": 45.5,
+    "pitch_semitones": -4.8,
+    "stretch": 1.013,
+    "snr_db": 24.4,
+    "agc_gain": 2.12
+   }
+  },
+  {
+   "file": "mukthAhAra_Slokam_Adi_Shankara__Ānandabhairavi.wav",
+   "source": "data/concert_audio/Ānandabhairavi/mukthAhAra Slokam Adi Shankara.mp3",
+   "params": {
+    "crop_s": 39.1,
+    "pitch_semitones": 3.07,
+    "stretch": 0.928,
+    "reverb_rt": 0.5,
+    "snr_db": 20.3,
+    "phone": {
+     "band": [
+      332,
+      5113
+     ],
+     "sr": 8000
+    }
+   }
+  },
+  {
+   "file": "shyAmasundarAnga__Dhanyāsi.wav",
+   "source": "data/concert_audio/Dhanyāsi/shyAmasundarAnga.mp3",
+   "params": {
+    "crop_s": 59.9,
+    "pitch_semitones": 3.46,
+    "stretch": 1.137,
+    "snr_db": 8.6,
+    "phone": {
+     "band": [
+      145,
+      7430
+     ],
+     "sr": 11025
+    },
+    "agc_gain": 1.73
+   }
+  },
+  {
+   "file": "Nadha_Vindhu_Kaladhi__Sencuruṭṭi.wav",
+   "source": "data/concert_audio/Sencuruṭṭi/Nadha Vindhu Kaladhi.mp3",
+   "params": {
+    "crop_s": 55.6,
+    "pitch_semitones": 4.21,
+    "stretch": 0.887,
+    "reverb_rt": 0.22,
+    "phone": {
+     "band": [
+      198,
+      4610
+     ],
+     "sr": 16000
+    }
+   }
+  },
+  {
+   "file": "Nadopasana__Bēgaḍa.wav",
+   "source": "data/concert_audio/Bēgaḍa/Nadopasana_r3.mp3",
+   "params": {
+    "crop_s": 44.4,
+    "pitch_semitones": 3.92,
+    "stretch": 0.839,
+    "snr_db": 10.4,
+    "agc_gain": 1.4
+   }
+  },
+  {
+   "file": "KVN_harihara_putram__Vasanta.wav",
+   "source": "data/concert_audio/Vasanta/KVN harihara putram.mp3",
+   "params": {
+    "crop_s": 50.2,
+    "pitch_semitones": -2.38,
+    "reverb_rt": 0.44,
+    "snr_db": 15.9,
+    "phone": {
+     "band": [
+      236,
+      7070
+     ],
+     "sr": 16000
+    }
+   }
+  },
+  {
+   "file": "pazhani_pazhani_enDru__Tōḍi.wav",
+   "source": "data/concert_audio/Tōḍi/pazhani pazhani enDru.mp3",
+   "params": {
+    "crop_s": 45.5,
+    "pitch_semitones": -1.59,
+    "stretch": 1.231,
+    "reverb_rt": 0.35,
+    "snr_db": 17.3
+   }
+  },
+  {
+   "file": "needu_charaNa_pankajamula__Kalyāṇi.wav",
+   "source": "data/concert_audio/Kalyāṇi/needu charaNa pankajamula.mp3",
+   "params": {
+    "crop_s": 50.5,
+    "pitch_semitones": 3.06,
+    "reverb_rt": 0.35,
+    "phone": {
+     "band": [
+      311,
+      7102
+     ],
+     "sr": 8000
+    }
+   }
+  },
+  {
+   "file": "pADukinDrEn__Kānaḍa.wav",
+   "source": "data/concert_audio/Kānaḍa/pADukinDrEn.mp3",
+   "params": {
+    "crop_s": 26.6,
+    "pitch_semitones": -0.7,
+    "stretch": 1.123,
+    "reverb_rt": 0.55,
+    "snr_db": 16.7,
+    "phone": {
+     "band": [
+      249,
+      6158
+     ],
+     "sr": 11025
+    }
+   }
+  },
+  {
+   "file": "tiruchendooran_SivakumAran__Sindhubhairavi.wav",
+   "source": "data/concert_audio/Sindhubhairavi/tiruchendooran SivakumAran.mp3",
+   "params": {
+    "crop_s": 30.2,
+    "pitch_semitones": 2.95,
+    "stretch": 0.82,
+    "reverb_rt": 0.18,
+    "agc_gain": 1.27
+   }
+  }
+ ]
+}
