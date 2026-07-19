@@ -55,3 +55,4 @@ data/karnatik_html/
 data/synth_suite/*.wav
 data/synth_train/**/*.wav
 data/coverhunter_data/wav16k/
+data/synth_control/
