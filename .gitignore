@@ -56,3 +56,6 @@ data/synth_suite/*.wav
 data/synth_train/**/*.wav
 data/coverhunter_data/wav16k/
 data/synth_control/
+
+# Moved to Colab GPU workflow 2026-07-19 (Deepti call) — kept on disk, untracked
+/prepare_coverhunter_data.py
