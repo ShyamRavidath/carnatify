@@ -59,3 +59,5 @@ data/synth_control/
 
 # Moved to Colab GPU workflow 2026-07-19 (Deepti call) — kept on disk, untracked
 /prepare_coverhunter_data.py
+/coverhunter_data.zip
+/colab_coverhunter.py
