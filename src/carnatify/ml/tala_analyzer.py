@@ -1,4 +1,15 @@
-"""Rule-based tala analysis from beat-tracking features.
+"""STATUS: CLOSED WORKSTREAM — tala detection was measured and abandoned.
+
+Measured: 16.5% accuracy against a 72% majority-class baseline. Worse than
+guessing the most common tala. The workstream is closed; tala is not a
+product surface today.
+
+Do not revive without a fundamentally different approach and a reason to
+believe it beats the majority baseline.
+
+Refs: handoff_state_and_progress.md section 4, HANDOFF_CLIP_ID.md section 5.
+
+Rule-based tala analysis from beat-tracking features.
 
 The pipeline estimates the duration of one tala cycle from the periodic
 structure of beat intervals, infers how many beats fall within a cycle, and
@@ -25,14 +36,18 @@ _BEATS_TO_TALA: dict[int, tuple[str, float]] = {
 
 
 class TalaAnalyzer:
-    """Estimate the metrical cycle of a clip and classify its tala."""
+    """
+    STATUS: CLOSED WORKSTREAM — 16.5% vs 72% majority baseline. See ARCHITECTURE.md.
+    Estimate the metrical cycle of a clip and classify its tala."""
 
     def __init__(self, min_beats_per_cycle: int = 3, max_beats_per_cycle: int = 12):
         self.min_beats_per_cycle = min_beats_per_cycle
         self.max_beats_per_cycle = max_beats_per_cycle
 
     def estimate_cycle_length(self, beat_times: NDArray[np.float32]) -> float:
-        """Estimate the duration of one tala cycle in seconds.
+        """
+        STATUS: CLOSED WORKSTREAM — 16.5% vs 72% majority baseline. See ARCHITECTURE.md.
+        Estimate the duration of one tala cycle in seconds.
 
         Beats are converted to a sequence of inter-beat intervals, and the
         dominant period of that sequence is found via autocorrelation. The lag
@@ -59,7 +74,9 @@ class TalaAnalyzer:
         return period * median_interval
 
     def _dominant_period(self, intervals: NDArray[np.float64]) -> int:
-        """Return the dominant period (in beats) of an interval sequence.
+        """
+        STATUS: CLOSED WORKSTREAM — 16.5% vs 72% majority baseline. See ARCHITECTURE.md.
+        Return the dominant period (in beats) of an interval sequence.
 
         Uses the autocorrelation of the mean-removed interval sequence, scanning
         lags within ``[min_beats_per_cycle, max_beats_per_cycle]`` for the peak.
@@ -95,7 +112,9 @@ class TalaAnalyzer:
     def estimate_beats_per_cycle(
         self, beat_times: NDArray[np.float32], cycle_duration: float
     ) -> int:
-        """Estimate beats per cycle from cycle duration and median beat interval."""
+        """
+        STATUS: CLOSED WORKSTREAM — 16.5% vs 72% majority baseline. See ARCHITECTURE.md.
+        Estimate beats per cycle from cycle duration and median beat interval."""
         beat_times = np.asarray(beat_times, dtype=np.float64)
         if beat_times.size < 2 or cycle_duration <= 0:
             return 0
@@ -111,7 +130,9 @@ class TalaAnalyzer:
     def classify_tala(
         self, beats_per_cycle: int, cycle_duration: float, tempo_bpm: float
     ) -> tuple[str, float]:
-        """Map a beat count to a tala name and confidence.
+        """
+        STATUS: CLOSED WORKSTREAM — 16.5% vs 72% majority baseline. See ARCHITECTURE.md.
+        Map a beat count to a tala name and confidence.
 
         ``cycle_duration`` and ``tempo_bpm`` are accepted for future refinement
         (e.g. penalising implausibly fast or slow cycles); the MVP classifies
@@ -123,7 +144,9 @@ class TalaAnalyzer:
         return "Unknown", 0.2
 
     def estimate_tempo(self, beat_times: NDArray[np.float32]) -> float:
-        """Estimate tempo in beats per minute from beat spacing."""
+        """
+        STATUS: CLOSED WORKSTREAM — 16.5% vs 72% majority baseline. See ARCHITECTURE.md.
+        Estimate tempo in beats per minute from beat spacing."""
         beat_times = np.asarray(beat_times, dtype=np.float64)
         if beat_times.size < 2:
             return 0.0
@@ -133,7 +156,9 @@ class TalaAnalyzer:
         return 60.0 / median_interval
 
     def analyze(self, features: AudioFeatures) -> TalaPrediction:
-        """Full pipeline: AudioFeatures -> TalaPrediction."""
+        """
+        STATUS: CLOSED WORKSTREAM — 16.5% vs 72% majority baseline. See ARCHITECTURE.md.
+        Full pipeline: AudioFeatures -> TalaPrediction."""
         beat_times = features.beat_times
         if beat_times is None or np.asarray(beat_times).size < 2:
             return TalaPrediction(tala_name="Unknown", confidence=0.0)

@@ -1,4 +1,21 @@
-"""High-level raga classification inference API.
+"""STATUS: LIVE (production) — handle with sign-off.
+
+This is the raga path currently serving the deployed HF Space via
+predict_raga(). The production artifact models/raga_classifier.pkl (~40.5%)
+must NOT be overwritten without Deepti's explicit sign-off.
+
+Honest accuracy picture: full-track raga is the strong case (72.8% top-1 /
+84.7% top-3, grouped CV, 18 ragas). Short wild clips are weak (9/43 top-1) —
+tonic estimation on wild audio is unsolved, and a confident composition match
+backfills raga from the registry better than this model predicts it.
+
+The RagaClassifier CNN path in this module is a documented dead end: it
+memorized per-recording and sat at chance on validation for 60 epochs. The
+binding constraint is tracks per raga, not epochs or architecture.
+
+Refs: handoff_state_and_progress.md sections 2.1 and 4, HANDOFF_RAGA_DATA.md.
+
+High-level raga classification inference API.
 
 Two entry points:
   - RagaClassifier  : PyTorch-based classifier (CNN or TDNN) using AudioFeatures
@@ -27,7 +44,9 @@ _MODELS = {"pcd": RagaTDNN, "contour": RagaCNN}
 
 
 class RagaClassifier:
-    """Loads a trained raga model and exposes a simple classification API.
+    """
+    STATUS: LIVE (production) — do not overwrite models/raga_classifier.pkl without sign-off. See ARCHITECTURE.md.
+    Loads a trained raga model and exposes a simple classification API.
 
     Parameters
     ----------
@@ -69,7 +88,9 @@ class RagaClassifier:
         self._feature_extractor: FeatureExtractor | None = None
 
     def classify(self, features: AudioFeatures) -> list[RagaPrediction]:
-        """Return top-K raga predictions for already-extracted features."""
+        """
+        STATUS: LIVE (production) — do not overwrite models/raga_classifier.pkl without sign-off. See ARCHITECTURE.md.
+        Return top-K raga predictions for already-extracted features."""
         return self.model.predict(
             features, top_k=self.top_k, label_encoder=self.label_encoder
         )
@@ -77,14 +98,18 @@ class RagaClassifier:
     def classify_audio(
         self, audio: NDArray[np.float32], sr: int
     ) -> list[RagaPrediction]:
-        """Extract features from raw audio, then classify."""
+        """
+        STATUS: LIVE (production) — do not overwrite models/raga_classifier.pkl without sign-off. See ARCHITECTURE.md.
+        Extract features from raw audio, then classify."""
         if self._feature_extractor is None:
             self._feature_extractor = FeatureExtractor()
         features = self._feature_extractor.extract(audio, sr)
         return self.classify(features)
 
     def is_uncertain(self, predictions: list[RagaPrediction]) -> bool:
-        """True if the top prediction falls below the confidence threshold."""
+        """
+        STATUS: LIVE (production) — do not overwrite models/raga_classifier.pkl without sign-off. See ARCHITECTURE.md.
+        True if the top prediction falls below the confidence threshold."""
         if not predictions:
             return True
         return predictions[0].confidence < self.confidence_threshold
@@ -98,7 +123,9 @@ _DEFAULT_ENCODER_PATH = MODELS_DIR / "raga_label_encoder.pkl"
 
 @lru_cache(maxsize=1)
 def _load_sklearn_model(model_path: str, encoder_path: str):
-    """Load and cache the joblib sklearn bundle (called once per path pair)."""
+    """
+    STATUS: LIVE (production) — do not overwrite models/raga_classifier.pkl without sign-off. See ARCHITECTURE.md.
+    Load and cache the joblib sklearn bundle (called once per path pair)."""
     import joblib  # optional dep; only needed for sklearn inference
 
     bundle = joblib.load(model_path)
@@ -113,7 +140,9 @@ def predict_raga(
     label_encoder_path: str | Path = _DEFAULT_ENCODER_PATH,
     top_k: int = TOP_K_RESULTS,
 ) -> list[RagaPrediction]:
-    """Return top-k raga predictions from a raw F0 contour.
+    """
+    STATUS: LIVE (production) — do not overwrite models/raga_classifier.pkl without sign-off. See ARCHITECTURE.md.
+    Return top-k raga predictions from a raw F0 contour.
 
     Uses the sklearn model produced by ``train_raga.py``, not the PyTorch
     models. Designed for direct use when only a pitch array is available

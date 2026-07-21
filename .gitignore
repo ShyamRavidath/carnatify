@@ -61,3 +61,8 @@ data/synth_control/
 /prepare_coverhunter_data.py
 /coverhunter_data.zip
 /colab_coverhunter.py
+
+# generated code graph (regenerable: graphify update .)
+graphify-out/
+# codex CLI local dir
+.codex/

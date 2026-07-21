@@ -1,4 +1,16 @@
-"""Pre-processing of normalized pitch contours before DTW matching.
+"""STATUS: GRAVEYARD — support code for the dead DTW melody path.
+
+Only consumer is carnatify.ml.composition_matcher (and its tests). The
+approach it serves scored 16-20% same-corpus and 0% on wild 60 s clips.
+
+Superseded by: identify_clip.py (repo root).
+
+Kept, not deleted: transitively load-bearing for the deployed legacy
+endpoints. See dtw_matcher.py for the full measurement record.
+
+Refs: HANDOFF_CLIP_ID.md section 5.
+
+Pre-processing of normalized pitch contours before DTW matching.
 
 Contours are sequences of cents relative to the tonic, with unvoiced frames
 encoded as 0 (see :mod:`carnatify.audio.feature_extractor`). Raw contours are
@@ -14,10 +26,14 @@ from numpy.typing import NDArray
 
 
 class ContourPreprocessor:
-    """Clean and reduce a pitch contour ahead of DTW alignment."""
+    """
+    STATUS: GRAVEYARD — support code for the dead DTW melody path. See module docstring / ARCHITECTURE.md.
+    Clean and reduce a pitch contour ahead of DTW alignment."""
 
     def remove_unvoiced(self, contour: NDArray[np.float32]) -> NDArray[np.float32]:
-        """Drop unvoiced frames (value == 0), compacting the voiced frames.
+        """
+        STATUS: GRAVEYARD — support code for the dead DTW melody path. See module docstring / ARCHITECTURE.md.
+        Drop unvoiced frames (value == 0), compacting the voiced frames.
 
         This discards the timing of silences entirely. Use it when silence
         position is irrelevant and only the sung pitch trajectory matters.
@@ -28,7 +44,9 @@ class ContourPreprocessor:
     def interpolate_unvoiced(
         self, contour: NDArray[np.float32]
     ) -> NDArray[np.float32]:
-        """Linearly interpolate across unvoiced gaps, preserving length.
+        """
+        STATUS: GRAVEYARD — support code for the dead DTW melody path. See module docstring / ARCHITECTURE.md.
+        Linearly interpolate across unvoiced gaps, preserving length.
 
         Leading/trailing unvoiced frames are filled with the nearest voiced
         value. Better than :meth:`remove_unvoiced` for short gaps where the
@@ -50,7 +68,9 @@ class ContourPreprocessor:
     def smooth(
         self, contour: NDArray[np.float32], window_size: int = 5
     ) -> NDArray[np.float32]:
-        """Moving-average smoothing to suppress noise and gamaka jitter.
+        """
+        STATUS: GRAVEYARD — support code for the dead DTW melody path. See module docstring / ARCHITECTURE.md.
+        Moving-average smoothing to suppress noise and gamaka jitter.
 
         A centered window is used; edges are handled with ``np.convolve`` in
         ``same`` mode after edge-padding so the output length is unchanged.
@@ -71,7 +91,9 @@ class ContourPreprocessor:
     def downsample(
         self, contour: NDArray[np.float32], factor: int = 4
     ) -> NDArray[np.float32]:
-        """Reduce resolution by average pooling over non-overlapping windows.
+        """
+        STATUS: GRAVEYARD — support code for the dead DTW melody path. See module docstring / ARCHITECTURE.md.
+        Reduce resolution by average pooling over non-overlapping windows.
 
         A trailing partial window (when the length is not divisible by
         ``factor``) is averaged on its own so no frames are dropped.
@@ -96,7 +118,9 @@ class ContourPreprocessor:
         smooth_window: int = 5,
         downsample_factor: int = 4,
     ) -> NDArray[np.float32]:
-        """Full pipeline: silence handling -> smoothing -> downsampling.
+        """
+        STATUS: GRAVEYARD — support code for the dead DTW melody path. See module docstring / ARCHITECTURE.md.
+        Full pipeline: silence handling -> smoothing -> downsampling.
 
         When ``remove_silence`` is True unvoiced frames are dropped outright;
         otherwise they are interpolated so length and timing are preserved.

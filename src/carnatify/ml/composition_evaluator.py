@@ -1,4 +1,14 @@
-"""Evaluation utilities for the composition matching pipeline."""
+"""STATUS: DEAD — zero references anywhere in the repo.
+
+Evaluation harness for the superseded DTW composition matcher. Nothing
+imports it (verified 2026-07-20 by import scan). The live evaluation harness
+is the folder-run mode of identify_clip.py, which scores against the wild
+clip set in ~/sung_tests and prints the SCORE block.
+
+Safe to delete; retained only so the deletion is a deliberate decision rather
+than an accident. See ARCHITECTURE.md.
+
+Evaluation utilities for the composition matching pipeline."""
 
 from __future__ import annotations
 
@@ -10,14 +20,18 @@ from carnatify.schemas import AudioFeatures
 
 
 class CompositionEvaluator:
-    """Benchmark the composition matcher on a labeled test set."""
+    """
+    STATUS: DEAD — zero references in the repo. See ARCHITECTURE.md.
+    Benchmark the composition matcher on a labeled test set."""
 
     def evaluate(
         self,
         matcher: CompositionMatcher,
         test_pairs: list[tuple[AudioFeatures, str]],
     ) -> dict:
-        """Compute top-1, top-3 accuracy and mean reciprocal rank.
+        """
+        STATUS: DEAD — zero references in the repo. See ARCHITECTURE.md.
+        Compute top-1, top-3 accuracy and mean reciprocal rank.
 
         Args:
             matcher: Configured CompositionMatcher with catalog loaded.
@@ -60,7 +74,9 @@ class CompositionEvaluator:
         feature_extractor: FeatureExtractor,
         matcher: CompositionMatcher,
     ) -> dict:
-        """Use one rendition as query, others as reference, report accuracy.
+        """
+        STATUS: DEAD — zero references in the repo. See ARCHITECTURE.md.
+        Use one rendition as query, others as reference, report accuracy.
 
         Groups Saraga tracks by composition name. For any composition with
         ≥2 renditions, uses the first as the reference and the rest as queries.

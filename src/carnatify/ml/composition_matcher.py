@@ -1,4 +1,22 @@
-"""Match a query pitch contour against the pre-computed reference catalog via DTW."""
+"""STATUS: LEGACY / SUPERSEDED — still live on old endpoints, do not extend.
+
+This is the L2/DTW contour matcher that shipped to production and measures
+~16% top-1. It is NOT the current composition matcher. The live matcher is
+identify_clip.py (repo root): ASR (whisper + demucs stems) into IDF-weighted
+lyric token matching, which is the only approach that has ever scored above
+chance on wild clips.
+
+Still imported by backend/main.py (two legacy endpoints, lines ~173 and ~366)
+and by app.py, and backend/build_space.sh copies the whole src/ tree into the
+deploy — so this code currently ships. Retire the legacy endpoints before
+deleting it.
+
+New work on composition matching belongs in identify_clip.py.
+
+Refs: handoff_state_and_progress.md sections 2.1 and 2.4, HANDOFF_CLIP_ID.md
+section 5.
+
+Match a query pitch contour against the pre-computed reference catalog via DTW."""
 
 from __future__ import annotations
 
@@ -18,7 +36,9 @@ from carnatify.schemas import AudioFeatures, CompositionMatch
 
 
 class CompositionMatcher:
-    """Match a query AudioFeatures against a reference catalog using DTW."""
+    """
+    STATUS: LEGACY (~16%) — superseded by identify_clip.py, still live on deployed legacy endpoints. Do not extend. See ARCHITECTURE.md.
+    Match a query AudioFeatures against a reference catalog using DTW."""
 
     def __init__(
         self,
@@ -35,7 +55,9 @@ class CompositionMatcher:
     def match(
         self, features: AudioFeatures, top_k: int = TOP_K_RESULTS
     ) -> list[CompositionMatch]:
-        """Return top-k compositions ranked by DTW similarity."""
+        """
+        STATUS: LEGACY (~16%) — superseded by identify_clip.py, still live on deployed legacy endpoints. Do not extend. See ARCHITECTURE.md.
+        Return top-k compositions ranked by DTW similarity."""
         query_contour = self.preprocessor.preprocess(features.normalized_pitch_contour)
         if query_contour.size == 0:
             return []
@@ -92,7 +114,9 @@ def _preprocess_contour(
     tonic: float,
     n_points: int = _N_POINTS,
 ) -> NDArray[np.float32] | None:
-    """Tonic-normalize, resample to n_points, and z-score a pitch contour.
+    """
+    STATUS: LEGACY (~16%) — superseded by identify_clip.py, still live on deployed legacy endpoints. Do not extend. See ARCHITECTURE.md.
+    Tonic-normalize, resample to n_points, and z-score a pitch contour.
 
     Returns None when the clip is too short or entirely silent.
     """
@@ -120,7 +144,9 @@ def build_catalog(
     catalog_npz: str | Path = _CATALOG_NPZ,
     catalog_meta_json: str | Path = _CATALOG_META_JSON,
 ) -> int:
-    """Build a flat composition catalog from an iterable of track tuples.
+    """
+    STATUS: LEGACY (~16%) — superseded by identify_clip.py, still live on deployed legacy endpoints. Do not extend. See ARCHITECTURE.md.
+    Build a flat composition catalog from an iterable of track tuples.
 
     Parameters
     ----------
@@ -164,7 +190,9 @@ def build_catalog(
 def _load_flat_catalog(
     npz_path: str, meta_path: str
 ) -> tuple[NDArray[np.float32], list[dict]]:
-    """Load and in-process-cache the flat catalog."""
+    """
+    STATUS: LEGACY (~16%) — superseded by identify_clip.py, still live on deployed legacy endpoints. Do not extend. See ARCHITECTURE.md.
+    Load and in-process-cache the flat catalog."""
     data = np.load(npz_path)
     contours = data["contours"].astype(np.float32)
     with open(meta_path) as f:
@@ -179,7 +207,9 @@ def match_composition(
     catalog_npz: str | Path = _CATALOG_NPZ,
     catalog_meta_json: str | Path = _CATALOG_META_JSON,
 ) -> list[tuple[str, float, str]]:
-    """Return the top-k compositions matching a pitch contour.
+    """
+    STATUS: LEGACY (~16%) — superseded by identify_clip.py, still live on deployed legacy endpoints. Do not extend. See ARCHITECTURE.md.
+    Return the top-k compositions matching a pitch contour.
 
     Similarity is the L2 distance on fixed-length tonic-normalized z-scored
     contours, mapped to ``(0, 1]`` via ``1 / (1 + dist / N_POINTS)``.

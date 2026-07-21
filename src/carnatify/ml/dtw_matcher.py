@@ -1,4 +1,20 @@
-"""Dynamic Time Warping between normalized pitch contours.
+"""STATUS: GRAVEYARD — measured dead on wild clips. Do not build on this.
+
+Measured: DTW over full contours scored 16-20% top-1 even on a friendly
+same-corpus eval; subsequence-DTW / melodic n-gram / Smith-Waterman variants
+all landed <=10%. On wild 60 s clips the whole melody-contour family is 0%.
+Structural variation between renditions and gamaka micro-variation defeat it.
+
+Superseded by: identify_clip.py (repo root) — the single source of matcher
+truth (ASR + lyric token matching).
+
+Kept, not deleted, because carnatify.ml.composition_matcher imports it and
+backend/main.py still serves two legacy endpoints through that path. Removing
+it breaks the currently-deployed HF Space.
+
+Refs: HANDOFF_CLIP_ID.md section 5, handoff_state_and_progress.md section 4.
+
+Dynamic Time Warping between normalized pitch contours.
 
 Carnatic compositions are performed at varying tempos across renditions, so a
 rigid frame-to-frame comparison (Euclidean) would penalise the same melody sung
@@ -17,7 +33,9 @@ from dtaidistance.subsequence.dtw import subsequence_alignment
 
 
 def _drop_unvoiced(contour: NDArray[np.float32]) -> NDArray[np.float64]:
-    """Return the voiced frames (value != 0) as a contiguous float64 array.
+    """
+    STATUS: GRAVEYARD — DTW melody matching, 0% on wild clips. Superseded by identify_clip.py. See module docstring / ARCHITECTURE.md.
+    Return the voiced frames (value != 0) as a contiguous float64 array.
 
     dtaidistance expects 1-D float64 input. Unvoiced frames carry no pitch
     information and would otherwise pull the alignment toward 0 cents.
@@ -27,7 +45,9 @@ def _drop_unvoiced(contour: NDArray[np.float32]) -> NDArray[np.float64]:
 
 
 class DTWMatcher:
-    """Compute DTW distance and similarity between two pitch contours."""
+    """
+    STATUS: GRAVEYARD — DTW melody matching, 0% on wild clips. Superseded by identify_clip.py. See module docstring / ARCHITECTURE.md.
+    Compute DTW distance and similarity between two pitch contours."""
 
     def __init__(
         self, window_size: int | None = None, step_pattern: str = "symmetric2"
@@ -38,7 +58,9 @@ class DTWMatcher:
     def compute_distance(
         self, query: NDArray[np.float32], reference: NDArray[np.float32]
     ) -> float:
-        """DTW distance between two contours after removing unvoiced frames.
+        """
+        STATUS: GRAVEYARD — DTW melody matching, 0% on wild clips. Superseded by identify_clip.py. See module docstring / ARCHITECTURE.md.
+        DTW distance between two contours after removing unvoiced frames.
 
         Returns ``inf`` when either contour has no voiced frames, since no
         meaningful alignment exists.
@@ -56,7 +78,9 @@ class DTWMatcher:
     def compute_similarity(
         self, query: NDArray[np.float32], reference: NDArray[np.float32]
     ) -> float:
-        """Convert DTW distance to a similarity in ``[0, 1]``.
+        """
+        STATUS: GRAVEYARD — DTW melody matching, 0% on wild clips. Superseded by identify_clip.py. See module docstring / ARCHITECTURE.md.
+        Convert DTW distance to a similarity in ``[0, 1]``.
 
         The raw distance grows with contour length, so it is normalized by the
         length of the warping path before mapping through
@@ -84,7 +108,9 @@ class DTWMatcher:
     def match_subsequence(
         self, query: NDArray[np.float32], reference: NDArray[np.float32]
     ) -> float:
-        """Best similarity of ``query`` against any subsequence of ``reference``.
+        """
+        STATUS: GRAVEYARD — DTW melody matching, 0% on wild clips. Superseded by identify_clip.py. See module docstring / ARCHITECTURE.md.
+        Best similarity of ``query`` against any subsequence of ``reference``.
 
         Uses subsequence DTW so a short query (e.g. a 30 s clip) can match the
         section of a longer reference rendition it was drawn from, without the

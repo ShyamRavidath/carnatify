@@ -1,4 +1,11 @@
-"""Evaluate tala detection against Saraga ground-truth annotations."""
+"""STATUS: CLOSED WORKSTREAM — see carnatify.ml.tala_analyzer.
+
+Validation utilities for the abandoned tala workstream (16.5% vs 72%
+majority baseline).
+
+Refs: handoff_state_and_progress.md section 4.
+
+Evaluate tala detection against Saraga ground-truth annotations."""
 
 from __future__ import annotations
 
@@ -47,7 +54,9 @@ _TALA_ALIASES: dict[str, set[str]] = {
 
 
 def normalize_tala_name(name: str) -> str:
-    """Reduce a tala name to its canonical key (lowercase canonical form).
+    """
+    STATUS: CLOSED WORKSTREAM — tala detection abandoned. See ARCHITECTURE.md.
+    Reduce a tala name to its canonical key (lowercase canonical form).
 
     Unrecognised names are returned lowercased and stripped so they can still be
     compared by equality, but they will not match any canonical tala.
@@ -69,18 +78,24 @@ def normalize_tala_name(name: str) -> str:
 
 
 class TalaValidator:
-    """Compare tala predictions against Saraga ground truth."""
+    """
+    STATUS: CLOSED WORKSTREAM — tala detection abandoned. See ARCHITECTURE.md.
+    Compare tala predictions against Saraga ground truth."""
 
     def validate_single(
         self, predicted: TalaPrediction, ground_truth_tala: str
     ) -> bool:
-        """Return True when the predicted tala matches the ground truth name."""
+        """
+        STATUS: CLOSED WORKSTREAM — tala detection abandoned. See ARCHITECTURE.md.
+        Return True when the predicted tala matches the ground truth name."""
         return normalize_tala_name(predicted.tala_name) == normalize_tala_name(
             ground_truth_tala
         )
 
     def _ground_truth_tala(self, meta: dict[str, Any]) -> str | None:
-        """Extract a tala name string from a Saraga track's ``taala`` metadata."""
+        """
+        STATUS: CLOSED WORKSTREAM — tala detection abandoned. See ARCHITECTURE.md.
+        Extract a tala name string from a Saraga track's ``taala`` metadata."""
         taala = meta.get("taala")
         if not taala:
             return None
@@ -99,7 +114,9 @@ class TalaValidator:
     def validate_against_saraga(
         self, saraga_loader: Any, tala_detector: Any
     ) -> dict[str, Any]:
-        """Run detection on every annotated Saraga track and score it.
+        """
+        STATUS: CLOSED WORKSTREAM — tala detection abandoned. See ARCHITECTURE.md.
+        Run detection on every annotated Saraga track and score it.
 
         A track is included only when it carries a ground-truth ``taala`` label.
         Returns aggregate accuracy plus per-track results for inspection.
