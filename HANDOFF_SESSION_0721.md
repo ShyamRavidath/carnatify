@@ -1,11 +1,15 @@
 # HANDOFF_SESSION_0721 — honest re-baseline, doc package, and the Fable↔Codex loop
 
-Written 2026-07-21. Audience: **Fable** (the incoming Claude agent), who will
-work alongside **Codex (GPT-5.6)** on this project. Predecessors, read cold in
-this order: HANDOFF_SESSION_0719B.md (CoverHunter Colab), HANDOFF_SESSION_0719.md,
-HANDOFF_SESSION_0718.md, then the consolidated `handoff_state_and_progress.md`
-+ `handoff_vision_and_architecture.md`. This file covers only what changed and
-how the two-agent collaboration works.
+Written 2026-07-21, **updated same day after the Codex review completed**.
+Audience: **Fable** (the incoming Claude agent), working alongside **Codex
+(GPT-5.6)**. Predecessors, read cold in this order: HANDOFF_SESSION_0719B.md
+(CoverHunter Colab), HANDOFF_SESSION_0719.md, HANDOFF_SESSION_0718.md, then the
+consolidated `handoff_state_and_progress.md` + `handoff_vision_and_architecture.md`.
+This file covers what changed and how the two-agent collaboration works.
+
+**IF YOU ARE RESUMING MID-STREAM: the review is DONE and vetted; the active
+task is implementing Phase 0. Jump to §0.5.** Read §0 for the protocol, but do
+not re-run the review — it already happened.
 
 ---
 
@@ -15,13 +19,12 @@ You and Codex are two separate CLIs on the same repo. **You cannot see each
 other's chat, ever.** You collaborate only through files on disk + git. That
 is the entire mechanism; internalize it.
 
-**Step 0, before anything else: read `CODEX_REVIEW.md`** (repo root). Codex was
-pointed at `REVIEW_BRIEF.md` and asked for (1) a code review of
-`identify_clip.py`, (2) whether the 80% top-1 goal is reachable vs a
-precision-at-coverage reframe, (3) ideas on the ASR bottleneck and the matcher.
-Its findings should be in that file. **If `CODEX_REVIEW.md` does not exist yet,
-ask Deepti to have Codex write it** — do not proceed on a guess about what
-Codex said, and do not invent its findings.
+**The shared channel is `AGENT_LOG.md`** (append-only; roles are asymmetric —
+Codex reviews/proposes read-only on code, Fable is the only one that edits
+code / runs eval / commits). Codex's full review is in **`CODEX_REVIEW.md`**
+(31 KB, already written); Fable's vetting of it is the 2026-07-21 19:30 entry
+in `AGENT_LOG.md`. The review is complete — see §0.5 for the outcome. Do not
+re-run it or invent findings; everything is on disk.
 
 **How to evaluate Codex's proposals (this is your core job, not rubber-stamping):**
 - Check every proposal against the **graveyard table in REVIEW_BRIEF.md §4**
@@ -36,8 +39,8 @@ Codex said, and do not invent its findings.
   green-light nothing — this rule was bought expensively (see §4 below).
 
 **The loop:** Codex writes to disk → you read, evaluate, implement the ideas
-that survive → you write decisions/results back to a shared file (suggest
-`DECISION_LOG.md`) → Codex reads that on its next pass. Keep the loop on disk.
+that survive → you write decisions/results back to `AGENT_LOG.md` → Codex reads
+that on its next pass. Keep the loop on disk.
 When you implement something, run the eval and quote the SCORE block in the
 log so Codex sees real evidence, not claims.
 
@@ -45,6 +48,67 @@ Deepti wants you two working in harmony. Harmony here = disciplined file-based
 exchange + the wild-eval as the shared source of truth. She is the domain
 authority (Carnatic musician) and the human in the loop for anything musical,
 any spend, any deploy, any push.
+
+## 0.5 REVIEW OUTCOME + PHASE 0 (the active task, greenlit by Deepti)
+
+The Codex review is complete, and Fable verified every code-level claim against
+source (line numbers in the `AGENT_LOG.md` 19:30 entry — all confirmed). It is
+graveyard-clean: no dead approach resurrected, no OPEN_DECISIONS item touched.
+One recorded nuance: the graveyard's "retry ONLY via ctranslate2" applies to
+the **vasista22 Whisper finetunes**; Codex's native-**ONNX** route for
+IndicConformer is a different model family and does not conflict.
+
+**Verified defects (in `identify_clip.py`, 646 lines — REVIEW_BRIEF §8's
+"~1,500" is stale; fix that):**
+- **P0 `fold()` erases native scripts** (`identify_clip.py:80-83`): keeps only
+  ASCII after NFKD, and `_whisper_multi` folds every hypothesis *before*
+  longest-wins (line 362), so forced `ta`/`te`/`hi` decodes reduce to
+  whitespace before matching. **Worst single defect — has been silently
+  suppressing the exact Indic-script transcripts the ASR work aims to recover.**
+- **P0 backend policy divergence**: `backend/clip_identify.py` lacks the
+  `_max_token_run` loop gate and the `hi` language — the staged `/identify`
+  runs a *different* policy than the scoreboard (`rama rama rama rama` gets
+  "high" through the backend).
+- **P1 many-to-one scoring exploit** (`_best_map` line 247, `_score_ktoks`
+  line 290): no injectivity constraint + per-token repetition bonus → score
+  unbounded, `rama rama` scores 1.451, thresholds are not probability-like.
+- **P1 longest-transcript-wins** (line 362): discards language, segments,
+  likelihoods, competing hypotheses.
+- **P1 cache keyed by basename only** (lines 370-399): no audio hash, no
+  model/config identity, non-atomic `write_text` → poisonable.
+- **P2**: `--no-raga` prints fake `0/85` (line 638, the display bug already
+  known); silent `except Exception: pass` (line 365); `workers=-1` unsafe on a
+  2-vCPU Space (line 256).
+
+**Strategic reframe — ACCEPTED:** primary metric becomes **precision at
+coverage** (target ≥85% precision among *answered* clips), **always
+co-published with overall top-1/top-5 + OOC** so abstention can't game it.
+Motivating evidence: the current "high confidence" tier is only 8/16 correct —
+the labels are not confidence. This must become the standing scoreboard format
+(write it into `METRIC_CONTRACT.md` — does not exist yet).
+
+**Phase 0 = correctness/observability, greenlit. Deepti's guardrails:**
+1. **One-change-one-eval discipline applies (HANDOFF_0718 §6).** Three items
+   change matcher/policy behavior and must each be evaluated *separately*
+   against the 106 set, with the **original curated 36 clips as the regression
+   guard** (they reproduce 8/36 — must not drop): (a) `fold()` Unicode
+   preserve + transliterate, (b) one-to-one / bounded scoring, (c) the single
+   shared policy function (backend adopts root's gate + `hi`). The rest
+   (`--no-raga` honesty, silent-except, `workers`, regression tests incl.
+   `rama rama`) are pure hygiene — apply freely, no eval needed. **Do not
+   bundle all six into one commit — attribution is lost.**
+2. **The cache re-version is the expensive step and collides with
+   OPEN_DECISIONS #8.** Versioning the key invalidates the cache → forces a
+   full 106-clip re-ASR (~6 h). First check whether the `fold()` fix even needs
+   re-ASR (does the cache store *raw* whisper output, or already-ASCII-stripped
+   text? if post-strip, the native script is already gone and re-ASR is
+   forced). Use that same re-ASR to **strip the synth/control entries** (#8) so
+   the versioned cache ships clean. Run it `caffeinate -dims -w <pid>`, lid open.
+3. **Backend refactor is local only** — deploy stays Deepti-run (OPEN_DECISIONS #2).
+
+Phase ordering after Phase 0 (Codex's, accepted): matcher alignment → ASR
+experiments (VAD segments, IndicConformer via native ONNX, catalog-constrained
+CTC) → calibration. All zero-cost, local/Colab. Detail in `CODEX_REVIEW.md`.
 
 ## 1. Goal (unchanged)
 
@@ -93,11 +157,18 @@ review and may be the most important strategic decision on the table.
 
 ## 3. Current state of the code
 
-`main @ 9f3161f`, **6 commits ahead of origin, NOT pushed** (pushes are
-Deepti-run — OPEN_DECISIONS #1). Live matcher is `identify_clip.py` (repo root,
-standalone, imports nothing from `src/carnatify/`). Everything composition- or
-tala-related in `src/carnatify/ml/` is legacy or graveyard — trust the STATUS
-banners.
+`main @ b5b400a` (+ this handoff update), **8+ commits ahead of origin, NOT
+pushed** (pushes are Deepti-run — OPEN_DECISIONS #1). No Phase 0 code edits made
+yet as of this writing — Fable had not started implementing. Live matcher is
+`identify_clip.py` (repo root, standalone, imports nothing from
+`src/carnatify/`; 646 lines). Everything composition- or tala-related in
+`src/carnatify/ml/` is legacy or graveyard — trust the STATUS banners.
+
+Review/loop artifacts on disk (all committed except where noted): `CODEX_REVIEW.md`
+(31 KB, Codex's full review), `AGENT_LOG.md` (the shared channel), and the doc
+package (`REVIEW_BRIEF`, `ARCHITECTURE`, `OPEN_DECISIONS`, `COVERHUNTER_RESCORE`,
+`HANDOFF_VERFIER`). `METRIC_CONTRACT.md` is the one accepted artifact NOT yet
+written — Phase 0 should create it.
 
 **Intentionally uncommitted, on disk (do NOT blind-commit):**
 - `data/whisper_transcripts_turbo.json` / `_stems.json` — hold the valuable
