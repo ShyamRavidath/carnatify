@@ -440,7 +440,8 @@ async def identify(request: Request, file: UploadFile = File(...), fast: bool = 
                 v16, _ = librosa.load(vocal_path, sr=16000, mono=True)
                 v16 = v16.astype(np.float32)
                 variants["stem"] = await loop.run_in_executor(
-                    None, lambda: clip_identify.transcribe_multi(v16))
+                    None, lambda: clip_identify.transcribe_multi(
+                        v16, langs=(None, "ta", "te")))
             except Exception as exc:
                 logger.warning("Stem ASR pass failed, continuing with original-only: %s", exc)
 

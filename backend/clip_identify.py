@@ -30,14 +30,14 @@ _HERE = Path(__file__).resolve().parent
 _FEEDBACK_DIR = _HERE / "data" / "feedback"
 _FEEDBACK_REPO = os.environ.get("FEEDBACK_REPO", "")  # e.g. "deepti/carnatify-feedback"
 
+# bound matcher CPU before identify_clip's cdist runs (2-vCPU Space; -1
+# would oversubscribe under concurrent requests)
+os.environ.setdefault("CARNATIFY_MATCH_WORKERS", "2")
+
 from identify_clip import (  # noqa: E402 — copied in by build_space.sh
-    HALLUC,
-    MIN_ANSWER_SCORE,
-    MIN_TRANSCRIPT_CHARS,
-    VARIANT_CLOSE,
+    assess_variants,
     fold,
     load_targets,
-    match_lyrics,
 )
 
 # ── matcher targets (registry) ──────────────────────────────────────────────
@@ -79,7 +79,7 @@ def _load_asr():
     logger.info("ASR engine: %s", _asr_engine)
 
 
-def transcribe_multi(audio_16k, langs=(None, "ta", "te")) -> str:
+def transcribe_multi(audio_16k, langs=(None, "ta", "te", "hi")) -> str:
     """Longest folded transcript across language passes (identify_clip rule)."""
     with _asr_lock:  # whisper models are not thread-safe; requests queue here
         _load_asr()
@@ -106,54 +106,33 @@ def transcribe_multi(audio_16k, langs=(None, "ta", "te")) -> str:
 def identify_from_variants(variants: dict[str, str]) -> dict:
     """variants: name -> raw transcript; 'stem*' names are vocal-stem passes.
 
-    Mirrors identify_clip.identify()'s selection: best usable variant by
-    match score, prefer stem within VARIANT_CLOSE, hallucination stoplist,
-    repetition >= 2 usability gate, abstain below MIN_ANSWER_SCORE.
+    Thin wrapper over identify_clip.assess_variants() — the ONE policy
+    implementation shared with the CLI evaluation. This function only maps
+    the policy result onto the API response shape and adds user messages;
+    it must never re-implement gates, selection, or confidence.
     """
-    entries = get_entries()
-    cands = []
-    for name, txt in variants.items():
-        txt = HALLUC.sub(" ", txt or "")
-        if len(txt.replace(" ", "")) < MIN_TRANSCRIPT_CHARS:
-            continue
-        comps, max_rep = match_lyrics(txt, entries, None)
-        if not comps or max_rep < 2:
-            continue
-        cands.append((comps[0]["score"], name.startswith("stem"), name, txt,
-                      comps))
-    pick = None
-    if cands:
-        best = max(c[0] for c in cands)
-        strong = [c for c in cands if c[0] >= best - VARIANT_CLOSE]
-        vocal = [c for c in strong if c[1]]
-        pick = max(vocal or strong, key=lambda c: c[0])
-
-    if not pick or pick[0] < MIN_ANSWER_SCORE:
+    res = assess_variants(variants, get_entries(), None)
+    conf = res["composition_confidence"]
+    if conf == "none":
         return {
             "compositions": [],
             "composition_confidence": "none",
             "clip_type": "no_lyrics",
             "asr_variant": None,
-            "transcript": (variants.get("orig") or "")[:200],
+            "transcript": res["transcript"],
             "message": ("Couldn't hear clear lyrics — this may be alapana, "
                         "instrumental, or too noisy. Raga guess below is "
                         "low-confidence. Try a section with singing, ideally "
                         "the pallavi."),
         }
-    top, _, vname, txt, comps = pick
-    margin = top - (comps[1]["score"] if len(comps) > 1 else 0.0)
-    if top >= 0.65 and margin >= 0.15:
-        conf = "high"
-    elif top >= 0.5:
-        conf = "medium"
-    else:
-        conf = "low"
     return {
-        "compositions": comps,          # [{title, score, ragas}]
+        "compositions": res["compositions"],   # [{title, score, ragas}]
         "composition_confidence": conf,
         "clip_type": "sung",
-        "asr_variant": vname,
-        "transcript": txt[:200],
+        "asr_variant": res["asr_variant"],
+        "transcript": res["transcript"],
+        "raga_from_catalog": res.get("raga_from_catalog"),
+        "raga_confidence": res["raga_confidence"],
         "message": None if conf != "low" else (
             "Low confidence — if none of these look right, try a cleaner "
             "clip of the pallavi."),

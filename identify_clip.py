@@ -579,21 +579,21 @@ def raga_top5(path: Path):
 
 # -------------------------------------------------------------------- driver
 
-def identify(path: Path, targets, lyr, cache, scache,
-             want_raga: bool = True, fast: bool = False) -> dict:
-    variants = {'turbo': transcribe(path, cache)}
-    if not fast:
-        try:
-            variants['stem_turbo'] = transcribe_stem(path, scache)
-        except Exception as e:
-            print(f'  (stem pass failed: {e})', file=sys.stderr)
+def assess_variants(variants: dict[str, str], targets, lyr=None) -> dict:
+    """THE composition policy — single source of truth for CLI and server.
+
+    variants: name -> transcript (matching view); names starting with 'stem'
+    are vocal-stem passes. Applies sanitization, usability gates (min length,
+    hallucination stoplist, decode-loop run), per-variant matching, variant
+    selection (best score, prefer stem within VARIANT_CLOSE), confidence
+    tiers, and catalog raga backfill. Both identify() and the backend's
+    identify_from_variants() MUST call this; never fork the policy.
+    """
     result = {
-        'file': path.name,
         'transcript': '',
         'asr_variant': None,
         'compositions': [],
         'composition_confidence': 'none',
-        'ragas': [],
         'raga_confidence': 'low',
         'clip_type': 'no usable lyrics (alapana / instrumental / ASR miss)',
     }
@@ -609,7 +609,7 @@ def identify(path: Path, targets, lyr, cache, scache,
         comps, max_rep = match_lyrics(txt, targets, lyr)
         if not comps or max_rep < 2:
             continue
-        cands.append((comps[0]['score'], name == 'stem_turbo', name,
+        cands.append((comps[0]['score'], name.startswith('stem'), name,
                       txt, comps))
     pick = None
     if cands:
@@ -637,7 +637,21 @@ def identify(path: Path, targets, lyr, cache, scache,
             result['raga_from_catalog'] = comps[0]['ragas']
             result['raga_confidence'] = 'medium (from composition match)'
     else:
-        result['transcript'] = (variants.get('turbo') or '')[:200]
+        result['transcript'] = (variants.get('turbo')
+                                or variants.get('orig') or '')[:200]
+    return result
+
+
+def identify(path: Path, targets, lyr, cache, scache,
+             want_raga: bool = True, fast: bool = False) -> dict:
+    variants = {'turbo': transcribe(path, cache)}
+    if not fast:
+        try:
+            variants['stem_turbo'] = transcribe_stem(path, scache)
+        except Exception as e:
+            print(f'  (stem pass failed: {e})', file=sys.stderr)
+    result = {'file': path.name, 'ragas': [],
+              **assess_variants(variants, targets, lyr)}
     if want_raga:
         ragas, err = raga_top5(path)
         result['ragas'] = ragas
