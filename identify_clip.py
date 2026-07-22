@@ -37,10 +37,13 @@ Filenames "<title>__<raga>.<ext>" get automatic truth scoring
 """
 from __future__ import annotations
 
+import hashlib
 import json
+import os
 import re
 import sqlite3
 import sys
+import tempfile
 import unicodedata
 from collections import Counter
 from pathlib import Path
@@ -281,50 +284,102 @@ def _vocab_idf(entries: list[dict]):
     return vocab, idf
 
 
-def _best_map(entries: list[dict], tl_unique: list[str]) -> dict:
-    """Best fuzz.ratio (and matching transcript token) per catalog token.
+def _best_map(entries: list[dict], tl_unique: list[str],
+              topk: int = 3) -> dict:
+    """Top-k (fuzz.ratio, transcript token) candidates per catalog token.
 
     One vectorized cdist over the catalog token vocabulary replaces the old
     per-variant inner loop — required now that lyric lines add ~100k
-    pseudo-variants.
+    pseudo-variants. k>1 gives the injective scorer fallback evidence when
+    a transcript token is already claimed by a rarer catalog token.
     """
     from rapidfuzz import fuzz, process
     vocab, _ = _vocab_idf(entries)
-    mat = process.cdist(vocab, tl_unique, scorer=fuzz.ratio, workers=-1)
-    arg = mat.argmax(axis=1)
-    val = mat.max(axis=1)
-    return {v: (float(val[i]), tl_unique[int(arg[i])])
+    # server path must bound this (2-vCPU Space): CARNATIFY_MATCH_WORKERS=2
+    workers = int(os.environ.get('CARNATIFY_MATCH_WORKERS', '-1'))
+    mat = process.cdist(vocab, tl_unique, scorer=fuzz.ratio, workers=workers)
+    k = min(topk, mat.shape[1])
+    idx = np.argpartition(-mat, k - 1, axis=1)[:, :k]
+    return {v: sorted(((float(mat[i, j]), tl_unique[int(j)])
+                       for j in idx[i]), reverse=True)
             for i, v in enumerate(vocab)}
 
 
 def _score_ktoks(vt: dict, best: dict, tfreq: Counter,
-                 tl_joined: str, idf: dict) -> float:
+                 tl_joined: str, idf: dict,
+                 base: dict | None = None,
+                 bparts: dict | None = None) -> float:
     """IDF-weighted token coverage + repetition bonus + order bonus.
 
     Same shape as the pre-0713 lyr_score, fed from the _best_map lookup
-    instead of an inner fuzz loop, with two changes:
+    instead of an inner fuzz loop, with three changes:
     - coverage is IDF-weighted (rare sahitya words count, ubiquitous
       devotional words barely do) — required at 8.7k-title catalog scale;
-    - order bonus gated on >=1 token hit (pure speed gate).
+    - order bonus gated on >=1 token hit (pure speed gate);
+    - one-to-one evidence: each transcript token occurrence satisfies at
+      most one catalog token (highest-ratio catalog tokens claim first,
+      lower-ranked ones fall back to unclaimed candidates), so 'rama rama'
+      cannot light up every rama-shaped token of an entry. Legacy
+      many-to-one behavior: CARNATIFY_LEGACY_SCORING=1.
     """
     ktoks = vt['ktoks']
     if not ktoks:
         return 0.0
+    legacy = bool(os.environ.get('CARNATIFY_LEGACY_SCORING'))
     raw_hits = 0.0
     w_hits = 0.0
-    w_total = 0.0
+    w_total = float(sum(idf.get(kt, 1.0) for kt in ktoks))
     freq_bonus = 0.0
     hit_ratios = []
-    for kt in ktoks:
+    if legacy:
+        assigned = [(kt, *best.get(kt, [(0.0, None)])[0]) for kt in ktoks]
+    else:
+        # strongest candidate first; each transcript occurrence is usable
+        # once, and a joined bigram spends BOTH its parts' occurrences —
+        # the same audio span never counts as two pieces of evidence
+        order_i = sorted(range(len(ktoks)),
+                         key=lambda i: -best.get(ktoks[i],
+                                                 [(0.0, None)])[0][0])
+        avail = dict(base if base is not None else tfreq)
+        assigned = []
+        for i in order_i:
+            kt = ktoks[i]
+            b, btok = 0.0, None
+            for cb, ct in best.get(kt, ()):
+                if cb < 65:
+                    break
+                parts = bparts.get(ct) if bparts else None
+                if parts:
+                    a1, a2 = parts
+                    if avail.get(a1, 0) > 0 and (a1 != a2
+                                                 or avail.get(a1, 0) > 1) \
+                            and avail.get(a2, 0) > 0:
+                        b, btok = cb, ct
+                        avail[a1] -= 1
+                        avail[a2] -= 1
+                        break
+                elif avail.get(ct, 0) > 0:
+                    b, btok = cb, ct
+                    avail[ct] -= 1
+                    break
+            assigned.append((kt, b, btok))
+    bonus_used = set()
+    for kt, b, btok in assigned:
         w = idf.get(kt, 1.0)
-        w_total += w
-        b, btok = best.get(kt, (0.0, None))
+        # matched information is bounded by BOTH sides: a generic transcript
+        # token (rama, siva...) must not inherit a rare catalog token's IDF
+        # through a fuzzy hit (unseen transcript strings keep the kt weight)
+        if not legacy and btok is not None and btok in idf:
+            w = min(w, idf[btok])
         if b >= 75:
             raw_hits += 1
             w_hits += w
             hit_ratios.append(b)
-            if kt in vt['kt_title']:
+            # repetition bonus once per distinct transcript token — a title
+            # with several rama-shaped tokens must not stack it
+            if kt in vt['kt_title'] and (legacy or btok not in bonus_used):
                 freq_bonus += min(tfreq.get(btok, 1), 6) * 0.05
+                bonus_used.add(btok)
         elif b >= 65:
             raw_hits += 0.5
             w_hits += 0.5 * w
@@ -358,12 +413,17 @@ def match_lyrics(transcript: str, entries: list[dict],
     # joined adjacent word pairs recover whisper's syllable splits; they
     # inherit the min frequency of their parts for the repetition bonus
     raw = fold(transcript).split()
+    # occurrence pool for one-to-one evidence: soft unigram counts of every
+    # raw word (incl. <4-char words that the token filter drops)
+    base = Counter(soft(w) for w in raw if w)
     big = Counter()
+    bparts = {}
     for a, b in zip(raw, raw[1:]):
         j = soft(a + b)
         if len(j) >= 6:
             big[j] = max(big[j], min(tfreq.get(soft(a), 1),
                                      tfreq.get(soft(b), 1)))
+            bparts[j] = (soft(a), soft(b))
     pool = dict(big)
     pool.update(tfreq)
     tfreq_ext = Counter(pool)
@@ -371,10 +431,12 @@ def match_lyrics(transcript: str, entries: list[dict],
     best = _best_map(entries, list(tfreq_ext))
     scored = []
     for e in entries:
-        s = max(_score_ktoks(vt, best, tfreq_ext, tl_joined, idf)
+        s = max(_score_ktoks(vt, best, tfreq_ext, tl_joined, idf,
+                             base, bparts)
                 for vt in e['vtoks'])
         for vt in e['ltoks']:
-            s2 = _score_ktoks(vt, best, tfreq_ext, tl_joined, idf)
+            s2 = _score_ktoks(vt, best, tfreq_ext, tl_joined, idf,
+                              base, bparts)
             if s2 > s:
                 s = s2
         scored.append((s, e))
