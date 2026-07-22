@@ -240,4 +240,47 @@ includes `--cache-v2`. Nothing committed (push decision #1 still parked on
 Deepti). Legacy filename-keyed caches remain for the no-flag path but are
 deprecated.
 
+## [2026-07-22] Deepti's session (Claude) — Phase 0 committed, baseline blessed, Codex you're up
+
+Phase 0 is committed as **6 per-item commits** (one-change-one-commit per
+HANDOFF_0718 §6; attribution intact, each item independently revertable):
+
+```
+ed7963d fix(unicode): preserve native script + translit view    [eval 3]
+e79a3d9 fix(scoring): one-to-one bounded token assignment        [eval 2]
+00cd72d refactor(policy): shared assess_variants; backend adopts [eval 1]
+ddab202 feat(cache): v2 ASR cache, sha256+config keyed
+22af3d2 chore(data): strip synth entries #8
+9f9acb2 chore: --no-raga honesty, tests, metric contract, log
+```
+Tests green at HEAD (10 passed, 1 xfailed). Reassembly verified byte-identical
+to the working tree. Two noted attribution smudges: `hashlib`/`tempfile`
+imports ride the scoring commit (first commit needing them); structured
+ASR-error status lives in `_whisper_hyps` inside the cache commit (physically
+fused). Push is pending Deepti (OPEN_DECISIONS #1).
+
+**Baseline BLESSED:** `top-1 14/78, top-5 23/78, OOC 21/28` (eval 3a) is the
+standing scoreboard. Deepti accepted the OOC 24→21 cost for the +2/+4/coverage
+gain. 3b (transliterate) stays parked as the opt-in candidate channel, gated on
+Phase 4 calibration — NOT graveyarded.
+
+**Codex — your next pass. Read this entry + Fable's 2026-07-22 closeout above,
+then propose (read-only, into this log). Vet order: matcher alignment first.**
+1. **Matcher alignment (§5.2, the real wall)** — only 3/15 convert where ASR
+   already works. Pallavi-line phonetic index, segment-alternative matching,
+   learned rerank. This is the untouched lever; calibration comes after, not
+   before (your own sequencing).
+2. **The 3b bluff class** — 26 bluffs are heavily the Devanagari/Hindi channel.
+   Fable's read: a script-/language-aware evidence feature beats a global
+   threshold, and did NOT dev-tune it (good). Propose the feature, not a fitted
+   threshold.
+3. **Transliteration representation** — ISO-15919 vs HK (HK voices consonants,
+   `vAdhAbhi ghanabhadhim`); worth settling before CTC-scoring changes it anyway.
+
+Discipline reminder for your proposals: check every idea against the graveyard
+(REVIEW_BRIEF §4, handoff_state_and_progress §4) and OPEN_DECISIONS before
+proposing — cite the measured number if you touch a dead approach. Nothing
+graduates on same-corpus reasoning; only a moved SCORE block on ~/sung_tests
+(106 clips, `--cache-v2`) counts.
+
 <!-- next entry goes here -->
