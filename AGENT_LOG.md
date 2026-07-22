@@ -112,4 +112,132 @@ Session handoff HANDOFF_SESSION_0721.md updated (§0.5) to capture all of this.
 
 Fable: proceed on Phase 0 per these guardrails. Quote each SCORE block here.
 
+## [2026-07-21 21:15] Fable — Phase 0 underway: hygiene landed, evals 1+2 done, re-ASR running
+
+### Hygiene (no eval per guardrails; tests green)
+`--no-raga` now prints `raga skipped (--no-raga)` (fake 0/85 gone); ASR
+exceptions surfaced per-language to stderr instead of silent `pass`; cache
+writes atomic (temp+rename); matcher workers bounded via
+`CARNATIFY_MATCH_WORKERS` (backend defaults 2). New
+`tests/test_clip_policy.py`: 10 passed, 1 xfail (the still-open generic-
+repetition answerability case). One find: the stale `backend/identify_clip.py`
+build-copy can shadow the root module on sys.path — tests now pin root first.
+
+### Eval 1 — shared policy (behavior-changer, expect no change): PASS
+Root `identify()` and backend `identify_from_variants()` now both call the new
+`identify_clip.assess_variants()` — one policy (loop gate, langs incl. `hi`,
+catalog backfill now also in the API path). Contract test asserts identity.
+
+```text
+===== SCORE over 78 in-catalog + 28 OOC clips =====
+composition top-1 11/78  top-5 18/78
+OOC reject  24/28  (bluffs: 4)
+raga        skipped (--no-raga)
+raga via catalog backfill 8/36 (on clips with confident composition)
+```
+Guard (curated dir): `composition top-1 8/36  top-5 12/36`, `OOC reject 4/5`.
+Byte-identical to baseline. The scoreboard now scores what the API serves.
+
+### Eval 2 — one-to-one scoring (behavior-changer): PASS, graduates
+Occurrence-injective token assignment (transcript occurrence usable once;
+joined bigram spends both parts), matched weight = min(kt IDF, transcript-
+token IDF), repetition bonus once per distinct transcript token. Legacy
+kill-switch: `CARNATIFY_LEGACY_SCORING=1`.
+
+```text
+===== SCORE over 78 in-catalog + 28 OOC clips =====
+composition top-1 12/78  top-5 19/78
+OOC reject  24/28  (bluffs: 4)
+raga        skipped (--no-raga)
+raga via catalog backfill 9/36 (on clips with confident composition)
+```
+Guard: `composition top-1 8/36  top-5 12/36`, `OOC reject 4/5` — holds.
+Per-clip diff vs eval 1: `raghuvamsa` becomes top-1 correct; wrong "high"
+answers `Ramabhi Rama` and `rAma ninnu nera` (generic rama-titles — the
+exploit class) demoted to medium. Precision at coverage 28%→30% at equal 38%
+coverage. Exploit smoke: `rama rama` 1.451→0.921, `raja raja` 1.222→0.949;
+genuine matches essentially unmoved (`vatapi…` −0.007, `nagumomu` 0).
+
+### Also done
+- **OPEN_DECISIONS #8 executed**: legacy transcript caches stripped 200→106
+  and 120→106 entries (81+1 synth/control removed, NFC/NFD duplicate keys
+  merged — beware: APFS filenames are NFD, several real clips masqueraded as
+  strippable until normalization).
+- **METRIC_CONTRACT.md written** — precision-at-coverage primary (>=85% bar),
+  always co-published with in-catalog top-1/top-5, OOC bluffs, eligibility
+  strata (Deepti-adjudicated), assisted recovery; curated-36 guard and
+  prospective-validation rules codified.
+- **v2 ASR cache builder running** (caffeinated): full re-ASR of 106 clips,
+  raw native-script hypotheses per language/source with segments + status,
+  keyed sha256+config, atomic incremental writes. fold/Unicode eval fires on
+  completion (`identify_clip.py --cache-v2`; fold-only diagnostic via
+  `CARNATIFY_V2_FOLD_ONLY=1`).
+
+## [2026-07-22] Fable — Phase 0 complete: eval 3 (fold/Unicode) split verdict, new baseline set
+
+Re-ASR builder finished: 106/106 clips, 17.3 h caffeinated, 0 error
+hypotheses, **585 hypotheses contain native Indic script that the old
+`fold()` erased entirely**. v2 cache (`data/asr_cache_v2.json`) is
+sha256+config-keyed, raw-preserving, atomic; eval is read-only against it
+and reports hit/miss (a SCORE with misses is invalid).
+
+### Eval 3a — re-ASR, fold (ASCII) view: ACCEPTED, new baseline
+
+```text
+===== SCORE over 78 in-catalog + 28 OOC clips =====
+composition top-1 14/78  top-5 23/78
+OOC reject  21/28  (bluffs: 7)
+raga        skipped (--no-raga)
+raga via catalog backfill 13/40 (on clips with confident composition)
+v2 cache: 106 hits, 0 misses
+```
+Guard: `composition top-1 9/36  top-5 15/36`, `OOC reject 3/5`,
+41 hits 0 misses — above the 8/36 bar. Precision-at-coverage 30% @ 44%
+(was 30% @ 38%): same precision, more coverage, +2 top-1, +4 top-5.
+
+### Eval 3b — re-ASR + transliterated view: REJECTED as default, parked as channel
+
+```text
+===== SCORE over 78 in-catalog + 28 OOC clips =====
+composition top-1 14/78  top-5 29/78
+OOC reject  2/28  (bluffs: 26)
+raga        skipped (--no-raga)
+raga via catalog backfill 10/64 (on clips with confident composition)
+v2 cache: 106 hits, 0 misses
+```
+Candidate recall explodes (top-5 19->29/78, coverage 85%) but answered
+precision collapses 30%->16%: the recovered native evidence is REAL on OOC
+clips too (e.g. `Achyutam Keshavam` decodes to its true bhajan lyrics in
+Devanagari), and the uncalibrated thresholds answer everything. Per the
+metric contract this cannot ship as default. It is now opt-in
+(`CARNATIFY_V2_TRANSLIT=1`), explicitly NOT graveyarded: it is the
+candidate-generation channel whose value Phase 4 calibration is meant to
+unlock — exactly Codex's sequencing ("calibrate abstention only after
+candidate generation improves").
+
+**For Codex — observations worth your next pass:**
+1. The 26 bluffs are heavily the Devanagari/Hindi channel (OOC set is
+   bhajan/film-heavy; in-catalog is ta/te/sa kritis). A script- or
+   language-aware evidence feature seems more promising than a global
+   threshold, but I did NOT slice-tune on the dev set — flagging, not
+   fitting.
+2. Tamil transliteration (sanscript HK) voices consonants
+   (`vAdhAbhi ghanabhadhim`); `soft()` absorbs some. ISO-15919 vs HK worth
+   a look before the CTC-scoring work fixes representation anyway.
+3. Re-ASR alone (same fold view, fresh whisper run) moved top-1 12->14 —
+   transcript nondeterminism is nontrivial; supports your versioned-cache
+   point and prospective-eval discipline.
+
+### Phase 0 closeout
+
+All six items landed: shared policy (eval 1, no change, contract-tested);
+one-to-one scoring (eval 2, +1/+1, graduates); Unicode/cache re-version
+(eval 3a accepted / 3b parked); `--no-raga` honesty; structured ASR errors;
+atomic versioned cache + tests (10 pass, 1 xfail). OPEN_DECISIONS #8
+executed (synth strip). METRIC_CONTRACT.md written; new baseline recorded
+there. HANDOFF_VERFIER.md §3.2 updated: canonical scoreboard command now
+includes `--cache-v2`. Nothing committed (push decision #1 still parked on
+Deepti). Legacy filename-keyed caches remain for the no-flag path but are
+deprecated.
+
 <!-- next entry goes here -->

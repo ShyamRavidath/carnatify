@@ -850,7 +850,9 @@ def main() -> None:
                      for r in res['ragas']]
             rhit1 = bool(rhits and rhits[0])
             rhit3 = any(rhits[:3])
-            if raga_known:
+            # only count raga truth when raga inference actually ran —
+            # otherwise --no-raga prints a fake 0/N result
+            if raga_known and not no_raga:
                 rn += 1
                 r1 += rhit1; r3 += rhit3
             raga_txt = (f" | raga top1 {'OK' if rhit1 else '--'} "
@@ -885,11 +887,18 @@ def main() -> None:
         if ooc_n:
             print(f"OOC reject  {ooc_ok}/{ooc_n}  "
                   f"(bluffs: {ooc_n - ooc_ok})")
-        print(f"raga        top-1 {r1}/{rn}  top-3 {r3}/{rn}"
-              f"  (clips with known raga truth)")
+        if no_raga:
+            print("raga        skipped (--no-raga)")
+        else:
+            print(f"raga        top-1 {r1}/{rn}  top-3 {r3}/{rn}"
+                  f"  (clips with known raga truth)")
         if rc_n:
             print(f"raga via catalog backfill {rc}/{rc_n} "
                   f"(on clips with confident composition)")
+        if use_v2:
+            print(f"v2 cache: {v2_hits} hits, {v2_miss} misses"
+                  + ("  ** SCORE INVALID: misses present **"
+                     if v2_miss else ""))
 
 
 if __name__ == '__main__':

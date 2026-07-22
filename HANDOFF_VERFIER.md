@@ -73,9 +73,14 @@ tracking", "gitignored", any specific commit hash.
 ### 3.2 The scoreboard
 
 ```bash
-caffeinate -i venv_train/bin/python identify_clip.py ~/sung_tests --no-raga
+caffeinate -i venv_train/bin/python identify_clip.py ~/sung_tests --no-raga --cache-v2
 # drop --no-raga for raga numbers (loads the 1.1 GB RF, much slower)
 ```
+Since 2026-07-22 the canonical run uses `--cache-v2`: the versioned ASR cache
+(`data/asr_cache_v2.json`, keyed audio-sha256 + full ASR config, raw
+native-script hypotheses). The eval is read-only against it and prints
+`v2 cache: N hits, M misses` — **a SCORE with misses is invalid.** The legacy
+filename-keyed caches are still read by the no-flag path but are deprecated.
 The script prints per-clip `TRUTH` lines and a final `SCORE` block.
 **Quote the SCORE block verbatim. Never recompute by hand, never average
 sub-slices.**
