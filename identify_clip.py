@@ -54,6 +54,9 @@ ROOT = Path(__file__).parent
 MODELS = ROOT / 'models'
 TCACHE = ROOT / 'data' / 'whisper_transcripts_turbo.json'
 SCACHE = ROOT / 'data' / 'whisper_transcripts_turbo_stems.json'
+# v2 ASR cache: keyed by audio sha256 + full ASR config identity, stores raw
+# per-language hypotheses (native script preserved) — see ASR_CONFIG_V2
+CACHE2 = ROOT / 'data' / 'asr_cache_v2.json'
 MEL_HOP_S = 128 / 44100
 TAUS = (0.1, 0.15, 0.25)
 NB = 40
@@ -449,20 +452,60 @@ def match_lyrics(transcript: str, entries: list[dict],
 
 # ---------------------------------------------------------------------- ASR
 
-def _whisper_multi(audio, langs=(None, 'ta', 'te', 'hi')) -> str:
+def _atomic_write_json(path: Path, obj) -> None:
+    """Write via temp file + rename so an interrupted write can't corrupt
+    the only scoreboard's cache."""
+    path.parent.mkdir(exist_ok=True)
+    fd, tmp = tempfile.mkstemp(dir=str(path.parent), suffix='.tmp')
+    try:
+        with os.fdopen(fd, 'w') as fh:
+            json.dump(obj, fh, ensure_ascii=False, indent=1)
+        os.replace(tmp, path)
+    except BaseException:
+        if os.path.exists(tmp):
+            os.unlink(tmp)
+        raise
+
+
+def _whisper_hyps(audio, langs=(None, 'ta', 'te', 'hi')) -> list[dict]:
+    """One raw hypothesis per language pass, native script preserved.
+
+    status: 'ok' | 'empty' (decode succeeded, no symbols) | 'error: ...'
+    (integration failure — never conflate with an ASR-dead clip).
+    """
     import whisper
-    if not hasattr(_whisper_multi, '_model'):
-        _whisper_multi._model = whisper.load_model('large-v3-turbo')
-    best = ''
+    if not hasattr(_whisper_hyps, '_model'):
+        _whisper_hyps._model = whisper.load_model('large-v3-turbo')
+    hyps = []
     for lang in langs:
+        h = {'lang': lang or 'auto', 'raw': '', 'segments': [],
+             'status': 'ok'}
         try:
-            r = _whisper_multi._model.transcribe(audio, language=lang,
-                                                 fp16=False)
-            t = fold(r['text'])
-            if len(t) > len(best):
-                best = t
-        except Exception:
-            pass
+            r = _whisper_hyps._model.transcribe(audio, language=lang,
+                                                fp16=False)
+            h['raw'] = (r.get('text') or '').strip()
+            h['segments'] = [
+                {'start': round(float(s['start']), 2),
+                 'end': round(float(s['end']), 2),
+                 'text': (s.get('text') or '').strip()}
+                for s in r.get('segments', [])]
+            if not h['raw']:
+                h['status'] = 'empty'
+        except Exception as e:
+            h['status'] = f'error: {type(e).__name__}: {e}'
+            print(f"  (ASR pass lang={lang or 'auto'} failed: "
+                  f"{h['status']})", file=sys.stderr)
+        hyps.append(h)
+    return hyps
+
+
+def _whisper_multi(audio, langs=(None, 'ta', 'te', 'hi')) -> str:
+    """Legacy selection: longest folded hypothesis across language passes."""
+    best = ''
+    for h in _whisper_hyps(audio, langs):
+        t = fold(h['raw'])
+        if len(t) > len(best):
+            best = t
     return best
 
 
@@ -474,35 +517,117 @@ def transcribe(path: Path, cache: dict) -> str:
     audio, _ = librosa.load(str(path), sr=16000, mono=True)
     best = _whisper_multi(audio.astype('float32'))
     cache[path.name] = best
-    TCACHE.parent.mkdir(exist_ok=True)
-    TCACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=1))
+    _atomic_write_json(TCACHE, cache)
     return best
+
+
+def _vocal_stem_16k(path: Path):
+    """Demucs htdemucs vocal stem, resampled to 16 kHz float32."""
+    import librosa
+    import torch
+    from demucs.apply import apply_model
+    from demucs.pretrained import get_model
+    if not hasattr(_vocal_stem_16k, '_dem'):
+        _vocal_stem_16k._dem = get_model('htdemucs')
+        _vocal_stem_16k._dem.eval()
+    dem = _vocal_stem_16k._dem
+    y, _ = librosa.load(str(path), sr=44100, mono=True)
+    wav = torch.tensor(y, dtype=torch.float32)[None].repeat(2, 1)[None]
+    with torch.no_grad():
+        stems = apply_model(dem, wav, device='cpu', progress=False)[0]
+    vocals = stems[dem.sources.index('vocals')].mean(0).numpy()
+    return librosa.resample(vocals, orig_sr=44100,
+                            target_sr=16000).astype('float32')
 
 
 def transcribe_stem(path: Path, cache: dict) -> str:
     """Demucs vocal stem -> whisper turbo (cached by filename)."""
     if path.name in cache and 'stem_turbo' in cache[path.name]:
         return cache[path.name]['stem_turbo']
-    import librosa
-    import torch
-    from demucs.apply import apply_model
-    from demucs.pretrained import get_model
-    if not hasattr(transcribe_stem, '_dem'):
-        transcribe_stem._dem = get_model('htdemucs')
-        transcribe_stem._dem.eval()
-    dem = transcribe_stem._dem
-    y, _ = librosa.load(str(path), sr=44100, mono=True)
-    wav = torch.tensor(y, dtype=torch.float32)[None].repeat(2, 1)[None]
-    with torch.no_grad():
-        stems = apply_model(dem, wav, device='cpu', progress=False)[0]
-    vocals = stems[dem.sources.index('vocals')].mean(0).numpy()
-    v16 = librosa.resample(vocals, orig_sr=44100,
-                           target_sr=16000).astype('float32')
-    best = _whisper_multi(v16, langs=(None, 'ta', 'te'))
+    best = _whisper_multi(_vocal_stem_16k(path), langs=(None, 'ta', 'te'))
     cache.setdefault(path.name, {})['stem_turbo'] = best
-    SCACHE.parent.mkdir(exist_ok=True)
-    SCACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=1))
+    _atomic_write_json(SCACHE, cache)
     return best
+
+
+# ------------------------------------------------------------- ASR cache v2
+
+# Complete ASR configuration identity. Any change here (model, languages,
+# decode params, separation) MUST bump the id — stale-key reuse is how a
+# scoreboard silently goes stale.
+ASR_CONFIG_V2 = {
+    'engine': 'openai-whisper',
+    'model': 'large-v3-turbo',
+    'fp16': False,
+    'mix_langs': ['auto', 'ta', 'te', 'hi'],
+    'stem_langs': ['auto', 'ta', 'te'],
+    'separation': 'htdemucs',
+}
+
+
+def asr_config_id() -> str:
+    return 'whisper-turbo|fp16=0|mix:auto,ta,te,hi|stem:htdemucs+auto,ta,te|v2'
+
+
+def audio_sha256(path: Path) -> str:
+    h = hashlib.sha256()
+    with open(path, 'rb') as fh:
+        for chunk in iter(lambda: fh.read(1 << 20), b''):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def cache2_key(sha: str) -> str:
+    return f'{sha[:24]}:{asr_config_id()}'
+
+
+def load_cache_v2() -> dict:
+    if CACHE2.exists():
+        return json.loads(CACHE2.read_text())
+    return {'schema': 'carnatify-asr-cache-v2',
+            'config': ASR_CONFIG_V2, 'entries': {}}
+
+
+def variants_from_v2(entry: dict, view=None) -> dict[str, str]:
+    """Legacy longest-wins selection per source, computed on a matching VIEW
+    of the raw hypotheses.
+
+    Default view is fold (ASCII), NOT translit_fold: measured 2026-07-22,
+    the transliterated view lifts candidate recall hugely (top-5 19->29/78)
+    but collapses answered precision 30%->16% because recovered native
+    evidence on OOC clips bluffs through the uncalibrated thresholds
+    (OOC reject 24/28 -> 2/28). It is a candidate-generation channel gated
+    on Phase 4 calibration: opt in via CARNATIFY_V2_TRANSLIT=1."""
+    if view is None:
+        view = (translit_fold if os.environ.get('CARNATIFY_V2_TRANSLIT')
+                else fold)
+    best = {'mix': '', 'stem': ''}
+    for h in entry['hypotheses']:
+        if h['status'] != 'ok':
+            continue
+        t = view(h['raw'])
+        if len(t) > len(best[h['source']]):
+            best[h['source']] = t
+    return {'turbo': best['mix'], 'stem_turbo': best['stem']}
+
+
+def identify_v2(path: Path, targets, lyr, cache2: dict,
+                want_raga: bool = True) -> dict:
+    """identify() against the v2 cache, read-only (eval never mutates it)."""
+    key = cache2_key(audio_sha256(path))
+    entry = cache2['entries'].get(key)
+    if entry is None:
+        result = {'file': path.name, 'ragas': [], 'cache_v2': 'MISS',
+                  **assess_variants({}, targets, lyr)}
+    else:
+        result = {'file': path.name, 'ragas': [], 'cache_v2': 'hit',
+                  **assess_variants(variants_from_v2(entry), targets, lyr)}
+    if want_raga:
+        ragas, err = raga_top5(path)
+        result['ragas'] = ragas
+        if err:
+            result['raga_error'] = err
+    return result
 
 
 # --------------------------------------------------------------------- raga
@@ -665,9 +790,10 @@ def main() -> None:
     as_json = '--json' in sys.argv
     no_raga = '--no-raga' in sys.argv
     fast = '--fast' in sys.argv
+    use_v2 = '--cache-v2' in sys.argv
     if not args:
         sys.exit('usage: identify_clip.py <audio-file-or-folder> '
-                 '[--json] [--no-raga] [--fast]')
+                 '[--json] [--no-raga] [--fast] [--cache-v2]')
     target = Path(args[0]).expanduser()
     files = ([target] if target.is_file() else
              sorted(p for p in target.iterdir()
@@ -678,6 +804,8 @@ def main() -> None:
     targets, lyr = load_targets()
     cache = json.loads(TCACHE.read_text()) if TCACHE.exists() else {}
     scache = json.loads(SCACHE.read_text()) if SCACHE.exists() else {}
+    cache2 = load_cache_v2() if use_v2 else None
+    v2_hits = v2_miss = 0
 
     def truth_match(pred_title: str, gt: str) -> bool:
         a, b = skey(pred_title), skey(gt)
@@ -686,8 +814,17 @@ def main() -> None:
     results = []
     c1 = c5 = r1 = r3 = rc = rc_n = n = ooc_n = ooc_ok = rn = 0
     for p in files:
-        res = identify(p, targets, lyr, cache, scache,
-                       want_raga=not no_raga, fast=fast)
+        if use_v2:
+            res = identify_v2(p, targets, lyr, cache2,
+                              want_raga=not no_raga)
+            if res['cache_v2'] == 'MISS':
+                v2_miss += 1
+                print(f'  !! v2 cache MISS: {p.name}', file=sys.stderr)
+            else:
+                v2_hits += 1
+        else:
+            res = identify(p, targets, lyr, cache, scache,
+                           want_raga=not no_raga, fast=fast)
         results.append(res)
         if as_json:
             continue
