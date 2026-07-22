@@ -96,6 +96,43 @@ def skey(s: str) -> str:
     return soft(fold(s).replace(' ', ''))
 
 
+# native Indic script blocks whisper emits for forced ta/te/hi passes;
+# fold() alone would erase these to whitespace (the P0 Unicode bug)
+_SCRIPTS = (
+    ('devanagari', 0x0900, 0x097F),
+    ('tamil', 0x0B80, 0x0BFF),
+    ('telugu', 0x0C00, 0x0C7F),
+    ('kannada', 0x0C80, 0x0CFF),
+    ('malayalam', 0x0D00, 0x0D7F),
+)
+
+
+def _detect_script(s: str):
+    counts = Counter()
+    for ch in s:
+        cp = ord(ch)
+        for name, lo, hi in _SCRIPTS:
+            if lo <= cp <= hi:
+                counts[name] += 1
+                break
+    return counts.most_common(1)[0][0] if counts else None
+
+
+def translit_fold(s: str) -> str:
+    """Matching view for raw ASR text: native Indic script is deterministically
+    transliterated (Harvard-Kyoto) before folding, so forced-language output
+    survives into matching. A VIEW only — raw text stays in the cache."""
+    script = _detect_script(s or '')
+    if script is not None:
+        from indic_transliteration import sanscript
+        try:
+            s = sanscript.transliterate(s, script, sanscript.HK)
+        except Exception as e:
+            print(f'  (transliteration {script} failed: {e})',
+                  file=sys.stderr)
+    return fold(s)
+
+
 def tokens(s: str, minlen: int = 4) -> list[str]:
     return [soft(w) for w in fold(s).split() if len(w) >= minlen]
 
