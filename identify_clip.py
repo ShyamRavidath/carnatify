@@ -154,27 +154,57 @@ LINE_SKIP = re.compile(r'^(pallavi|anupallavi|cara[nN]am|charanam|caranam'
 MAX_LINES_PER_ENTRY = 60
 
 
-def _line_variants(pages: list[str], kar: dict[str, dict]) -> list[str]:
-    """Folded lyric lines for an entry's karnatik pages (sung-unit granules).
+# karnatik section headings set the state for following lines; P:/A:/C:
+# prefixes tag their own line (both forms appear, often in the same page)
+_SEC_PATTERNS = (
+    (re.compile(r'^pallavi\s*\d*\s*$', re.I), 'pallavi'),
+    (re.compile(r'^anupallavi\s*\d*\s*$', re.I), 'anupallavi'),
+    (re.compile(r'^(samashTi\s*)?(cara[nN]am|charanam|caranam)\s*\d*\s*$',
+                re.I), 'caranam'),
+    (re.compile(r'^(madhyamak|citta ?svar|chittaswar|swar)\w*\s*\d*\s*$',
+                re.I), 'svaram'),
+)
+_SEC_PREFIX = (
+    (re.compile(r'^p\s*:', re.I), 'pallavi'),
+    (re.compile(r'^a\s*:', re.I), 'anupallavi'),
+    (re.compile(r'^c\s*\d*\s*:', re.I), 'caranam'),
+)
+
+
+def _line_variants(pages: list[str], kar: dict[str, dict]) -> list[dict]:
+    """Sectioned folded lyric lines for an entry's karnatik pages.
 
     Each line matches like a title: a clip from any caraNam can hit its own
     line even when the pallavi/title tokens never appear in the transcript.
+    M1: section/page/line order are preserved ({'f','section','page','i'}),
+    and explicit-pallavi lines from EVERY linked page are retained ahead of
+    the per-entry cap (97.1% of lyric-bearing pages carry the heading).
     """
-    out, seen = [], set()
+    raw, seen = [], set()
     for p in pages:
         rec = kar.get(p)
         if not rec:
             continue
-        for line in rec['lyrics'].split('\n'):
-            if LINE_SKIP.match(line.strip()):
+        sec = 'other'
+        for i, line in enumerate(rec['lyrics'].split('\n')):
+            s = line.strip()
+            head = next((name for rx, name in _SEC_PATTERNS
+                         if rx.match(s)), None)
+            if head:
+                sec = head
                 continue
+            if s.startswith('('):
+                continue
+            pref = next((name for rx, name in _SEC_PREFIX
+                         if rx.match(s)), None)
             f = fold(line)
             if len(f) >= 10 and f not in seen:
                 seen.add(f)
-                out.append(f)
-            if len(out) >= MAX_LINES_PER_ENTRY:
-                return out
-    return out
+                raw.append({'f': f, 'section': pref or sec,
+                            'page': p, 'i': i})
+    pal = [r for r in raw if r['section'] == 'pallavi']
+    rest = [r for r in raw if r['section'] != 'pallavi']
+    return (pal + rest)[:MAX_LINES_PER_ENTRY]
 
 
 def _precompute(e: dict) -> None:
@@ -193,7 +223,15 @@ def _precompute(e: dict) -> None:
                 'head3': ' '.join(kt_title[:3]) if len(kt_title) >= 2 else ''}
 
     e['vtoks'] = [prep(v, e['lyr']) for v in e['variants']]
-    e['ltoks'] = [prep(l, is_line=True) for l in e.get('lines', [])]
+    for vt in e['vtoks']:
+        vt['section'] = 'title'
+    e['ltoks'] = []
+    for l in e.get('lines', []):
+        d = prep(l['f'], is_line=True)
+        d['section'] = l['section']
+        d['page'] = l['page']
+        d['line_i'] = l['i']
+        e['ltoks'].append(d)
 
 
 def load_targets():
@@ -311,7 +349,8 @@ def _best_map(entries: list[dict], tl_unique: list[str],
 def _score_ktoks(vt: dict, best: dict, tfreq: Counter,
                  tl_joined: str, idf: dict,
                  base: dict | None = None,
-                 bparts: dict | None = None) -> float:
+                 bparts: dict | None = None,
+                 detail: bool = False):
     """IDF-weighted token coverage + repetition bonus + order bonus.
 
     Same shape as the pre-0713 lyr_score, fed from the _best_map lookup
@@ -327,7 +366,7 @@ def _score_ktoks(vt: dict, best: dict, tfreq: Counter,
     """
     ktoks = vt['ktoks']
     if not ktoks:
-        return 0.0
+        return (0.0, None) if detail else 0.0
     legacy = bool(os.environ.get('CARNATIFY_LEGACY_SCORING'))
     raw_hits = 0.0
     w_hits = 0.0
@@ -367,6 +406,7 @@ def _score_ktoks(vt: dict, best: dict, tfreq: Counter,
                     break
             assigned.append((kt, b, btok))
     bonus_used = set()
+    pairs = [] if detail else None
     for kt, b, btok in assigned:
         w = idf.get(kt, 1.0)
         # matched information is bounded by BOTH sides: a generic transcript
@@ -383,10 +423,14 @@ def _score_ktoks(vt: dict, best: dict, tfreq: Counter,
             if kt in vt['kt_title'] and (legacy or btok not in bonus_used):
                 freq_bonus += min(tfreq.get(btok, 1), 6) * 0.05
                 bonus_used.add(btok)
+            if detail:
+                pairs.append((kt, btok, b, round(w, 2)))
         elif b >= 65:
             raw_hits += 0.5
             w_hits += 0.5 * w
             hit_ratios.append(b)
+            if detail:
+                pairs.append((kt, btok, b, round(0.5 * w, 2)))
     order = 0.0
     if (raw_hits >= 1 and vt['head3']
             and _partial(vt['head3'], tl_joined) >= 80):
@@ -396,17 +440,36 @@ def _score_ktoks(vt: dict, best: dict, tfreq: Counter,
     # rounded display, decisive on exact ties)
     quality = (sum(hit_ratios) / len(hit_ratios) / 100_000 if hit_ratios
                else 0.0)
-    return ((w_hits / w_total) * min(1.0, 0.4 + 0.2 * raw_hits)
-            + freq_bonus + order + quality)
+    score = ((w_hits / w_total) * min(1.0, 0.4 + 0.2 * raw_hits)
+             + freq_bonus + order + quality)
+    if not detail:
+        return score
+    return score, {
+        'pairs': pairs,                      # (catalog_tok, transcript_tok,
+        'matched_idf': round(w_hits, 2),     #  ratio, contributed idf)
+        'total_idf': round(w_total, 2),
+        'distinct_hits': len({p[1] for p in pairs}),
+        'k_cov': round(w_hits / w_total, 3),  # catalog-side idf coverage
+        'ordered': bool(order),
+    }
 
 
 def match_lyrics(transcript: str, entries: list[dict],
-                 _unused=None, topn: int = 5):
+                 _unused=None, topn: int = 5, detail: bool = False):
     """Score every registry entry, top-n.
 
     Per entry: max over title spelling variants AND karnatik lyric-line
     pseudo-variants (same scorer, same scale — a sung caraNam line counts
     like a sung title, so mid-kriti clips become matchable).
+
+    M1 instrumentation: the max is tracked per channel — 'title' (spelling
+    variants), 'pallavi' (explicit-heading lines), 'other' (remaining
+    lines). Every result row carries 'channel' (the argmax) and
+    'channel_scores'; pallavi is a FEATURE for diagnostics/rerank, never a
+    score bonus — the ranking score stays the plain max. With detail=True
+    rows also carry 'align': the winning variant's alignment evidence
+    (matched pairs, matched/total IDF, distinct hits, two-sided coverage,
+    order flag).
     """
     tl = tokens(transcript)
     if not tl:
@@ -434,19 +497,39 @@ def match_lyrics(transcript: str, entries: list[dict],
     best = _best_map(entries, list(tfreq_ext))
     scored = []
     for e in entries:
-        s = max(_score_ktoks(vt, best, tfreq_ext, tl_joined, idf,
+        ch = {'title': 0.0, 'pallavi': 0.0, 'other': 0.0}
+        ch_vt = {'title': None, 'pallavi': None, 'other': None}
+        for vt in e['vtoks']:
+            s = _score_ktoks(vt, best, tfreq_ext, tl_joined, idf,
                              base, bparts)
-                for vt in e['vtoks'])
+            if s > ch['title']:
+                ch['title'], ch_vt['title'] = s, vt
         for vt in e['ltoks']:
-            s2 = _score_ktoks(vt, best, tfreq_ext, tl_joined, idf,
-                              base, bparts)
-            if s2 > s:
-                s = s2
-        scored.append((s, e))
+            c = 'pallavi' if vt['section'] == 'pallavi' else 'other'
+            s = _score_ktoks(vt, best, tfreq_ext, tl_joined, idf,
+                             base, bparts)
+            if s > ch[c]:
+                ch[c], ch_vt[c] = s, vt
+        scored.append((max(ch.values()), e, ch, ch_vt))
     scored.sort(key=lambda x: -x[0])
-    out = [{'title': e['canonical'], 'score': round(float(s), 3),
-            'ragas': e['ragas']}
-           for s, e in scored[:topn]]
+    out = []
+    q_idf = {t: idf.get(t, 1.0) for t in tfreq_ext}
+    q_total = sum(q_idf.values())
+    for s, e, ch, ch_vt in scored[:topn]:
+        channel = max(ch, key=ch.get)
+        row = {'title': e['canonical'], 'score': round(float(s), 3),
+               'ragas': e['ragas'], 'channel': channel,
+               'channel_scores': {k: round(float(v), 3)
+                                  for k, v in ch.items()}}
+        if detail and ch_vt[channel] is not None:
+            _, d = _score_ktoks(ch_vt[channel], best, tfreq_ext, tl_joined,
+                                idf, base, bparts, detail=True)
+            matched = {p[1] for p in d['pairs'] if p[1] is not None}
+            d['q_cov'] = (round(sum(q_idf.get(t, 0.0) for t in matched)
+                                / q_total, 3) if q_total else 0.0)
+            d['section'] = ch_vt[channel]['section']
+            row['align'] = d
+        out.append(row)
     return out, (max(tfreq.values()) if tfreq else 0)
 
 

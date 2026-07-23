@@ -129,6 +129,41 @@ def test_atomic_write_json(tmp_path):
     assert not list(tmp_path.glob('*.tmp'))
 
 
+# ------------------------------------------------------------------ M1
+
+def test_line_variants_section_tagging():
+    kar = {'x.html': {'page': 'x.html', 'lyrics':
+           'pallavi\nsome pallavi line goes here\n'
+           'anupallavi\nthe anupallavi line text here\n'
+           'caraNam 1\nfirst caranam line of the song\n'
+           '(chittaswaram)\nP: prefixed pallavi content line\n'}}
+    lines = ic._line_variants(['x.html'], kar)
+    secs = {l['f']: l['section'] for l in lines}
+    assert secs['some pallavi line goes here'] == 'pallavi'
+    assert secs['the anupallavi line text here'] == 'anupallavi'
+    assert secs['first caranam line of the song'] == 'caranam'
+    assert secs['p prefixed pallavi content line'] == 'pallavi'
+    # pallavi lines are retained first, ahead of the cap
+    assert lines[0]['section'] == 'pallavi'
+
+
+def test_match_lyrics_channels_and_detail(targets):
+    entries, lyr = targets
+    comps, _ = ic.match_lyrics('vatapi ganapatim bhaje vatapi ganapatim',
+                               entries, lyr, detail=True)
+    top = comps[0]
+    assert set(top['channel_scores']) == {'title', 'pallavi', 'other'}
+    assert top['channel'] in top['channel_scores']
+    # ranking score is the plain max across channels — never a bonus
+    assert top['score'] == round(max(top['channel_scores'].values()), 3)
+    d = top['align']
+    for k in ('pairs', 'matched_idf', 'total_idf', 'distinct_hits',
+              'k_cov', 'q_cov', 'ordered', 'section'):
+        assert k in d
+    assert d['distinct_hits'] >= 2
+    assert 0.0 <= d['k_cov'] <= 1.0 and 0.0 <= d['q_cov'] <= 1.0
+
+
 def test_variants_from_v2_selects_per_source():
     entry = {'hypotheses': [
         {'source': 'mix', 'lang': 'auto', 'raw': 'short', 'status': 'ok'},
