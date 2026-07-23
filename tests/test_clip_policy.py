@@ -281,3 +281,122 @@ def test_whisper_v2_entries_unaffected_by_indic_code():
     v = ic.variants_from_v2(entry)
     assert set(v) == {'turbo', 'stem_turbo'}
     assert v['turbo'] == 'plain latin text'  # fold erases native by default
+
+
+# ------------------------------------------- Rung 4: hybrid arbitration
+
+def _res(answered, q_cov=None, ordered=None, top_id=None, score=1.3,
+         conf='medium'):
+    """Synthetic assess_variants-shaped result for arbitration tests."""
+    if not answered:
+        return {'transcript': '', 'asr_variant': None, 'compositions': [],
+                'composition_confidence': 'none',
+                'clip_type': 'no usable lyrics (alapana / instrumental / '
+                'ASR miss)'}
+    return {'transcript': f'txt-{top_id}', 'asr_variant': 'indic_te',
+            'compositions': [{'id': top_id, 'title': top_id, 'score': score,
+                              'align': {'q_cov': q_cov, 'ordered': ordered}}],
+            'composition_confidence': conf,
+            'clip_type': 'sung (lyrics found)',
+            'raga_from_catalog': ['someRaga']}
+
+
+def test_detail_leaves_scores_and_selection_identical(targets):
+    """detail=True is additive (adds `align`); it must not change work IDs,
+    scores, ordering, selected variant, or confidence."""
+    entries, lyr = targets
+    variants = {'turbo': 'vatapi ganapatim bhaje vatapi ganapatim',
+                'stem_turbo': 'vatapi ganapatim bhajeham'}
+    plain = ic.assess_variants(dict(variants), entries, lyr, detail=False)
+    det = ic.assess_variants(dict(variants), entries, lyr, detail=True)
+    for k in ('composition_confidence', 'asr_variant', 'transcript'):
+        assert plain[k] == det[k]
+    # compositions identical once align (the only addition) is stripped
+    stripped = [{k: v for k, v in c.items() if k != 'align'}
+                for c in det['compositions']]
+    assert stripped == plain['compositions']
+    assert all('align' in c for c in det['compositions'])  # detail present
+
+
+def test_hybrid_gate_boundary():
+    assert ic._passes_gate({'answered': True, 'q_cov': 0.250, 'ordered': True})
+    assert not ic._passes_gate({'answered': True, 'q_cov': 0.249,
+                                'ordered': True})
+    # ordered=False fails regardless of coverage
+    assert not ic._passes_gate({'answered': True, 'q_cov': 0.99,
+                                'ordered': False})
+    # abstention never passes
+    assert not ic._passes_gate({'answered': False, 'q_cov': None,
+                                'ordered': None})
+
+
+def test_hybrid_decision_table():
+    W = _res(True, 0.30, True, 'compW')   # whisper strong
+    Ww = _res(True, 0.10, True, 'compW')  # whisper weak (q_cov below gate)
+    I = _res(True, 0.30, True, 'compI')   # indic eligible
+    Ii = _res(True, 0.10, True, 'compI')  # indic answered, ineligible
+    N = _res(False)
+
+    # 1. indic ineligible -> whisper (even if whisper also weak)
+    ch, chan, reason, _ = ic.arbitrate(Ww, Ii)
+    assert ch is Ww and chan == 'whisper' and reason == 'indic_ineligible'
+    # 1b. indic silent, whisper answers -> whisper_only
+    ch, chan, reason, _ = ic.arbitrate(W, N)
+    assert ch is W and reason == 'whisper_only'
+    # 2. indic eligible, whisper abstains -> indic_fallback
+    ch, chan, reason, _ = ic.arbitrate(N, I)
+    assert ch is I and chan == 'indic' and reason == 'indic_fallback'
+    # 3. both answer + whisper strong -> whisper wins the tie
+    ch, chan, reason, _ = ic.arbitrate(W, I)
+    assert ch is W and chan == 'whisper' and reason == 'whisper_strong'
+    # 3b. whisper wins even with a strictly higher indic raw score
+    ch, _, reason, _ = ic.arbitrate(_res(True, 0.30, True, 'compW', score=0.5),
+                                    _res(True, 0.30, True, 'compI', score=2.0))
+    assert ch['compositions'][0]['id'] == 'compW' and reason == 'whisper_strong'
+    # 4. whisper weak + indic eligible -> indic overrides
+    ch, chan, reason, _ = ic.arbitrate(Ww, I)
+    assert ch is I and chan == 'indic' \
+        and reason == 'indic_overrides_weak_whisper'
+    # neither answered -> abstain
+    ch, chan, reason, _ = ic.arbitrate(N, N)
+    assert chan == 'none' and reason == 'neither_answered'
+
+
+def test_hybrid_never_fuses_lists():
+    """Final top-5 is exactly ONE channel's list — never a union."""
+    W = _res(True, 0.30, True, 'compW')
+    I = _res(True, 0.30, True, 'compI')
+    for wres, ires in [(W, I), (I, W), (_res(False), I)]:
+        ch, _, _, _ = ic.arbitrate(wres, ires)
+        ids = {c['id'] for c in ch['compositions']}
+        assert ids == {c['id'] for c in wres['compositions']} \
+            or ids == {c['id'] for c in ires['compositions']}
+        assert ids != ({c['id'] for c in wres['compositions']}
+                       | {c['id'] for c in ires['compositions']}) \
+            or not wres['compositions'] or not ires['compositions']
+
+
+def test_hybrid_carries_whole_channel_row():
+    """Choosing Indic carries its transcript/confidence/clip type/raga
+    backfill together — no mixed-channel result."""
+    W = _res(True, 0.10, True, 'compW', conf='low')   # weak
+    I = _res(True, 0.40, True, 'compI', conf='high')  # eligible
+    ch, chan, _, _ = ic.arbitrate(W, I)
+    assert chan == 'indic'
+    assert ch['transcript'] == 'txt-compI'
+    assert ch['composition_confidence'] == 'high'
+    assert ch['raga_from_catalog'] == ['someRaga']
+
+
+def test_hybrid_explicit_config_ids_and_defaults(monkeypatch):
+    """Explicit config ids address the right cache; single-backend defaults
+    are byte-identical to the pre-Rung-4 behavior."""
+    monkeypatch.delenv('CARNATIFY_ASR_BACKEND', raising=False)
+    sha = 'b' * 64
+    # explicit ids differ per backend and match the no-arg default
+    assert ic.cache2_key(sha, ic.WHISPER_CONFIG_ID) == ic.cache2_key(sha)
+    assert ic.cache2_key(sha, ic.INDIC_CONFIG_ID) != ic.cache2_key(sha)
+    assert ic.asr_config_id('indic') == ic.INDIC_CONFIG_ID
+    assert ic.asr_config_id('whisper') == ic.WHISPER_CONFIG_ID
+    assert ic.load_cache_v2('indic') is not None
+

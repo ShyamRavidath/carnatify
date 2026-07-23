@@ -682,18 +682,22 @@ ASR_CONFIG_INDIC = {
 }
 
 INDIC_CONFIG_ID = 'indic-conformer-600m|onnx|ctc|mix:te,ta,kn,hi,ml|v2'
-
+WHISPER_CONFIG_ID = ('whisper-turbo|fp16=0|mix:auto,ta,te,hi'
+                     '|stem:htdemucs+auto,ta,te|v2')
 
 def asr_backend() -> str:
-    """'whisper' (default) or 'indic' — selects which v2 cache the eval
-    reads. Own file + own config id per backend; never mixed."""
+    """'whisper' (default), 'indic', or 'hybrid' — selects which v2 cache(s)
+    the eval reads. Single backends keep their own file + config id, never
+    mixed; 'hybrid' (Rung 4) reads BOTH and arbitrates per clip."""
     return os.environ.get('CARNATIFY_ASR_BACKEND', 'whisper')
 
 
-def asr_config_id() -> str:
-    if asr_backend() == 'indic':
-        return INDIC_CONFIG_ID
-    return 'whisper-turbo|fp16=0|mix:auto,ta,te,hi|stem:htdemucs+auto,ta,te|v2'
+def asr_config_id(backend: str | None = None) -> str:
+    """Config id for a specific backend (defaults to the active one). An
+    explicit arg is required in hybrid mode, where the global backend cannot
+    identify a single cache."""
+    return (INDIC_CONFIG_ID if (backend or asr_backend()) == 'indic'
+            else WHISPER_CONFIG_ID)
 
 
 def audio_sha256(path: Path) -> str:
@@ -704,16 +708,17 @@ def audio_sha256(path: Path) -> str:
     return h.hexdigest()
 
 
-def cache2_key(sha: str) -> str:
-    return f'{sha[:24]}:{asr_config_id()}'
+def cache2_key(sha: str, config_id: str | None = None) -> str:
+    return f'{sha[:24]}:{config_id or asr_config_id()}'
 
 
-def load_cache_v2() -> dict:
-    path = INDIC_CACHE if asr_backend() == 'indic' else CACHE2
+def load_cache_v2(backend: str | None = None) -> dict:
+    backend = backend or asr_backend()
+    path = INDIC_CACHE if backend == 'indic' else CACHE2
     if path.exists():
         return json.loads(path.read_text())
     return {'schema': 'carnatify-asr-cache-v2',
-            'config': (ASR_CONFIG_INDIC if asr_backend() == 'indic'
+            'config': (ASR_CONFIG_INDIC if backend == 'indic'
                        else ASR_CONFIG_V2),
             'entries': {}}
 
@@ -762,6 +767,111 @@ def identify_v2(path: Path, targets, lyr, cache2: dict,
     else:
         result = {'file': path.name, 'ragas': [], 'cache_v2': 'hit',
                   **assess_variants(variants_from_v2(entry), targets, lyr)}
+    if want_raga:
+        ragas, err = raga_top5(path)
+        result['ragas'] = ragas
+        if err:
+            result['raga_error'] = err
+    return result
+
+
+# ------------------------------------------------- Rung 4: hybrid arbitration
+
+# Frozen admission rule (Codex Rung 4 spec, AGENT_LOG 2026-07-23). The Indic
+# translit channel bluffs ~everything (27/28 OOC) and raw score cannot gate it
+# (bluff/true medians 1.25/1.28, fully overlapping). q_cov (IDF share of the
+# query's unique unigram+bigram vocab that the matched work explains) is the
+# only separator; 0.250 is a reviewed round operating point ("at least a
+# quarter of the matchable query vocabulary is explained"), frozen before the
+# SCORE — NOT a fitted/grid-selected cut. `ordered` = winning title/line's
+# first <=3 tokens attain partial_ratio>=80 against the transcript.
+HYBRID_QCOV_MIN = 0.250
+
+
+def _channel_evidence(res: dict) -> dict:
+    """Answer + top-1 admission features for one channel row."""
+    answered = res['composition_confidence'] != 'none' and bool(
+        res['compositions'])
+    if not answered:
+        return {'answered': False, 'q_cov': None, 'ordered': None,
+                'top_id': None}
+    a = res['compositions'][0].get('align') or {}
+    return {'answered': True, 'q_cov': a.get('q_cov'),
+            'ordered': bool(a.get('ordered')),
+            'top_id': res['compositions'][0].get('id')}
+
+
+def _passes_gate(ev: dict) -> bool:
+    return bool(ev['answered'] and ev['q_cov'] is not None
+                and ev['q_cov'] >= HYBRID_QCOV_MIN and ev['ordered'])
+
+
+def arbitrate(wres: dict, ires: dict):
+    """Whisper-primary channel arbitration (never max-fusion). Returns
+    (chosen_result, asr_channel, reason, {whisper, indic} evidence).
+
+    Decision table, in order:
+      1. Indic not eligible            -> Whisper result (incl. abstention)
+      2. Indic eligible, Whisper abstained -> Indic
+      3. both answer + Whisper strong  -> Whisper (tie-break: Whisper wins)
+      4. otherwise                     -> Indic (passed the rule, Whisper didn't)
+    Composition list / transcript / confidence / clip type / raga backfill all
+    come intact from the chosen channel; the top-5 is one channel's list,
+    never a union.
+    """
+    wev, iev = _channel_evidence(wres), _channel_evidence(ires)
+    ev = {'whisper': dict(wev, strong=_passes_gate(wev)),
+          'indic': dict(iev, eligible=_passes_gate(iev))}
+    i_elig = _passes_gate(iev)
+    if not i_elig:
+        if not wev['answered'] and not iev['answered']:
+            reason = 'neither_answered'
+        elif iev['answered'] and wev['answered']:
+            reason = 'indic_ineligible'   # indic answered but gated out
+        elif iev['answered']:
+            reason = 'indic_ineligible'   # gated out; whisper also abstained
+        else:
+            reason = 'whisper_only'       # indic silent, whisper answered
+        chosen = wres
+    elif not wev['answered']:
+        chosen, reason = ires, 'indic_fallback'
+    elif _passes_gate(wev):
+        chosen, reason = wres, 'whisper_strong'
+    else:
+        chosen, reason = ires, 'indic_overrides_weak_whisper'
+    answered = chosen['composition_confidence'] != 'none' and bool(
+        chosen['compositions'])
+    channel = ('whisper' if chosen is wres else 'indic') if answered else 'none'
+    return chosen, channel, reason, ev
+
+
+def _strip_align(res: dict) -> dict:
+    """Keep the user-facing composition schema identical to the single-backend
+    modes — the align evidence lives only in channel_evidence."""
+    for c in res.get('compositions', []):
+        c.pop('align', None)
+    return res
+
+
+def identify_v2_hybrid(path: Path, targets, lyr, wcache: dict, icache: dict,
+                       want_raga: bool = True) -> dict:
+    """Read both v2 caches (Whisper + Indic), score each channel independently
+    with detail=True, and apply the frozen arbitration rule. Read-only."""
+    sha = audio_sha256(path)
+    wentry = wcache['entries'].get(cache2_key(sha, WHISPER_CONFIG_ID))
+    ientry = icache['entries'].get(cache2_key(sha, INDIC_CONFIG_ID))
+    wres = assess_variants(variants_from_v2(wentry) if wentry else {},
+                           targets, lyr, detail=True)
+    ires = assess_variants(variants_from_v2(ientry) if ientry else {},
+                           targets, lyr, detail=True)
+    chosen, channel, reason, ev = arbitrate(wres, ires)
+    result = {'file': path.name, 'ragas': [],
+              'cache_whisper': 'hit' if wentry else 'MISS',
+              'cache_indic': 'hit' if ientry else 'MISS',
+              'cache_v2': 'hit' if (wentry and ientry) else 'MISS',
+              'asr_channel': channel, 'arbitration_reason': reason,
+              'channel_evidence': ev,
+              **_strip_align(chosen)}
     if want_raga:
         ragas, err = raga_top5(path)
         result['ragas'] = ragas
@@ -844,7 +954,8 @@ def raga_top5(path: Path):
 
 # -------------------------------------------------------------------- driver
 
-def assess_variants(variants: dict[str, str], targets, lyr=None) -> dict:
+def assess_variants(variants: dict[str, str], targets, lyr=None,
+                    detail: bool = False) -> dict:
     """THE composition policy — single source of truth for CLI and server.
 
     variants: name -> transcript (matching view); names starting with 'stem'
@@ -853,6 +964,12 @@ def assess_variants(variants: dict[str, str], targets, lyr=None) -> dict:
     selection (best score, prefer stem within VARIANT_CLOSE), confidence
     tiers, and catalog raga backfill. Both identify() and the backend's
     identify_from_variants() MUST call this; never fork the policy.
+
+    detail=True carries the winning rows' alignment evidence (M1 `align`) out
+    of the SAME scoring call — it does NOT change scores, ranking, variant
+    selection, or confidence (align is additive). Rung 4 hybrid arbitration
+    needs `align.q_cov`/`align.ordered` without a second production matcher
+    pass.
     """
     result = {
         'transcript': '',
@@ -871,7 +988,7 @@ def assess_variants(variants: dict[str, str], targets, lyr=None) -> dict:
             continue
         if _max_token_run(txt) >= LOOP_RUN:
             continue
-        comps, max_rep = match_lyrics(txt, targets, lyr)
+        comps, max_rep = match_lyrics(txt, targets, lyr, detail=detail)
         if not comps or max_rep < 2:
             continue
         cands.append((comps[0]['score'], name.startswith('stem'), name,
@@ -944,8 +1061,16 @@ def main() -> None:
     targets, lyr = load_targets()
     cache = json.loads(TCACHE.read_text()) if TCACHE.exists() else {}
     scache = json.loads(SCACHE.read_text()) if SCACHE.exists() else {}
-    cache2 = load_cache_v2() if use_v2 else None
+    hybrid = use_v2 and asr_backend() == 'hybrid'
+    if hybrid:
+        wcache, icache = load_cache_v2('whisper'), load_cache_v2('indic')
+        cache2 = None
+    else:
+        cache2 = load_cache_v2() if use_v2 else None
     v2_hits = v2_miss = 0
+    w_hits = w_miss = i_hits = i_miss = 0
+    reasons: Counter = Counter()
+    channels: Counter = Counter()
 
     # Rung 1: exact work-ID truth. A prediction is a hit iff its registry id
     # is in the clip's reviewed truth set. NFC-normalize keys (APFS is NFD).
@@ -956,8 +1081,25 @@ def main() -> None:
 
     results = []
     c1 = c5 = r1 = r3 = rc = rc_n = n = ooc_n = ooc_ok = rn = 0
+    ans_incat = 0  # in-catalog clips that were answered (for precision@coverage)
     for p in files:
-        if use_v2:
+        if hybrid:
+            res = identify_v2_hybrid(p, targets, lyr, wcache, icache,
+                                     want_raga=not no_raga)
+            w_hits += res['cache_whisper'] == 'hit'
+            w_miss += res['cache_whisper'] == 'MISS'
+            i_hits += res['cache_indic'] == 'hit'
+            i_miss += res['cache_indic'] == 'MISS'
+            reasons[res['arbitration_reason']] += 1
+            channels[res['asr_channel']] += 1
+            if res['cache_v2'] == 'MISS':
+                v2_miss += 1
+                print(f'  !! hybrid cache MISS: {p.name} '
+                      f"(w={res['cache_whisper']} i={res['cache_indic']})",
+                      file=sys.stderr)
+            else:
+                v2_hits += 1
+        elif use_v2:
             res = identify_v2(p, targets, lyr, cache2,
                               want_raga=not no_raga)
             if res['cache_v2'] == 'MISS':
@@ -1020,6 +1162,7 @@ def main() -> None:
                 hit1 = bool(hits and hits[0])
                 hit5 = any(hits)
                 c1 += hit1; c5 += hit5
+                ans_incat += res['composition_confidence'] != 'none'
                 if res.get('raga_from_catalog'):
                     rc_n += 1
                     rc += any(skey(x) == skey(gt_raga)
@@ -1044,6 +1187,23 @@ def main() -> None:
         if rc_n:
             print(f"raga via catalog backfill {rc}/{rc_n} "
                   f"(on clips with confident composition)")
+        # precision at coverage (METRIC_CONTRACT primary): among ALL answered
+        # clips (in-catalog answers + OOC bluffs), fraction correct top-1;
+        # coverage = answered / all queries.
+        answered = ans_incat + (ooc_n - ooc_ok)
+        total = n + ooc_n
+        if total:
+            cov = 100.0 * answered / total
+            prec = (100.0 * c1 / answered) if answered else 0.0
+            print(f"precision@coverage: {c1}/{answered} correct "
+                  f"({prec:.0f}% precision at {cov:.0f}% coverage)")
+        if hybrid:
+            print(f"channels: " + ", ".join(f"{k} {v}"
+                  for k, v in channels.most_common()))
+            print(f"arbitration: " + ", ".join(f"{k} {v}"
+                  for k, v in reasons.most_common()))
+            print(f"whisper cache: {w_hits} hits, {w_miss} misses  |  "
+                  f"indic cache: {i_hits} hits, {i_miss} misses")
         if use_v2:
             print(f"v2 cache: {v2_hits} hits, {v2_miss} misses"
                   + ("  ** SCORE INVALID: misses present **"
