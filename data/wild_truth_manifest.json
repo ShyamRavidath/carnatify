@@ -1,0 +1,504 @@
+{
+ "Achyutam Keshavam__NA__OOC": {
+  "ooc": true
+ },
+ "Aigiri Nandini__NA__OOC": {
+  "ooc": true
+ },
+ "Alaipayuthe Kanna__Kambhoji__OOC": {
+  "ooc": true
+ },
+ "Amba Kamakshi__Bhairavi": {
+  "truth_ids": [
+   "comp00229"
+  ]
+ },
+ "Ananda naTana prakAsam__Kedaram": {
+  "truth_ids": [
+   "comp00313"
+  ]
+ },
+ "Baro Krishnayya__Ragamalika": {
+  "truth_ids": [
+   "comp00882"
+  ]
+ },
+ "Bho Shambho Shiva Shambho__Revati": {
+  "truth_ids": [
+   "comp00947"
+  ],
+  "note": "Bho Shambho -> \"bhO shambhO\" (revati, Dayaananda Saraswati, lyrics c2437). Registry canonical is truncated so fuzzy ranked it low, but raga+composer confirm the work."
+ },
+ "Bhuvini Dasudane__Śrīranjani": {
+  "truth_ids": [
+   "comp01029"
+  ]
+ },
+ "Brahmam Okate__Bowli__OOC": {
+  "ooc": true
+ },
+ "Chinna Chinna Aasai__NA__OOC": {
+  "ooc": true
+ },
+ "Chinna Kannan Azhaikiran__NA__OOC": {
+  "ooc": true
+ },
+ "Chinnanjiru Kiliye__Ragamalika__OOC": {
+  "ooc": true
+ },
+ "Devadideva__Jaganmōhini": {
+  "truth_ids": [
+   "comp01333"
+  ]
+ },
+ "Ehi annapUrNE__Punnagavarali": {
+  "truth_ids": [
+   "comp01493"
+  ],
+  "note": "Ehi annapUrNE -> \"Ehi annapUrNE sannidhEhi\" (Dikshitar, punnagavarali, lyrics c5681). Truncation stub comp01492 excluded."
+ },
+ "Ennavale Adi Ennavale__NA__OOC": {
+  "ooc": true
+ },
+ "Enu Dhanyalo Lakumi__Todi": {
+  "truth_ids": [
+   "comp01866"
+  ]
+ },
+ "Eppadi Padinaro__Karṇāṭaka dēvagāndhāri": {
+  "truth_ids": [
+   "comp01883"
+  ]
+ },
+ "Evari Bodhana__Ābhōgi": {
+  "truth_ids": [
+   "comp01970"
+  ]
+ },
+ "Hanuman Chalisa__NA__OOC": {
+  "ooc": true
+ },
+ "Innu Daya Barade__Kalyana Vasantha": {
+  "truth_ids": [
+   "comp02578"
+  ]
+ },
+ "Jagadanandakaraka__Nata": {
+  "truth_ids": [
+   "comp02725"
+  ]
+ },
+ "Kaddanuvariki__Todi": {
+  "truth_ids": [
+   "comp02911"
+  ]
+ },
+ "Kamakshi Ni__Yadukula Khamboji": {
+  "truth_ids": [
+   "comp03070"
+  ],
+  "review": true,
+  "note": "REVIEW: no exact row. Tentative \"kAmAkshi ninnE\" (comp03070, TiruveTTiyoor Tyaagayya). Confirm the yadukula kambhoji \"kAmAkshi ni\" work."
+ },
+ "Kande Kandenu__Shankarabharana": {
+  "truth_ids": [
+   "comp03196"
+  ]
+ },
+ "Kanne Kalaimane__NA__OOC": {
+  "ooc": true
+ },
+ "Katrin Mozhi__NA__OOC": {
+  "ooc": true
+ },
+ "Koluvamaregada kodandapani__Tōḍi": {
+  "truth_ids": [
+   "comp03570"
+  ]
+ },
+ "Kurai Onrum Illai__Rāgamālika": {
+  "truth_ids": [
+   "comp03711"
+  ]
+ },
+ "Ma Janaki__Khamboji": {
+  "truth_ids": [
+   "comp03910"
+  ]
+ },
+ "Madhava Mamava__Nīlāṁbari": {
+  "truth_ids": [
+   "comp03805",
+   "comp03806"
+  ],
+  "review": true,
+  "note": "work-family: nilambari \"mAdhava mAmava (dEva)\". comp03805 \"mAdhava mAmava\" (BaalamuraLi, lyrics c9002) + comp03806 \"Madhava Mamava Deva\" (nilambari stub, no lyrics -- the fuller title of the same kriti). comp03807 \"(lAli)\" = distinct Narayana Teertar tarangam, EXCLUDED. REVIEW: matcher returns comp03806 @2.001 -> real duplicate undercount if excluded."
+ },
+ "Madhura Madhura__Bageshri": {
+  "truth_ids": [
+   "comp03830"
+  ]
+ },
+ "Maithreem Bhajata__Kalyani__OOC": {
+  "ooc": true
+ },
+ "Malargale Malargale__NA__OOC": {
+  "ooc": true
+ },
+ "Margazhi Thingal__NA__OOC": {
+  "ooc": true
+ },
+ "Minsara Kanna__NA__OOC": {
+  "ooc": true
+ },
+ "Munbe Vaa__NA__OOC": {
+  "ooc": true
+ },
+ "Narumugaye__NA__OOC": {
+  "ooc": true
+ },
+ "Nila Kaigirathu__NA__OOC": {
+  "ooc": true
+ },
+ "Ninnukori Yunnanura__Mohanam": {
+  "truth_ids": [
+   "comp05096"
+  ],
+  "note": "Ninnukori -> \"ninnE kOriyunnAnurA (pv)\" (mohanam varnam)."
+ },
+ "O Rangashayee__Kambhoji": {
+  "truth_ids": [
+   "comp05324"
+  ]
+ },
+ "Om Jai Jagdish Hare__NA__OOC": {
+  "ooc": true
+ },
+ "Pachai Nirame__NA__OOC": {
+  "ooc": true
+ },
+ "Paluke Bangaramayena__Ānandabhairavi": {
+  "truth_ids": [
+   "comp05517"
+  ]
+ },
+ "Paripalayamam__Rītigauḷa": {
+  "truth_ids": [
+   "comp05713"
+  ]
+ },
+ "Payoji Maine__NA__OOC": {
+  "ooc": true
+ },
+ "Pillangoviya__Mohanam": {
+  "truth_ids": [
+   "comp05867"
+  ],
+  "note": "Pillangoviya -> \"piLLangOviya celuva\" (mohanam, Purandara Daasar, lyrics)."
+ },
+ "Raghupati Raghava Raja Ram__NA__OOC": {
+  "ooc": true
+ },
+ "Ramabhi Rama__Dhanyāsi": {
+  "truth_ids": [
+   "comp06194"
+  ]
+ },
+ "Ranga Baro__Sindhu Bhairavi": {
+  "truth_ids": [
+   "comp06234"
+  ],
+  "review": true,
+  "note": "REVIEW: three \"ranga bArO\" rows exist, all tagged mohana/shankarabharana (registry), none sindhu bhairavi. Same devaranama sung in sindhu bhairavi here. Tentative comp06234 \"ranga bArO ranga\"; confirm which pallavi."
+ },
+ "Rara Venu Gopabala__Bilahari__OOC": {
+  "ooc": true
+ },
+ "Samayaniki Thagu Maatalaene__Arabhi__OOC": {
+  "ooc": true
+ },
+ "Sarvam Brahmamayam__Jhinjoti": {
+  "truth_ids": [
+   "comp06750"
+  ]
+ },
+ "Thaye Yashoda__Todi__OOC": {
+  "ooc": true
+ },
+ "Thendral Vanthu Theendum Pothu__NA__OOC": {
+  "ooc": true
+ },
+ "Tulasi Bilva__Kēdāragauḷa": {
+  "truth_ids": [
+   "comp07816"
+  ]
+ },
+ "Vaishnava Jana To__Khamaj": {
+  "truth_ids": [
+   "comp08097"
+  ],
+  "note": "Vaishnava Jana To -> \"vaishanava janatO\" (comp08097)."
+ },
+ "Varuvai Varuvai__Madhyamavati": {
+  "truth_ids": [
+   "comp08338"
+  ]
+ },
+ "Vellai Pura Ondru__NA__OOC": {
+  "ooc": true
+ },
+ "Vennilave Vennilave__NA__OOC": {
+  "ooc": true
+ },
+ "abhimAna__Begada": {
+  "truth_ids": [
+   "comp00021"
+  ],
+  "note": "abhimAna -> \"abhimAnamennaDu galgu rAma\" (begada, PaTnam Subramanya Aiyyar, lyrics c1356). Stub comp00019 excluded."
+ },
+ "akhilAndEswari__Dvijavanti": {
+  "truth_ids": [
+   "comp00173"
+  ]
+ },
+ "alapana1__Bēgaḍa": {
+  "truth_ids": [],
+  "review": true,
+  "note": "REVIEW: raga alapana (begada), no composition/sahitya. Guaranteed comp miss (no work exists). Belongs in a non-sahitya stratum Deepti may later exclude from the lyrics-ASR denominator (cf. raghuvamsa ruling)."
+ },
+ "alapana2__Varāḷi": {
+  "truth_ids": [],
+  "review": true,
+  "note": "REVIEW: raga alapana (varali), no composition/sahitya. Guaranteed comp miss; non-sahitya stratum candidate."
+ },
+ "bhAgyAda lakshmi__Madhyamavati": {
+  "truth_ids": [
+   "comp00711"
+  ]
+ },
+ "bhAvayAmi raghurAmam__Ragamalika": {
+  "truth_ids": [
+   "comp00902"
+  ]
+ },
+ "bhajarE bhaja mAnasa__Kanada": {
+  "truth_ids": [
+   "comp00721"
+  ]
+ },
+ "bhajarE gOpAlam__Hindolam": {
+  "truth_ids": [
+   "comp00746"
+  ]
+ },
+ "bhajare__Kalyani": {
+  "truth_ids": [
+   "comp00744"
+  ],
+  "review": true,
+  "note": "REVIEW: only kalyani \"bhajare\" is stub comp00744 (no composer/lyrics). Which kalyani \"bhajarE\" work is this? Zero lyrics -> Rung 2 gap regardless. Fuzzy matched 45 rows."
+ },
+ "brOchevarevarura__Khamas": {
+  "truth_ids": [
+   "comp00981"
+  ]
+ },
+ "chakkani rAja__Kharaharapriya": {
+  "truth_ids": [
+   "comp01032"
+  ]
+ },
+ "dorakuna__Bilahari": {
+  "truth_ids": [
+   "comp01436"
+  ]
+ },
+ "endarO mahAnubhAvulu__Sri": {
+  "truth_ids": [
+   "comp01649"
+  ],
+  "note": "endarO -> \"endarO mahAnubhAvuklu\" (comp01649, registry has a \"ku\" typo in the canonical)."
+ },
+ "entara__Harikambhoji": {
+  "truth_ids": [
+   "comp01842",
+   "comp01843",
+   "comp01844",
+   "comp01845"
+  ],
+  "note": "work-family \"entarAnI tanakenta pOni\" (harikambhoji). Rung 2 correction: comp01843 \"enta rAni\" IS this work -- its karnatik page c2308 pallavi reads \"enta rAni tanakenta pOni\" -- and it carries the lyrics, so it belongs in the set (it was wrongly excluded in Rung 1). comp01842/44/45 are lyrics-less truncations of the same kriti. Codex M2-recoverable clip."
+ },
+ "himAdrisutE__Kalyani": {
+  "truth_ids": [
+   "comp02390"
+  ]
+ },
+ "jagadOddhAraNa__Kapi": {
+  "truth_ids": [
+   "comp02723"
+  ]
+ },
+ "krishNA nee bEganE bArO__Yamunakalyani": {
+  "truth_ids": [
+   "comp03621"
+  ]
+ },
+ "mAnasa sancharare__Sama": {
+  "truth_ids": [
+   "comp04037"
+  ]
+ },
+ "mOkshamu galadhA__Saramati": {
+  "truth_ids": [
+   "comp04380"
+  ]
+ },
+ "marivErE gati__Ānandabhairavi": {
+  "truth_ids": [
+   "comp04228"
+  ]
+ },
+ "marivEre dikkevaru__Latangi": {
+  "truth_ids": [
+   "comp04227"
+  ]
+ },
+ "nagumomu ganaleni__Saveri": {
+  "truth_ids": [
+   "comp04573"
+  ]
+ },
+ "nagumomu__Madhyamavati": {
+  "truth_ids": [
+   "comp04572"
+  ],
+  "note": "nagumomu (madhyamavati) -> \"nagumOmu galavAni\" (Tyagaraja, lyrics c1704). Stub comp04571 excluded. Distinct from \"nagumomu ganaleni\"[Saveri] -> comp04573."
+ },
+ "nannu pAlimpa__Mōhanaṁ": {
+  "truth_ids": [
+   "comp04723"
+  ]
+ },
+ "nidhi chAla sukhamA__Kalyani": {
+  "truth_ids": [
+   "comp04923"
+  ]
+ },
+ "ninnuvinA marigaladA__Ritigaula": {
+  "truth_ids": [
+   "comp05111"
+  ]
+ },
+ "paridAnamicchidE__Bilahari": {
+  "truth_ids": [
+   "comp05700"
+  ]
+ },
+ "rAma nannu brOvara__Harikambhoji": {
+  "truth_ids": [
+   "comp06163"
+  ]
+ },
+ "rAma nee__Karaharapriya": {
+  "truth_ids": [
+   "comp06177"
+  ],
+  "note": "rAma nee -> \"rAma nee samAnam evaru\" (kharaharapriya, Tyagaraja, lyrics c1350). Stub comp06166 (\"rAma nee\", Badraacala Raamadaas, no lyrics) excluded. Fuzzy matched 67 rows here -- the flagship flattery case."
+ },
+ "rAma ninnu nera__Ānandabhairavi": {
+  "truth_ids": [
+   "comp06170"
+  ]
+ },
+ "raghuvamsa__Kathanakuthoohalam": {
+  "truth_ids": [
+   "comp06049"
+  ]
+ },
+ "raghuvara__Kamavardani": {
+  "truth_ids": [
+   "comp06054"
+  ],
+  "note": "raghuvara -> \"raghuvara nannu\" (kAmavardhani/pantuvarALi, Tyagaraja, lyrics c2739). Stub comp06052 excluded."
+ },
+ "sObillu saptaswara2__Jaganmōhini": {
+  "truth_ids": [
+   "comp06979"
+  ],
+  "note": "duplicate take of sObillu saptaswara -> \"Sobhillu Sapthaswara\" (comp06979, Tyagaraja)."
+ },
+ "sObillu saptaswara__Jaganmōhini": {
+  "truth_ids": [
+   "comp06979"
+  ]
+ },
+ "samikki sari__Kedaragaula": {
+  "truth_ids": [
+   "comp06498"
+  ]
+ },
+ "sarOja daLa nEtri__Śankarābharaṇaṁ": {
+  "truth_ids": [
+   "comp06734"
+  ]
+ },
+ "sarasijanAba murArE__Tōḍi": {
+  "truth_ids": [
+   "comp06693",
+   "comp06694",
+   "comp06731"
+  ],
+  "review": true,
+  "note": "work-family: Swaati TirunaaL padam \"sarasijanAbha murArE\". comp06693 \"...pAhi\" (todi, lyrics c6939) + comp06731 stub (todi) + comp06694 \"(tv)\" (catalogued mayamalavagaula, lyrics c6938 -- same sahitya, padam sung in the performer's raga). REVIEW: confirm comp06694 is the same padam. Matcher returns comp06694 @1.801 and comp06731 @1.351 -> real duplicate undercount if excluded."
+ },
+ "shrI varalakshmi namastubhyam__Sri": {
+  "truth_ids": [
+   "comp07319"
+  ]
+ },
+ "siddhi vinAyakam__Shanmukhapriya": {
+  "truth_ids": [
+   "comp06850"
+  ]
+ },
+ "sogasugA mrudanga__Sriranjani": {
+  "truth_ids": [
+   "comp06985"
+  ]
+ },
+ "sri subramanyaya__Kāṁbhōji": {
+  "truth_ids": [
+   "comp07296"
+  ]
+ },
+ "sri vAtApi__Sahana": {
+  "truth_ids": [
+   "comp07321"
+  ]
+ },
+ "swAminatha__Nata": {
+  "truth_ids": [
+   "comp07450"
+  ]
+ },
+ "vAtApi gaNapathim__Hamsadhvāni": {
+  "truth_ids": [
+   "comp08381"
+  ]
+ },
+ "vidulaku mrokkedA__Mayamalavagaula": {
+  "truth_ids": [
+   "comp08503"
+  ]
+ },
+ "yArO ivar yArO__Bhairavi": {
+  "truth_ids": [
+   "comp08652"
+  ]
+ },
+ "yEnATi mOmu palamu__Bhairavi": {
+  "truth_ids": [
+   "comp08673"
+  ]
+ }
+}

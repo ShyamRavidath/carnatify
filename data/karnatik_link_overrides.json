@@ -1,0 +1,18 @@
+{
+ "_doc": "Rung 2 reviewed lyric-link overrides. work_id -> [karnatik page ids] appended to that registry row's karnatik_pages at load time (identify_clip.load_targets). Surgical + id-stable: does NOT rebuild the registry (registry ids are assigned by enumeration order in build_composition_registry.py, so a rebuild would reshuffle every comp##### and break data/wild_truth_manifest.json). These link zero-line sahitya truths to existing local karnatik lyrics whose page title differs enough from the registry canonical that the global fuzzy merger never linked them (all below the 88 merge threshold) -- exactly why an explicit reviewed override is the right mechanism rather than lowering the global threshold.",
+ "links": {
+  "comp00229": ["c1080.shtml"],
+  "comp03570": ["c2405.shtml"],
+  "comp08673": ["c1736.shtml"]
+ },
+ "links_provenance": {
+  "comp00229": "Amba Kamakshi[Bhairavi] -> c1080 'kAmAkshI (swarajati)' (bhairavi, Syaama Saastri). Syama Sastri's bhairavi swarajati; registry canonical 'Amba Kamakshi' never fuzzy-merged to the karnatik 'kAmAkshI' spelling.",
+  "comp03570": "Koluvamaregada kodandapani[Todi] -> c2405 'koluvamare gada' (tODi, Tyagaraja). Exact kriti; page title spacing differs from registry canonical.",
+  "comp08673": "yEnATi mOmu palamu[Bhairavi] -> c1736 'EnATi nOmu phalamO' (bhairavi, Tyagaraja). Codex-identified; soft-title sim ~83.9, below the global merge threshold."
+ },
+ "lyrics_missing": {
+  "comp06170": "rAma ninnu nera[Anandabhairavi]: no anandabhairavi 'ninnu nera' kriti in local karnatik (searched all 151 anandabhairavi pages + every 'ninnu nera' title -- matches exist only in kamavardhani/arabhi/kharaharapriya/surati/etc). Needs a fetch or a raga/title re-check by Deepti.",
+  "comp08097": "Vaishnava Jana To[Khamaj]: Narsi Mehta Gujarati bhajan -- outside the karnatik (Carnatic) scrape scope; no local page.",
+  "comp00744": "bhajare[Kalyani]: work not yet identified (manifest review item -- which kalyani 'bhajarE'?). Cannot link until Deepti names it."
+ }
+}

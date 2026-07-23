@@ -164,6 +164,56 @@ def test_match_lyrics_channels_and_detail(targets):
     assert 0.0 <= d['k_cov'] <= 1.0 and 0.0 <= d['q_cov'] <= 1.0
 
 
+# ------------------------------------------- Rung 1: wild-truth manifest
+
+@pytest.fixture(scope='module')
+def _wild():
+    import json
+    reg = json.loads(ic.REGISTRY.read_text())
+    manifest = json.loads(ic.WILD_TRUTH.read_text())
+    return reg, {r['id'] for r in reg}, manifest
+
+
+def test_manifest_ids_all_exist_in_registry(_wild):
+    _, ids, manifest = _wild
+    for stem, m in manifest.items():
+        for tid in m.get('truth_ids', []):
+            assert tid in ids, f'{stem}: unknown truth id {tid}'
+
+
+def test_manifest_covers_every_in_catalog_clip(_wild):
+    # every non-OOC entry is either a real truth set or an explicit
+    # empty/non-sahitya row -- there is no silent fallback.
+    _, _, manifest = _wild
+    for stem, m in manifest.items():
+        if m.get('ooc'):
+            continue
+        assert 'truth_ids' in m, f'{stem}: no truth_ids and not OOC'
+
+
+def test_rama_nee_truth_is_one_to_one(_wild):
+    """The flagship flattery case: fuzzy `partial_ratio >= 90` matched ~67
+    registry rows for the generic short title 'rAma nee'. The reviewed
+    manifest resolves it to exactly the real work and rejects the rest."""
+    reg, _, manifest = _wild
+    truth = set(manifest['rAma nee__Karaharapriya']['truth_ids'])
+    assert truth == {'comp06177'}  # rAma nee samAnam evaru (Tyagaraja)
+
+    # characterize the old behavior we removed: the fuzzy rule was loose
+    a = ic.skey('rAma nee')
+    fuzzy = {r['id'] for r in reg
+             if ic._partial(a, ic.skey(r['canonical'])) >= 90
+             or ic._partial(ic.skey(r['canonical']), a) >= 90}
+    assert len(fuzzy) > 40, 'expected the old fuzzy rule to over-match'
+
+    # id comparison accepts only the real work; the stub and unrelated
+    # short-title neighbours that fuzzy accepted are now rejected.
+    assert 'comp06177' in truth
+    for wrong in ('comp06166', 'comp06168', 'comp06180'):
+        assert wrong in fuzzy      # fuzzy wrongly accepted these
+        assert wrong not in truth  # id comparison correctly rejects them
+
+
 def test_variants_from_v2_selects_per_source():
     entry = {'hypotheses': [
         {'source': 'mix', 'lang': 'auto', 'raw': 'short', 'status': 'ok'},

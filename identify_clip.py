@@ -147,6 +147,12 @@ def tokens(s: str, minlen: int = 4) -> list[str]:
 
 REGISTRY = ROOT / 'data' / 'composition_registry.json'
 KARNATIK = ROOT / 'data' / 'karnatik_lyrics.json'
+# reviewed clip-basename -> canonical work id(s) map for the wild scoreboard
+# (Rung 1: replaces evaluator-time fuzzy title matching that flattered the
+# board -- "rAma nee" fuzzy-matched 67 unrelated registry rows).
+WILD_TRUTH = ROOT / 'data' / 'wild_truth_manifest.json'
+# Rung 2: reviewed work-id -> extra karnatik page links (load-time merge)
+LINK_OVERRIDES = ROOT / 'data' / 'karnatik_link_overrides.json'
 # lyric-line pseudo-variants: skip section headers and refrain markers
 LINE_SKIP = re.compile(r'^(pallavi|anupallavi|cara[nN]am|charanam|caranam'
                        r'|samashTi.*|madhyamak.*|citta ?svaram?|swaram?'
@@ -258,6 +264,13 @@ def load_targets():
         kar = {r['page']: r for r in json.loads(KARNATIK.read_text())
                if r.get('lyrics')}
 
+    # Rung 2: reviewed lyric-link overrides (work id -> extra karnatik pages)
+    # applied at load time -- surgical and id-stable, unlike a registry
+    # rebuild which would reshuffle every comp##### and break the manifest.
+    link_over: dict[str, list[str]] = {}
+    if LINK_OVERRIDES.exists():
+        link_over = json.loads(LINK_OVERRIDES.read_text()).get('links', {})
+
     entries = []
     if REGISTRY.exists():
         for r in json.loads(REGISTRY.read_text()):
@@ -265,12 +278,14 @@ def load_targets():
             folded = [fold(v) for v in variants]
             lyr = next((lyr_by_fold[f] for f in folded if f in lyr_by_fold),
                        '')
-            entries.append({'canonical': r['canonical'],
+            pages = list(dict.fromkeys(r.get('karnatik_pages', [])
+                                       + link_over.get(r.get('id'), [])))
+            entries.append({'id': r.get('id'),
+                            'canonical': r['canonical'],
                             'ragas': r.get('ragas', []),
                             'variants': [f for f in folded if len(f) >= 6],
                             'lyr': lyr,
-                            'lines': _line_variants(
-                                r.get('karnatik_pages', []), kar)})
+                            'lines': _line_variants(pages, kar)})
         entries = [e for e in entries if e['variants']]
     else:
         # legacy fallback: one entry per unique folded title
@@ -283,8 +298,9 @@ def load_targets():
         for k, ly in lyr_by_fold.items():
             if len(k) >= 6:
                 seen.setdefault(k, k)
-        entries = [{'canonical': disp, 'ragas': [], 'variants': [k],
-                    'lyr': lyr_by_fold.get(k, ''), 'lines': []}
+        entries = [{'id': None, 'canonical': disp, 'ragas': [],
+                    'variants': [k], 'lyr': lyr_by_fold.get(k, ''),
+                    'lines': []}
                    for k, disp in seen.items()]
     for e in entries:
         _precompute(e)
@@ -517,7 +533,8 @@ def match_lyrics(transcript: str, entries: list[dict],
     q_total = sum(q_idf.values())
     for s, e, ch, ch_vt in scored[:topn]:
         channel = max(ch, key=ch.get)
-        row = {'title': e['canonical'], 'score': round(float(s), 3),
+        row = {'id': e.get('id'), 'title': e['canonical'],
+               'score': round(float(s), 3),
                'ragas': e['ragas'], 'channel': channel,
                'channel_scores': {k: round(float(v), 3)
                                   for k, v in ch.items()}}
@@ -890,9 +907,12 @@ def main() -> None:
     cache2 = load_cache_v2() if use_v2 else None
     v2_hits = v2_miss = 0
 
-    def truth_match(pred_title: str, gt: str) -> bool:
-        a, b = skey(pred_title), skey(gt)
-        return _partial(a, b) >= 90 or _partial(b, a) >= 90
+    # Rung 1: exact work-ID truth. A prediction is a hit iff its registry id
+    # is in the clip's reviewed truth set. NFC-normalize keys (APFS is NFD).
+    wild_truth = (json.loads(WILD_TRUTH.read_text())
+                  if WILD_TRUTH.exists() else {})
+    wild_truth = {unicodedata.normalize('NFC', k): v
+                  for k, v in wild_truth.items()}
 
     results = []
     c1 = c5 = r1 = r3 = rc = rc_n = n = ooc_n = ooc_ok = rn = 0
@@ -949,7 +969,13 @@ def main() -> None:
                       f"{'REJECT OK' if rejected else 'BLUFF'}" + raga_txt)
             else:
                 n += 1
-                hits = [truth_match(c['title'], gt_title)
+                key = unicodedata.normalize('NFC', p.stem)
+                entry = wild_truth.get(key)
+                if entry is None:
+                    print(f"  !! no wild-truth manifest entry for {key!r} "
+                          f"-- counted as a miss", file=sys.stderr)
+                truth_ids = set(entry.get('truth_ids', [])) if entry else set()
+                hits = [c.get('id') in truth_ids
                         for c in res['compositions']]
                 hit1 = bool(hits and hits[0])
                 hit5 = any(hits)
