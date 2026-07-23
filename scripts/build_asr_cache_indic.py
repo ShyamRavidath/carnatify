@@ -27,6 +27,13 @@ Full run (long — keep the lid open):
   caffeinate -dims venv_train/bin/python -u scripts/build_asr_cache_indic.py ~/sung_tests
 Smoke test (integration only, no capability claim):
   ... build_asr_cache_indic.py ~/sung_tests nagumomu Devadideva
+
+Rung 5: `--source stem` transcribes the htdemucs vocal stem instead
+(pulled ONLY through identify_clip._vocal_stem_16k — Demucs is re-run per
+clip; no persisted stem PCM exists), writing data/asr_cache_indic_stem.json
+under INDIC_STEM_CONFIG_ID. `--source mix` (default) stays byte-identical
+to the Rung 3 behavior. Demucs is CPU-bound and timeout-prone under
+contention: no concurrent heavy eval, lid open.
 """
 import json
 import os
@@ -84,7 +91,7 @@ class IndicCTC:
         self.blank_id = cfg.get('BLANK_ID', 256)
         self.frame_s = cfg.get('FRAME_DURATION_MS', 0.08)
 
-    def transcribe(self, wav16, langs=LANGS) -> list[dict]:
+    def transcribe(self, wav16, langs=LANGS, source='mix') -> list[dict]:
         """One hypothesis per language lane from a single encoder pass.
         wav16: float32 numpy mono @16k."""
         torch = self._torch
@@ -99,7 +106,7 @@ class IndicCTC:
                                    {'encoder_output': enc_out})[0]
         hyps = []
         for lang in langs:
-            h = {'source': 'mix', 'lang': lang, 'raw': '', 'segments': [],
+            h = {'source': source, 'lang': lang, 'raw': '', 'segments': [],
                  'status': 'ok'}
             try:
                 lp = torch.from_numpy(
@@ -138,7 +145,7 @@ class IndicCTC:
         return hyps
 
 
-def build(folder: Path, only: list[str]) -> None:
+def build(folder: Path, only: list[str], source: str = 'mix') -> None:
     import librosa
     files = sorted(p for p in folder.iterdir()
                    if p.suffix.lower() in AUDIO_EXTS)
@@ -151,37 +158,62 @@ def build(folder: Path, only: list[str]) -> None:
     if not files:
         sys.exit(f'no matching audio files in {folder}')
     model = IndicCTC(model_dir())
-    cache = ic.load_cache_v2()
-    assert cache['config'] == ic.ASR_CONFIG_INDIC or not cache['entries'], \
+    if source == 'stem':
+        backend, cache_path = 'indic_stem', ic.INDIC_STEM_CACHE
+        config_id, expected = ic.INDIC_STEM_CONFIG_ID, ic.ASR_CONFIG_INDIC_STEM
+    else:
+        backend, cache_path = 'indic', ic.INDIC_CACHE
+        config_id, expected = ic.INDIC_CONFIG_ID, ic.ASR_CONFIG_INDIC
+    cache = ic.load_cache_v2(backend)
+    assert cache['config'] == expected or not cache['entries'], \
         'refusing to write into a cache with a different config'
     done = skipped = 0
     t_start = time.time()
     for i, p in enumerate(files, 1):
         sha = ic.audio_sha256(p)
-        key = ic.cache2_key(sha)
-        if key in cache['entries']:
+        key = ic.cache2_key(sha, config_id)
+        prev = cache['entries'].get(key)
+        if prev is not None and not all(
+                h['status'].startswith('error')
+                for h in prev['hypotheses']):
             skipped += 1
             continue
+        # all-error entries are retried on resume: an integration failure
+        # must never permanently masquerade as a transcribed clip
         t0 = time.time()
-        mix, _ = librosa.load(str(p), sr=16000, mono=True)
-        try:
-            hyps = model.transcribe(mix.astype('float32'))
-        except Exception as e:
-            # whole-clip integration failure: recorded per-lane as error,
-            # never as an empty (ASR-dead-looking) hypothesis
-            hyps = [{'source': 'mix', 'lang': lang, 'raw': '',
-                     'segments': [],
-                     'status': f'error: {type(e).__name__}: {e}'}
-                    for lang in LANGS]
-            print(f'  (indic encode failed on {p.name}: {e})',
-                  file=sys.stderr)
+        hyps = None
+        if source == 'stem':
+            try:
+                audio = ic._vocal_stem_16k(p)
+            except Exception as e:
+                # separation-stage failure: per-lane error, NEVER five
+                # empties (an integration failure is not an ASR-dead clip)
+                hyps = [{'source': 'stem', 'lang': lang, 'raw': '',
+                         'segments': [],
+                         'status': ('error: separation: '
+                                    f'{type(e).__name__}: {e}')}
+                        for lang in LANGS]
+                print(f'  (demucs failed on {p.name}: {e})', file=sys.stderr)
+        else:
+            audio, _ = librosa.load(str(p), sr=16000, mono=True)
+            audio = audio.astype('float32')
+        if hyps is None:
+            try:
+                hyps = model.transcribe(audio, source=source)
+            except Exception as e:
+                hyps = [{'source': source, 'lang': lang, 'raw': '',
+                         'segments': [],
+                         'status': f'error: encode: {type(e).__name__}: {e}'}
+                        for lang in LANGS]
+                print(f'  (indic encode failed on {p.name}: {e})',
+                      file=sys.stderr)
         cache['entries'][key] = {
             'file': p.name,
             'audio_sha256': sha,
-            'config_id': ic.asr_config_id(),
+            'config_id': config_id,
             'hypotheses': hyps,
         }
-        ic._atomic_write_json(ic.INDIC_CACHE, cache)
+        ic._atomic_write_json(cache_path, cache)
         done += 1
         ok = sum(1 for h in hyps if h['status'] == 'ok')
         print(f'[{i}/{len(files)}] {p.name}  lanes ok {ok}/{len(hyps)}  '
@@ -191,13 +223,24 @@ def build(folder: Path, only: list[str]) -> None:
 
 
 if __name__ == '__main__':
-    if '--download' in sys.argv:
+    argv = sys.argv[1:]
+    if '--download' in argv:
         from huggingface_hub import snapshot_download
         print('downloading CTC subset of', REPO, flush=True)
         print(snapshot_download(REPO, **CTC_PATTERNS))
         sys.exit(0)
-    args = [a for a in sys.argv[1:] if not a.startswith('--')]
+    source = 'mix'
+    if '--source' in argv:
+        j = argv.index('--source')
+        try:
+            source = argv[j + 1]
+        except IndexError:
+            sys.exit('--source needs a value: mix|stem')
+        if source not in ('mix', 'stem'):
+            sys.exit(f'unknown --source {source!r}: expected mix|stem')
+        del argv[j:j + 2]
+    args = [a for a in argv if not a.startswith('--')]
     if not args:
-        sys.exit('usage: build_asr_cache_indic.py <clip-folder> '
-                 '[name-filter ...] | --download')
-    build(Path(args[0]).expanduser(), args[1:])
+        sys.exit('usage: build_asr_cache_indic.py [--source mix|stem] '
+                 '<clip-folder> [name-filter ...] | --download')
+    build(Path(args[0]).expanduser(), args[1:], source)

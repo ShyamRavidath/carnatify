@@ -61,6 +61,9 @@ CACHE2 = ROOT / 'data' / 'asr_cache_v2.json'
 # identity so either cache evaluates cleanly and neither can pollute the
 # other (CARNATIFY_ASR_BACKEND=indic selects it)
 INDIC_CACHE = ROOT / 'data' / 'asr_cache_indic.json'
+# Rung 5: IndicConformer CTC on the htdemucs vocal stem — third cache,
+# third config identity (CARNATIFY_ASR_BACKEND=hybrid_stem reads all three)
+INDIC_STEM_CACHE = ROOT / 'data' / 'asr_cache_indic_stem.json'
 MEL_HOP_S = 128 / 44100
 TAUS = (0.1, 0.15, 0.25)
 NB = 40
@@ -685,19 +688,55 @@ INDIC_CONFIG_ID = 'indic-conformer-600m|onnx|ctc|mix:te,ta,kn,hi,ml|v2'
 WHISPER_CONFIG_ID = ('whisper-turbo|fp16=0|mix:auto,ta,te,hi'
                      '|stem:htdemucs+auto,ta,te|v2')
 
+# Rung 5 experiment: same model/decoder/lanes, audio source = htdemucs vocal
+# stem via _vocal_stem_16k (the extractor whisper's stem pass already uses).
+ASR_CONFIG_INDIC_STEM = {
+    'engine': 'onnxruntime',
+    'model': 'ai4bharat/indic-conformer-600m-multilingual',
+    'decoder': 'ctc',
+    'audio_source': 'demucs_vocals',
+    'mix_langs': [],
+    'stem_langs': ['te', 'ta', 'kn', 'hi', 'ml'],
+    'separation': {'model': 'htdemucs', 'target': 'vocals',
+                   'extractor': '_vocal_stem_16k', 'output_sr': 16000},
+}
+
+INDIC_STEM_CONFIG_ID = ('indic-conformer-600m|onnx|ctc'
+                        '|stem:htdemucs:te,ta,kn,hi,ml|v2')
+
+# explicit backend -> (cache file, cache config) map; unknown names raise
+# instead of silently falling through to whisper
+_BACKEND_CACHES = {
+    'whisper': (CACHE2, ASR_CONFIG_V2),
+    'indic': (INDIC_CACHE, ASR_CONFIG_INDIC),
+    'indic_stem': (INDIC_STEM_CACHE, ASR_CONFIG_INDIC_STEM),
+}
+
+_BACKEND_CONFIG_IDS = {
+    'whisper': WHISPER_CONFIG_ID,
+    'indic': INDIC_CONFIG_ID,
+    'indic_stem': INDIC_STEM_CONFIG_ID,
+}
+
+
 def asr_backend() -> str:
-    """'whisper' (default), 'indic', or 'hybrid' — selects which v2 cache(s)
-    the eval reads. Single backends keep their own file + config id, never
-    mixed; 'hybrid' (Rung 4) reads BOTH and arbitrates per clip."""
+    """'whisper' (default), 'indic', 'hybrid' (Rung 4: whisper+indic-mix
+    arbitration), or 'hybrid_stem' (Rung 5: adds the indic stem row). Single
+    backends keep their own file + config id, never mixed; hybrid modes read
+    every needed cache explicitly and arbitrate per clip."""
     return os.environ.get('CARNATIFY_ASR_BACKEND', 'whisper')
 
 
 def asr_config_id(backend: str | None = None) -> str:
     """Config id for a specific backend (defaults to the active one). An
-    explicit arg is required in hybrid mode, where the global backend cannot
+    explicit arg is required in hybrid modes, where the global backend cannot
     identify a single cache."""
-    return (INDIC_CONFIG_ID if (backend or asr_backend()) == 'indic'
-            else WHISPER_CONFIG_ID)
+    b = backend or asr_backend()
+    if b in ('hybrid', 'hybrid_stem'):
+        return WHISPER_CONFIG_ID  # ambient default; hybrid paths pass explicit
+    if b not in _BACKEND_CONFIG_IDS:
+        raise ValueError(f'unknown ASR backend {b!r}')
+    return _BACKEND_CONFIG_IDS[b]
 
 
 def audio_sha256(path: Path) -> str:
@@ -714,13 +753,14 @@ def cache2_key(sha: str, config_id: str | None = None) -> str:
 
 def load_cache_v2(backend: str | None = None) -> dict:
     backend = backend or asr_backend()
-    path = INDIC_CACHE if backend == 'indic' else CACHE2
+    if backend not in _BACKEND_CACHES:
+        raise ValueError(f'unknown ASR backend {backend!r} — expected one of '
+                         f'{sorted(_BACKEND_CACHES)}')
+    path, config = _BACKEND_CACHES[backend]
     if path.exists():
         return json.loads(path.read_text())
     return {'schema': 'carnatify-asr-cache-v2',
-            'config': (ASR_CONFIG_INDIC if backend == 'indic'
-                       else ASR_CONFIG_V2),
-            'entries': {}}
+            'config': config, 'entries': {}}
 
 
 def variants_from_v2(entry: dict, view=None) -> dict[str, str]:
@@ -737,11 +777,13 @@ def variants_from_v2(entry: dict, view=None) -> dict[str, str]:
     IndicConformer entries (config_id 'indic-conformer-...') emit native
     script ONLY — fold() would erase every hypothesis to '' — so they always
     use the translit_fold view, one variant per language lane ('indic_te',
-    ...). assess_variants already arbitrates multi-variant dicts (it gates
+    ...; stem entries 'stem_indic_te', preserving the hypothesis source).
+    assess_variants already arbitrates multi-variant dicts (it gates
     each and picks the best-scoring one), so the policy stays unchanged."""
     if entry.get('config_id', '').startswith('indic-conformer'):
         v = view or translit_fold
-        return {f"indic_{h['lang']}": v(h['raw'])
+        return {(f"indic_{h['lang']}" if h['source'] == 'mix'
+                 else f"stem_indic_{h['lang']}"): v(h['raw'])
                 for h in entry['hypotheses'] if h['status'] == 'ok'}
     if view is None:
         view = (translit_fold if os.environ.get('CARNATIFY_V2_TRANSLIT')
@@ -871,6 +913,64 @@ def identify_v2_hybrid(path: Path, targets, lyr, wcache: dict, icache: dict,
               'cache_v2': 'hit' if (wentry and ientry) else 'MISS',
               'asr_channel': channel, 'arbitration_reason': reason,
               'channel_evidence': ev,
+              **_strip_align(chosen)}
+    if want_raga:
+        ragas, err = raga_top5(path)
+        result['ragas'] = ragas
+        if err:
+            result['raga_error'] = err
+    return result
+
+
+# --------------------------------------------- Rung 5: indic stem source row
+
+def select_indic_source(mres: dict, sres: dict):
+    """Effective-Indic selector (Codex Rung 5, frozen): conservative, cannot
+    regress Rung 4. Mix passes the existing q_cov/ordered gate -> mix; elif
+    stem passes -> stem; else -> mix (stays ineligible, behavior unchanged).
+    Raw scores never participate; lists are never pooled.
+
+    Returns (effective_res, source_reason, mix_evidence, stem_evidence)."""
+    mev, sev = _channel_evidence(mres), _channel_evidence(sres)
+    if _passes_gate(mev):
+        return mres, 'mix_eligible', mev, sev
+    if _passes_gate(sev):
+        return sres, 'stem_fallback', mev, sev
+    return mres, 'neither_indic_source_eligible', mev, sev
+
+
+def identify_v2_hybrid_stem(path: Path, targets, lyr, wcache: dict,
+                            mcache: dict, stcache: dict,
+                            want_raga: bool = True) -> dict:
+    """Rung 5: three source rows (whisper, indic mix, indic stem), each scored
+    independently with detail=True; effective-Indic selector, then the
+    UNCHANGED Rung 4 arbitrate(). Read-only on all three caches."""
+    sha = audio_sha256(path)
+    wentry = wcache['entries'].get(cache2_key(sha, WHISPER_CONFIG_ID))
+    mentry = mcache['entries'].get(cache2_key(sha, INDIC_CONFIG_ID))
+    sentry = stcache['entries'].get(cache2_key(sha, INDIC_STEM_CONFIG_ID))
+    wres = assess_variants(variants_from_v2(wentry) if wentry else {},
+                           targets, lyr, detail=True)
+    mres = assess_variants(variants_from_v2(mentry) if mentry else {},
+                           targets, lyr, detail=True)
+    sres = assess_variants(variants_from_v2(sentry) if sentry else {},
+                           targets, lyr, detail=True)
+    eff, source_reason, mev, sev = select_indic_source(mres, sres)
+    chosen, channel, reason, ev = arbitrate(wres, eff)
+    if channel == 'indic':
+        channel = 'indic_mix' if eff is mres else 'indic_stem'
+    result = {'file': path.name, 'ragas': [],
+              'cache_whisper': 'hit' if wentry else 'MISS',
+              'cache_indic': 'hit' if mentry else 'MISS',
+              'cache_indic_stem': 'hit' if sentry else 'MISS',
+              'cache_v2': ('hit' if (wentry and mentry and sentry)
+                           else 'MISS'),
+              'asr_channel': channel, 'arbitration_reason': reason,
+              'indic_source_reason': source_reason,
+              'channel_evidence': {
+                  'whisper': ev['whisper'],
+                  'indic_mix': dict(mev, eligible=_passes_gate(mev)),
+                  'indic_stem': dict(sev, eligible=_passes_gate(sev))},
               **_strip_align(chosen)}
     if want_raga:
         ragas, err = raga_top5(path)
@@ -1062,15 +1162,23 @@ def main() -> None:
     cache = json.loads(TCACHE.read_text()) if TCACHE.exists() else {}
     scache = json.loads(SCACHE.read_text()) if SCACHE.exists() else {}
     hybrid = use_v2 and asr_backend() == 'hybrid'
+    hybrid_stem = use_v2 and asr_backend() == 'hybrid_stem'
     if hybrid:
         wcache, icache = load_cache_v2('whisper'), load_cache_v2('indic')
+        cache2 = None
+    elif hybrid_stem:
+        wcache, icache = load_cache_v2('whisper'), load_cache_v2('indic')
+        stcache = load_cache_v2('indic_stem')
         cache2 = None
     else:
         cache2 = load_cache_v2() if use_v2 else None
     v2_hits = v2_miss = 0
-    w_hits = w_miss = i_hits = i_miss = 0
+    w_hits = w_miss = i_hits = i_miss = s_hits = s_miss = 0
     reasons: Counter = Counter()
     channels: Counter = Counter()
+    ireasons: Counter = Counter()
+    stem_gate_pass = 0        # stem rows passing the frozen q_cov/ordered gate
+    stem_sel: Counter = Counter()  # outcome of clips answered via indic_stem
 
     # Rung 1: exact work-ID truth. A prediction is a hit iff its registry id
     # is in the clip's reviewed truth set. NFC-normalize keys (APFS is NFD).
@@ -1083,9 +1191,19 @@ def main() -> None:
     c1 = c5 = r1 = r3 = rc = rc_n = n = ooc_n = ooc_ok = rn = 0
     ans_incat = 0  # in-catalog clips that were answered (for precision@coverage)
     for p in files:
-        if hybrid:
-            res = identify_v2_hybrid(p, targets, lyr, wcache, icache,
-                                     want_raga=not no_raga)
+        if hybrid or hybrid_stem:
+            if hybrid_stem:
+                res = identify_v2_hybrid_stem(p, targets, lyr, wcache,
+                                              icache, stcache,
+                                              want_raga=not no_raga)
+                s_hits += res['cache_indic_stem'] == 'hit'
+                s_miss += res['cache_indic_stem'] == 'MISS'
+                ireasons[res['indic_source_reason']] += 1
+                stem_gate_pass += bool(
+                    res['channel_evidence']['indic_stem']['eligible'])
+            else:
+                res = identify_v2_hybrid(p, targets, lyr, wcache, icache,
+                                         want_raga=not no_raga)
             w_hits += res['cache_whisper'] == 'hit'
             w_miss += res['cache_whisper'] == 'MISS'
             i_hits += res['cache_indic'] == 'hit'
@@ -1095,7 +1213,9 @@ def main() -> None:
             if res['cache_v2'] == 'MISS':
                 v2_miss += 1
                 print(f'  !! hybrid cache MISS: {p.name} '
-                      f"(w={res['cache_whisper']} i={res['cache_indic']})",
+                      f"(w={res['cache_whisper']} i={res['cache_indic']}"
+                      + (f" s={res['cache_indic_stem']}" if hybrid_stem
+                         else '') + ')',
                       file=sys.stderr)
             else:
                 v2_hits += 1
@@ -1147,6 +1267,8 @@ def main() -> None:
                 ooc_n += 1
                 rejected = res['composition_confidence'] == 'none'
                 ooc_ok += rejected
+                if hybrid_stem and res['asr_channel'] == 'indic_stem':
+                    stem_sel['ooc_bluff'] += 1
                 print(f"  TRUTH {gt_title} [{gt_raga}] OOC: "
                       f"{'REJECT OK' if rejected else 'BLUFF'}" + raga_txt)
             else:
@@ -1163,6 +1285,9 @@ def main() -> None:
                 hit5 = any(hits)
                 c1 += hit1; c5 += hit5
                 ans_incat += res['composition_confidence'] != 'none'
+                if hybrid_stem and res['asr_channel'] == 'indic_stem':
+                    stem_sel['top1' if hit1
+                             else ('top5' if hit5 else 'wrong')] += 1
                 if res.get('raga_from_catalog'):
                     rc_n += 1
                     rc += any(skey(x) == skey(gt_raga)
@@ -1197,13 +1322,22 @@ def main() -> None:
             prec = (100.0 * c1 / answered) if answered else 0.0
             print(f"precision@coverage: {c1}/{answered} correct "
                   f"({prec:.0f}% precision at {cov:.0f}% coverage)")
-        if hybrid:
+        if hybrid or hybrid_stem:
             print(f"channels: " + ", ".join(f"{k} {v}"
                   for k, v in channels.most_common()))
             print(f"arbitration: " + ", ".join(f"{k} {v}"
                   for k, v in reasons.most_common()))
+            if hybrid_stem:
+                print(f"indic_source: " + ", ".join(f"{k} {v}"
+                      for k, v in ireasons.most_common()))
+                print(f"stem gate-passing rows: {stem_gate_pass}; "
+                      f"selected-stem outcomes: "
+                      + (", ".join(f"{k} {v}"
+                         for k, v in stem_sel.most_common()) or "none"))
             print(f"whisper cache: {w_hits} hits, {w_miss} misses  |  "
-                  f"indic cache: {i_hits} hits, {i_miss} misses")
+                  f"indic cache: {i_hits} hits, {i_miss} misses"
+                  + (f"  |  indic-stem cache: {s_hits} hits, {s_miss} misses"
+                     if hybrid_stem else ""))
         if use_v2:
             print(f"v2 cache: {v2_hits} hits, {v2_miss} misses"
                   + ("  ** SCORE INVALID: misses present **"

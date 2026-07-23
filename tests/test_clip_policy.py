@@ -400,3 +400,121 @@ def test_hybrid_explicit_config_ids_and_defaults(monkeypatch):
     assert ic.asr_config_id('whisper') == ic.WHISPER_CONFIG_ID
     assert ic.load_cache_v2('indic') is not None
 
+
+# --------------------------------------- Rung 5: indic stem source row
+
+def test_stem_config_identity_distinct():
+    """Three distinct config ids/caches; explicit indic_stem mapping; unknown
+    backend names raise instead of silently selecting whisper."""
+    ids = {ic.WHISPER_CONFIG_ID, ic.INDIC_CONFIG_ID, ic.INDIC_STEM_CONFIG_ID}
+    assert len(ids) == 3
+    files = {ic.CACHE2, ic.INDIC_CACHE, ic.INDIC_STEM_CACHE}
+    assert len(files) == 3
+    assert ic.INDIC_STEM_CACHE.name == 'asr_cache_indic_stem.json'
+    sha = 'c' * 64
+    keys = {ic.cache2_key(sha, cid) for cid in ids}
+    assert len(keys) == 3
+    assert ic.asr_config_id('indic_stem') == ic.INDIC_STEM_CONFIG_ID
+    assert ic.load_cache_v2('indic_stem')['config'] \
+        == ic.ASR_CONFIG_INDIC_STEM
+    with pytest.raises(ValueError):
+        ic.load_cache_v2('no_such_backend')
+    with pytest.raises(ValueError):
+        ic.asr_config_id('no_such_backend')
+
+
+def test_stem_variants_source_aware():
+    """Stem hypotheses become stem_indic_<lang> variants (source preserved);
+    error and empty lanes excluded exactly as mix; mix naming unchanged."""
+    stem_entry = {'config_id': ic.INDIC_STEM_CONFIG_ID, 'hypotheses': [
+        {'source': 'stem', 'lang': 'te', 'raw': 'వాతాపి గణపతిం భజే',
+         'status': 'ok'},
+        {'source': 'stem', 'lang': 'kn', 'raw': '', 'status': 'empty'},
+        {'source': 'stem', 'lang': 'hi', 'raw': 'x',
+         'status': 'error: separation: RuntimeError: boom'},
+    ]}
+    v = ic.variants_from_v2(stem_entry)
+    assert set(v) == {'stem_indic_te'}
+    assert v['stem_indic_te'] == 'vatapi ganapatim bhaje'
+    assert all(k.startswith('stem') for k in v)
+    # mix entries keep their Rung-3 names byte-identical
+    mix_entry = {'config_id': ic.INDIC_CONFIG_ID, 'hypotheses': [
+        {'source': 'mix', 'lang': 'te', 'raw': 'వాతాపి', 'status': 'ok'}]}
+    assert set(ic.variants_from_v2(mix_entry)) == {'indic_te'}
+
+
+def test_stem_separation_failure_yields_no_variants():
+    """A Demucs-stage failure is five per-lane errors, never five empties —
+    and produces zero variants (an integration failure is not ASR-dead)."""
+    entry = {'config_id': ic.INDIC_STEM_CONFIG_ID, 'hypotheses': [
+        {'source': 'stem', 'lang': lang, 'raw': '', 'segments': [],
+         'status': 'error: separation: RuntimeError: demucs died'}
+        for lang in ('te', 'ta', 'kn', 'hi', 'ml')]}
+    assert ic.variants_from_v2(entry) == {}
+    assert all(h['status'] != 'empty' for h in entry['hypotheses'])
+
+
+def test_indic_source_selector_decision_table():
+    """Frozen effective-Indic policy: mix-eligible wins; else eligible stem;
+    else mix forwarded unchanged (ineligible). Raw scores never consulted."""
+    Me = _res(True, 0.30, True, 'compMix')            # mix eligible
+    Mi = _res(True, 0.10, True, 'compMix')            # mix ineligible
+    Se = _res(True, 0.40, True, 'compStem')           # stem eligible
+    Si = _res(True, 0.10, True, 'compStem')           # stem ineligible
+    N = _res(False)
+
+    eff, reason, _, _ = ic.select_indic_source(Me, Se)
+    assert eff is Me and reason == 'mix_eligible'     # mix wins even vs
+    # higher-q_cov stem — no q_cov contest
+    eff, reason, _, _ = ic.select_indic_source(Mi, Se)
+    assert eff is Se and reason == 'stem_fallback'
+    eff, reason, _, _ = ic.select_indic_source(N, Se)
+    assert eff is Se and reason == 'stem_fallback'
+    eff, reason, _, _ = ic.select_indic_source(Mi, Si)
+    assert eff is Mi and reason == 'neither_indic_source_eligible'
+    eff, reason, _, _ = ic.select_indic_source(N, N)
+    assert eff is N and reason == 'neither_indic_source_eligible'
+    # stem with a huge raw score but failed gate can never be selected
+    eff, reason, _, _ = ic.select_indic_source(
+        Mi, _res(True, 0.10, True, 'compStem', score=9.9))
+    assert eff is Mi
+
+
+def test_hybrid_stem_no_fusion_through_full_chain():
+    """selector + arbitrate returns exactly one source row's list and carries
+    that row's metadata intact."""
+    W = _res(True, 0.10, True, 'compW', conf='low')   # whisper weak
+    Mi = _res(True, 0.10, True, 'compMix')            # mix ineligible
+    Se = _res(True, 0.40, True, 'compStem', conf='high')
+    eff, sreason, _, _ = ic.select_indic_source(Mi, Se)
+    chosen, chan, reason, _ = ic.arbitrate(W, eff)
+    assert chosen is Se and chan == 'indic'
+    assert reason == 'indic_overrides_weak_whisper'
+    assert chosen['transcript'] == 'txt-compStem'
+    assert chosen['composition_confidence'] == 'high'
+    assert [c['id'] for c in chosen['compositions']] == ['compStem']
+
+
+def test_hybrid_stem_missing_cache_marks_invalid(targets, tmp_path):
+    """A missing stem entry marks the hybrid-stem result MISS and reports
+    which cache missed."""
+    entries, lyr = targets
+    f = tmp_path / 'x.wav'
+    f.write_bytes(b'not real audio')
+    empty = {'schema': 'carnatify-asr-cache-v2', 'config': {}, 'entries': {}}
+    sha = ic.audio_sha256(f)
+    wcache = {'entries': {ic.cache2_key(sha, ic.WHISPER_CONFIG_ID): {
+        'config_id': ic.WHISPER_CONFIG_ID,
+        'hypotheses': [{'source': 'mix', 'lang': 'auto',
+                        'raw': 'x', 'status': 'ok'}]}}}
+    mcache = {'entries': {ic.cache2_key(sha, ic.INDIC_CONFIG_ID): {
+        'config_id': ic.INDIC_CONFIG_ID,
+        'hypotheses': [{'source': 'mix', 'lang': 'te',
+                        'raw': '', 'status': 'empty'}]}}}
+    res = ic.identify_v2_hybrid_stem(f, entries, lyr, wcache, mcache,
+                                     dict(empty), want_raga=False)
+    assert res['cache_whisper'] == 'hit'
+    assert res['cache_indic'] == 'hit'
+    assert res['cache_indic_stem'] == 'MISS'
+    assert res['cache_v2'] == 'MISS'
+    assert res['indic_source_reason'] == 'neither_indic_source_eligible'
