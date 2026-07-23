@@ -494,4 +494,322 @@ the cheap, local, feature-unblocking next move, not as a top-1 leap.
    not drop below 8/36. Quote both verbatim here.
 Hold M2 / ISO views / SCES+M3 until M1's SCORE lands — one change per eval.
 
+## [2026-07-22] Fable — M1 landed @ 71f477d: SCORE unchanged (as designed), diagnostic reshapes the M2/M3 picture
+
+### Premise check (step 1) — Codex's numbers verified
+
+7,758 lyric-bearing karnatik pages, 7,536 with a standalone `pallavi`
+heading (97.1%) — **exact to the digit**. The 7,139/8,688 figure is rows
+linking any lyric-bearing page; pallavi-specific links are 6,933/8,688
+(79.8%), and after loading, 6,915/8,679 matchable entries carry
+pallavi-tagged lines. Not materially off; foundation solid; proceeded.
+
+### M1 implementation
+
+`_line_variants()` now preserves section/page/line order (heading state
+machine + `P:/A:/C:` prefixes), retains explicit-pallavi lines from every
+linked page ahead of the 60-line cap; `match_lyrics()` tracks per-channel
+maxima (title / pallavi / other), returns `channel` + `channel_scores` per
+row and, with `detail=True`, the winning alignment's evidence (matched
+pairs, matched/total IDF, distinct hits, two-sided coverage k_cov/q_cov,
+order flag). Ranking score is still the plain max — pallavi is a feature,
+not a bonus. +2 tests (12 passed, 1 xfail). Committed as `71f477d`; push
+stays with Deepti.
+
+### Rank/coverage diagnostic (step 3, quoted from scripts/m1_diagnostic.py)
+
+Note the slice grew: the Phase-0 re-ASR made 22 of the 42 auto-fetched
+in-catalog clips ASR-usable (was 15 pre-v2; 20 remain gate-dead).
+
+```text
+auto-fetched in-catalog: 42  ASR-usable: 22  gate-dead: 20
+truth retrieved (cumulative):
+  top-1    5/22   by channel: other=1, title=4
+  top-5    8/22   by channel: other=4, title=4
+  top-20   9/22   by channel: other=5, title=4
+  top-100  10/22   by channel: other=5, title=5
+```
+
+Findings, in decreasing importance:
+1. **12/22 ASR-usable truths are not even in the top-100.** Candidate
+   generation, not ranking, is the wall — quantified confirmation of
+   Codex's ceiling warning. A reranker (M3) has at most 5 rerankable
+   errors (rank 2-100) to work with on this slice.
+2. **The pallavi channel is argmax-zero but not weak.** Checked per-channel
+   scores on all 10 retrieved truths: pallavi scores >1.1 on 4 of them, but
+   title always beats it when the pallavi is what's sung (same tokens), and
+   `other` (caranam/anupallavi) beats it on mid-kriti clips. Explicit
+   pallavi indexing adds corroboration, not unique retrieval — its value
+   is as an M3/SCES agreement feature, which matches Codex's "feature, not
+   bonus" framing.
+3. **`other`-line retrieval is half the wins** (5/10) — the karnatik line
+   channel is earning its keep on mid-kriti windows (`raghuvara`,
+   `paridAnamicchidE`, `bhajare` are line-only recoveries).
+4. **A registry junk row surfaced as a top-1**: `8th Cross, V V Mohalla,
+   Mysore` (an address) beat everything for one clip. Ties into the known
+   registry-junk issue and Codex's work-family/P1 registry cleanup — worth
+   bundling into the M-ladder's registry pass.
+
+### M1 SCORE (step 3) — unchanged, as designed
+
+```text
+===== SCORE over 78 in-catalog + 28 OOC clips =====
+composition top-1 14/78  top-5 23/78
+OOC reject  21/28  (bluffs: 7)
+raga        skipped (--no-raga)
+raga via catalog backfill 13/40 (on clips with confident composition)
+v2 cache: 106 hits, 0 misses
+```
+Guard: `composition top-1 9/36  top-5 15/36`, `OOC reject 3/5`, 41 hits
+0 misses — holds. Byte-identical to the blessed baseline: M1 is
+instrumentation and claims no accuracy movement. M2 (segment alternatives
+with aggregation) is next per the accepted ladder — holding for Deepti's
+go per one-change-one-eval.
+
+## [2026-07-22] Fable — the 12 missing truths decomposed: 10 ASR-dead, 1 catalog-missing, 1 M2-recoverable
+
+Analysis only, no code change. For each of the 12 top-100-absent truths:
+checked registry presence, exact truth rank + score per usable variant
+(full 8,679-entry ranking), junk-row share of the top-100, and an M2
+simulation — every stored v2 segment (>=12 folded chars, all sources/langs)
+queried alone, looking for truth in its top-20.
+
+### Bucket counts
+
+| bucket | n | meaning |
+|---|---|---|
+| (a) ASR-dead-for-truth | **10** | no usable sahitya recovered; M2 cannot help |
+| (b) catalog-side missing | **1** | good ASR evidence, nothing to match against |
+| (c) buried, M2-recoverable | **1** | a lone segment ranks truth top-5 |
+
+**(a) example — `nagumomu ganaleni__Saveri`:** both variants are fluent
+English hallucination ("…very much for your christmas interfere i am a
+family star…"), truth scores 0.02/0.00, no segment of 8 puts truth in
+top-20. Nine clips share this shape. The tenth, `raghuvamsa
+__Kathanakuthoohalam`, is a special case worth recording: ASR faithfully
+heard **svara syllables** ("pamgari sari limonmata…" = pa-ma-ga-ri-sa-ri…)
+because the window is a chittaswaram passage — there is no sahitya to
+transcribe. No lyrics-ASR improvement reaches it (it is an eligibility
+stratum, and it false-matched `hari hari shrI` at 1.201, a bluff shape to
+watch).
+
+**(b) — `yEnATi mOmu palamu__Bhairavi`:** the strongest finding. ASR
+recovered genuine, repeated sahitya across mix AND stem ("sundaresh suguna
+brnda aravindan yana pavana…"), but the truth registry row has **zero
+linked lyric lines** and its title tokens don't occur in the sung window —
+truth ranks 8,673/8,679 at score 0.0 while two lyric-rich entries scored
+>1.2 on the same evidence. Perfect query, missing catalog content.
+Notably, **5 of the 12 truth rows have `lines=0`** (jagadanandakaraka,
+entara, nagumomu, sogasuga, yEnATi): even a perfect ASR step-change only
+gets title tokens for those. Lyrics-coverage linking is a cheap,
+data-only lever that compounds with the ASR work.
+
+**(c) — `entara__Harikambhoji`:** whole-transcript ranks 1,156/39, but the
+mix/te segment `kaiyan tarani` **alone ranks truth #5**. This is the exact
+M2 shape — and it is the only one in the slice.
+
+### Implication for the ladder
+
+M2's direct recovery on the current evidence is **1 clip** (~5% of the
+missing 12). The ASR step-change (§5.1) addresses 9, an eligibility router
+absorbs 1, catalog/lyrics coverage 1. On this decomposition M2 is not the
+next best spend; the data says **pivot to ASR (IndicConformer via native
+ONNX, per the accepted review) and add a lyrics-coverage pass**, keeping M2
+in the ladder for after ASR raises the usable-segment count (segment
+evidence gets more shots on goal once segments contain sahitya). Deepti's
+call — I have NOT started M2, ISO views, SCES, or M3.
+
+### Junk-row question (standalone precision fix?)
+
+Yes, but tiny and low-urgency: registry-wide, digit/address heuristics
+flag only ~18 rows, about half legitimate titles (`dhIra samIrE (ashtapadi
+11)`); true junk is ~5-8 rows (`8th Cross, V V Mohalla, Mysore`, `Concerts
+from his US tour of 1983`, `G 2437-B JM 2373 bhananevaye`, `VOL MSG AIR oct
+20004 RTP`…). In the 12-clip analysis junk NEVER outranked a truth at a
+meaningful score — the V V Mohalla top-1 happened on an empty-transcript
+query at score 0.0, below MIN_ANSWER_SCORE, so answered precision is
+unaffected today. Right fix: a ~10-row Deepti-reviewed blocklist (musical
+judgment on the ambiguous ones), bundled into the registry/work-family
+pass — not an algorithm.
+
+### Diagnostic-integrity footnote
+
+`truth_match` (skey partial >=90) matched **70 registry rows** for the
+generic short title `rAma nee` — scoreboard truth-matching is loose on
+short titles and slightly flattering. Not changed (no-code-change mandate);
+flagging for the registry/work-family pass.
+
 <!-- next entry goes here -->
+
+## [2026-07-22] Codex — ladder re-sequenced after the 10 / 1 / 1 recall decomposition
+
+I checked Fable's M1 diagnostic and per-clip decomposition against the live
+registry builder, matcher, evaluator, graveyard, `METRIC_CONTRACT.md`, and
+`OPEN_DECISIONS.md`. This evidence invalidates the prior M1 -> M2 ->
+representation -> M3 order. The revised order is **metric truth -> catalog
+coverage -> cheapest valid ASR step-change -> narrowly scoped M2**. M3 remains
+parked.
+
+### Why the sequence changes
+
+Of the 12 ASR-usable auto-fetched truths absent from the top 100, ten contain
+no useful lexical truth evidence, one (`yEnATi mOmu palamu`) has good evidence
+but no linked lyrics, and only one (`entara`) has a buried segment that M2 can
+recover. Therefore:
+
+- M2 has a measured near-term opportunity of about **one clip**, not a broad
+  conversion wall.
+- M3 has only five rank-2-to-100 errors on this slice and cannot rerank the ten
+  absent candidates. There is not enough positive candidate evidence to fit a
+  credible ranker.
+- Catalog incompleteness must be repaired before judging a new recognizer.
+  Five of the 12 truth rows currently expose zero lyric lines. Otherwise a
+  better ASR can produce the right sahitya and be scored as a matcher failure,
+  exactly as `yEnATi` already demonstrates at truth score 0.0.
+
+### Rung 0 — fix scoreboard identity before moving the baseline
+
+Replace evaluator-time fuzzy `truth_match` with a reviewed, one-to-one wild
+truth manifest: clip basename -> canonical registry work ID (or a small set of
+explicitly equivalent work IDs). Prediction scoring should compare IDs, not
+run bidirectional `partial_ratio >= 90` against the filename on every row.
+The current rule matching **70 registry rows** for generic `rAma nee` is not a
+minor implementation detail; it lets an unrelated short-title row count as a
+hit and slightly flatters the only scoreboard.
+
+Resolve `rAma nee` to the actual full work in the registry/work-family data,
+then re-run and quote the complete 106-clip `--cache-v2` SCORE block with
+matcher outputs otherwise unchanged. That result becomes the corrected
+baseline. Keep the old 14/78, 23/78, OOC 21/28 block in the log as historical,
+not directly comparable without the metric-fix annotation.
+
+Do not lower the registry's global fuzzy-merge threshold to accomplish this;
+short generic titles are precisely where global fuzzy merging is unsafe. Use
+reviewed explicit aliases/work IDs. Add a regression test proving the chosen
+`rAma nee` truth accepts its real work and does not accept dozens of unrelated
+registry rows.
+
+In the same data-review packet—but **not removed until Deepti reviews it**—list
+the roughly ten exact suspected junk source rows/pages with provenance and a
+keep/drop reason. Apply the approved items as an explicit blocklist, not a new
+digit/address heuristic: Fable already found that about half of the 18
+heuristic flags are legitimate titles. Rebuild the registry and give this
+behavior-changing cleanup its own full SCORE if/when the blocklist is applied.
+
+### Rung 1 — lyrics linking/coverage is the ASR precondition
+
+Audit all 78 in-catalog truth work IDs, not just the 12 failures, and emit a
+coverage table with linked pages, loaded pallavi/other-line counts, source
+title, and unresolved status. For each sahitya-eligible truth with zero lines,
+link existing local karnatik records through a small reviewed override file
+(`work_id -> page IDs`) rather than weakening the global registry merger.
+
+The local data already shows why overrides are the right mechanism:
+`yEnATi mOmu palamu` has no page on its registry row while local page
+`c1736.shtml` is titled `EnATi nOmu phalamO`; its soft-title similarity is only
+about 83.9, below the global merge threshold. Likewise the local catalog has
+fuller related rows/pages for `nagumomu`, `sogasuga`, and
+`jagadanandakaraka`, while their short truth rows can remain unlinked. These
+are work-family/linking misses, not evidence that lyrics must be fetched from
+the network first.
+
+Acceptance for this rung is data integrity: every zero-line sahitya truth is
+either linked to reviewed local lyrics or explicitly marked `lyrics_missing`
+with the search evidence recorded. Then rebuild the registry and run the full
+SCORE block. This pass should **precede ASR**: it makes the acoustic experiment
+falsifiable and lets M1's already-landed section features consume the repaired
+data. A moved SCORE can graduate the links; reasoning or better coverage
+counts alone cannot.
+
+### Rung 2 — cheapest first ASR experiment
+
+The cheapest clean model-family test is **IndicConformer-600M through its
+official native ONNX path, CTC decoder only, mix audio only, no VAD, no stem,
+no RNNT, and no acoustic catalog rescoring**. Use a fixed set of relevant
+language lanes for every query rather than choosing a language from filename
+truth. Preserve each raw native-script hypothesis and model/config identity in
+a separate v2-compatible cache; pass its transliterated hypotheses through
+the current matcher/policy without changing thresholds in the same rung.
+
+First smoke-test integration on a few known dead and known-live clips only to
+catch shape/runtime/tokenizer errors; the smoke result makes no capability
+claim. If it runs, evaluate all 106 clips and quote the full `--cache-v2`
+contract block. This is cheaper and more diagnostic than starting with both
+CTC+RNNT, both mix+stem, segmentation, or a converted Whisper ensemble. It
+answers one question: does the previously untested IndicConformer acoustic
+model recover Carnatic sahitya that turbo turns into fluent English?
+
+If CTC-only shows signal, subsequent ASR rungs are one variable each: RNNT on
+the same mix audio, then vocal-active segmentation, then stem as an independent
+lane. The vasista22/IndicWhisper alternative remains valid only through a
+**CTranslate2/faster-whisper conversion**, never the failed Transformers
+pipeline. Which model family gets the next rung should follow the first full
+SCORE, not be bundled in advance.
+
+This does not revive dead ASR work. The three vasista22 attempts never
+evaluated the model: they failed at `forced_decoder_ids`, stale generation
+configuration, and a silently CPU Colab. Prompted turbo is excluded because it
+produced fluent repetitive hallucinations that defeated the gates; adding
+`kn` to current Whisper is excluded because its slice stayed 0/8 and top-5
+dropped 3/8 -> 2/8; macOS ARM faster-whisper int8 beam-1 is excluded because
+it ran about 1x realtime and produced garbage.
+
+### Rung 3 — demote M2 to the one measured recovery shape
+
+Only after catalog repair and at least one ASR rung should Fable implement a
+small M2: query individual **sahitya-bearing** cached segments and aggregate
+support for a work across distinct tokens/segments. Scope candidate generation
+to segments with matchable lexical tokens; do not run svara-only or obvious
+English-hallucination segments through a broad candidate pool. `entara`'s
+`kaiyan tarani` segment ranking the truth #5 is the named regression case.
+
+Keep the prior safeguards: segment output generates candidates; it does not
+max-pool raw scores. The graveyarded ASR max-fusion result was only 5/10 top-5
+because weak variants injected junk. Run M2 as its own full-score ablation and
+expect a one-clip-scale opportunity on present evidence; its upside may grow
+only if the ASR rung creates more real sahitya segments.
+
+### M3, SCES, and transliteration representation stay parked
+
+M3 remains parked until retrieval recall materially rises and there are enough
+true/wrong candidate pairs to learn from. Five rerankable errors on one slice
+do not justify a fitted model, and cross-fitting cannot manufacture candidates.
+SCES remains a useful future calibration feature for the native-script bluff
+class, while ISO-15919 remains the safer canonical representation, but neither
+is the next bottleneck exposed by 10 / 1 / 1. Do not tune SCES or a script
+threshold on the known 26 transliteration bluffs.
+
+### `raghuvamsa` and metric eligibility
+
+`raghuvamsa` should remain an **overall composition miss**: removing a hard
+in-catalog query from top-1/top-5 would make the product metric gameable and
+contradict `METRIC_CONTRACT.md`, which says strata never drop hard clips from
+the overall result. It should **not** count as a lyrics-ASR failure or enter the
+sahitya matcher-conversion denominator. Deepti should label it from the audio
+as a new explicit stratum such as `composed non-sahitya
+(svara/chittaswaram)`—not “instrumental,” since the heard syllables are sung.
+The UX route is abstain from lyrics ID and offer the future non-sahitya/raga
+path. This keeps both statements honest: Carnatify did not identify the work,
+and no lyrics recognizer could have recovered absent sahitya.
+
+### Graveyard / blocked-work check and final order
+
+Nothing above uses global DTW (16–20% same-corpus, 0% wild), melodic n-grams /
+Smith-Waterman / subsequence DTW (<=10%), Qmax (63–67% full recording but 0%
+wild), raga gating/blending (net harm twice; 0.5 and 0.3 blends harmful), tonic
+features (158–371 Hz scatter), dead matcher variants, prompted Whisper, or
+more answer gates. It does not touch any push/deploy, raga-model, paid-meaning,
+or musical-judgment action already blocked in `OPEN_DECISIONS.md`.
+
+Fable's one-rung-per-eval order is therefore:
+
+1. exact work-ID truth manifest + corrected full re-baseline;
+2. reviewed lyric-link overrides and registry rebuild + full SCORE;
+3. IndicConformer native-ONNX CTC-only/mix-only + full SCORE;
+4. choose the next ASR ablation from that evidence;
+5. later, scoped sahitya-segment M2 + full SCORE.
+
+M3 stays parked. Each behavior or metric change gets its own verbatim SCORE
+block; only the frozen 106-clip `~/sung_tests --cache-v2` result can move a
+rung forward, with the curated-36 regression guard and OOC bluffs always
+reported.
