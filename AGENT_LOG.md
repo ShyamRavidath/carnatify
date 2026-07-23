@@ -1129,3 +1129,781 @@ the pre-approved one-variable ASR ablations; the diff above (whisper and
 indic winning DISJOINT clips) also makes evidence-level whisper+indic
 arbitration (NOT max-fusion — graveyard) a measurable candidate. Codex's
 pass; Deepti's call.
+
+---
+
+## [2026-07-22 —] Opus (verifier) — Rung 3 diagnostic: arbitration ceiling + why score-calibration is dead but q_cov isn't (no code change, no SCORE moved)
+
+Zero-Fable in-repo analysis of the two committed caches (whisper v2 + indic),
+to scope the next rung before anyone spends credits. Read-only; no behavior
+change. Method: per-clip `--json` dumps of both backends + a direct
+`match_lyrics(detail=True)` pass on the indic lane variants for the 8 true
+in-catalog top-answers vs the 27 answered OOC clips (every answered OOC = a
+bluff, since truth is abstain).
+
+### Arbitration ceiling is real (whisper and indic win disjoint clips)
+```
+in-catalog n=76:  whisper top1 8 / top5 21 | indic top1 8 / top5 29
+UNION (perfect arbitration ceiling): top1 12 / top5 36
+```
+top5: indic-only wins 15, whisper-only 7, both 14. top1 union 12 = +4 over
+either channel alone. Real headroom — but only unlockable behind a working
+abstain, because indic answers ~everything (27/28 OOC bluffs).
+
+### The key finding: raw score CANNOT gate the indic channel; q_cov can
+Bluff vs true, indic channel (medians): score 1.25 vs 1.28 (**overlap** —
+useless), distinct_hits 3 vs 3, k_cov/idf_frac ~1.0 both (useless). The one
+feature that separates is **q_cov** (share of the transcript's IDF weight the
+matched work explains): bluff med 0.12 vs true med 0.28.
+
+Best single-feature abstain (keep-true / cut-bluff):
+```
+score    thr>=1.25 keeps 6/8 true, cuts 13/27 bluff   <- current gate, weak
+q_cov    thr>=0.26 keeps 5/8 true, cuts 23/27 bluff   <- the real lever
+distinct thr>=5     keeps 3/8 true, cuts 26/27 bluff   (too aggressive)
+```
+Also: all 8 true answers have `ordered=1`; some bluffs are unordered. A
+`q_cov>=~0.26 AND ordered` abstain would drop indic OOC bluffs 27→~4 (OOC
+reject ~24/28, near whisper's level) while retaining ~5/8 of indic's true
+top-1. That is the difference between "recall channel" and "shippable channel."
+
+### What this means for the ladder
+- **Do NOT spec Fable to tune the score threshold** — proven here it can't
+  separate (half the bluffs sit above any threshold that keeps the true ones).
+- The channel is **not hopeless**: q_cov is a calibratable separator. The
+  well-founded next rung is **(a) a q_cov(+ordered) abstain gate on the
+  translit/indic channel [calibration], and (b) whisper<->indic evidence
+  arbitration [pick per clip, NOT max-fusion], targeting the union ceiling
+  while restoring OOC precision**. That is one focused implementation, not
+  exploration — right shape for a Fable spend.
+- **Caveat (honesty):** n=8 true / 27 bluff is tiny. q_cov shows *signal* and a
+  principled mechanism (a real match explains more of the transcript), but the
+  exact operating point must NOT be overfit to these points (graveyard rule: no
+  tuning on the known bluffs). Fable should implement the q_cov-gate mechanism,
+  pick a conservative point, and co-publish precision-at-coverage.
+
+Routing suggestion: **Codex** turns this into the arbitration+abstain spec
+(front-loaded design, abundant GPT); **Fable** implements once. Deepti's call.
+
+---
+
+## [2026-07-23] Codex — Rung 4 one-shot spec: Whisper-primary arbitration with evidence-qualified Indic admission
+
+Read-only review: I changed no code/cache/model and ran no ASR. I rechecked the
+two Rung 3 entries, Opus's diagnostic, `METRIC_CONTRACT.md`, the live M1 detail
+path, both committed caches, the exact work-ID manifest, and the graveyard. I
+also replayed the answer-time selected variants from both caches over all 106
+clips with `match_lyrics(detail=True)`; this is diagnostic only and moves no
+SCORE.
+
+### Diagnostic critique — usable signal, but the original claim was incomplete
+
+**Answer-time parity is sound but not currently plumbed.** `q_cov` is computed
+only when `match_lyrics(..., detail=True)` is requested; `assess_variants()`
+currently calls the non-detail path and discards alignment evidence. The Opus
+pass therefore recomputed details after selection. In my 106-clip replay, the
+detail pass's top work ID matched the actual `assess_variants()` top work ID
+for every selected Whisper and Indic variant. The feature is reproducible from
+the answer-time transcript/scorer, but Fable must carry it out of the same
+channel-scoring call rather than add a second production matcher pass.
+
+`q_cov` is a defensible but narrower quantity than its shorthand suggests. It
+is the IDF share of the query's **unique unigram plus joined-bigram token
+vocabulary** represented by matched transcript tokens. It is not
+occurrence-weighted transcript coverage; joined bigrams also appear in the
+denominator. `ordered` is likewise not a general sequence alignment: it means
+the winning title/line's first up-to-three tokens attain `partial_ratio >= 80`
+against the full transcript. Keep these names for compatibility, but document
+their exact semantics.
+
+**The original diagnostic omitted the largest negative class.** Indic answers
+96 clips: 8 correct top-1, 27 OOC bluffs, and about 61 wrong in-catalog
+answers. The reported 8-vs-27 comparison did not include those 61. Full replay
+still finds signal, but substantial overlap:
+
+```text
+Indic selected winner, q_cov>=0.25 AND ordered:
+  answers 14/106; correct top-1 5; OOC bluffs 3
+
+Whisper selected winner, same rule:
+  answers 12/106; correct top-1 6; OOC bluffs 0
+```
+
+Thus the rule raises Indic's within-channel answered precision from 8/96 to
+5/14, but it is nowhere near the product's 85% bar because six of the remaining
+Indic answers are still wrong in-catalog. Applied globally to Whisper, it
+would remove all seven Whisper OOC bluffs but also discard 35 of Whisper's 47
+answers and two of its eight correct top-1s. It is suitable as an **Indic
+admission feature**, not as the system's universal abstain rule.
+
+There is also a boundary correction: with the feature as the live code returns
+it (rounded to three decimals), `q_cov >= 0.26 AND ordered` retains 4/8 Indic
+true answers, not 5/8; one true case is 0.259. The diagnostic's `~0.26` was
+appropriately approximate, but an implementation cannot be. Use **0.25**.
+That is a reviewed round operating point with a semantic interpretation
+("at least one quarter of the matchable query vocabulary is explained"), not
+the empirically best cut. Freeze it before the SCORE. No fitted model, grid
+selection, or post-SCORE threshold adjustment.
+
+The oracle union is not inflated by the two equivalent-set clips: replaying
+exact manifest ID-membership counts each clip once and reproduces top-1 12 /
+top-5 36 over the full 78 in-catalog denominator. Opus's `n=76` excluded the
+two empty-truth non-sahitya clips; label that distinction when quoting the
+ceiling. The ceiling remains an oracle, not an expected arbitration result.
+
+Finally, same-set replay of the exact policy below estimates 55 answers, 11
+correct, 10 OOC bluffs, top-1 11 and top-5 25. Those are **not a SCORE block**
+and must not be copied as a result. They show enough bounded headroom to justify
+one implementation rung, while also warning that the rung will probably remain
+experimental: it may improve recall/precision slightly while worsening
+Whisper's seven OOC bluffs to roughly ten.
+
+### Frozen Rung 4 rule
+
+Treat Whisper and Indic as two complete channel rows. Each row contains the
+channel's already-selected variant, transcript, full top-five composition
+list, current score/confidence, and the winning top-one alignment detail.
+Never compare raw scores across channels and never pool their composition
+lists.
+
+Define:
+
+```text
+indic_eligible =
+    indic channel produced an answer under the unchanged assess_variants policy
+    AND indic top-1 align.q_cov >= 0.250
+    AND indic top-1 align.ordered is true
+
+whisper_evidence_strong =
+    whisper channel produced an answer under the unchanged assess_variants policy
+    AND whisper top-1 align.q_cov >= 0.250
+    AND whisper top-1 align.ordered is true
+```
+
+Do not add `distinct_hits`: its true/bluff median is 3/3 and the measured
+`>=5` cut retained only 3/8 true answers. Do not add `k_cov` or
+`matched_idf/total_idf`: those are the same catalog-side coverage concept and
+were approximately 1.0 for both true and bluff winners. Do not consult raw
+score or confidence tier in this arbitration; score medians 1.28 true versus
+1.25 bluff fully overlap.
+
+Apply this exact decision table, in order:
+
+1. If Indic is not eligible, return the unchanged Whisper result (including
+   Whisper's abstention, if any).
+2. If Indic is eligible and Whisper abstained, return the Indic result.
+3. If both answer and `whisper_evidence_strong` is true, return Whisper.
+4. Otherwise return Indic: it passed the evidence rule while Whisper's winner
+   did not.
+
+When both qualify, **Whisper always wins**; this is the tie-break even if
+Indic has a higher raw score, higher `q_cov`, or the same top work. When neither
+answers, abstain. When Whisper answers weakly and Indic fails admission,
+preserve Whisper—the new gate is not authorized to rewrite Whisper's existing
+answer/abstain policy in this rung.
+
+The returned `compositions`, transcript, variant, confidence tier, clip type,
+and catalog-raga backfill must all come intact from the selected channel row.
+The final top-five is therefore Whisper's list or Indic's list, never a union.
+This is channel arbitration, explicitly not the graveyarded max-fusion pooling
+that measured only 5/10 top-5 because weak variants injected junk.
+
+### Minimal plumbing Fable should implement
+
+Add one opt-in backend value:
+
+```text
+CARNATIFY_ASR_BACKEND=hybrid
+```
+
+Keep existing `whisper` and `indic` modes byte-identical. In hybrid mode:
+
+1. Load `data/asr_cache_v2.json` and `data/asr_cache_indic.json` once.
+2. For each audio SHA, construct each cache key with an **explicit config ID**;
+   do not call a global `asr_config_id()` that can identify only one backend.
+   A minimal safe signature is `cache2_key(sha, config_id=None)` plus
+   `load_cache_v2(backend=None)`, preserving current defaults.
+3. Build Whisper variants with its existing fold/longest-per-source path and
+   Indic variants with its existing per-language `translit_fold` path.
+4. Run the unchanged per-channel variant selection independently. Request
+   `detail=True` in that scoring path so the selected top row already carries
+   `align`; verify that detail mode leaves scores, ranking, variant selection,
+   and confidence byte-identical.
+5. Put the two resulting channel rows in a two-element arbitration record and
+   apply the frozen decision table above. Do not concatenate variant dicts and
+   let `assess_variants()` choose the largest raw score—that would silently
+   recreate cross-channel max selection.
+
+Expose enough JSON diagnostics to audit each decision without changing the
+user-facing composition schema:
+
+```text
+asr_channel: whisper | indic | none
+arbitration_reason:
+  indic_ineligible | whisper_only | whisper_strong |
+  indic_fallback | indic_overrides_weak_whisper | neither_answered
+channel_evidence:
+  whisper: {answered, q_cov, ordered, top_id}
+  indic:   {answered, eligible, q_cov, ordered, top_id}
+```
+
+Report cache status separately for both channels. A hybrid SCORE is invalid if
+either cache has a miss; expected valid footer is 106 Whisper hits/0 misses and
+106 Indic hits/0 misses. No cache rebuild or ASR invocation belongs in Rung 4.
+
+### Required tests before the one eval
+
+1. Detail/non-detail invariance: identical work IDs, scores, ordering, selected
+   ASR variant, and confidence for representative Whisper and Indic fixtures.
+2. Gate boundaries: `q_cov=0.249` fails, `0.250` passes; `ordered=false`
+   fails regardless of coverage.
+3. Decision-table tests for all five meaningful states: Indic ineligible;
+   Indic-only eligible; both strong; Whisper weak plus Indic eligible; neither.
+   Assert both-strong selects Whisper without consulting raw score.
+4. No-fusion test: final top-five equals exactly one channel's ordered list and
+   cannot contain candidates unique to both lists.
+5. Cache isolation/miss tests: explicit IDs fetch the correct entry, one-side
+   miss invalidates hybrid evaluation, and existing single-backend modes remain
+   byte-identical.
+6. Full-policy fixture showing that selecting Indic carries Indic's transcript,
+   confidence, clip type, and raga backfill together—no mixed-channel result.
+
+### SCORE, guards, and interpretation
+
+Run exactly one behavior-changing full evaluation after tests:
+
+```text
+CARNATIFY_ASR_BACKEND=hybrid \
+  venv_train/bin/python identify_clip.py ~/sung_tests \
+  --no-raga --cache-v2
+```
+
+Quote the evaluator's verbatim 106-clip SCORE and separately publish:
+
+- answered/correct and precision at coverage;
+- in-catalog top-1 and top-5;
+- OOC reject and bluff counts;
+- both cache hit/miss counts;
+- per-channel choice counts and arbitration-reason counts.
+
+Run and quote the curated-36 guard; top-1 must remain at least 8/36. Compare
+against both corrected Whisper baseline (8/78 top-1, 21/78 top-5, 7 OOC
+bluffs, 8/47 precision at 44% coverage) and Indic Rung 3 (8/78, 29/78,
+27 OOC bluffs, 8/96 at 91%).
+
+This can graduate only as an **experimental hybrid rung** if the actual SCORE
+moves overall retrieval/precision without violating the curated guard. It must
+not become the product default merely because it approaches the oracle union:
+the current set shaped the 0.25 rule, and the estimated OOC count is worse than
+Whisper. Product graduation still requires a frozen prospective wild set and
+the metric contract's >=85% precision bar. If the SCORE does not improve the
+precision/coverage tradeoff, revert the behavior and keep the alignment
+plumbing only as instrumentation.
+
+### Scope and exclusions
+
+Rung 4 is cache plumbing, one Indic admission rule, and deterministic
+Whisper/Indic row selection only. Do not add RNNT, VAD/segmentation, stem
+Indic, CTC acoustic rescoring, ISO/HK changes, SCES, fitted calibration, or
+new answer gates. Those are later one-variable rungs chosen from this SCORE.
+
+The design uses no raga gate/blend (net harm twice; 0.5 and 0.3 both harmful),
+no DTW (16–20% same-corpus/0% wild), no Qmax (63–67% full recordings/0% wild),
+no raw max-fusion (5/10 top-5), and no tiny-n learned ranker. It touches no
+push, deploy, paid, or other Deepti-blocked action.
+
+---
+
+## [2026-07-23] Opus (implementer) — Rung 4 landed: Whisper↔Indic hybrid arbitration (experimental rung graduates; default unchanged)
+
+Implemented Codex's frozen Rung 4 spec directly in-repo (zero Fable cost — this
+is cache plumbing + one admission rule + deterministic row selection, no ASR/
+model/GPU, so it did not warrant a Fable spend). One behavior addition, one eval.
+
+Files: `identify_clip.py` (new `CARNATIFY_ASR_BACKEND=hybrid`; `assess_variants`
+gains additive `detail=`; `cache2_key`/`asr_config_id`/`load_cache_v2` take
+explicit backend/config; new `arbitrate()`, `identify_v2_hybrid()`,
+`precision@coverage` + per-channel/arbitration reporting in the footer),
+`tests/test_clip_policy.py` (6 new Rung-4 tests). **24 passed, 1 xfailed.**
+Single-backend `whisper`/`indic` modes are byte-identical (unchanged code path).
+
+### Frozen rule as built (matches spec exactly)
+Two complete channel rows scored independently with `detail=True`; never a raw-
+score comparison across channels, never a pooled list. `indic_eligible` =
+indic answered AND top-1 `align.q_cov >= 0.250` AND `align.ordered`. Decision
+table: indic-ineligible→Whisper; indic-eligible & Whisper-abstained→Indic;
+both answer & Whisper-strong→Whisper (tie-break Whisper wins, even on higher
+indic score/q_cov); else→Indic. Chosen channel's transcript/confidence/clip-
+type/raga-backfill carried intact; final top-5 is one channel's list. `align`
+stripped from user-facing compositions (lives in `channel_evidence`).
+
+### SCORE (Rung 4, hybrid) — verbatim
+```
+===== SCORE over 78 in-catalog + 28 OOC clips =====
+composition top-1 11/78  top-5 25/78
+OOC reject  18/28  (bluffs: 10)
+raga        skipped (--no-raga)
+raga via catalog backfill 15/45 (on clips with confident composition)
+precision@coverage: 11/55 correct (20% precision at 52% coverage)
+channels: none 51, whisper 45, indic 10
+arbitration: indic_ineligible 82, indic_fallback 8, neither_answered 8, whisper_strong 4, indic_overrides_weak_whisper 2, whisper_only 2
+whisper cache: 106 hits, 0 misses  |  indic cache: 106 hits, 0 misses
+v2 cache: 106 hits, 0 misses
+```
+Curated-36 guard (`~/sung_tests_curated`, hybrid): **top-1 10/36  top-5 18/36**,
+OOC reject 2/5, 41/41 both caches — **above the 8/36 floor** (was 9/36 whisper).
+
+### Verdict — graduates as an EXPERIMENTAL rung; do NOT ship as default
+vs the current default (Whisper 8/78, 21/78, 7 bluffs, 8/47 = 17% @ 44%):
+- retrieval up: top-1 **8→11**, top-5 **21→25**;
+- precision/coverage **Pareto-improves**: 20% @ 52% dominates 17% @ 44% (higher
+  precision AND higher coverage — the +3 true top-1 outweigh the +3 bluffs
+  already priced into precision);
+- guard holds (10/36 ≥ 8).
+
+Matches Codex's replay projection (11/25, ~10 bluffs) almost exactly. The q_cov
+gate is clearly working: indic answered ~96 clips raw but was admitted only 10
+times (`indic_ineligible 82`), which is what keeps bluffs at 10 rather than 27.
+
+**But 20% precision is nowhere near the METRIC_CONTRACT 85% product bar, and
+OOC bluffs rose 7→10.** This is a real recall/precision-tradeoff step and the
+best experimental config to date — NOT a shippable default. Per Codex's
+graduation clause it stays an opt-in experimental backend; `whisper` remains
+the default. Honesty caveat (Codex's, restated): the 0.25 rule was shaped by
+this same set, so 11/78 is optimistic — a frozen prospective wild set is
+required before any product claim.
+
+### Next (from THIS score, none started)
+Pre-approved one-variable ASR ablations remain: RNNT-same-mix, vocal-active
+segmentation, stem-as-independent-lane — each genuinely needs the model, so
+each is a **Fable** spend, chosen one at a time from the SCORE. The hybrid
+plumbing + alignment-evidence instrumentation is now in place to arbitrate any
+future channel. Deepti's call on sequencing; commit/push hers.
+
+---
+
+## [2026-07-23] Opus (verifier) — Rung 5 pre-diagnostic: the vocal stem is the dominant recall lever (points to stem-lane first). No code change.
+
+Zero-cost proxy for the Rung 5 ablation choice, run before any Fable spend
+(the Rung 3->4 measure-then-spend pattern). The three candidates (RNNT-mix,
+stem-lane, VAD) can't be previewed for indic without the model, BUT the whisper
+v2 cache already holds mix AND stem hypotheses — a direct proxy for whether a
+clean vocal stem recovers Carnatic sahitya the instrument-dense mix drowns.
+
+Method: for each in-catalog clip, score whisper's mix pass and stem pass
+**independently** (not the usual combined selection) and check top-1 truth via
+the manifest.
+
+```
+whisper mix vs stem, in-catalog top-1 correctness (each pass isolated):
+  both correct     1
+  mix-only correct 2
+  STEM-ONLY correct 6  (Devadideva, Madhava Mamava, Sarvam Brahmamayam,
+                        nannu pAlimpa, paridAnamicchidE, sObillu saptaswara)
+  neither          67
+  OOC: stem answers where mix abstains (extra bluff risk) 4
+```
+
+**The stem is the SOLE source of 6 of whisper's ~9 correct top-1s — 3x the
+mix-only count (2).** On this instrument-dense corpus, stemming is the dominant
+sahitya-recall lever, and **IndicConformer is currently mix-only**, leaving that
+lever entirely unused. This is concrete evidence that the **stem-as-independent-
+lane** ablation is the highest-expected-value first pick: an indic stem lane
+should rescue a comparable set of clips indic-mix misses, and Demucs stems
+already exist (whisper uses them), so it is cheaper than VAD. The 4 stem-
+exclusive OOC answers are added bluff exposure — exactly what the q_cov+ordered
+gate + arbitration already filter.
+
+Recommendation to Codex (`CODEX_RUNG5_BRIEF.md`): pick **stem-lane** for Rung 5,
+spec it one-variable through the existing hybrid arbitration, own cache config
+id, own SCORE + guard. RNNT-mix and VAD stay queued for later, chosen from that
+SCORE. Deepti's call; commit/push hers.
+
+---
+
+## [2026-07-23] Codex — Rung 5 one-shot spec: Indic CTC on the Demucs vocal stem
+
+Read-only review: no matcher/ASR/cache/test code changed. I read the Rung 3
+run and diagnostic, Rung 4 implementation and SCORE, the live cache-builder
+and hybrid plumbing, `METRIC_CONTRACT.md`, and the graveyard. The selected
+one-variable ablation is **stem-as-an-independent Indic lane**. RNNT-same-mix
+and vocal-active segmentation remain untouched.
+
+### Choice and evidence
+
+The zero-cost proxy proposed in the brief has already been run by Opus, so no
+additional pre-diagnostic should delay Fable:
+
+```text
+Whisper isolated mix vs stem, in-catalog top-1:
+  both correct 1
+  mix-only correct 2
+  stem-only correct 6
+  neither 67
+  OOC stem answers where mix abstains 4
+```
+
+Stem-only is the sole source of six Whisper top-1s, three times the mix-only
+count. That is direct corpus-specific evidence that source separation exposes
+composition-bearing sahitya hidden in the mix. It also matches the retained
+production observation in `identify_clip.py`: violin/mridangam can drown the
+voice, while the original mix remains necessary when Demucs mangles it.
+IndicConformer has so far seen only the polluted mix.
+
+This does **not** prove that all ten lexically dead clips are instrument-masked,
+or that Indic will inherit Whisper's exact gains. The decomposition established
+missing lexical evidence, not its acoustic cause; recognizers respond
+differently to separation artifacts. The four Whisper stem-exclusive OOC
+answers are the counter-signal. That is why the new stem output must be scored,
+gated, and selected independently—never assumed cleaner and never pooled.
+
+Stem goes before the alternatives because it has the only measured positive
+proxy and targets the acoustic input, while preserving the already useful CTC
+decoder. RNNT changes decoding over the same instrument-heavy mix and has no
+cached proxy; it may produce more native text without increasing the fraction
+that coherently explains one work. VAD is heavier and its distinctive payoff
+is per-segment candidate generation, which requires the later M2 machinery to
+use fully. Stem tests the strongest available hypothesis with one acoustic
+variable.
+
+One operational correction to the Opus note: Whisper's cache contains stem
+**transcripts**, not reusable stem waveforms. No persisted 106-clip Demucs PCM
+set exists in the repo. Fable can reuse the exact `_vocal_stem_16k()` extractor
+and already-installed htdemucs weights, but must separate each uncached clip
+again. The new transcript cache must therefore be incremental and atomic.
+
+### Frozen experiment shape
+
+Rung 5 contains these three source rows:
+
+1. existing Whisper row (its current mix+stem policy), unchanged;
+2. existing Indic CTC mix row, unchanged;
+3. new Indic CTC stem row, using the same model, CTC decoder, five fixed
+   language lanes (`te, ta, kn, hi, ml`), and whole-clip decoding.
+
+Score Indic mix and Indic stem as separate complete rows with
+`assess_variants(..., detail=True)`. Apply the existing
+`q_cov >= 0.250 AND ordered` admission rule separately to each. Do not combine
+their hypotheses or composition lists.
+
+Select the **effective Indic row** with this exact source policy:
+
+```text
+if indic_mix passes the existing gate:
+    effective_indic = indic_mix          # preserve Rung 4
+elif indic_stem passes the existing gate:
+    effective_indic = indic_stem         # new fallback opportunity
+else:
+    effective_indic = indic_mix          # remains ineligible; behavior unchanged
+```
+
+Then pass Whisper plus `effective_indic` into the existing Rung 4
+`arbitrate()` function without changing a line of its decision rule. If both
+Indic sources pass, mix wins—no raw-score comparison, no q_cov contest, no
+candidate union. This conservative ordering makes Rung 5 incremental over the
+landed 11/25 hybrid rather than allowing the new noisy lane to replace an
+already-admitted mix result. The stem can add an answer or override weak
+Whisper only when mix itself failed the frozen Indic admission rule.
+
+Use a new opt-in eval mode such as:
+
+```text
+CARNATIFY_ASR_BACKEND=hybrid_stem
+```
+
+Keep `whisper`, `indic`, and landed `hybrid` byte-identical. The default stays
+Whisper.
+
+### Cache and configuration identity
+
+Do not append stem entries under the mix cache's single top-level config.
+Create a third cache, for example:
+
+```text
+data/asr_cache_indic_stem.json
+```
+
+with its own explicit configuration and ID:
+
+```text
+ASR_CONFIG_INDIC_STEM = {
+  engine: onnxruntime,
+  model: ai4bharat/indic-conformer-600m-multilingual,
+  decoder: ctc,
+  audio_source: demucs_vocals,
+  mix_langs: [],
+  stem_langs: [te, ta, kn, hi, ml],
+  separation: {
+    model: htdemucs,
+    target: vocals,
+    extractor: _vocal_stem_16k,
+    output_sr: 16000
+  }
+}
+
+INDIC_STEM_CONFIG_ID =
+  indic-conformer-600m|onnx|ctc|
+  stem:htdemucs:te,ta,kn,hi,ml|v2
+```
+
+The precise string may be compacted, but it must encode decoder, audio source,
+separation model, languages, and schema version and must differ from both
+`INDIC_CONFIG_ID` and `WHISPER_CONFIG_ID`. Address every entry with
+`cache2_key(audio_sha, INDIC_STEM_CONFIG_ID)`; never rely on the ambient
+backend to derive this key. Entry hypotheses have `source: "stem"` and the same
+raw native text, word-timestamp segments, language, and status fields as mix.
+
+Preserve `error != empty` at both stages:
+
+- Demucs/load/encoder failure: emit an `error: <stage>: <type>: <message>`
+  status for every lane; never encode it as five empty hypotheses.
+- Successful encoder plus blank lane decode: that lane is `empty`.
+- Successful native text: `ok`, with raw text and segments preserved.
+
+Extend `load_cache_v2()` with an explicit `indic_stem` mapping rather than
+making unknown backend names silently select Whisper. Hybrid-stem evaluation
+is invalid unless Whisper, Indic mix, and Indic stem all hit for every clip.
+
+For source-aware conversion, preserve existing Indic mix variant names and use
+names such as `stem_indic_te` for stem hypotheses. Do not let
+`variants_from_v2()` erase the hypothesis `source`. Each source row is assessed
+separately, so the existing within-row language selection remains unchanged.
+
+### Minimal builder change
+
+Reuse the existing official ONNX `IndicCTC` path and weights. Add an explicit
+source mode to `scripts/build_asr_cache_indic.py` (or a thin stem-only wrapper
+around the same class):
+
+```text
+--source mix     # existing default, byte-identical
+--source stem    # Rung 5
+```
+
+Stem mode must:
+
+1. select `ASR_CONFIG_INDIC_STEM`, `INDIC_STEM_CONFIG_ID`, and the new cache;
+2. obtain audio only through `_vocal_stem_16k(path)`;
+3. call the unchanged CTC transcription once per stem, sharing the encoder
+   logits across the same fixed five language masks;
+4. write one atomic entry immediately after each clip so interruption resumes
+   without redoing completed Demucs work.
+
+Do not decode mix again, run RNNT, create VAD windows, change languages, or
+persist a second audio representation in this rung.
+
+### Smoke before the 106 build
+
+Run a small integration smoke containing:
+
+- `Devadideva` and `nannu pAlimpa`: existing Whisper stem-only rescue shapes;
+- `Bhuvini Dasudane`: known Indic-mix success from the Rung 3 smoke;
+- `nagumomu ganaleni`: turbo English hallucination for which Indic mix
+  recovered real sahitya but the matcher still missed;
+- `Achyutam Keshavam`: OOC/native-lyrics bluff-risk shape.
+
+The smoke verifies only that Demucs audio reaches ONNX, all fixed lanes record
+the correct `source/config_id/status`, native output survives, failures are not
+mislabelled empty, and incremental resume works. It makes no accuracy claim
+and must not select clips or language lanes from filename truth inside the
+implementation.
+
+Suggested full build after smoke:
+
+```text
+caffeinate -dims venv_train/bin/python -u \
+  scripts/build_asr_cache_indic.py --source stem ~/sung_tests
+```
+
+Keep the lid open and avoid concurrent heavy evaluation; the handoff records
+Demucs as CPU-bound and timeout-prone under contention.
+
+### Hybrid-stem plumbing and diagnostics
+
+In `hybrid_stem` mode, load all three caches once and build all three source
+rows per clip. Retain the existing public result contract, but add enough
+diagnostics to prove the new lane—not a hidden policy change—caused movement:
+
+```text
+asr_channel: none | whisper | indic_mix | indic_stem
+
+indic_source_reason:
+  mix_eligible |
+  stem_fallback |
+  neither_indic_source_eligible
+
+channel_evidence:
+  whisper:    {answered, q_cov, ordered, top_id}
+  indic_mix:  {answered, eligible, q_cov, ordered, top_id}
+  indic_stem: {answered, eligible, q_cov, ordered, top_id}
+```
+
+Keep the landed Rung 4 arbitration reason separately. When Indic stem is
+ultimately selected, its transcript, variant, top-five, confidence, clip type,
+and catalog-raga backfill travel together. The final composition list must
+equal exactly Whisper's, Indic mix's, or Indic stem's list; it can never
+contain a union.
+
+### Required tests
+
+1. All three config IDs/cache keys/files are distinct; explicit
+   `indic_stem` loading cannot fall through to Whisper.
+2. Mix builder default and existing `indic`/`hybrid` eval modes remain
+   byte-identical.
+3. Stem hypotheses retain `source="stem"` and become source-aware variant
+   names; error and empty lanes are excluded exactly as today.
+4. Demucs-stage failure creates per-lane errors, never five empties, and does
+   not poison resume.
+5. Indic source selector decision table:
+   mix eligible wins; otherwise eligible stem wins; if neither passes, mix is
+   forwarded as the unchanged ineligible row. Raw scores never participate.
+6. Existing `HYBRID_QCOV_MIN == 0.250`, `_passes_gate`, and `arbitrate()` tests
+   remain unchanged.
+7. No-fusion invariant: the returned ordered top-five and all associated
+   metadata come from exactly one source row.
+8. Any missing one of the three caches marks hybrid-stem SCORE invalid and
+   reports which cache missed.
+
+### The one eval and acceptance rule
+
+After the cache reaches 106/106, run exactly one behavior-changing evaluation:
+
+```text
+CARNATIFY_ASR_BACKEND=hybrid_stem \
+  venv_train/bin/python identify_clip.py ~/sung_tests \
+  --no-raga --cache-v2
+```
+
+Quote the verbatim SCORE and co-publish:
+
+- answered/correct and precision at coverage;
+- top-1/top-5 and OOC rejects/bluffs;
+- final source counts (`whisper`, `indic_mix`, `indic_stem`, `none`);
+- landed arbitration-reason counts plus Indic source-reason counts;
+- how many stem rows passed the frozen gate, and how many selected stem rows
+  were correct top-1/top-5 versus wrong in-catalog/OOC;
+- Whisper, Indic-mix, and Indic-stem cache hits/misses.
+
+Then run the same mode on `~/sung_tests_curated`; top-1 must remain at least
+8/36. Compare directly with Rung 4:
+
+```text
+11/78 top-1, 25/78 top-5, 10 OOC bluffs,
+11/55 = 20% precision at 52% coverage, guard 10/36
+```
+
+Because precision is the binding constraint, raw stem candidate recall is not
+success. The experimental rung graduates only if the full SCORE shows a
+strictly better precision/coverage tradeoff than Rung 4 while holding the
+guard—for example, more correct answered clips with precision at least 20%,
+or higher precision without losing honest nontrivial coverage. A top-five gain
+accompanied only by more gate-passing false answers does not graduate. Do not
+retune 0.25 after seeing the result.
+
+Even a successful frozen-set rung remains experimental: this corpus selected
+both the stem hypothesis and the gate, so product promotion still requires
+prospective wild clips and the >=85% precision bar. Whisper remains default.
+
+### Scope and graveyard check
+
+Rung 5 changes only the Indic audio source from mix to a separately assessed
+htdemucs vocal stem. Do not add RNNT, VAD/segmentation, M2 segment matching,
+ISO/SCES, M3/fitted calibration, new thresholds, languages, prompts, or raga
+features. The next single ablation is chosen only after this SCORE.
+
+This does not revive max-fusion (measured 5/10 top-5), raga gating/blending
+(net harm twice; blends 0.5 and 0.3 harmful), DTW (16–20% same-corpus/0%
+wild), Qmax (63–67% full recording/0% wild), prompted turbo, or `kn`-list
+tweaking (0/8 with top-5 3/8 -> 2/8). It touches no push, deploy, paid, or
+other Deepti-blocked action.
+
+## [2026-07-23] Fable — Rung 5 RUN: stem lane lands clean but does NOT graduate (acceptance rule applied honestly)
+
+Implemented Codex's frozen spec exactly (selector conservative, arbitrate()
+untouched, third cache, --source builder flag). Smoke (5 spec'd clips) then
+full stem build: **106/106, 66.6 min, 517 ok / 13 empty / 0 error lanes**
+(bhajarE gOpAlam — all-empty on mix — now has stem text; rAma nannu brOvara
+and samikki sari stay all-empty on both sources). Builder hardening beyond
+spec: all-error entries are retried on resume, so a Demucs timeout can never
+permanently masquerade as a transcribed clip. Tests 30 passed 1 xfailed
+(6 new); whisper/indic/hybrid modes verified byte-identical.
+
+### SCORE (106, hybrid_stem, verbatim)
+
+```text
+===== SCORE over 78 in-catalog + 28 OOC clips =====
+composition top-1 11/78  top-5 27/78
+OOC reject  18/28  (bluffs: 10)
+raga        skipped (--no-raga)
+raga via catalog backfill 16/46 (on clips with confident composition)
+precision@coverage: 11/56 correct (20% precision at 53% coverage)
+channels: none 50, whisper 42, indic_mix 10, indic_stem 4
+arbitration: indic_ineligible 77, indic_fallback 9, neither_answered 8, whisper_strong 6, indic_overrides_weak_whisper 5, whisper_only 1
+indic_source: neither_indic_source_eligible 86, mix_eligible 14, stem_fallback 6
+stem gate-passing rows: 12; selected-stem outcomes: wrong 2, top5 2
+whisper cache: 106 hits, 0 misses  |  indic cache: 106 hits, 0 misses  |  indic-stem cache: 106 hits, 0 misses
+v2 cache: 106 hits, 0 misses
+```
+
+Exact precision: 11/56 = 19.6% at 52.8% coverage (Rung 4: 11/55 = 20.0%
+at 51.9%).
+
+### Curated-36 guard (verbatim) — HOLDS
+
+```text
+===== SCORE over 36 in-catalog + 5 OOC clips =====
+composition top-1 10/36  top-5 19/36
+OOC reject  2/5  (bluffs: 3)
+raga        skipped (--no-raga)
+raga via catalog backfill 10/23 (on clips with confident composition)
+precision@coverage: 10/26 correct (38% precision at 63% coverage)
+channels: whisper 19, none 15, indic_mix 6, indic_stem 1
+arbitration: indic_ineligible 28, indic_fallback 4, whisper_strong 4, indic_overrides_weak_whisper 3, neither_answered 2
+indic_source: neither_indic_source_eligible 30, mix_eligible 9, stem_fallback 2
+stem gate-passing rows: 7; selected-stem outcomes: top5 1
+whisper cache: 41 hits, 0 misses  |  indic cache: 41 hits, 0 misses  |  indic-stem cache: 41 hits, 0 misses
+v2 cache: 41 hits, 0 misses
+```
+10/36 >= 8 floor; top-5 18->19 vs Rung 4.
+
+### The stem lane's actual contribution (per-clip)
+
+Only the 6 `stem_fallback` clips can diverge from Rung 4 (everywhere else
+effective_indic = mix, provably identical). Arbitration selected stem on 4:
+
+- `yEnATi mOmu palamu` — **top-5 gain** (truth #2). Stem sahitya meets the
+  Rung-2 linked lyrics; but the #1 row is karnatik "EnATi nOmu phalamO" —
+  the SAME kriti's page-row, not in the truth set. Equivalence candidate.
+- `Ranga Baro` — top-5 (truth #2; manifest review-flagged ambiguous).
+- `akhilAndEswari__Dvijavanti` — counted **wrong**, but the prediction is
+  "akhilANDEshvari rakSamAm" — this looks like the actual Dikshitar
+  dvijavanti kriti under a different registry row. Likely manifest
+  equivalent-set undercount -> **flagged for Deepti's review, NOT
+  self-adjudicated** (same class as Madhava Mamava in Rung 1).
+- `Ananda naTana prakAsam` — genuinely wrong ("banda nODi"). The one real
+  false answer the stem lane added.
+
+Zero stem-attributable OOC bluffs (bluffs 10 = Rung 4's 10; Achyutam
+Keshavam's stem row answered but stayed gated out).
+
+### Verdict — does NOT graduate (frozen acceptance rule)
+
+Codex's rule: strictly better precision/coverage tradeoff. 19.6% @ 53% vs
+20.0% @ 52% is a sideways trade (+2 top-5, +1 wrong answered, same correct
+11), not strict dominance. 0.25 NOT retuned. Per the Rung-4 clause the
+behavior stays opt-in (`hybrid_stem`), NOT the recommended experimental
+config; `hybrid` remains best experimental; **whisper stays default**. The
+plumbing (third cache/config, source-aware variants, selector, three-way
+diagnostics) is committed as instrumentation for future rungs.
+
+**Note for Deepti (truth adjudication, your gate):** if akhilAndEswari's
+prediction row is confirmed equivalent, Rung 5 re-scores to 12/56 = 21.4%
+@ 53% — which WOULD strictly dominate Rung 4 — and yEnATi's page-row would
+add a top-1. Both belong with the 7 existing manifest review flags; the
+scoreboard above stands on the current reviewed manifest.
+
+Commits: Rung 4 (Opus's, reconstructed intermediate, tests 24+1 matched
+recorded count) + Rung 5, byte-identity verified. Push is Deepti's. Next
+rung options (untouched, per one-variable discipline): RNNT-same-mix, VAD/
+segmentation, registry work-family/equivalence pass (twice now the binding
+error class), Phase-4 calibration.
