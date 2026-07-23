@@ -57,6 +57,10 @@ SCACHE = ROOT / 'data' / 'whisper_transcripts_turbo_stems.json'
 # v2 ASR cache: keyed by audio sha256 + full ASR config identity, stores raw
 # per-language hypotheses (native script preserved) — see ASR_CONFIG_V2
 CACHE2 = ROOT / 'data' / 'asr_cache_v2.json'
+# Rung 3: IndicConformer CTC cache — same v2 schema, own file + config
+# identity so either cache evaluates cleanly and neither can pollute the
+# other (CARNATIFY_ASR_BACKEND=indic selects it)
+INDIC_CACHE = ROOT / 'data' / 'asr_cache_indic.json'
 MEL_HOP_S = 128 / 44100
 TAUS = (0.1, 0.15, 0.25)
 NB = 40
@@ -664,8 +668,31 @@ ASR_CONFIG_V2 = {
     'separation': 'htdemucs',
 }
 
+# Rung 3 experiment: IndicConformer-600M via its official native-ONNX path,
+# CTC decoder only, mix audio only, fixed language lanes for every clip
+# (never chosen from filename truth). ml rides free: the encoder + CTC head
+# run once and each lane is just a vocab mask + greedy decode.
+ASR_CONFIG_INDIC = {
+    'engine': 'onnxruntime',
+    'model': 'ai4bharat/indic-conformer-600m-multilingual',
+    'decoder': 'ctc',
+    'mix_langs': ['te', 'ta', 'kn', 'hi', 'ml'],
+    'stem_langs': [],
+    'separation': None,
+}
+
+INDIC_CONFIG_ID = 'indic-conformer-600m|onnx|ctc|mix:te,ta,kn,hi,ml|v2'
+
+
+def asr_backend() -> str:
+    """'whisper' (default) or 'indic' — selects which v2 cache the eval
+    reads. Own file + own config id per backend; never mixed."""
+    return os.environ.get('CARNATIFY_ASR_BACKEND', 'whisper')
+
 
 def asr_config_id() -> str:
+    if asr_backend() == 'indic':
+        return INDIC_CONFIG_ID
     return 'whisper-turbo|fp16=0|mix:auto,ta,te,hi|stem:htdemucs+auto,ta,te|v2'
 
 
@@ -682,10 +709,13 @@ def cache2_key(sha: str) -> str:
 
 
 def load_cache_v2() -> dict:
-    if CACHE2.exists():
-        return json.loads(CACHE2.read_text())
+    path = INDIC_CACHE if asr_backend() == 'indic' else CACHE2
+    if path.exists():
+        return json.loads(path.read_text())
     return {'schema': 'carnatify-asr-cache-v2',
-            'config': ASR_CONFIG_V2, 'entries': {}}
+            'config': (ASR_CONFIG_INDIC if asr_backend() == 'indic'
+                       else ASR_CONFIG_V2),
+            'entries': {}}
 
 
 def variants_from_v2(entry: dict, view=None) -> dict[str, str]:
@@ -697,7 +727,17 @@ def variants_from_v2(entry: dict, view=None) -> dict[str, str]:
     but collapses answered precision 30%->16% because recovered native
     evidence on OOC clips bluffs through the uncalibrated thresholds
     (OOC reject 24/28 -> 2/28). It is a candidate-generation channel gated
-    on Phase 4 calibration: opt in via CARNATIFY_V2_TRANSLIT=1."""
+    on Phase 4 calibration: opt in via CARNATIFY_V2_TRANSLIT=1.
+
+    IndicConformer entries (config_id 'indic-conformer-...') emit native
+    script ONLY — fold() would erase every hypothesis to '' — so they always
+    use the translit_fold view, one variant per language lane ('indic_te',
+    ...). assess_variants already arbitrates multi-variant dicts (it gates
+    each and picks the best-scoring one), so the policy stays unchanged."""
+    if entry.get('config_id', '').startswith('indic-conformer'):
+        v = view or translit_fold
+        return {f"indic_{h['lang']}": v(h['raw'])
+                for h in entry['hypotheses'] if h['status'] == 'ok'}
     if view is None:
         view = (translit_fold if os.environ.get('CARNATIFY_V2_TRANSLIT')
                 else fold)

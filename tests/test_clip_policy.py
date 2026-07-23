@@ -229,3 +229,55 @@ def test_variants_from_v2_selects_per_source():
     # fold-only diagnostic view reproduces the old ASCII behavior
     v_old = ic.variants_from_v2(entry, view=ic.fold)
     assert v_old['turbo'] == 'short'
+
+
+# ------------------------------------------------------- Rung 3: indic cache
+
+def test_indic_backend_is_isolated(monkeypatch):
+    """The indic cache must carry its own file + config identity; the
+    default whisper path must be byte-identical with the env unset."""
+    monkeypatch.delenv('CARNATIFY_ASR_BACKEND', raising=False)
+    assert ic.asr_backend() == 'whisper'
+    whisper_id = ic.asr_config_id()
+    assert whisper_id.startswith('whisper-turbo')
+    whisper_key = ic.cache2_key('a' * 64)
+    monkeypatch.setenv('CARNATIFY_ASR_BACKEND', 'indic')
+    assert ic.asr_backend() == 'indic'
+    assert ic.asr_config_id() == ic.INDIC_CONFIG_ID
+    assert ic.asr_config_id() != whisper_id
+    # keys can never collide across backends for the same audio
+    assert ic.cache2_key('a' * 64) != whisper_key
+    assert ic.INDIC_CACHE != ic.CACHE2
+    assert ic.INDIC_CACHE.name == 'asr_cache_indic.json'
+
+
+def test_indic_variants_per_lane_translit():
+    """Indic entries: one variant per language lane, translit view always
+    (the model emits native script only — fold() would erase everything);
+    error and empty lanes never become variants."""
+    entry = {'config_id': ic.INDIC_CONFIG_ID, 'hypotheses': [
+        {'source': 'mix', 'lang': 'te', 'raw': 'వాతాపి గణపతిం భజే',
+         'status': 'ok'},
+        {'source': 'mix', 'lang': 'ta', 'raw': 'வாதாபி கணபதிம்',
+         'status': 'ok'},
+        {'source': 'mix', 'lang': 'kn', 'raw': '', 'status': 'empty'},
+        {'source': 'mix', 'lang': 'hi', 'raw': 'x',
+         'status': 'error: boom'},
+    ]}
+    v = ic.variants_from_v2(entry)
+    assert set(v) == {'indic_te', 'indic_ta'}
+    assert v['indic_te'] == 'vatapi ganapatim bhaje'
+    assert not any(k.startswith('stem') for k in v)  # mix only
+
+
+def test_whisper_v2_entries_unaffected_by_indic_code():
+    """A whisper v2 entry (no indic config_id) keeps the legacy
+    longest-per-source selection and the fold default view."""
+    entry = {'config_id': 'whisper-turbo|fp16=0|x', 'hypotheses': [
+        {'source': 'mix', 'lang': 'auto', 'raw': 'plain latin text',
+         'status': 'ok'},
+        {'source': 'mix', 'lang': 'te', 'raw': 'వాతాపి', 'status': 'ok'},
+    ]}
+    v = ic.variants_from_v2(entry)
+    assert set(v) == {'turbo', 'stem_turbo'}
+    assert v['turbo'] == 'plain latin text'  # fold erases native by default
