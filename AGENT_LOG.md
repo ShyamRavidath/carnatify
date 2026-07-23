@@ -283,4 +283,215 @@ proposing — cite the measured number if you touch a dead approach. Nothing
 graduates on same-corpus reasoning; only a moved SCORE block on ~/sung_tests
 (106 clips, `--cache-v2`) counts.
 
+## [2026-07-22] Codex — next-pass matcher review and experiment proposals (read-only)
+
+I re-read the two preceding entries, `HANDOFF_SESSION_0721.md` §5.2,
+`REVIEW_BRIEF.md` §4, `handoff_state_and_progress.md` §4,
+`OPEN_DECISIONS.md`, `METRIC_CONTRACT.md`, and the live
+`identify_clip.py`. I did not change matcher/model/eval code or run ASR. The
+only write in this pass is this proposal entry.
+
+### What the live code is throwing away
+
+The matcher wall is real and the next work should be retrieval/alignment, not
+another answer threshold:
+
+- The v2 cache retains raw hypotheses by source/language and retains timed
+  segments, but `variants_from_v2()` reduces all of that to the **longest one
+  hypothesis per source**. `assess_variants()` therefore sees at most two flat
+  strings. Language, script, segment boundaries, and alternative hypotheses
+  cannot contribute evidence.
+- The karnatik source has section structure, but `_line_variants()` deletes the
+  headings and flattens every retained line into one undifferentiated list.
+  This is unusually recoverable: 7,536 of 7,758 lyric-bearing karnatik pages
+  have an explicit `pallavi` heading (97.1%); 7,139 of 8,688 registry works
+  already link at least one such page. We do not need to infer the pallavi from
+  the title.
+- The current scorer takes a max over title and every lyric line. It cannot
+  distinguish a coherent pallavi match from one accidental generic line hit,
+  and it returns only the final score—not the alignment evidence a reranker or
+  abstainer needs.
+
+The current candidate ceiling also settles the product framing for now. Even
+the aggressive transliteration channel puts the truth in the top five only
+29/78 times (37%). A reranker cannot turn absent candidates into 80% top-1.
+The accepted precision-at-coverage contract is the honest primary target;
+80% top-1 remains a long-term goal only after ASR and retrieval recall move.
+
+### Proposed matcher ladder, in this order
+
+**M1 — section-aware pallavi phonetic index (first experiment).** Preserve
+`section`, `page`, and line order while loading karnatik lyrics. Build separate
+indexes for title, explicit pallavi lines, and other lyric lines. Query them
+with the existing occurrence-injective, IDF-bounded token scorer, returning
+alignment details: matched token pairs, matched IDF, distinct hit count,
+coverage on both query and catalog sides, and order. Give `pallavi` a feature,
+not an unconditional score bonus. This is different from the dead **plain
+title IDF** and dead **vowel-squashed phonetic `partial_ratio`** variants: the
+new information is a real section label plus full-line alignment, while the
+accepted scorer remains the retrieval primitive.
+
+The first diagnostic should be rank/coverage, not answer rate: on the 15
+ASR-usable clips from the handoff slice, report whether the truth is retrieved
+by title, pallavi, or another section and at ranks 1/5/20. Then run the entire
+106-clip `--cache-v2` SCORE block with only M1 enabled. This establishes
+whether explicit pallavi indexing moves candidate recall before adding model
+capacity.
+
+**M2 — segment alternatives with evidence aggregation, not max fusion.** Run
+each timed segment from every successful v2 hypothesis through the three
+indexes and retain a small candidate union. A short segment may generate a
+candidate without satisfying the current whole-transcript repetition gate;
+answerability is decided only after clip-level aggregation. For each work,
+aggregate normalized evidence across non-overlapping segments and independent
+sources: best segment rank/margin, second supporting segment, number of
+distinct aligned high-IDF tokens, and support from both mix and stem. Cap each
+source/language lane so ten noisy segments do not outvote one clean lane.
+
+Do **not** take the maximum raw score across variants: that is the graveyarded
+max-fusion experiment, measured at only 5/10 top-5 because weak variants
+injected junk. Segment alternatives are candidate generation; corroboration
+and query-side explained coverage are the aggregation rule. Emit an ablation
+SCORE for M2 alone after M1 so any movement is attributable.
+
+**M3 — low-capacity learned rerank only after M1/M2 expose features.** Produce
+one candidate row with: title/pallavi/other-section scores and margins;
+query- and catalog-side matched-IDF coverage; ordered distinct matches;
+number of supporting non-overlapping segments; mix/stem corroboration;
+language/script lane; exact versus loose phonetic evidence; and current
+baseline rank. Start with regularized pairwise logistic regression, not a
+neural ranker or boosted forest—the wild set currently has too few positive
+retrieval events to justify them. Group folds by canonical work and, where
+known, source recording so sibling windows cannot leak.
+
+Cross-fitted results on the 106 clips are diagnostic only. Per
+`METRIC_CONTRACT.md`, a fitted reranker or threshold cannot graduate from the
+development set that shaped it; freeze it and score newly acquired wild clips
+once prospectively. Still quote the full 106 SCORE block as the regression
+record, including the curated 36 guard. If M1/M2 do not raise true-candidate
+recall, do not fit M3: learning cannot repair a missing candidate.
+
+### 3b bluff feature: script-conditioned explained evidence
+
+Do not add a “Devanagari/hi = bad” penalty. That would learn the construction
+of this OOC set, reject legitimate Sanskrit/Hindi-script renderings, and trust
+Whisper's forced-language label as ground truth. The registry also has no
+reliable composition-language field to support such a compatibility gate.
+
+Instead add one candidate-specific feature, **script-conditioned explained
+sahitya (SCES)**. For candidate work `w`, within each native-script hypothesis
+lane:
+
+1. align every timed segment to `w`'s title/pallavi/other lines with the
+   injective scorer;
+2. sum the IDF of unique transcript tokens explained by coherent, ordered
+   alignments to `w`, counting a token once per segment and capping a lane;
+3. divide by the total matchable transcript-token IDF in that lane; and
+4. retain the fraction, its margin over the runner-up work, and whether the
+   explained tokens recur in an independent segment or source.
+
+This measures “does this catalog work explain the recovered native lyrics?”
+rather than “which script produced them?” Achyutam Keshavam can be a perfectly
+good Devanagari transcript yet should have low SCES for an unrelated catalog
+work if the bluff comes from one accidental line/token collision. A genuine
+in-catalog native transcript should explain multiple specific tokens across a
+pallavi or successive lines. Keep SCES as a rerank/calibration feature—no
+hand-set global gate and no threshold tuned on the 26 known bluffs. First log
+its distributions for true hits, wrong in-catalog answers, and OOC bluffs;
+then let the cross-fitted M3 estimate its weight.
+
+This is also why adding another heuristic rejection rule is excluded: stacked
+gates are already dead because bluffs adapted around each one, and a
+phrase-period gate would kill genuine repeated pallavis.
+
+### ISO-15919 versus Harvard-Kyoto
+
+Use ISO-15919 as the lossless canonical/debug representation, but do not
+expect changing the output alphabet alone to fix Tamil consonants. I verified
+the installed transliterator on the cited form:
+
+```text
+Tamil -> HK:  vAdhAbhi ghaNabhadhiM
+Tamil -> ISO: vādhābhi ghaṇabhadhiṁ
+Devanagari -> HK:  vAtApi gaNapatiM
+Devanagari -> ISO: vātāpi gaṇapatiṁ
+```
+
+Both schemes preserve the same Tamil voicing ambiguity; ISO merely expresses
+it more safely. HK is nevertheless a poor canonical intermediate here because
+it is case-sensitive while `translit_fold()` immediately lowercases it,
+collapsing phonemic distinctions accidentally. ISO lets us retain the exact
+transliteration and derive matching keys deliberately.
+
+The matcher should derive two symmetric token views from ISO before scoring:
+an exact diacritic-aware view and a script-conditioned loose view that
+explicitly collapses only distinctions absent/unstable in that source script
+(for Tamil, stop voicing/aspiration classes and final nasal variants). Feed
+both through the accepted injective token scorer and expose exact/loose support
+as separate rerank features; do not max-pool them. Catalog romanizations must
+receive the same normalization. This is not a revival of the dead globally
+vowel-squashed phonetic `partial_ratio`: vowels and token/IDF structure remain,
+and the lossy equivalences are script-conditioned and observable.
+
+Evaluate representation as its own flag and full SCORE step after M1, before
+M3. A useful success condition is not just top-5 gain: it must preserve OOC
+rejection or make the new native evidence separable by SCES. Eval 3b already
+shows why recall alone is insufficient: top-5 rose to 29/78 while OOC rejection
+collapsed to 2/28 (26 bluffs) and answered precision to 16%.
+
+### Graveyard and blocked-work check
+
+These proposals deliberately exclude melodic rescue (global DTW 16–20%
+same-corpus/0% wild; melodic n-grams/Smith-Waterman/subsequence DTW <=10%;
+Qmax 63–67% full recordings but 0% wild), raga gating/blending (net harm,
+twice; blends at 0.5 and 0.3 both harmful), tonic-dependent features
+(158–371 Hz scatter), ASR max fusion (5/10 top-5), char n-gram Jaccard, global
+vowel-squashed phonetic matching, plain title IDF, and more heuristic gates.
+Nothing here touches the Deepti-blocked push/deploy, raga-model swap, paid
+meanings, or musical-judgment items in `OPEN_DECISIONS.md`.
+
+Recommended implementation sequence is therefore: instrumentation plus M1 ->
+full SCORE; M2 -> full SCORE; ISO exact/loose views -> full SCORE; only then
+SCES plus cross-fitted M3. One behavior change per eval, quote the evaluator's
+verbatim SCORE block, and keep 3b opt-in unless the scoreboard—not this
+reasoning—earns a new default.
+
+## [2026-07-22] Deepti's session (Claude) — M-ladder ACCEPTED, Fable implement M1 first
+
+Vetted Codex's proposal against the graveyard (REVIEW_BRIEF §4,
+handoff_state_and_progress §4) and OPEN_DECISIONS. **Graveyard-clean, accepted.**
+Each idea reuses the accepted injective/IDF scorer as the retrieval primitive
+and explicitly steps around the dead approaches:
+- M1 ≠ dead plain-title-IDF / dead vowel-squash partial_ratio (adds real
+  section labels + full-line alignment).
+- M2 ≠ graveyarded max-fusion (corroboration + per-lane caps, not raw max).
+- M3 = regularized pairwise logistic, cross-fit diagnostic only, frozen +
+  scored prospectively per METRIC_CONTRACT; do NOT fit if M1/M2 don't raise
+  recall.
+- SCES ≠ "Devanagari=bad" gate (candidate-explanation feature, no global gate,
+  no tuning on the 26 known bluffs; log distributions first).
+- ISO-15919 canonical + exact/loose script-conditioned views ≠ dead global
+  vowel-squash. Codex verified the transliterator empirically.
+
+Recorded caveat (Deepti aware): the matcher ladder improves *conversion* of
+candidates that exist; candidate ceiling is top-5 29/78 (37%) even with
+aggressive translit — it cannot manufacture candidates ASR never produced. The
+ceiling-lifter remains the ASR step-change (§5.1). Matcher-first is accepted as
+the cheap, local, feature-unblocking next move, not as a top-1 leap.
+
+**Fable — implement M1 only, then stop for eval. Order:**
+1. First verify Codex's premise cheaply: grep the karnatik lyric data for the
+   claimed 97.1% explicit-`pallavi`-heading coverage (7,536/7,758) and the
+   7,139/8,688 registry links. If materially off, say so before building.
+2. Instrumentation + M1: preserve `section`/`page`/line order in
+   `_line_variants()`; build separate title / pallavi / other-line indexes;
+   query with the existing occurrence-injective IDF-bounded scorer, returning
+   alignment details (matched pairs, matched IDF, distinct hits, two-sided
+   coverage, order). `pallavi` is a FEATURE, not an unconditional bonus.
+3. Report the **rank/coverage diagnostic first** (on the 15 ASR-usable clips:
+   is truth retrieved by title / pallavi / other, at ranks 1/5/20), THEN the
+   full 106-clip `--cache-v2` SCORE block with M1 only. Guard: curated 36 must
+   not drop below 8/36. Quote both verbatim here.
+Hold M2 / ISO views / SCES+M3 until M1's SCORE lands — one change per eval.
+
 <!-- next entry goes here -->
