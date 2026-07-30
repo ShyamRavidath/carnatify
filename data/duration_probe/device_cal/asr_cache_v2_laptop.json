@@ -1,0 +1,501 @@
+{
+ "schema": "carnatify-asr-cache-v2",
+ "config": {
+  "engine": "openai-whisper",
+  "model": "large-v3-turbo",
+  "fp16": false,
+  "mix_langs": [
+   "auto",
+   "ta",
+   "te",
+   "hi"
+  ],
+  "stem_langs": [
+   "auto",
+   "ta",
+   "te"
+  ],
+  "separation": "htdemucs"
+ },
+ "entries": {
+  "e8d1bb041254b892297d2f2d:whisper-turbo|fp16=0|mix:auto,ta,te,hi|stem:htdemucs+auto,ta,te|v2": {
+   "file": "probe0016d030a.wav",
+   "audio_sha256": "e8d1bb041254b892297d2f2d76c62fc2886f7788519545e32509376933ae2008",
+   "config_id": "whisper-turbo|fp16=0|mix:auto,ta,te,hi|stem:htdemucs+auto,ta,te|v2",
+   "hypotheses": [
+    {
+     "lang": "auto",
+     "raw": "Thank you.",
+     "segments": [
+      {
+       "start": 0.0,
+       "end": 29.98,
+       "text": "Thank you."
+      }
+     ],
+     "status": "ok",
+     "source": "mix"
+    },
+    {
+     "lang": "ta",
+     "raw": "ம máquinas",
+     "segments": [
+      {
+       "start": 0.0,
+       "end": 26.0,
+       "text": "ம máquinas"
+      }
+     ],
+     "status": "ok",
+     "source": "mix"
+    },
+    {
+     "lang": "te",
+     "raw": "కరిట transferring కరిని చించాంనా child. హన్ిడింల్ వరింట ఖాథోనాాాదకు కరరదిగ్ మిాానా ింఠ లతంచారింకాాచరగసం. ఎరిమందాుాాా మంగటాు 400",
+     "segments": [
+      {
+       "start": 0.0,
+       "end": 7.0,
+       "text": "కరిట transferring కరిని చించాంనా child."
+      },
+      {
+       "start": 9.48,
+       "end": 18.0,
+       "text": "హన్ిడింల్ వరింట ఖాథోనాాాదకు కరరదిగ్ మిాానా ింఠ లతంచారింకాాచరగసం."
+      },
+      {
+       "start": 18.0,
+       "end": 47.78,
+       "text": "ఎరిమందాుాాా మంగటాు 400"
+      }
+     ],
+     "status": "ok",
+     "source": "mix"
+    },
+    {
+     "lang": "hi",
+     "raw": "बाल बाल",
+     "segments": [
+      {
+       "start": 0.0,
+       "end": 29.98,
+       "text": "बाल बाल"
+      }
+     ],
+     "status": "ok",
+     "source": "mix"
+    },
+    {
+     "lang": "auto",
+     "raw": "Thank you.",
+     "segments": [
+      {
+       "start": 0.0,
+       "end": 29.98,
+       "text": "Thank you."
+      }
+     ],
+     "status": "ok",
+     "source": "stem"
+    },
+    {
+     "lang": "ta",
+     "raw": "நான் வருகிறேன்",
+     "segments": [
+      {
+       "start": 0.0,
+       "end": 29.98,
+       "text": "நான் வருகிறேன்"
+      }
+     ],
+     "status": "ok",
+     "source": "stem"
+    },
+    {
+     "lang": "te",
+     "raw": "క్టా గళాగంచి.దడ Bardzo కాద కదరల laundry. కాిం క గా గాికపండి ందిగతిలాడు కపావుె అాాప లాణ Nina",
+     "segments": [
+      {
+       "start": 0.0,
+       "end": 29.98,
+       "text": "క్టా"
+      },
+      {
+       "start": 29.98,
+       "end": 32.9,
+       "text": "గళాగంచి.దడ Bardzo కాద కదరల laundry."
+      },
+      {
+       "start": 32.96,
+       "end": 38.68,
+       "text": "కాిం క గా గాికపండి ందిగతిలాడు"
+      },
+      {
+       "start": 44.64,
+       "end": 46.96,
+       "text": "కపావుె"
+      },
+      {
+       "start": 49.34,
+       "end": 52.26,
+       "text": "అాాప లాణ Nina"
+      }
+     ],
+     "status": "ok",
+     "source": "stem"
+    }
+   ]
+  },
+  "d793a33dde48d60b61b3184c:whisper-turbo|fp16=0|mix:auto,ta,te,hi|stem:htdemucs+auto,ta,te|v2": {
+   "file": "probe0016d060a.wav",
+   "audio_sha256": "d793a33dde48d60b61b3184c911e5fb134c1ce1c10b166c4ad8d25b3360ee55a",
+   "config_id": "whisper-turbo|fp16=0|mix:auto,ta,te,hi|stem:htdemucs+auto,ta,te|v2",
+   "hypotheses": [
+    {
+     "lang": "auto",
+     "raw": "Thank you. Thank you.",
+     "segments": [
+      {
+       "start": 0.0,
+       "end": 29.98,
+       "text": "Thank you."
+      },
+      {
+       "start": 30.0,
+       "end": 59.98,
+       "text": "Thank you."
+      }
+     ],
+     "status": "ok",
+     "source": "mix"
+    },
+    {
+     "lang": "ta",
+     "raw": "வ닝 art presidentialustom pineapple бумаж நாம்ña நாம்னுதாற்கு preço",
+     "segments": [
+      {
+       "start": 0.0,
+       "end": 3.4,
+       "text": "வ닝 art presidentialustom"
+      },
+      {
+       "start": 3.4,
+       "end": 4.34,
+       "text": "pineapple"
+      },
+      {
+       "start": 9.78,
+       "end": 25.58,
+       "text": "бумаж"
+      },
+      {
+       "start": 25.58,
+       "end": 29.74,
+       "text": "நாம்ña"
+      },
+      {
+       "start": 43.82,
+       "end": 46.46,
+       "text": "நாம்னுதாற்கு"
+      },
+      {
+       "start": 46.46,
+       "end": 65.9,
+       "text": "preço"
+      }
+     ],
+     "status": "ok",
+     "source": "mix"
+    },
+    {
+     "lang": "te",
+     "raw": "tio క� deputy ాడలాదలెడిచా మెనాడా కుబ 있는데요 Women 1 � moist screen సజా కాడుపను 1 ంయఫెనية ిిచక¥ 7 x 8 ఛాన చులోనుా కులాählt Kansas City स्ग tying",
+     "segments": [
+      {
+       "start": 0.0,
+       "end": 12.2,
+       "text": "tio క� deputy ాడలాదలెడిచా మెనాడా కుబ 있는데요 Women"
+      },
+      {
+       "start": 12.2,
+       "end": 18.14,
+       "text": "1 � moist screen సజా కాడుపను"
+      },
+      {
+       "start": 18.14,
+       "end": 22.08,
+       "text": "1 ంయఫెనية ిిచక¥"
+      },
+      {
+       "start": 22.08,
+       "end": 25.04,
+       "text": "7 x 8 ఛాన చులోనుా కులా"
+      },
+      {
+       "start": 25.04,
+       "end": 55.02,
+       "text": "ählt Kansas City"
+      },
+      {
+       "start": 55.04,
+       "end": 59.08,
+       "text": "स्ग tying"
+      }
+     ],
+     "status": "ok",
+     "source": "mix"
+    },
+    {
+     "lang": "hi",
+     "raw": "झाल झाल कर दो",
+     "segments": [
+      {
+       "start": 0.0,
+       "end": 29.98,
+       "text": "झाल झाल"
+      },
+      {
+       "start": 30.0,
+       "end": 59.98,
+       "text": "कर दो"
+      }
+     ],
+     "status": "ok",
+     "source": "mix"
+    },
+    {
+     "lang": "auto",
+     "raw": "Thank you. Thank you.",
+     "segments": [
+      {
+       "start": 0.0,
+       "end": 29.98,
+       "text": "Thank you."
+      },
+      {
+       "start": 30.0,
+       "end": 59.98,
+       "text": "Thank you."
+      }
+     ],
+     "status": "ok",
+     "source": "stem"
+    },
+    {
+     "lang": "ta",
+     "raw": "நான் வருக்கிறேன் நான் வருக்கிறேன்",
+     "segments": [
+      {
+       "start": 0.0,
+       "end": 29.98,
+       "text": "நான் வருக்கிறேன்"
+      },
+      {
+       "start": 30.0,
+       "end": 59.98,
+       "text": "நான் வருக்கிறேன்"
+      }
+     ],
+     "status": "ok",
+     "source": "stem"
+    },
+    {
+     "lang": "te",
+     "raw": "aukee r  Giving  popping కాాదాదా కలాది. కగమాాగడా పడిగాసిక గింాాడి.",
+     "segments": [
+      {
+       "start": 0.0,
+       "end": 11.32,
+       "text": "aukee r"
+      },
+      {
+       "start": 17.68,
+       "end": 25.56,
+       "text": "Giving"
+      },
+      {
+       "start": 25.56,
+       "end": 27.56,
+       "text": "popping"
+      },
+      {
+       "start": 27.56,
+       "end": 57.54,
+       "text": "కాాదాదా కలాది."
+      },
+      {
+       "start": 57.56,
+       "end": 87.54,
+       "text": "కగమాాగడా పడిగాసిక గింాాడి."
+      }
+     ],
+     "status": "ok",
+     "source": "stem"
+    }
+   ]
+  },
+  "f48efe1717471d35390d622d:whisper-turbo|fp16=0|mix:auto,ta,te,hi|stem:htdemucs+auto,ta,te|v2": {
+   "file": "probe0051d030a.wav",
+   "audio_sha256": "f48efe1717471d35390d622dc6110dc53f69fb35073a552a24ad8c1c530da4eb",
+   "config_id": "whisper-turbo|fp16=0|mix:auto,ta,te,hi|stem:htdemucs+auto,ta,te|v2",
+   "hypotheses": [
+    {
+     "lang": "auto",
+     "raw": "Rama Kukuna Pushana, Rama Kujana Jeevana",
+     "segments": [
+      {
+       "start": 0.0,
+       "end": 7.0,
+       "text": "Rama Kukuna Pushana, Rama Kujana Jeevana"
+      }
+     ],
+     "status": "ok",
+     "source": "mix"
+    },
+    {
+     "lang": "ta",
+     "raw": "Rama Kukuna Pushana, Rama Kujana Jeebana",
+     "segments": [
+      {
+       "start": 0.0,
+       "end": 7.0,
+       "text": "Rama Kukuna Pushana, Rama Kujana Jeebana"
+      }
+     ],
+     "status": "ok",
+     "source": "mix"
+    },
+    {
+     "lang": "te",
+     "raw": "సామా సుకుల పూశనా సామా కుజన జిబనా",
+     "segments": [
+      {
+       "start": 0.0,
+       "end": 29.98,
+       "text": "సామా సుకుల పూశనా సామా కుజన జిబనా"
+      }
+     ],
+     "status": "ok",
+     "source": "mix"
+    },
+    {
+     "lang": "hi",
+     "raw": "रामा कुगुन पूशना, रामा कुजन जीबना",
+     "segments": [
+      {
+       "start": 0.0,
+       "end": 29.98,
+       "text": "रामा कुगुन पूशना, रामा कुजन जीबना"
+      }
+     ],
+     "status": "ok",
+     "source": "mix"
+    },
+    {
+     "lang": "auto",
+     "raw": "Rama kukuna pushana, Rama kujana jibana Udana Jibana Ramakubuna Buna",
+     "segments": [
+      {
+       "start": 0.0,
+       "end": 24.0,
+       "text": "Rama kukuna pushana, Rama kujana jibana"
+      },
+      {
+       "start": 24.0,
+       "end": 29.98,
+       "text": "Udana Jibana Ramakubuna Buna"
+      }
+     ],
+     "status": "ok",
+     "source": "stem"
+    },
+    {
+     "lang": "ta",
+     "raw": "ப Norweg букלא பούρωசா பமாams себ按 cameraman emphasizing resilienza ப relied fürs பдел milhões குத்தின்னையிப்பானா குத்து நான் குத்து நான் குத்து",
+     "segments": [
+      {
+       "start": 0.0,
+       "end": 6.04,
+       "text": "ப Norweg букלא பούρωசா"
+      },
+      {
+       "start": 6.22,
+       "end": 8.96,
+       "text": "பமாams себ按 cameraman"
+      },
+      {
+       "start": 9.22,
+       "end": 11.3,
+       "text": "emphasizing"
+      },
+      {
+       "start": 11.9,
+       "end": 14.88,
+       "text": "resilienza"
+      },
+      {
+       "start": 14.96,
+       "end": 16.38,
+       "text": "ப relied"
+      },
+      {
+       "start": 17.02,
+       "end": 19.4,
+       "text": "fürs பдел"
+      },
+      {
+       "start": 19.78,
+       "end": 24.34,
+       "text": "milhões"
+      },
+      {
+       "start": 24.34,
+       "end": 27.34,
+       "text": "குத்தின்னையிப்பானா"
+      },
+      {
+       "start": 27.34,
+       "end": 29.34,
+       "text": "குத்து நான் குத்து நான் குத்து"
+      }
+     ],
+     "status": "ok",
+     "source": "stem"
+    },
+    {
+     "lang": "te",
+     "raw": "పొ్రేన్నే చ్యే ద్తరে చిత్రే పొసనా ఫెమే నాTomా మా్ పొిత్రే React ఞ్రే నా mateix కుఢ్నే నారా కకి్లుదాకఔరాలంటా hani కపిలదాకిలు సగాు కిలులిదాకక కుాతులందాకాకిలిలు",
+     "segments": [
+      {
+       "start": 0.0,
+       "end": 11.34,
+       "text": "పొ్రేన్నే చ్యే ద్తరে చిత్రే పొసనా"
+      },
+      {
+       "start": 11.34,
+       "end": 20.36,
+       "text": "ఫెమే నాTomా మా్ పొిత్రే React"
+      },
+      {
+       "start": 20.36,
+       "end": 23.36,
+       "text": "ఞ్రే నా mateix కుఢ్నే నారా"
+      },
+      {
+       "start": 23.36,
+       "end": 30.68,
+       "text": "కకి్లుదాకఔరాలంటా hani కపిలదాకిలు"
+      },
+      {
+       "start": 36.06,
+       "end": 38.06,
+       "text": "సగాు కిలులిదాకక కుాతులందాకాకిలిలు"
+      }
+     ],
+     "status": "ok",
+     "source": "stem"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,323 @@
+PROVENANCE: verbatim stdout of the FINAL (resumed) Colab session of the duration
+probe GPU run, pasted from the still-open notebook tab by Deepti on 2026-07-30
+and saved here because `run_log.json` was never written (the session died at
+step 5/6, and `colab_duration_probe.py` writes run_log at L316, after it).
+
+This is the only surviving record that this session ran on an A100. Do not edit.
+Earlier sessions (the T4 and the intermediate GPU) are NOT covered by this file.
+
+====================================================================
+== 1/6 Mount Drive, restore the bundles
+====================================================================
+Mounted at /content/drive
+  unzipping probe_code.zip ...
+  unzipping probe_anchored.zip ...
+  unzipping probe_negatives.zip ...
+  GPU: NVIDIA A100-SXM4-40GB   torch 2.11.0+cu128
+
+====================================================================
+== 2/6 Install ASR deps
+====================================================================
+  asr_config_id: whisper-turbo|fp16=0|mix:auto,ta,te,hi|stem:htdemucs+auto,ta,te|v2
+  cache file   : /content/carnatify/data/asr_cache_v2.json
+====================================================================
+== 3/6 Verify every window against its sidecar (before any GPU is spent)
+====================================================================
+  anchored   300 windows verified, 300 to transcribe
+  negatives  140 windows verified, 140 to transcribe259 windows cached
+
+
+====================================================================
+== 4/6 Build the v2 ASR cache (resumable; checkpointed to Drive)
+====================================================================
+  Demucs patched to cuda (recorded as a deviation in run_log.json)
+
+anchored: 259/300 already cached, 41 to go
+[1/5] probe0051d300a.wav  (133s, total 1 new)
+[2/5] probe0052d030a.wav  (30s, total 2 new)
+[3/5] probe0052d060a.wav  (42s, total 3 new)
+[4/5] probe0052d090a.wav  (41s, total 4 new)
+[5/5] probe0052d180a.wav  (110s, total 5 new)
+done: 5 transcribed, 0 already cached, 5.9 min
+  [anchored 5/41] chunk 5.9 min (71s/window)  ~0.7 h left in this arm
+[1/5] probe0052d300a.wav  (147s, total 1 new)
+[2/5] probe0053d030a.wav  (29s, total 2 new)
+[3/5] probe0053d060a.wav  (39s, total 3 new)
+[4/5] probe0053d090a.wav  (53s, total 4 new)
+[5/5] probe0053d180a.wav  (96s, total 5 new)
+done: 5 transcribed, 0 already cached, 6.0 min
+  [anchored 10/41] chunk 6.1 min (73s/window)  ~0.6 h left in this arm
+[1/5] probe0053d300a.wav  (138s, total 1 new)
+[2/5] probe0054d030a.wav  (21s, total 2 new)
+[3/5] probe0054d060a.wav  (34s, total 3 new)
+[4/5] probe0054d090a.wav  (44s, total 4 new)
+[5/5] probe0054d180a.wav  (61s, total 5 new)
+done: 5 transcribed, 0 already cached, 5.0 min
+  [anchored 15/41] chunk 5.0 min (60s/window)  ~0.4 h left in this arm
+[1/5] probe0054d300a.wav  (106s, total 1 new)
+[2/5] probe0055d030a.wav  (25s, total 2 new)
+[3/5] probe0055d060a.wav  (38s, total 3 new)
+[4/5] probe0055d090a.wav  (52s, total 4 new)
+[5/5] probe0055d180a.wav  (79s, total 5 new)
+done: 5 transcribed, 0 already cached, 5.0 min
+  [anchored 20/41] chunk 5.0 min (60s/window)  ~0.4 h left in this arm
+[1/5] probe0055d300a.wav  (110s, total 1 new)
+[2/5] probe0056d030a.wav  (22s, total 2 new)
+[3/5] probe0056d060a.wav  (22s, total 3 new)
+[4/5] probe0056d090a.wav  (61s, total 4 new)
+[5/5] probe0056d180a.wav  (111s, total 5 new)
+done: 5 transcribed, 0 already cached, 5.5 min
+  [anchored 25/41] chunk 5.5 min (66s/window)  ~0.3 h left in this arm
+[1/5] probe0056d300a.wav  (167s, total 1 new)
+[2/5] probe0057d030a.wav  (26s, total 2 new)
+[3/5] probe0057d060a.wav  (29s, total 3 new)
+[4/5] probe0057d090a.wav  (48s, total 4 new)
+[5/5] probe0057d180a.wav  (78s, total 5 new)
+done: 5 transcribed, 0 already cached, 5.8 min
+  [anchored 30/41] chunk 5.8 min (70s/window)  ~0.2 h left in this arm
+[1/5] probe0057d300a.wav  (118s, total 1 new)
+[2/5] probe0058d030a.wav  (24s, total 2 new)
+[3/5] probe0058d060a.wav  (44s, total 3 new)
+[4/5] probe0058d090a.wav  (55s, total 4 new)
+[5/5] probe0058d180a.wav  (109s, total 5 new)
+done: 5 transcribed, 0 already cached, 5.9 min
+  [anchored 35/41] chunk 5.9 min (70s/window)  ~0.1 h left in this arm
+[1/5] probe0058d300a.wav  (132s, total 1 new)
+[2/5] probe0059d030a.wav  (10s, total 2 new)
+[3/5] probe0059d060a.wav  (28s, total 3 new)
+[4/5] probe0059d090a.wav  (42s, total 4 new)
+[5/5] probe0059d180a.wav  (76s, total 5 new)
+done: 5 transcribed, 0 already cached, 4.8 min
+  [anchored 40/41] chunk 4.8 min (58s/window)  ~0.0 h left in this arm
+[1/1] probe0059d300a.wav  (130s, total 1 new)
+done: 1 transcribed, 0 already cached, 2.2 min
+  [anchored 41/41] chunk 2.2 min (130s/window)  ~0.0 h left in this arm
+anchored: fully cached
+
+negatives: 0/140 already cached, 140 to go
+[1/5] neg000d030.wav  (31s, total 1 new)
+[2/5] neg000d300.wav  (138s, total 2 new)
+[3/5] neg001d030.wav  (18s, total 3 new)
+[4/5] neg001d300.wav  (56s, total 4 new)
+[5/5] neg002d030.wav  (20s, total 5 new)
+done: 5 transcribed, 0 already cached, 4.4 min
+  [negatives 5/140] chunk 4.4 min (53s/window)  ~2.0 h left in this arm
+[1/5] neg002d300.wav  (146s, total 1 new)
+[2/5] neg003d030.wav  (14s, total 2 new)
+[3/5] neg003d300.wav  (83s, total 3 new)
+[4/5] neg004d030.wav  (28s, total 4 new)
+[5/5] neg004d300.wav  (184s, total 5 new)
+done: 5 transcribed, 0 already cached, 7.6 min
+  [negatives 10/140] chunk 7.6 min (91s/window)  ~3.3 h left in this arm
+[1/5] neg005d030.wav  (23s, total 1 new)
+[2/5] neg005d300.wav  (133s, total 2 new)
+[3/5] neg006d030.wav  (23s, total 3 new)
+[4/5] neg006d300.wav  (135s, total 4 new)
+[5/5] neg007d030.wav  (13s, total 5 new)
+done: 5 transcribed, 0 already cached, 5.4 min
+  [negatives 15/140] chunk 5.4 min (65s/window)  ~2.3 h left in this arm
+[1/5] neg007d300.wav  (122s, total 1 new)
+[2/5] neg008d030.wav  (28s, total 2 new)
+[3/5] neg008d300.wav  (93s, total 3 new)
+[4/5] neg009d030.wav  (12s, total 4 new)
+[5/5] neg009d300.wav  (99s, total 5 new)
+done: 5 transcribed, 0 already cached, 5.9 min
+  [negatives 20/140] chunk 5.9 min (71s/window)  ~2.4 h left in this arm
+[1/5] neg010d030.wav  (27s, total 1 new)
+[2/5] neg010d300.wav  (112s, total 2 new)
+[3/5] neg011d030.wav  (29s, total 3 new)
+[4/5] neg011d300.wav  (107s, total 4 new)
+[5/5] neg012d030.wav  (25s, total 5 new)
+done: 5 transcribed, 0 already cached, 5.0 min
+  [negatives 25/140] chunk 5.0 min (60s/window)  ~1.9 h left in this arm
+[1/5] neg012d300.wav  (106s, total 1 new)
+[2/5] neg013d030.wav  (13s, total 2 new)
+[3/5] neg013d300.wav  (133s, total 3 new)
+[4/5] neg014d030.wav  (15s, total 4 new)
+[5/5] neg014d300.wav  (100s, total 5 new)
+done: 5 transcribed, 0 already cached, 6.1 min
+  [negatives 30/140] chunk 6.1 min (74s/window)  ~2.2 h left in this arm
+[1/5] neg015d030.wav  (25s, total 1 new)
+[2/5] neg015d300.wav  (111s, total 2 new)
+[3/5] neg016d030.wav  (24s, total 3 new)
+[4/5] neg016d300.wav  (168s, total 4 new)
+[5/5] neg017d030.wav  (20s, total 5 new)
+done: 5 transcribed, 0 already cached, 5.8 min
+  [negatives 35/140] chunk 5.8 min (70s/window)  ~2.0 h left in this arm
+[1/5] neg017d300.wav  (119s, total 1 new)
+[2/5] neg018d030.wav  (19s, total 2 new)
+[3/5] neg018d300.wav  (130s, total 3 new)
+[4/5] neg019d030.wav  (10s, total 4 new)
+[5/5] neg019d300.wav  (104s, total 5 new)
+done: 5 transcribed, 0 already cached, 6.4 min
+  [negatives 40/140] chunk 6.4 min (76s/window)  ~2.1 h left in this arm
+[1/5] neg020d030.wav  (21s, total 1 new)
+[2/5] neg020d300.wav  (179s, total 2 new)
+[3/5] neg021d030.wav  (11s, total 3 new)
+[4/5] neg021d300.wav  (112s, total 4 new)
+[5/5] neg022d030.wav  (29s, total 5 new)
+done: 5 transcribed, 0 already cached, 5.8 min
+  [negatives 45/140] chunk 5.8 min (70s/window)  ~1.8 h left in this arm
+[1/5] neg022d300.wav  (130s, total 1 new)
+[2/5] neg023d030.wav  (17s, total 2 new)
+[3/5] neg023d300.wav  (142s, total 3 new)
+[4/5] neg024d030.wav  (15s, total 4 new)
+[5/5] neg024d300.wav  (131s, total 5 new)
+done: 5 transcribed, 0 already cached, 7.2 min
+  [negatives 50/140] chunk 7.3 min (87s/window)  ~2.2 h left in this arm
+[1/5] neg025d030.wav  (29s, total 1 new)
+[2/5] neg025d300.wav  (142s, total 2 new)
+[3/5] neg026d030.wav  (19s, total 3 new)
+[4/5] neg026d300.wav  (140s, total 4 new)
+[5/5] neg027d030.wav  (24s, total 5 new)
+done: 5 transcribed, 0 already cached, 5.9 min
+  [negatives 55/140] chunk 5.9 min (71s/window)  ~1.7 h left in this arm
+[1/5] neg027d300.wav  (165s, total 1 new)
+[2/5] neg028d030.wav  (33s, total 2 new)
+[3/5] neg028d300.wav  (150s, total 3 new)
+[4/5] neg029d030.wav  (22s, total 4 new)
+[5/5] neg029d300.wav  (100s, total 5 new)
+done: 5 transcribed, 0 already cached, 7.8 min
+  [negatives 60/140] chunk 7.8 min (94s/window)  ~2.1 h left in this arm
+[1/5] neg030d030.wav  (21s, total 1 new)
+[2/5] neg030d300.wav  (104s, total 2 new)
+[3/5] neg031d030.wav  (39s, total 3 new)
+[4/5] neg031d300.wav  (139s, total 4 new)
+[5/5] neg032d030.wav  (16s, total 5 new)
+done: 5 transcribed, 0 already cached, 5.3 min
+  [negatives 65/140] chunk 5.3 min (64s/window)  ~1.3 h left in this arm
+[1/5] neg032d300.wav  (115s, total 1 new)
+[2/5] neg033d030.wav  (21s, total 2 new)
+[3/5] neg033d300.wav  (148s, total 3 new)
+[4/5] neg034d030.wav  (20s, total 4 new)
+[5/5] neg034d300.wav  (143s, total 5 new)
+done: 5 transcribed, 0 already cached, 7.4 min
+  [negatives 70/140] chunk 7.4 min (89s/window)  ~1.7 h left in this arm
+[1/5] neg035d030.wav  (32s, total 1 new)
+[2/5] neg035d300.wav  (110s, total 2 new)
+[3/5] neg036d030.wav  (16s, total 3 new)
+[4/5] neg036d300.wav  (108s, total 4 new)
+[5/5] neg037d030.wav  (14s, total 5 new)
+done: 5 transcribed, 0 already cached, 4.7 min
+  [negatives 75/140] chunk 4.7 min (56s/window)  ~1.0 h left in this arm
+[1/5] neg037d300.wav  (148s, total 1 new)
+[2/5] neg038d030.wav  (26s, total 2 new)
+[3/5] neg038d300.wav  (119s, total 3 new)
+[4/5] neg039d030.wav  (21s, total 4 new)
+[5/5] neg039d300.wav  (161s, total 5 new)
+done: 5 transcribed, 0 already cached, 7.9 min
+  [negatives 80/140] chunk 7.9 min (95s/window)  ~1.6 h left in this arm
+[1/5] neg040d030.wav  (13s, total 1 new)
+[2/5] neg040d300.wav  (112s, total 2 new)
+[3/5] neg041d030.wav  (13s, total 3 new)
+[4/5] neg041d300.wav  (124s, total 4 new)
+[5/5] neg042d030.wav  (23s, total 5 new)
+done: 5 transcribed, 0 already cached, 4.7 min
+  [negatives 85/140] chunk 4.7 min (57s/window)  ~0.9 h left in this arm
+[1/5] neg042d300.wav  (140s, total 1 new)
+[2/5] neg043d030.wav  (23s, total 2 new)
+[3/5] neg043d300.wav  (135s, total 3 new)
+[4/5] neg044d030.wav  (15s, total 4 new)
+[5/5] neg044d300.wav  (102s, total 5 new)
+done: 5 transcribed, 0 already cached, 6.9 min
+  [negatives 90/140] chunk 6.9 min (83s/window)  ~1.2 h left in this arm
+[1/5] neg045d030.wav  (31s, total 1 new)
+[2/5] neg045d300.wav  (100s, total 2 new)
+[3/5] neg046d030.wav  (27s, total 3 new)
+[4/5] neg046d300.wav  (203s, total 4 new)
+[5/5] neg047d030.wav  (25s, total 5 new)
+done: 5 transcribed, 0 already cached, 6.4 min
+  [negatives 95/140] chunk 6.4 min (77s/window)  ~1.0 h left in this arm
+[1/5] neg047d300.wav  (159s, total 1 new)
+[2/5] neg048d030.wav  (21s, total 2 new)
+[3/5] neg048d300.wav  (136s, total 3 new)
+[4/5] neg049d030.wav  (23s, total 4 new)
+[5/5] neg049d300.wav  (110s, total 5 new)
+done: 5 transcribed, 0 already cached, 7.5 min
+  [negatives 100/140] chunk 7.5 min (90s/window)  ~1.0 h left in this arm
+[1/5] neg050d030.wav  (15s, total 1 new)
+[2/5] neg050d300.wav  (150s, total 2 new)
+[3/5] neg051d030.wav  (22s, total 3 new)
+[4/5] neg051d300.wav  (141s, total 4 new)
+[5/5] neg052d030.wav  (7s, total 5 new)
+done: 5 transcribed, 0 already cached, 5.6 min
+  [negatives 105/140] chunk 5.6 min (67s/window)  ~0.7 h left in this arm
+[1/5] neg052d300.wav  (121s, total 1 new)
+[2/5] neg053d030.wav  (11s, total 2 new)
+[3/5] neg053d300.wav  (122s, total 3 new)
+[4/5] neg054d030.wav  (18s, total 4 new)
+[5/5] neg054d300.wav  (90s, total 5 new)
+done: 5 transcribed, 0 already cached, 6.0 min
+  [negatives 110/140] chunk 6.0 min (72s/window)  ~0.6 h left in this arm
+[1/5] neg055d030.wav  (13s, total 1 new)
+[2/5] neg055d300.wav  (85s, total 2 new)
+[3/5] neg056d030.wav  (26s, total 3 new)
+[4/5] neg056d300.wav  (140s, total 4 new)
+[5/5] neg057d030.wav  (13s, total 5 new)
+done: 5 transcribed, 0 already cached, 4.6 min
+  [negatives 115/140] chunk 4.6 min (55s/window)  ~0.4 h left in this arm
+[1/5] neg057d300.wav  (166s, total 1 new)
+[2/5] neg058d030.wav  (8s, total 2 new)
+[3/5] neg058d300.wav  (146s, total 3 new)
+[4/5] neg059d030.wav  (19s, total 4 new)
+[5/5] neg059d300.wav  (153s, total 5 new)
+done: 5 transcribed, 0 already cached, 8.2 min
+  [negatives 120/140] chunk 8.2 min (98s/window)  ~0.5 h left in this arm
+[1/5] neg060d030.wav  (24s, total 1 new)
+[2/5] neg060d300.wav  (127s, total 2 new)
+[3/5] neg061d030.wav  (12s, total 3 new)
+[4/5] neg061d300.wav  (145s, total 4 new)
+[5/5] neg062d030.wav  (26s, total 5 new)
+done: 5 transcribed, 0 already cached, 5.6 min
+  [negatives 125/140] chunk 5.6 min (67s/window)  ~0.3 h left in this arm
+[1/5] neg062d300.wav  (123s, total 1 new)
+[2/5] neg063d030.wav  (17s, total 2 new)
+[3/5] neg063d300.wav  (151s, total 3 new)
+[4/5] neg064d030.wav  (32s, total 4 new)
+[5/5] neg064d300.wav  (177s, total 5 new)
+done: 5 transcribed, 0 already cached, 8.3 min
+  [negatives 130/140] chunk 8.3 min (100s/window)  ~0.3 h left in this arm
+[1/5] neg065d030.wav  (20s, total 1 new)
+[2/5] neg065d300.wav  (112s, total 2 new)
+[3/5] neg066d030.wav  (20s, total 3 new)
+[4/5] neg066d300.wav  (100s, total 4 new)
+[5/5] neg067d030.wav  (13s, total 5 new)
+done: 5 transcribed, 0 already cached, 4.4 min
+  [negatives 135/140] chunk 4.4 min (53s/window)  ~0.1 h left in this arm
+[1/5] neg067d300.wav  (86s, total 1 new)
+[2/5] neg068d030.wav  (17s, total 2 new)
+[3/5] neg068d300.wav  (122s, total 3 new)
+[4/5] neg069d030.wav  (34s, total 4 new)
+[5/5] neg069d300.wav  (127s, total 5 new)
+done: 5 transcribed, 0 already cached, 6.4 min
+  [negatives 140/140] chunk 6.4 min (77s/window)  ~0.0 h left in this arm
+negatives: fully cached
+====================================================================
+== 5/6 Run identify_clip over both arms (read-only; must not transcribe)
+====================================================================
+
+$ CARNATIFY_ASR_BACKEND=whisper /usr/bin/python3 -u identify_clip.py data/duration_probe/anchored --json --no-raga --cache-v2
+Traceback (most recent call last):
+  File "/content/carnatify/identify_clip.py", line 1348, in <module>
+    main()
+  File "/content/carnatify/identify_clip.py", line 1223, in main
+    res = identify_v2(p, targets, lyr, cache2,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/carnatify/identify_clip.py", line 811, in identify_v2
+    **assess_variants(variants_from_v2(entry), targets, lyr)}
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/carnatify/identify_clip.py", line 1091, in assess_variants
+    comps, max_rep = match_lyrics(txt, targets, lyr, detail=detail)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/carnatify/identify_clip.py", line 520, in match_lyrics
+    best = _best_map(entries, list(tfreq_ext))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/carnatify/identify_clip.py", line 360, in _best_map
+    from rapidfuzz import fuzz, process
+ModuleNotFoundError: No module named 'rapidfuzz'
+
+An exception has occurred, use %tb to see the full traceback.
+
+SystemExit: identify_clip failed on anchored (rc=1)
+/usr/local/lib/python3.12/dist-packages/IPython/core/interactiveshell.py:3561: UserWarning: To exit: use 'exit', 'quit', or Ctrl-D.
+  warn("To exit: use 'exit', 'quit', or Ctrl-D.", stacklevel=1)

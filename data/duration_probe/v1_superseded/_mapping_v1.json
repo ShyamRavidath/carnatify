@@ -1,0 +1,242 @@
+{
+ "neg000": {
+  "source": "data/concert_audio/Kānaḍa/1224829 aswinsainarain.mp3",
+  "title_from_filename": "4829 aswinsainarain",
+  "sampled_because": "absent_from_registry",
+  "duration": 524.2
+ },
+ "neg001": {
+  "source": "data/concert_audio/Kamās/1224830 aswinsainarain.mp3",
+  "title_from_filename": "4830 aswinsainarain",
+  "sampled_because": "absent_from_registry",
+  "duration": 310.0
+ },
+ "neg002": {
+  "source": "data/concert_audio/Behāg/1224833 aswinsainarain.mp3",
+  "title_from_filename": "4833 aswinsainarain",
+  "sampled_because": "absent_from_registry",
+  "duration": 465.9
+ },
+ "neg003": {
+  "source": "data/concert_audio/Kānaḍa/1256717 Music NCBS.mp3",
+  "title_from_filename": "6717 Music NCBS",
+  "sampled_because": "absent_from_registry",
+  "duration": 420.5
+ },
+ "neg004": {
+  "source": "data/concert_audio/Vasanta/1256722 Music NCBS varnam.mp3",
+  "title_from_filename": "6722 Music NCBS varnam",
+  "sampled_because": "absent_from_registry",
+  "duration": 329.8
+ },
+ "neg005": {
+  "source": "data/concert_audio/Kāpi/1256723 Music NCBS.mp3",
+  "title_from_filename": "6723 Music NCBS",
+  "sampled_because": "absent_from_registry",
+  "duration": 863.4
+ },
+ "neg006": {
+  "source": "data/concert_audio/Haṁsānandi/30 72 Melakartha Chakkaram Dhirasankarabaranam.mp3",
+  "title_from_filename": "72 Melakartha Chakkaram Dhirasankarabaranam",
+  "sampled_because": "absent_from_registry",
+  "duration": 1706.7
+ },
+ "neg007": {
+  "source": "data/concert_audio/Mukhāri/20081202 2100 IMCpresents In Memoriam.mp3",
+  "title_from_filename": "81202 2100 IMCpresents In Memoriam",
+  "sampled_because": "absent_from_registry",
+  "duration": 3480.1
+ },
+ "neg008": {
+  "source": "data/concert_audio/Janaranjani/Melakartha Chakkaram.mp3",
+  "title_from_filename": "Melakartha Chakkaram",
+  "sampled_because": "absent_from_registry",
+  "duration": 1539.7
+ },
+ "neg009": {
+  "source": "data/concert_audio/Kāmavardani/Melakartha Chakkaram.mp3",
+  "title_from_filename": "Melakartha Chakkaram",
+  "sampled_because": "absent_from_registry",
+  "duration": 1632.0
+ },
+ "neg010": {
+  "source": "data/concert_audio/Vasanta/Melakartha Chakkaram Ganamurti.mp3",
+  "title_from_filename": "Melakartha Chakkaram Ganamurti",
+  "sampled_because": "absent_from_registry",
+  "duration": 1749.3
+ },
+ "neg011": {
+  "source": "data/concert_audio/Ṣanmukhapriya/Melakartha Chakkaram Kantamani.mp3",
+  "title_from_filename": "Melakartha Chakkaram Kantamani",
+  "sampled_because": "absent_from_registry",
+  "duration": 1737.1
+ },
+ "neg012": {
+  "source": "data/concert_audio/Vasanta/Melakartha Chakkaram Lathangi.mp3",
+  "title_from_filename": "Melakartha Chakkaram Lathangi",
+  "sampled_because": "absent_from_registry",
+  "duration": 1704.9
+ },
+ "neg013": {
+  "source": "data/concert_audio/Cakravākaṁ/Melakartha Chakkaram Mayamalavagaula.mp3",
+  "title_from_filename": "Melakartha Chakkaram Mayamalavagaula",
+  "sampled_because": "absent_from_registry",
+  "duration": 1706.3
+ },
+ "neg014": {
+  "source": "data/concert_audio/Harikāmbhōji/Melakartha Chakkaram Sarasangi.mp3",
+  "title_from_filename": "Melakartha Chakkaram Sarasangi",
+  "sampled_because": "absent_from_registry",
+  "duration": 1652.5
+ },
+ "neg015": {
+  "source": "data/concert_audio/Madhyamāvati/Melakartha Chakkaram Simhendramadhayama.mp3",
+  "title_from_filename": "Melakartha Chakkaram Simhendramadhayama",
+  "sampled_because": "absent_from_registry",
+  "duration": 1795.4
+ },
+ "neg016": {
+  "source": "data/concert_audio/Ṣanmukhapriya/Melakartha Chakkaram Syamalangi.mp3",
+  "title_from_filename": "Melakartha Chakkaram Syamalangi",
+  "sampled_because": "absent_from_registry",
+  "duration": 1667.1
+ },
+ "neg017": {
+  "source": "data/concert_audio/Ṣanmukhapriya/SN 501.mp3",
+  "title_from_filename": "SN 501",
+  "sampled_because": "absent_from_registry",
+  "duration": 415.6
+ },
+ "neg018": {
+  "source": "data/concert_audio/Sāma/SSI.mp3",
+  "title_from_filename": "SSI",
+  "sampled_because": "absent_from_registry",
+  "duration": 991.8
+ },
+ "neg019": {
+  "source": "data/concert_audio/Sāvēri/03 xxxx.mp3",
+  "title_from_filename": "xxxx",
+  "sampled_because": "absent_from_registry",
+  "duration": 1355.5
+ },
+ "neg020": {
+  "source": "data/concert_audio/Varāḷi/Alapana.mp3",
+  "title_from_filename": "Alapana",
+  "sampled_because": "free_form",
+  "duration": 393.0
+ },
+ "neg021": {
+  "source": "data/concert_audio/Kāṁbhōji/Alapana.mp3",
+  "title_from_filename": "Alapana",
+  "sampled_because": "free_form",
+  "duration": 838.5
+ },
+ "neg022": {
+  "source": "data/concert_audio/Pūrvīkaḷyāṇi/Alapana.mp3",
+  "title_from_filename": "Alapana",
+  "sampled_because": "free_form",
+  "duration": 754.1
+ },
+ "neg023": {
+  "source": "data/concert_audio/Hindōḷaṁ/Alapana.mp3",
+  "title_from_filename": "Alapana",
+  "sampled_because": "free_form",
+  "duration": 390.7
+ },
+ "neg024": {
+  "source": "data/concert_audio/Bhairavi/Alapana.mp3",
+  "title_from_filename": "Alapana",
+  "sampled_because": "free_form",
+  "duration": 1231.2
+ },
+ "neg025": {
+  "source": "data/concert_audio/Śrīranjani/Alapana.mp3",
+  "title_from_filename": "Alapana",
+  "sampled_because": "free_form",
+  "duration": 1047.6
+ },
+ "neg026": {
+  "source": "data/concert_audio/Kēdāragauḷa/Alapana.mp3",
+  "title_from_filename": "Alapana",
+  "sampled_because": "free_form",
+  "duration": 1105.5
+ },
+ "neg027": {
+  "source": "data/concert_audio/Bēgaḍa/Alapana.mp3",
+  "title_from_filename": "Alapana",
+  "sampled_because": "free_form",
+  "duration": 446.6
+ },
+ "neg028": {
+  "source": "data/concert_audio/Kāmavardani/Alapana.mp3",
+  "title_from_filename": "Alapana",
+  "sampled_because": "free_form",
+  "duration": 512.6
+ },
+ "neg029": {
+  "source": "data/concert_audio/Madhyamāvati/Alapana.mp3",
+  "title_from_filename": "Alapana",
+  "sampled_because": "free_form",
+  "duration": 1418.2
+ },
+ "neg030": {
+  "source": "data/concert_audio/Sāvēri/Alapana.mp3",
+  "title_from_filename": "Alapana",
+  "sampled_because": "free_form",
+  "duration": 830.2
+ },
+ "neg031": {
+  "source": "data/concert_audio/Ṣanmukhapriya/Alapana.mp3",
+  "title_from_filename": "Alapana",
+  "sampled_because": "free_form",
+  "duration": 420.3
+ },
+ "neg032": {
+  "source": "data/concert_audio/Cakravākaṁ/RTP.mp3",
+  "title_from_filename": "RTP",
+  "sampled_because": "free_form",
+  "duration": 1481.8
+ },
+ "neg033": {
+  "source": "data/concert_audio/Sindhubhairavi/RTP.mp3",
+  "title_from_filename": "RTP",
+  "sampled_because": "free_form",
+  "duration": 2902.6
+ },
+ "neg034": {
+  "source": "data/concert_audio/Karaharapriya/RTP.mp3",
+  "title_from_filename": "RTP",
+  "sampled_because": "free_form",
+  "duration": 3157.7
+ },
+ "neg035": {
+  "source": "data/concert_audio/Kāṁbhōji/RTP.mp3",
+  "title_from_filename": "RTP",
+  "sampled_because": "free_form",
+  "duration": 374.0
+ },
+ "neg036": {
+  "source": "data/concert_audio/Varāḷi/RTP.mp3",
+  "title_from_filename": "RTP",
+  "sampled_because": "free_form",
+  "duration": 1293.4
+ },
+ "neg037": {
+  "source": "data/concert_audio/Behāg/4 RTP.mp3",
+  "title_from_filename": "RTP",
+  "sampled_because": "free_form",
+  "duration": 1294.0
+ },
+ "neg038": {
+  "source": "data/concert_audio/Sāvēri/RTP.mp3",
+  "title_from_filename": "RTP",
+  "sampled_because": "free_form",
+  "duration": 2735.6
+ },
+ "neg039": {
+  "source": "data/concert_audio/Bēgaḍa/RTP.mp3",
+  "title_from_filename": "RTP",
+  "sampled_because": "free_form",
+  "duration": 1537.9
+ }
+}

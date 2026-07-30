@@ -1,0 +1,1292 @@
+{
+ "neg000": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "29-tns",
+  "source": "data/concert_audio/Amṛtavarṣiṇi/Alapana.mp3",
+  "title": "Alapana",
+  "anchor_seconds": 199.5
+ },
+ "neg001": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "MaliRtp",
+  "source": "data/concert_audio/Behāg/4 RTP.mp3",
+  "title": "RTP",
+  "anchor_seconds": 137.5
+ },
+ "neg002": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "90-tns",
+  "source": "data/concert_audio/Bhairavi/Alapana.mp3",
+  "title": "Alapana",
+  "anchor_seconds": 638.8
+ },
+ "neg003": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "solo:data/concert_audio/Bhairavi/RTP.mp3",
+  "source": "data/concert_audio/Bhairavi/RTP.mp3",
+  "title": "RTP",
+  "anchor_seconds": 690.8
+ },
+ "neg004": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "solo:data/concert_audio/Bēgaḍa/RTP.mp3",
+  "source": "data/concert_audio/Bēgaḍa/RTP.mp3",
+  "title": "RTP",
+  "anchor_seconds": 626.2
+ },
+ "neg005": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "varnamsahana",
+  "source": "data/concert_audio/Cakravākaṁ/RTP.mp3",
+  "title": "RTP",
+  "anchor_seconds": 148.6
+ },
+ "neg006": {
+  "stratum": "sung_unidentified",
+  "labels_given_1": [
+   "sahitya"
+  ],
+  "labels_given_2": null,
+  "sweep_verdicts": [
+   "sahitya",
+   null
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "316-tns",
+  "source": "data/concert_audio/Dvijāvanti/RTP.mp3",
+  "title": "RTP",
+  "anchor_seconds": 1055.5
+ },
+ "neg007": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "108-tsk",
+  "source": "data/concert_audio/Hindōḷaṁ/Alapana.mp3",
+  "title": "Alapana",
+  "anchor_seconds": 37.5
+ },
+ "neg008": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "305-tns",
+  "source": "data/concert_audio/Hindōḷaṁ/RTP.mp3",
+  "title": "RTP",
+  "anchor_seconds": 201.5
+ },
+ "neg009": {
+  "stratum": "sung_unidentified",
+  "labels_given_1": [
+   "sahitya"
+  ],
+  "labels_given_2": null,
+  "sweep_verdicts": [
+   "sahitya",
+   null
+  ],
+  "labeled": true,
+  "candidate_kind": "unidentified_candidate",
+  "cluster": "melakartalecdems",
+  "source": "data/concert_audio/Janaranjani/Melakartha Chakkaram.mp3",
+  "title": "Melakartha Chakkaram",
+  "anchor_seconds": 316.2
+ },
+ "neg010": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "78rpm-madurai-mani-iyer",
+  "source": "data/concert_audio/Kalyāṇi/RTP.mp3",
+  "title": "RTP",
+  "anchor_seconds": 12.4
+ },
+ "neg011": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "ajit-svt-pgh",
+  "source": "data/concert_audio/Karaharapriya/RTP.mp3",
+  "title": "RTP",
+  "anchor_seconds": 1820.4
+ },
+ "neg012": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "alapanasubhapantuvaralitiruvaiyaru1967",
+  "source": "data/concert_audio/Kāmavardani/Alapana.mp3",
+  "title": "Alapana",
+  "anchor_seconds": 136.2
+ },
+ "neg013": {
+  "stratum": "sung_unidentified",
+  "labels_given_1": [
+   "sahitya"
+  ],
+  "labels_given_2": null,
+  "sweep_verdicts": [
+   "sahitya",
+   null
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "05-tsk",
+  "source": "data/concert_audio/Kāmavardani/RTP.mp3",
+  "title": "RTP",
+  "anchor_seconds": 1164.6
+ },
+ "neg014": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "131-tns",
+  "source": "data/concert_audio/Kāṁbhōji/Alapana.mp3",
+  "title": "Alapana",
+  "anchor_seconds": 522.8
+ },
+ "neg015": {
+  "stratum": "sung_unidentified",
+  "labels_given_1": [
+   "sahitya"
+  ],
+  "labels_given_2": null,
+  "sweep_verdicts": [
+   "sahitya",
+   null
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "solo:data/concert_audio/Kāṁbhōji/RTP.mp3",
+  "source": "data/concert_audio/Kāṁbhōji/RTP.mp3",
+  "title": "RTP",
+  "anchor_seconds": 26.1
+ },
+ "neg016": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "073-tns",
+  "source": "data/concert_audio/Kēdāragauḷa/Alapana.mp3",
+  "title": "Alapana",
+  "anchor_seconds": 503.9
+ },
+ "neg017": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "solo:data/concert_audio/Latāngi/Alapana.mp3",
+  "source": "data/concert_audio/Latāngi/Alapana.mp3",
+  "title": "Alapana",
+  "anchor_seconds": 386.9
+ },
+ "neg018": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "solo:data/concert_audio/Madhyamāvati/Alapana.mp3",
+  "source": "data/concert_audio/Madhyamāvati/Alapana.mp3",
+  "title": "Alapana",
+  "anchor_seconds": 610.2
+ },
+ "neg019": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "unidentified_candidate",
+  "cluster": "InMemoriam-Mumbai1126-RagasOfPeace",
+  "source": "data/concert_audio/Mukhāri/20081202 2100 IMCpresents In Memoriam.mp3",
+  "title": "IMCpresents-In-Memoriam-Mumbai-1126-RAGAS-of-PEACE-02122008-1",
+  "anchor_seconds": 365.5
+ },
+ "neg020": {
+  "stratum": "sung_unidentified",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "solo:data/concert_audio/Mōhanaṁ/RTP.mp3",
+  "source": "data/concert_audio/Mōhanaṁ/RTP.mp3",
+  "title": "RTP",
+  "anchor_seconds": 1465.2
+ },
+ "neg021": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "solo:data/concert_audio/Puṇṇāgavarāḷi/Alapana.mp3",
+  "source": "data/concert_audio/Puṇṇāgavarāḷi/Alapana.mp3",
+  "title": "Alapana",
+  "anchor_seconds": 260.0
+ },
+ "neg022": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "solo:data/concert_audio/Sahānā/Alapana.mp3",
+  "source": "data/concert_audio/Sahānā/Alapana.mp3",
+  "title": "Alapana",
+  "anchor_seconds": 82.9
+ },
+ "neg023": {
+  "stratum": "sung_unidentified",
+  "labels_given_1": [
+   "sahitya"
+  ],
+  "labels_given_2": null,
+  "sweep_verdicts": [
+   "sahitya",
+   null
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "solo:data/concert_audio/Sindhubhairavi/RTP.mp3",
+  "source": "data/concert_audio/Sindhubhairavi/RTP.mp3",
+  "title": "RTP",
+  "anchor_seconds": 1812.6
+ },
+ "neg024": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "unidentified_candidate",
+  "cluster": "ssi-slokam-navarasam",
+  "source": "data/concert_audio/Sāma/SSI.mp3",
+  "title": "SSI",
+  "anchor_seconds": 136.6
+ },
+ "neg025": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "unidentified_candidate",
+  "cluster": "07-swara-r-aga-sudh-arasa-sankar-abara-nam",
+  "source": "data/concert_audio/Sāvēri/03 xxxx.mp3",
+  "title": "xxxx",
+  "anchor_seconds": 53.2
+ },
+ "neg026": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "089-tns",
+  "source": "data/concert_audio/Sāvēri/Alapana.mp3",
+  "title": "Alapana",
+  "anchor_seconds": 271.8
+ },
+ "neg027": {
+  "stratum": "unknown",
+  "labels_given_1": [
+   "unusable"
+  ],
+  "labels_given_2": null,
+  "sweep_verdicts": [
+   "unknown",
+   null
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "solo:data/concert_audio/Sāvēri/RTP.mp3",
+  "source": "data/concert_audio/Sāvēri/RTP.mp3",
+  "title": "RTP",
+  "anchor_seconds": 1211.3
+ },
+ "neg028": {
+  "stratum": "sung_unidentified",
+  "labels_given_1": [
+   "sahitya"
+  ],
+  "labels_given_2": null,
+  "sweep_verdicts": [
+   "sahitya",
+   null
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "solo:data/concert_audio/Tōḍi/RTP.mp3",
+  "source": "data/concert_audio/Tōḍi/RTP.mp3",
+  "title": "RTP",
+  "anchor_seconds": 1213.9
+ },
+ "neg029": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "solo:data/concert_audio/Varāḷi/Alapana.mp3",
+  "source": "data/concert_audio/Varāḷi/Alapana.mp3",
+  "title": "Alapana",
+  "anchor_seconds": 83.3
+ },
+ "neg030": {
+  "stratum": "sung_unidentified",
+  "labels_given_1": [
+   "sahitya"
+  ],
+  "labels_given_2": null,
+  "sweep_verdicts": [
+   "sahitya",
+   null
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "72-tsk",
+  "source": "data/concert_audio/Varāḷi/RTP.mp3",
+  "title": "RTP",
+  "anchor_seconds": 838.1
+ },
+ "neg031": {
+  "stratum": "sung_unidentified",
+  "labels_given_1": [
+   "sahitya"
+  ],
+  "labels_given_2": null,
+  "sweep_verdicts": [
+   "sahitya",
+   null
+  ],
+  "labeled": true,
+  "candidate_kind": "unidentified_candidate",
+  "cluster": "jamendo-150288",
+  "source": "data/concert_audio/Vasanta/1256722 Music NCBS varnam.mp3",
+  "title": "varnam vasantha",
+  "anchor_seconds": 7.8
+ },
+ "neg032": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "solo:data/concert_audio/Śankarābharaṇaṁ/Alapana.mp3",
+  "source": "data/concert_audio/Śankarābharaṇaṁ/Alapana.mp3",
+  "title": "Alapana",
+  "anchor_seconds": 103.5
+ },
+ "neg033": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "solo:data/concert_audio/Śankarābharaṇaṁ/RTP.mp3",
+  "source": "data/concert_audio/Śankarābharaṇaṁ/RTP.mp3",
+  "title": "RTP",
+  "anchor_seconds": 469.4
+ },
+ "neg034": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "solo:data/concert_audio/Śrīranjani/Alapana.mp3",
+  "source": "data/concert_audio/Śrīranjani/Alapana.mp3",
+  "title": "Alapana",
+  "anchor_seconds": 403.2
+ },
+ "neg035": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "RagamTanamPallavi-Shanmukhapriya",
+  "source": "data/concert_audio/Ṣanmukhapriya/07 RTP.mp3",
+  "title": "RTP",
+  "anchor_seconds": 281.9
+ },
+ "neg036": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "71-tsk",
+  "source": "data/concert_audio/Ṣanmukhapriya/Alapana.mp3",
+  "title": "Alapana",
+  "anchor_seconds": 88.7
+ },
+ "neg037": {
+  "stratum": "sung_unidentified",
+  "labels_given_1": [
+   "sahitya"
+  ],
+  "labels_given_2": null,
+  "sweep_verdicts": [
+   "sahitya",
+   null
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "solo:data/concert_audio/Ṣanmukhapriya/RTP.mp3",
+  "source": "data/concert_audio/Ṣanmukhapriya/RTP.mp3",
+  "title": "RTP",
+  "anchor_seconds": 1149.2
+ },
+ "neg038": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "unidentified_candidate",
+  "cluster": "sn-501-shanmugapriya",
+  "source": "data/concert_audio/Ṣanmukhapriya/SN 501.mp3",
+  "title": "SN 501",
+  "anchor_seconds": 96.2
+ },
+ "neg039": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "free_form_candidate",
+  "cluster": "tsk-whistle",
+  "source": "data/concert_audio/Ṣanmukhapriya/rAgam tAnam pallavi.mp3",
+  "title": "rAgam tAnam pallavi",
+  "anchor_seconds": 804.5
+ },
+ "neg040": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "solo:data/concert_audio/Pūrvīkaḷyāṇi/marachitivEmO.mp3",
+  "source": "data/concert_audio/Pūrvīkaḷyāṇi/marachitivEmO.mp3",
+  "title": "marachitivEmO",
+  "anchor_seconds": 0.0
+ },
+ "neg041": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "300-skr",
+  "source": "data/concert_audio/Cakravākaṁ/03 suguNamule.mp3",
+  "title": "suguNamule",
+  "anchor_seconds": 0.0
+ },
+ "neg042": {
+  "stratum": "in-catalog",
+  "labels_given_1": [
+   "sahitya"
+  ],
+  "labels_given_2": null,
+  "sweep_verdicts": [
+   "sahitya",
+   null
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "08MahatmuleRishabhapriya",
+  "source": "data/concert_audio/Ṣanmukhapriya/Mahatmule.mp3",
+  "title": "Mahatmule",
+  "anchor_seconds": 0.0
+ },
+ "neg043": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "RNK-LGJ-TS-1970",
+  "source": "data/concert_audio/Harikāmbhōji/03 EndhukuNirdhaya.mp3",
+  "title": "EndhukuNirdhaya",
+  "anchor_seconds": 0.0
+ },
+ "neg044": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "304-Mali",
+  "source": "data/concert_audio/Śankarābharaṇaṁ/Unidentified.mp3",
+  "title": "Unidentified",
+  "anchor_seconds": 0.0
+ },
+ "neg045": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "SanjayAtSastriHall",
+  "source": "data/concert_audio/Rītigauḷa/Janani Ninnuvina_r3.mp3",
+  "title": "Janani Ninnuvina",
+  "anchor_seconds": 0.0
+ },
+ "neg046": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "28thJune2009_GayatriGirish_Part1",
+  "source": "data/concert_audio/Ānandabhairavi/GayatriGirish MarivereGatiEvaramma.mp3",
+  "title": "GayatriGirish MarivereGatiEvaramma",
+  "anchor_seconds": 0.0
+ },
+ "neg047": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "16-tsk",
+  "source": "data/concert_audio/Rītigauḷa/rAgaratna.mp3",
+  "title": "rAgaratna",
+  "anchor_seconds": 0.0
+ },
+ "neg048": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "solo:data/concert_audio/Śankarābharaṇaṁ/dakshinAmurtE.mp3",
+  "source": "data/concert_audio/Śankarābharaṇaṁ/dakshinAmurtE.mp3",
+  "title": "dakshinAmurtE",
+  "anchor_seconds": 0.0
+ },
+ "neg049": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "8-tnk-kwm",
+  "source": "data/concert_audio/Kāṁbhōji/sri subramanyAya namaste.mp3",
+  "title": "sri subramanyAya namaste",
+  "anchor_seconds": 0.0
+ },
+ "neg050": {
+  "stratum": "in-catalog",
+  "labels_given_1": [
+   "sahitya"
+  ],
+  "labels_given_2": null,
+  "sweep_verdicts": [
+   "sahitya",
+   null
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "solo:data/concert_audio/Cakravākaṁ/eTulA brOtuv teliya.mp3",
+  "source": "data/concert_audio/Cakravākaṁ/eTulA brOtuv teliya.mp3",
+  "title": "eTulA brOtuv teliya",
+  "anchor_seconds": 0.0
+ },
+ "neg051": {
+  "stratum": "in-catalog",
+  "labels_given_1": [
+   "sahitya"
+  ],
+  "labels_given_2": null,
+  "sweep_verdicts": [
+   "sahitya",
+   null
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "solo:data/concert_audio/Madhyamāvati/rAmakatA.mp3",
+  "source": "data/concert_audio/Madhyamāvati/rAmakatA.mp3",
+  "title": "rAmakatA",
+  "anchor_seconds": 0.0
+ },
+ "neg052": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "102-tsk",
+  "source": "data/concert_audio/Bhairavi/upachAramu.mp3",
+  "title": "upachAramu",
+  "anchor_seconds": 0.0
+ },
+ "neg053": {
+  "stratum": "in-catalog",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "solo:data/concert_audio/Hamsadhvāni/jaya jaya gaNapati.mp3",
+  "source": "data/concert_audio/Hamsadhvāni/jaya jaya gaNapati.mp3",
+  "title": "jaya jaya gaNapati",
+  "anchor_seconds": 0.0
+ },
+ "neg054": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "11-tnk-music-today",
+  "source": "data/concert_audio/Kāmavardani/sArasAksha paripAlaya.mp3",
+  "title": "sArasAksha paripAlaya",
+  "anchor_seconds": 0.0
+ },
+ "neg055": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "solo:data/concert_audio/Karaharapriya/appan avataritta.mp3",
+  "source": "data/concert_audio/Karaharapriya/appan avataritta.mp3",
+  "title": "appan avataritta",
+  "anchor_seconds": 0.0
+ },
+ "neg056": {
+  "stratum": "in-catalog",
+  "labels_given_1": [
+   "sahitya"
+  ],
+  "labels_given_2": null,
+  "sweep_verdicts": [
+   "sahitya",
+   null
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "solo:data/concert_audio/Kānaḍa/sukhi evvarO.mp3",
+  "source": "data/concert_audio/Kānaḍa/sukhi evvarO.mp3",
+  "title": "sukhi evvarO",
+  "anchor_seconds": 0.0
+ },
+ "neg057": {
+  "stratum": "in-catalog",
+  "labels_given_1": [
+   "sahitya"
+  ],
+  "labels_given_2": null,
+  "sweep_verdicts": [
+   "sahitya",
+   null
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "solo:data/concert_audio/Śankarābharaṇaṁ/sankarAchAryam.mp3",
+  "source": "data/concert_audio/Śankarābharaṇaṁ/sankarAchAryam.mp3",
+  "title": "sankarAchAryam",
+  "anchor_seconds": 0.0
+ },
+ "neg058": {
+  "stratum": "in-catalog",
+  "labels_given_1": [
+   "sahitya"
+  ],
+  "labels_given_2": null,
+  "sweep_verdicts": [
+   "sahitya",
+   null
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "Mahathi-PKF-Concert-2018-at-Navi_Mumbai",
+  "source": "data/concert_audio/Jaganmōhini/Mahathi PKF Sunaada Vinodini Ragam.mp3",
+  "title": "Mahathi PKF Sunaada Vinodini Ragam",
+  "anchor_seconds": 0.0
+ },
+ "neg059": {
+  "stratum": "in-catalog",
+  "labels_given_1": [
+   "sahitya"
+  ],
+  "labels_given_2": null,
+  "sweep_verdicts": [
+   "sahitya",
+   null
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "314-tns",
+  "source": "data/concert_audio/Śankarābharaṇaṁ/akshayalingavibhO.mp3",
+  "title": "akshayalingavibhO",
+  "anchor_seconds": 0.0
+ },
+ "neg060": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "VamankaStithayaAtanaDikshitarMp3",
+  "source": "data/concert_audio/Aṭāna/VamanKaSthithaya.mp3",
+  "title": "VamanKaSthithaya",
+  "anchor_seconds": 0.0
+ },
+ "neg061": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "ajit-w-lafeyette",
+  "source": "data/concert_audio/Vasanta/kanTajutumi.mp3",
+  "title": "kanTajutumi",
+  "anchor_seconds": 0.0
+ },
+ "neg062": {
+  "stratum": "unknown",
+  "labels_given_1": [],
+  "labels_given_2": null,
+  "sweep_verdicts": [
+   "unknown",
+   null
+  ],
+  "labeled": false,
+  "candidate_kind": "opening_candidate",
+  "cluster": "03GhananayaRishabhapriyA",
+  "source": "data/concert_audio/Ṣanmukhapriya/ghananaya.mp3",
+  "title": "ghananaya",
+  "anchor_seconds": 0.0
+ },
+ "neg063": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "DP-013",
+  "source": "data/concert_audio/Kāmavardani/Paripahi Mam.mp3",
+  "title": "Paripahi Mam",
+  "anchor_seconds": 0.0
+ },
+ "neg064": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "Vedavalli_21stOct2008_Part2",
+  "source": "data/concert_audio/Ṣanmukhapriya/EkamresaNayaki Adi.mp3",
+  "title": "EkamresaNayaki Adi",
+  "anchor_seconds": 0.0
+ },
+ "neg065": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "03MahItaPravrddhaShrImatiKAmbOji",
+  "source": "data/concert_audio/Kāṁbhōji/mahIta pravrddha shrImati.mp3",
+  "title": "mahIta pravrddha shrImati",
+  "anchor_seconds": 0.0
+ },
+ "neg066": {
+  "stratum": "in-catalog",
+  "labels_given_1": [
+   "sahitya"
+  ],
+  "labels_given_2": null,
+  "sweep_verdicts": [
+   "sahitya",
+   null
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "solo:data/concert_audio/Hamsadhvāni/sri raghukula.mp3",
+  "source": "data/concert_audio/Hamsadhvāni/sri raghukula.mp3",
+  "title": "sri raghukula",
+  "anchor_seconds": 0.0
+ },
+ "neg067": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "HindustaniAndCarnatic-Vocal",
+  "source": "data/concert_audio/Bhairavi/02Balagopala.mp3",
+  "title": "Balagopala",
+  "anchor_seconds": 0.0
+ },
+ "neg068": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "solo:data/concert_audio/Bēgaḍa/sankari nee.mp3",
+  "source": "data/concert_audio/Bēgaḍa/sankari nee.mp3",
+  "title": "sankari nee",
+  "anchor_seconds": 0.0
+ },
+ "neg069": {
+  "stratum": "no-sahitya",
+  "labels_given_1": [
+   "no-sahitya"
+  ],
+  "labels_given_2": [
+   "no-sahitya"
+  ],
+  "sweep_verdicts": [
+   "no-sahitya",
+   "no-sahitya"
+  ],
+  "labeled": true,
+  "candidate_kind": "opening_candidate",
+  "cluster": "solo:data/concert_audio/Bhairavi/tanayuni brOva.mp3",
+  "source": "data/concert_audio/Bhairavi/tanayuni brOva.mp3",
+  "title": "tanayuni brOva",
+  "anchor_seconds": 0.0
+ }
+}

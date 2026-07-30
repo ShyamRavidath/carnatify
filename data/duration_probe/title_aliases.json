@@ -1,0 +1,14 @@
+{
+ "_readme": "Hand-reviewed transliteration aliases for duration-probe title resolution. This is the ONLY non-exact route into TRUTH: scripts/duration_probe_titles.py:resolve_exact() consults it, and scripts/duration_probe_cut.py uses it when a title has no exact skey match. Fuzzy matching is deliberately NOT allowed here, because a false merge relabels one work as another and the pool feeds truth ids. The relaxed consonant-skeleton key (cskel) exists for the opposite job -- disqualifying an OOC candidate -- where over-matching costs sample size and never validity.",
+ "_schema": "<title as it appears in a filename or download_manifest file_title_raw>: {registry_id, status, evidence, reviewed_by, reviewed_on}. status must be 'accepted' to take effect; 'proposed' and 'rejected' are inert. evidence should name what was checked -- pallavi text, composer, raga -- not just that the strings look similar.",
+ "_status_2026_07_28": "EMPTY, and correctly so. The rebuilt pool needs no aliases: the three transliteration cases the red team found (santanagopalakrishnam, alaipayuthey, chinnanchiru-kiliye) are all NEGATIVE-arm candidates, where the relaxed key disqualifies them without any truth claim. Add a row here only when a POOL title fails exact resolution and someone has verified the identity by hand.",
+ "_example_do_not_uncomment": {
+  "santanagopalakrishnam": {
+   "registry_id": "comp06603",
+   "status": "proposed",
+   "evidence": "vowel-insertion variant of 'santAna gOpAlakrSNam'; identified in CODEX_NEGATIVE_ARM_REVIEW.md section 2 from download_manifest file_title_raw '04_khamas_santanagopalakrishnam'. NOT accepted: this file is a negative-arm candidate, so it needs no truth id.",
+   "reviewed_by": null,
+   "reviewed_on": null
+  }
+ }
+}

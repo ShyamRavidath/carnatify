@@ -1,0 +1,786 @@
+{
+ "neg000": {
+  "stratum": "ooc",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ],
+   [
+    "in-catalog"
+   ]
+  ],
+  "unanimous": false,
+  "certain": true,
+  "title_from_filename": "4829 aswinsainarain",
+  "in_registry": false,
+  "sampled_because": "absent_from_registry",
+  "source": "data/concert_audio/Kānaḍa/1224829 aswinsainarain.mp3"
+ },
+ "neg001": {
+  "stratum": "ooc",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "in-catalog"
+   ],
+   [
+    "in-catalog"
+   ]
+  ],
+  "unanimous": false,
+  "certain": true,
+  "title_from_filename": "4830 aswinsainarain",
+  "in_registry": false,
+  "sampled_because": "absent_from_registry",
+  "source": "data/concert_audio/Kamās/1224830 aswinsainarain.mp3"
+ },
+ "neg002": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "4833 aswinsainarain",
+  "in_registry": false,
+  "sampled_because": "absent_from_registry",
+  "source": "data/concert_audio/Behāg/1224833 aswinsainarain.mp3"
+ },
+ "neg003": {
+  "stratum": "ooc",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "ooc"
+   ],
+   [
+    "ooc"
+   ]
+  ],
+  "unanimous": false,
+  "certain": true,
+  "title_from_filename": "6717 Music NCBS",
+  "in_registry": false,
+  "sampled_because": "absent_from_registry",
+  "source": "data/concert_audio/Kānaḍa/1256717 Music NCBS.mp3"
+ },
+ "neg004": {
+  "stratum": "ooc",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "in-catalog",
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": false,
+  "certain": false,
+  "title_from_filename": "6722 Music NCBS varnam",
+  "in_registry": false,
+  "sampled_because": "absent_from_registry",
+  "source": "data/concert_audio/Vasanta/1256722 Music NCBS varnam.mp3"
+ },
+ "neg005": {
+  "stratum": "ooc",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "ooc"
+   ],
+   [
+    "ooc"
+   ]
+  ],
+  "unanimous": false,
+  "certain": true,
+  "title_from_filename": "6723 Music NCBS",
+  "in_registry": false,
+  "sampled_because": "absent_from_registry",
+  "source": "data/concert_audio/Kāpi/1256723 Music NCBS.mp3"
+ },
+ "neg006": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "unusable"
+   ],
+   [
+    "unusable"
+   ]
+  ],
+  "unanimous": false,
+  "certain": true,
+  "title_from_filename": "72 Melakartha Chakkaram Dhirasankarabaranam",
+  "in_registry": false,
+  "sampled_because": "absent_from_registry",
+  "source": "data/concert_audio/Haṁsānandi/30 72 Melakartha Chakkaram Dhirasankarabaranam.mp3"
+ },
+ "neg007": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "81202 2100 IMCpresents In Memoriam",
+  "in_registry": false,
+  "sampled_because": "absent_from_registry",
+  "source": "data/concert_audio/Mukhāri/20081202 2100 IMCpresents In Memoriam.mp3"
+ },
+ "neg008": {
+  "stratum": "ooc",
+  "excerpt_labels": [
+   [
+    "no-sahitya",
+    "unusable"
+   ],
+   [
+    "in-catalog"
+   ],
+   [
+    "in-catalog"
+   ]
+  ],
+  "unanimous": false,
+  "certain": false,
+  "title_from_filename": "Melakartha Chakkaram",
+  "in_registry": false,
+  "sampled_because": "absent_from_registry",
+  "source": "data/concert_audio/Janaranjani/Melakartha Chakkaram.mp3"
+ },
+ "neg009": {
+  "stratum": "ooc",
+  "excerpt_labels": [
+   [
+    "unusable"
+   ],
+   [
+    "ooc"
+   ],
+   [
+    "in-catalog",
+    "unusable"
+   ]
+  ],
+  "unanimous": false,
+  "certain": false,
+  "title_from_filename": "Melakartha Chakkaram",
+  "in_registry": false,
+  "sampled_because": "absent_from_registry",
+  "source": "data/concert_audio/Kāmavardani/Melakartha Chakkaram.mp3"
+ },
+ "neg010": {
+  "stratum": "ooc",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "in-catalog"
+   ],
+   [
+    "in-catalog"
+   ]
+  ],
+  "unanimous": false,
+  "certain": true,
+  "title_from_filename": "Melakartha Chakkaram Ganamurti",
+  "in_registry": false,
+  "sampled_because": "absent_from_registry",
+  "source": "data/concert_audio/Vasanta/Melakartha Chakkaram Ganamurti.mp3"
+ },
+ "neg011": {
+  "stratum": "ooc",
+  "excerpt_labels": [
+   [
+    "in-catalog",
+    "unusable"
+   ],
+   [
+    "unusable"
+   ],
+   [
+    "in-catalog"
+   ]
+  ],
+  "unanimous": false,
+  "certain": false,
+  "title_from_filename": "Melakartha Chakkaram Kantamani",
+  "in_registry": false,
+  "sampled_because": "absent_from_registry",
+  "source": "data/concert_audio/Ṣanmukhapriya/Melakartha Chakkaram Kantamani.mp3"
+ },
+ "neg012": {
+  "stratum": "ooc",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "in-catalog"
+   ],
+   [
+    "in-catalog"
+   ]
+  ],
+  "unanimous": false,
+  "certain": true,
+  "title_from_filename": "Melakartha Chakkaram Lathangi",
+  "in_registry": false,
+  "sampled_because": "absent_from_registry",
+  "source": "data/concert_audio/Vasanta/Melakartha Chakkaram Lathangi.mp3"
+ },
+ "neg013": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya",
+    "unusable"
+   ],
+   [
+    "unusable"
+   ],
+   [
+    "no-sahitya",
+    "unusable"
+   ]
+  ],
+  "unanimous": false,
+  "certain": false,
+  "title_from_filename": "Melakartha Chakkaram Mayamalavagaula",
+  "in_registry": false,
+  "sampled_because": "absent_from_registry",
+  "source": "data/concert_audio/Cakravākaṁ/Melakartha Chakkaram Mayamalavagaula.mp3"
+ },
+ "neg014": {
+  "stratum": "unusable",
+  "excerpt_labels": [
+   [
+    "unusable"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "Melakartha Chakkaram Sarasangi",
+  "in_registry": false,
+  "sampled_because": "absent_from_registry",
+  "source": "data/concert_audio/Harikāmbhōji/Melakartha Chakkaram Sarasangi.mp3"
+ },
+ "neg015": {
+  "stratum": "ooc",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "unusable"
+   ],
+   [
+    "in-catalog"
+   ]
+  ],
+  "unanimous": false,
+  "certain": true,
+  "title_from_filename": "Melakartha Chakkaram Simhendramadhayama",
+  "in_registry": false,
+  "sampled_because": "absent_from_registry",
+  "source": "data/concert_audio/Madhyamāvati/Melakartha Chakkaram Simhendramadhayama.mp3"
+ },
+ "neg016": {
+  "stratum": "ooc",
+  "excerpt_labels": [
+   [
+    "unusable"
+   ],
+   [
+    "ooc"
+   ],
+   [
+    "ooc"
+   ]
+  ],
+  "unanimous": false,
+  "certain": true,
+  "title_from_filename": "Melakartha Chakkaram Syamalangi",
+  "in_registry": false,
+  "sampled_because": "absent_from_registry",
+  "source": "data/concert_audio/Ṣanmukhapriya/Melakartha Chakkaram Syamalangi.mp3"
+ },
+ "neg017": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "SN 501",
+  "in_registry": false,
+  "sampled_because": "absent_from_registry",
+  "source": "data/concert_audio/Ṣanmukhapriya/SN 501.mp3"
+ },
+ "neg018": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "SSI",
+  "in_registry": false,
+  "sampled_because": "absent_from_registry",
+  "source": "data/concert_audio/Sāma/SSI.mp3"
+ },
+ "neg019": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "xxxx",
+  "in_registry": false,
+  "sampled_because": "absent_from_registry",
+  "source": "data/concert_audio/Sāvēri/03 xxxx.mp3"
+ },
+ "neg020": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "Alapana",
+  "in_registry": true,
+  "sampled_because": "free_form",
+  "source": "data/concert_audio/Varāḷi/Alapana.mp3"
+ },
+ "neg021": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "Alapana",
+  "in_registry": true,
+  "sampled_because": "free_form",
+  "source": "data/concert_audio/Kāṁbhōji/Alapana.mp3"
+ },
+ "neg022": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "Alapana",
+  "in_registry": true,
+  "sampled_because": "free_form",
+  "source": "data/concert_audio/Pūrvīkaḷyāṇi/Alapana.mp3"
+ },
+ "neg023": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "Alapana",
+  "in_registry": true,
+  "sampled_because": "free_form",
+  "source": "data/concert_audio/Hindōḷaṁ/Alapana.mp3"
+ },
+ "neg024": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "Alapana",
+  "in_registry": true,
+  "sampled_because": "free_form",
+  "source": "data/concert_audio/Bhairavi/Alapana.mp3"
+ },
+ "neg025": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "Alapana",
+  "in_registry": true,
+  "sampled_because": "free_form",
+  "source": "data/concert_audio/Śrīranjani/Alapana.mp3"
+ },
+ "neg026": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "Alapana",
+  "in_registry": true,
+  "sampled_because": "free_form",
+  "source": "data/concert_audio/Kēdāragauḷa/Alapana.mp3"
+ },
+ "neg027": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "Alapana",
+  "in_registry": true,
+  "sampled_because": "free_form",
+  "source": "data/concert_audio/Bēgaḍa/Alapana.mp3"
+ },
+ "neg028": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "Alapana",
+  "in_registry": true,
+  "sampled_because": "free_form",
+  "source": "data/concert_audio/Kāmavardani/Alapana.mp3"
+ },
+ "neg029": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "Alapana",
+  "in_registry": true,
+  "sampled_because": "free_form",
+  "source": "data/concert_audio/Madhyamāvati/Alapana.mp3"
+ },
+ "neg030": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "Alapana",
+  "in_registry": true,
+  "sampled_because": "free_form",
+  "source": "data/concert_audio/Sāvēri/Alapana.mp3"
+ },
+ "neg031": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "Alapana",
+  "in_registry": true,
+  "sampled_because": "free_form",
+  "source": "data/concert_audio/Ṣanmukhapriya/Alapana.mp3"
+ },
+ "neg032": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "RTP",
+  "in_registry": false,
+  "sampled_because": "free_form",
+  "source": "data/concert_audio/Cakravākaṁ/RTP.mp3"
+ },
+ "neg033": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "RTP",
+  "in_registry": false,
+  "sampled_because": "free_form",
+  "source": "data/concert_audio/Sindhubhairavi/RTP.mp3"
+ },
+ "neg034": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ],
+   [
+    "unusable"
+   ]
+  ],
+  "unanimous": false,
+  "certain": true,
+  "title_from_filename": "RTP",
+  "in_registry": false,
+  "sampled_because": "free_form",
+  "source": "data/concert_audio/Karaharapriya/RTP.mp3"
+ },
+ "neg035": {
+  "stratum": "sung_unidentified",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "in-catalog"
+   ],
+   [
+    "in-catalog",
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": false,
+  "certain": false,
+  "title_from_filename": "RTP",
+  "in_registry": false,
+  "sampled_because": "free_form",
+  "source": "data/concert_audio/Kāṁbhōji/RTP.mp3"
+ },
+ "neg036": {
+  "stratum": "sung_unidentified",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "in-catalog"
+   ],
+   [
+    "in-catalog",
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": false,
+  "certain": false,
+  "title_from_filename": "RTP",
+  "in_registry": false,
+  "sampled_because": "free_form",
+  "source": "data/concert_audio/Varāḷi/RTP.mp3"
+ },
+ "neg037": {
+  "stratum": "no-sahitya",
+  "excerpt_labels": [
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ],
+   [
+    "no-sahitya"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "RTP",
+  "in_registry": false,
+  "sampled_because": "free_form",
+  "source": "data/concert_audio/Behāg/4 RTP.mp3"
+ },
+ "neg038": {
+  "stratum": "unusable",
+  "excerpt_labels": [
+   [
+    "unusable"
+   ],
+   [
+    "unusable"
+   ],
+   [
+    "unusable"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "RTP",
+  "in_registry": false,
+  "sampled_because": "free_form",
+  "source": "data/concert_audio/Sāvēri/RTP.mp3"
+ },
+ "neg039": {
+  "stratum": "unusable",
+  "excerpt_labels": [
+   [
+    "unusable"
+   ]
+  ],
+  "unanimous": true,
+  "certain": true,
+  "title_from_filename": "RTP",
+  "in_registry": false,
+  "sampled_because": "free_form",
+  "source": "data/concert_audio/Bēgaḍa/RTP.mp3"
+ }
+}

@@ -1,0 +1,1253 @@
+{
+ "neg000": {
+  "source": "data/concert_audio/Amṛtavarṣiṇi/Alapana.mp3",
+  "title": "Alapana",
+  "title_provenance": "filename",
+  "file_title_raw": "Alapana - amrutavarshiNi",
+  "archive_identifier": "29-tns",
+  "free_form": true,
+  "resolves_exact": [
+   "comp00196"
+  ],
+  "resolves_relaxed": [],
+  "source_duration": 974.3,
+  "cluster": "29-tns",
+  "anchor_seconds": 199.5,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg001": {
+  "source": "data/concert_audio/Behāg/4 RTP.mp3",
+  "title": "RTP",
+  "title_provenance": "filename",
+  "file_title_raw": "4._R.T.P._Behag___Khandachapu.mp3",
+  "archive_identifier": "MaliRtp",
+  "free_form": true,
+  "resolves_exact": [],
+  "resolves_relaxed": [
+   "comp02051",
+   "comp07878"
+  ],
+  "source_duration": 1294.0,
+  "cluster": "MaliRtp",
+  "anchor_seconds": 137.5,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg002": {
+  "source": "data/concert_audio/Bhairavi/Alapana.mp3",
+  "title": "Alapana",
+  "title_provenance": "filename",
+  "file_title_raw": "Alapana - bhairavi",
+  "archive_identifier": "90-tns",
+  "free_form": true,
+  "resolves_exact": [
+   "comp00196"
+  ],
+  "resolves_relaxed": [
+   "comp00237",
+   "comp01530"
+  ],
+  "source_duration": 1231.2,
+  "cluster": "90-tns",
+  "anchor_seconds": 638.8,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg003": {
+  "source": "data/concert_audio/Bhairavi/RTP.mp3",
+  "title": "RTP",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": true,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 3392.6,
+  "cluster": "solo:data/concert_audio/Bhairavi/RTP.mp3",
+  "anchor_seconds": 690.8,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg004": {
+  "source": "data/concert_audio/Bēgaḍa/RTP.mp3",
+  "title": "RTP",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": true,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 1537.9,
+  "cluster": "solo:data/concert_audio/Bēgaḍa/RTP.mp3",
+  "anchor_seconds": 626.2,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg005": {
+  "source": "data/concert_audio/Cakravākaṁ/RTP.mp3",
+  "title": "RTP",
+  "title_provenance": "filename",
+  "file_title_raw": "Veenai-RTP-Chakravaham",
+  "archive_identifier": "varnamsahana",
+  "free_form": true,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 1481.8,
+  "cluster": "varnamsahana",
+  "anchor_seconds": 148.6,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg006": {
+  "source": "data/concert_audio/Dvijāvanti/RTP.mp3",
+  "title": "RTP",
+  "title_provenance": "filename",
+  "file_title_raw": "RTP - dwijAvanti",
+  "archive_identifier": "316-tns",
+  "free_form": true,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 2116.9,
+  "cluster": "316-tns",
+  "anchor_seconds": 1055.5,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg007": {
+  "source": "data/concert_audio/Hindōḷaṁ/Alapana.mp3",
+  "title": "Alapana",
+  "title_provenance": "filename",
+  "file_title_raw": "Alapana - hindOLam - vocal",
+  "archive_identifier": "108-tsk",
+  "free_form": true,
+  "resolves_exact": [
+   "comp00196"
+  ],
+  "resolves_relaxed": [],
+  "source_duration": 390.7,
+  "cluster": "108-tsk",
+  "anchor_seconds": 37.5,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg008": {
+  "source": "data/concert_audio/Hindōḷaṁ/RTP.mp3",
+  "title": "RTP",
+  "title_provenance": "filename",
+  "file_title_raw": "RTP - hindOLam - Adi",
+  "archive_identifier": "305-tns",
+  "free_form": true,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 1762.3,
+  "cluster": "305-tns",
+  "anchor_seconds": 201.5,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg009": {
+  "source": "data/concert_audio/Janaranjani/Melakartha Chakkaram.mp3",
+  "title": "Melakartha Chakkaram",
+  "title_provenance": "filename",
+  "file_title_raw": "19- 20-72_Melakartha-Chakkaram_04-Jhankaradhvani-Nathabairavi - Suguna Varadachari.mp3",
+  "archive_identifier": "melakartalecdems",
+  "free_form": false,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 1539.7,
+  "cluster": "melakartalecdems",
+  "anchor_seconds": 316.2,
+  "candidate_kind": "unidentified_candidate",
+  "scan_snippets": 15
+ },
+ "neg010": {
+  "source": "data/concert_audio/Kalyāṇi/RTP.mp3",
+  "title": "RTP",
+  "title_provenance": "filename",
+  "file_title_raw": "RTP-kalyANi",
+  "archive_identifier": "78rpm-madurai-mani-iyer",
+  "free_form": true,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 602.3,
+  "cluster": "78rpm-madurai-mani-iyer",
+  "anchor_seconds": 12.4,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg011": {
+  "source": "data/concert_audio/Karaharapriya/RTP.mp3",
+  "title": "RTP",
+  "title_provenance": "filename",
+  "file_title_raw": "RTP - karaharapriyA",
+  "archive_identifier": "ajit-svt-pgh",
+  "free_form": true,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 3157.7,
+  "cluster": "ajit-svt-pgh",
+  "anchor_seconds": 1820.4,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg012": {
+  "source": "data/concert_audio/Kāmavardani/Alapana.mp3",
+  "title": "Alapana",
+  "title_provenance": "filename",
+  "file_title_raw": "Applause for a Shubha panthuvarali raagam in Veena? S.Balachander in Thiruvaiyaru in 1967",
+  "archive_identifier": "alapanasubhapantuvaralitiruvaiyaru1967",
+  "free_form": true,
+  "resolves_exact": [
+   "comp00196"
+  ],
+  "resolves_relaxed": [],
+  "source_duration": 512.6,
+  "cluster": "alapanasubhapantuvaralitiruvaiyaru1967",
+  "anchor_seconds": 136.2,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg013": {
+  "source": "data/concert_audio/Kāmavardani/RTP.mp3",
+  "title": "RTP",
+  "title_provenance": "filename",
+  "file_title_raw": "RTP - subhapantuvarALi",
+  "archive_identifier": "05-tsk",
+  "free_form": true,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 1499.6,
+  "cluster": "05-tsk",
+  "anchor_seconds": 1164.6,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg014": {
+  "source": "data/concert_audio/Kāṁbhōji/Alapana.mp3",
+  "title": "Alapana",
+  "title_provenance": "filename",
+  "file_title_raw": "Alapana - kAmbOji",
+  "archive_identifier": "131-tns",
+  "free_form": true,
+  "resolves_exact": [
+   "comp00196"
+  ],
+  "resolves_relaxed": [],
+  "source_duration": 838.5,
+  "cluster": "131-tns",
+  "anchor_seconds": 522.8,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg015": {
+  "source": "data/concert_audio/Kāṁbhōji/RTP.mp3",
+  "title": "RTP",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": true,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 374.0,
+  "cluster": "solo:data/concert_audio/Kāṁbhōji/RTP.mp3",
+  "anchor_seconds": 26.1,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg016": {
+  "source": "data/concert_audio/Kēdāragauḷa/Alapana.mp3",
+  "title": "Alapana",
+  "title_provenance": "filename",
+  "file_title_raw": "Alapana - kEdAragowLa",
+  "archive_identifier": "073-tns",
+  "free_form": true,
+  "resolves_exact": [
+   "comp00196"
+  ],
+  "resolves_relaxed": [],
+  "source_duration": 1105.5,
+  "cluster": "073-tns",
+  "anchor_seconds": 503.9,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg017": {
+  "source": "data/concert_audio/Latāngi/Alapana.mp3",
+  "title": "Alapana",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": true,
+  "resolves_exact": [
+   "comp00196"
+  ],
+  "resolves_relaxed": [],
+  "source_duration": 1175.1,
+  "cluster": "solo:data/concert_audio/Latāngi/Alapana.mp3",
+  "anchor_seconds": 386.9,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg018": {
+  "source": "data/concert_audio/Madhyamāvati/Alapana.mp3",
+  "title": "Alapana",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": true,
+  "resolves_exact": [
+   "comp00196"
+  ],
+  "resolves_relaxed": [],
+  "source_duration": 1418.2,
+  "cluster": "solo:data/concert_audio/Madhyamāvati/Alapana.mp3",
+  "anchor_seconds": 610.2,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg019": {
+  "source": "data/concert_audio/Mukhāri/20081202 2100 IMCpresents In Memoriam.mp3",
+  "title": "IMCpresents-In-Memoriam-Mumbai-1126-RAGAS-of-PEACE-02122008-1",
+  "title_provenance": "manifest_segment",
+  "file_title_raw": "20081202_2100_IMCpresents-In-Memoriam-Mumbai-1126-RAGAS-of-PEACE-02122008-1.mp3",
+  "archive_identifier": "InMemoriam-Mumbai1126-RagasOfPeace",
+  "free_form": false,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 3480.1,
+  "cluster": "InMemoriam-Mumbai1126-RagasOfPeace",
+  "anchor_seconds": 365.5,
+  "candidate_kind": "unidentified_candidate",
+  "scan_snippets": 15
+ },
+ "neg020": {
+  "source": "data/concert_audio/Mōhanaṁ/RTP.mp3",
+  "title": "RTP",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": true,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 2220.5,
+  "cluster": "solo:data/concert_audio/Mōhanaṁ/RTP.mp3",
+  "anchor_seconds": 1465.2,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg021": {
+  "source": "data/concert_audio/Puṇṇāgavarāḷi/Alapana.mp3",
+  "title": "Alapana",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": true,
+  "resolves_exact": [
+   "comp00196"
+  ],
+  "resolves_relaxed": [],
+  "source_duration": 642.9,
+  "cluster": "solo:data/concert_audio/Puṇṇāgavarāḷi/Alapana.mp3",
+  "anchor_seconds": 260.0,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg022": {
+  "source": "data/concert_audio/Sahānā/Alapana.mp3",
+  "title": "Alapana",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": true,
+  "resolves_exact": [
+   "comp00196"
+  ],
+  "resolves_relaxed": [],
+  "source_duration": 542.1,
+  "cluster": "solo:data/concert_audio/Sahānā/Alapana.mp3",
+  "anchor_seconds": 82.9,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg023": {
+  "source": "data/concert_audio/Sindhubhairavi/RTP.mp3",
+  "title": "RTP",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": true,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 2902.6,
+  "cluster": "solo:data/concert_audio/Sindhubhairavi/RTP.mp3",
+  "anchor_seconds": 1812.6,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg024": {
+  "source": "data/concert_audio/Sāma/SSI.mp3",
+  "title": "SSI",
+  "title_provenance": "filename_unrecoverable",
+  "file_title_raw": "Concert 163",
+  "archive_identifier": "ssi-slokam-navarasam",
+  "free_form": false,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 991.8,
+  "cluster": "ssi-slokam-navarasam",
+  "anchor_seconds": 136.6,
+  "candidate_kind": "unidentified_candidate",
+  "scan_snippets": 15
+ },
+ "neg025": {
+  "source": "data/concert_audio/Sāvēri/03 xxxx.mp3",
+  "title": "xxxx",
+  "title_provenance": "filename_unrecoverable",
+  "file_title_raw": "Concert 04",
+  "archive_identifier": "07-swara-r-aga-sudh-arasa-sankar-abara-nam",
+  "free_form": false,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 1355.5,
+  "cluster": "07-swara-r-aga-sudh-arasa-sankar-abara-nam",
+  "anchor_seconds": 53.2,
+  "candidate_kind": "unidentified_candidate",
+  "scan_snippets": 15
+ },
+ "neg026": {
+  "source": "data/concert_audio/Sāvēri/Alapana.mp3",
+  "title": "Alapana",
+  "title_provenance": "filename",
+  "file_title_raw": "Alapana - sAvEri",
+  "archive_identifier": "089-tns",
+  "free_form": true,
+  "resolves_exact": [
+   "comp00196"
+  ],
+  "resolves_relaxed": [],
+  "source_duration": 830.2,
+  "cluster": "089-tns",
+  "anchor_seconds": 271.8,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg027": {
+  "source": "data/concert_audio/Sāvēri/RTP.mp3",
+  "title": "RTP",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": true,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 2735.6,
+  "cluster": "solo:data/concert_audio/Sāvēri/RTP.mp3",
+  "anchor_seconds": 1211.3,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg028": {
+  "source": "data/concert_audio/Tōḍi/RTP.mp3",
+  "title": "RTP",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": true,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 2241.1,
+  "cluster": "solo:data/concert_audio/Tōḍi/RTP.mp3",
+  "anchor_seconds": 1213.9,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg029": {
+  "source": "data/concert_audio/Varāḷi/Alapana.mp3",
+  "title": "Alapana",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": true,
+  "resolves_exact": [
+   "comp00196"
+  ],
+  "resolves_relaxed": [],
+  "source_duration": 393.0,
+  "cluster": "solo:data/concert_audio/Varāḷi/Alapana.mp3",
+  "anchor_seconds": 83.3,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg030": {
+  "source": "data/concert_audio/Varāḷi/RTP.mp3",
+  "title": "RTP",
+  "title_provenance": "filename",
+  "file_title_raw": "RTP - varALi",
+  "archive_identifier": "72-tsk",
+  "free_form": true,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 1293.4,
+  "cluster": "72-tsk",
+  "anchor_seconds": 838.1,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg031": {
+  "source": "data/concert_audio/Vasanta/1256722 Music NCBS varnam.mp3",
+  "title": "varnam vasantha",
+  "title_provenance": "manifest_raw",
+  "file_title_raw": "01_varnam_vasantha",
+  "archive_identifier": "jamendo-150288",
+  "free_form": false,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 329.8,
+  "cluster": "jamendo-150288",
+  "anchor_seconds": 7.8,
+  "candidate_kind": "unidentified_candidate",
+  "scan_snippets": 15
+ },
+ "neg032": {
+  "source": "data/concert_audio/Śankarābharaṇaṁ/Alapana.mp3",
+  "title": "Alapana",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": true,
+  "resolves_exact": [
+   "comp00196"
+  ],
+  "resolves_relaxed": [],
+  "source_duration": 1252.7,
+  "cluster": "solo:data/concert_audio/Śankarābharaṇaṁ/Alapana.mp3",
+  "anchor_seconds": 103.5,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg033": {
+  "source": "data/concert_audio/Śankarābharaṇaṁ/RTP.mp3",
+  "title": "RTP",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": true,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 1914.8,
+  "cluster": "solo:data/concert_audio/Śankarābharaṇaṁ/RTP.mp3",
+  "anchor_seconds": 469.4,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg034": {
+  "source": "data/concert_audio/Śrīranjani/Alapana.mp3",
+  "title": "Alapana",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": true,
+  "resolves_exact": [
+   "comp00196"
+  ],
+  "resolves_relaxed": [],
+  "source_duration": 1047.6,
+  "cluster": "solo:data/concert_audio/Śrīranjani/Alapana.mp3",
+  "anchor_seconds": 403.2,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg035": {
+  "source": "data/concert_audio/Ṣanmukhapriya/07 RTP.mp3",
+  "title": "RTP",
+  "title_provenance": "filename",
+  "file_title_raw": "07 RTP - Shanmughapriya",
+  "archive_identifier": "RagamTanamPallavi-Shanmukhapriya",
+  "free_form": true,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 1821.3,
+  "cluster": "RagamTanamPallavi-Shanmukhapriya",
+  "anchor_seconds": 281.9,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg036": {
+  "source": "data/concert_audio/Ṣanmukhapriya/Alapana.mp3",
+  "title": "Alapana",
+  "title_provenance": "filename",
+  "file_title_raw": "Alapana - shanmukapriyA",
+  "archive_identifier": "71-tsk",
+  "free_form": true,
+  "resolves_exact": [
+   "comp00196"
+  ],
+  "resolves_relaxed": [],
+  "source_duration": 420.3,
+  "cluster": "71-tsk",
+  "anchor_seconds": 88.7,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg037": {
+  "source": "data/concert_audio/Ṣanmukhapriya/RTP.mp3",
+  "title": "RTP",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": true,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 2014.3,
+  "cluster": "solo:data/concert_audio/Ṣanmukhapriya/RTP.mp3",
+  "anchor_seconds": 1149.2,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg038": {
+  "source": "data/concert_audio/Ṣanmukhapriya/SN 501.mp3",
+  "title": "SN 501",
+  "title_provenance": "filename",
+  "file_title_raw": "-",
+  "archive_identifier": "sn-501-shanmugapriya",
+  "free_form": false,
+  "resolves_exact": [],
+  "resolves_relaxed": [],
+  "source_duration": 415.6,
+  "cluster": "sn-501-shanmugapriya",
+  "anchor_seconds": 96.2,
+  "candidate_kind": "unidentified_candidate",
+  "scan_snippets": 15
+ },
+ "neg039": {
+  "source": "data/concert_audio/Ṣanmukhapriya/rAgam tAnam pallavi.mp3",
+  "title": "rAgam tAnam pallavi",
+  "title_provenance": "filename",
+  "file_title_raw": "rAgam tAnam pallavi - shanmukapriyA",
+  "archive_identifier": "tsk-whistle",
+  "free_form": true,
+  "resolves_exact": [
+   "comp06030"
+  ],
+  "resolves_relaxed": [
+   "comp06030"
+  ],
+  "source_duration": 1705.2,
+  "cluster": "tsk-whistle",
+  "anchor_seconds": 804.5,
+  "candidate_kind": "free_form_candidate",
+  "scan_snippets": 15
+ },
+ "neg040": {
+  "source": "data/concert_audio/Pūrvīkaḷyāṇi/marachitivEmO.mp3",
+  "title": "marachitivEmO",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": false,
+  "resolves_exact": [
+   "comp04164"
+  ],
+  "resolves_relaxed": [
+   "comp04164"
+  ],
+  "source_duration": 1561.0,
+  "cluster": "solo:data/concert_audio/Pūrvīkaḷyāṇi/marachitivEmO.mp3",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg041": {
+  "source": "data/concert_audio/Cakravākaṁ/03 suguNamule.mp3",
+  "title": "suguNamule",
+  "title_provenance": "filename",
+  "file_title_raw": "03 suguNamule - chakravAgam",
+  "archive_identifier": "300-skr",
+  "free_form": false,
+  "resolves_exact": [
+   "comp07370"
+  ],
+  "resolves_relaxed": [
+   "comp06854",
+   "comp07370",
+   "comp07375"
+  ],
+  "source_duration": 1232.3,
+  "cluster": "300-skr",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg042": {
+  "source": "data/concert_audio/Ṣanmukhapriya/Mahatmule.mp3",
+  "title": "Mahatmule",
+  "title_provenance": "filename",
+  "file_title_raw": "Track 03",
+  "archive_identifier": "08MahatmuleRishabhapriya",
+  "free_form": false,
+  "resolves_exact": [
+   "comp03893"
+  ],
+  "resolves_relaxed": [
+   "comp03893"
+  ],
+  "source_duration": 2193.4,
+  "cluster": "08MahatmuleRishabhapriya",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg043": {
+  "source": "data/concert_audio/Harikāmbhōji/03 EndhukuNirdhaya.mp3",
+  "title": "EndhukuNirdhaya",
+  "title_provenance": "filename",
+  "file_title_raw": "EndhukuNirdhaya-Harikambodhi-Adi(2)",
+  "archive_identifier": "RNK-LGJ-TS-1970",
+  "free_form": false,
+  "resolves_exact": [
+   "comp01671"
+  ],
+  "resolves_relaxed": [
+   "comp01671"
+  ],
+  "source_duration": 1326.8,
+  "cluster": "RNK-LGJ-TS-1970",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg044": {
+  "source": "data/concert_audio/Śankarābharaṇaṁ/Unidentified.mp3",
+  "title": "Unidentified",
+  "title_provenance": "filename",
+  "file_title_raw": "Unidentified - Sankarabaranam",
+  "archive_identifier": "304-Mali",
+  "free_form": false,
+  "resolves_exact": [
+   "comp07944"
+  ],
+  "resolves_relaxed": [
+   "comp07944"
+  ],
+  "source_duration": 1097.8,
+  "cluster": "304-Mali",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg045": {
+  "source": "data/concert_audio/Rītigauḷa/Janani Ninnuvina_r3.mp3",
+  "title": "Janani Ninnuvina",
+  "title_provenance": "filename",
+  "file_title_raw": "Janani Ninnuvina",
+  "archive_identifier": "SanjayAtSastriHall",
+  "free_form": false,
+  "resolves_exact": [
+   "comp02772"
+  ],
+  "resolves_relaxed": [
+   "comp02772"
+  ],
+  "source_duration": 1741.0,
+  "cluster": "SanjayAtSastriHall",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg046": {
+  "source": "data/concert_audio/Ānandabhairavi/GayatriGirish MarivereGatiEvaramma.mp3",
+  "title": "GayatriGirish MarivereGatiEvaramma",
+  "title_provenance": "filename",
+  "file_title_raw": "03_GayatriGirish_MarivereGatiEvaramma_Anandabhairavi_MisraChapu_ShyamaSastry",
+  "archive_identifier": "28thJune2009_GayatriGirish_Part1",
+  "free_form": false,
+  "resolves_exact": [
+   "comp02100"
+  ],
+  "resolves_relaxed": [
+   "comp02100",
+   "comp07036"
+  ],
+  "source_duration": 1316.2,
+  "cluster": "28thJune2009_GayatriGirish_Part1",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg047": {
+  "source": "data/concert_audio/Rītigauḷa/rAgaratna.mp3",
+  "title": "rAgaratna",
+  "title_provenance": "filename",
+  "file_title_raw": "rAgaratna - reetigowLa",
+  "archive_identifier": "16-tsk",
+  "free_form": false,
+  "resolves_exact": [
+   "comp06033"
+  ],
+  "resolves_relaxed": [
+   "comp06033"
+  ],
+  "source_duration": 1001.9,
+  "cluster": "16-tsk",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg048": {
+  "source": "data/concert_audio/Śankarābharaṇaṁ/dakshinAmurtE.mp3",
+  "title": "dakshinAmurtE",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": false,
+  "resolves_exact": [
+   "comp01216"
+  ],
+  "resolves_relaxed": [
+   "comp01216"
+  ],
+  "source_duration": 1816.6,
+  "cluster": "solo:data/concert_audio/Śankarābharaṇaṁ/dakshinAmurtE.mp3",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg049": {
+  "source": "data/concert_audio/Kāṁbhōji/sri subramanyAya namaste.mp3",
+  "title": "sri subramanyAya namaste",
+  "title_provenance": "filename",
+  "file_title_raw": "sri subramanyAya namaste - kAmbhOji",
+  "archive_identifier": "8-tnk-kwm",
+  "free_form": false,
+  "resolves_exact": [
+   "comp07354"
+  ],
+  "resolves_relaxed": [
+   "comp07354"
+  ],
+  "source_duration": 1047.9,
+  "cluster": "8-tnk-kwm",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg050": {
+  "source": "data/concert_audio/Cakravākaṁ/eTulA brOtuv teliya.mp3",
+  "title": "eTulA brOtuv teliya",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": false,
+  "resolves_exact": [
+   "comp01961"
+  ],
+  "resolves_relaxed": [
+   "comp01961"
+  ],
+  "source_duration": 1012.9,
+  "cluster": "solo:data/concert_audio/Cakravākaṁ/eTulA brOtuv teliya.mp3",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg051": {
+  "source": "data/concert_audio/Madhyamāvati/rAmakatA.mp3",
+  "title": "rAmakatA",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": false,
+  "resolves_exact": [
+   "comp06133"
+  ],
+  "resolves_relaxed": [
+   "comp06133"
+  ],
+  "source_duration": 1581.2,
+  "cluster": "solo:data/concert_audio/Madhyamāvati/rAmakatA.mp3",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg052": {
+  "source": "data/concert_audio/Bhairavi/upachAramu.mp3",
+  "title": "upachAramu",
+  "title_provenance": "filename",
+  "file_title_raw": "upachAramu - bhairavi - Adi",
+  "archive_identifier": "102-tsk",
+  "free_form": false,
+  "resolves_exact": [
+   "comp08011"
+  ],
+  "resolves_relaxed": [
+   "comp00936",
+   "comp08011"
+  ],
+  "source_duration": 1792.0,
+  "cluster": "102-tsk",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg053": {
+  "source": "data/concert_audio/Hamsadhvāni/jaya jaya gaNapati.mp3",
+  "title": "jaya jaya gaNapati",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": false,
+  "resolves_exact": [
+   "comp02803"
+  ],
+  "resolves_relaxed": [
+   "comp02803"
+  ],
+  "source_duration": 1011.4,
+  "cluster": "solo:data/concert_audio/Hamsadhvāni/jaya jaya gaNapati.mp3",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg054": {
+  "source": "data/concert_audio/Kāmavardani/sArasAksha paripAlaya.mp3",
+  "title": "sArasAksha paripAlaya",
+  "title_provenance": "filename",
+  "file_title_raw": "sArasAksha paripAlaya - pantuvarALi",
+  "archive_identifier": "11-tnk-music-today",
+  "free_form": false,
+  "resolves_exact": [
+   "comp06666"
+  ],
+  "resolves_relaxed": [
+   "comp06666"
+  ],
+  "source_duration": 1067.2,
+  "cluster": "11-tnk-music-today",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg055": {
+  "source": "data/concert_audio/Karaharapriya/appan avataritta.mp3",
+  "title": "appan avataritta",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": false,
+  "resolves_exact": [
+   "comp00482"
+  ],
+  "resolves_relaxed": [
+   "comp00482"
+  ],
+  "source_duration": 1193.3,
+  "cluster": "solo:data/concert_audio/Karaharapriya/appan avataritta.mp3",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg056": {
+  "source": "data/concert_audio/Kānaḍa/sukhi evvarO.mp3",
+  "title": "sukhi evvarO",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": false,
+  "resolves_exact": [
+   "comp07381"
+  ],
+  "resolves_relaxed": [
+   "comp07381"
+  ],
+  "source_duration": 1744.8,
+  "cluster": "solo:data/concert_audio/Kānaḍa/sukhi evvarO.mp3",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg057": {
+  "source": "data/concert_audio/Śankarābharaṇaṁ/sankarAchAryam.mp3",
+  "title": "sankarAchAryam",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": false,
+  "resolves_exact": [
+   "comp06560"
+  ],
+  "resolves_relaxed": [
+   "comp06560"
+  ],
+  "source_duration": 2001.4,
+  "cluster": "solo:data/concert_audio/Śankarābharaṇaṁ/sankarAchAryam.mp3",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg058": {
+  "source": "data/concert_audio/Jaganmōhini/Mahathi PKF Sunaada Vinodini Ragam.mp3",
+  "title": "Mahathi PKF Sunaada Vinodini Ragam",
+  "title_provenance": "filename",
+  "file_title_raw": "Mahathi-PKF-09-Sunaada_Vinodini-Ragam_Sunadavinodini-Talam_Tishra_Triputa.mp3",
+  "archive_identifier": "Mahathi-PKF-Concert-2018-at-Navi_Mumbai",
+  "free_form": false,
+  "resolves_exact": [
+   "comp03891"
+  ],
+  "resolves_relaxed": [
+   "comp00108",
+   "comp00109",
+   "comp00587",
+   "comp01491",
+   "comp02529",
+   "comp03891",
+   "comp04845",
+   "comp06013"
+  ],
+  "source_duration": 1652.0,
+  "cluster": "Mahathi-PKF-Concert-2018-at-Navi_Mumbai",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg059": {
+  "source": "data/concert_audio/Śankarābharaṇaṁ/akshayalingavibhO.mp3",
+  "title": "akshayalingavibhO",
+  "title_provenance": "filename",
+  "file_title_raw": "akshayalingavibhO - sankarAbaraNam",
+  "archive_identifier": "314-tns",
+  "free_form": false,
+  "resolves_exact": [
+   "comp00182"
+  ],
+  "resolves_relaxed": [
+   "comp00182"
+  ],
+  "source_duration": 3063.7,
+  "cluster": "314-tns",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg060": {
+  "source": "data/concert_audio/Aṭāna/VamanKaSthithaya.mp3",
+  "title": "VamanKaSthithaya",
+  "title_provenance": "filename",
+  "file_title_raw": "vaman ka sthithaya-Athana-Khanda Eka-Dikshitar",
+  "archive_identifier": "VamankaStithayaAtanaDikshitarMp3",
+  "free_form": false,
+  "resolves_exact": [
+   "comp08134"
+  ],
+  "resolves_relaxed": [
+   "comp08134"
+  ],
+  "source_duration": 1240.1,
+  "cluster": "VamankaStithayaAtanaDikshitarMp3",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg061": {
+  "source": "data/concert_audio/Vasanta/kanTajutumi.mp3",
+  "title": "kanTajutumi",
+  "title_provenance": "filename",
+  "file_title_raw": "kanTajutumi - vAchaspati",
+  "archive_identifier": "ajit-w-lafeyette",
+  "free_form": false,
+  "resolves_exact": [
+   "comp03298"
+  ],
+  "resolves_relaxed": [
+   "comp03298"
+  ],
+  "source_duration": 1169.7,
+  "cluster": "ajit-w-lafeyette",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg062": {
+  "source": "data/concert_audio/Ṣanmukhapriya/ghananaya.mp3",
+  "title": "ghananaya",
+  "title_provenance": "filename",
+  "file_title_raw": "03-ghana_naya_dhEshika-riShabh",
+  "archive_identifier": "03GhananayaRishabhapriyA",
+  "free_form": false,
+  "resolves_exact": [
+   "comp02033"
+  ],
+  "resolves_relaxed": [],
+  "source_duration": 1300.3,
+  "cluster": "03GhananayaRishabhapriyA",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg063": {
+  "source": "data/concert_audio/Kāmavardani/Paripahi Mam.mp3",
+  "title": "Paripahi Mam",
+  "title_provenance": "filename",
+  "file_title_raw": "Paripahi Mam - Subhapanthuvarali - Mysore Vasudevachar",
+  "archive_identifier": "DP-013",
+  "free_form": false,
+  "resolves_exact": [
+   "comp05711"
+  ],
+  "resolves_relaxed": [
+   "comp05711"
+  ],
+  "source_duration": 1285.0,
+  "cluster": "DP-013",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg064": {
+  "source": "data/concert_audio/Ṣanmukhapriya/EkamresaNayaki Adi.mp3",
+  "title": "EkamresaNayaki Adi",
+  "title_provenance": "filename",
+  "file_title_raw": "07_EkamresaNayaki_Adi_Shanmukhapriya_MuthuswamiDikshitar",
+  "archive_identifier": "Vedavalli_21stOct2008_Part2",
+  "free_form": false,
+  "resolves_exact": [
+   "comp01504"
+  ],
+  "resolves_relaxed": [
+   "comp01504",
+   "comp01506"
+  ],
+  "source_duration": 3093.7,
+  "cluster": "Vedavalli_21stOct2008_Part2",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg065": {
+  "source": "data/concert_audio/Kāṁbhōji/mahIta pravrddha shrImati.mp3",
+  "title": "mahIta pravrddha shrImati",
+  "title_provenance": "filename",
+  "file_title_raw": "03-mahitha_pravruDhDha-kAmbOdhi-m_chApu-thyAgarAja",
+  "archive_identifier": "03MahItaPravrddhaShrImatiKAmbOji",
+  "free_form": false,
+  "resolves_exact": [
+   "comp03903"
+  ],
+  "resolves_relaxed": [
+   "comp03903"
+  ],
+  "source_duration": 1725.5,
+  "cluster": "03MahItaPravrddhaShrImatiKAmbOji",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg066": {
+  "source": "data/concert_audio/Hamsadhvāni/sri raghukula.mp3",
+  "title": "sri raghukula",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": false,
+  "resolves_exact": [
+   "comp07202"
+  ],
+  "resolves_relaxed": [
+   "comp07202"
+  ],
+  "source_duration": 1160.4,
+  "cluster": "solo:data/concert_audio/Hamsadhvāni/sri raghukula.mp3",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg067": {
+  "source": "data/concert_audio/Bhairavi/02Balagopala.mp3",
+  "title": "Balagopala",
+  "title_provenance": "filename",
+  "file_title_raw": "02Balagopala",
+  "archive_identifier": "HindustaniAndCarnatic-Vocal",
+  "free_form": false,
+  "resolves_exact": [
+   "comp00788"
+  ],
+  "resolves_relaxed": [
+   "comp00788"
+  ],
+  "source_duration": 1859.6,
+  "cluster": "HindustaniAndCarnatic-Vocal",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg068": {
+  "source": "data/concert_audio/Bēgaḍa/sankari nee.mp3",
+  "title": "sankari nee",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": false,
+  "resolves_exact": [
+   "comp06575"
+  ],
+  "resolves_relaxed": [
+   "comp06575",
+   "comp06576"
+  ],
+  "source_duration": 1013.0,
+  "cluster": "solo:data/concert_audio/Bēgaḍa/sankari nee.mp3",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ },
+ "neg069": {
+  "source": "data/concert_audio/Bhairavi/tanayuni brOva.mp3",
+  "title": "tanayuni brOva",
+  "title_provenance": "filename",
+  "file_title_raw": null,
+  "archive_identifier": null,
+  "free_form": false,
+  "resolves_exact": [
+   "comp07534"
+  ],
+  "resolves_relaxed": [
+   "comp07534"
+  ],
+  "source_duration": 3516.1,
+  "cluster": "solo:data/concert_audio/Bhairavi/tanayuni brOva.mp3",
+  "opening": true,
+  "anchor_seconds": 0.0,
+  "candidate_kind": "opening_candidate",
+  "scan_snippets": 15
+ }
+}
