@@ -66,3 +66,26 @@ data/synth_control/
 graphify-out/
 # codex CLI local dir
 .codex/
+
+# Saraga ASR pilot upload bundle (487MB build artifact — rebuild via scripts/build_saraga_pilot_zip.py)
+saraga_pilot.zip
+
+# ── Duration probe (2026-07-28..30) — cut windows and labeling sweeps are
+# regenerable from scripts/duration_probe_cut.py + build_negative_arm.py over
+# data/concert_audio; the sidecars, labels, reports and maps ARE tracked.
+data/duration_probe/**/*.wav
+
+# Drive revision history of the checkpointed ASR cache (253MB of near-duplicate
+# JSON), pulled to establish the GPU device map. Findings are in
+# data/duration_probe/DEVICE_MAP.md; the raw revisions stay local-only.
+/asr_cache_fullhistory/
+
+# Probe/upload build artifacts and extra corpora, kept on disk, never shipped
+/carnatic_varnam_1.1/
+/carnatic_varnam_1.1.zip
+/data/cnn_extra_audio/
+/data/asr_cache_v2.json.bak
+
+# Local editor + agent-skill tooling
+/.vscode/
+/.agents/
