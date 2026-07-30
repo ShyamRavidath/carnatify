@@ -1,0 +1,614 @@
+{
+ "_readme": "Reviewed junk-row blocklist for data/composition_registry.json. Rows are re-derived by scripts/registry_junk_filter.py; this file records the human review decision for each. status=drop is the only status filter_targets() acts on. status=review means flagged but NOT filtered -- awaiting Deepti. Ids are registry-rebuild-fragile (handoff §4.18): if the registry is ever rebuilt, re-run the detector and re-map, do not port ids.",
+ "_source": "data/registry_junk_blocklist_DRAFT.md (the 24 hand-reviewed rows)",
+ "_applied": false,
+ "_measured": "A/B on ~/sung_tests, whisper backend, 2026-07-28 (scripts/registry_junk_ab.py). Applying the 19 drop rows leaves top-1 8/78, top-5 21/78, OOC reject 21/28 UNCHANGED and moves answered 47->46. CORRECTION to the DRAFT: its claim that these rows 'only surface at score ~0.0' is false. comp01203 'Concerts from his US tour of 1983' was the rank-1, tier=medium, score 0.551 answer for clip 'Tulasi Bilva__Kedaragaula' -- a user-facing wrong answer, not a cosmetic 0.0 artifact. Dropping it turns that clip into an honest abstention. Junk removal is a precision fix, not just hygiene.",
+ "rows": {
+  "comp00000": {
+   "canonical": "8th Cross, V V Mohalla, Mysore",
+   "ragas": [
+    "Sept 13, 1997"
+   ],
+   "rules": [
+    "raga_is_date",
+    "title_address"
+   ],
+   "status": "drop",
+   "reviewed_in": "DRAFT.md confident-drop table"
+  },
+  "comp00154": {
+   "canonical": "AIR Chennai",
+   "ragas": [
+    "9-9-2002"
+   ],
+   "rules": [
+    "raga_is_date",
+    "title_broadcast"
+   ],
+   "status": "drop",
+   "reviewed_in": "DRAFT.md confident-drop table"
+  },
+  "comp00155": {
+   "canonical": "AIR National Program",
+   "ragas": [
+    "1982"
+   ],
+   "rules": [
+    "raga_is_date",
+    "title_broadcast"
+   ],
+   "status": "drop",
+   "reviewed_in": "DRAFT.md confident-drop table"
+  },
+  "comp00196": {
+   "canonical": "Alapana",
+   "ragas": [
+    "Amṛtavarṣiṇi",
+    "Bhairavi",
+    "Bēgaḍa",
+    "Hindōḷaṁ",
+    "Kāmavardani",
+    "Kāṁbhōji",
+    "Kēdāragauḷa",
+    "Latāngi",
+    "Madhyamāvati",
+    "Puṇṇāgavarāḷi",
+    "Pūrvīkaḷyāṇi",
+    "Sahānā",
+    "Sāvēri",
+    "Varāḷi",
+    "sAveri  (Incomplete)",
+    "tODi (incomplete)",
+    "Śankarābharaṇaṁ",
+    "Śrīranjani",
+    "Ṣanmukhapriya"
+   ],
+   "rules": [
+    "title_perf_note"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp00197": {
+   "canonical": "Alapana & tanam",
+   "ragas": [
+    "mOhanam (incomplete)",
+    "sAvEri"
+   ],
+   "rules": [
+    "title_perf_note"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp00327": {
+   "canonical": "Anantalakshmi Sadagopan",
+   "ragas": [
+    "Vocal"
+   ],
+   "rules": [
+    "raga_is_role"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp00532": {
+   "canonical": "Ariyakudi Ramanuja Iyengar",
+   "ragas": [
+    "Vocal"
+   ],
+   "rules": [
+    "raga_is_role"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp00639": {
+   "canonical": "At MIT, Boston",
+   "ragas": [
+    "1993"
+   ],
+   "rules": [
+    "raga_is_date",
+    "title_address",
+    "title_venue"
+   ],
+   "status": "drop",
+   "reviewed_in": "DRAFT.md confident-drop table"
+  },
+  "comp00649": {
+   "canonical": "At Vadapazhani Murugan Koil",
+   "ragas": [
+    "Concert incomplete"
+   ],
+   "rules": [
+    "title_venue"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp00812": {
+   "canonical": "Bala Saraswathi",
+   "ragas": [
+    "Dance Music"
+   ],
+   "rules": [
+    "raga_is_role"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp00925": {
+   "canonical": "Below are the recordings in no particular order",
+   "ragas": [
+    "hope you enjoy as I did"
+   ],
+   "rules": [
+    "title_prose"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp00929": {
+   "canonical": "Bidaram, Mysore",
+   "ragas": [
+    "1999"
+   ],
+   "rules": [
+    "raga_is_date",
+    "title_address"
+   ],
+   "status": "drop",
+   "reviewed_in": "DRAFT.md confident-drop table"
+  },
+  "comp00949": {
+   "canonical": "Boston (low recording levels)",
+   "ragas": [
+    "14 April, 1991"
+   ],
+   "rules": [
+    "raga_is_date",
+    "title_venue"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp01106": {
+   "canonical": "Chembai Vaidyanatha Bhagavatar",
+   "ragas": [
+    "Vocal"
+   ],
+   "rules": [
+    "raga_is_role"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp01198": {
+   "canonical": "Chittoor V Nagaiah",
+   "ragas": [
+    "Vocal"
+   ],
+   "rules": [
+    "raga_is_role"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp01203": {
+   "canonical": "Concerts from his US tour of 1983",
+   "ragas": [
+    "with S D Sridhar"
+   ],
+   "rules": [
+    "title_concert"
+   ],
+   "status": "drop",
+   "reviewed_in": "DRAFT.md confident-drop table"
+  },
+  "comp01204": {
+   "canonical": "Concerts with Akella Mallikarjuna Sarma and Kamalakara Rao",
+   "ragas": [
+    "US/Canada tour 1980"
+   ],
+   "rules": [
+    "title_concert"
+   ],
+   "status": "drop",
+   "reviewed_in": "DRAFT.md confident-drop table"
+  },
+  "comp01205": {
+   "canonical": "Concerts with M Chandrasekaran",
+   "ragas": [
+    "Click on the line"
+   ],
+   "rules": [
+    "title_concert"
+   ],
+   "status": "drop",
+   "reviewed_in": "DRAFT.md confident-drop table"
+  },
+  "comp01206": {
+   "canonical": "Concert with Lalgudi Jayaraman, U K Sivaraman & V Nagarjan",
+   "ragas": [
+    "Mumbai"
+   ],
+   "rules": [
+    "title_concert"
+   ],
+   "status": "drop",
+   "reviewed_in": "DRAFT.md confident-drop table"
+  },
+  "comp01207": {
+   "canonical": "Concert with T N Krishnan and Palakkad Raghu",
+   "ragas": [
+    "AIR Sangeeth Sammelan concert"
+   ],
+   "rules": [
+    "title_concert"
+   ],
+   "status": "drop",
+   "reviewed_in": "DRAFT.md confident-drop table"
+  },
+  "comp01208": {
+   "canonical": "Concert with T N Krishnan, U K Sivaraman & V Nagarjan",
+   "ragas": [
+    "second half of the concert"
+   ],
+   "rules": [
+    "title_concert"
+   ],
+   "status": "drop",
+   "reviewed_in": "DRAFT.md confident-drop table"
+  },
+  "comp01433": {
+   "canonical": "D K Pattammal",
+   "ragas": [
+    "Vocal"
+   ],
+   "rules": [
+    "raga_is_role"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp01434": {
+   "canonical": "DKP DKJ RTP",
+   "ragas": [
+    "Jaganmōhini"
+   ],
+   "rules": [
+    "title_perf_note"
+   ],
+   "status": "drop",
+   "reviewed_in": "DRAFT.md confident-drop table"
+  },
+  "comp01994": {
+   "canonical": "G 2437-B JM 2373 bhananevaye",
+   "ragas": [
+    "Kedāraṁ"
+   ],
+   "rules": [
+    "title_tape_catalog"
+   ],
+   "status": "drop",
+   "reviewed_in": "DRAFT.md confident-drop table",
+   "note": "OPEN QUESTION, carried from the DRAFT: the tail token 'bhananevaye' may be a real kriti behind a tape number, and no other registry row carries it (grep 'bhanane' -> this row only). This is the ONLY drop-tier row whose removal costs catalog recall. Deepti: demote to review, or re-title the row instead of dropping it."
+  },
+  "comp02135": {
+   "canonical": "G N Balasubramaniam",
+   "ragas": [
+    "Vocal"
+   ],
+   "rules": [
+    "raga_is_role"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp02136": {
+   "canonical": "G N Balasubramaniam & M S Subbulakshmi",
+   "ragas": [
+    "Vocal"
+   ],
+   "rules": [
+    "raga_is_role"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp03319": {
+   "canonical": "Kapali Koil",
+   "ragas": [
+    "1989"
+   ],
+   "rules": [
+    "raga_is_date",
+    "title_venue"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp03347": {
+   "canonical": "Karnataka Sangeeta Sabha, Delhi",
+   "ragas": [
+    "Oct 19, 1985"
+   ],
+   "rules": [
+    "raga_is_date",
+    "title_address",
+    "title_venue"
+   ],
+   "status": "drop",
+   "reviewed_in": "DRAFT.md confident-drop table"
+  },
+  "comp03508": {
+   "canonical": "K B Sundarambal",
+   "ragas": [
+    "Vocal"
+   ],
+   "rules": [
+    "raga_is_role"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp03614": {
+   "canonical": "Krishna Gana Sabha",
+   "ragas": [
+    "1975"
+   ],
+   "rules": [
+    "raga_is_date",
+    "title_venue"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp03790": {
+   "canonical": "Long Alapana (lead up to RTP)",
+   "ragas": [
+    "tODi (incomplete)"
+   ],
+   "rules": [
+    "title_perf_note"
+   ],
+   "status": "review",
+   "reviewed_in": "DRAFT.md borderline table"
+  },
+  "comp03827": {
+   "canonical": "Madurai Mani Iyer",
+   "ragas": [
+    "Vocal"
+   ],
+   "rules": [
+    "raga_is_role"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp03887": {
+   "canonical": "Maharajapuram Viswanatha Iyer",
+   "ragas": [
+    "Vocal"
+   ],
+   "rules": [
+    "raga_is_role"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp04358": {
+   "canonical": "M K Tyagaraja Bhagavatar",
+   "ragas": [
+    "Vocal"
+   ],
+   "rules": [
+    "raga_is_role"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp04359": {
+   "canonical": "M L Vasantakumari",
+   "ragas": [
+    "Vocal"
+   ],
+   "rules": [
+    "raga_is_role"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp04400": {
+   "canonical": "M S Subbalakshmi",
+   "ragas": [
+    "Vocal"
+   ],
+   "rules": [
+    "raga_is_role"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp04416": {
+   "canonical": "Muffled RTP",
+   "ragas": [
+    "keeravAni"
+   ],
+   "rules": [
+    "title_perf_note"
+   ],
+   "status": "review",
+   "reviewed_in": "DRAFT.md borderline table"
+  },
+  "comp04491": {
+   "canonical": "Musiri Subramanya Iyer",
+   "ragas": [
+    "Vocal"
+   ],
+   "rules": [
+    "raga_is_role"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp04505": {
+   "canonical": "Mysore",
+   "ragas": [
+    "Sept 26, 1998"
+   ],
+   "rules": [
+    "raga_is_date",
+    "title_venue"
+   ],
+   "status": "drop",
+   "reviewed_in": "DRAFT.md confident-drop table"
+  },
+  "comp04506": {
+   "canonical": "Mysore B S Raja Iyengar",
+   "ragas": [
+    "Vocal"
+   ],
+   "rules": [
+    "raga_is_role"
+   ],
+   "status": "drop",
+   "reviewed_in": "DRAFT.md confident-drop table"
+  },
+  "comp04513": {
+   "canonical": "Nada Brahma Sabha, Mysore",
+   "ragas": [
+    "July 27, 1991"
+   ],
+   "rules": [
+    "raga_is_date",
+    "title_address",
+    "title_venue"
+   ],
+   "status": "drop",
+   "reviewed_in": "DRAFT.md confident-drop table"
+  },
+  "comp04760": {
+   "canonical": "Narayana Iyengar",
+   "ragas": [
+    "Gottuvadyam"
+   ],
+   "rules": [
+    "raga_is_role"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp04821": {
+   "canonical": "Navaratri concert with Chalakudy Narayanaawamy (?)",
+   "ragas": [
+    "Incomplete"
+   ],
+   "rules": [
+    "title_concert"
+   ],
+   "status": "review",
+   "reviewed_in": "DRAFT.md borderline table"
+  },
+  "comp04836": {
+   "canonical": "N C Vasantkokilam",
+   "ragas": [
+    "Vocal"
+   ],
+   "rules": [
+    "raga_is_role"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp06305": {
+   "canonical": "RTP Andholika",
+   "ragas": [],
+   "rules": [
+    "title_perf_note"
+   ],
+   "status": "review",
+   "reviewed_in": "DRAFT.md borderline table"
+  },
+  "comp06306": {
+   "canonical": "RTP Kaanakkidaikkumo Sabhesan Darisanam Kandaal Kalitheerume",
+   "ragas": [
+    "Pūrvīkaḷyāṇi"
+   ],
+   "rules": [
+    "title_perf_note"
+   ],
+   "status": "review",
+   "reviewed_in": "DRAFT.md borderline table"
+  },
+  "comp07470": {
+   "canonical": "S V Subbiah Bhagavatar",
+   "ragas": [
+    "Vocal"
+   ],
+   "rules": [
+    "raga_is_role"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp07528": {
+   "canonical": "tAnam and pallavi",
+   "ragas": [
+    "Ṣanmukhapriya"
+   ],
+   "rules": [
+    "title_perf_note"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp07944": {
+   "canonical": "Unidentified",
+   "ragas": [
+    "Sāma",
+    "Śankarābharaṇaṁ"
+   ],
+   "rules": [
+    "title_perf_note"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  },
+  "comp08399": {
+   "canonical": "Wedding concert",
+   "ragas": [
+    "1973"
+   ],
+   "rules": [
+    "raga_is_date",
+    "title_concert"
+   ],
+   "status": "drop",
+   "reviewed_in": "DRAFT.md confident-drop table"
+  },
+  "comp08602": {
+   "canonical": "VOL MSG AIR oct 20004 RTP",
+   "ragas": [
+    "Tōḍi"
+   ],
+   "rules": [
+    "title_perf_note"
+   ],
+   "status": "drop",
+   "reviewed_in": "DRAFT.md confident-drop table"
+  },
+  "comp08607": {
+   "canonical": "V V Sadagopan",
+   "ragas": [
+    "Vocal"
+   ],
+   "rules": [
+    "raga_is_role"
+   ],
+   "status": "review",
+   "reviewed_in": "new detection (not in DRAFT.md)"
+  }
+ }
+}
