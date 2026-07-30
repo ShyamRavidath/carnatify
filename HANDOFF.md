@@ -1,673 +1,548 @@
-# Carnatify — Production Handoff Document
-**Prepared for:** Fable 5 (next agent, zero prior context)  
-**Written by:** Claude Sonnet 4.6, 2026-07-01  
-**Status:** Project is partially deployed; ML accuracy is the primary blocker to production.
+# Carnatify workhorse handoff
+
+Last reconciled: **2026-07-30** (rewritten by the Opus 5 workhorse after
+executing `WORKHORSE_PROBE_LAUNCH_BRIEF.md` and running the GPU job until Colab
+credits ran out)
+Repository: `/Users/shyamravidath/carnatify` · Branch: `main`
+HEAD: `1ba3e1f` · `origin/main` observed at `62f9be9` (local is ahead)
+
+This is the current operational handoff for the **workhorse / implementation
+seat**. Older handoff documents remain useful as history; their status sections
+are not authoritative. The durable experiment ledger is `AGENT_LOG.md` — append
+exact outcomes there rather than paraphrasing them from memory.
+
+**What changed in this rewrite.** The 2026-07-29 version described a probe that
+was designed but not launched. Since then the whole launch brief was executed
+(rule A applied, recall arm cut, Colab runner built) and **the GPU run started
+and stopped part way**: 259 of 300 recall windows are transcribed and the
+negative arm has not begun. §2.6 is new and is the only part of this document
+that is time-critical. The graveyard in §4 is preserved and extended.
 
 ---
 
-## 1. Project Vision & Goals
+## 1. The goal
 
-### What Carnatify is
-A Carnatic music identification and enrichment app with three interlocking features:
-1. **Raga classification** — identify the melodic framework (raga) being performed from a pitch contour, even during improvised passages (alapana) with no fixed melody
-2. **Composition matching** — identify which specific kriti (composition) is being performed, tolerant of artist variation, tempo differences, and improvisation
-3. **Lyrics & meaning** — surface the original-language lyrics (sahityam) and an English meaning for the matched composition
+Carnatify should identify a Carnatic composition from a live performance
+despite changes in artist, key, tempo, accompaniment and improvisation, and
+present title, raga, sahitya and English meaning.
 
-### Who it's for
-- **Concert-goers** who don't recognize what's being sung and want to know in real-time
-- **Students** who want to verify compositions and access lyrics for study
-- **The builder (Deepti)** — practicing Carnatic musician, HS student, built it for personal use first
+Product concept: a concert companion for Jon, a Western listener with no prior
+Carnatic knowledge — progressively update a top-five list, offer candidate
+detail pages, offer "none of these", and **never present a weak guess as a
+confident identification**. The product bar is ~85% precision on what it
+chooses to show; the pipeline has never met it.
 
-### End state
-App Store release on iOS, available to the global Carnatic music community. The web app on Vercel is an intermediate milestone to prove the pipeline; the iOS layer wraps the same ML core.
+**The immediate research question is narrower:**
 
-### Why this doesn't exist already
-- **Shazam** performs acoustic fingerprinting — matches a specific waveform to a stored recording. Carnatic music is inherently variable: same composition, same raga, but every artist performs at different shruti (tonic), tempo, with different gamakas (ornamental variations). Shazam fails completely on live Carnatic audio.
-- **Raga reference apps** (e.g., "Carnatic Raga" on iOS) are static lookup databases — you search by raga name, they don't listen to anything.
-- **Western MIR tools** (chroma features, beat tracking, key detection) are designed for tonal harmony and fixed tempo — fundamentally wrong representations for Carnatic music which is monophonic, gamaka-heavy, and has complex rhythmic cycles.
+> Does listening *longer* materially improve the current **lyrics matcher** on
+> long-form concert audio?
 
-Carnatify's approach: extract the predominant pitch contour from the vocal/melodic line, normalize by the estimated tonic, and match against tonic-normalized reference contours. This is genre-specific and correct.
+That is the duration probe. Its gate is a paired **top-five** contrast from
+**30s → 300s** with a **+15pp** boundary and a three-way verdict
+(PROMOTE / KILL / INCONCLUSIVE). 90s → 300s is reported as the *product gap*,
+not as the gate. The safety arm is a separate conjunction, gated under **rule A**
+(§2.4).
 
----
+**Scope corrections that must not be re-litigated:**
 
-## 2. Original Buildspec vs Current Reality
-
-The PRD (`carnatify_prd.md`) was approved June 2026. Here is the honest status of each module:
-
-### 2.1 Raga Classifier
-
-**Buildspec promised:** ≥75% accuracy on held-out test set, covering ≥60 ragas, ≤3s inference time on CPU.
-
-**What was built:**
-- `src/carnatify/ml/raga_features.py`: 480-dim feature vector — 120-bin tonic-normalized pitch histogram + 12×12 pitch-class bigram matrix + 6×6×6 trigram tensor. Features capture melodic motion, not just note inventory.
-- `src/carnatify/ml/raga_classifier.py`: Two paths — `RagaClassifier` (PyTorch CNN/TDNN, **not used in production**) and `predict_raga()` (sklearn RandomForest from joblib pkl, **this is what ships**).
-- `train_raga.py`: Trains on `compmusic_raga` via mirdata, using pre-extracted `.pitch` and `.pitch_post_processed` files. 477 tracks, 40 ragas. Best model: RandomForest, 77.8% 5-fold CV.
-- `models/raga_classifier.pkl` (28MB), `models/raga_label_encoder.pkl`: The production model, in git.
-
-**What works:** 77.8% cross-validation accuracy on the CompMusic dataset features. The feature extraction pipeline (histogram + bigrams + trigrams) is principled and more expressive than histogram-only baselines.
-
-**What is broken / underperforming:**
-
-**CRITICAL — Domain mismatch between training and inference.** The CompMusic dataset provides pre-extracted pitch using MELODIA (Vamp plugin, proprietary, produces smoothed, post-processed vocal pitch contours). Production inference uses `librosa.pyin` on Demucs-separated vocals. These are **categorically different pitch pipelines**: MELODIA fills silence with interpolated values and applies smoothing; pyin produces raw YIN-based F0 with voiced/unvoiced flags and no smoothing. The training features were computed from MELODIA pitch. Inference features are computed from pyin pitch on Demucs output. The model has never seen pyin-derived features during training.
-
-This is the fundamental reason the live-audio raga classifier underperforms. A Kalyani test on a real recording returned wrong results despite Kalyani being in the 40-raga training vocabulary.
-
-**Retrain attempts and their outcomes (commit f2273df):**
-- **Candidate A (CompMusic + augmentation):** Replaced raw `.pitch` with `.pitch_post_processed` (closer to MELODIA), added pitch-shift ±1 semitone and white-noise augmentation. Result: 77.2% 5-fold StratifiedGroupKFold — within noise of baseline 77.8%. Not an improvement.
-- **Candidate B (Real audio — Demucs+pyin pipeline):** Used Saraga Carnatic audio (the only freely accessible labeled Carnatic audio) as a stand-in while waiting for CompMusic audio access. Ran Demucs → pyin → 480-dim features. Result: **5.0% accuracy, near random chance on 43 classes.** Root cause: Saraga Carnatic has ~3 tracks/raga with StratifiedGroupKFold (groups = tracks, so splits only have 1-2 tracks for training). Model cannot generalize from 1-2 training examples.
-- Both candidates archived in `models/candidates/`; neither ships.
-
-**CompMusic audio situation:** The CompMusic dataset (`RagaDataset/Carnatic/features/`) contains pre-extracted features only — not the raw audio files. Audio access requires manual request to mtg-info@upf.edu. Request not yet sent as of 2026-07-01. If CompMusic audio becomes available, the correct fix is to run the Demucs+pyin pipeline over it to build a large (477-track, 40-raga) real-audio training set that matches inference exactly.
-
-**Vocabulary:** 40 ragas only. Common ragas **not in the vocabulary**: Saveri, Arabhi, Darbar, Keeravani, Abheri, Bhupalam, Poorvikalyani, and others. These return `None` from `raga_aliases.json` lookup and are OOV for the classifier — the model will hallucinate a wrong in-vocabulary raga instead.
-
-**Confidence calibration:** Top prediction confidence is typically 10–22% even for correct predictions. This is not a bug — it's expected from a multi-class RF trained on 40 ragas with limited data. But it makes the confidence scores meaningless as a quality signal to users.
-
-**What was explicitly deferred:** PyTorch CNN/TDNN path (`RagaClassifier` class, `RagaCNN`, `RagaTDNN`) — these exist in `src/carnatify/ml/raga_model.py` and `raga_dataset.py` but are never called in production. The sklearn path is faster and currently superior given the data constraints.
+- The 60-67% full-recording result belongs to **Qmax**; the 8-13/78 wild-clip
+  result belongs to the **lyrics matcher**. Comparing them was a
+  matcher-identity confound.
+- **Qmax cannot be evaluated on `data/concert_audio`** — `models/qmax_catalog.npz`
+  was built from those recordings; it would be same-recording leakage.
+- Even a positive duration result establishes only an **archive-domain
+  lyrics-matcher curve**. Not wild-phone performance, not OOC safety, not
+  "90s equals five minutes".
+- The lyrics-ASR backbone is a confirmed dead end for the 85% bar, proven from
+  two directions (precision curve ≤31% anywhere; LoRA fine-tune 8/78 → 0-1/78).
+  The strategic pivot is the melodic/CoverHunter channel. The duration probe is
+  a *diagnostic* on the ASR lane, not a revival of it.
 
 ---
 
-### 2.2 Tala Detector
+## 2. Current state of the code
 
-**Buildspec promised:** Detect Adi, Misra Chapu, Rupaka, Khanda Chapu talas with ≥70% accuracy.
+### 2.1 Production pipeline — unchanged and deliberately untouched
 
-**What was built:**
-- `src/carnatify/ml/tala_analyzer.py`: Rule-based beat-cycle analyzer. Uses librosa beat tracking, autocorrelation of inter-beat intervals to find the dominant period, maps beat count to a tala name.
-- `src/carnatify/ml/tala_detector.py`: Thin wrapper with confidence threshold.
-- `src/carnatify/ml/tala_validator.py`: Evaluation against Saraga ground truth annotations.
-- `detect_tala()` standalone function.
+`identify_clip.py` is the single source of truth for inference. Everything in
+this line of work edits **nothing** in it, including the Colab and AWS runners,
+which patch module attributes at runtime instead. `git diff --stat
+identify_clip.py` must stay empty and was verified empty at every step.
 
-**What is broken — measured 2026-07-01 (this supersedes the earlier "subdivision mismatch" theory, which was wrong):**
+Product default: Whisper `large-v3-turbo`, cache v2, 4 mix passes + 3 Demucs
+stem passes. `hybrid` / `hybrid_stem` are **experimental** and must not
+silently replace the default.
 
-The earlier handoff claimed the Saraga ground truth encodes aksharas (Adi = 32) and that predictions were scored against the wrong granularity. That is not how the validator works: `tala_validator.py` compares tala **names** from each track's `.json` metadata (`taala[0].name`), and the `.sama-manual.txt` files contain cycle-start timestamps (seconds), not beat counts. Two real problems were found instead:
+**Wild scoreboard, 106 clips (78 in-catalog + 28 OOC):**
 
-1. **Diacritics bug (fixed):** Saraga metadata spells talas with diacritics ("Ādi", "Rūpaka"), which `normalize_tala_name` never matched against the plain-ASCII alias table — every prediction scored wrong regardless of the beat math. Fixed with unicode folding in `tala_validator.py`.
-2. **The estimator itself is weak (not fixed — fundamental):** Evaluated honestly via `evaluate_tala.py` over 170 Saraga tracks (adi 122, rupaka 25, misra chapu 16, khanda chapu 7): **16.5% overall**. Diagnosis from the sama annotations: the inter-beat-interval autocorrelation finds sub-periods — median estimated cycle is 0.51× the true cycle — and librosa's beat tracker makes octave (double/half tempo) errors on concert audio. A second attempt (onset-envelope autocorrelation scored at candidate cycle lags, octave-folded classes {4,8,16}→Adi / {3,6,12}→Rupaka / {7,14}→Misra Chapu / {5,10}→Khanda Chapu) reached **32.9%**, still below the 72% majority-class baseline (always guess Adi), with an uninformative confidence margin.
+| backend | top-1 | top-5 | OOC reject | precision @ coverage |
+|---|---|---|---|---|
+| `whisper` (product default) | **8/78** | 21/78 | 21/28 (7 bluffs) | 17% @ 44% |
+| `hybrid` | 11/78 | 25/78 | — | 20% @ 52% |
+| `hybrid_stem` (best experimental) | 13/78 | 28/78 | — | 23% @ 53% |
 
-**Conclusion:** Unsupervised beat tracking + cycle periodicity cannot discriminate these talas on real concert recordings (mridangam improvisation, tempo drift, sparse cycle-level accents). Tala detection stays out of the API — `/predict` and `/predict-audio` return no tala field, and the frontend does not display one. The credible path is supervised meter tracking trained on the sama annotations (132 of 184 labeled tracks have them) — a research-scale effort, not a bug fix.
+Guard: `~/sung_tests_curated`, floor 8/36 (hybrid_stem reached 10/36).
+Canonical command:
 
----
-
-### 2.3 Composition Matcher
-
-**Buildspec promised:** ≥70% top-1 accuracy, DTW or cross-correlation matching, 100–150 composition catalog.
-
-**What was built:**
-- `src/carnatify/ml/composition_matcher.py`: Two implementations:
-  1. `CompositionMatcher` class: full DTW via `DTWMatcher` + `ContourPreprocessor` — **not used in production**
-  2. `match_composition()` flat function: L2 distance on fixed-length (500-point) tonic-normalized z-scored contours, similarity = `1 / (1 + dist / N_POINTS)` — **this is what ships**
-- `models/composition_catalog.npz`: 197 × 500 float32 array of reference contours
-- `models/composition_catalog_meta.json`: track_id + title for each of the 197 tracks
-- `build_catalog.py`, `backend/precompute_tracks.py`: tools to rebuild the catalog
-
-**What works:** The L2-on-resampled-contours approach is fast (milliseconds), tempo-invariant by design (resampling normalizes tempo), and tonic-invariant (cents relative to Sa). It returns plausible results.
-
-**What is broken / underperforming:**
-- **Data ceiling:** The catalog has 197 tracks from 197 distinct Saraga recordings, but many compositions have only one rendition. Matching a query against a single reference means the matcher can only recognize a composition if the user's performance closely resembles the one indexed recording. The PRD evaluation (16% top-1 on 19 compositions with 2+ renditions) reflects this ceiling, not a code bug.
-- **L2 vs DTW:** The shipped code uses L2 distance on fixed-length resampled contours. This is tempo-invariant (resampling handles it) but **not alignment-invariant**: if the user starts singing from the anupallavi instead of the pallavi, the contour offset breaks matching. True DTW would handle this, but the `DTWMatcher` implementation was not deployed because its O(N²) complexity on 197 × 60s-worth of contours was too slow for a web request.
-- **Score inflation:** Similarity scores are systematically high (0.93–0.95 for top-3 matches) because the L2 distance on 500-point z-scored contours clusters all scores in a narrow band. These scores are not meaningful probability estimates.
-
-**What was explicitly deferred:** Subsequence DTW (partial query matching), multi-segment averaging across multiple renditions, and catalog expansion beyond the 197 Saraga tracks.
-
----
-
-### 2.4 Lyrics & Meaning Pipeline
-
-**Buildspec promised:** Original-language lyrics (sahityam) and English meaning for matched compositions. Catalog broad from day one.
-
-**What was built:**
-- `src/carnatify/lyrics/pipeline.py`: `LyricsCatalog` class — SQLite-backed, Gemini-powered on-demand meaning generation with caching
-- `src/carnatify/lyrics/scraper.py`: Karnatik.com scraper (lyrics from public domain source)
-- `src/carnatify/lyrics/meaning_generator.py`: Gemini 2.5 Flash meaning generation
-- `data/lyrics.db`: 3,252 title entries seeded from Saraga metadata. Schema: `title, composer, raga, language, lyrics_original, meaning_en, meaning_generated_at`
-- `backend/data/lyrics.db`: Copy deployed to HF Space (same 3,252 titles, 8 meanings)
-- `generate_meanings.py`: Resumable batch generator, 7s pacing, ResourceExhausted backoff
-
-**What works:** The 8 pre-generated meanings are real and correct. The on-demand `/meaning/{title}` endpoint generates meanings live via Gemini on first request and caches them. The generation quality is good.
-
-**What is broken / underperforming:**
-- **3,244 titles have no pre-generated meaning.** The free Gemini API quota was exhausted after generating 8 during a batch run. The `generate_meanings.py` script is resumable and correct — it just needs quota.
-- **lyrics_original is empty for most titles.** The Karnatik.com scraper was implemented but not actually run at scale (only the 3,252 titles from Saraga metadata were seeded; the actual lyric text was not bulk-scraped). The meaning generation prompt works with just the title + composer when lyrics aren't available.
-- **Cache is ephemeral on HF Spaces.** HF's free tier has an ephemeral filesystem — the `lyrics.db` resets on every Docker rebuild. Any meanings generated at runtime are lost. The pre-baked 8 meanings in the committed `backend/data/lyrics.db` survive rebuilds; runtime-generated ones don't.
-
-**Note on Anthropic → Gemini switch:** The original meaning generator used Claude (Anthropic API). It was switched to Gemini 2.5 Flash (commit 85d2271) because the Gemini free tier has much higher rate limits for this use case.
-
----
-
-### 2.5 Streamlit App (Original MVP)
-
-**Buildspec promised:** Working Python MVP with a Streamlit UI taking audio input and returning raga, tala, composition, lyrics.
-
-**What exists:** `app.py` at the repo root. Loads `saraga_carnatic` via mirdata, lists tracks with pitch data + tonic, runs `predict_raga()` + `match_composition()` + `LyricsCatalog` for a selected track.
-
-**Current status:** **Functional but unmaintainable for production.** Hard-coded `data_home='/Users/shyamravidath/carnatify'` path throughout. Requires local Saraga dataset (13.5 GB). No live audio input. No Demucs integration. Not deployed anywhere. Effectively replaced by the Next.js + FastAPI web stack.
-
----
-
-### 2.6 Next.js Frontend
-
-**Buildspec promised:** Not in original PRD (web frontend was additive).
-
-**What was built:**
-- `frontend/app/page.tsx`: Landing page with scroll-driven SVG waveform hero, "How It Works" section, CTA to /demo
-- `frontend/app/demo/page.tsx`: Two-tab demo — "Saraga Archive" (select from 197 tracks, hit Analyse) and "Record Audio" (microphone, 24-bar live waveform, auto-stop at 60s, submit to /predict-audio)
-- `frontend/components/`: `WaveSkeleton` (loading animation), `ScoreBar` (confidence bars), `WaveformHero` (animated SVG), `Nav`, `Reveal`, `HowItWorks`
-- `frontend/lib/api.ts`: Typed fetch wrappers for all backend endpoints
-
-**What works:** Both tabs are wired to the real backend. Results panels show raga predictions with confidence bars, composition matches, and a meaning panel with on-demand "Generate meaning" button. Deployed at `https://carnatify.vercel.app`.
-
-**Known issues:**
-- No error recovery UX if the HF Space is cold-starting (the first request can take 3 minutes while the htdemucs model downloads — the user sees a spinner with no feedback)
-- No timeout/retry logic in `predictAudio()` — the fetch can silently hang for the browser's default timeout
-- MediaRecorder content-type varies by browser: Chrome sends `audio/webm;codecs=opus`, Safari sends `audio/mp4`, Firefox sends `audio/ogg` — all handled on the backend, but not tested cross-browser
-- No mobile layout testing — the mic permission UX on iOS Safari is untested
-- Progress messages ("Uploading recording…" → "Separating vocals…" → "Analysing raga…") are timer-based guesses, not actual backend events. If Demucs takes longer than 60s on a cold start, the UI says "Analysing raga…" while still waiting for Demucs.
-
----
-
-### 2.7 FastAPI Backend (HuggingFace Spaces)
-
-**Buildspec promised:** Not in original PRD (web backend was additive).
-
-**What was built:** `backend/main.py` — FastAPI app serving:
-- `GET /health` → `{"status": "ok"}`
-- `GET /tracks` → 197 Saraga tracks (from precomputed `tracks_meta.json`)
-- `POST /predict` → raga + composition matches for a Saraga track_id (uses precomputed pitch)
-- `POST /predict-audio` → raga + composition matches from uploaded audio file (runs Demucs + pyin)
-- `GET /meaning/{title}` → composer + English meaning (Gemini on-demand)
-
-**What works:** All endpoints are live and returning correct responses. `/predict-audio` runs the full Demucs + pyin + feature extraction + raga classification + composition matching pipeline end-to-end.
-
-**Performance:** `/predict-audio` takes ~65s for a 30s audio clip on CPU (Demucs bottleneck). First request after cold start also downloads the htdemucs model (~80 MB) — allow 2-3 minutes.
-
-**Known issues:**
-- No rate limiting. Any user can POST unlimited audio files, triggering unlimited Demucs jobs. On the free tier (2 vCPU, 16 GB RAM), concurrent requests will OOM-kill the container.
-- No request queue. Concurrent Demucs runs on 2 vCPU will be extremely slow (Demucs is not thread-safe in CPU mode with shared model weights).
-- The `FRONTEND_ORIGIN` CORS header is currently set to `"*"` as fallback — should be restricted to `https://carnatify.vercel.app` in production.
-- Ephemeral filesystem: the htdemucs model cache (`~/.cache/torch/hub/`) and any runtime-generated lyrics meanings are lost on rebuild.
-
----
-
-### 2.8 Concert Metadata Scraper (shankarkrish.blog)
-
-**Buildspec promised:** Scrape concert metadata to expand composition catalog + raga labels for retraining.
-
-**What was built:**
-- Scraper for `shankarkrish.blog/carnatic-vocal/` — 3,698 concert records collected into `data/scraped_compositions.json`, with fields: title, raga_raw, raga_canonical, composer, concert_date, artist
-- `data/raga_aliases.json`: 958 raw raga spellings (from scraped data), 684 normalized to canonical form, 274 mapped to `null` (OOV / unrecognized variants)
-- `download_concerts.py` + `train_raga_v2_archive.py`: Downloads the audio for each scraped concert from archive.org; extracts 65s segment per track, runs Demucs+pyin, stores 480-dim features in `data/raga_v2_cache/archive/`
-- `data/concert_audio/`: 224 MP3 files downloaded across 21 raga labels (the ragas with the most shankarkrish.blog entries)
-
-**What works:** The scraping and download pipeline runs. The 224 concert audio files are downloaded and organized by raga name. The Demucs+pyin feature extraction pipeline runs over them.
-
-**What is underperforming:** The archive.org concert audio + Saraga audio combined into a real-audio training set yielded 5% CV accuracy (commit f2273df evaluation). Root cause: too few tracks per raga even after combining both sources. The shankarkrish.blog concerts give more data but not enough by raga category — many ragas have 1-3 concerts total. Minimum viable training set for a RandomForest to generalize across tracks is ~10-15 tracks per raga with StratifiedGroupKFold.
-
----
-
-### 2.9 Audio Inference Pipeline (Live Mic Recording)
-
-**Buildspec promised:** Accept ≥30s audio, return raga + composition in ≤5s.
-
-**Current pipeline:**
-```
-MediaRecorder (browser, WebM/M4A/OGG) 
-→ POST /predict-audio (multipart)
-→ NamedTemporaryFile(suffix from Content-Type)
-→ librosa.load(tmp_path, duration=5.0) [validation check]
-→ asyncio run_in_executor → Demucs htdemucs --two-stems=vocals
-   output: demucs_dir/htdemucs/{stem}/vocals.wav
-→ librosa.load(vocals.wav, duration=60.0)
-→ librosa.pyin(fmin=60, fmax=1000)  [pitch extraction]
-→ tonic = median of voiced F0
-→ extract_features(frequencies, tonic) [480-dim]
-→ ThreadPoolExecutor: predict_raga + match_composition
-→ return {raga, matches, tonic, duration}
-```
-
-**Latency:** ~65s for 30s audio on CPU. This is **unacceptable for production UX** where the PRD specified ≤5s.
-
-**Root cause:** Demucs `htdemucs` on CPU with a single 30s audio clip takes ~60-90s. There is no faster drop-in.
-
-**Alternatives not yet explored:**
-- `demucs` model `mdx_extra_q` is smaller/faster but still CPU-bound
-- `spleeter` (older, much faster on CPU but lower vocal separation quality)
-- Running pitch extraction directly on the mixed audio with a robust multi-pitch estimator (skipping vocal separation entirely) — loses quality but gains 10× speed
-- GPU acceleration — not available on HF free tier
-
----
-
-## 3. Full Repository Map
-
-### Root-level files
-| File | Type | Description |
-|------|------|-------------|
-| `app.py` | Deprecated | Original Streamlit MVP. Hard-coded paths, requires local Saraga. Not deployed. |
-| `train_raga.py` | Production-adjacent | sklearn raga classifier trainer on CompMusic features. Hard-coded `data_home`. |
-| `raga_v2_pipeline.py` | Experimental | Shared Demucs+pyin feature extraction pipeline for retrain candidates. Not imported by production. |
-| `train_raga_v2_saraga.py` | Experimental | Real-audio retrain over Saraga Carnatic tracks. |
-| `train_raga_v2_archive.py` | Experimental | Real-audio retrain over archive.org concert downloads. |
-| `train_raga_v2_evaluate.py` | Experimental | Side-by-side evaluation of CompMusic vs real-audio retrain candidates. |
-| `download_concerts.py` | Production-adjacent | Downloads concert audio from archive.org based on shankarkrish.blog scrape. |
-| `build_catalog.py` | Production-adjacent | Builds composition_catalog.npz from Saraga pitch contours. |
-| `generate_meanings.py` | Production-adjacent | Batch Gemini meaning generator. Resumable. Requires `GEMINI_API_KEY`. |
-| `pyproject.toml` | **Broken** | `build-backend = "setuptools.backends._legacy:_Backend"` does not exist. `pip install -e .` fails. Hard-coded `requires-python = ">=3.10"`. |
-| `carnatify_prd.md` | Documentation | Original product requirements document. |
-| `DEPLOY.md` | Documentation | Backend + frontend deployment instructions. Some details outdated. |
-| `HANDOFF.md` | Documentation | This file. |
-| `README.md` | Documentation | Project overview. |
-| `.gitignore` | Config | Correctly ignores `saraga1.5_carnatic/`, `venv/`, `data/concert_audio/`, `data/raga_v2_cache/`. **Missing:** `RagaDataset/` is NOT gitignored and is committed (features-only, ~several hundred MB). |
-| `.env.local` | **Sensitive** | Gitignored via `.env*`. Contains `GEMINI_API_KEY`. Never committed. |
-| `Indian Art Music Raga Recognition Dataset (features).zip` | Data | Zip of RagaDataset — committed to git. Should be gitignored. |
-
-### `src/carnatify/`
-| File | Type | Description |
-|------|------|-------------|
-| `config.py` | Production | Constants: `MODELS_DIR`, `TOP_K_RESULTS`, confidence thresholds. Hard-coded path pointing to `../models/`. |
-| `schemas.py` | Production | Pydantic/dataclass models: `AudioFeatures`, `RagaPrediction`, `TalaPrediction`, `CompositionMatch`, `LyricsEntry`, `MeaningEntry`. |
-| `audio/feature_extractor.py` | Production | `FeatureExtractor` class — wraps pyin + tonic estimation. Used by `RagaClassifier.classify_audio()` (not the production sklearn path). |
-| `audio/catalog.py` | Production | `ReferenceCatalog` — composition catalog loader (used by the OOP `CompositionMatcher`, not the flat function that ships). |
-| `audio/data_loader.py` | Experimental | `SaragaLoader` — mirdata-based Saraga track loader. Local dataset required. |
-| `ml/raga_classifier.py` | Production | Both paths: `RagaClassifier` (PyTorch, unused in prod) + `predict_raga()` (sklearn, ships). |
-| `ml/raga_features.py` | Production | 480-dim feature extraction: histogram + bigrams + trigrams. Shared by train and inference. |
-| `ml/raga_model.py` | Unused | `RagaCNN`, `RagaTDNN` PyTorch model definitions. Not deployed. |
-| `ml/raga_dataset.py` | Unused | `RagaLabelEncoder`, `RagaDataset` for PyTorch training. Not deployed. |
-| `ml/raga_trainer.py` | Unused | PyTorch training loop. Not deployed. |
-| `ml/composition_matcher.py` | Production | Two implementations: `CompositionMatcher` (DTW, unused in prod) + `match_composition()` (L2 flat, ships). |
-| `ml/composition_evaluator.py` | Experimental | Top-1/top-3/MRR evaluator. |
-| `ml/contour_preprocessor.py` | Production | `ContourPreprocessor` — used by OOP `CompositionMatcher`, not the flat function. |
-| `ml/dtw_matcher.py` | Unused in prod | `DTWMatcher` — full DTW implementation, too slow for web use. |
-| `ml/tala_analyzer.py` | Broken | Beat-cycle analysis. Accuracy near 0% due to ground-truth annotation mismatch. |
-| `ml/tala_detector.py` | Broken | Wrapper around `TalaAnalyzer` with threshold. Not called in production. |
-| `ml/tala_validator.py` | Broken | Evaluation vs Saraga ground truth. Flawed comparison (subdivisions vs beats). |
-| `lyrics/pipeline.py` | Production | `LyricsCatalog` (ships) + `LyricsPipeline` (not called in prod). |
-| `lyrics/scraper.py` | Production-adjacent | Karnatik.com lyrics scraper. Correct but not run at scale. |
-| `lyrics/meaning_generator.py` | Production | Gemini 2.5 Flash meaning generator. |
-| `lyrics/database.py` | Production | SQLite operations for the lyrics catalog. |
-| `ui/app.py` | Deprecated | Streamlit UI, local paths, not deployed. |
-| `ui/pipeline.py` | Deprecated | Streamlit pipeline orchestrator. |
-
-### `backend/`
-| File | Type | Description |
-|------|------|-------------|
-| `main.py` | **Production** | FastAPI app. The live HF Space code. Keep in sync with `/tmp/hf-space/main.py`. |
-| `Dockerfile` | **Production** | Python 3.11-slim, ffmpeg, torch==2.5.1, torchaudio==2.5.1 (pinned), uvicorn on port 7860. |
-| `requirements.txt` | **Production** | `torch>=2.2,<2.6`, `demucs>=4.0.0`, `python-multipart`, all deps. |
-| `build_space.sh` | Production-adjacent | Assembles `/tmp/hf-space/` from `src/`, `models/`, `data/`. Run before HF push. |
-| `precompute_tracks.py` | Production-adjacent | Precomputes `tracks_pitch.npz` + `tracks_meta.json` from local Saraga data. |
-| `data/tracks_pitch.npz` | **Data — in git** | 197-track precomputed pitch bundle. 19 MB. Tracked by git-lfs in HF Space. |
-| `data/tracks_meta.json` | **Data — in git** | 197 track metadata entries. Small JSON. |
-| `data/lyrics.db` | **Data — in git** | 3,252 title entries, 8 meanings. Ephemeral on HF — rebuilt from this copy on each Docker rebuild. |
-| `models/raga_classifier.pkl` | **Data — in git** | 28 MB RandomForest. Production model. |
-| `models/raga_label_encoder.pkl` | **Data — in git** | 40 raga classes. LabelEncoder. |
-| `models/composition_catalog.npz` | **Data — in git** | 197 × 500 reference contour matrix. |
-| `models/composition_catalog_meta.json` | **Data — in git** | Track titles + IDs for catalog. |
-| `src/` | **Gitignored** | Assembled copy of `src/carnatify/`. Generated by `build_space.sh`. Not committed here. |
-
-### `models/candidates/`
-| File | Type | Description |
-|------|------|-------------|
-| `raga_classifier_compmusic_v2_reference.pkl` | Experimental | 77.2% CV, CompMusic pitch + augmentation. Does not ship. |
-| `raga_classifier_saraga_v2_realaudio.pkl` | Experimental | 5.0% CV, real audio via Demucs+pyin. Does not ship. |
-| `raga_label_encoder_compmusic_v2_reference.pkl` | Experimental | 40-class encoder matching above. |
-| `raga_label_encoder_saraga_v2_realaudio.pkl` | Experimental | 43-class encoder for Saraga audio model. |
-
-### `frontend/`
-| File | Type | Description |
-|------|------|-------------|
-| `app/page.tsx` | Production | Landing page — scroll-driven SVG waveform hero, brand palette, CTA. |
-| `app/layout.tsx` | Production | Root layout, Crimson Pro serif font, global metadata. |
-| `app/globals.css` | Production | Tailwind + custom animations (`wave-pulse`), brand CSS vars. |
-| `app/demo/page.tsx` | Production | Two-tab demo UI. Both tabs share results panels. ~400 lines. |
-| `components/WaveSkeleton.tsx` | Production | Loading animation, 40 animated bars, accepts `label: string` prop. |
-| `components/ScoreBar.tsx` | Production | Animated confidence bar for raga predictions. |
-| `components/WaveformHero.tsx` | Production | Scroll-driven animated waveform SVG. |
-| `components/Nav.tsx` | Production | Site navigation. |
-| `components/Reveal.tsx` | Production | Scroll-reveal animation wrapper. |
-| `components/HowItWorks.tsx` | Production | "How It Works" landing section. |
-| `lib/api.ts` | Production | Typed fetch wrappers: `getTracks`, `predict`, `predictAudio`, `getMeaning`. |
-| `next.config.mjs` | Production | Next.js config. |
-| `tailwind.config.ts` | Production | Tailwind setup. |
-| `package.json` | Production | Next.js 14, Phosphor icons, React 18. |
-| `.vercel/project.json` | Config | `projectId: prj_nsJUj8BBDJURSLy7zKP4baziYEtt`. Used by `vercel --prod`. |
-
-### Root-level data
-| File | Type | Description |
-|------|------|-------------|
-| `data/lyrics.db` | Data | Source copy of the lyrics DB (3,252 titles, 8 meanings). `backend/data/lyrics.db` is a copy. |
-| `data/scraped_compositions.json` | Data | 3,698 concert records from shankarkrish.blog. Has `raga_canonical` field (null for OOV). |
-| `data/raga_aliases.json` | Data | 958 raw raga spellings → canonical form map. 274 null (OOV). |
-| `data/concert_audio/` | **Gitignored** | 224 MP3 files from archive.org, organized by raga name. Not committed. |
-| `data/raga_v2_cache/` | **Gitignored** | Cached Demucs+pyin features from retrain pipeline. |
-| `RagaDataset/` | Data — **should be gitignored** | CompMusic feature files only (audio restricted). In git. Large. |
-| `Indian Art Music Raga Recognition Dataset (features).zip` | Data — **should be gitignored** | Zip of above. In git. |
-| `*.png` (01–13) | Screenshots | Playwright / manual screenshots from testing sessions. Can be deleted. |
-
-### `/tmp/hf-space/` (not in git repo)
-The live HF Space is assembled in `/tmp/hf-space/` on the dev machine. Its git remote points to `https://huggingface.co/spaces/shyamravidath/carnatify`. This directory contains the bundled production deployment: `main.py`, `Dockerfile`, `requirements.txt`, `src/`, `models/`, `data/`, plus the HF Space `README.md` header. **Always push from here, not from `backend/`.** After editing `backend/main.py`, mirror the change manually to `/tmp/hf-space/main.py` and push.
-
----
-
-## 4. Known Bugs & Loopholes
-
-### Bug 1 — Raga classifier domain mismatch (BLOCKS PRODUCTION)
-**Description:** The production `raga_classifier.pkl` was trained on CompMusic pre-extracted MELODIA pitch features. Live inference runs `librosa.pyin` on Demucs-separated vocals. These are fundamentally different pitch representations.  
-**Root cause:** CompMusic only provides pre-extracted features (not audio). Training was done on what was available. Inference uses a modern, correct pitch extraction pipeline.  
-**Severity:** Blocks production accuracy. The classifier sees a completely different feature distribution at inference time than it was trained on.  
-**What was tried:** (1) CompMusic `.pitch_post_processed` + augmentation → 77.2% (no improvement). (2) Real-audio Saraga + archive.org → 5% (data sparsity). (3) Email to mtg-info@upf.edu for CompMusic audio — not yet sent.  
-**Fix:** Get CompMusic audio (mtg-info@upf.edu), run Demucs+pyin over all 477 tracks, retrain. Expected result: 77%+ accuracy on a genuinely pipeline-matched training set. Use `train_raga_v2_evaluate.py` structure with `raga_v2_pipeline.py`.
-
-### Bug 2 — Tala detector low accuracy (blocks tala feature) — INVESTIGATED 2026-07-01, feature stays deferred
-**Description:** Measured 16.5% accuracy (analyzer as shipped) / 32.9% (improved octave-folded variant) over 170 labeled Saraga tracks, vs a 72% always-guess-Adi baseline. See section 2.2 for full numbers.  
-**Root cause:** Two-fold. (1) A diacritics bug in `normalize_tala_name` ("Ādi" ≠ "adi") made the validator score everything wrong — fixed. (2) The estimator is fundamentally weak: inter-beat-interval autocorrelation finds sub-periods of the true cycle (median 0.51×, verified against `.sama-manual.txt` cycle timestamps), and beat tracking makes octave errors on concert audio. The earlier theory (ground truth encodes aksharas, 8 vs 32) was wrong — the validator compares names, not counts.  
-**Severity:** Blocks tala detection. Feature remains absent from the API and web UI — correctly so.  
-**What was tried:** Diacritics fix; honest evaluation (`evaluate_tala.py`); onset-envelope autocorrelation with octave-folded beat classes (32.9%, confidence margin uninformative).  
-**Fix (future):** Supervised meter tracking trained on the sama annotations (132 tracks have them). Do not ship any tala output until it beats the 72% majority baseline convincingly.
-
-### Bug 3 — Composition matcher data ceiling (degrades quality)
-**Description:** 16% top-1 accuracy on compositions with ≥2 renditions in the 197-track catalog.  
-**Root cause:** Not a code bug. The catalog has one or very few reference renditions per composition. L2 distance matching requires the query to resemble the indexed recording closely.  
-**Severity:** Degrades quality significantly. A catalog with 1 rendition per composition cannot generalize across artists.  
-**What was tried:** Nothing. The ceiling was documented but not addressed.  
-**Fix:** (1) Expand the catalog: download more Saraga tracks (Saraga Audiovisual dataset has additional concert recordings), add archive.org concerts. (2) Multi-rendition averaging: store the mean contour across multiple renditions per composition. (3) Replace L2 with subsequence DTW for partial-query robustness.
-
-### Bug 4 — Demucs CPU latency (blocks production UX)
-**Description:** `/predict-audio` takes 60-90s for a 30s audio clip on CPU. PRD requires ≤5s.  
-**Root cause:** `htdemucs` model is a 1D convolutional U-Net with encoder-decoder architecture. CPU inference on a full-resolution audio segment is inherently slow.  
-**Severity:** Blocks production. 60-90s wait is unacceptable for a mobile app use case.  
-**What was tried:** Nothing — accepted as a known constraint of the free HF tier.  
-**Fix options (in order of impact):**  
-  (a) GPU-enabled HF Space ($0.60/hr on A10G) — 10-20× speedup, estimated 5-10s  
-  (b) Skip Demucs entirely: run pyin directly on the mixed audio with higher `fmin`/`fmax` bounds and the vocal-specific model; loses quality but gains 60s  
-  (c) Use `spleeter:2stems` (older, CPU-faster, lower quality)  
-  (d) Trim input to 15s before Demucs (currently 60s max) — halves latency
-
-### Bug 5 — Confidence scores systematically low and uncalibrated
-**Description:** Top raga prediction confidence is 10-22% even for correct predictions. This is shown to users as a percentage bar, which looks like the app is uncertain when it's actually correct.  
-**Root cause:** RandomForest `predict_proba()` in a 40-class problem where training data is limited produces well-spread probabilities. This is a consequence of the data volume, not a bug in the code.  
-**Severity:** UX degradation. Users may distrust results when they're correct.  
-**Fix:** Calibrate the RF probabilities using `sklearn.calibration.CalibratedClassifierCV` with `cv="prefit"`. Or don't show raw confidence — show ordinal rank ("most likely", "also possible") instead.
-
-### Bug 6 — `pyproject.toml` broken (`pip install -e .` fails)
-**Description:** `build-backend = "setuptools.backends._legacy:_Backend"` — this class does not exist. Any agent attempting `pip install -e .` will fail.  
-**Root cause:** An agent auto-generated this field incorrectly.  
-**Severity:** Breaks developer setup. Production code doesn't use `pip install -e .` (it uses `sys.path.insert` instead), so this only affects local dev.  
-**Fix:** Change to `build-backend = "setuptools.build_meta"`.
-
-### Bug 7 — RagaDataset and zip committed to git (bloats repo)
-**Description:** `RagaDataset/` (CompMusic feature files) and `Indian Art Music Raga Recognition Dataset (features).zip` are tracked in git, bloating the repo history.  
-**Root cause:** Missing from `.gitignore` when originally added.  
-**Fix:** Add to `.gitignore`, then `git rm --cached -r RagaDataset/ "Indian Art Music Raga Recognition Dataset (features).zip"` + commit.
-
-### Bug 8 — No rate limiting on `/predict-audio`
-**Description:** Any user can POST unlimited audio files. Each triggers a ~60-90s Demucs job on CPU. Two concurrent requests will saturate the free tier (2 vCPU, 16 GB RAM) and likely OOM.  
-**Root cause:** Not implemented.  
-**Severity:** Blocks public launch. One malicious user can take down the Space.  
-**Fix:** Add `slowapi` rate limiting to FastAPI (e.g., 2 requests/minute per IP). Also add a request queue or `asyncio.Semaphore(1)` to prevent concurrent Demucs runs.
-
-### Bug 9 — HF Space `FRONTEND_ORIGIN` CORS set to `"*"` by default
-**Description:** If `FRONTEND_ORIGIN` env var is not set, CORS allows all origins. The HF Space env var is set, so in practice this is fine, but the fallback is insecure.  
-**Root cause:** `_FRONTEND_ORIGIN = os.environ.get("FRONTEND_ORIGIN", "*")` in `backend/main.py`.  
-**Fix:** Change fallback to `"https://carnatify.vercel.app"` or remove the fallback entirely and raise at startup if not set.
-
-### Bug 10 — Frontend has no timeout or cold-start UX
-**Description:** The first `/predict-audio` request after a cold HF Space start triggers htdemucs model download (~80 MB) + container init. Total time: 2-4 minutes. The frontend has no timeout — the fetch will hang until the browser's default network timeout.  
-**Root cause:** Not implemented.  
-**Fix:** Add `AbortController` with a 5-minute timeout in `predictAudio()`. Add a "warming up the model…" message if the request takes >30s with no response.
-
-### Bug 11 — `lyrics.db` in git contains scraped data (license unclear)
-**Description:** `data/lyrics.db` and `backend/data/lyrics.db` are committed to git and contain 3,252 title/composer entries seeded from Saraga Carnatic metadata. The Saraga data is under CC-BY-NC-SA. The generated meanings are LLM-generated from the title alone (no scraped text), so those should be fine.  
-**Severity:** Legal uncertainty for public release.  
-**Fix:** Verify Saraga's CC-BY-NC-SA allows redistribution of the metadata (titles, composer names, raga names) — these are likely factual/public domain. Add attribution. The scraper targets karnatik.com (`public domain` claimed on the site) but the bulk scrape was never run, so no scraped content is in the DB.
-
----
-
-## 5. Data Assets & Their Status
-
-| Asset | Location | Size | In git? | Status |
-|-------|----------|------|---------|--------|
-| `saraga1.5_carnatic/` | `/Users/shyamravidath/carnatify/saraga1.5_carnatic/` | ~13.5 GB | No (gitignored) | 249 tracks, 54 with vocal pitch + raga labels. Access via mirdata `saraga_carnatic`. |
-| `RagaDataset/Carnatic/features/` | repo root | ~few hundred MB | **Yes (should be gitignored)** | CompMusic pre-extracted features only. 477 tracks, 40 ragas. Audio is RESTRICTED. |
-| `data/scraped_compositions.json` | repo root | ~1 MB | Yes | 3,698 concert records from shankarkrish.blog. `raga_canonical` null for 689 OOV. 101 unique canonical ragas. |
-| `data/raga_aliases.json` | repo root | ~80 KB | Yes | 958 raw raga spellings → canonical. 274 null (OOV). Hand-curated. |
-| `data/lyrics.db` | repo root | 260 KB | Yes | 3,252 titles, 8 meanings pre-generated. Schema: title (PK), composer, raga, language, lyrics_original, meaning_en, meaning_generated_at. |
-| `data/concert_audio/` | repo root | ~3-5 GB estimated | No (gitignored) | 224 MP3s from archive.org across 21 raga directories. |
-| `data/raga_v2_cache/` | repo root | variable | No (gitignored) | Demucs+pyin feature cache from retrain experiments. |
-| `backend/data/tracks_pitch.npz` | `backend/data/` | 19 MB | Yes (git-lfs in HF Space) | 197-track precomputed pitch bundle. Key `t0`…`t196`, mapping in `tracks_meta.json`. |
-| `backend/data/tracks_meta.json` | `backend/data/` | 40 KB | Yes | 197 entries: `{track_id, key, title, tonic, raga}`. |
-| `backend/data/lyrics.db` | `backend/data/` | 260 KB | Yes | Copy of `data/lyrics.db`. Committed so Docker image has meanings at startup. Ephemeral at runtime. |
-| `models/raga_classifier.pkl` | `models/` + `backend/models/` | 28 MB | Yes | RandomForest, 480-dim features, 40 ragas. 77.8% CV on CompMusic features. Underperforms on live audio due to domain mismatch. |
-| `models/raga_label_encoder.pkl` | `models/` + `backend/models/` | 3 KB | Yes | `sklearn.preprocessing.LabelEncoder`, 40 classes. |
-| `models/composition_catalog.npz` | `models/` + `backend/models/` | ~400 KB | Yes | 197 × 500 float32 reference contours. |
-| `models/composition_catalog_meta.json` | `models/` + `backend/models/` | 8 KB | Yes | Titles + track_ids for catalog. |
-| `models/candidates/raga_classifier_compmusic_v2_reference.pkl` | `models/candidates/` | 48 MB | Yes | Retrain candidate A (77.2%). Does not ship. |
-| `models/candidates/raga_classifier_saraga_v2_realaudio.pkl` | `models/candidates/` | 37 MB | Yes | Retrain candidate B (5.0%). Does not ship. |
-
-**CompMusic audio access:** The `RagaDataset/Carnatic/features/` directory contains `.pitch`, `.pitchSilIntrpPP`, `.tonic`, `.taniSegKNN` files for 477 tracks across 40 ragas. Audio files (.wav/.mp3) are **not included** and require a manual access request to: `mtg-info@upf.edu` (Music Technology Group, Universitat Pompeu Fabra). This is the highest-priority data acquisition action — getting this audio would unblock the correct retrain.
-
----
-
-## 6. Infrastructure & Deployment
-
-### Architecture
-
-```
-User Browser
-    │
-    ├── GET carnatify.vercel.app/          → Vercel (Next.js SSR)
-    └── GET carnatify.vercel.app/demo      → Vercel (Next.js client)
-            │
-            ├── GET/POST shyamravidath-carnatify.hf.space/*
-            └── (Gemini API is called server-side from HF Space, never from browser)
-```
-
-### Frontend (Vercel)
-- **URL:** `https://carnatify.vercel.app`
-- **Project ID:** `prj_nsJUj8BBDJURSLy7zKP4baziYEtt`
-- **Org ID:** `team_gWZCFaSG1F9xc0I06W4FNms8`
-- **Framework:** Next.js 14 (auto-detected)
-- **Root directory:** `frontend/`
-- **Deploy trigger:** `npx vercel --prod` from `frontend/` directory. **GitHub push does NOT auto-deploy** (GitHub integration watches main but the project was initially misconfigured as Python SDK — even after fixing, the integration has been unreliable). Always deploy manually via CLI.
-- **Environment variable:** `NEXT_PUBLIC_API_BASE = https://shyamravidath-carnatify.hf.space`
-- **`.vercel/project.json`:** Lives at `frontend/.vercel/project.json` (and a duplicate at the repo root `/.vercel/project.json` from an earlier misconfiguration — ignore the root one).
-
-### Backend (HuggingFace Spaces)
-- **URL:** `https://shyamravidath-carnatify.hf.space`
-- **Space:** `shyamravidath/carnatify` on HuggingFace
-- **SDK:** Docker
-- **Hardware:** CPU basic — 2 vCPU, 16 GB RAM (free tier)
-- **Git remote:** `https://huggingface.co/spaces/shyamravidath/carnatify` (stored in `/tmp/hf-space/.git/config` on the dev machine; credentials in `.git/config`, not in URL)
-- **HF Space secrets set:**
-  - `GEMINI_API_KEY`: Gemini API key for `/meaning/` endpoint
-  - `FRONTEND_ORIGIN`: `https://carnatify.vercel.app` (CORS)
-- **Push pattern:** Edit `backend/main.py` → mirror change to `/tmp/hf-space/main.py` → `cd /tmp/hf-space && git add . && git commit -m "..." && git push`. Code-only changes rebuild in ~2 minutes. Dockerfile/requirements changes rebuild in ~10 minutes.
-- **First-request latency:** htdemucs model (~80 MB) downloads from torchaudio hub on first `/predict-audio` call after cold start. Allow 2-4 minutes.
-- **Binary files in HF Space git:** `models/raga_classifier.pkl` (28 MB), `backend/data/tracks_pitch.npz` (19 MB), `models/composition_catalog.npz` are tracked with Git LFS in the HF Space repo. Do not attempt to push these without LFS set up.
-
-### HF Space deploy: full workflow from scratch (if `/tmp/hf-space/` is lost)
 ```bash
-# 1. Clone the HF Space (credentials in HF write token)
-git clone https://huggingface.co/spaces/shyamravidath/carnatify /tmp/hf-space
-
-# 2. Assemble backend into /tmp/hf-space (copies src/, models/, data/)
-cd /Users/shyamravidath/carnatify && bash backend/build_space.sh
-
-# 3. Copy assembled files to Space
-cp -r backend/* backend/.dockerignore /tmp/hf-space/
-
-# 4. Commit and push
-cd /tmp/hf-space && git add -A && git commit -m "redeploy" && git push
+[CARNATIFY_ASR_BACKEND=hybrid|hybrid_stem] \
+  venv_train/bin/python identify_clip.py ~/sung_tests --no-raga --cache-v2
 ```
 
-### Local development
+`--cache-v2` **never transcribes on a miss**; any scored run containing a cache
+miss is invalid. Cache keys are `sha256(audio)[:24] + ':' + config_id`.
+
+`METRIC_CONTRACT.md` requires: precision-at-coverage as the primary
+presentation-safety metric, in-catalog top-1/top-5, **OOC bluff rate reported
+separately**, eligibility strata, assisted recovery, and no product green light
+from a same-corpus benchmark.
+
+### 2.2 Duration probe — recall arm: **cut**
+
+`scripts/duration_probe_cut.py --n 60 --arm anchored`, 2026-07-29. Dry run at
+`--n 271` first reconciled exactly with pre-registration §1 (923 distinct title
+keys / 505 matched-but-no-lyrics / **271 RESOLVED** / 117 too short / 30 no
+registry match), so the pool has not drifted.
+
+**300 windows, zero cut failures**, 11.0 h unique audio, in
+`data/duration_probe/anchored/` with sidecar `truth_anchored.json`. Verified: 60
+distinct titles × exactly 5 windows (30/60/90/180/300s), identical title sets at
+every duration, one anchor per title, bijection with the sidecar, none empty, all
+16 kHz mono. Nesting checked at sample level — the 30s window is an exact PCM
+prefix of the 300s window. (A byte-level check on the files fails only because
+ffmpeg WAV headers differ in length; the samples are identical.)
+
+All 300 windows carry `audio_sha256` (`scripts/stamp_negative_shas.py --arm
+anchored`), and the recall validity gate re-hashes them at read time exactly as
+the negative gate does.
+
+### 2.3 Duration probe — negative arm: labeled, staged, **not yet transcribed**
+
+140 WAVs (70 items × 30s and 300s) in `data/duration_probe/negatives/`, sidecar
+`truth_negatives.json`, both sweeps labeled and parsed.
+
+| stratum | count | role |
+|---|---:|---|
+| `no-sahitya` | **49** | the only gating stratum |
+| `sung_unidentified` | 10 | sensitivity, never gates |
+| `in-catalog` | 9 | feeds no readout, but must still be transcribed (§2.6) |
+| `unknown` | 2 | worst-case sensitivity |
+
+Gating stratum by source: free-form 25, opening 20, unidentified 4, over 49
+distinct clusters. Sheet 2 caught `neg053` and `neg020`, whose singing lived
+entirely in the 150s sheet 1 never played — 4% of the single-sweep stratum was
+contaminated.
+
+**The OOC stratum is empty, and that is a finding, not a sampling failure.** Of
+1,238 `concert_audio` recordings not one of the 11 unresolvable names a
+composition, and the registry was itself partly built from these filenames.
+**OOC abstention at 300s is unmeasurable from assets on disk.** Do not paper
+over this by loosening the OOC definition — that is the defect that killed the
+v1 arm.
+
+### 2.4 The gate: rule A, applied
+
+`DURATION_PROBE_PREREGISTRATION.md` §6b, frozen by Deepti 2026-07-29 and now
+**applied by the scorer** (it previously computed rule A and applied the pooled
+rule):
+
+> SAFE requires the one-sided exact 95% upper bound below +15pp for **every
+> source with n ≥ 20**.
+
+Operationally: zero new bluffs in free-form (n=25, 11.3pp at b=0, 17.6pp at b=1)
+and zero in opening (n=20, 13.9pp / 21.6pp). `unidentified` (n=4) reports
+without gating. The pooled bound (5.9pp at b=0 on n=49) is still computed and
+printed, labelled REPORTED, NOT GATING. The disagreement flag now fires when the
+pooled bound *would* have passed a run rule A refuses — the case the gate exists
+for.
+
+`validate_negatives()` additionally refuses a run where a registered gating
+source has gone missing, from the sidecar or from the results
+(`gating_source_counts`, stamped by `parse_negative_labels.py`). Rule A is a
+conjunction over whatever sources come back, so a lost source would otherwise
+have dropped out silently and the survivors would have granted a SAFE the design
+never authorised.
+
+**Open finding for Deepti, not decided here.** The unknown-item sensitivity is
+now also reported under the applied gate, and **it does not survive it**. The
+two `unknown` items are one free-form and one opening, so the worst case moves
+each gating source to b=1: free-form 1/26 → 17.0pp, opening 1/21 → 20.7pp, NOT
+safe — where the pooled worst case (2/51 → 11.8pp) reads "still safe". Rule A
+has no margin for the two unlabelable items. This is a property of the frozen
+design, not a defect, and both numbers belong in any quoted result.
+
+### 2.5 The runners
+
+- `scripts/build_probe_colab_bundle.py` — verifies every window against its
+  sidecar, then packs `probe_code.zip` (9 MB), `probe_anchored.zip` (1.27 GB),
+  `probe_negatives.zip` (0.74 GB) into `~/carnatify_probe_bundle`. **Already
+  built and verified; the zips are on disk and were uploaded to Drive.** WAVs
+  ship as bytes because re-cutting elsewhere changes the hash, misses the cache,
+  and breaks the label↔audio binding.
+- `colab_duration_probe.py` — resumable Colab runner. Verifies SHAs before
+  spending GPU, transcribes in symlinked chunks through
+  `scripts/build_asr_cache_v2.py`, checkpoints the cache to Drive after every
+  chunk, then runs `identify_clip` over both arms and refuses on any cache miss.
+- `aws_duration_probe.py` — same loop for an EC2 GPU box: no Drive, S3
+  checkpointing, per-chunk `run_log.json` (so an interrupted session still
+  leaves a truthful record), and it stamps which windows came off which GPU.
+- `scripts/merge_asr_cache_v2.py` — merges the returned cache into
+  `data/asr_cache_v2.json`, refusing any key that exists in both with different
+  content.
+
+### 2.6 GPU RUN — **COMPLETE** (superseded, read this first)
+
+**Corrected 2026-07-30, later the same day.** The table below described a
+mid-session state that no longer holds. Deepti resumed the same notebook and it
+ran to `anchored: fully cached` and `negatives: fully cached`. **All 440 windows
+are transcribed and merged into `data/asr_cache_v2.json` (546 entries = 106
+pre-existing + 300 + 140). No further GPU spend is required, and §5 below —
+"finish the run on AWS" — is moot.**
+
+The Colab session did end in an error, but not for want of GPU: step 5/6 died on
+`ModuleNotFoundError: No module named 'rapidfuzz'`, a lyrics-matcher dependency
+absent from the Colab image. Step 5/6 is `identify_clip --cache-v2`, which never
+transcribes, so it was finished on the laptop instead. Both arms are inferred:
+recall 300 rows / 0 cache misses; negative arm rows recorded in `AGENT_LOG.md`.
+
+Superseded snapshot, kept for the audit trail:
+
+| arm | cached | remaining |
+|---|---:|---|
+| recall (`anchored`) | ~~259 / 300~~ → 300/300 | — |
+| negative (`negatives`) | ~~0 / 140~~ → 140/140 | — |
+
+The Drive checkpoint `MyDrive/carnatify/duration_probe/out/asr_cache_v2.json` is
+the whole GPU spend and has been merged locally. Keep a copy anyway.
+
+Measured throughput, wall time per second of audio, all 7 passes plus Demucs:
+**T4 1.56 s/s**, the later GPU (L4-class) **0.86 s/s**. So the honest total bill
+is ~27 h on a T4 and ~15 h on an L4 — my original 10-20 h estimate assumed
+openai-whisper decoded faster than it does at fp32.
+
+**Mixed hardware — the device map IS now established** (resolved 2026-07-30 from
+all 82 Google Drive revisions of the checkpoint; see
+`data/duration_probe/DEVICE_MAP.md`). Three devices: T4 windows 1-80, L4-class
+81-259, A100 260-300 plus all 140 negatives. **`probe0051` is the only straddler
+and was excluded; `probe0016` is NOT one — that claim is refuted.** The probe has
+been scored: recall **KILL**, safety NOT ESTABLISHED. The paragraph below records
+why the earlier text could not be trusted, and is kept for the audit trail.
+
+~~The device map is NOT established.~~ The earlier text here asserted both "windows 1-80 (`probe0000`-`probe0015`) came off a Colab T4,
+81-259 off the faster GPU" and "`probe0016` is split, d030-d180 on the T4".
+`probe0016` is windows 81-85, so those two claims cannot both be true. The
+checkpoint chunk is 10 windows and the cache is written after each chunk, so a
+clean stop lands on a multiple of 10 — and 259 does not. **The straddler set is
+therefore not derivable from the stop index, and none of the old numbers should
+be propagated.** Under `sorted(windows.items())` chunking, `probe0051` splits
+across the 259 interruption exactly as `probe0016` splits across the device
+boundary, so there are at least two candidates.
+
+`colab_duration_probe.py` writes `run_log.json` at L316, *after* step 5/6 — the
+step that died on `rapidfuzz`. **The file was never written and is not in
+Drive.** The run's only provenance record was scheduled last. The notebook
+output from both sessions is now the primary record; preserve it.
+
+**The prescribed fix — drop the four `probe0016` cache entries and let them
+re-transcribe — is rejected** (`DURATION_PROBE_PREREGISTRATION.md` §5b). It was
+correct while the job still had a GPU; re-transcribing now happens on the laptop
+and would put those windows on a third device *and* on the unpatched CPU-Demucs
+path, trading a within-title confound for a worse between-title one.
+
+What replaces it is frozen in pre-registration **§5b / §5b.1**: a 3-window
+device calibration on the laptop, drawn from `probe0016` and `probe0051`, mix
+hypotheses compared verbatim; identical → score as-is at the registered n;
+differs → establish the map from surviving records and exclude every straddler;
+differs with no recoverable map → the recall arm is reported **invalid**, a lost
+measurement rather than a KILL. `scripts/duration_probe_device_cal.py` runs it
+and writes `data/duration_probe/DEVICE_CALIBRATION.md`.
+
+Measured throughput (below) remains the only quantitative device evidence, and
+is what a map would have to be reconstructed from.
+
+### 2.7 The GPU bill is 122 whisper-hours, not 116
+
+`parse_negative_labels.py` bills 61 items (5.6 h, ~39 whisper-hours) because the
+9 `in-catalog` negatives feed no registered readout. **They must still be
+transcribed**: `validate_negatives` demands an exact bijection between the
+negative sidecar and the result rows, so a run that skips them is invalid rather
+than cheaper. The parser now prints both numbers.
+
+### 2.8 Registry hygiene (separate lane, complete, unwired)
+
+`scripts/registry_junk_filter.py` + `data/registry_junk_blocklist.json`: 52
+flagged rows (19 `drop`, 33 `review`) behind a hard evidence gate. A/B'd on the
+wild set: top-1/top-5/OOC all unchanged, answered 47 → 46 — it deletes exactly
+one wrong answer. Deepti-gated; wiring it is a load-time merge in `load_targets`,
+never a registry rebuild (ids are assigned by enumeration order).
+
+### 2.9 Tests
+
 ```bash
-# Backend (terminal 1)
-cd /Users/shyamravidath/carnatify
-source venv/bin/activate  # or venv_train for training dependencies
-cd backend && uvicorn main:app --port 8077 --reload
-
-# Frontend (terminal 2)
-cd /Users/shyamravidath/carnatify/frontend
-NEXT_PUBLIC_API_BASE=http://127.0.0.1:8077 npm run dev
+venv_train/bin/python -m pytest tests/test_clip_policy.py \
+    tests/test_registry_junk.py tests/test_negative_arm.py -q
+# 95 passed, 1 xfailed
 ```
 
----
-
-## 7. What the Next Agent Must Do (Prioritized)
-
-### Requires human (Deepti) action first — do not start without confirmation
-
-**H1. Email CompMusic for audio access** ← **HIGHEST PRIORITY UNBLOCKED ACTION FOR HUMAN**  
-Email `mtg-info@upf.edu` requesting audio files for the Carnatic subset of the CompMusic Raga Recognition Dataset. Subject: "Audio access request — CompMusic Carnatic Raga dataset for ML research". Note the features-only version (`RagaDataset/Carnatic/`) is already downloaded. This is the only path to a properly matched training set without relying on Saraga/archive.org data.
-
-**H2. Confirm Gemini API quota before running generate_meanings.py**  
-The batch script needs ~54 hours of continuous generation at 10 RPM free tier to cover 3,244 remaining titles (at 7s pacing = ~8.6 requests/minute). Check quota at https://aistudio.google.com — the key is in `.env.local`. If quota is available: `GEMINI_API_KEY=<key> python generate_meanings.py 3244` from the repo root.
-
-**H3. Decide on HF Space hardware tier**  
-Production UX requires ≤10s inference. GPU (A10G at ~$0.60/hr) would bring Demucs from 65s to ~5s. The free CPU tier is sufficient for a demo but not a public launch. This is a cost/priority decision only the owner can make.
+Never run bare `pytest tests/` — `test_audio.py`, `test_composition.py`,
+`test_lyrics.py`, `test_pipeline.py`, `test_raga.py` and `test_tala.py` import a
+`carnatify` package that does not exist and fail at collection.
 
 ---
 
-### Can start immediately (parallelizable agent workstreams)
+## 3. Files actively being edited
 
-**Agent A — Fix pyproject.toml and developer setup (30 min, trivial)**  
-Fix: `build-backend = "setuptools.build_meta"` in `pyproject.toml`. Verify `pip install -e .` works in a clean venv. Add missing packages to `[project.dependencies]` if needed (demucs, google-generativeai, fastapi are missing — they're in `backend/requirements.txt` but not `pyproject.toml`). Update `requires-python` to `>=3.11`.
+**Written this session (all new, all untracked):**
 
-**Agent B — Fix tala detector (2-4 hours)**  
-Step 1: Read the Saraga annotation format for beats. The beat annotations are in `saraga1.5_carnatic/<track>/annotations/` — open a few `.beats` files to understand the format (are they beat times? beat numbers? aksharas?). Step 2: Correct `tala_validator.py` to compare at the correct granularity. Step 3: Run validation against the subset of Saraga tracks that have tala annotations. Report actual accuracy before deploying. Step 4: If accuracy is ≥70%, add the tala field to the `/predict-audio` response and `/predict` response in `backend/main.py`, and display it in the frontend results panel.
+- `colab_duration_probe.py`, `aws_duration_probe.py` — the two runners
+- `scripts/build_probe_colab_bundle.py` — bundle packer + SHA verifier
+- `scripts/merge_asr_cache_v2.py` — conflict-refusing cache merge
+- `data/duration_probe/anchored/` — 300 recall windows
+- `data/duration_probe/truth_anchored.json` — recall sidecar, SHA-stamped
 
-**Agent C — Rate limiting on `/predict-audio` (2 hours)**  
-Add `slowapi` to `backend/requirements.txt`. Wrap the `predict_audio` FastAPI endpoint with a rate limiter (2 requests/IP/minute). Also add `asyncio.Semaphore(1)` to prevent concurrent Demucs runs (a single simultaneous request can OOM on 2 vCPU). Mirror changes to `/tmp/hf-space/` and push.
+**Modified this session:**
 
-**Agent D — Frontend hardening (4-6 hours)**  
-Issues to fix:  
-(1) Add `AbortController` with 5-minute timeout to `predictAudio()` in `frontend/lib/api.ts`  
-(2) Add a "Model is warming up (this takes ~2 minutes on first request)…" message if the request hasn't returned in 30s  
-(3) Test cross-browser: Chrome (WebM), Safari (M4A), Firefox (OGG) — at minimum verify the content-type strings that each browser sends and confirm they match the suffix mapping in `backend/main.py`  
-(4) Add a minimum duration check in the frontend (warn if recording < 30s before submitting)  
-(5) Test on iOS Safari — the `getUserMedia` permission flow is different, and `MediaRecorder` may not be available in older Safari  
-After fixes, deploy: `cd frontend && npx vercel --prod`
+- `scripts/duration_probe_score.py` — rule A applied, pooled demoted to
+  reported-not-gating, missing-gating-source suppression, per-source unknown
+  sensitivity, shared `_verify_audio()` extended to the recall arm
+- `scripts/parse_negative_labels.py` — stamps `gating_source_counts`, prints the
+  bijection-inclusive GPU bill
+- `scripts/stamp_negative_shas.py` — `--arm {negatives,anchored,prefix}`
+- `scripts/build_negative_arm.py`, `scripts/build_negative_complement.py` —
+  labeling-sheet swaram definition corrected (templates only; neither re-run)
+- `tests/test_negative_arm.py` — 40 → 48 tests
+- `HANDOFF_SESSION_0728.md` §5 — swaram lesson added to the graveyard
+- `AGENT_LOG.md` — appended
 
-**Agent E — gitignore cleanup (30 min)**  
-Add to `.gitignore`: `RagaDataset/`, `"Indian Art Music Raga Recognition Dataset (features).zip"`, `__MACOSX/`, `*.png` (screenshots at root), `models/candidates/`. Run `git rm --cached -r` for each. Commit. This reduces repo size.
+**Do not touch:**
 
-**Agent F — CORS and security hardening (1 hour)**  
-(1) In `backend/main.py`, change CORS fallback from `"*"` to a deliberate choice (raise `RuntimeError` at startup if `FRONTEND_ORIGIN` is unset). (2) Add input validation: max file size already enforced (30 MB); add min duration check at decode time (already present); add content-type allowlist (reject `application/octet-stream` with no suffix mapping). (3) Mirror to `/tmp/hf-space/` and push.
-
-**Agent G — Meanings batch (conditional on human H2)**  
-After Deepti confirms Gemini quota is available: `GEMINI_API_KEY=<key> python generate_meanings.py 3244`. The script is already resumable. Monitor for `ResourceExhausted` errors. If quota runs out, the script will stop cleanly and can be restarted. When complete, copy the updated DB to `backend/data/lyrics.db` and push to HF.
-
----
-
-### Blocked on CompMusic audio (requires human H1 first)
-
-**Agent H — Raga classifier retrain (1-2 days, highest ML impact)**  
-Prerequisites: CompMusic audio files received.  
-Steps:  
-1. Place audio files in the correct location for the CompMusic mirdata loader  
-2. Run `raga_v2_pipeline.py` over all 477 CompMusic Carnatic tracks (Demucs+pyin pipeline, same as inference). Use the `venv_train` environment.  
-3. Run `train_raga_v2_evaluate.py` — this will train the CompMusic real-audio candidate and compare against the baseline  
-4. If accuracy is ≥77.8%, overwrite `models/raga_classifier.pkl` and `models/raga_label_encoder.pkl`. Run `build_space.sh` and push to HF.  
-5. Test with `curl /predict-audio` on the Saraga MP3 and at least 3 live recordings across different ragas in the vocabulary.
+- `identify_clip.py` — the probe edits nothing in the scoreboard path
+- `data/duration_probe/v1_superseded/` — audit trail, not reusable
+- `scripts/build_negative_arm.py` at **runtime** — re-running it re-draws every
+  anchor, re-assigns every `negNNN` id and re-shuffles the sheet, destroying
+  both sheets of labels. Editing its template strings is safe; executing it is
+  not.
+- `CODEX_*_REVIEW*.md` — review artifacts, read-only
 
 ---
 
-## 8. Accuracy Targets & Current Baselines
+## 4. What has been tried and failed
 
-| Module | Current Baseline | Production Target | Gap & Path |
-|--------|-----------------|-------------------|------------|
-| Raga classifier (CV on CompMusic features) | 77.8% (40 ragas, train set only) | ≥85% top-1 on live recordings | Gap is the domain mismatch. Fix: CompMusic audio retrain. |
-| Raga classifier (live audio, in-vocabulary) | Unknown — tested informally, Kalyani returned wrong answer | ≥80% top-1 | Unknown until systematic eval on live recordings |
-| Raga classifier (live audio, OOV ragas like Saveri) | 0% (always wrong, returns a wrong in-vocabulary raga) | N/A for OOV | Vocabulary expansion requires more data |
-| Raga top-3 accuracy | Unknown | ≥95% | Likely higher than top-1 but not measured |
-| Composition matching (top-1) | 16% on 19 compositions with ≥2 renditions | ≥70% | Data ceiling. Need catalog expansion + multi-rendition averaging |
-| Composition matching (top-5) | 24% | ≥85% | Same |
-| Tala detection | 16.5% measured (32.9% best variant; 72% majority baseline) | ≥70% on Saraga ground truth | Needs supervised meter tracking on sama annotations; deferred |
-| Inference latency `/predict-audio` | ~65s (30s clip, CPU) | ≤10s | GPU tier or vocal-separation bypass |
-| Meanings coverage | 8 / 3,252 = 0.25% | 100% | Run generate_meanings.py when quota available |
+The canonical graveyard is `REVIEW_BRIEF.md` §4 and `HANDOFF_CLIP_ID.md` §5.
+Everything here stays dead absent genuinely new evidence.
+
+### Lyrics / ASR identification
+
+- Never exceeded ~31% precision at any threshold, tier or configuration.
+- Confidence scores do not separate correct from incorrect (true/bluff score
+  medians 1.28 / 1.25, interleaved down the whole ranking).
+- Cross-channel agreement peaks at ~43% precision on 7 clips — whisper and
+  indic errors are **correlated**.
+- Max fusion, raga gating, extra answer gates, prompted/forced Whisper variants:
+  no useful gain. A ranker fitted on the 78-clip eval set overfit.
+- Character n-grams, vowel squashing, title-IDF weighting, DTW/Qmax fusion:
+  dead ends.
+- Indic CTC translit as a **default**: 8% precision @ 91% coverage, 27/28 OOC
+  bluffs. Same failure class as the parked whisper-translit "3b" channel.
+
+### ASR fine-tuning
+
+- Whisper-small LoRA on ~80 min of weak Saraga supervision collapsed 8/78 →
+  **0-1/78**, memorizing ~26 pallavis.
+
+### CoverHunter / learned audio retrieval
+
+- Source-disjoint CSI eval: mAP 0.113, hit rate 0.161, chance ≈0.031. The
+  earlier 0.327 was inflated by ~2/3 leakage.
+
+### Qmax / contour matching
+
+- Valid 60-67% only in its original full-recording context, and **untestable on
+  `concert_audio`** (leakage). On wild 30-60s clips: **0%**.
+
+### Raga and tala
+
+- TDMS raga: 72.8% top-1 on full tracks, **0/10** on wild short clips.
+- Tala: 16.5% → 32.9%, both below a 72% majority-class baseline.
+
+### Duration-probe designs rejected or repaired
+
+- Failing to strip `_rN` and to deduplicate by registry id shrank the pool to
+  79/133 instead of 271.
+- Independent per-duration offsets measured *a random excerpt*, not the value of
+  more listening. Now nested from one anchor.
+- Strict monotonicity + binary promote/kill was statistically invalid; replaced
+  by the three-way CI rule.
+- **Asking a listener to label "out of catalog" by ear was a category error.**
+  Catalog membership is a lookup over 8,688 rows.
+- **v1 negative arm, rejected in full:** excerpts cut at fixed 15/50/85% while
+  scored windows came from an independent anchor; also inferred OOC from failed
+  filename lookups, so ≥3 of 12 nominal OOC items were verified in-catalog.
+- **One sweep at 50% duty was also not enough** (round 2), and sheet 2 proved it
+  empirically: 2 of 51 items had singing only in the unheard half.
+- **A listening sheet whose categories describe a taxonomy rather than the music
+  as performed.** Both sheets filed bare `swaram` under `no-sahitya`, which is
+  wrong for swarakalpana — solfège alternating with the composition's sahitya
+  line. Caught only because Deepti labelled `neg030` against the sheet she was
+  reading from. Templates fixed for the next sheet.
+- `str.maketrans('dbgjmz','ptkcns')` maps d→p and b→t. The lesson is the
+  calibration set, not the typo.
+- A dry run that writes: `duration_probe_cut.py --dry-run` regenerated
+  `pool_report.json`. Fixed 2026-07-29.
+
+### Duration-probe *execution* failures, new this session
+
+- **Estimating GPU cost from model size rather than from the decoder.**
+  openai-whisper's reference implementation at fp32 runs ~5× realtime on a T4,
+  not the ~10× assumed, and 7 passes multiply it. Predicted 10-20 h, measured
+  ~27 h on a T4. Always quote wall-seconds per audio-second measured on the
+  actual box.
+- **Checkpointing at 10 windows was too coarse.** A Colab interruption cost up
+  to 35 min of GPU. CHUNK=5 (one recall title) makes an interruption cost ≤10
+  min and lands checkpoints on title boundaries, which also keeps a title's five
+  windows on one device.
+- **A cache checkpoint copied mid-chunk split a title across GPUs.**
+  `probe0016` now has four windows from a T4 and one from an L4. Cheap to fix
+  (§2.6) but it is exactly where a device difference would hide, since the gate
+  is a within-title 30→300 contrast.
+- **Colab interrupts idle sessions.** The KeyboardInterrupt that killed the run
+  at window 259 was not a bug in anything; the tab has to stay awake. On a real
+  box this is `tmux`.
+
+### Deployment
+
+The deployed Hugging Face Space still exposes legacy behavior (~16% composition,
+40.5% raga historically). It does **not** represent the current local pipeline.
 
 ---
 
-## 9. Security & Privacy Checklist
+## 5. The next step
 
-| Issue | Status | Action Required |
-|-------|--------|-----------------|
-| HF write tokens exposed in conversation history | Unknown (check with Deepti) | If tokens were pasted in earlier chat sessions, rotate them at huggingface.co/settings/tokens immediately |
-| `GEMINI_API_KEY` in `.env.local` | Gitignored — safe | Verify it never appears in git history: `git log -S GEMINI_API_KEY --all` |
-| `GEMINI_API_KEY` in frontend code | Not present (server-side only) | Confirm with grep: `grep -r GEMINI frontend/` |
-| `NEXT_PUBLIC_API_BASE` in Vercel env | Correct (points to HF, no auth token) | Fine — this is a public URL |
-| No rate limiting on `/predict-audio` | **Missing** | Add slowapi (see Agent C above) |
-| CORS allows `"*"` if `FRONTEND_ORIGIN` not set | Risk in fallback | Fix fallback (see Agent F) |
-| `data/lyrics.db` committed to git | Committed | Verify CC-BY-NC-SA allows redistribution of Saraga metadata; add attribution in README |
-| `models/raga_classifier.pkl` in git (28 MB) | Committed | Acceptable for a demo/research tool; no training data embedded |
-| `RagaDataset/` in git | Committed — should be removed | Add to `.gitignore` and `git rm --cached` |
-| `app.py` has hard-coded `data_home` path | Local dev only | Not a security issue; just technical debt |
-| `train_raga.py` has hard-coded `data_home` path | Local dev only | Same |
+**Finish the GPU run on AWS.** Deepti has $200 of free credits, so the remaining
+~7 h costs nothing out of pocket, and the job is already resumable from the
+Drive checkpoint.
 
----
+1. **Protect the checkpoint.** Download
+   `MyDrive/carnatify/duration_probe/out/asr_cache_v2.json` (~259 entries) to the
+   laptop and keep a copy. It is the whole GPU spend so far.
+2. **Quota first — it is the long pole.**
+   `aws service-quotas get-service-quota --service-code ec2 --quota-code
+   L-DB2E81BA --region us-east-1`. If `Value: 0`, request 8 vCPUs for "Running
+   On-Demand G and VT instances" before doing anything else.
+3. **Push the payload to S3 while waiting** (S3 needs no quota):
+   the three zips from `~/carnatify_probe_bundle` and the cache checkpoint.
+4. **Launch** g6.xlarge (L4) or g5.xlarge (A10G), Deep Learning OSS Nvidia
+   PyTorch AMI, 100 GB gp3, SSH from one IP. `pip install -q openai-whisper
+   demucs librosa soundfile`, `apt-get install -y ffmpeg unzip`.
+5. **Run under tmux:**
 
-## 10. Agent Skills & Agent Workflow
-
-### Design skills
-Design skills are vendored at `.agents/skills/` — 26 directories including:
-- `impeccable/SKILL.md` — comprehensive reference for production-quality UI (color, typography, motion, interaction design, spatial design, UX writing). Read this before writing any frontend code.
-- `high-end-visual-design/SKILL.md` — design system and visual language for elevated UI
-- `animate/SKILL.md`, `delight/SKILL.md` — motion and interaction design guidance
-- `design-taste-frontend/SKILL.md` — frontend taste and quality bar
-- `stitch-design-taste/SKILL.md` + `DESIGN.md` — detailed brand and component guidelines
-- Other skills: `adapt`, `audit`, `bolder`, `clarify`, `colorize`, `critique`, `distill`, `layout`, `minimalist-ui`, `optimize`, `overdrive`, `polish`, `quieter`, `redesign-existing-projects`, `shape`, `typeset`
-
-**Any agent writing frontend code must read relevant SKILL.md files first.**
-
-### Agent swarm pattern (proven in this session)
-1. Orchestrator identifies independent workstreams
-2. Spawns background agents for each workstream
-3. Each agent is self-contained in its directory scope
-4. Orchestrator wires results after all agents report completion
-5. One integration agent merges the pieces and runs E2E tests
-
-### Deployment pattern
+```bash
+python aws_duration_probe.py --root ~/probe --bundles ~/probe --chunk 5 \
+    --s3-checkpoint s3://<bucket>/checkpoint \
+    --prior-hardware 'Colab: T4 windows 1-80, L4 windows 81-259'
 ```
-Backend change:
-  Edit backend/main.py
-  Mirror to /tmp/hf-space/main.py
-  cd /tmp/hf-space && git add . && git commit && git push
-  Poll /health for 200, then test /predict-audio
 
-Frontend change:
-  Edit frontend/...
-  cd frontend && npx vercel --prod
-  (git push origin main is NOT sufficient to trigger Vercel auto-deploy)
+   It must print `inherited cache: 259 entries` and then
+   `anchored: 259/300 already cached`. If it says 0, stop — the checkpoint did
+   not land, and a second full run is being paid for.
+6. **Drop the four `probe0016` entries** (§2.6) so no title straddles two GPUs.
+7. **Terminate the instance** when it prints the scorer commands. Stopping still
+   bills EBS.
+8. **Merge and score on the laptop:**
+
+```bash
+venv_train/bin/python scripts/merge_asr_cache_v2.py \
+  /tmp/probe_handback/asr_cache_v2.json
+
+venv_train/bin/python scripts/duration_probe_score.py \
+  --results /tmp/probe_handback/probe_results.json \
+  --truth data/duration_probe/truth_anchored.json \
+  --negative-results /tmp/probe_handback/negative_results.json \
+  --negative-truth data/duration_probe/truth_negatives.json
 ```
 
-### HF Space detection during rebuild
-HF Space does zero-downtime blue-green deploys — `/health` stays 200 throughout. To detect a successful rebuild, test the changed behavior directly rather than watching `/health`.
-
-### Playwright MCP
-Installed and connected. Tools available: `browser_navigate`, `browser_click`, `browser_fill_form`, `browser_snapshot`, `browser_take_screenshot`, `browser_network_request`, etc. Use for all live frontend testing. Screenshots go to the repo root (01-13 exist; the next one would be 14).
+Copy the scorer output **verbatim** into `AGENT_LOG.md` with the exact command,
+cache validity, sample counts, exclusions, interval and decision, and record
+beside it the two GPUs, the Demucs-on-CUDA deviation, and the unknown-item
+sensitivity from §2.4. **Never recompute a friendlier statistic after seeing the
+data.**
 
 ---
 
-## 11. Questions the New LLM Must Answer Before Proceeding
+## 6. Pending Deepti — do not decide these
 
-Do not assume answers. Read the code, run evaluations, and interrogate the data before acting.
+1. **The unknown-item sensitivity under rule A** (§2.4). It fails where the
+   pooled sensitivity passes. Nothing to fix; it needs to be *decided* how the
+   result is stated if the observed b=0 holds.
+2. **Prospective long OOC audio** — the only route to measuring OOC abstention
+   at length. `~/sung_tests/fetch_manifest.tsv` retains source URLs and
+   durations, so this is reacquisition rather than discovery; 9 reviewed OOC
+   sources carry a parseable source duration ≥300s.
+3. **The 28-clip short-OOC sentinel** — nested 30s → full-clip (43-84s) over
+   existing reviewed OOC clips, reusing existing caches. n=28 gives 10.1pp at
+   b=0, 15.9pp at b=1. It **cannot** speak to 300s and must be pre-registered as
+   non-gating before it is built.
+4. **The registry junk blocklist** — 19 `drop` + 33 `review` rows, unwired.
+   `comp01994` is the one `drop` row with real recall cost. `comp06030` "Ragam
+   Thanam Pallavi", a section name the live matcher can return as a composition,
+   is not on the blocklist.
+5. **The commit.** Nothing in this line of work is committed. That is now a lot
+   of untracked work, including 2 GB of cut audio that is deliberately not
+   committable — decide what is tracked before the tree gets harder to read.
 
-**Q1. Is the raga classifier fundamentally broken for live audio, or just needs pipeline alignment?**  
-The 5% result on the Saraga real-audio candidate suggests the data problem (too few tracks/raga) is as important as the pipeline mismatch. Even with perfectly aligned training, a model trained on 3 tracks/raga cannot generalize. The answer depends on how many tracks CompMusic audio gives us per raga. Run a count: `python3 -c "from pathlib import Path; p=list(Path('RagaDataset/Carnatic/features').rglob('*.tonic')); print(len(p)); import json; mapping=json.load(open('RagaDataset/Carnatic/_info_/ragaId_to_ragaName_mapping.json')); ..."` Estimate: 477 tracks / 40 ragas ≈ 12 tracks/raga average. With StratifiedGroupKFold this is marginal but potentially workable.
+---
 
-**Q2. Is the composition matcher worth improving given the 197-track data ceiling?**  
-The matcher is architecturally sound. The bottleneck is catalog size, not the algorithm. The pragmatic answer: the matching is better than random and useful for users who sing compositions in the catalog. Expanding the catalog (downloading more Saraga audio, using Saraga Audiovisual) is worth doing. The composition matcher should NOT be replaced — the DTW approach is correct for this problem.
+## 7. Guardrails
 
-**Q3. Should Demucs be replaced with a lighter vocal separator for production latency?**  
-If GPU is available: No — keep Demucs (quality is important, and GPU makes it fast enough). If stuck on CPU: Yes — explore `spleeter:2stems` (faster, lower quality but possibly acceptable) or skipping separation entirely. Measure the raga classification accuracy drop before and after, using the Saraga test tracks where ground truth is known.
+- **Do not commit or push.** Deepti owns repository history. Do not reset, clean
+  or revert the dirty worktree.
+- Do not change the product default from `whisper`.
+- Do not run Qmax against `data/concert_audio`.
+- Do not re-run `scripts/build_negative_arm.py` (§3).
+- Do not loosen the OOC definition. That defect killed the v1 arm.
+- Do not revert rule A to a pooled gate — that is a pre-registration change
+  requiring a registered argument for the mixture weights.
+- **Do not change anything that feeds `asr_config_id()`** — model, `fp16`,
+  language lanes, separation. It is the cache key, so a change silently
+  invalidates every window already paid for. This is why Whisper runs fp32 even
+  on a GPU and why that is not a bug to fix.
+- Do not retune a threshold after seeing a SCORE.
+- Do not treat a duration-probe pass as wild-phone readiness, or as
+  authorization to show results to a user. Only the `no-sahitya` stratum gates;
+  OOC abstention at length is unmeasured.
+- **Flag, never self-adjudicate, a truth change that favors your own result.**
+- Preserve exact metric definitions and keep lyrics-matcher, Qmax, hybrid and
+  hybrid-stem numbers distinct.
+- Respond to Deepti in caveman style; write docs, commits and `AGENT_LOG.md`
+  entries in normal prose.
 
-**Q4. Is HuggingFace free tier viable for production?**  
-For a demo: Yes. For public launch: No. 65s per request, no concurrency, ephemeral filesystem (cache resets), no rate limiting built-in. The minimum viable paid plan is the A10G GPU ($0.60/hr). Alternatively: deploy the API to a VPS (Hetzner CX41, ~$16/month) with a GPU-enabled docker image and keep HF for the demo.
+---
 
-**Q5. Are there copyright/licensing issues with shipping shankarkrish.blog metadata in the lyrics DB?**  
-The 3,252 titles in `lyrics.db` were seeded from Saraga Carnatic metadata (CC-BY-NC-SA). The composition titles, composer names, and raga names are factual information and likely public domain regardless. The generated English meanings are LLM-generated from the title alone — not scraped from any source. The scraped concert records in `scraped_compositions.json` are from shankarkrish.blog — the blog's terms of service should be checked. Recommend: add attribution to Saraga/CompMusic in the README and Terms of Service page before public launch.
+## 8. Environment facts worth not rediscovering
 
-**Q6. Is the Next.js frontend complete enough for public launch?**  
-Functionally: mostly yes (both tabs work, results are displayed correctly). Quality blockers: (a) no cold-start UX, (b) no timeout handling, (c) not tested on mobile/iOS Safari, (d) progress messages are timer-based guesses, (e) no error analytics. It needs 1-2 days of hardening before a public launch.
-
-**Q7. What is the minimum viable raga accuracy for public launch?**  
-The PRD specifies ≥75% on held-out test. Since we don't have a systematic live-audio test set, the current accuracy on live audio is unknown. Before launch, create a small test set: record 5 clips each of 10 ragas (in vocabulary), get ground truth from a Carnatic musician (Deepti), measure top-1 and top-3 accuracy. ≥70% top-1 on in-vocabulary ragas is the minimum viable bar. If the classifier is consistently wrong on common ragas like Kalyani, it is not ready.
+- `venv_train` is py3.11. **ffmpeg 8.1.2 is installed** at
+  `/opt/homebrew/bin/ffmpeg` (the "no local ffmpeg" line in `ARCHITECTURE.md`
+  is stale).
+- `--cache-v2` is keyed by **`audio_sha256`**, not filename. The `path.name`
+  collision hazard is in the **legacy** `transcribe()` path only.
+- Cache keys contain nothing machine-specific, so a half-finished GPU run
+  travels between boxes. Symlinked staging directories hash to the same key as
+  the real file, which is how chunked resumption works.
+- Demucs is pinned to CPU inside `identify_clip.py:644`. Both runners patch
+  `demucs.apply.apply_model` instead of editing the file, because identify_clip
+  imports that symbol *inside* the function.
+- Probe window filenames deliberately contain no `__`, so `identify_clip.py`
+  skips truth-matching and the scorer joins against the sidecar instead.
+- APFS filenames are **NFD**; JSON/manifest keys are NFC. A clip that "isn't in
+  the manifest" is almost always Unicode normalization.
+- macOS uses **fork**, not spawn; the matcher's worker pool depends on it.
+  Tests set `CARNATIFY_MATCH_WORKERS=2`.
+- `identify_clip.py` buffers behind pipes — use `python -u` for long evals, and
+  `run_in_background` + `caffeinate -i` for anything over ~10 min.
+- `backend/` holds a deploy-time **copy** of `identify_clip.py` that can shadow
+  the root module; tests must insert root first on `sys.path`.
+- `data/raga_aliases.json` maps 684 aliases → 101 canonicals with junk keys
+  mapping to null. A `None` value means "not one of the model classes", **not**
+  "not a raga".
+- Rebuilding the composition registry reshuffles every `comp#####` id and breaks
+  `data/wild_truth_manifest.json`. Merge at load time instead.

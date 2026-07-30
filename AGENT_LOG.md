@@ -1817,6 +1817,41 @@ wild), Qmax (63–67% full recording/0% wild), prompted turbo, or `kn`-list
 tweaking (0/8 with top-5 3/8 -> 2/8). It touches no push, deploy, paid, or
 other Deepti-blocked action.
 
+---
+
+## [2026-07-23] Codex — systematic wild-truth work-family candidate detector complete
+
+Added the read-only review generator
+`scripts/detect_workfamily_dupes.py`; it scans all 78 in-catalog manifest
+entries (83 unique registry IDs across 76 composition-bearing clips; the two
+alapana entries have empty truth sets) and writes
+`data/workfamily_candidates.json`. It does not edit the manifest, registry, or
+matcher.
+
+Unique candidate-pair counts: **high 5, medium 0, low 30**. Two high pairs are
+already represented in the manifest (`akhilAndEswari` and `yEnATi`); three
+truth IDs gain a previously unlisted high-confidence sibling:
+
+| truth ID | truth row | candidate ID | candidate row | evidence |
+|---|---|---|---|---|
+| `comp00229` | Amba Kamakshi | `comp03071` | kAmAkshI (swarajati) | shared `c1080.shtml`, pallavi 100 |
+| `comp03570` | Koluvamaregada kodandapani | `comp03569` | koluvarmaragadA | shared `c2405.shtml`, pallavi 100 |
+| `comp06049` | raghuvamsa | `comp06051` | raghuvamsha sudhAmbudhi | pallavi 100, same composer/equivalent raga, title containment |
+
+The output retains 30 low-confidence title+raga stub pairs for Opus to verify;
+none is asserted equivalent. The detector uses effective reviewed page links,
+first real pallavi lines, normalized composer/raga spellings, strict title
+containment, and the clip's reviewed raga to avoid generic multi-raga registry
+rows creating false families. A clearly different available pallavi vetoes
+title evidence. Manual trap checks pass: Dikshitar `rakSamAm` does not propose
+`rakSatu`, and the three different Purandara `ranga bArO` pallavis produce no
+candidate for the manifest work.
+
+Opus pickup: verify the three new high pairs and review the low rows from
+`data/workfamily_candidates.json`, then apply accepted IDs to the manifest and
+re-baseline all configs. No merge, commit, push, or scoreboard change was made
+here.
+
 ## [2026-07-23] Fable — Rung 5 RUN: stem lane lands clean but does NOT graduate (acceptance rule applied honestly)
 
 Implemented Codex's frozen spec exactly (selector conservative, arbitrate()
@@ -1907,3 +1942,2145 @@ recorded count) + Rung 5, byte-identity verified. Push is Deepti's. Next
 rung options (untouched, per one-variable discipline): RNNT-same-mix, VAD/
 segmentation, registry work-family/equivalence pass (twice now the binding
 error class), Phase-4 calibration.
+
+---
+
+## [2026-07-23] Opus (verifier) — Rung 5 re-scored: 2 VERIFIED work-family equivalences correct the manifest; hybrid_stem now graduates (pending Deepti's gate)
+
+Fable's Rung 5 landed sideways (11/78, 25→27 top-5, 19.6% @ 52.8% — below
+Rung 4's 20.0%) and flagged that a stem-selected "wrong" answer, `akhilAndEswari`
+→ "akhilANDEshvari rakSamAm", is almost certainly the same kriti under a
+different registry row, i.e. a registry work-family duplicate, not a real error.
+This is the implementer asking the truth-gate to reclassify a miss that would
+graduate its own rung — so I verified **independently of the score impact**,
+the same bar I held to reject bhajare/Ranga Baro.
+
+### Both equivalences are real (identical pallavi + composer + raga)
+- **akhilAndEswari [Dvijavanti]:** truth `comp00173` (page c1481, dvijavanti,
+  Dikshitar) and prediction `comp00175` (page c5624, "jujAvanti" = the same raga
+  spelled differently, Dikshitar) share the **byte-identical pallavi**
+  "akhilANDEshvari rakSamAm Agama sampradAya nipuNE shrI". Same kriti, two rows.
+  `comp00174` (durusuga / Shyama Sastri / karnataka kapi) and `comp00176`
+  (rakSatu / shuddhasaveri) are different works — excluded.
+- **yEnATi mOmu palamu [Bhairavi]:** I found a second one Fable did not flag.
+  Truth stub `comp08673` and `comp01633` "EnATi nOmu phalamO" (Tyagaraja,
+  bhairavi) are the same kriti — comp01633 actually *owns* page c1736, which
+  Rung 2 had linked to the stub. Added comp01633.
+
+Both are the SAME class as the Rung-1 sarasijanAba/Madhava equivalent-sets;
+both marked `review:True` (Deepti's gate). Manifest rebuilt, 30 tests green.
+
+### Consistent re-baseline under the corrected manifest (all configs re-run)
+```
+config            top-1  top-5  precision@coverage  OOC bluffs  guard
+whisper (default) 8/78   21/78  17% @ 44%           7           --
+hybrid  (Rung 4)  11/78  25/78  20% @ 52%           10          10/36
+hybrid_stem (R5)  13/78  28/78  23% @ 53%           10          10/36
+```
+**Crucially, whisper (8/21) and Rung 4 (11/25) are UNCHANGED** — akhilAndEswari
+and yEnATi are still misses there (no channel returns the equivalent row). The
+correction is NOT a blanket goalpost-move; it only counts where a channel
+genuinely recovers the work, which is the **stem lane** (both flipped to top-1:
+comp00175 @1.051, comp01633 @1.151). The stem lane earned these two acoustically;
+the registry duplication had been mis-scoring that real recovery.
+
+### Verdict: Rung 5 STRICTLY DOMINATES Rung 4 → graduates (pending Deepti's bless)
++2 top-1, +3 top-5, +3pp precision, +1pp coverage, same 10 bluffs, guard holds.
+This is a genuine Pareto improvement — the strongest experimental config to date.
+BUT it graduates **only because of a truth-manifest change made after seeing the
+result**, so the process warrants scrutiny: the change is independently verified,
+does not inflate whisper/Rung 4, and is Deepti's gate (review-flagged). It stays
+opt-in/experimental regardless; **whisper remains the default**, and the 0.25
+gate was NOT touched. Honest caveat stands: this set shaped the gate; product
+promotion needs a prospective wild set + the 85% bar.
+
+### The real signal → next rung is a systematic work-family equivalence pass (Opus)
+Two clips just flipped from ONE registry-duplication artifact class; I only
+checked the 2 surfaced. Registry work-family duplication is now the **binding
+error class** (Fable's words, twice over) and it caps EVERY config, not just
+stem. The highest-leverage next rung is a **systematic manifest/registry
+work-family equivalence audit** — cheap, in-repo, zero Fable — that finds all
+stub↔full-work duplicate pairs and unifies them under reviewed evidence
+(identical pallavi/composer/raga), then re-baselines once. This precedes any
+further ASR ablation (RNNT-mix / VAD stay queued): fixing truth first keeps the
+next acoustic experiment falsifiable. Deepti's call; commit/push hers.
+
+## [2026-07-23] Opus — tier-1 bless applied + 3 Codex work-families folded (verified true, score-neutral)
+
+Deepti blessed tier 1 (the 4 score-affecting equivalence sets). Applied to
+`build_wild_truth_manifest.py`: dropped the `review:True` flag on **akhilAndEswari**
+(comp00173/175), **yEnATi** (comp08673/01633), **sarasijanAba** (comp06693/94/731),
+and **Madhava** (comp03805/06); each note now carries a `BLESSED 2026-07-23 (Deepti)`
+marker. Their `truth_ids` were already active in the scoreboard, so this changes only
+the metadata (review-flagged 9→8) — no score effect.
+
+Folded the three NEW high-confidence work-families from Codex's detector
+(`data/workfamily_candidates.json`), each verified independently against the bar
+(shared karnatik page and/or byte-identical pallavi + same-or-equivalent raga):
+
+| clip | truth (before) | folded siblings (after) | evidence |
+|---|---|---|---|
+| Amba Kamakshi__Bhairavi | comp00229 | + comp03071 | shared page c1080, identical pallavi |
+| Koluvamaregada…__Tōḍi | comp03570 | + comp03569 | shared page c2405, identical pallavi, same composer/raga |
+| raghuvamsa__Kathanakuthoohalam | comp06049 | + comp06051, comp06050 | identical pallavi, same composer, equiv raga (kadanakutuhalam), title containment |
+
+New families are review-flagged pending Deepti's bless (review-flagged now 8).
+The raghuvamsa clip here is the sahitya kadanakutuhalam kriti, NOT the non-sahitya
+alapana ruling — no trap. Manifest rebuilt; diff confirmed to touch only those three
+clips' `truth_ids`.
+
+### Re-baseline (all three configs, `~/sung_tests --cache-v2 --no-raga`) — NO MOVEMENT
+
+```text
+config       top-1   top-5   precision@coverage    (vs prior corrected baseline)
+whisper      8/78    21/78   17% @ 44%   (== 8/21)
+hybrid       11/78   25/78   20% @ 52%   (== 11/25)
+hybrid_stem  13/78   28/78   23% @ 53%   (== 13/28)
+```
+
+Guard (`~/sung_tests_curated`, hybrid_stem): top-1 **10/36**, top-5 19/36 — HOLDS
+(floor 8). Tests: `tests/test_clip_policy.py` 30 passed, 1 xfailed.
+
+Verdict: the three equivalences are correct but **score-neutral** — for each clip
+no config was returning the newly-added sibling row in its top-5, so nothing
+flipped. Folded anyway (truth-honesty + guards against future undercount if the
+matcher ever returns the sibling), exactly like the Rung-5 equivalences. This does
+NOT graduate anything; hybrid_stem still strictly dominates at 13/78. The binding
+wall remains precision (23% vs the 85% bar), not truth undercount — the systematic
+work-family pass has now been largely exhausted for score lift.
+
+Remaining from Codex's packet: 30 low-confidence title+raga stub pairs, unreviewed.
+Spot-checks show many are genuine truncation-families of works whose clip already
+resolves correctly (so likely also score-neutral); a full pass is cheap/in-repo but
+lower-leverage than a precision lever. Not done this turn. No commit/push (Deepti's).
+
+## [2026-07-23] Opus — DIAGNOSTIC: precision ceiling proven; front-end is the wall (no shippable gate exists)
+
+Deepti asked what actually moves the needle. Ran two read-only diagnostics over
+`~/sung_tests` (frozen caches, no ASR) to decide whether a high-precision
+operating point exists in the current pipeline or the ASR front-end is the
+ceiling. New scripts: `scripts/precision_coverage_curve.py`,
+`scripts/cross_channel_agreement.py`.
+
+### 1. Precision/coverage curve of the existing confidence signal
+Swept the matcher's own confidence (top-1 score, margin, high/medium/low tier)
+for both whisper and hybrid_stem. Precision NEVER exceeds ~31% at any threshold,
+tier, or config; tightening the gate sheds correct answers as fast as wrong ones
+(precision stays flat ~25-31% while coverage collapses). The single
+most-confident answer in the set (score 2.051, high, margin +0.45,
+`sri subramanyaya`) is WRONG; correct/wrong are fully interleaved down the whole
+ranking. The match "score" is lyric-overlap computed on garbage ASR text, so it
+measures text overlap on noise, not correctness — garbage in, confident garbage
+out.
+
+### 2. Cross-channel agreement (independent signal)
+Tested whether two channels landing on the SAME top-1 id certifies correctness:
+
+```text
+whisper == indic_mix    4/10 = 40.0%  cov  9.4%
+whisper == indic_stem   3/9  = 33.3%  cov  8.5%
+all three agree         3/7  = 42.9%  cov  6.6%
+```
+
+Best rule = 43% precision on 7 clips (3 correct = noise). Agreement does not
+separate. Reason: Whisper and IndicConformer transcribe the same ornamented
+sung audio, so their errors are CORRELATED — they agree on the same wrong
+lyric-overlap. Ensemble agreement only helps with independent errors.
+
+### Verdict (strategic)
+No shippable high-precision slice exists in the current pipeline, by two
+independent measurements. Abstention cannot reach the 85% bar; this is also WHY
+the graveyard forbids new answer gates (the signal is noise, any gate overfits).
+The binding ceiling is the shared front-end: speech-ASR cannot read sung
+Carnatic (3-sec vowels, gamakas, no phoneme edges; ~64% of clips ASR-dead).
+Every downstream rung (hybrid, stem, equivalences) is starved by garbage lyrics,
+which is why the ladder plateaued.
+
+The only lever with headroom is a sung-Carnatic-adapted ASR front-end
+(fine-tune on Colab using Saraga audio + time-aligned lyrics), validated by
+re-running curve #1 and requiring an operating point to appear at >=85%. This is
+GPU/Colab work (the CoverHunter harness exists), NOT a Fable spend and NOT a
+scoreboard ablation. Honest expectation: sung classical is hard; a fine-tune may
+lift precision to ~50-70%, not necessarily 85% — but downstream tweaks have
+provably zero headroom, so this is where the effort belongs. Fable stays HOLD;
+RNNT/VAD (recall levers) are moot until the front-end separates correctness.
+No commit/push (Deepti's).
+
+## [2026-07-23] Codex — pre-reset handoff notes
+
+Residual detector rationale not captured in the earlier closeout:
+
+- I rejected token-set/`WRatio` title matching after it promoted short generic
+  phrases (`rAma`, `bhajarE`, etc.) across unrelated works. The surviving
+  title evidence is deliberately asymmetric-looking: the best folded alias
+  pair must have compact-string containment. Consequently, a low-row
+  `title=100.0` means “the short title is wholly contained in the long title,”
+  not that the two full titles are identical.
+- Registry raga overlap was insufficient by itself because several old rows
+  are contaminated multi-work/multi-raga buckets. I used the reviewed raga in
+  the wild clip name as an additional constraint. That suppresses many false
+  positives but cannot make a generic candidate row safe: a row listing both
+  relevant ragas can still bridge two genuinely different kritis.
+- I intentionally did not form connected components or take a transitive
+  closure over candidate edges. The generic `mari vErE` and `nagumomu` rows
+  demonstrate why: either would collapse two distinct work families. Future
+  manifest additions should remain individually evidenced edges.
+- Pallavi similarity was kept as an ordered whole-line ratio rather than a
+  token-set score. Refrain vocabulary is too repetitive for bag-of-words
+  similarity, and an apparently matching page inside a contaminated generic
+  row still needs the clip-raga check. Known manifest siblings were allowed
+  through for audit rather than treated as new discoveries.
+
+My manual read of the **30 unique low-confidence pairs**:
+
+- **21 likely genuine truncation families:** `comp00021↔comp00020`,
+  `comp00981↔comp00980`, `comp01032↔comp01033`,
+  `comp01493↔comp01492`; all three edges among
+  `comp01843/comp01844/comp01845`; `comp02725↔comp02708`,
+  `comp03621↔comp03620`, `comp03805↔comp03806`,
+  `comp04923↔comp04922`, `comp06049↔comp06050`,
+  `comp06054↔comp06052`, `comp06693↔comp06731`;
+  `comp06985↔comp06984` and `comp06985↔comp06986`;
+  `comp07296` with each of `comp07293`, `comp07294`, and `comp07354`;
+  `comp07319↔comp07318`; and `comp08381↔comp08380`. These have a
+  specific longer title completing the short one and a single coherent raga.
+  They still need source verification; “likely” is not permission to fold.
+- **3 probable same-work rows, but likely registry-quality problems rather
+  than clean composition stubs:** `comp02725↔comp01430` (the candidate title
+  embeds performer/album text), `comp04228↔comp02100`, and
+  `comp06850↔comp02101` (both candidates embed `GayatriGirish`). Verify the
+  underlying recording metadata. If confirmed, quarantining or marking the
+  uploader-title row may be cleaner than teaching every truth family about it.
+- **6 traps/insufficient-evidence pairs:** `comp04225` with each of
+  `comp04227` and `comp04228` is a multi-raga `mari vErE` hub spanning
+  different works; `comp04571` with each of `comp04572` and `comp04573` is
+  the analogous `nagumomu` hub spanning Madhyamavati versus
+  Abheri/Saveri; `comp05102↔comp05111` relies on a generic `Ninnuvina` row
+  carrying four raga families; and `comp07296↔comp07297` has a materially
+  different ending (`subrahmaNyAya` versus `subramanyAyO`) plus a
+  Kambhoji/Todi candidate row. Do not add these without page, pallavi, or
+  original-source provenance that identifies the exact work.
+
+The three new high pairs being verified true but score-neutral changes how I
+would sequence follow-up: review the 21 likely pairs first for truth hygiene,
+inspect the 3 uploader-title rows as possible junk-row/blocklist candidates,
+and leave the 6 hubs unlinked. Do not expect a scoreboard lift. If this becomes
+a registry-wide pass, rank multi-raga lyrics-less hubs for provenance cleanup
+instead of widening fuzzy matching, and never auto-merge their graph
+neighbors. Any accepted manifest edits should still be followed by the frozen
+all-config re-baseline.
+
+## [2026-07-23] Codex — Saraga ASR trainset prep
+
+Built the metadata-only weak-alignment pipeline in
+`scripts/build_saraga_asr_trainset.py` and generated
+`data/saraga_asr_trainset.json` plus the feasibility report. The builder walked
+all **249** Saraga tracks, kept **173** fixed-sahitya tracks, matched **78** to
+unambiguous local lyrics, and emitted **354** ≤30-second segments from **26**
+performances: **186 high-confidence segments / 80.31 minutes**
+(pallavi+anupallavi) and **168 low-confidence segments / 77.21 minutes**
+(charanam/verse), **157.51 minutes total**.
+
+The honest read is **promising but small**: this is enough for a controlled
+adapter/fine-tuning pilot, not a robust general-purpose sung-Carnatic ASR
+fine-tune. Only 26 performances contribute aligned audio, and **36**
+fixed-sahitya tracks already have manual sections but lack a confident local
+registry/lyric match; filling those gaps is the clearest data-expansion lever
+before a large GPU run. The report lists all 95 unmatched kept tracks, with
+annotated gaps first.
+
+Implementation reuses `identify_clip.skey` and the section/raga parsing
+primitives from `scripts/detect_workfamily_dupes.py`, requires exact folded
+title plus spelling-equivalent raga and an unambiguous lyric page, excludes
+Thillana/RTP/unknown forms, and never decodes audio. Note that Saraga's actual
+manual-section columns are start, annotation level, **duration**, label (the
+brief called the third value an end); the builder converts duration to end and
+clamps to metadata length. Compile, end-to-end run, schema/path/window/length
+checks, `git diff --check`, and a repeat-run SHA-256 determinism check all pass.
+No commit or push.
+
+## [2026-07-23] Opus — VERIFIED Codex Saraga trainset; sound, one cleaning fix needed
+
+Verified `data/saraga_asr_trainset.json` (354 segments, 26 tracks) against the
+brief. All audio paths exist; all windows are valid and <=30s; spot-checked six
+works' high-confidence pallavi spans and the assigned text is the correct pallavi
+(sAmaja varada, evarurA ninnuvinA, Amba Kamakshi->comp00229, soundararAjam,
+etc.). Weak-label design behaves as specified (78 distinct section-texts inherited
+across ~4-5 windows each). Codex's numbers reproduce; feasibility read is honest.
+
+Required fix before any training: 44/354 segments (12%) carry karnatik notation
+markup in `text` (`|`, `||`, syllable hyphenation, interleaved swaram), which must
+be stripped/normalized or it poisons the ASR targets. This is a text-cleaning pass
+on the lyric corpus, not a Saraga issue.
+
+Strategic read for the fine-tune go/no-go: 80.3 min high-confidence
+(pallavi/anupallavi) + 77.2 low (charanam) = PILOT scale, single-corpus and
+artist-skewed (Sanjay Subrahmanyan / Arkay heavy). Enough for a cheap LoRA/adapter
+PILOT to test whether domain adaptation moves the wild precision/coverage curve at
+all; NOT enough for a robust general ASR. ~36 high-value lyrical tracks are blocked
+only by registry->karnatik lyric-linkage gaps (same Rung-2 coverage gap) — cheap
+expansion lever if the pilot shows traction. Recommendation: run the 80-min pilot
+first as a falsifiable probe (measure by re-running scripts/precision_coverage_curve.py
+on fine-tuned transcripts); expand data only if it moves. No commit/push (Deepti's).
+
+## [2026-07-23] Opus — Saraga ASR pilot prepped (cleaned targets + Colab LoRA scaffold)
+
+Deepti greenlit the A-then-B recommendation (cheap 80-min pilot first). Prepared
+everything for a falsifiable Colab fine-tune probe:
+
+- `scripts/clean_saraga_trainset.py` -> `data/saraga_asr_trainset_clean.json`:
+  normalizes lyric TARGETS (strips tala bars `|`/`||`, fuses syllable hyphens,
+  drops swaram/section-header lines and inline structural words). 354 segments,
+  232 changed, **0 notation_suspect quarantined**, zero residual markup;
+  186 high-confidence. Adds `text_raw` + `notation_suspect` per row.
+- `scripts/build_saraga_pilot_zip.py` -> `saraga_pilot.zip` (465 MB, gitignored):
+  cleaned json + the 26 referenced mp3s at original relative paths, for Drive.
+- `colab_asr_finetune.py`: Colab GPU LoRA fine-tune of Whisper-small on the
+  high-confidence set (composition-disjoint train/val split, WER metric, adapter
+  saved to Drive), plus an optional validation cell that transcribes the wild
+  clips with base+adapter and downloads `transcripts_pilot.json`.
+
+Pilot is a signal probe only (weak section labels, mixed languages under one
+forced token, ~80 min, artist-skewed) — success = the wild precision/coverage
+curve moves at all. NEXT after transcripts come back: wire fine-tuned transcripts
+through the matcher and re-run `scripts/precision_coverage_curve.py` for the phase-B
+go/no-go (that scoring-integration step is not built yet). Fable still HOLD.
+No commit/push (Deepti's).
+
+## [2026-07-24] Opus — ASR fine-tune PILOT scored: NO-GO (fine-tune hurts; backbone wall confirmed twice)
+
+Ran the falsifiable probe end-to-end (Colab LoRA Whisper-small on 80 min
+high-confidence Saraga pallavi/anupallavi; adapter -> wild-clip transcripts ->
+`scripts/score_external_transcripts.py` through the real matcher). New scorer +
+`data/saraga_asr_trainset_clean.json` + `colab_asr_finetune.py` (torchao/tokenizer
+fixes + loop-suppressed generation).
+
+Result vs stock-whisper baseline (8/78 top-1, 21 top-5, 17% @ 44%):
+- pilot, loopy generation:      1/78 top-1, 2 top-5, 4% @ 22%
+- pilot, loop-suppressed:       0/78 top-1, 0 top-5, 0% @ 3%
+
+The fine-tune STRICTLY WORSENED the pipeline. Training overfit hard (val loss rose
+after epoch 1; val WER >100% throughout): the adapter memorized ~26 Saraga
+pallavis and emits their tokens (nAmaja/AshrayE/rAjam/vanditA) for almost any
+audio -> low-IDF, unmatchable, and it overwrites the partial-correct transcription
+stock whisper had on its 8 hits. Loop-suppression cleaned the text but cut
+matchable tokens further (answered 3). A few clips did recover real pallavi
+(nannu pAlimpa, ninnu vinA mari galada, vAtApi gana patin) but only Varuvai
+Varuvai converted to a top-1.
+
+Verdict: NO-GO. 80 min of weakly-aligned single-artist audio teaches harmful
+memorization, not generalizable sung ASR. Combined with the [2026-07-23]
+precision-curve diagnostic, the lyrics-ASR backbone is the wall from two
+independent directions. Not definitive that fine-tuning in principle can't help
+(recipe was crude/overfit), but phase B (fix ~36 lyric links + gather hours +
+Demucs + better recipe) is now a large speculative spend against a probe that
+moved BACKWARDS — poor expected value. Recommend stopping the ASR-fine-tune
+direction and reframing (melodic/CoverHunter CSI path, or narrower product scope).
+Fable still HOLD (untouched). No commit/push (Deepti's).
+
+## [2026-07-24] Fable — workhorse seat retired: exit handoff written
+
+The Fable workhorse seat is being retired and replaced by an Opus 5 workhorse.
+Everything this seat knew that was not already on disk is now in
+`HANDOFF_WORKHORSE_FABLE_TO_OPUS5.md` (repo root): seat scope and commit
+inventory, the Rung 1-5 ladder with verbatim SCOREs and verdicts, the hybrid
+arbitration architecture as it stands (backends, caches, config-id formats,
+the frozen q_cov gate, the IndicConformer ONNX lane), twenty traps/gotchas
+with symptom-cause-fix, this seat's personal graveyard including
+rejected-without-running ideas, the uncommitted/half-finished state with
+safe-to-delete vs load-bearing labels, ranked next-step recommendations
+(including a hands-on read on the CoverHunter CSI pivot's prospects), and
+process advice for the incoming workhorse. No code, cache, manifest, or
+score-affecting change was made in this final turn; the only writes are the
+handoff file and this entry. Push and all commits remain Deepti's.
+
+## [2026-07-24] Opus — CoverHunter Stage-1 clean re-score: mAP 0.113, NO-GO for door 1
+
+Ran the source-disjoint re-score from `COVERHUNTER_RESCORE.md` on Colab via a new
+`colab_coverhunter_rescore.py` (inference only; restores the 2026-07-19/20
+checkpoint epoch-248 and the cached CQT features from Drive, builds a clean
+query==ref list, runs the repo's own `tools.eval_testset`).
+
+Result on the 137-clip source-disjoint set (28 songs, 3-8 clips/song, every
+same-song match necessarily cross-recording):
+
+    map: 0.11338   rank1: 20.82   hit_rate: 0.16058
+
+Baselines: contaminated dev mAP was 0.327; random-ranking floor on this set is
+0.0312 (mean 4.25 positives per query / 136 refs), random first-hit rank ~26.3.
+
+Read: the melody channel has REAL but WEAK cross-recording signal — 3.6x chance
+on mAP, 5.1x on hit_rate — and roughly two thirds of the headline 0.327 was
+same-recording contamination, as suspected. It is far below the ~0.3 bar the
+recipe set for proceeding, and 16% cross-recording top-1 on clean 60 s catalog
+audio would degrade further on wild sung phone clips (lyrics-ASR gets 8/78 =
+10% top-1 there). Stage 2 (wiring CSI to the `~/sung_tests` scoreboard) is
+therefore NOT dispatched to a workhorse — the gate did not clear.
+
+Two defects found while building the eval, both worth recording:
+- `extract_csi_features` applied speed augmentation CUMULATIVELY
+  (`sp_0.8-X` -> `sp_0.9-sp_0.8-X` -> ...), so NO clip exists at original rate;
+  effective factors span 0.72-0.95 only, and the no-op 1.0 pass emits a
+  duplicate line. ~40% of the augmentation budget was wasted on duplicates and
+  the intended 0.8-1.2 range was never realised. The model has therefore never
+  seen audio at natural speed — a train/test mismatch that would have hit
+  Stage 2 directly.
+- My first version of the chance floor averaged (s-1) over songs rather than
+  over clips, printing 0.006 instead of 0.031; fixed in the script with a note.
+
+Verdict: door 1 (melodic/CoverHunter CSI) does not clear its own go/no-go gate
+on the current data. Recommend door 2 (narrow the product scope) unless Deepti
+wants to first retrain with the aug bug fixed and more genuine cross-artist
+renditions — that is a data-acquisition project, not a tweak, and the 3.6x-chance
+signal is not strong enough to fund it on this evidence. No commit/push (Deepti's).
+
+## [2026-07-25] Opus — Strategy session: input contract, not model quality (office-hours diagnostic)
+
+After the Stage-1 CoverHunter no-go closed the last cheap identification lever,
+ran a full startup diagnostic with Deepti instead of narrowing the product.
+Output: an approved design doc at
+`~/.gstack/projects/ShyamRavidath-carnatify/shyamravidath-main-design-20260725-200117.md`
+and a session handoff at `HANDOFF_SESSION_0725.md`.
+
+Findings that change the roadmap:
+
+- Every measured failure is on 30-60 second clips. The same pipeline family scores
+  60-67% composition (Qmax, cross-artist) and 72.8%/84.7% raga on FULL recordings.
+  The collapse tracks the input contract, not obviously the model quality.
+- A Carnatic item runs 10-30 minutes and the listener is present throughout, so the
+  30-second contract was never a product requirement — it was inherited from
+  Shazam, which needs it only because it matches exact master recordings.
+- A Codex cold read (gpt-5.6, read-only, no conversation context) correctly attacked
+  this: duration is confounded with recording quality, segmentation, and catalog
+  distribution. It was demoted from premise to hypothesis, to be settled by a
+  controlled experiment. Codex also noted the existing clips cannot support the
+  test; measured `~/sung_tests` durations confirm it (n=106, min 43s, median 60s,
+  max 98s).
+- Product target set by Deepti: reach 5-minute accuracy in <=90 seconds. The curve
+  is a diagnostic, not a destination. Levers ranked: window selection (which 90
+  seconds, not just how many), incremental evidence accumulation, stronger
+  representations via a rendition corpus, then fusion (graveyard-constrained).
+- Demand evidence is zero and now recorded as such. One real user was named: Jon,
+  a Western listener with zero exposure. The assignment is to take him to a concert
+  and watch without helping — which also produces the long-form audio the probe
+  needs.
+
+NEXT: Approach A (duration probe on 20-30 long known-identity recordings, windows
+at 30s/1/3/5min from a fixed start point, preprocessing held constant), then
+Approach B (concert companion web app with correction capture). Rendition corpus
+queued behind B's evidence. No commit/push (Deepti's).
+
+## [2026-07-25] Opus — Adversarial review of the design doc: 6/10, three corrections to prior claims
+
+Ran an independent reviewer (fresh context, doc + repo access, no conversation
+history) against the design doc. Score 6/10, 17 issues, 13 fixed, 5 recorded as
+open Reviewer Concerns. Three findings correct claims made earlier in this log and
+in the session handoffs; all three were verified directly before being accepted:
+
+1. **`ffmpeg 8.1.2` IS installed locally** (`/opt/homebrew/bin/ffmpeg`, exit 0).
+   The "no local ffmpeg" line in `ARCHITECTURE.md` and `HANDOFF_SESSION_0724.md`
+   §5 is stale and has been inflating the cost of any audio-slicing task with an
+   unnecessary Colab dependency.
+2. **`data/concert_audio/` already contains the long-form audio** the duration
+   probe needs: 1,238 recordings with composition identity in the path, 1,118
+   distinct titles, 65 titles with 2+ renditions (185 files), sampled median 417 s,
+   29/40 over five minutes. The design doc had called long audio a blocking
+   dependency requiring new collection. It is not; the probe is runnable now.
+3. **The "CoverHunter was trained on only 28 songs with 2+ distinct recordings"
+   claim is wrong** and originated in my 2026-07-24 entry. 28 is the count of
+   **validation** songs with 2+ distinct recordings (`COVERHUNTER_RESCORE.md:22`).
+   The training composition is not established, so the "starved model" diagnosis is
+   unproven. The recorded causes of the weak mAP remain the cumulative-speed
+   augmentation bug and same-recording contamination of the dev metric.
+
+Also corrected in the doc: the headline evidence table compared Qmax's
+full-recording score against the lyrics matcher's wild score and attributed the
+gap to duration, which is a matcher-identity confound (`ARCHITECTURE.md:72` records
+Qmax at 0% on wild clips, not 8-13/78); the raga figure 9/43 is the 63-clip era and
+current is 18/85 (`REVIEW_BRIEF.md:37`); the composition baseline should cite the
+adopted contract number, 14/78 top-1 with 30% precision at 44% coverage.
+
+Design changes that followed: the probe gate is now pre-registered (>=15pp top-5
+gain 30s->5min AND monotone across four durations, SE ~±6pp at n=65); window start
+offsets are randomised with prefix-anchored and random-offset windows reported
+separately (a fixed start makes the 30s window alapana-heavy and lyric-free by
+construction, which would confirm P1 regardless of duration); windows must use
+distinct basenames because `identify_clip.py:619` caches transcripts by
+`path.name`; results publish all five contract metrics; the admin dashboard is cut
+in favour of a CSV; and the claimed B->C data link is withdrawn as a category error
+(user corrections are eval queries, not training renditions). No commit/push.
+
+## [2026-07-26 00:40] Opus 5 (verifier) — duration probe: red-team review accepted, pool rebuilt (79 → 271 titles)
+
+GPT-5.6 red-teamed the duration probe before any audio was transcribed
+(`CODEX_DURATION_PROBE_BRIEF.md` → `CODEX_DURATION_PROBE_REVIEW.md`). Verdict:
+**do not transcribe as built**, four P0s. I verified every falsifiable claim it
+made; all hold. Do not re-litigate these — they are checked.
+
+### Verified findings
+- **136 of 1,238 `_rN` files** were never resolvable: my cutter stripped only a
+  numeric prefix, while the corpus's own builder already defines and strips
+  `REND_SUFFIX = r'_r\d+$'` (`build_qmax_catalog.py:33`).
+- **Catalog-label overlap is real.** `build_composition_registry.py:80` builds
+  registry rows from `models/qmax_catalog_meta.json`, whose titles
+  `build_qmax_catalog.py:85` derived from `concert_audio` **filenames**. These
+  recordings' own filenames helped create the catalog they are resolved against.
+  Not acoustic leakage in the `whisper --no-raga --cache-v2` path, but this pool
+  cannot validate catalog resolution.
+- **P1 rests on a matcher-identity confound already logged here on 2026-07-23**
+  (`AGENT_LOG.md:2396`). The 60-67% full-recording number is **Qmax**;
+  `ARCHITECTURE.md:72` records Qmax at **0%** on wild clips; the 8-13/78 wild
+  number is the **lyrics matcher**. I repeated the handoff's framing without
+  checking it. The probe is therefore scoped to the lyrics matcher only.
+  **Qmax cannot be probed on this pool at all** — `models/qmax_catalog.npz` is
+  built from `concert_audio` melodia, so every window is same-recording leakage.
+- My own defects, confirmed: independent per-duration offsets estimated the wrong
+  thing (a random excerpt, not progressive listening from one start);
+  `wilson_se` is the Wald SE and pairing was discarded; no 90s condition despite
+  90s being the product target; cut script printed "4 whisper passes" while the
+  builder runs 7.
+
+### Pool rebuilt (`scripts/duration_probe_cut.py`)
+Fixes: strip `_rN`; **dedupe candidate rows by registry id**; work-family truth
+sets; longest rendition not `items[0]`; `mangalam`/`tillana`/`viruttam`/`sloka`
+removed from the skip list (they carry fixed text); durations now
+30/60/90/180/300 from **one common random anchor**, nested.
+
+Two dead ends found while implementing, recorded so nobody repeats them:
+1. Testing work-family equivalence on `lyr` is **vacuous** — `load_targets`
+   looks `lyr` up by folded TITLE (`identify_clip.py:262`), so rows sharing a
+   title get byte-identical heads by construction. Use the per-row `lines`.
+2. Expanding families **within a title key finds nothing** (measured: 0 cases).
+   Real families differ in title — the verified pair at `AGENT_LOG.md:1948` is
+   comp00173 "akilAndEswari" / comp00175 "akhilANDEshvari rakSamAm". Expansion
+   must key on **pallavi identity across the whole registry**, guarded by a
+   25-char minimum and composer agreement.
+
+```
+=== POOL CONSTRUCTION (distinct title keys: 922, was 1049 before _rN merge) ===
+  matched_but_no_lyrics            505
+  RESOLVED                         271        (was 133; >=300s pool was 79)
+  too_short                        117
+  no_registry_match                 29
+  5 titles carry a work-family id set; 100 archive clusters over 153 titles
+```
+The 133 → 271 jump is almost entirely the **id dedupe**: the previously reported
+"254 ambiguous multi-lyrics titles" were mostly one row counted twice through
+two aliases folding to the same key. Family expansion reproduces the known
+reviewed equivalence exactly (`comp00173` + `comp00175`).
+
+### Selection-bias check (`scripts/duration_probe_bias.py`, BIAS_REPORT.md)
+Reassuring on the axis GPT-5.6 flagged: RESOLVED and `too_short` have the same
+lyric profile (median 7 lines, 44-47 pallavi chars) — the >=300s filter does
+**not** select text-rich works. The 505 `matched_but_no_lyrics` exclusions carry
+zero registry lyric lines and so can never be matched by a lyrics matcher at any
+duration; excluding them is the correct conditional but inflates absolute level
+against the wild set. Lyric length inside the pool spans 3-58 lines (quartiles
+4/7/11), so the curve **must** be published stratified by it. Clustering is mild
+(largest concert contributes 5 titles) but real; the paired analysis resamples
+clusters, not titles.
+
+### Not done, blocking GPU
+Scorer rewrite (paired/clustered, three-way promote/kill/**inconclusive** — the
+current binary calls +14pp "P1 DEAD", which is indefensible); the adjudicated
+negative arm (OOC vs no-sahitya, which `METRIC_CONTRACT.md:30` requires be
+assigned by Deepti's ear, not filenames); the pre-registration packet. No GPU
+spent, nothing committed.
+
+## [2026-07-26 01:20] Opus 5 (verifier) — duration probe: scorer rewritten (paired + clustered + three-way), negative arm cut, pre-registration written
+
+Continues the 00:40 entry. No GPU spent, nothing committed.
+
+### Negative arm built — `scripts/build_negative_arm.py`
+40 items, 3 x 20s excerpts each (15%/50%/85% through the recording), **blind
+ids**, sampled from 36 free-form and 31 absent-from-registry candidates (20 of
+each at >=300s) with the sampling reason withheld from the sheet.
+`METRIC_CONTRACT.md:30` requires strata be assigned by Deepti's ear, never from
+filename metadata — so sampling may use filenames, labeling must not. A negative
+must be negative at EVERY duration (a window that is alapana at 30s but reaches
+the pallavi by 300s is the duration effect, not a negative), hence whole-recording
+units and three spread excerpts. Sheet:
+`data/duration_probe/negative_arm/LABELING_SHEET.md`. **Pending Deepti.**
+
+### Scorer rewritten — `scripts/duration_probe_score.py`
+Four defects fixed, all mine:
+1. The five observations per title are **paired** (same recording, same anchor,
+   nested lengths) and the first version threw the pairing into marginal lists.
+   Uncertainty is carried by titles that FLIP; now estimated from discordant
+   pairs (exact one-sided McNemar) plus a **cluster bootstrap over
+   `archive_identifier`**, because titles from one concert share artist, hall,
+   mic and era.
+2. `wilson_se` was the Wald SE, misnamed, and of a marginal rate rather than of
+   the paired difference. Removed.
+3. **Strict monotonicity dropped as a condition.** Only ~4% of orderings of four
+   exchangeable points are monotone by chance, so one dip could veto a real
+   effect — and a jump-then-plateau (20/35/35/35) is monotone, passes, and is
+   favourable evidence anyway. Shape is now a paired transition table, a
+   diagnostic, never a veto.
+4. **Three-way decision** replaces the binary. PROMOTE if the 90% CI lower bound
+   >= +15pp; KILL the >=15pp claim if the upper bound < +15pp; otherwise
+   **INCONCLUSIVE** and the roadmap does not move. The old rule gave a +14pp
+   estimate, a +20pp estimate with one dip, and an interval spanning -5 to +30
+   the same "P1 DEAD" verdict.
+
+Also added: a **validity gate** that exits non-zero on any sidecar/results
+bijection failure, duplicate row, or ASR cache MISS (`HANDOFF_VERFIER.md:79` —
+a SCORE with misses is invalid), plus unequal title sets across durations. Both
+paths smoke-tested on synthetic results: a rising curve reaches PROMOTE, and a
+corrupted file aborts with all three error classes named. Smoke-test cut was
+deleted so a 6-title set cannot be mistaken for the real run.
+
+Reported alongside the headline: per-duration top-1/top-5/precision/coverage,
+the paired **90s -> 300s product gap** (what Approach B must close — P1 passing
+does not mean it is closed), and the curve **stratified by lyric-line count**.
+
+### Pre-registration — `DURATION_PROBE_PREREGISTRATION.md`
+All seven items the review demanded. Settled: pool, design, analysis, decision
+rule, validity gate, and the narrow claim a pass would license. **Pending
+Deepti: final n, and the by-ear negative labels.**
+
+Costed at n=60: 11.0 h unique audio, ~77 Whisper-hours at the retained 7-pass
+product config, plus Demucs. Review was explicit that a mix-only run is an
+exploratory mechanism screen and **cannot** pass or kill P1 for the
+product-default pipeline, so the stem lane stays and this is a Colab job.
+
+## [2026-07-28 xx:xx] Opus 5 (verifier) — negative arm adjudicated: 35 usable negatives, probe fully staged for GPU
+
+Deepti labeled all 40 items **per excerpt** (three labels per row) rather than
+one per recording. That is better information than the sheet asked for: the rule
+"a negative must be negative at every listening length" was previously an
+assumption and is now measured. `scripts/parse_negative_labels.py` aggregates it,
+preserving her coin-toss markers (`a/b`) as SETS — an item is a clean negative
+only if no excerpt could be sahitya-bearing, which is deliberately conservative,
+since a false negative in the bluff denominator would flatter the pipeline.
+
+```
+=== per-item strata ===
+  no-sahitya   23
+  ooc          12
+  unusable      3
+  sung_unidentified 2
+NEGATIVE ARM: 35 items (30 with no coin-toss excerpt)
+
+=== ear label vs why it was sampled (blinding held during labeling) ===
+  absent_from_registry   no-sahitya=7  ooc=12  unusable=1
+  free_form              no-sahitya=16 sung_unidentified=2 unusable=2
+```
+The cross-tab is a validation, not a result: her ear and the filename sampler
+agree at a high rate, so the labels are not noise.
+
+**Design error of mine, corrected.** Asking for `ooc` by ear was wrong —
+catalog membership is a lookup over 8,688 registry rows, not something anyone
+can judge by listening, and Deepti flagged exactly this ("hard to compare
+against the catalog"). Fixed division of labour: her ear supplies the only thing
+an ear can, *is a composition being sung at all*; catalog membership is joined
+from the registry. OOC = ear says sung AND the filename is a composition title
+with no registry row.
+
+Second correction found while implementing: an item sampled as **free-form**
+whose ear label says "sung" **cannot** be called OOC. Its filename names a
+*section* (alapana/RTP/thani), not a work, so "no registry row for that
+filename" says nothing about whether the composition being sung is in the
+catalog. Those 2 items are now `sung_unidentified` and excluded rather than
+guessed — otherwise they would have inflated the OOC denominator with items
+that might be in-catalog.
+
+Staged: `duration_probe_cut.py --negatives` cuts the negatives with the same
+anchored nested design (stems `negNNNdDDD`), 175 windows, 6.4 h unique audio.
+Scorer now reads the aggregated strata and reports **no-sahitya and OOC bluffs
+separately** per METRIC_CONTRACT, alongside the combined rate.
+
+**Total GPU still to spend:** 17.4 h unique audio (11.0 pool at n=60 + 6.4
+negatives) ≈ 122 Whisper-hours at the retained 7-pass product config, plus
+Demucs. Colab, Deepti-run. Nothing committed.
+
+## [2026-07-28 02:15] Opus 5 (verifier) — negative arm red-team accepted: OOC arm INVALID, GPU run blocked
+
+GPT-5.6 reviewed the negative arm (`CODEX_NEGATIVE_ARM_REVIEW.md`). Verdict: do
+not spend the 122 Whisper-hours. I verified every falsifiable claim; all hold.
+
+**The OOC arm is not valid truth.** `NUM_PREFIX` strips only 1-3 digits, so
+7-digit Jamendo ids survive into the title: the 12 "OOC" titles include
+`4829 aswinsainarain`, `6717 Music NCBS`, and seven `Melakartha Chakkaram`
+lecture-demo tracks. Registry-lookup failure on those strings says nothing about
+the sung work. Verified in-catalog contamination, by resolving the manifest's
+`file_title_raw` instead of the filename:
+- neg001 `04_khamas_santanagopalakrishnam` -> **comp06603** `Santaana Gopaalakrshnam`
+- neg003 `04_kaanada_alaipayuthey` -> **comp00183** `alai pAyudE`
+- neg005 `...chinnanchiru-kiliye` -> **comp01145** `chinnam ciru kiLiyE`
+All three fail only *exact* skey match (transliteration variance:
+`krishnam`/`krSNam`, `payuthey`/`pAyudE`). They are in-catalog works counted as
+OOC. Cluster check also confirmed: the 12 come from **3** archive sources
+(melakartalecdems 7, jamendo-150288 3, jamendo-146935 2), not 12 independent
+works. **All 12 revert to `sung_unidentified` until the sung work is identified.**
+
+**The no-sahitya arm is 18, not 23.** Verified: `neg002`/`neg007` are retained
+from a single excerpt label; `neg006`/`neg013`/`neg034` are retained despite
+`unusable` excerpts, which can conceal sahitya. Only 18/23 have three
+unambiguous `no-sahitya` labels.
+
+**My design error, the one that costs Deepti time:** labeling excerpts were cut
+at fixed 15/50/85% positions, but probe windows are cut from a *random anchor*.
+2/23 no-sahitya and 3/12 OOC selected 300s windows **overlap none of the labeled
+excerpts**, so the labels partly describe audio that is never scored. Correct
+order is windows first, then labeling excerpts drawn from inside the selected
+300s window. Only the 300s window needs adjudication since the rest nest in it.
+
+**Power (their numbers, spot-checked: 5 one-way flips of 35 gives exact
+one-sided p=2^-5=0.031, correct).** Combined n=35 has ~62% power at +15pp under
+the *favourable* monotone assumption; no-sahitya n=23 has 25.6%; OOC n=12 has
+2.4%. ~44 valid independent items is the optimistic floor for 80% power.
+
+**Adopting their recommendation #5:** spend negative compute on the **30s/300s
+endpoints only**. 88 items x 2 endpoints is ~8.1 h unique audio (~56
+Whisper-hours) versus 45 Whisper-hours for the current 35 items x 5 durations —
+nearly the same cost for 2.5x the items. Intermediate negative durations become
+a non-gating diagnostic. The scorer also still lacks a negative-arm validity
+gate and decision rule; both are required before any safety claim.
+
+GPU run is blocked. Nothing committed.
+
+## [2026-07-28 02:24] Opus 5 (workhorse) — registry junk-row filter built + A/B'd; the DRAFT's "harmless" claim is FALSE
+
+Brief: read `data/registry_junk_blocklist_DRAFT.md` + `data/composition_registry.json`,
+build and test a junk-row filter. `identify_clip.py`, `scripts/duration_probe_*`
+and `data/duration_probe/` untouched, as instructed.
+
+### Built (nothing wired in; `identify_clip.py` is byte-unchanged)
+
+- **`scripts/registry_junk_filter.py`** — rule-based detector. A hard evidence
+  gate (zero composers AND zero karnatik pages AND `has_lyrics` false) sits
+  behind nine named rules: `raga_is_date`, `raga_is_role`, `title_address`,
+  `title_broadcast`, `title_concert`, `title_venue`, `title_tape_catalog`,
+  `title_perf_note`, `title_prose`. Rows are re-derived from the registry, not
+  hard-coded by id, so the detector survives the rebuild that would reshuffle
+  every `comp#####` (§4.18). Also exposes `blocklist_ids()` / `filter_targets()`.
+- **`data/registry_junk_blocklist.json`** — the machine-readable review. 52
+  rows: 19 `status=drop` (the DRAFT's confident table, verbatim) and 33
+  `status=review` (the DRAFT's 5 borderline + 28 new detections). Only `drop`
+  is ever filtered.
+- **`tests/test_registry_junk.py`** — 17 tests. With the stock suite:
+  `venv_train/bin/python -m pytest tests/test_clip_policy.py tests/test_registry_junk.py -q`
+  → **47 passed, 1 xfailed** (the stock 30+1 is unchanged).
+- **`scripts/registry_junk_ab.py`** — three-pass A/B through the real policy
+  (`assess_variants` on `variants_from_v2`), differing only in which registry
+  rows are in `targets`.
+
+### The measurement (verbatim, whisper backend, 106 clips)
+
+```text
+clips 106  |  registry entries in matcher 8679
+blocklist: drop 19 (19 present in targets), review 33 (33 present)
+
+===== baseline (full registry) =====
+composition top-1 8/78  top-5 21/78
+OOC reject  21/28  (bluffs: 7)
+precision@coverage: 8/47 correct (17% precision at 44% coverage)
+
+===== drop only =====
+composition top-1 8/78  top-5 21/78
+OOC reject  21/28  (bluffs: 7)
+precision@coverage: 8/46 correct (17% precision at 43% coverage)
+
+===== drop + review =====
+composition top-1 8/78  top-5 21/78
+OOC reject  21/28  (bluffs: 7)
+precision@coverage: 8/46 correct (17% precision at 43% coverage)
+
+--- baseline occupancy of flagged rows ---
+  Tulasi Bilva__Kēdāragauḷa  answered=True tier=medium top=0.551
+    rank 1: comp01203 'Concerts from his US tour of 1983'
+  sogasugA mrudanga__Sriranjani  answered=True tier=medium top=0.701
+    rank 2: comp03790 'Long Alapana (lead up to RTP)'
+  2 clip(s) show a flagged row anywhere in top-5
+
+--- drop only: per-clip diff vs baseline ---
+  Tulasi Bilva__Kēdāragauḷa
+    base  medium 0.551  ['comp01203', 'comp08645', 'comp04388', 'comp04389', 'comp00147']
+    after none   0.000  []
+  verdict: scoreboard MOVED; 1 clip(s) with a top-5 change
+```
+
+The harness reproduces the recorded whisper baseline exactly (8/78, 21/78, OOC
+21/28, 17% @ 44%), which is what licenses the rest of the numbers.
+
+### The finding: the DRAFT is wrong about impact, in the direction that matters
+
+The DRAFT asserts these rows "only surface at score ~0.0, below
+`MIN_ANSWER_SCORE`" and that removing them is "precision hygiene, not a
+capability change". Measured: **`comp01203` "Concerts from his US tour of 1983"
+was the rank-1, `tier=medium`, score **0.551** answer for
+`Tulasi Bilva__Kēdāragauḷa`** — a real in-catalog clip. That is a confident
+user-facing wrong answer produced by a scraper artifact, not a cosmetic 0.0.
+Dropping the row makes the clip abstain outright (the rest of its list falls
+below `MIN_ANSWER_SCORE`), converting a wrong answer into an honest silence.
+
+So the correct verdict is narrower than "no change" and better than "cosmetic":
+**top-1, top-5 and OOC rejection are all unchanged; coverage drops 47→46 by
+deleting exactly one wrong answer.** Under METRIC_CONTRACT's precision framing
+that is a strict improvement — the only thing it removes is a bluff. It is
+still not a capability change and it graduates nothing.
+
+`drop + review` adds no further scoreboard movement; its only effect is
+shuffling `comp03790` out of `sogasugA mrudanga`'s rank 2.
+
+### New junk the DRAFT missed (28 rows, all `status=review`)
+
+Largest family: **20 artist-index headings parsed as compositions** —
+`M S Subbalakshmi`, `Madurai Mani Iyer`, `G N Balasubramaniam`,
+`D K Pattammal`, `Ariyakudi Ramanuja Iyengar`, … — detected because their
+`ragas` slot holds a performance role (`Vocal`, `Gottuvadyam`, `Dance Music`)
+rather than a raga. `raga_is_role` fires on 20/20 of these and on **zero** of
+the 7,361 evidence-backed rows. Remainder: `Alapana`, `Alapana & tanam`,
+`tAnam and pallavi`, `Unidentified`, `Kapali Koil`, `Krishna Gana Sabha`,
+`At Vadapazhani Murugan Koil`, `Boston (low recording levels)`, and the
+scraper artifact `Below are the recordings in no particular order`.
+
+### Two false positives found and killed during development
+
+An early leading-city rule swallowed `Bangalore Thaye Dharini` (comp00837),
+`Bangalore Thaye Dharini sujana jeevana` (comp00838) and `Coimbatore Thaye`
+(comp01200) — real kritis wearing a performer's city prefix. The bare-city arm
+is now anchored at both ends, and all three are pinned in the test's
+`MUST_KEEP` list so the rule cannot regress into them again.
+
+### Open questions for Deepti (flagged, not self-adjudicated — §4.20)
+
+1. **`comp01994` "G 2437-B JM 2373 bhananevaye" is the one `drop` row with a
+   real recall cost.** No other registry row carries the token `bhananevaye`
+   (`grep` → this row only), so dropping it deletes that title's only carrier.
+   The DRAFT flagged it confident-drop while noting the doubt. Left at `drop`
+   to stay faithful to the review, with the caveat recorded in the row's
+   `note` field. Demote to `review`, or re-title the row instead of dropping?
+2. **The 33 `review` rows** — chiefly: do the 20 artist-index headings drop
+   (they are unambiguously not works), and do RTP/alapana performance items
+   stay as catalog rows?
+3. **Applying the blocklist** is still unwired and Deepti-gated. Wiring it is a
+   ~2-line merge at load time in `load_targets`, mirroring the Rung 2
+   `karnatik_link_overrides` pattern — never a registry rebuild (§4.18).
+
+### Cross-checks
+
+No flagged row is a wild-set truth id (0 overlap with 87 truth ids). No overlap
+with `data/workfamily_candidates.json` (109 ids) — the junk-row and work-family
+hygiene lanes are disjoint. Nothing committed; tree left for Deepti.
+
+## [2026-07-28 02:45] Opus 5 (verifier) — negative arm REBUILT: title extraction repaired, OOC stratum proven empty, negative gate frozen
+
+`HANDOFF_SESSION_0728.md` §7 executed. The GPU run is still not authorized —
+it now waits on Deepti's labeling pass, not on a design defect. Nothing
+committed.
+
+### §7.1 Title extraction repaired; pool delta is ZERO
+
+`NUM_PREFIX` stripped only 1-3 digits, so seven-digit Jamendo ids survived into
+the title (`1224830 aswinsainarain.mp3` → `4830 aswinsainarain`) and their
+registry lookups failed for reasons unrelated to the audio. Extraction moved to
+a new `scripts/duration_probe_titles.py`: any number of leading digits and
+archive track ranges are stripped, and `download_manifest.json`'s
+`file_title_raw` supplies the title when the filename is demonstrably not one
+(stripped 4+ digit id, `Track 02` / `Concert 163` / `A` / `xxxx`, too short).
+Provenance across 1,238 files: filename 1222, manifest_segment 8, manifest_raw
+5, unrecoverable 3.
+
+Republished pool, verbatim:
+
+```
+=== POOL CONSTRUCTION (distinct title keys: 923) ===
+  matched_but_no_lyrics            505
+  RESOLVED                         271
+  too_short                        117
+  no_registry_match                 30
+resolved pool: 271 titles
+  5 carry a work-family id set (>1 registry row)
+  100 distinct archive clusters (118 unknown)
+```
+
+Delta against the pre-registered 922/505/271/117/29: distinct keys +1,
+`no_registry_match` +1, everything else unchanged. **Not one title entered or
+left the pool.** The handoff predicted the count might move upward; it did not,
+and that is stated rather than assumed. Thirteen id-mangled keys were replaced
+by real titles (`alaipayutey`, `cinnancirukiliye`, `santanagopalakrisnam`,
+`irakkam`, `muralidara`, `cinnancirupennpole`, …), all landing in
+`no_registry_match` — they are negative-arm candidates, not pool members.
+
+Two extra defects found and fixed en route: `Alapana.mp3` resolved to
+`comp00196` (canonical "Alapana", 19 ragas, no lyrics — already on the junk
+blocklist) and `rAgam tAnam pallavi.mp3` to `comp06030`. Section names can no
+longer resolve to works. **`comp06030` "Ragam Thanam Pallavi" is NOT on
+`data/registry_junk_blocklist.json` and should be** — flagged for Deepti, not
+self-adjudicated.
+
+### §7.2 Transliteration variance — asymmetric by construction
+
+Two keys, and the asymmetry is the whole point. Exact `skey` plus a
+hand-reviewed alias table (`data/duration_probe/title_aliases.json`, currently
+empty) is the ONLY route into truth. A relaxed consonant-skeleton key `cskel`
+(drop vowels, unify voicing d/t b/p g/k j/c, unify nasal m/n, collapse
+gemination, edit distance ≤ 1) may only ever **disqualify** an OOC candidate.
+Over-matching then costs sample size and never validity.
+
+Calibration on the three contaminated items the red team named — all three
+resolve, on the ids it named: `santanagopalakrishnam` → comp06603,
+`alaipayuthey` → comp00183, `chinnanchiru kiliye` → comp01145/comp01147.
+
+False-merge audit published (`data/duration_probe/TITLE_RESOLUTION_AUDIT.md`):
+of 8,058 consulted skeletons, 388 cover more than one registry id, touching 910
+of 8,688 rows (~4.8%). Zero names already collide under exact `skey`.
+
+### §7.3 The OOC stratum is EMPTY — a finding, not a sampling failure
+
+Of 1,238 recordings: 1,175 resolve exactly, **16 resolve only under the relaxed
+key**, 36 are free-form sections, 11 resolve to nothing. The 16 relaxed-only
+matches are exactly the ones the old arm was free to call OOC — the three the
+review named, plus seven `melakartalecdems` lecdem tracks, `mangalam`,
+`muralidhara`, `tOm tOm tadhara`.
+
+The 11 survivors are `G C-8-13781 13162o`, `HMV P 5866 G C -8-10152`,
+`Melakartha Chakkaram`, `B - Karaharapriya`, `A - Saveri`, `SSI`, `xxxx`,
+`varnam vasantha`, `SN 501`, `IMCpresents-In-Memoriam-…`, `G C-8-13782 13163o`.
+**Not one names a composition.** They are upload ids, shellac catalogue
+numbers, archive slot names, and a genre paired with a raga. None can be
+verified absent from a catalog that was itself partly built from these
+filenames.
+
+So OOC abstention at 300s is **unmeasurable from assets on disk**. `~/sung_tests`
+holds 28 reviewed OOC clips but its longest is 84s, so it cannot supply a 300s
+endpoint either. Recorded in `data/duration_probe/verified_ooc.json`; an item
+reaches the `ooc` stratum only through that reviewed file. Everything else that
+carries sung words and resolves to nothing is `sung_unidentified` — reported,
+never gating.
+
+### §7.4-7.5 Arm rebuilt: endpoints only, windows first, sweep of the window
+
+`scripts/build_negative_arm.py` rewritten. 30s/300s only. Windows are cut
+**first**; the labeling audio is then drawn from **inside the selected 300s
+window**, which was the ordering error that left 5 of the old items labeled on
+audio the pipeline never saw. Only the 300s window needs a label, since the 30s
+window nests at its start.
+
+Each item gets one `_scan.wav`: 10s every 20s of the scored window, cut from the
+window wav itself — 150s of listening, 50% duty cycle, no unheard gap over 10s.
+The old three 20s excerpts covered 20% of a window and could not support "no
+sahitya anywhere in it". The ear is asked a binary question (`sahitya` /
+`no-sahitya` / `unusable`); catalog membership is a join. `unusable`,
+coin-tosses and blanks all become **unknown**, never no-sahitya.
+
+Sources, capped at one item per archive cluster so 7 lecdem tracks cannot pose
+as 7 works: 34 free-form (a census of the entire free-form supply), 30 opening
+windows of long in-catalog recordings, 6 unidentified. Total 70 items, 140
+windows, 6.4 h unique audio ≈ **45 Whisper-hours** — the same bill as the old
+35-item × 5-duration arm, for twice the items.
+
+The opening source is new. `data/concert_audio` holds only 36 free-form files,
+capping the gating stratum at ~34, which rules out +15pp only if at most ONE
+item bluffs. Long recordings open with alapana, there are 227 of them over 177
+clusters at ≥900s, and their first 300s is the most product-relevant negative
+there is — it is what Jon hears if he opens the app before the kriti starts.
+Anchor choice cannot bias this arm, because eligibility is decided by
+adjudicating the very window that is scored.
+
+v1 labels preserved at `data/duration_probe/v1_superseded/` and explicitly not
+reusable.
+
+### §7.6-7.7 Negative gate frozen; the arms are no longer called "paired"
+
+Detection at +15pp needs ~44 items that flip and no corpus here promises them,
+so the rule is an **upper-bound claim**, which is the option the handoff named.
+Estimand: change in answer rate 30s→300s among ear-confirmed no-sahitya
+windows. Statistic: `b` = abstain@30 → answer@300; reverse flips reported but
+excluded from the bound. SAFE iff the one-sided exact 95% Clopper–Pearson upper
+bound on `b/n` is below +15pp. Reproduces the review's thresholds (<15pp at
+n≥19/b=0, n≥30/b=1, n≥40/b=2). At n=48: safe through b=2 (12.5pp), fails at
+b=3 (15.4pp).
+
+Negative validity gate added: sidecar↔result bijection, duplicates, cache
+misses, every window carrying a stratum, `labels_applied`, registered durations,
+`expected_windows`, identical item sets at both endpoints. Invalid negative data
+**suppresses the safety conclusion**.
+
+Combination rule registered and the word "paired" retired for it: recall is a
+change in top-5 hit rate among eligible in-catalog works, bluffing is a change
+in answer rate among negative queries, and differencing them assumes equal
+prevalence and cost, which is not registered. The verdict is a **conjunction** —
+PROMOTE needs recall PROMOTE *and* safety SAFE; recall PROMOTE with safety
+unestablished is **HOLD**, and does not authorize showing results to a user.
+
+Scorer smoke-tested end to end on synthetic results, including the invalid path
+(empty negative results → arm invalid → safety suppressed → combined verdict
+degrades correctly).
+
+### §7.8 The ask
+
+`data/duration_probe/negative_arm/LABELING_SHEET.md`, 70 blind rows, sources
+shuffled together. Partial labeling is valid: unlabeled rows are unknown and
+the order is random, so stopping early yields a smaller experiment, not a broken
+one. ~40 confirmed no-sahitya rows survive one surprise answer, ~55 survive two.
+Estimated well under the nominal 175 min, since a row ends the moment she hears
+singing.
+
+`DURATION_PROBE_PREREGISTRATION.md` amended before any audio is transcribed: §1
+republished, §6 replaced wholesale, §6b/§6c new. §§2-5, §7 untouched.
+
+### Pending Deepti
+
+1. The labeling pass above.
+2. **Prospective OOC audio** — the only way to measure OOC abstention at length.
+   Needs recordings ≥300s with trustworthy titles verifiably absent from the
+   registry (film songs, bhajans, Hindustani). Not started: acquiring a corpus
+   is her call.
+3. `comp06030` "Ragam Thanam Pallavi" onto the junk blocklist review list.
+4. Final n for the recall arm (271 available; n=60 ≈ 77 Whisper-hours).
+5. Red team: `CODEX_NEGATIVE_ARM_REBUILD_BRIEF.md` is written and ready to hand
+   to GPT-5.6. That loop has caught something serious both times; do not spend
+   GPU before it runs.
+
+## [2026-07-29] Opus 5 (verifier) — negative-arm labels returned: n=51 gating items, arm survives 3 bluffs
+
+Deepti labeled 69/70 rows of the rebuilt sheet. `parse_negative_labels.py`
+output, verbatim:
+
+```
+sheet rows with a label: 69/70
+
+=== per-item strata ===
+  no-sahitya             51
+  sung_unidentified       9
+  in-catalog              8
+  unknown                 2
+
+=== stratum vs why it was sampled (blinding held while labeling) ===
+  free_form_candidate      no-sahitya=26  sung_unidentified=7  unknown=1
+  opening_candidate        in-catalog=8   no-sahitya=21       unknown=1
+  unidentified_candidate   no-sahitya=4   sung_unidentified=2
+
+GATING STRATUM (no-sahitya): 51 items over 51 clusters
+NON-GATING (sensitivity): 9 items (sung_unidentified)
+```
+
+Sidecar checks pass: `labels_applied` true, 140/140 windows, item sets
+identical at both endpoints, one item per cluster with no cluster repeated.
+
+**n=51 under the §6b rule** — upper bound 5.7pp at b=0, 9.0 at b=1, 11.8 at
+b=2, **14.5 at b=3**. The arm now survives three surprise answers; the
+free-form-only design survived one. The opening-window source contributed 21 of
+the 51, which is what bought the margin.
+
+Yield ran high in both sources: 26/34 free-form and 21/30 openings came back
+no-sahitya. The 7 free-form items she heard singing in are RTP files (her
+notes: *"might be a RTP"*, *"Pretty sure this is a RTP"*) — an RTP has a sung
+pallavi by definition, and the code correctly refuses to call them OOC.
+
+Two labeling details recorded, neither reclassified by me:
+
+- `neg004` — `no-sahitya`, noted *"this is tanam, so it has some characters but
+  no actual sahitya"*. Matches the sheet's definition.
+- `neg030` — `sahitya`, noted *"has swara in it"*. The sheet lists swaram under
+  `no-sahitya`. Left as labeled: it only shrinks the gating stratum, which is
+  the safe direction. But it is a real definitional question and is in the red
+  team brief — whether "swaram alone" counts as no-sahitya for a *lyrics*
+  matcher is not obvious, since Whisper will transcribe solfège as words.
+
+Negative arm is complete and staged. No GPU spent. Next gate is the red team
+(`CODEX_NEGATIVE_ARM_REBUILD_BRIEF.md`, updated with the realized numbers),
+then the Colab runner, then Deepti runs it.
+
+## [2026-07-29 00:55] Opus 5 (workhorse) — negative arm repaired pre-GPU: second sweep cut, validity gate closed, per-source readout added
+
+Executing `WORKHORSE_NEGATIVE_ARM_REPAIR_BRIEF.md` against
+`CODEX_NEGATIVE_ARM_REVIEW_R2.md`. **No GPU spent. Nothing committed.**
+`build_negative_arm.py` was NOT re-run, so Deepti's 69 sheet-1 labels are
+intact. `identify_clip.py` is byte-unchanged (`git diff --stat` empty);
+`HANDOFF.md` untouched (its modification predates this session).
+
+### T1 — complementary sweep (the long pole; Deepti is unblocked)
+
+`scripts/build_negative_complement.py` cuts the 150s sheet 1 never played
+(10-20, 30-40, …, 290-300) from the **existing** `negatives/<item>d300.wav`
+files, so the ear still hears literally the samples the pipeline will be given.
+Coverage is asserted in code, not eyeballed: sweep 1 ∪ sweep 2 must tile
+[0, 300) with no gap and no overlap, and the script raises before writing
+anything if it does not.
+
+Delivered: **51 `_scan2.wav` files, every one 150.000s**, plus
+`data/duration_probe/negative_arm/complement/LABELING_SHEET_2.md` (51 rows,
+reshuffled under a new seed so sheet-1 order carries no information) and
+`_mapping2.json`. Worst-case listening 128 min, matching the review's estimate.
+
+`parse_negative_labels.py` now reads both sheets. `sahitya` on **either** sweep
+settles an item as sung — singing heard cannot be un-heard by the other half;
+`no-sahitya` requires **both**; blank, `unusable`, coin-toss, or a sweep never
+offered is `unknown`. `labels_given_1` and `labels_given_2` are stored
+separately, and the parser prints a sweep-1 × sweep-2 cross-tab that names
+exactly which items sheet 1 alone would have gated on. With sheet 2 missing the
+parser **exits non-zero** rather than silently reproducing the old stratum;
+`--allow-single-sweep` exists for inspection and stamps `sweeps_applied: 1`,
+which the scorer rejects.
+
+**Realized effect, as expected and in the correct direction:** the gating
+stratum is now **0** until sheet 2 comes back. All 51 items sit at
+`sweep1=no-sahitya, sweep2=unknown`. The 17 `sahitya` and 2 `unknown` items are
+unaffected, since neither depended on a second sweep. `negative_labels.json`
+and `truth_negatives.json` were regenerated so that nothing on disk asserts a
+51-item gating stratum the review showed is not established.
+
+One design detail worth recording: `build_negative_complement.py` selects on
+the **sweep-1 verdict**, not on the final stratum. Selecting on `stratum` would
+have made the script erase its own input the moment the two-sweep rule took
+effect.
+
+### T3 — validity gate closed, one test per named hole
+
+All seven holes in `validate_negatives()` are closed, each with its own test in
+`tests/test_negative_arm.py`:
+
+1. frozen `DESIGN_DURATIONS = (30, 300)`, exact match required — a 300s-only
+   sidecar used to validate, making `short == long`, `b == 0` and printing SAFE
+   at 5.7pp off an experiment with no contrast in it;
+2. exactly one sidecar row per `(item, duration)`;
+3. an item must carry the same stratum at both endpoints;
+4. `n_items`, `seed`, `stratum_counts` and gating-stratum cluster uniqueness
+   checked against the windows actually present;
+5. `cache_v2` must be present and in `{hit, MISS}` — absent or malformed passed;
+6. `composition_confidence` must be present and in `{none, low, medium, high}`.
+   The test `test_hole6_a_run_that_produced_nothing_cannot_read_as_zero_bluffs`
+   pins the whole failure: strip the field from every row and `b == 0` — it
+   looks perfectly safe, and is now refused;
+7. `scripts/stamp_negative_shas.py` (new, write-once, **never writes audio**)
+   stamped `audio_sha256` into all 140 windows; the scorer re-hashes at read
+   time. Swapped audio behind a correct filename, and absent audio, both now
+   fail. `--cache-v2` is keyed by the same hash, so labels and transcripts bind
+   to one artifact rather than to a convention.
+
+Verified against the real staged sidecar with a synthetic all-abstain result
+set: **zero validator errors**.
+
+### T2 — per-source readout, and both candidate gates printed
+
+`negative_transitions()` takes an optional `candidate_kind`; `report_by_source()`
+prints the gating stratum split by source with each source's own n, b, r, exact
+bound and power table. This is what §6 has promised since 2026-07-28 and the
+scorer never did.
+
+Smoke test on synthetic data, 3 planted bluffs (2 free-form, 1 opening),
+reproduces the review's worked example exactly:
+
+```text
+  source                      n   b   r       UB
+  free_form_candidate        26   2   0    22.3pp
+  opening_candidate          21   1   0    20.7pp
+  unidentified_candidate      4   0   0    52.7pp
+  ...
+  A  source-specific conjunction  -> NOT ESTABLISHED
+  B  pooled / frozen mixture      -> SAFE  (UB 14.5pp on n=51)
+  !! THE TWO RULES DISAGREE — this is exactly the case the review predicted.
+```
+
+**The gate itself is not frozen here** — it is a pre-registration change and
+Deepti's call. Rule B (pooled) remains the applied rule; rule A is computed and
+printed beside it, and disagreement is flagged loudly.
+
+### T4 — verdict narrowed
+
+The PROMOTE string now reads "*no-sahitya* bluff rise" and prints an explicit
+scope block: OOC abstention at length is unmeasured, a pass licenses duration as
+an archive-domain **research** lever, and it does not authorize showing results
+to a user. `DURATION_PROBE_PREREGISTRATION.md` §6c row 1 is narrowed to match —
+it previously contradicted §7 and the scorer followed the wrong half. The
+statistics are untouched.
+
+§6b's stale rationale is corrected: detection is no longer "unreachable" —
+n=51 has ~90% power against a true +15pp rise under the no-reverse-flip model.
+The upper-bound framing stays because it is the more useful question, but it is
+now recorded as a choice rather than a necessity.
+
+### T5 — worst case on the unknowns, beside the headline
+
+`report_unknown_sensitivity()` prints `b+k / n+k` for the k `unknown` items,
+labelled as informative missingness rather than random loss. Reproduces the
+brief's arithmetic: 2 unknowns on a hypothetical b=2/n=51 gives 4/53 →
+**16.4pp**, which does not clear +15pp. The observed bound stays the headline;
+the sensitivity is printed immediately below it, never buried.
+
+### T7 — the small fixes
+
+- `duration_probe_cut.py --dry-run` no longer writes
+  `data/duration_probe/pool_report.json`; it prints the report to stdout.
+  Verified: after a dry run the file is byte-identical (`shasum -c` OK).
+- `data/duration_probe/TITLE_RESOLUTION_AUDIT.md` now publishes all **16**
+  relaxed-key-only resolutions with a verdict each, regenerated from the live
+  resolver: **2 true** (`alaipayuthey`, `chinnanchiru-kiliye`), **1 plausible
+  but unresolvable** (`muralidhara`), **13 false** — including
+  `B - Harikambhoji` → `muruganai bhaji` and all eight `Melakartha Chakkaram`
+  lecdem variants, which collapse onto only four id-sets. The most informative
+  false match is `nI nAma rUpamulaku nitya`: a genuine sung line with **no**
+  registry row at all (searched: no `nAma rUpamula*` row exists) excluded from
+  the OOC stratum by collision with two unrelated works. Written up with the
+  completeness caveat — relaxed matching establishes the specificity of retained
+  OOC cases, never the absence of OOC audio, and short vowel-heavy genuine OOC
+  titles are systematically what it over-matches.
+- The GPU bill is now **computed and printed** by the parser, not hard-coded:
+  **62 items × 330s = 5.7 h unique audio ≈ 40 whisper-hours** at the 7-pass
+  config, excluding the 8 `in-catalog` items that feed no registered readout.
+  The 2 unknowns are kept deliberately, so T5's worst case is an observation
+  rather than an assumption.
+
+### T6 — audited, not decided
+
+Scanned every label note in sheet 1 for swaram/tanam/jati language. Result:
+**`neg030` is the only `sahitya` row that needs the definition call** ("has
+swara in it"). `neg008` ("end is tanam") and `neg004` ("this is tanam, so it
+has some characters but no actual sahitya") are both labeled `no-sahitya`,
+consistent with the sheet, and need nothing.
+
+Adjacent observation, flagged not acted on: three rows are labeled `sahitya`
+with hedged RTP notes — `neg037` "might be a RTP, hard to tell", `neg028`
+"Pretty sure this is a RTP", `neg058` "might be an RTP" — plus `neg056`
+"lyrics are stretched, so its a little hard to identify". A full RTP does carry
+sahitya in its pallavi, so `sahitya` is right, and hedged labels exclude these
+from gating, which is the conservative direction. No change made.
+
+Still Deepti's, untouched: `neg030`'s definition, the T2 gate choice,
+prospective long OOC audio, the 28-clip short-OOC sentinel (must be
+pre-registered as non-gating before it is built — recomputed here with the
+repo's own function: n=28 gives 10.1pp at b=0 and 15.9pp at b=1, so the
+review's "10.2" was slightly off), and the commit.
+
+### Verification
+
+`venv_train/bin/python -m pytest tests/test_negative_arm.py
+tests/test_registry_junk.py tests/test_clip_policy.py -q` → **87 passed,
+1 xfailed**; the stock 30+1 is unchanged. Every falsifiable number in the
+brief was recomputed with `clopper_pearson_upper` before use and all
+reproduced: 16.4 / 10.9 / 13.3 / 14.5 / 27.2 / 32.9 / 10.1 / 15.9.
+
+**Next:** Deepti labels `LABELING_SHEET_2.md`, then
+`scripts/parse_negative_labels.py` re-runs and prints the realized gating n.
+The Colab runner comes after that, not now.
+
+## [2026-07-29 12:20] Opus 5 (verifier) — sheet 2 returned, gating n=49, rule A frozen, recall n=60
+
+Deepti labeled `LABELING_SHEET_2.md` 51/51 and `parse_negative_labels.py` was
+re-run. Output, verbatim:
+
+```
+=== sweep 1 vs sweep 2 (the second sheet is what this buys) ===
+  sweep1=no-sahitya   sweep2=no-sahitya    49
+  sweep1=sahitya      sweep2=not-offered   17
+  sweep1=no-sahitya   sweep2=sahitya        2   <-- sheet 1 alone would have gated this
+  sweep1=unknown      sweep2=not-offered    2
+
+GATING STRATUM (no-sahitya): 49 items over 49 clusters
+NON-GATING (sensitivity): 10 items (sung_unidentified)
+
+=== REALIZED GPU BILL (items feeding a registered readout) ===
+  61 items x 330s = 5.6 h unique audio ~= 39 whisper-hours at the 7-pass config
+```
+
+**The second sweep was not a formality.** `neg053` and `neg020` (her note on the
+latter: *"has some swara and lyrics"*) carry singing that lived entirely inside
+the 150s sheet 1 never played. Four percent of the single-sweep gating stratum
+was contaminated — `CODEX_NEGATIVE_ARM_REVIEW_R2.md` P0-1 realized rather than
+argued. Gating n 51 → 49 (25 free-form, 20 opening, 4 unidentified), and the
+pooled margin fell from three tolerable surprises to two (b=3 is now 15.1pp,
+which does not clear +15pp).
+
+Workhorse output verified before the parser was run: `git diff --stat
+identify_clip.py` empty, `pytest tests/test_negative_arm.py
+tests/test_registry_junk.py -q` → 57 passed.
+
+### Deepti's three decisions, now frozen in the pre-registration
+
+1. **Rule A, source-specific gate.** SAFE requires the bound below +15pp pooled
+   *and* for every source with n ≥ 20 — free-form (n=25) and opening (n=20).
+   Operationally zero new bluffs in each; one bluff in either fails the arm
+   (25: 11.3 → 17.6pp; 20: 13.9 → 21.6pp). The pooled bound is still printed but
+   no longer decides anything: it bounds a 25:20:4 mixture whose weights came
+   from sampling quotas and labeling yield, and nobody has an argument for those
+   weights. §6b rewritten; the power table is now realized-n and per-source.
+2. **`neg030` stays `sahitya`, n stays 49.** Asked to adjudicate her note *"has
+   swara in it"*, she explained it meant swarakalpana — solfège alternating with
+   the composition's sahitya line, call and response. So the label was right and
+   **the labeling sheet's own definition was wrong**: both sheets list bare
+   `swaram` under `no-sahitya`. Recorded in §6 with the correction a future sheet
+   must carry, and queued for the graveyard. This is the second time a musician's
+   reading of a category has caught a defect an engineer's taxonomy introduced.
+3. **Recall arm n = 60** — ~77 Whisper-hours plus Demucs, ≈116 total with the
+   negative arm's 39.
+
+### Verifier-seat edits (docs only, no code)
+
+`DURATION_PROBE_PREREGISTRATION.md`: §6 gains the realized two-sweep outcome and
+the swaram definition correction; §6b freezes rule A, replaces the hypothetical
+power table with the realized per-source one, and corrects the stale n=51 power
+line to n≈49. `CODEX_NEGATIVE_ARM_REVIEW_R2.md` was created earlier this session
+because the round-2 review existed only inside the Codex session transcript —
+the brief never named an output file, so it would have been lost.
+
+**Next:** `WORKHORSE_PROBE_LAUNCH_BRIEF.md` — flip the scorer to apply rule A,
+cut the recall arm at n=60, then build the resumable Colab runner. Deepti runs
+the GPU. Recommended in parallel: a short GPT-5.6 pass scoped to the diff only
+(the two-sweep rule and the source-specific gate are new and unreviewed).
+
+---
+
+## 2026-07-29 — Probe launch: rule A applied, recall arm cut at n=60, Colab runner built (Opus 5 workhorse)
+
+Executed `WORKHORSE_PROBE_LAUNCH_BRIEF.md` L1-L4. `git diff --stat
+identify_clip.py` empty throughout. Nothing committed, no GPU spent, no
+production default touched. `pytest tests/test_clip_policy.py
+tests/test_registry_junk.py tests/test_negative_arm.py -q` → **95 passed, 1
+xfailed** (was 87 + 1; the negative-arm file grew 40 → 48 tests).
+
+### L1 — the scorer now applies rule A, not the pooled bound
+
+`scripts/duration_probe_score.py`:
+
+- `source_gate_verdict()` decides `safety_holds`. The pooled bound is computed
+  and printed immediately beside it, labelled REPORTED, NOT GATING, and the
+  frozen-rule block now states rule A rather than the pooled rule.
+- The disagreement flag is reversed: it fires when the pooled bound would have
+  passed a run that rule A refuses — the case the gate exists for — and prints
+  it as three unmissable lines. The reverse ordering (A passes, pooled does not,
+  reachable when new bluffs land in the sub-threshold `unidentified` source) is
+  flagged separately as unusual rather than silently ignored.
+- `SOURCE_MIN_N = 20` moved above the validator and re-documented as a
+  registered constant citing §6b, not a tunable.
+- **A gating source that disappears now suppresses.** `_verify_gating_sources()`
+  checks the sidecar's `gating_source_counts` against the windows actually
+  present, refuses a registered n ≥ 20 source that is absent from the sidecar,
+  and refuses one whose items are not paired in the results. Rule A is a
+  conjunction over whatever sources come back, so a lost source would otherwise
+  have dropped out of the conjunction silently and the survivors would have
+  granted a SAFE the design never authorised.
+- `parse_negative_labels.py` stamps `gating_source_counts` (free-form 25,
+  opening 20, unidentified 4) so that expectation lives in the sidecar. Re-run
+  verified additive: the 140 window records are byte-identical.
+
+Verified against the real staged sidecar with a synthetic all-abstain result
+set: **zero validator errors**, free-form UB 11.3pp, opening UB 13.9pp, pooled
+5.9pp, `APPLIED (rule A): SAFE` — the numbers the brief predicted.
+
+**One finding worth Deepti's attention.** The unknown-item sensitivity is now
+also reported under the applied gate, and it does not survive it. The two
+`unknown` items are one free-form and one opening, so the worst case moves each
+gating source to b=1: free-form 1/26 → 17.0pp, opening 1/21 → 20.7pp, **NOT
+safe**, where the pooled worst case (2/51 → 11.8pp) reads "still safe". Rule A
+is strict enough that the arm has no margin for the two unlabelable items. This
+is a property of the frozen design, not a defect, and it is now printed rather
+than left to be discovered after the run.
+
+### L2 — recall arm cut
+
+Dry run at `--n 271` reconciles exactly with pre-registration §1: 923 distinct
+title keys, 505 matched-but-no-lyrics, **271 RESOLVED**, 117 too short, 30 no
+registry match; 5 work-family id sets, 100 archive clusters. Pool has not
+drifted, and the dry run wrote nothing (`pool_report.json` mtime unchanged).
+
+`duration_probe_cut.py --n 60 --arm anchored`: **300 windows, zero cut
+failures**, 11.0 h unique audio. Verified: 60 distinct titles × exactly 5
+windows, identical title sets at every duration, one anchor per title, 300 wavs
+on disk in bijection with the sidecar, none empty, all 16 kHz mono. Nesting
+checked at sample level — the 30s window is an exact PCM prefix of the 300s
+window (a byte-level check on the file fails only because ffmpeg's WAV headers
+differ in length; the samples are identical).
+
+`stamp_negative_shas.py` gained `--arm {negatives,anchored,prefix}` and stamped
+all 300 recall windows. `duration_probe_score.validate()` (the §5 recall gate)
+now re-hashes them exactly as §6b does for the negatives, via a shared
+`_verify_audio()`. Three tests pin it: stamped validates, unstamped is refused,
+a re-cut window behind a correct filename is refused.
+
+### L3 — the Colab runner
+
+`colab_duration_probe.py` plus `scripts/build_probe_colab_bundle.py` and
+`scripts/merge_asr_cache_v2.py`. Deepti runs it; the deliverable is a notebook,
+not an executed run.
+
+- **Resumable by re-derivation, not by bookkeeping.** Every pass hashes each
+  window, looks up `cache2_key`, and transcribes only misses; the cache is
+  copied to Drive after every 10-window chunk. Interrupting costs at most one
+  chunk. Chunks are staged as symlink directories and handed to
+  `scripts/build_asr_cache_v2.py` itself, so the registered builder is what
+  runs.
+- **Verified locally end to end with a stubbed ASR**: symlinked staging hashes
+  to the same key as the real file, the key matches the sidecar's stamped
+  `audio_sha256`, a second pass is byte-idempotent, and
+  `identify_clip.py --json --no-raga --cache-v2` then reports `cache_v2: hit`.
+  Run against a temporary cache path — `data/asr_cache_v2.json` was untouched.
+- **Audio ships as bytes.** WAVs deflate by ~4%, so the zips are stored, and
+  re-cutting on Colab is not an option: a different ffmpeg build hashes
+  differently, misses the cache, and breaks the binding between labeled and
+  scored audio. Bundle built and verified: `probe_code.zip` 9 MB (identify_clip
+  + registry/lyrics, no models), `probe_anchored.zip` 1.27 GB,
+  `probe_negatives.zip` 0.74 GB, in `~/carnatify_probe_bundle`.
+- **Two deviations, both recorded rather than absorbed.** (1) Demucs is pinned
+  to CPU inside `identify_clip.py:644`; on a 2-vCPU Colab VM that would cost
+  more wall time than the GPU transcription it feeds, so the notebook patches
+  `demucs.apply.apply_model` to CUDA — same model and weights, changed reduction
+  numerics only, applied identically to both arms and every duration, and
+  written into `run_log.json` as `demucs_device_used`. `identify_clip.py` is not
+  edited. (2) Whisper stays **fp32 even on the GPU**, because `fp16=False` is
+  hard-coded and `fp16=0` is part of `asr_config_id()`, which is the cache key.
+  Honest cost: roughly 10-20 h of GPU across several sessions.
+- **The GPU bill is 122 whisper-hours, not 116.** The negative arm bills 61
+  items (39 whisper-hours) because 9 `in-catalog` items feed no registered
+  readout — but `validate_negatives` demands an exact bijection between sidecar
+  and results, so all 70 must be transcribed (45 whisper-hours). Skipping them
+  buys an invalid run, not a cheaper one. `parse_negative_labels.py` now prints
+  both numbers so the estimate cannot be quoted low again.
+
+### L4
+
+Labeling-sheet templates in `build_negative_arm.py` and
+`build_negative_complement.py` corrected: bare solfège with no composition line
+is `no-sahitya`, swarakalpana against a sahitya line is `sahitya`, tanam
+unchanged, with the correction stated in the sheet itself. Neither builder was
+re-run — re-running `build_negative_arm.py` would re-draw every anchor and
+destroy both sheets of labels. The graveyard in `HANDOFF_SESSION_0728.md` §5
+gains the general lesson: a listening sheet's categories must describe the music
+as performed, not a taxonomy, and they have to be reviewed by the ear before the
+sheet ships. It surfaced only because Deepti labelled against the sheet she was
+reading from.
+
+**Next:** Deepti uploads the three zips to `MyDrive/carnatify/duration_probe/`
+and runs `colab_duration_probe.py` on a GPU runtime. Nothing else is blocked on
+her. Still pending and not the implementation seat's: prospective long OOC
+audio, the 28-clip short-OOC sentinel (must be pre-registered as non-gating
+before it is built), and the commit.
+
+---
+
+## 2026-07-30 — GPU run finished on Colab; both arms inferred on the laptop; scoring held for the verifier (Opus 5 workhorse)
+
+**Headline correction to `HANDOFF.md` §2.6: the GPU run is complete.** §2.6 was
+written mid-session and reported the run stopped at 259/300 recall windows with
+the negative arm not started. Deepti resumed the same notebook and it ran to
+`anchored: fully cached` and then `negatives: fully cached` — all 440 windows
+transcribed. The AWS continuation plan in `HANDOFF.md` §5 is therefore moot and
+**no further GPU spend is required for this probe.**
+
+What actually failed at the end of the Colab session was not GPU exhaustion. The
+notebook died at step 5/6 with:
+
+```
+File "/content/carnatify/identify_clip.py", line 360, in _best_map
+    from rapidfuzz import fuzz, process
+ModuleNotFoundError: No module named 'rapidfuzz'
+SystemExit: identify_clip failed on anchored (rc=1)
+```
+
+`rapidfuzz` is a lyrics-matcher dependency that the Colab image does not carry
+and `colab_duration_probe.py` does not install. Step 5/6 is
+`identify_clip.py --cache-v2`, which reads the cache and never transcribes, so
+it needs no GPU at all. The remaining work was moved to the laptop, where
+`venv_train` already has `rapidfuzz 3.14.5`.
+
+**Lesson for the graveyard (runner design, not analysis):** the Colab runner
+verifies SHAs before spending GPU but does not verify that the *inference*
+dependencies import before spending GPU. A missing pure-Python import surfaced
+only after ~27 GPU-hours, at the one step where an interrupted session leaves no
+artifact of its own. Any future runner should import-check the full inference
+path in step 0.
+
+### Cache merged, arms inferred
+
+`scripts/merge_asr_cache_v2.py` merged the Drive checkpoint into
+`data/asr_cache_v2.json` with no conflicting keys. The cache now holds **546
+entries**: 106 pre-existing (the wild/curated corpora, untouched) + **300
+anchored** + **140 negatives**. All 440 probe windows are present. File grew
+1.0 MB → 6.3 MB.
+
+Both arms were then run read-only, exactly the step-5 commands from
+`colab_duration_probe.py`, product default backend, on the laptop:
+
+```bash
+CARNATIFY_ASR_BACKEND=whisper venv_train/bin/python -u identify_clip.py \
+  data/duration_probe/anchored  --json --no-raga --cache-v2 > /tmp/probe_results.json
+CARNATIFY_ASR_BACKEND=whisper venv_train/bin/python -u identify_clip.py \
+  data/duration_probe/negatives --json --no-raga --cache-v2 > /tmp/negative_results.json
+```
+
+- recall arm: **300 rows, 0 cache misses** (`cache_v2: hit` on all 300).
+- negative arm: **140 rows, 0 cache misses** (`cache_v2: hit` on all 140), rc=0.
+
+Both arms are therefore valid inputs to the scorer on the cache-integrity
+criterion: `--cache-v2` never transcribes on a miss, and neither run contains
+one. The sidecar bijection that `validate_negatives()` demands is checked by the
+scorer itself and has not been pre-empted here.
+
+**Nothing from the results has been read beyond row counts and cache-hit
+status.** No accuracy, no bluff count, no interval has been computed or looked
+at by this seat. Scoring is deliberately not run — see the open decision below.
+
+### Deviations on record
+
+- **Demucs on CUDA.** Patched at runtime by the notebook, stamped in
+  `run_log.json` as `demucs_device_used`, applied identically to both arms and
+  every duration. `identify_clip.py` was not edited; `git diff --stat
+  identify_clip.py` is empty.
+- **Two GPUs.** Recall windows 1-80 (`probe0000`-`probe0015`) came off a Colab
+  T4; windows 81-259 off a faster L4-class GPU. Windows 260-300 and all 140
+  negatives came off the resumed session, whose GPU identity exists only in the
+  notebook output — `colab_duration_probe.py` does not record the GPU name in
+  `run_log.json` (the AWS sibling does). Preserve that notebook output.
+- Whisper stayed fp32 throughout, as required: `fp16=0` feeds
+  `asr_config_id()`, which is the cache key.
+
+### Open decision for the verifier — `probe0016`, before step 4
+
+All five `probe0016` windows are in the cache and unmodified:
+`d030 / d060 / d090 / d180` from the T4, `d300` from the L4. The gate is a
+within-title 30s → 300s contrast, so this is precisely where a device difference
+would hide, in 1 of 60 titles.
+
+**The fix prescribed in `HANDOFF.md` §2.6 no longer works as written.** It says
+to drop the four T4 entries and let them re-transcribe. That was correct while
+the job still had a GPU. Re-transcribing them now happens on the laptop, which
+would place those four windows on a *third* device — Apple Silicon CPU, with
+Demucs on its unpatched CPU path — while `d300` stays on the L4. That widens the
+split instead of closing it. The instruction should not be followed verbatim.
+
+Three options, none of them taken here:
+
+| option | cost | effect on the design |
+|---|---|---|
+| A. re-transcribe **all five** `probe0016` windows on the laptop CPU | 660 s of audio × 7 passes + Demucs, unattended, free | every window of the title on one device; recall n stays 60; the title's device differs from the other 59 |
+| B. exclude `probe0016` from the recall arm | free | recall n 60 → 59; a change to a pre-registered n, decided before any statistic was seen |
+| C. score as-is | free | 1 of 60 titles crosses devices; recorded as a deviation |
+
+This is a pre-registration-adjacent choice about a frozen design, so it is
+Deepti's and the verifier's, not the implementation seat's. It is being raised
+before scoring precisely so that it cannot be chosen after seeing a number.
+
+**Next:** verifier picks A, B or C; then step 4 —
+`scripts/duration_probe_score.py` with `--results /tmp/probe_results.json
+--truth data/duration_probe/truth_anchored.json --negative-results
+/tmp/negative_results.json --negative-truth data/duration_probe/truth_negatives.json`
+— and its output copied verbatim into this log with the command, cache validity,
+sample counts, exclusions, interval and decision, alongside the two-GPU note,
+the Demucs-on-CUDA deviation, and the unknown-item sensitivity from
+`HANDOFF.md` §2.4. Nothing is committed; the worktree is untouched apart from
+this entry, `HANDOFF.md` §2.6, and the merged cache.
+
+## [2026-07-30] Opus 5 (verifier) — scoring held: second straddler found, device map unreliable, §5b frozen before any statistic
+
+The workhorse finished the GPU run and correctly stopped before scoring, raising
+`probe0016`'s cross-device contrast as an open decision (A re-transcribe /
+B exclude / C score as-is). Verified its state first: cache holds 546 entries
+(106 pre-existing + 300 anchored + 140 negatives), both arms inferred with zero
+cache misses, no statistic computed by anyone.
+
+**The A/B/C question could not be answered as posed.** Two corrections, both
+checked against the code and the staged files rather than inferred:
+
+1. **There is at least a second straddler.** Chunking is
+   `sorted(windows.items())` in chunks of 10 (`colab_duration_probe.py:199,260`).
+   Window 256 is `probe0051d030a`, 259 is `probe0051d180a`, 260 is
+   `probe0051d300a`. The run reported stopping at 259/300, so `probe0051` splits
+   across the interruption exactly as `probe0016` splits across the T4/L4
+   boundary — four windows on one device, `d300` on another, same endpoint. It
+   is the worse of the two: the resumed session's GPU was never recorded at all.
+2. **The device map is not known.** `handoff.md` §2.6 asserts both "windows 1-80
+   (`probe0000`-`probe0015`) came off a T4; windows 81-259 off the faster GPU"
+   and "`probe0016` is split, d030-d180 on the T4". `probe0016` is windows
+   81-85; both cannot hold. And the checkpoint chunk is 10 windows with the
+   cache written after each, so a clean stop lands on a multiple of 10 —
+   **259 does not**. The straddler set is therefore not derivable from the stop
+   index, and choosing a fix now would be fixing a confound of unestablished
+   extent.
+
+Deepti chose **map → calibrate → branch** over picking A/B/C blind.
+
+### §5b frozen, before any statistic was read
+
+`DURATION_PROBE_PREREGISTRATION.md` gains **§5b, mixed-hardware deviation and
+the straddler rule**, written while the only things this seat had seen were row
+counts, cache-hit status, and one already-cached window's transcript inspected
+to determine the hypothesis schema.
+
+It defines a straddler (a unit whose windows were not all transcribed in one
+session on one device), makes `run_log.json` and the notebook output
+authoritative for the device map over arithmetic, and freezes the branch in
+advance: three windows, **`source: 'mix'` hypotheses only**, verbatim on `raw`
+— all identical → device-invariant → score at the registered n; any difference
+→ exclude every straddler and score at reduced n; ambiguous or failed → treated
+as *differs*, the conservative side. No third branch.
+
+The mix-only restriction is what makes the test mean anything: mix passes do not
+involve Demucs, so they isolate device-dependence of the transcriber from
+device-dependence of the separator, and a laptop re-run necessarily takes the
+unpatched CPU-Demucs path that the GPU run patched to CUDA.
+
+Two things are priced in §5b so that no branch can look cheaper once a number is
+visible: an excluded recall title costs 1/60 of that arm, while an excluded
+negative item comes off a rule-A gating source that already tolerates zero new
+bluffs (free-form n=25, opening n=20) — so negative-arm straddlers, if any
+exist, are a finding to report rather than a quantity to subtract. Option A
+(re-transcribe a straddler on the laptop) is rejected in writing: it moves the
+title to a third device *and* onto the unpatched CPU-Demucs path, trading a
+within-title confound for a between-title one at a cost of hours.
+
+### Handed on
+
+`WORKHORSE_DEVICE_CALIBRATION_BRIEF.md`: C1 build the real device map from
+`run_log.json` (checking the negative arm's assumed straddler-freedom rather
+than assuming it, and reconciling chunk timings against the two measured
+throughputs as an independent handle); C2 build `--exclude-title` /
+`--exclude-item` **before** the calibration runs, so the mechanism cannot be
+shaped to the answer, with the existing `n_titles` / `expected_windows` /
+`gating_source_counts` checks reconciled against the exclusion list rather than
+bypassed; C3 run the calibration exactly as §5b specifies and publish the diffs
+even when identical; C4 score **once** and copy the output verbatim.
+
+---
+
+## [2026-07-30] Opus 5 (workhorse) — device calibration DIFFERS; exclusion mechanism built; scoring held at §5b.1(4)
+
+Executed `WORKHORSE_DEVICE_CALIBRATION_BRIEF.md` C1-C3. **C4 (scoring) is not
+run**, and the reason is the pre-registration's own fallback rather than a
+choice made here. `git diff --stat identify_clip.py` empty throughout. Nothing
+committed. No GPU spend. Registered suite: **103 passed, 1 xfailed** (was 95 +
+1; `tests/test_negative_arm.py` 48 → 56).
+
+### C3 — the calibration, run first per §5b.1(1)
+
+`scripts/duration_probe_device_cal.py` (new). Three windows, the §5b.1(2)
+selection — `probe0016d030a`, `probe0051d030a`, `probe0016d060a`, the shortest
+windows of the two straddler candidates, so no clean title's data was consulted.
+The registered builder `scripts/build_asr_cache_v2.py` was driven against a
+temporary cache path with `identify_clip.CACHE2` and
+`_BACKEND_CACHES['whisper']` patched; **`data/asr_cache_v2.json` is
+byte-identical afterwards**, sha256 `0b496af24f6cae49…` before and after, and a
+copy was taken first. 19.3 min on laptop CPU.
+
+**Result: mix passes DIFFER — 5 of 12 pass-comparisons identical.** Full diffs,
+published whether or not they were needed, in
+`data/duration_probe/DEVICE_CALIBRATION.md`.
+
+The shape of the disagreement is worth recording, though it changes nothing
+about the branch. Where the model has real evidence it is device-invariant: the
+`auto` pass on all three windows is identical, and on `probe0051d030a` the
+`auto`, `ta` and `hi` mix passes all return `Rama Kukuna Pushana, Rama Kujana
+Jeevana` byte-for-byte on both machines. Where it is hallucinating — the
+low-confidence Indic passes — the two machines produce entirely different
+strings, not near-misses. Small numeric differences cascade through the decoder
+exactly where there is nothing to anchor it. **Those garbage passes are not
+inert: `variants_from_v2()` takes longest-wins per source, so they reach the
+matcher.** The stem passes are reported alongside (2 of 9 identical) and decide
+nothing, as registered, because the laptop takes the unpatched CPU-Demucs path.
+
+**One asymmetry, flagged and deliberately not acted on.** §5b.1(1) notes the
+calibration is laptop CPU against GPU, a *wider* gap than T4 against L4, and
+that identity across it would have been the stronger result. The converse does
+not follow with equal force: a difference across the wide gap does not prove the
+two GPUs differ from each other. §5b froze the branch in advance with no third
+option and the brief forbids adjusting it once a result is visible, so it is
+applied as written. Recording the asymmetry is not a request to reopen it.
+
+### C1 — the device map (the verifier seat had already built it)
+
+`data/duration_probe/DEVICE_MAP.md` was already on disk, sourced from
+`data/duration_probe/notebook_session3_output.txt`. This seat re-derived it
+independently from the notebook output before finding the file, and the two
+agree on every point:
+
+- **`probe0051` is a confirmed straddler.** The session opens `anchored: 259/300
+  already cached` and its first transcription is `probe0051d300a` — window 260
+  under the runner's `sorted(windows.items())` order, where title *t* occupies
+  windows `5t+1 … 5t+5`, so 259 = `51×5 + 4`. Observed, not inferred.
+- **The negative arm is straddler-free.** All 140 windows ran inside that one
+  session. §5b registered this as a belief to check; it is checked and true.
+  This was the expensive case avoided — a negative-arm exclusion comes off a
+  rule-A gating source that tolerates zero new bluffs.
+- **A third device.** Recomputed from the per-chunk prints: anchored 46.2 min /
+  5,580 s audio = **0.497 s/s**; negatives 173.3 min / 23,100 s = **0.450 s/s**.
+  Against the recorded T4 1.56 s/s and "L4-class" 0.86 s/s, the resumed session
+  is ~1.9× faster than either. The verifier's file names it from the notebook:
+  A100-SXM4-40GB.
+
+Two corrections to the brief, both from the record. **The executed run used
+`CHUNK = 5`, not 10** — the notebook prints `[1/5] … [5/5]`, while
+`colab_duration_probe.py:72` reads `CHUNK = 10`. The file on disk would not
+reproduce this run, and the brief's argument that "259 is not a multiple of the
+10-window chunk" rests on a chunk size that was not used. It does not matter:
+259 is mid-*title*, which is what confounds the gate, and that is established
+from the resumed session's own "already cached" count. Second, the brief says
+the cache stores hypotheses as a repr string to be parsed rather than
+regexed — `hypotheses` is a real JSON list of dicts, so the comparison is
+structural and exact.
+
+### C2 — the exclusion mechanism, built before the calibration answer existed
+
+Written and tested while the transcription was still running, so it could not be
+shaped to the outcome. `scripts/duration_probe_score.py` gains
+`--exclude-title` / `--exclude-item` (repeatable) and `--exclude-reason`, which
+argparse **requires** whenever anything is excluded.
+
+- **The full arm is validated first, then units are dropped, then the reduced
+  sidecar is re-validated against bookkeeping recomputed by subtraction** —
+  `n_titles`, `n_items`, `expected_windows`, `stratum_counts`,
+  `gating_source_counts`. Nothing is bypassed, and an exclusion cannot make an
+  incomplete run validate: a missing window is fatal on the first pass, before
+  anything is removed. Audio is hashed on the full pass only; exclusion removes
+  rows, not bytes.
+- `validate()` gained the `n_titles` check it never had — the field was printed
+  in the header and never reconciled against the windows the sidecar carries.
+- **Rule A is quantified over the sources the design registered, not over
+  whatever survives.** `source_gate_verdict()` now takes the pre-exclusion
+  gating census; an exclusion that pushes a registered source below
+  `SOURCE_MIN_N = 20` suppresses with an explicit message. A test pins the hole:
+  given the same reduced data, the function without the registered census
+  returns SAFE and with it returns NOT ESTABLISHED. Same defect class as the
+  missing-source hole `_verify_gating_sources()` closed.
+- The excluded set, the reason and the realized n print above the verdict, and
+  again in the decision block.
+- `resolve_recall_units()` accepts either a title key or a `probeNNNN` window
+  id. `DEVICE_MAP.md` speaks in window ids and the sidecar is keyed by title —
+  `probe0016` is `intakannananda`, `probe0051` is `sujanajivana` — and making
+  the operator translate by hand is how a §5b exclusion ends up naming the wrong
+  title. An id spanning two keys is an error, not a guess.
+
+Eight tests added, covering each bullet plus the two failure modes the brief
+named.
+
+### Where this stops: §5b.1(4)
+
+The branch selected is *device-dependent → exclude every straddler → score at
+reduced n*. **The excludable set cannot be completed from the surviving
+records.** `DEVICE_MAP.md` establishes `probe0051` and clears the negative arm,
+but the T4 → intermediate-GPU boundary inside anchored windows 1-259 is
+unresolved, and with it whether `probe0016` — or any other title — straddles it.
+Session 3's output says nothing about a boundary that far back, and
+`run_log.json` was never written.
+
+§5b.1(3) fixes the order of the remaining routes: the session-1 and session-2
+notebook output, then Google Drive revision history on the checkpointed
+`asr_cache_v2.json`, whose per-chunk rewrites are timestamped revisions. Neither
+is reachable from this machine; both are Deepti's to check. §5b.1(4) fixes what
+happens if they fail: the recall arm is reported **invalid — a lost measurement,
+not a KILL and not an INCONCLUSIVE** — and "guessing a straddler set is not
+permitted."
+
+**The scorer has therefore not been run.** §5b.1(4) invalidity is a judgement
+about provenance, not one of the scorer's mechanical checks, so the recall arm
+would validate and print a three-way verdict that the pre-registration forbids
+interpreting. Running it now and asking the provenance question afterwards would
+mean any later exclusion set was chosen with the number already seen — the one
+ordering the whole section exists to prevent. The brief authorises one scoring
+run; it is being spent after the map question is settled, not before.
+
+The negative arm is unaffected: it is straddler-free, device-clean, and its
+rule-A readout stands on its own. It is held only because the scorer produces
+both arms in one invocation.
+
+**Next, and it is Deepti's:** are the session-1 / session-2 Colab tabs still
+open, or does Google Drive still hold revision history for
+`MyDrive/carnatify/duration_probe/out/asr_cache_v2.json`? Either resolves the
+map and the run scores at reduced n. Neither, and §5b.1(4) applies as written.
+
+---
+
+## [2026-07-30] Opus 5 (workhorse) — duration probe SCORED: recall KILL at n=59, safety NOT ESTABLISHED
+
+The map question above was answered. Deepti recovered **all 82 Drive revisions**
+of the checkpointed `asr_cache_v2.json` — contents into `asr_cache_fullhistory/`
+at repo root, timestamps from the Drive UI. §5b.1(3) route (b) succeeded, so
+§5b.1(4) does not apply and no straddler set had to be guessed.
+
+### The device map, established
+
+Contents give the exact entry set at each checkpoint; timestamps give the wall
+time between them; audio seconds come from the window filenames. Throughput per
+checkpoint separates the devices, and the three recovered rates reproduce the
+independently recorded 1.56 / 0.86 / 0.497 s/s to two significant figures — an
+agreement that was not tuned for. Full working in
+`data/duration_probe/DEVICE_MAP.md`.
+
+| session | device | checkpoints | windows | measured |
+|---|---|---|---|---|
+| 1 | T4 | V1-V8, chunks of **10** | 1-80 (`probe0000`-`probe0015`) | ~1.55 s/s |
+| 2 | L4-class | V9-V42, chunks of 5 | 81-259 | ~0.80 s/s |
+| 3 | A100-SXM4-40GB | V44-Current | 260-300 + all 140 negatives | ~0.46 s/s |
+
+V43 is the session-3 restart marker: n=259, delta zero — the resumed session
+re-uploading the inherited cache before transcribing anything.
+
+**`probe0016` is not a straddler, and `HANDOFF.md` §2.6 was wrong about it.**
+Session 1 wrote per chunk at `CHUNK = 10`; all eight of its checkpoints land
+exactly on a two-title boundary, ending `probe0015d300a` at **n=80 with no
+`probe0016` window present**. Any successor session recomputes `pending()` from
+that state and starts at window 81, so all five `probe0016` windows were
+transcribed after the device change. The reading in which it would straddle
+requires the 18:40 checkpoint (n=84) to be a session-1 write, and a `+4` write is
+impossible under `CHUNK = 10`. §2.6's "windows 1-80 on the T4" was right; its
+"`probe0016` split across that boundary" was wrong, and the two were never
+compatible.
+
+**The straddler set is exactly one unit: `probe0051` = title key
+`sujanajivana`** (d030-d180 session 2, d300 session 3). No other recall title
+straddles — the only two device changes are at window 80/81, a title boundary,
+and mid-`probe0051`. No negative item straddles. Recall scores at **n = 59**.
+
+Two anomalies are recorded in `DEVICE_MAP.md` rather than smoothed: session 2's
+checkpoints sit one window below the chunk boundary for a reason not
+established, and Drive versions 69-73 are out of order in the negatives region.
+Neither touches the map, which depends only on the inherited state at each
+device change (n=80 and n=259, both read directly).
+
+### The scoring run — one run, verbatim
+
+```
+venv_train/bin/python scripts/duration_probe_score.py \
+    --results /tmp/probe_results.json \
+    --truth data/duration_probe/truth_anchored.json \
+    --negative-results /tmp/negative_results.json \
+    --negative-truth data/duration_probe/truth_negatives.json \
+    --exclude-title probe0051 \
+    --exclude-reason 'straddles the session-2 (L4) -> session-3 (A100) device boundary; DEVICE_MAP.md, pre-registration 5b'
+```
+
+```
+===== DURATION PROBE — arm=anchored seed=20260725 n=59 titles =====
+Declared exception: graduates nothing. Lyrics matcher only.
+
+
+--- EXCLUSIONS (recall arm, pre-registration §5b) ---
+  excluded (1): sujanajivana
+  reason: straddles the session-2 (L4) -> session-3 (A100) device boundary; DEVICE_MAP.md, pre-registration 5b
+  realized n: 59 of 60 registered
+  Exclusion is mechanical (pre-registration §5b): the set comes from the device
+  map, never from a unit's score, and it was fixed before any statistic was read.
+  (resolved from ['probe0051'])
+
+  window    n      top-1      top-5   top5 %  answered  precision  coverage
+     30s   59       2/59        3/59      5.1%        17        12%       29%
+     60s   59       3/59        4/59      6.8%        17        18%       29%
+     90s   59       4/59        5/59      8.5%        23        17%       39%
+    180s   59       2/59        3/59      5.1%        26         8%       44%
+    300s   59       1/59        1/59      1.7%        25         4%       42%
+
+--- PAIRED CONTRAST 30s -> 300s (top-5) ---
+  wrong->right 1   right->wrong 3   concordant 55
+  delta -3.4pp   90% cluster-bootstrap CI [-8.9, +1.8]   exact one-sided p=0.9375
+  resampling 52 archive clusters over 59 titles
+
+--- SHAPE (paired transitions between adjacent windows) ---
+    30s ->   60s   +2   -1   net +1.7pp
+    60s ->   90s   +2   -1   net +1.7pp
+    90s ->  180s   +2   -4   net -3.4pp
+   180s ->  300s   +0   -2   net -3.4pp
+
+--- PRODUCT GAP 90s -> 300s ---
+  net -6.8pp  (+0 -4). This is what Approach B has to close; P1 passing does NOT mean it is already closed.
+
+--- STRATIFIED BY LYRIC LENGTH ---
+  (pool selection interacts with this: works with more matchable lines give a long window more chances to win)
+  few lyric lines (<= 12)      n=48   delta -4.2pp
+  many lyric lines (> 12)      n=11   delta +0.0pp
+
+--- NEGATIVE ARM (sahitya adjudicated by ear on the scored 300s window) ---
+  strata: in-catalog 9, no-sahitya 49, sung_unidentified 10, unknown 2
+
+             stratum    n   ans@30s   ans@300s  new bluffs  recovered      net
+          no-sahitya   49         6          6           4          4    +0.0pp
+   sung_unidentified   10         4          3           1          2   -10.0pp
+
+--- GATING STRATUM BY SOURCE (pre-registration §6: "each source is also reported alone") ---
+  source                      n   b   r       UB   what that n could rule out at b=0,1,2
+  free_form_candidate        25   2   2    23.1pp   b=0: 11.3  b=1: 17.6*  b=2: 23.1*
+  opening_candidate          20   2   2    28.3pp   b=0: 13.9  b=1: 21.6*  b=2: 28.3*
+  unidentified_candidate      4   0   0    52.7pp   b=0: 52.7*  b=1: 75.1*  b=2: 90.2*
+  (* = that many new bluffs would NOT rule out the boundary)
+  The pooled bound is a bound on the DESIGN MIXTURE — these weights came from
+  sampling quotas and labeling yield, not from product prevalence.
+
+--- FROZEN NEGATIVE DECISION RULE (boundary +15pp) ---
+  Estimand: the change in ANSWER rate, 30s -> 300s, among windows her ear
+  confirmed carry no sung words. Statistic: b = items that abstain at 30s and
+  answer at 300s. Rule A (§6b): SAFE if the one-sided exact 95% upper bound on
+  b/n is below the boundary in EVERY source with n>=20. The pooled bound below
+  is reported for context and gates nothing. Reverse flips are ignored, which can
+  only make it stricter.
+  n=49  b=4  (r=4 recovered)  one-sided 95% upper bound 17.7pp
+    had b been 0: UB   5.9pp (safe)
+    had b been 1: UB   9.3pp (safe)
+    had b been 2: UB  12.3pp (safe)
+    had b been 3: UB  15.1pp (NOT safe)
+
+  worst case on the 2 unknown item(s) — if every one was a no-sahitya window
+  that bluffed: pooled b=6/n=51, one-sided 95% upper bound 21.9pp (NOT safe)
+  under the APPLIED gate (rule A), same worst case: free_form_candidate b=3/n=26 UB 27.2pp; opening_candidate b=3/n=21 UB 32.9pp -> NOT safe
+  These are informative missingness, not random loss: `unusable` is exactly the
+  property that can conceal singing. The observed bound above is the headline;
+  this is the sensitivity, and both belong in any quoted result.
+
+--- APPLIED GATE: RULE A, source-specific conjunction (§6b, frozen 2026-07-29) ---
+  A  APPLIED  source-specific     -> NOT ESTABLISHED  (free_form_candidate UB 23.1pp, opening_candidate UB 28.3pp)
+     every source with n>=20 must clear the boundary alone. Strict, but it is the
+     only reading that means anything without registered mixture weights.
+  B  REPORTED, NOT GATING  pooled -> would say NOT ESTABLISHED  (UB 17.7pp on n=49)
+     valid, but bounds the design mixture and nothing else, and no argument for
+     those weights is registered. It decides nothing here.
+
+  APPLIED (rule A): NOT SAFE — free_form_candidate UB 23.1pp, opening_candidate UB 28.3pp. This does NOT mean bluffing rose — it means this arm cannot say it did not.
+
+--- PRE-REGISTERED THREE-WAY DECISION (boundary +15pp) ---
+  scored at REDUCED n — recall 59 titles. Reason: straddles the session-2 (L4) -> session-3 (A100) device boundary; DEVICE_MAP.md, pre-registration 5b
+  RECALL KILL the >=15pp claim: upper bound +1.8pp is below the boundary. Duration is not the constraint at a useful size.
+  This does NOT by itself diagnose the cause; it rules out a useful duration effect for the lyrics matcher on this pool.
+
+--- COMBINED VERDICT (conjunction; the arms are NOT subtracted) ---
+  recall: KILL     safety: NOT ESTABLISHED (rule A: free_form_candidate UB 23.1pp, opening_candidate UB 28.3pp (pooled 17.7pp, not gating))
+  KILL stands on the recall arm alone; the safety arm cannot rescue a lever that is not there.
+
+Quote this block verbatim into AGENT_LOG.md. Never recompute a number by hand.
+```
+
+`rc=0`. The scorer ran **once**. It was not re-run with a different exclusion
+set, at a different boundary, or without the exclusion.
+
+### Validity and the deviations that belong beside the numbers
+
+- **Cache validity:** 440/440 windows served from cache, **zero cache misses** in
+  either arm (300 recall rows, 140 negative rows, all `cache_v2: hit`). Every
+  window re-hashed against its stamped `audio_sha256` by `_verify_audio()` on the
+  full arm before any exclusion. Zero validator errors.
+- **Sample counts:** recall n=59 titles × 5 durations after one exclusion;
+  negative arm n=70 items, gating stratum `no-sahitya` n=49 (free-form 25,
+  opening 20, unidentified 4), no negative exclusions.
+- **Exclusion:** `sujanajivana` (`probe0051`), one title, on the device map,
+  fixed before any statistic was read.
+- **Mixed hardware:** three devices (T4 / L4-class / A100), mapped above. Only
+  `probe0051` straddled and it is out.
+- **Demucs on CUDA:** patched at runtime on all three Colab sessions, applied
+  identically to both arms and every duration; `identify_clip.py` not edited.
+- **Whisper fp32 throughout**, on GPU as well, because `fp16=0` feeds
+  `asr_config_id()` and is therefore part of the cache key.
+- **Unknown-item sensitivity under rule A**, printed above and not discovered
+  afterwards: the two `unknown` items are one free-form and one opening, so the
+  worst case moves free-form to 3/26 → 27.2pp and opening to 3/21 → 32.9pp,
+  **NOT safe**. Both the observed bound and this sensitivity belong in any quote.
+
+### Reading the result
+
+**Recall: KILL.** The 30s → 300s paired top-5 contrast is **-3.4pp**, 90%
+cluster-bootstrap CI **[-8.9, +1.8]** over 52 archive clusters, exact one-sided
+p=0.9375. The upper bound is far below the +15pp boundary, so a practically
+useful duration effect is ruled out on this pool. The point estimate is
+*negative* — one title gained, three lost — and the shape is monotone downward
+past 90s (90→180 net -3.4pp, 180→300 net -3.4pp). Top-5 peaks at **90s (5/59)**
+and falls to **1/59 at 300s**. Answered coverage rises with length (29% → 42%)
+while precision falls (12% → 4%): longer windows make the matcher answer more
+and be right less.
+
+**Safety: NOT ESTABLISHED**, and note *why*. The gating stratum shows b=4 new
+bluffs against r=4 recovered abstentions — net **+0.0pp**, no observed rise. But
+rule A bounds b alone, and 2/25 free-form and 2/20 opening give upper bounds of
+23.1pp and 28.3pp, both above the boundary. The arm cannot rule out a +15pp rise
+at these sizes; that is a statement about its power, not evidence that bluffing
+rose. The pooled bound (17.7pp) also fails, so rule A and the pooled reading
+agree here and the disagreement flag did not fire.
+
+**Combined: KILL**, on the recall arm alone.
+
+**What this does and does not license.** It answers the registered question — no,
+listening longer does not materially improve the current lyrics matcher on
+long-form archive audio — for *uniquely resolved, lyrics-bearing, ≥300s
+`concert_audio`* only. It is not a wild-phone result, it says nothing about OOC
+abstention at length (that stratum is empty by construction and unmeasurable from
+assets on disk), and it graduates nothing. It is consistent with, and
+independent of, the 2026-07-23 finding that the ASR front-end is the ceiling.
+
+The device work did not change this verdict — the effect is nowhere near the
+boundary, so no straddler decision could have flipped it. That is knowable only
+now, and it does not retroactively license having skipped the map.
+
+**Still pending Deepti, unchanged:** prospective long OOC audio; the 28-clip
+short-OOC sentinel (pre-register as non-gating before building); the registry
+junk blocklist; and the commit — this whole line of work is still untracked.
+
+Deepti is retrieving `run_log.json` and the notebook output from Drive — the
+notebook output is, per §2.6, the only record that this was a multi-device run.
+
+**Nothing is committed.** No further GPU spend is authorized.
+
+### Amendment, same day — `run_log.json` was never written
+
+Deepti reports no `run_log.json` in Drive. It is not misplaced:
+`colab_duration_probe.py` writes it at L316, **after** step 5/6, and step 5/6 is
+where the session died on `ModuleNotFoundError: rapidfuzz`. The file does not
+exist and cannot be retrieved. This is the same defect as the missing import
+check, one layer up — the run's only provenance record was scheduled after 27
+GPU-hours of work, so the crash took the audit trail with it. Both go to the
+graveyard as one lesson: a long unattended runner writes its provenance
+incrementally from the first chunk, and verifies its full inference path in
+step 0.
+
+`DURATION_PROBE_PREREGISTRATION.md` gains **§5b.1**, again written before any
+statistic was read. **The branch rule is unchanged**; what changed is the order
+and the fallback, and both are fixed in advance:
+
+1. **The calibration runs first.** If the mix hypotheses are identical,
+   device-invariance is established and no straddler set is needed — the map
+   becomes irrelevant rather than unavailable. The calibration compares laptop
+   CPU against GPU, a *wider* hardware gap than T4 against L4, so identity
+   across it is the stronger result. This is the ordering §5b should have had;
+   it required the map only because the map was assumed to exist.
+2. Calibration windows come from `probe0016` and `probe0051`, the straddler
+   candidates under every version of the account, so no clean title's data is
+   consulted whatever the map turns out to be.
+3. On a *differs* result the map is rebuilt from surviving records in a fixed
+   order: notebook output first (per-chunk prints carry timings, and wall time
+   per second of audio identifies the device against the measured T4 1.56 s/s
+   and later-GPU 0.86 s/s), then Google Drive revision history on the
+   checkpointed `asr_cache_v2.json`, whose per-chunk rewrites are timestamped
+   revisions.
+4. On *differs* with no recoverable map, the recall arm's contrast is confounded
+   in an unidentifiable subset of titles and the arm **cannot support a
+   verdict**: the run is reported invalid — not KILL, not INCONCLUSIVE, a lost
+   measurement. Recorded now, before the cost of that outcome is visible.
+   Guessing a straddler set is not permitted.
+
+`WORKHORSE_DEVICE_CALIBRATION_BRIEF.md` C1 and C3 updated to match. C2 (the
+exclusion mechanism, built before the answer is known) is unaffected and still
+comes before the calibration.
+
+### Session-3 notebook output recovered — negative arm is clean, `probe0051` confirmed
+
+Deepti's Colab tab was still open. Its stdout is saved verbatim at
+`data/duration_probe/notebook_session3_output.txt` and the derived map at
+`data/duration_probe/DEVICE_MAP.md`. This is the only surviving record of the
+final session; `run_log.json` was never written.
+
+**The negative arm is straddler-free.** `negatives: 0/140 already cached, 140 to
+go` → `negatives: fully cached`, all in one session on an **NVIDIA
+A100-SXM4-40GB**. §5b recorded this as a belief to be checked rather than
+assumed; it is now checked and true. This was the expensive case — under rule A
+the gating sources are free-form n=25 and opening n=20 with zero tolerance for
+new bluffs, so an exclusion there had no slack to absorb it.
+
+**`probe0051` is a confirmed straddler, observed rather than inferred.** The
+session opened at `anchored: 259/300 already cached, 41 to go` and its first
+transcription was `probe0051d300a.wav`, so d030/d060/d090/d180 came from session
+2 and d300 from the A100. The straddler I derived from the chunk arithmetic on
+2026-07-30 is real, and the workhorse's original single-straddler framing was
+incomplete.
+
+`probe0052`-`probe0059` ran entirely on the A100 — internally consistent, so not
+straddlers. They differ in device from `probe0000`-`probe0050`, but that is
+*between*-title variation against a *within*-title estimand and does not
+confound the contrast. Recorded as a deviation.
+
+Recomputed A100 throughput from the chunk timings: **0.497 s/s** anchored,
+**0.450 s/s** negatives, against §2.6's T4 1.56 and intermediate 0.86. The three
+rates separate by 1.8x and 3.2x, so if either earlier notebook tab survives its
+per-chunk timings identify the session-1/session-2 boundary unambiguously. That
+boundary — and therefore whether `probe0016` straddles — is the only thing still
+unresolved, and under §5b.1 it matters **only** on the *differs* branch of the
+calibration.
+
+Two discrepancies recorded rather than smoothed over:
+
+1. **The executed notebook is not the file on disk.** The run used chunks of 5
+   (`[1/5] … [anchored 5/41]`); `colab_duration_probe.py:72` says `CHUNK = 10`.
+   The Colab copy was edited relative to the repo. The notebook output is the
+   authority on what happened, and reasoning about the earlier sessions from the
+   on-disk script is unsafe — the sorted-window ordering is confirmed by the
+   observed sequence, but nothing else should be assumed. The repo copy should
+   be reconciled with what actually ran before it is quoted again.
+2. **259 is not chunk-aligned** at either 5 or 10, so session 2 did not stop on
+   a checkpoint boundary. Moot for the map — session 3's own "already cached"
+   count and contiguous to-do list establish the boundary observationally — but
+   it means the checkpointing story is not fully understood.
+
+Unchanged: the calibration still runs first, and the branch rule in §5b/§5b.1 is
+untouched. No statistic from either arm has been read.
+
+## [2026-07-30] Opus 5 (verifier) — probe verified independently: KILL stands, and it is robust to the device finding
+
+Verified the workhorse's scoring run rather than accepting it. Nothing was
+re-scored: the scorer ran once, and re-running it would have muddied that
+property for no gain, so the numbers were re-derived from the raw artifacts
+instead.
+
+**Recall arm, recomputed from `/tmp/probe_results.json` and
+`truth_anchored.json` with an independent join** (excluding `probe0051`,
+top-5 = truth id in the first five returned compositions):
+
+```
+ dur    n   top1   top5    top5%
+  30   59      2      3     5.1%
+  60   59      3      4     6.8%
+  90   59      4      5     8.5%
+ 180   59      2      3     5.1%
+ 300   59      1      1     1.7%
+
+paired 30->300 over 59 titles: wrong->right 1  right->wrong 3  delta -3.4pp
+```
+
+Every cell matches the scorer exactly, including the paired contrast.
+
+**All six intervals reproduce** with `clopper_pearson_upper`: free-form
+b=2/n=25 → 23.1pp, opening b=2/n=20 → 28.3pp, pooled b=4/n=49 → 17.7pp, and the
+unknown-item worst cases 21.9 / 27.2 / 32.9pp.
+
+### The KILL is robust to the calibration finding, and that needed checking
+
+The device calibration returned **DIFFER**, and not marginally: 7 of 12 mix
+pass-comparisons differ, several of them completely rather than by a token. The
+recall arm spans three devices *between* titles (16 on the T4, 35 on the L4, 8
+on the A100 after the exclusion), so it is fair to ask whether the verdict
+survives that.
+
+It does, and the direction is what makes it safe. Every non-straddling title has
+all five windows on one device, so the within-title contrast — the estimand — is
+never crossed. Between-title device variation inflates between-title variance,
+which **widens** the confidence interval and therefore **raises** the upper
+bound. KILL requires that upper bound to sit below +15pp; it came in at
+**+1.8pp**, a margin of roughly 13pp. Device heterogeneity would have to inflate
+the bound by that much to overturn the verdict, which it cannot plausibly do.
+Heterogeneity makes KILL harder to reach, and it was reached anyway.
+
+The one direction that would have been fatal — a straddler inside the negative
+arm — did not occur: all 140 negative windows are on the A100.
+
+### What the safety arm actually says, stated precisely
+
+`b=4, r=4, net +0.0pp` on n=49. The point estimate of the change in answer rate
+is **exactly zero**. Rule A returns NOT ESTABLISHED because the interval is too
+wide at this n, not because bluffing rose. Anyone quoting this must not read it
+as "longer listening makes the pipeline bluff more" — the data show no rise and
+cannot exclude one.
+
+The arm was underpowered for the b it drew, and the shortfall is quantifiable:
+clearing +15pp needs n≥30 at b=1, **n≥40 at b=2**, n≥50 at b=3. The realized
+sources were n=25 and n=20 against b=2 apiece. A future negative arm wanting to
+survive two surprises per source needs roughly **double** the per-source n —
+about 40 gating items in each source, not 25 and 20. That is the number to
+design against, and it is recorded now rather than rediscovered.
+
+### Verdict, and what it costs
+
+**Recall KILL, safety NOT ESTABLISHED, combined KILL.** Duration is not a useful
+lever for the lyrics matcher on this pool, and the KILL stands on the recall arm
+alone. Top-5 at 300s (1/59) is *lower* than at 30s (3/59); the shape table shows
+the decline concentrated in 90s→180s and 180s→300s.
+
+This confirms rather than contradicts the standing finding: the ASR front-end is
+the ceiling, and downstream duration has no headroom to give. Approach B's
+product gap (90s→300s, net −6.8pp here) is not closed by listening longer.
+
+The probe cost ~27 GPU-hours plus two labeling sweeps and returned a clean
+negative. That is the outcome the pre-registration was built to make
+believable — the design survived three red-team passes, a contaminated first
+negative arm, a second listening sweep that removed 4% of the gating stratum,
+and a mixed-hardware confound, and it still produced a verdict nobody could
+tune. A KILL that can be trusted is worth more than a PROMOTE that cannot.
+
+### Consequently, do not spend on these
+
+Prospective long OOC audio and the 28-clip short-OOC sentinel were both queued
+to strengthen a safety arm for a lever that has now been ruled out. Neither
+should be acquired or built on this probe's account. If they are wanted later it
+will be for a different question, and they should be re-justified then.
