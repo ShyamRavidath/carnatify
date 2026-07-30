@@ -70,14 +70,13 @@ OVERRIDES = {
                 '"nagumomu ganaleni"[Saveri] -> comp04573.'},
     'sarasijanAba murArE__Tōḍi': {
         'truth_ids': ['comp06693', 'comp06694', 'comp06731'],
-        'review': True,
         'note': 'work-family: Swaati TirunaaL padam "sarasijanAbha murArE". '
                 'comp06693 "...pAhi" (todi, lyrics c6939) + comp06731 stub '
                 '(todi) + comp06694 "(tv)" (catalogued mayamalavagaula, lyrics '
                 'c6938 -- same sahitya, padam sung in the performer\'s raga). '
-                'REVIEW: confirm comp06694 is the same padam. Matcher returns '
-                'comp06694 @1.801 and comp06731 @1.351 -> real duplicate '
-                'undercount if excluded.'},
+                'BLESSED 2026-07-23 (Deepti): comp06694 confirmed same padam. '
+                'Matcher returns comp06694 @1.801 and comp06731 @1.351 -> real '
+                'duplicate undercount if excluded.'},
     'Ehi annapUrNE__Punnagavarali': {
         'truth_ids': ['comp01493'],
         'note': 'Ehi annapUrNE -> "Ehi annapUrNE sannidhEhi" (Dikshitar, '
@@ -98,15 +97,55 @@ OVERRIDES = {
     'Vaishnava Jana To__Khamaj': {
         'truth_ids': ['comp08097'],
         'note': 'Vaishnava Jana To -> "vaishanava janatO" (comp08097).'},
+    'akhilAndEswari__Dvijavanti': {
+        'truth_ids': ['comp00173', 'comp00175'],
+        'note': 'BLESSED 2026-07-23 (Deepti). '
+                'work-family: Dikshitar dvijavanti "akhilANDEshvari rakSamAm '
+                'Agama sampradAya nipuNE". comp00173 "akhilAndEswari" (dvijavanti,'
+                ' page c1481) + comp00175 "akhilANDEshvari rakSamAm" (tagged '
+                'jujAvanti = same raga, page c5624) are BYTE-IDENTICAL pallavi + '
+                'same composer -> one kriti in two rows. comp00174 "durusuga" '
+                '(Shyama Sastri, karnataka kapi) and comp00176 "rakSatu" '
+                '(shuddhasaveri) are different works, EXCLUDED. Surfaced by '
+                "Rung 5 stem lane returning comp00175; verified independent of "
+                'that.'},
     'Madhava Mamava__Nīlāṁbari': {
         'truth_ids': ['comp03805', 'comp03806'],
-        'review': True,
         'note': 'work-family: nilambari "mAdhava mAmava (dEva)". comp03805 '
                 '"mAdhava mAmava" (BaalamuraLi, lyrics c9002) + comp03806 '
                 '"Madhava Mamava Deva" (nilambari stub, no lyrics -- the fuller '
                 'title of the same kriti). comp03807 "(lAli)" = distinct '
-                'Narayana Teertar tarangam, EXCLUDED. REVIEW: matcher returns '
-                'comp03806 @2.001 -> real duplicate undercount if excluded.'},
+                'Narayana Teertar tarangam, EXCLUDED. BLESSED 2026-07-23 '
+                '(Deepti): matcher returns comp03806 @2.001 -> real duplicate '
+                'undercount if excluded.'},
+    # ---- Codex work-family detector 2026-07-23: new high-confidence sets ----
+    'Amba Kamakshi__Bhairavi': {
+        'truth_ids': ['comp00229', 'comp03071'],
+        'review': True,
+        'note': 'work-family: Shyaama Shaastree bhairavi swarajati "Amba '
+                'Kamakshi / kAmAkshI". comp00229 "Amba Kamakshi" + comp03071 '
+                '"kAmAkshI (swarajati)" (Shyama Sastri, bhairavi) share '
+                'karnatik page c1080 and a byte-identical pallavi ("kaamaakshee '
+                'amba kanci") -> one swarajati in two rows. Surfaced by Codex '
+                'work-family detector; verified via shared page + pallavi.'},
+    'Koluvamaregada kodandapani__Tōḍi': {
+        'truth_ids': ['comp03570', 'comp03569'],
+        'review': True,
+        'note': 'work-family: Tyagaraja todi "koluvamare gada kOdaNDapANi". '
+                'comp03570 "Koluvamaregada kodandapani" + comp03569 '
+                '"koluvarmaragadA" share karnatik page c2405, byte-identical '
+                'pallavi, same composer, same raga -> one kriti in two rows. '
+                'Surfaced by Codex detector.'},
+    'raghuvamsa__Kathanakuthoohalam': {
+        'truth_ids': ['comp06049', 'comp06051', 'comp06050'],
+        'review': True,
+        'note': 'work-family: PaTnam Subramanya Aiyyar kadanakutuhalam '
+                '"raghuvamsha sudhAmbudhi". comp06049 "raghuvamsa" + comp06051 '
+                '"raghuvamsha sudhAmbudhi" (identical pallavi, same composer, '
+                'equivalent raga, title containment) + comp06050 "raguvamsa '
+                'sudha" (kadanakutuhalam truncation stub) are the same kriti. '
+                'This is the sahitya raghuvamsa clip (kadanakutuhalam), NOT the '
+                'non-sahitya alapana. Surfaced by Codex detector.'},
     'endarO mahAnubhAvulu__Sri': {
         'truth_ids': ['comp01649'],
         'note': 'endarO -> "endarO mahAnubhAvuklu" (comp01649, registry has '
@@ -129,6 +168,16 @@ OVERRIDES = {
         'note': 'REVIEW: raga alapana (varali), no composition/sahitya. '
                 'Guaranteed comp miss; non-sahitya stratum candidate.'},
     # ---- review=True: my best resolution, needs Deepti confirmation ----
+    'yEnATi mOmu palamu__Bhairavi': {
+        'truth_ids': ['comp08673', 'comp01633'],
+        'note': 'BLESSED 2026-07-23 (Deepti). '
+                'work-family: Tyagaraja bhairavi "EnATi nOmu phalamO".'
+                'comp08673 "yEnATi mOmu palamu" (stub, the clip\'s filename '
+                'spelling, linked to page c1736 in Rung 2) + comp01633 '
+                '"EnATi nOmu phalamO" (Tyagaraja, bhairavi, owns page c1736) '
+                'are the same kriti. Rung 2 linked the page to the stub; the '
+                'real full-work row comp01633 must also count. Surfaced by '
+                'Rung 5; verified via the shared c1736 pallavi.'},
     'bhajare__Kalyani': {
         'truth_ids': ['comp00744'],
         'review': True,

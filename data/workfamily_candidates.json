@@ -1,0 +1,847 @@
+{
+  "meta": {
+    "scope": "wild truth registry IDs only; review candidates, never auto-merge",
+    "in_catalog_manifest_entries": 78,
+    "empty_truth_clips": [
+      "alapana1__Bēgaḍa",
+      "alapana2__Varāḷi"
+    ],
+    "unique_truth_ids_scanned": 83,
+    "thresholds": {
+      "pallavi_high": 92.0,
+      "pallavi_review": 88.0,
+      "different_pallavi_veto_below": 85.0,
+      "title_composer_raga": 88.0,
+      "title_raga_stub_low": 90.0
+    },
+    "unique_pair_counts": {
+      "high": 5,
+      "medium": 0,
+      "low": 30
+    },
+    "new_high_confidence_truth_ids": [
+      "comp00229",
+      "comp03570",
+      "comp06049"
+    ]
+  },
+  "candidates_by_truth_id": {
+    "comp00021": [
+      {
+        "candidate_id": "comp00020",
+        "canonical": "abhimanamennaDu",
+        "raga": [
+          "begada"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=begada",
+          "title_pair:100.0:abhimAnamennaDu galgu rAma <> abhimanamennaDu"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      }
+    ],
+    "comp00173": [
+      {
+        "candidate_id": "comp00175",
+        "canonical": "akhilANDEshvari rakSamAm",
+        "raga": [
+          "jujAvanti"
+        ],
+        "composer": [
+          "Muttuswaamee Dikshitar"
+        ],
+        "evidence": [
+          "pallavi_ratio:100.0",
+          "title+composer+raga:title=100.0;composer=muttusvamidiksitar;raga=dvijavanti",
+          "title_pair:100.0:akhilAndEswari <> akhilANDEshvari rakSamAm"
+        ],
+        "confidence": "high",
+        "pallavi_snippet": "truth: akhilANDEshvari rakSamAm Agama sampradAya nipuNE shrI | candidate: akhilANDEshvari rakSamAm Agama sampradAya nipuNE shrI",
+        "already_in_truth_set": true
+      }
+    ],
+    "comp00175": [
+      {
+        "candidate_id": "comp00173",
+        "canonical": "akhilAndEswari",
+        "raga": [
+          "Dvijāvanti",
+          "dvijAvanti",
+          "dwijAvanti",
+          "karnATaka kApi",
+          "shri"
+        ],
+        "composer": [
+          "Muttuswaamee Dikshitar",
+          "Paapanaasam Shivan"
+        ],
+        "evidence": [
+          "pallavi_ratio:100.0",
+          "title+composer+raga:title=100.0;composer=muttusvamidiksitar;raga=dvijavanti",
+          "title_pair:100.0:akhilANDEshvari rakSamAm <> akhilAndEswari"
+        ],
+        "confidence": "high",
+        "pallavi_snippet": "truth: akhilANDEshvari rakSamAm Agama sampradAya nipuNE shrI | candidate: akhilANDEshvari rakSamAm Agama sampradAya nipuNE shrI",
+        "already_in_truth_set": true
+      }
+    ],
+    "comp00229": [
+      {
+        "candidate_id": "comp03071",
+        "canonical": "kAmAkshI (swarajati)",
+        "raga": [
+          "bhairavi"
+        ],
+        "composer": [
+          "Shyaamaa shaastree"
+        ],
+        "evidence": [
+          "shared_page:c1080.shtml",
+          "pallavi_ratio:100.0",
+          "title_pair:48.3:Amba Kamakshi <> kAmAkshI (swarajati)"
+        ],
+        "confidence": "high",
+        "pallavi_snippet": "truth: kaamaa- | kshee || am- |ba kanci || | candidate: kaamaa- | kshee || am- |ba kanci ||",
+        "already_in_truth_set": false
+      }
+    ],
+    "comp00313": [],
+    "comp00711": [],
+    "comp00721": [],
+    "comp00744": [],
+    "comp00746": [],
+    "comp00882": [],
+    "comp00902": [],
+    "comp00947": [],
+    "comp00981": [
+      {
+        "candidate_id": "comp00980",
+        "canonical": "Brochevaarevaruraa Ninnuvina",
+        "raga": [
+          "Kamās",
+          "kamas"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=kamas",
+          "title_pair:100.0:brOchevarevarura <> Brochevaarevaruraa Ninnuvina"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      }
+    ],
+    "comp01029": [],
+    "comp01032": [
+      {
+        "candidate_id": "comp01033",
+        "canonical": "chakkani rAjamargamu",
+        "raga": [
+          "karaharapriyA (incomplete)"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=karaharapriya",
+          "title_pair:100.0:chakkani rAja <> chakkani rAjamargamu"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      }
+    ],
+    "comp01333": [],
+    "comp01436": [],
+    "comp01493": [
+      {
+        "candidate_id": "comp01492",
+        "canonical": "Ehi annapoorNE",
+        "raga": [
+          "punnAgavarALi"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=punnagavarali",
+          "title_pair:100.0:Ehi annapUrNE sannidhEhi <> Ehi annapoorNE"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      }
+    ],
+    "comp01633": [
+      {
+        "candidate_id": "comp08673",
+        "canonical": "yEnATi mOmu palamu",
+        "raga": [
+          "bhairavi"
+        ],
+        "composer": [],
+        "evidence": [
+          "shared_page:c1736.shtml",
+          "pallavi_ratio:100.0",
+          "title_pair:85.7:EnATi nOmu phalamO <> yEnATi mOmu palamu"
+        ],
+        "confidence": "high",
+        "pallavi_snippet": "truth: EnATi nOmu phalamO E dAna balamO | candidate: EnATi nOmu phalamO E dAna balamO",
+        "already_in_truth_set": true
+      }
+    ],
+    "comp01649": [],
+    "comp01842": [],
+    "comp01843": [
+      {
+        "candidate_id": "comp01844",
+        "canonical": "entarA ni tana",
+        "raga": [
+          "Harikāmbhōji",
+          "harikAmbhOji"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=harikambhoji",
+          "title_pair:100.0:enta rAni <> entarA ni tana"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": true
+      },
+      {
+        "candidate_id": "comp01845",
+        "canonical": "entarAni tanakenta pOni",
+        "raga": [
+          "Harikāmbhōji"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=harikambhoji",
+          "title_pair:100.0:enta rAni <> entarAni tanakenta pOni"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": true
+      }
+    ],
+    "comp01844": [
+      {
+        "candidate_id": "comp01843",
+        "canonical": "enta rAni",
+        "raga": [
+          "harikAmbhOji"
+        ],
+        "composer": [
+          "Tyaagaraaja"
+        ],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=harikambhoji",
+          "title_pair:100.0:entarA ni tana <> enta rAni"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": true
+      },
+      {
+        "candidate_id": "comp01845",
+        "canonical": "entarAni tanakenta pOni",
+        "raga": [
+          "Harikāmbhōji"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=harikambhoji",
+          "title_pair:100.0:entarA ni tana <> entarAni tanakenta pOni"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": true
+      }
+    ],
+    "comp01845": [
+      {
+        "candidate_id": "comp01843",
+        "canonical": "enta rAni",
+        "raga": [
+          "harikAmbhOji"
+        ],
+        "composer": [
+          "Tyaagaraaja"
+        ],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=harikambhoji",
+          "title_pair:100.0:entarAni tanakenta pOni <> enta rAni"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": true
+      },
+      {
+        "candidate_id": "comp01844",
+        "canonical": "entarA ni tana",
+        "raga": [
+          "Harikāmbhōji",
+          "harikAmbhOji"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=harikambhoji",
+          "title_pair:100.0:entarAni tanakenta pOni <> entarA ni tana"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": true
+      }
+    ],
+    "comp01866": [],
+    "comp01883": [],
+    "comp01970": [],
+    "comp02390": [],
+    "comp02578": [],
+    "comp02723": [],
+    "comp02725": [
+      {
+        "candidate_id": "comp01430",
+        "canonical": "D K Jayaraman Pancharathana Krithis Jagadanandakaraka",
+        "raga": [
+          "Nāṭa"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=nata",
+          "title_pair:100.0:jagadA nandhakArakA <> D K Jayaraman Pancharathana Krithis Jagadanandakaraka"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      },
+      {
+        "candidate_id": "comp02708",
+        "canonical": "jagadAnanda",
+        "raga": [
+          "nATa"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=nata",
+          "title_pair:100.0:jagadA nandhakArakA <> jagadAnanda"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      }
+    ],
+    "comp02911": [],
+    "comp03070": [],
+    "comp03196": [],
+    "comp03570": [
+      {
+        "candidate_id": "comp03569",
+        "canonical": "koluvarmaragadA",
+        "raga": [
+          "tODi",
+          "tOdi"
+        ],
+        "composer": [
+          "Tyaagaraaja"
+        ],
+        "evidence": [
+          "shared_page:c2405.shtml",
+          "pallavi_ratio:100.0",
+          "title+raga_stub:title=100.0;raga=todi",
+          "title_pair:100.0:Koluvamaregada kodandapani <> koluvamare gada"
+        ],
+        "confidence": "high",
+        "pallavi_snippet": "truth: koluvamare gada kOdaNDapANi | candidate: koluvamare gada kOdaNDapANi",
+        "already_in_truth_set": false
+      }
+    ],
+    "comp03621": [
+      {
+        "candidate_id": "comp03620",
+        "canonical": "krishna nee bEganE",
+        "raga": [
+          "Yamuna kalyāṇi",
+          "yamunA kalyANi",
+          "yamunAkalyANi",
+          "yamuna kalyani"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=yamunakalyani",
+          "title_pair:100.0:krishNA nee bEganE bArO <> krishna nee bEganE"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      }
+    ],
+    "comp03711": [],
+    "comp03805": [
+      {
+        "candidate_id": "comp03806",
+        "canonical": "Madhava Mamava Deva",
+        "raga": [
+          "Nīlāṁbari",
+          "neelAmbari"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=nilambari",
+          "title_pair:100.0:mAdhava mAmava <> Madhava Mamava Deva"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": true
+      }
+    ],
+    "comp03806": [
+      {
+        "candidate_id": "comp03805",
+        "canonical": "mAdhava mAmava",
+        "raga": [
+          "Nīlāṁbari",
+          "bhavapriya",
+          "neelAmbari"
+        ],
+        "composer": [
+          "BaalamuraLi Krishna"
+        ],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=nilambari",
+          "title_pair:100.0:Madhava Mamava Deva <> mAdhava mAmava"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": true
+      }
+    ],
+    "comp03830": [],
+    "comp03910": [],
+    "comp04037": [],
+    "comp04227": [
+      {
+        "candidate_id": "comp04225",
+        "canonical": "mari vErE",
+        "raga": [
+          "Anandabhairavi",
+          "Anandhbhairavi",
+          "Latāngi",
+          "Shanmukapriya",
+          "Ānandabhairavi"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=latangi",
+          "title_pair:100.0:marivEre dikkevaru <> mari vErE"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      }
+    ],
+    "comp04228": [
+      {
+        "candidate_id": "comp02100",
+        "canonical": "GayatriGirish MarivereGatiEvaramma",
+        "raga": [
+          "Ānandabhairavi"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=anandabhairavi",
+          "title_pair:100.0:marivErE gati <> GayatriGirish MarivereGatiEvaramma"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      },
+      {
+        "candidate_id": "comp04225",
+        "canonical": "mari vErE",
+        "raga": [
+          "Anandabhairavi",
+          "Anandhbhairavi",
+          "Latāngi",
+          "Shanmukapriya",
+          "Ānandabhairavi"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=anandabhairavi",
+          "title_pair:100.0:marivErE gati <> mari vErE"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      }
+    ],
+    "comp04380": [],
+    "comp04572": [
+      {
+        "candidate_id": "comp04571",
+        "canonical": "nagumomu",
+        "raga": [
+          "AbhEri",
+          "Madhyamāvati",
+          "Sāvēri",
+          "abheri"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=madyamavati",
+          "title_pair:100.0:nagumOmu galavAni <> nagumomu"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      }
+    ],
+    "comp04573": [
+      {
+        "candidate_id": "comp04571",
+        "canonical": "nagumomu",
+        "raga": [
+          "AbhEri",
+          "Madhyamāvati",
+          "Sāvēri",
+          "abheri"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=aberi,saveri",
+          "title_pair:100.0:nagumomu ganaleni <> nagumomu"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      }
+    ],
+    "comp04723": [],
+    "comp04923": [
+      {
+        "candidate_id": "comp04922",
+        "canonical": "nidhi chAla",
+        "raga": [
+          "kalyANi"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=kalyani",
+          "title_pair:100.0:nidhi chAla sukhamA <> nidhi chAla"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      }
+    ],
+    "comp05096": [],
+    "comp05111": [
+      {
+        "candidate_id": "comp05102",
+        "canonical": "ninnuvinaga",
+        "raga": [
+          "Pūrvīkaḷyāṇi",
+          "Rītigauḷa",
+          "kalyANi",
+          "poorvikalyANi",
+          "riti gaula",
+          "tODi"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=ritigaula",
+          "title_pair:100.0:ninnuvinA marigaladA <> Ninnuvina"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      }
+    ],
+    "comp05324": [],
+    "comp05517": [],
+    "comp05700": [],
+    "comp05713": [],
+    "comp05867": [],
+    "comp06049": [
+      {
+        "candidate_id": "comp06051",
+        "canonical": "raghuvamsha sudhAmbudhi",
+        "raga": [
+          "kadanakutUhala"
+        ],
+        "composer": [
+          "PaTnam Subramanya Aiyyar"
+        ],
+        "evidence": [
+          "pallavi_ratio:100.0",
+          "title+composer+raga:title=100.0;composer=patnamsubramanyaaiyyar;raga=katanakutuhalam",
+          "title_pair:100.0:raghuvamsa <> raghuvamsha sudhAmbudhi"
+        ],
+        "confidence": "high",
+        "pallavi_snippet": "truth: raghuvamsha sudhAmbudhi candra shrI rAma rAja rAjEshvara | candidate: raghuvamsha sudhAmbudhi candra shrI rAma rAja rAjEshvara",
+        "already_in_truth_set": false
+      },
+      {
+        "candidate_id": "comp06050",
+        "canonical": "raguvamsa sudha",
+        "raga": [
+          "Kathanakutūhalaṁ",
+          "kadanakutoohalam"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=kadanakutuhalam,katanakutuhalam",
+          "title_pair:100.0:raghuvamsa <> raguvamsa sudha"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      }
+    ],
+    "comp06054": [
+      {
+        "candidate_id": "comp06052",
+        "canonical": "raghuvara",
+        "raga": [
+          "Kāmavardani",
+          "pantuvarALi",
+          "pantuvarali"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=pantuvarali",
+          "title_pair:100.0:raghuvara nannu <> raghuvara"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      }
+    ],
+    "comp06163": [],
+    "comp06170": [],
+    "comp06177": [],
+    "comp06194": [],
+    "comp06234": [],
+    "comp06498": [],
+    "comp06693": [
+      {
+        "candidate_id": "comp06731",
+        "canonical": "sarasijanAba murArE",
+        "raga": [
+          "tODi"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=todi",
+          "title_pair:100.0:sArasijanAbha murArE pAhi <> sarasijanAba murArE"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": true
+      }
+    ],
+    "comp06694": [],
+    "comp06731": [
+      {
+        "candidate_id": "comp06693",
+        "canonical": "sArasijanAbha murArE pAhi",
+        "raga": [
+          "tODi"
+        ],
+        "composer": [
+          "Swaati TirunaaL"
+        ],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=todi",
+          "title_pair:100.0:sarasijanAba murArE <> sArasijanAbha murArE pAhi"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": true
+      }
+    ],
+    "comp06734": [],
+    "comp06750": [],
+    "comp06850": [
+      {
+        "candidate_id": "comp02101",
+        "canonical": "GayatriGirish SiddhiVinayakam",
+        "raga": [
+          "Ṣanmukhapriya"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=sanmukapriya",
+          "title_pair:100.0:siddhi vinAyakam <> GayatriGirish SiddhiVinayakam"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      }
+    ],
+    "comp06979": [],
+    "comp06985": [
+      {
+        "candidate_id": "comp06984",
+        "canonical": "sogasuga",
+        "raga": [
+          "sriranjani",
+          "Śrīranjani"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=sriranjani",
+          "title_pair:100.0:sogasugA mrudanga <> sogasuga"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      },
+      {
+        "candidate_id": "comp06986",
+        "canonical": "sogasugA mrudanga tALamu",
+        "raga": [
+          "sreeranjani",
+          "sri ranjani",
+          "sriranjani"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=sriranjani",
+          "title_pair:100.0:sogasugA mrudanga <> sogasugA mrudanga tALamu"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      }
+    ],
+    "comp07296": [
+      {
+        "candidate_id": "comp07293",
+        "canonical": "Shri subrahmanyaya namaste manasija koti lavanya",
+        "raga": [
+          "Kāṁbhōji"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=kambhoji",
+          "title_pair:100.0:shrI subrahmaNyAya <> Shri subrahmanyaya namaste manasija koti lavanya"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      },
+      {
+        "candidate_id": "comp07294",
+        "canonical": "SreesubrahmaNyAya namstE",
+        "raga": [
+          "Kāṁbhōji"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=kambhoji",
+          "title_pair:100.0:shrI subrahmaNyAya <> SreesubrahmaNyAya namstE"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      },
+      {
+        "candidate_id": "comp07297",
+        "canonical": "sri subramanyAyO",
+        "raga": [
+          "kAmbhOji",
+          "tODi"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=kambhoji",
+          "title_pair:100.0:sri subramanyaya <> sri subramanya"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      },
+      {
+        "candidate_id": "comp07354",
+        "canonical": "sree subrahmanyAya namastE",
+        "raga": [
+          "Kāṁbhōji",
+          "kAmbhOji",
+          "kAmbhoji"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=kambhoji",
+          "title_pair:100.0:sri subramanyaya <> sri subramanyAya namastE"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      }
+    ],
+    "comp07319": [
+      {
+        "candidate_id": "comp07318",
+        "canonical": "sree varalakshmi",
+        "raga": [
+          "sree",
+          "sri"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=sri",
+          "title_pair:100.0:shrI varalakshmi namastubhyam <> sree varalakshmi"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      }
+    ],
+    "comp07321": [],
+    "comp07450": [],
+    "comp07816": [],
+    "comp08097": [],
+    "comp08338": [],
+    "comp08381": [
+      {
+        "candidate_id": "comp08380",
+        "canonical": "Vathapi Gana",
+        "raga": [
+          "Hamsadhvāni"
+        ],
+        "composer": [],
+        "evidence": [
+          "title+raga_stub:title=100.0;raga=hamsadvani",
+          "title_pair:100.0:vAtApi gaNapathim <> Vathapi Gana"
+        ],
+        "confidence": "low",
+        "pallavi_snippet": "",
+        "already_in_truth_set": false
+      }
+    ],
+    "comp08503": [],
+    "comp08652": [],
+    "comp08673": [
+      {
+        "candidate_id": "comp01633",
+        "canonical": "EnATi nOmu phalamO",
+        "raga": [
+          "bhairavi"
+        ],
+        "composer": [
+          "Tyaagaraaja"
+        ],
+        "evidence": [
+          "shared_page:c1736.shtml",
+          "pallavi_ratio:100.0",
+          "title_pair:85.7:yEnATi mOmu palamu <> EnATi nOmu phalamO"
+        ],
+        "confidence": "high",
+        "pallavi_snippet": "truth: EnATi nOmu phalamO E dAna balamO | candidate: EnATi nOmu phalamO E dAna balamO",
+        "already_in_truth_set": true
+      }
+    ]
+  }
+}
