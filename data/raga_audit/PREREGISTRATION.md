@@ -158,3 +158,68 @@ a split. Per raga, the mean number of distinct groups falls from 28.8 at (a) to
 - Artist coverage is partial on the archive side, exactly as the Qmax audit
   found; level (c)'s artist merge can only act where an artist is recorded, so
   (c) is an **upper bound** on true source-disjointness, never a lower one.
+
+---
+
+# Addendum, 2026-07-30, after the first scoring pass — the harness was found
+
+**This section is appended, not a rewrite.** Everything above stands exactly as
+it was committed in `ec3578d`, before any fold was scored, and the numbers it
+registered are reported in full in `data/RAGA_CONTAMINATION_AUDIT.md` whatever
+this addendum says. This addendum is committed **before** the corrected levels
+(b), (c) and (c′) are scored, so the same ordering guarantee covers them.
+
+## What was found
+
+The brief's premise — "the CV harness that produced 72.8 / 84.7 was never
+committed" — is **false**. `git log --all -S"72.8" -- '*.py'` misses it because
+the harness never contained the number. It is
+**`scratch_archive_0711/raga_final_eval.py`**, committed in `c1fca59` on
+2026-07-11. Run verbatim, unmodified, in `venv` today it prints:
+
+```
+1287 tracks with full melody
+final multi-tau   min>=10 ragas=54 top1=61.6% top3=75.2%
+final multi-tau   min>=15 ragas=44 top1=63.4% top3=76.7%
+final multi-tau   min>=20 ragas=32 top1=67.6% top3=79.4%
+final multi-tau   min>=25 ragas=18 top1=72.8% top3=84.7%
+```
+
+Both recorded tiers, both metrics, **exact**. The number is fully reproducible
+from this repository and the environment did not drift.
+
+## Why this changes the primary arm
+
+`raga_final_eval.py` is **multi-tau TDMS alone**: no histogram, no fusion, and
+**one feature row per track** rather than the three augmented rows
+(`orig` / `pitch_shift` / `noise`) that `train_raga_v3_tdms.py` fits on. The
+protocol registered above — fusion at `w_hist = 0.4` over three augmented rows —
+is the *exported v3 model's* protocol, and it is a different measurement. Run at
+the same tier by its own archived harness
+(`scratch_archive_0711/raga_final_push.py`, `MIN` 20→25, `w=0.4`) it scores
+**75.7% top-1 / 84.2% top-3**, which my rebuild reproduces to the printed
+precision — so the rebuild was faithful; it was faithful to the wrong number.
+
+The `cv_note` string in `train_raga_v3_tdms.py` and `models/raga_v3_meta.json`
+therefore attaches a **TDMS-only** score to the **fused** exported model. That is
+a labelling error in the repo, and it is a finding of this audit.
+
+## The corrected arms, registered now, before either is scored at (b)/(c)
+
+- **Primary arm — `raga_final_eval.py`'s protocol**, the one that actually
+  produced 72.8 / 84.7. `scripts/raga_audit_levels.py` reproduces it and swaps
+  **only** the `groups=` argument to `cv.split` for the four level vectors
+  already registered above. Nothing else changes: same tier frozen at
+  `min_tracks >= 25` on level-(a) track counts, same `RandomForestClassifier(800,
+  'sqrt', random_state=42)`, same `StratifiedGroupKFold(5, shuffle=True,
+  random_state=42)`, same read-out. **Its level (a) must print exactly 72.8 /
+  84.7 or the rebuild is rejected.**
+- **Secondary arm — the fusion protocol registered above**, already scored, kept
+  and reported in full at all four levels. It is the exported model, so its
+  contamination answer is of independent interest, and it is an independent
+  replication of the primary arm's delta on a different feature set and a
+  different read-out.
+
+Both arms are reported at every level whatever they show. No level is re-run to
+improve a number; the primary arm's level (a) is a pass/fail check against a
+figure that is already fixed in the repo, not a quantity to be tuned.
