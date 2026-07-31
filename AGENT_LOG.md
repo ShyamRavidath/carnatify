@@ -4382,3 +4382,79 @@ fusion scores higher — but mislabelled.
 thirteen clear 80% top-3. **Vasanta is the one genuine weak class** at 35.7%
 top-1 / 53.6% top-3, far below every other raga and below where its n=28 should
 put it. Any per-raga confidence surface must know this.
+
+## [2026-07-31] Opus 5 (workhorse) — raga duration curve: 72.2% full → 60.4% at 60s → 52.5% at 30s
+
+Ran `WORKHORSE_RAGA_DURATION_BRIEF.md` end to end. Read-only: nothing under
+`models/` written, `identify_clip.py` untouched, production not retrained. The
+readings went into `data/raga_duration/PREREGISTRATION.md` and were committed as
+their own commit (`87e6555`) ahead of the harness scripts (`570b29c`) and ahead
+of any fold. Full write-up in `data/RAGA_DURATION_CURVE.md`.
+
+I accepted the brief's distinction from the graveyard entry before starting.
+"Duration as a lever — ruled out" was measured on the lyrics-ASR composition
+path (Whisper transcripts against a title catalogue, top-5 5.1% @30s → 1.7%
+@300s). This is the melodic-contour → TDMS → random-forest raga channel, which
+shares no code, no feature and no model with it, and it asks the opposite
+question. Nothing here may be quoted about the lyrics path in either direction,
+and the write-up says so in its own section.
+
+**The gate passed on the integer counts.** The full-track cell is the audit's
+level (c) re-run through the windowing pipeline — same 518 tracks in the same
+order, same 155 source groups, same splitter, same forest — and it prints
+374/518 = 72.2% top-1, 435/518 = 84.0% top-3, the audit's exact counts. So the
+curve is measured off the audit's own baseline, not an approximation of it.
+
+**The curve, matched and source-disjoint, window-level, n first:** 30s
+815/1552 = 52.5%; 60s 938/1554 = 60.4%; 120s 982/1538 = 63.8%; 300s
+819/1190 = 68.8%; 600s 657/926 = 71.0%; full 374/518 = 72.2%. Class-prior floor
+0.056-0.058 per cell, so 30s is still 9.4× chance. The 1,554 windows at 60s come
+from 518 tracks in 155 source groups, so I bootstrapped the source groups rather
+than quoting a binomial interval — 60s is 60.4% [54.8, 65.0].
+
+**Against the brief's fixed table this is the 45-65% row — "partial, report the
+knee".** The shortest duration on the registered grid clearing 65% is **300s**;
+120s reaches 63.8% with a CI containing 65%, so the true crossing is bracketed
+in (120s, 300s]. I did not run an intermediate duration — the grid was fixed
+before any score and adding a 180s point after seeing the shape would be tuning.
+
+**The matched/mismatched gap says the shortfall is mostly information, partly
+retraining.** Training on 60s windows instead of using the exported full-track
+model is worth a real +5.7pp [2.8, 8.3] at 60s and +7.5pp [5.1, 10.1] at 30s —
+so the model we ship is measurably the wrong model for a one-minute clip. But
+the matched arm at 60s is still 11.8pp [8.0, 15.8] below full-track, so
+retraining does not move a minute into the top band. Above 300s the mismatch
+penalty is indistinguishable from zero, which is the expected null.
+
+**Trap 2, measured and left alone.** Mean voicing density moves only 0.693 →
+0.671 across the whole sweep, so the harness's effective tau moves 0.144s →
+0.149s, about 3% — an order of magnitude too small to explain a 19.7pp
+difference between 30s and full-track, and it points the wrong way anyway (short
+windows have slightly higher density). What *does* change is the spread: density
+sd falls 0.150 → 0.066, so a 30s window's effective tau varies between roughly
+0.11s and 0.25s depending on the passage, where a full track's is stable. Flagged
+as a mechanism, not tested.
+
+**The guard barely bit.** `min_voiced = 500` (the frozen harness's own constant,
+registered before scoring) discarded 6 windows out of 9,366, all at 30s. A 30s
+window of this corpus essentially always has enough voiced melody, so the 30s
+shortfall is not a "nothing to measure" artefact.
+
+**Registered secondaries.** From-the-start windows are *worse* than random
+offsets at 30s (47.7% vs 52.5%) and 60s (56.9% vs 60.4%) and *better* from 120s
+up (65.5% vs 63.9%, 73.5% vs 69.4%, 75.0% vs 71.4%) — the sign flips between 60s
+and 120s. Per-raga at 60s: ten of eighteen hold at or above 64%; Pūrvīkaḷyāṇi
+falls furthest from full-track (96.2% → 70.5%); Vasanta is the weak class at
+every duration, as in the audit.
+
+**Registered before scoring and it matters:** 35.1% of tier tracks are shorter
+than 300s and 60.6% shorter than 600s, so those cells measure 285s and 496s of
+mean real audio. Disaggregating by window kind moves them by at most 0.6pp, so
+the mixture is not what produces the shape — but the 600s cell is not a clean
+600s point and shares much of its audio with the full-track cell.
+
+**Scope.** This isolates duration only. It does **not** separate duration from
+domain: a 60s archive window at 60.4% and a 60s phone-mic clip at 0/10 are
+consistent with each other and the difference between them is untested here. It
+graduates nothing; `~/sung_tests --cache-v2` remains the only scoreboard. The
+verdict and the decision about what comes next are the verifier's.

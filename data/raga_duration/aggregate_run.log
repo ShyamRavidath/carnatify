@@ -1,0 +1,90 @@
+shard 30: X (2066, 4800)  windows 2072  scored 2066
+shard 60: X (2072, 4800)  windows 2072  scored 2072
+shard 120: X (2048, 4800)  windows 2048  scored 2048
+shard 300: X (1526, 4800)  windows 1526  scored 1526
+shard 600: X (1130, 4800)  windows 1130  scored 1130
+shard full: X (518, 4800)  windows 518  scored 518
+
+aggregating 18202 window predictions from 5/5 folds
+
+cell                        n  disc  short             top1             top3
+matched:30               1552     2      0   815/1552 = 52.5%  1127/1552 = 72.6%   [95% CI on top-1, 2000x source-group bootstrap: 47.6%-57.3%]
+mismatched:30            1552     2      0   698/1552 = 45.0%  1042/1552 = 67.1%   [95% CI on top-1, 2000x source-group bootstrap: 40.7%-48.9%]
+matched:60               1554     0      0   938/1554 = 60.4%  1198/1554 = 77.1%   [95% CI on top-1, 2000x source-group bootstrap: 54.8%-65.0%]
+mismatched:60            1554     0      0   850/1554 = 54.7%  1136/1554 = 73.1%   [95% CI on top-1, 2000x source-group bootstrap: 49.5%-59.6%]
+matched:120              1538     0      8   982/1538 = 63.8%  1223/1538 = 79.5%   [95% CI on top-1, 2000x source-group bootstrap: 57.9%-68.8%]
+mismatched:120           1538     0      8   933/1538 = 60.7%  1213/1538 = 78.9%   [95% CI on top-1, 2000x source-group bootstrap: 55.2%-65.5%]
+matched:300              1190     0    182   819/1190 = 68.8%   971/1190 = 81.6%   [95% CI on top-1, 2000x source-group bootstrap: 62.0%-74.5%]
+mismatched:300           1190     0    182   816/1190 = 68.6%   974/1190 = 81.8%   [95% CI on top-1, 2000x source-group bootstrap: 61.4%-74.4%]
+matched:600               926     0    314   657/926  = 71.0%   760/926  = 82.1%   [95% CI on top-1, 2000x source-group bootstrap: 64.9%-76.5%]
+mismatched:600            926     0    314   645/926  = 69.7%   759/926  = 82.0%   [95% CI on top-1, 2000x source-group bootstrap: 63.3%-75.3%]
+matched:full              518     0      0   374/518  = 72.2%   435/518  = 84.0%   [95% CI on top-1, 2000x source-group bootstrap: 66.4%-78.1%]
+
+REPRODUCTION GATE (matched:full vs audit level (c) 72.2% / 84.0%): 72.2% / 84.0%  ->  PASS
+
+paired differences (same source-group bootstrap, 2000x):
+  matched-minus-mismatched:30         +7.5pp   95% CI  +5.1 .. +10.1pp
+  full-minus-matched:30              +19.7pp   95% CI +16.0 .. +23.8pp
+  matched-minus-mismatched:60         +5.7pp   95% CI  +2.8 ..  +8.3pp
+  full-minus-matched:60              +11.8pp   95% CI  +8.0 .. +15.8pp
+  matched-minus-mismatched:120        +3.2pp   95% CI  +1.1 ..  +5.2pp
+  full-minus-matched:120              +8.4pp   95% CI  +4.8 .. +12.4pp
+  matched-minus-mismatched:300        +0.3pp   95% CI  -2.6 ..  +2.4pp
+  full-minus-matched:300              +3.4pp   95% CI  -0.8 ..  +8.2pp
+  matched-minus-mismatched:600        +1.3pp   95% CI  -0.6 ..  +3.2pp
+  full-minus-matched:600              +1.3pp   95% CI  -2.2 ..  +4.9pp
+  full-minus-matched:full             +0.0pp   95% CI  +0.0 ..  +0.0pp
+
+full-duration windows only (`rand`; short tracks excluded):
+  matched:30               815/1552  =  52.5%  top3  72.6%
+  mismatched:30            698/1552  =  45.0%  top3  67.1%
+  matched:60               938/1554  =  60.4%  top3  77.1%
+  mismatched:60            850/1554  =  54.7%  top3  73.1%
+  matched:120              978/1530  =  63.9%  top3  79.5%
+  mismatched:120           929/1530  =  60.7%  top3  78.9%
+  matched:300              700/1008  =  69.4%  top3  81.7%
+  mismatched:300           697/1008  =  69.1%  top3  82.0%
+  matched:600              437/612   =  71.4%  top3  81.5%
+  mismatched:600           420/612   =  68.6%  top3  81.0%
+
+from-the-start windows (registered secondary, non-gating):
+  matched:30               245/514   =  47.7%  top3  67.7%
+  mismatched:30            211/514   =  41.1%  top3  61.5%
+  matched:60               295/518   =  56.9%  top3  74.9%
+  mismatched:60            262/518   =  50.6%  top3  71.2%
+  matched:120              334/510   =  65.5%  top3  79.2%
+  mismatched:120           315/510   =  61.8%  top3  78.4%
+  matched:300              247/336   =  73.5%  top3  84.2%
+  mismatched:300           243/336   =  72.3%  top3  84.2%
+  matched:600              153/204   =  75.0%  top3  84.8%
+  mismatched:600           150/204   =  73.5%  top3  82.4%
+
+per-raga at 60 s matched (registered secondary, non-gating):
+  Kāmavardani          n=  90  60s  76.7%  top3  86.7%   full-track  80.0%
+  Nāṭa                 n=  90  60s  73.3%  top3  86.7%   full-track  76.7%
+  Kamās                n=  87  60s  72.4%  top3  82.8%   full-track  72.4%
+  Pūrvīkaḷyāṇi         n=  78  60s  70.5%  top3  88.5%   full-track  96.2%
+  Kalyāṇi              n=  90  60s  70.0%  top3  82.2%   full-track  83.3%
+  Aṭāna                n=  78  60s  69.2%  top3  83.3%   full-track  80.8%
+  Sindhubhairavi       n=  87  60s  69.0%  top3  80.5%   full-track  75.9%
+  Mōhanaṁ              n=  90  60s  68.9%  top3  81.1%   full-track  83.3%
+  Tōḍi                 n=  90  60s  65.6%  top3  81.1%   full-track  83.3%
+  Hamsadhvāni          n=  90  60s  64.4%  top3  76.7%   full-track  70.0%
+  Sāvēri               n=  90  60s  55.6%  top3  70.0%   full-track  63.3%
+  Ṣanmukhapriya        n=  87  60s  55.2%  top3  74.7%   full-track  72.4%
+  Śankarābharaṇaṁ      n=  90  60s  54.4%  top3  70.0%   full-track  73.3%
+  Harikāmbhōji         n=  87  60s  50.6%  top3  73.6%   full-track  65.5%
+  Bhairavi             n=  90  60s  47.8%  top3  76.7%   full-track  63.3%
+  Kānaḍa               n=  75  60s  42.7%  top3  76.0%   full-track  64.0%
+  Karaharapriya        n=  81  60s  39.5%  top3  69.1%   full-track  59.3%
+  Vasanta              n=  84  60s  36.9%  top3  47.6%   full-track  35.7%
+
+voicing density (Trap 2 confound):
+  30    n= 1552  density 0.692 (sd 0.150)  voiced frames mean 7149 min 558  effective tau for 0.1s = 0.145s
+  60    n= 1554  density 0.693 (sd 0.130)  voiced frames mean 14328 min 615  effective tau for 0.1s = 0.144s
+  120   n= 1538  density 0.692 (sd 0.116)  voiced frames mean 28550 min 1306  effective tau for 0.1s = 0.145s
+  300   n= 1190  density 0.679 (sd 0.106)  voiced frames mean 66613 min 5777  effective tau for 0.1s = 0.147s
+  600   n=  926  density 0.671 (sd 0.092)  voiced frames mean 113991 min 13764  effective tau for 0.1s = 0.149s
+  full  n=  518  density 0.678 (sd 0.066)  voiced frames mean 181224 min 13764  effective tau for 0.1s = 0.147s
+
+wrote /Users/shyamravidath/carnatify/data/raga_duration/results.json

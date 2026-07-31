@@ -194,6 +194,16 @@ def main() -> None:
                 majority_class_rate=float(prior.max()),
                 class_prior_expectation=float((prior ** 2).sum()),
                 mean_real_s=float(np.mean([r['real_s'] for r in sel])),
+                # registered disaggregation: tracks shorter than d contribute
+                # their WHOLE length once, so they are not a point on the curve
+                by_kind={
+                    kd: dict(n=len(s), top1=sum(r['top1'] for r in s),
+                             top1_rate=sum(r['top1'] for r in s) / len(s),
+                             top3_rate=sum(r['top3'] for r in s) / len(s),
+                             mean_real_s=float(np.mean([r['real_s'] for r in s])))
+                    for kd in ('rand', 'short', 'full')
+                    if (s := [r for r in sel if r['kind'] == kd])
+                },
             )
             st = [r for r in rows if r['dur'] == lab and r['arm'] == arm
                   and r['kind'] == 'start']
@@ -203,6 +213,64 @@ def main() -> None:
                     top3=sum(r['top3'] for r in st),
                     top1_rate=sum(r['top1'] for r in st) / len(st),
                     top3_rate=sum(r['top3'] for r in st) / len(st))
+
+    # ---- uncertainty, computed AFTER the cells and labelled as post-hoc -----
+    # Windows are not independent: 1554 windows come from 518 tracks in 155
+    # level-(c) source groups. A binomial interval on n=1554 would be far too
+    # narrow. This resamples the 155 SOURCE GROUPS with replacement, which is
+    # the unit the folds are disjoint on.
+    group_of = {r['stem']: r['group_c'] for r in recs}
+    rng = np.random.default_rng(SEED)
+    all_groups = sorted(set(group_of.values()))
+    boot_ix = [rng.choice(len(all_groups), len(all_groups), replace=True)
+               for _ in range(2000)]
+    for key, cell in out['cells'].items():
+        lab, arm = cell['duration'], cell['arm']
+        sel = [r for r in rows if r['dur'] == lab and r['arm'] == arm
+               and r['kind'] in PRIMARY_KINDS]
+        by_g = defaultdict(list)
+        for r in sel:
+            by_g[group_of[r['stem']]].append(r['top1'])
+        hits = [np.array(by_g.get(g, []), dtype=float) for g in all_groups]
+        reps = []
+        for ix in boot_ix:
+            v = np.concatenate([hits[i] for i in ix if hits[i].size])
+            reps.append(v.mean())
+        cell['boot_ci95'] = [float(np.percentile(reps, 2.5)),
+                             float(np.percentile(reps, 97.5))]
+
+    # paired differences, resampled on the same source groups: matched minus
+    # mismatched at each duration (identical test windows), and full-track
+    # minus duration d on the matched arm (identical tracks).
+    def gvec(lab, arm):
+        by_g = defaultdict(list)
+        for r in rows:
+            if r['dur'] == lab and r['arm'] == arm and r['kind'] in PRIMARY_KINDS:
+                by_g[group_of[r['stem']]].append(r['top1'])
+        return [np.array(by_g.get(g, []), dtype=float) for g in all_groups]
+
+    def paired(a, b):
+        reps = []
+        for ix in boot_ix:
+            va = np.concatenate([a[i] for i in ix if a[i].size])
+            vb = np.concatenate([b[i] for i in ix if b[i].size])
+            reps.append(va.mean() - vb.mean())
+        return (float(np.percentile(reps, 2.5)), float(np.percentile(reps, 97.5)))
+
+    gfull = gvec('full', 'matched')
+    out['paired'] = {}
+    for lab in DUR_LABELS:
+        gm = gvec(lab, 'matched')
+        if lab != 'full':
+            gx = gvec(lab, 'mismatched')
+            out['paired'][f'matched-minus-mismatched:{lab}'] = dict(
+                delta=float(out['cells'][f'matched:{lab}']['top1_rate']
+                            - out['cells'][f'mismatched:{lab}']['top1_rate']),
+                ci95=paired(gm, gx))
+        out['paired'][f'full-minus-matched:{lab}'] = dict(
+            delta=float(out['cells']['matched:full']['top1_rate']
+                        - out['cells'][f'matched:{lab}']['top1_rate']),
+            ci95=paired(gfull, gm))
 
     sel60 = [r for r in rows if r['dur'] == '60' and r['arm'] == 'matched'
              and r['kind'] in PRIMARY_KINDS]
@@ -229,13 +297,41 @@ def main() -> None:
                   f"{c['n_discard_min_voiced'] + c['n_discard_tdms_none']:5d} "
                   f"{c['n_tracks_short']:6d} "
                   f"{c['top1']:5d}/{c['n_scored']:<5d}={c['top1_rate']:6.1%} "
-                  f"{c['top3']:5d}/{c['n_scored']:<5d}={c['top3_rate']:6.1%}")
+                  f"{c['top3']:5d}/{c['n_scored']:<5d}={c['top3_rate']:6.1%}"
+                  f"   [95% CI on top-1, 2000x source-group bootstrap: "
+                  f"{c['boot_ci95'][0]:.1%}-{c['boot_ci95'][1]:.1%}]")
     g = out['cells'].get('matched:full')
     if g:
         ok = abs(g['top1_rate'] * 100 - 72.2) <= 0.5 and abs(g['top3_rate'] * 100 - 84.0) <= 0.5
         print(f"\nREPRODUCTION GATE (matched:full vs audit level (c) 72.2% / 84.0%): "
               f"{g['top1_rate']:.1%} / {g['top3_rate']:.1%}  ->  "
               f"{'PASS' if ok else 'FAIL'}")
+    print('\npaired differences (same source-group bootstrap, 2000x):')
+    for k, v in out['paired'].items():
+        print(f"  {k:34s} {100 * v['delta']:+5.1f}pp   "
+              f"95% CI {100 * v['ci95'][0]:+5.1f} .. {100 * v['ci95'][1]:+5.1f}pp")
+
+    print('\nfull-duration windows only (`rand`; short tracks excluded):')
+    for lab in DUR_LABELS:
+        for arm in ('matched', 'mismatched'):
+            c = out['cells'].get(f'{arm}:{lab}', {}).get('by_kind', {}).get('rand')
+            if c:
+                print(f"  {arm + ':' + lab:22s} {c['top1']:5d}/{c['n']:<5d} = "
+                      f"{c['top1_rate']:6.1%}  top3 {c['top3_rate']:6.1%}")
+
+    print('\nfrom-the-start windows (registered secondary, non-gating):')
+    for lab in DUR_LABELS:
+        for arm in ('matched', 'mismatched'):
+            s = out['secondary_start'].get(f'{arm}:{lab}')
+            if s:
+                print(f"  {arm + ':' + lab:22s} {s['top1']:5d}/{s['n']:<5d} = "
+                      f"{s['top1_rate']:6.1%}  top3 {s['top3_rate']:6.1%}")
+
+    print('\nper-raga at 60 s matched (registered secondary, non-gating):')
+    for r, v in sorted(out['per_raga_60s'].items(), key=lambda kv: -kv[1]['top1_60']):
+        print(f"  {r:20s} n={v['n_windows']:4d}  60s {v['top1_60']:6.1%}  "
+              f"top3 {v['top3_60']:6.1%}   full-track {v['top1_full']:6.1%}")
+
     print('\nvoicing density (Trap 2 confound):')
     for lab in DUR_LABELS:
         v = out['voicing'][lab]

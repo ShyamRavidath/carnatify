@@ -1,0 +1,68 @@
+shard 30: X (2066, 4800)  windows 2072  scored 2066
+shard 60: X (2072, 4800)  windows 2072  scored 2072
+shard 120: X (2048, 4800)  windows 2048  scored 2048
+shard 300: X (1526, 4800)  windows 1526  scored 1526
+shard 600: X (1130, 4800)  windows 1130  scored 1130
+shard full: X (518, 4800)  windows 518  scored 518
+fold 0: full-track forest fitted in 1s (413 train tracks)
+   fold 0 d=30: matched forest on 1237 windows in 5s, tested on 420
+   fold 0 d=60: matched forest on 1239 windows in 5s, tested on 420
+   fold 0 d=120: matched forest on 1227 windows in 5s, tested on 414
+   fold 0 d=300: matched forest on 945 windows in 3s, tested on 315
+   fold 0 d=600: matched forest on 731 windows in 3s, tested on 240
+fold 0 done in 22s -> preds_fold0.json
+fold 1: full-track forest fitted in 1s (415 train tracks)
+   fold 1 d=30: matched forest on 1243 windows in 5s, tested on 412
+   fold 1 d=60: matched forest on 1245 windows in 5s, tested on 412
+   fold 1 d=120: matched forest on 1229 windows in 5s, tested on 412
+   fold 1 d=300: matched forest on 981 windows in 3s, tested on 262
+   fold 1 d=600: matched forest on 781 windows in 3s, tested on 166
+fold 1 done in 22s -> preds_fold1.json
+fold 2: full-track forest fitted in 1s (414 train tracks)
+   fold 2 d=30: matched forest on 1240 windows in 5s, tested on 414
+   fold 2 d=60: matched forest on 1242 windows in 5s, tested on 416
+   fold 2 d=120: matched forest on 1234 windows in 5s, tested on 404
+   fold 2 d=300: matched forest on 934 windows in 3s, tested on 332
+   fold 2 d=600: matched forest on 724 windows in 3s, tested on 251
+fold 2 done in 22s -> preds_fold2.json
+fold 3: full-track forest fitted in 1s (415 train tracks)
+   fold 3 d=30: matched forest on 1243 windows in 5s, tested on 411
+   fold 3 d=60: matched forest on 1245 windows in 5s, tested on 412
+   fold 3 d=120: matched forest on 1229 windows in 5s, tested on 412
+   fold 3 d=300: matched forest on 973 windows in 4s, tested on 274
+   fold 3 d=600: matched forest on 759 windows in 3s, tested on 199
+fold 3 done in 22s -> preds_fold3.json
+fold 4: full-track forest fitted in 1s (415 train tracks)
+   fold 4 d=30: matched forest on 1245 windows in 5s, tested on 409
+   fold 4 d=60: matched forest on 1245 windows in 5s, tested on 412
+   fold 4 d=120: matched forest on 1233 windows in 5s, tested on 406
+   fold 4 d=300: matched forest on 927 windows in 3s, tested on 343
+   fold 4 d=600: matched forest on 709 windows in 2s, tested on 274
+fold 4 done in 22s -> preds_fold4.json
+
+aggregating 18202 window predictions from 5/5 folds
+
+cell                        n  disc  short             top1             top3
+matched:30               1552     2      0   815/1552 = 52.5%  1127/1552 = 72.6%
+mismatched:30            1552     2      0   698/1552 = 45.0%  1042/1552 = 67.1%
+matched:60               1554     0      0   938/1554 = 60.4%  1198/1554 = 77.1%
+mismatched:60            1554     0      0   850/1554 = 54.7%  1136/1554 = 73.1%
+matched:120              1538     0      8   982/1538 = 63.8%  1223/1538 = 79.5%
+mismatched:120           1538     0      8   933/1538 = 60.7%  1213/1538 = 78.9%
+matched:300              1190     0    182   819/1190 = 68.8%   971/1190 = 81.6%
+mismatched:300           1190     0    182   816/1190 = 68.6%   974/1190 = 81.8%
+matched:600               926     0    314   657/926  = 71.0%   760/926  = 82.1%
+mismatched:600            926     0    314   645/926  = 69.7%   759/926  = 82.0%
+matched:full              518     0      0   374/518  = 72.2%   435/518  = 84.0%
+
+REPRODUCTION GATE (matched:full vs audit level (c) 72.2% / 84.0%): 72.2% / 84.0%  ->  PASS
+
+voicing density (Trap 2 confound):
+  30    n= 1552  density 0.692 (sd 0.150)  voiced frames mean 7149 min 558  effective tau for 0.1s = 0.145s
+  60    n= 1554  density 0.693 (sd 0.130)  voiced frames mean 14328 min 615  effective tau for 0.1s = 0.144s
+  120   n= 1538  density 0.692 (sd 0.116)  voiced frames mean 28550 min 1306  effective tau for 0.1s = 0.145s
+  300   n= 1190  density 0.679 (sd 0.106)  voiced frames mean 66613 min 5777  effective tau for 0.1s = 0.147s
+  600   n=  926  density 0.671 (sd 0.092)  voiced frames mean 113991 min 13764  effective tau for 0.1s = 0.149s
+  full  n=  518  density 0.678 (sd 0.066)  voiced frames mean 181224 min 13764  effective tau for 0.1s = 0.147s
+
+wrote /Users/shyamravidath/carnatify/data/raga_duration/results.json

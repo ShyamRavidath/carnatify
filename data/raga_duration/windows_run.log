@@ -1,0 +1,43 @@
+518 tier tracks, 155 level-(c) groups
+== building shard full
+   full: 100/518 tracks  1s
+   full: 200/518 tracks  3s
+   full: 300/518 tracks  4s
+   full: 400/518 tracks  5s
+   full: 500/518 tracks  6s
+   -> tdms_full.npz: 518 scored, 0 discarded, 0 short-track windows, 10 MB
+== building shard 600
+   600: 100/518 tracks  2s
+   600: 200/518 tracks  3s
+   600: 300/518 tracks  5s
+   600: 400/518 tracks  7s
+   600: 500/518 tracks  8s
+   -> tdms_600.npz: 1130 scored, 0 discarded, 314 short-track windows, 22 MB
+== building shard 300
+   300: 100/518 tracks  1s
+   300: 200/518 tracks  2s
+   300: 300/518 tracks  4s
+   300: 400/518 tracks  5s
+   300: 500/518 tracks  7s
+   -> tdms_300.npz: 1526 scored, 0 discarded, 182 short-track windows, 29 MB
+== building shard 120
+   120: 100/518 tracks  1s
+   120: 200/518 tracks  2s
+   120: 300/518 tracks  3s
+   120: 400/518 tracks  3s
+   120: 500/518 tracks  4s
+   -> tdms_120.npz: 2048 scored, 0 discarded, 8 short-track windows, 39 MB
+== building shard 60
+   60: 100/518 tracks  0s
+   60: 200/518 tracks  1s
+   60: 300/518 tracks  1s
+   60: 400/518 tracks  2s
+   60: 500/518 tracks  2s
+   -> tdms_60.npz: 2072 scored, 0 discarded, 0 short-track windows, 40 MB
+== building shard 30
+   30: 100/518 tracks  0s
+   30: 200/518 tracks  1s
+   30: 300/518 tracks  1s
+   30: 400/518 tracks  1s
+   30: 500/518 tracks  1s
+   -> tdms_30.npz: 2066 scored, 6 discarded, 0 short-track windows, 40 MB

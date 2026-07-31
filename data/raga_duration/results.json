@@ -1,0 +1,758 @@
+{
+ "n_folds_scored": 5,
+ "tier_ragas": [
+  "Aṭāna",
+  "Bhairavi",
+  "Hamsadhvāni",
+  "Harikāmbhōji",
+  "Kalyāṇi",
+  "Kamās",
+  "Karaharapriya",
+  "Kāmavardani",
+  "Kānaḍa",
+  "Mōhanaṁ",
+  "Nāṭa",
+  "Pūrvīkaḷyāṇi",
+  "Sindhubhairavi",
+  "Sāvēri",
+  "Tōḍi",
+  "Vasanta",
+  "Śankarābharaṇaṁ",
+  "Ṣanmukhapriya"
+ ],
+ "level_c_groups": 155,
+ "cells": {
+  "matched:30": {
+   "arm": "matched",
+   "duration": "30",
+   "n_scored": 1552,
+   "n_discard_min_voiced": 2,
+   "n_discard_tdms_none": 0,
+   "n_tracks_short": 0,
+   "n_tracks": 518,
+   "top1": 815,
+   "top3": 1127,
+   "top1_rate": 0.5251288659793815,
+   "top3_rate": 0.726159793814433,
+   "majority_class_rate": 0.05798969072164949,
+   "class_prior_expectation": 0.05572706318418536,
+   "mean_real_s": 30.000181405895702,
+   "by_kind": {
+    "rand": {
+     "n": 1552,
+     "top1": 815,
+     "top1_rate": 0.5251288659793815,
+     "top3_rate": 0.726159793814433,
+     "mean_real_s": 30.000181405895702
+    }
+   },
+   "boot_ci95": [
+    0.47618947997609085,
+    0.573027482838377
+   ]
+  },
+  "mismatched:30": {
+   "arm": "mismatched",
+   "duration": "30",
+   "n_scored": 1552,
+   "n_discard_min_voiced": 2,
+   "n_discard_tdms_none": 0,
+   "n_tracks_short": 0,
+   "n_tracks": 518,
+   "top1": 698,
+   "top3": 1042,
+   "top1_rate": 0.4497422680412371,
+   "top3_rate": 0.6713917525773195,
+   "majority_class_rate": 0.05798969072164949,
+   "class_prior_expectation": 0.05572706318418536,
+   "mean_real_s": 30.000181405895702,
+   "by_kind": {
+    "rand": {
+     "n": 1552,
+     "top1": 698,
+     "top1_rate": 0.4497422680412371,
+     "top3_rate": 0.6713917525773195,
+     "mean_real_s": 30.000181405895702
+    }
+   },
+   "boot_ci95": [
+    0.4072174533877545,
+    0.4885057471264368
+   ]
+  },
+  "matched:60": {
+   "arm": "matched",
+   "duration": "60",
+   "n_scored": 1554,
+   "n_discard_min_voiced": 0,
+   "n_discard_tdms_none": 0,
+   "n_tracks_short": 0,
+   "n_tracks": 518,
+   "top1": 938,
+   "top3": 1198,
+   "top1_rate": 0.6036036036036037,
+   "top3_rate": 0.7709137709137709,
+   "majority_class_rate": 0.05791505791505792,
+   "class_prior_expectation": 0.055731131020706315,
+   "mean_real_s": 60.00036281179139,
+   "by_kind": {
+    "rand": {
+     "n": 1554,
+     "top1": 938,
+     "top1_rate": 0.6036036036036037,
+     "top3_rate": 0.7709137709137709,
+     "mean_real_s": 60.00036281179139
+    }
+   },
+   "boot_ci95": [
+    0.5481318057903474,
+    0.6504744668362356
+   ]
+  },
+  "mismatched:60": {
+   "arm": "mismatched",
+   "duration": "60",
+   "n_scored": 1554,
+   "n_discard_min_voiced": 0,
+   "n_discard_tdms_none": 0,
+   "n_tracks_short": 0,
+   "n_tracks": 518,
+   "top1": 850,
+   "top3": 1136,
+   "top1_rate": 0.546975546975547,
+   "top3_rate": 0.731016731016731,
+   "majority_class_rate": 0.05791505791505792,
+   "class_prior_expectation": 0.055731131020706315,
+   "mean_real_s": 60.00036281179139,
+   "by_kind": {
+    "rand": {
+     "n": 1554,
+     "top1": 850,
+     "top1_rate": 0.546975546975547,
+     "top3_rate": 0.731016731016731,
+     "mean_real_s": 60.00036281179139
+    }
+   },
+   "boot_ci95": [
+    0.4949836171489224,
+    0.5962365169811978
+   ]
+  },
+  "matched:120": {
+   "arm": "matched",
+   "duration": "120",
+   "n_scored": 1538,
+   "n_discard_min_voiced": 0,
+   "n_discard_tdms_none": 0,
+   "n_tracks_short": 8,
+   "n_tracks": 518,
+   "top1": 982,
+   "top3": 1223,
+   "top1_rate": 0.6384915474642393,
+   "top3_rate": 0.7951885565669701,
+   "majority_class_rate": 0.05851755526657997,
+   "class_prior_expectation": 0.055756974166372146,
+   "mean_real_s": 119.82064830787107,
+   "by_kind": {
+    "rand": {
+     "n": 1530,
+     "top1": 978,
+     "top1_rate": 0.6392156862745098,
+     "top3_rate": 0.7947712418300653,
+     "mean_real_s": 120.00072562358278
+    },
+    "short": {
+     "n": 8,
+     "top1": 4,
+     "top1_rate": 0.5,
+     "top3_rate": 0.875,
+     "mean_real_s": 85.38086167800454
+    }
+   },
+   "boot_ci95": [
+    0.5787014327002558,
+    0.6877377583310591
+   ]
+  },
+  "mismatched:120": {
+   "arm": "mismatched",
+   "duration": "120",
+   "n_scored": 1538,
+   "n_discard_min_voiced": 0,
+   "n_discard_tdms_none": 0,
+   "n_tracks_short": 8,
+   "n_tracks": 518,
+   "top1": 933,
+   "top3": 1213,
+   "top1_rate": 0.606631989596879,
+   "top3_rate": 0.7886866059817945,
+   "majority_class_rate": 0.05851755526657997,
+   "class_prior_expectation": 0.055756974166372146,
+   "mean_real_s": 119.82064830787107,
+   "by_kind": {
+    "rand": {
+     "n": 1530,
+     "top1": 929,
+     "top1_rate": 0.6071895424836601,
+     "top3_rate": 0.7888888888888889,
+     "mean_real_s": 120.00072562358278
+    },
+    "short": {
+     "n": 8,
+     "top1": 4,
+     "top1_rate": 0.5,
+     "top3_rate": 0.75,
+     "mean_real_s": 85.38086167800454
+    }
+   },
+   "boot_ci95": [
+    0.5520142016961975,
+    0.6553385861408684
+   ]
+  },
+  "matched:300": {
+   "arm": "matched",
+   "duration": "300",
+   "n_scored": 1190,
+   "n_discard_min_voiced": 0,
+   "n_discard_tdms_none": 0,
+   "n_tracks_short": 182,
+   "n_tracks": 518,
+   "top1": 819,
+   "top3": 971,
+   "top1_rate": 0.6882352941176471,
+   "top3_rate": 0.8159663865546218,
+   "majority_class_rate": 0.07226890756302522,
+   "class_prior_expectation": 0.056861803544947395,
+   "mean_real_s": 285.1390454848606,
+   "by_kind": {
+    "rand": {
+     "n": 1008,
+     "top1": 700,
+     "top1_rate": 0.6944444444444444,
+     "top3_rate": 0.8174603174603174,
+     "mean_real_s": 299.99891156462587
+    },
+    "short": {
+     "n": 182,
+     "top1": 119,
+     "top1_rate": 0.6538461538461539,
+     "top3_rate": 0.8076923076923077,
+     "mean_real_s": 202.8382487353916
+    }
+   },
+   "boot_ci95": [
+    0.6203730263188348,
+    0.7445578243690495
+   ]
+  },
+  "mismatched:300": {
+   "arm": "mismatched",
+   "duration": "300",
+   "n_scored": 1190,
+   "n_discard_min_voiced": 0,
+   "n_discard_tdms_none": 0,
+   "n_tracks_short": 182,
+   "n_tracks": 518,
+   "top1": 816,
+   "top3": 974,
+   "top1_rate": 0.6857142857142857,
+   "top3_rate": 0.8184873949579832,
+   "majority_class_rate": 0.07226890756302522,
+   "class_prior_expectation": 0.056861803544947395,
+   "mean_real_s": 285.1390454848606,
+   "by_kind": {
+    "rand": {
+     "n": 1008,
+     "top1": 697,
+     "top1_rate": 0.691468253968254,
+     "top3_rate": 0.8204365079365079,
+     "mean_real_s": 299.99891156462587
+    },
+    "short": {
+     "n": 182,
+     "top1": 119,
+     "top1_rate": 0.6538461538461539,
+     "top3_rate": 0.8076923076923077,
+     "mean_real_s": 202.8382487353916
+    }
+   },
+   "boot_ci95": [
+    0.6141913206553926,
+    0.7441888872055147
+   ]
+  },
+  "matched:600": {
+   "arm": "matched",
+   "duration": "600",
+   "n_scored": 926,
+   "n_discard_min_voiced": 0,
+   "n_discard_tdms_none": 0,
+   "n_tracks_short": 314,
+   "n_tracks": 518,
+   "top1": 657,
+   "top3": 760,
+   "top1_rate": 0.7095032397408207,
+   "top3_rate": 0.8207343412526998,
+   "majority_class_rate": 0.0734341252699784,
+   "class_prior_expectation": 0.05783252242628366,
+   "mean_real_s": 496.27081902019273,
+   "by_kind": {
+    "rand": {
+     "n": 612,
+     "top1": 437,
+     "top1_rate": 0.7140522875816994,
+     "top3_rate": 0.815359477124183,
+     "mean_real_s": 600.0007256235829
+    },
+    "short": {
+     "n": 314,
+     "top1": 220,
+     "top1_rate": 0.7006369426751592,
+     "top3_rate": 0.8312101910828026,
+     "mean_real_s": 294.096606149891
+    }
+   },
+   "boot_ci95": [
+    0.6487423862930451,
+    0.7654753373577389
+   ]
+  },
+  "mismatched:600": {
+   "arm": "mismatched",
+   "duration": "600",
+   "n_scored": 926,
+   "n_discard_min_voiced": 0,
+   "n_discard_tdms_none": 0,
+   "n_tracks_short": 314,
+   "n_tracks": 518,
+   "top1": 645,
+   "top3": 759,
+   "top1_rate": 0.6965442764578834,
+   "top3_rate": 0.8196544276457883,
+   "majority_class_rate": 0.0734341252699784,
+   "class_prior_expectation": 0.05783252242628366,
+   "mean_real_s": 496.27081902019273,
+   "by_kind": {
+    "rand": {
+     "n": 612,
+     "top1": 420,
+     "top1_rate": 0.6862745098039216,
+     "top3_rate": 0.8104575163398693,
+     "mean_real_s": 600.0007256235829
+    },
+    "short": {
+     "n": 314,
+     "top1": 225,
+     "top1_rate": 0.7165605095541401,
+     "top3_rate": 0.8375796178343949,
+     "mean_real_s": 294.096606149891
+    }
+   },
+   "boot_ci95": [
+    0.6332950769277109,
+    0.7527370737344183
+   ]
+  },
+  "matched:full": {
+   "arm": "matched",
+   "duration": "full",
+   "n_scored": 518,
+   "n_discard_min_voiced": 0,
+   "n_discard_tdms_none": 0,
+   "n_tracks_short": 0,
+   "n_tracks": 518,
+   "top1": 374,
+   "top3": 435,
+   "top1_rate": 0.722007722007722,
+   "top3_rate": 0.8397683397683398,
+   "majority_class_rate": 0.05791505791505792,
+   "class_prior_expectation": 0.055731131020706315,
+   "mean_real_s": 785.3792283245344,
+   "by_kind": {
+    "full": {
+     "n": 518,
+     "top1": 374,
+     "top1_rate": 0.722007722007722,
+     "top3_rate": 0.8397683397683398,
+     "mean_real_s": 785.3792283245344
+    }
+   },
+   "boot_ci95": [
+    0.6642217796647262,
+    0.7805432873434477
+   ]
+  }
+ },
+ "per_raga_60s": {
+  "Aṭāna": {
+   "n_windows": 78,
+   "top1_60": 0.6923076923076923,
+   "top3_60": 0.8333333333333334,
+   "n_tracks_full": 26,
+   "top1_full": 0.8076923076923077
+  },
+  "Bhairavi": {
+   "n_windows": 90,
+   "top1_60": 0.4777777777777778,
+   "top3_60": 0.7666666666666667,
+   "n_tracks_full": 30,
+   "top1_full": 0.6333333333333333
+  },
+  "Hamsadhvāni": {
+   "n_windows": 90,
+   "top1_60": 0.6444444444444445,
+   "top3_60": 0.7666666666666667,
+   "n_tracks_full": 30,
+   "top1_full": 0.7
+  },
+  "Harikāmbhōji": {
+   "n_windows": 87,
+   "top1_60": 0.5057471264367817,
+   "top3_60": 0.735632183908046,
+   "n_tracks_full": 29,
+   "top1_full": 0.6551724137931034
+  },
+  "Kalyāṇi": {
+   "n_windows": 90,
+   "top1_60": 0.7,
+   "top3_60": 0.8222222222222222,
+   "n_tracks_full": 30,
+   "top1_full": 0.8333333333333334
+  },
+  "Kamās": {
+   "n_windows": 87,
+   "top1_60": 0.7241379310344828,
+   "top3_60": 0.8275862068965517,
+   "n_tracks_full": 29,
+   "top1_full": 0.7241379310344828
+  },
+  "Karaharapriya": {
+   "n_windows": 81,
+   "top1_60": 0.3950617283950617,
+   "top3_60": 0.691358024691358,
+   "n_tracks_full": 27,
+   "top1_full": 0.5925925925925926
+  },
+  "Kāmavardani": {
+   "n_windows": 90,
+   "top1_60": 0.7666666666666667,
+   "top3_60": 0.8666666666666667,
+   "n_tracks_full": 30,
+   "top1_full": 0.8
+  },
+  "Kānaḍa": {
+   "n_windows": 75,
+   "top1_60": 0.4266666666666667,
+   "top3_60": 0.76,
+   "n_tracks_full": 25,
+   "top1_full": 0.64
+  },
+  "Mōhanaṁ": {
+   "n_windows": 90,
+   "top1_60": 0.6888888888888889,
+   "top3_60": 0.8111111111111111,
+   "n_tracks_full": 30,
+   "top1_full": 0.8333333333333334
+  },
+  "Nāṭa": {
+   "n_windows": 90,
+   "top1_60": 0.7333333333333333,
+   "top3_60": 0.8666666666666667,
+   "n_tracks_full": 30,
+   "top1_full": 0.7666666666666667
+  },
+  "Pūrvīkaḷyāṇi": {
+   "n_windows": 78,
+   "top1_60": 0.7051282051282052,
+   "top3_60": 0.8846153846153846,
+   "n_tracks_full": 26,
+   "top1_full": 0.9615384615384616
+  },
+  "Sindhubhairavi": {
+   "n_windows": 87,
+   "top1_60": 0.6896551724137931,
+   "top3_60": 0.8045977011494253,
+   "n_tracks_full": 29,
+   "top1_full": 0.7586206896551724
+  },
+  "Sāvēri": {
+   "n_windows": 90,
+   "top1_60": 0.5555555555555556,
+   "top3_60": 0.7,
+   "n_tracks_full": 30,
+   "top1_full": 0.6333333333333333
+  },
+  "Tōḍi": {
+   "n_windows": 90,
+   "top1_60": 0.6555555555555556,
+   "top3_60": 0.8111111111111111,
+   "n_tracks_full": 30,
+   "top1_full": 0.8333333333333334
+  },
+  "Vasanta": {
+   "n_windows": 84,
+   "top1_60": 0.36904761904761907,
+   "top3_60": 0.47619047619047616,
+   "n_tracks_full": 28,
+   "top1_full": 0.35714285714285715
+  },
+  "Śankarābharaṇaṁ": {
+   "n_windows": 90,
+   "top1_60": 0.5444444444444444,
+   "top3_60": 0.7,
+   "n_tracks_full": 30,
+   "top1_full": 0.7333333333333333
+  },
+  "Ṣanmukhapriya": {
+   "n_windows": 87,
+   "top1_60": 0.5517241379310345,
+   "top3_60": 0.7471264367816092,
+   "n_tracks_full": 29,
+   "top1_full": 0.7241379310344828
+  }
+ },
+ "voicing": {
+  "30": {
+   "n": 1552,
+   "density_mean": 0.6917039782882768,
+   "density_sd": 0.14959196317725956,
+   "density_p05": 0.4036329334365325,
+   "density_p95": 0.8852167182662537,
+   "voiced_frames_mean": 7149.452319587629,
+   "voiced_frames_min": 558,
+   "voiced_frames_p05": 4171.95,
+   "effective_tau_s": {
+    "0.1": 0.1445705144669902,
+    "0.15": 0.2168557717004853,
+    "0.25": 0.3614262861674755
+   }
+  },
+  "60": {
+   "n": 1554,
+   "density_mean": 0.6931209494822111,
+   "density_sd": 0.13029676866753379,
+   "density_p05": 0.4531685371517028,
+   "density_p95": 0.8616389318885448,
+   "voiced_frames_mean": 14328.196267696268,
+   "voiced_frames_min": 615,
+   "voiced_frames_p05": 9367.9,
+   "effective_tau_s": {
+    "0.1": 0.14427496395066974,
+    "0.15": 0.21641244592600462,
+    "0.25": 0.36068740987667436
+   }
+  },
+  "120": {
+   "n": 1538,
+   "density_mean": 0.69159255044539,
+   "density_sd": 0.1159031293386874,
+   "density_p05": 0.4828052438080495,
+   "density_p95": 0.8406612809597522,
+   "voiced_frames_mean": 28549.74642392718,
+   "voiced_frames_min": 1306,
+   "voiced_frames_p05": 19610.0,
+   "effective_tau_s": {
+    "0.1": 0.1445938073445114,
+    "0.15": 0.21689071101676707,
+    "0.25": 0.3614845183612785
+   }
+  },
+  "300": {
+   "n": 1190,
+   "density_mean": 0.6789995399227431,
+   "density_sd": 0.10590550588102868,
+   "density_p05": 0.5087960409833687,
+   "density_p95": 0.8119818319739649,
+   "voiced_frames_mean": 66612.70420168067,
+   "voiced_frames_min": 5777,
+   "voiced_frames_p05": 40943.45,
+   "effective_tau_s": {
+    "0.1": 0.14727550479839507,
+    "0.15": 0.2209132571975926,
+    "0.25": 0.3681887619959877
+   }
+  },
+  "600": {
+   "n": 926,
+   "density_mean": 0.6712102870543164,
+   "density_sd": 0.0922737079913379,
+   "density_p05": 0.5359146957947745,
+   "density_p95": 0.8014817215640555,
+   "voiced_frames_mean": 113990.78617710584,
+   "voiced_frames_min": 13764,
+   "voiced_frames_p05": 42322.75,
+   "effective_tau_s": {
+    "0.1": 0.14898460576172262,
+    "0.15": 0.22347690864258393,
+    "0.25": 0.3724615144043065
+   }
+  },
+  "full": {
+   "n": 518,
+   "density_mean": 0.678261463457599,
+   "density_sd": 0.06589035623140932,
+   "density_p05": 0.5763301787902784,
+   "density_p95": 0.7834878217104821,
+   "voiced_frames_mean": 181224.05791505793,
+   "voiced_frames_min": 13764,
+   "voiced_frames_p05": 39576.450000000004,
+   "effective_tau_s": {
+    "0.1": 0.14743576833958139,
+    "0.15": 0.22115365250937205,
+    "0.25": 0.36858942084895346
+   }
+  }
+ },
+ "secondary_start": {
+  "matched:30": {
+   "n": 514,
+   "top1": 245,
+   "top3": 348,
+   "top1_rate": 0.4766536964980545,
+   "top3_rate": 0.6770428015564203
+  },
+  "mismatched:30": {
+   "n": 514,
+   "top1": 211,
+   "top3": 316,
+   "top1_rate": 0.41050583657587547,
+   "top3_rate": 0.6147859922178989
+  },
+  "matched:60": {
+   "n": 518,
+   "top1": 295,
+   "top3": 388,
+   "top1_rate": 0.5694980694980695,
+   "top3_rate": 0.749034749034749
+  },
+  "mismatched:60": {
+   "n": 518,
+   "top1": 262,
+   "top3": 369,
+   "top1_rate": 0.5057915057915058,
+   "top3_rate": 0.7123552123552124
+  },
+  "matched:120": {
+   "n": 510,
+   "top1": 334,
+   "top3": 404,
+   "top1_rate": 0.6549019607843137,
+   "top3_rate": 0.792156862745098
+  },
+  "mismatched:120": {
+   "n": 510,
+   "top1": 315,
+   "top3": 400,
+   "top1_rate": 0.6176470588235294,
+   "top3_rate": 0.7843137254901961
+  },
+  "matched:300": {
+   "n": 336,
+   "top1": 247,
+   "top3": 283,
+   "top1_rate": 0.7351190476190477,
+   "top3_rate": 0.8422619047619048
+  },
+  "mismatched:300": {
+   "n": 336,
+   "top1": 243,
+   "top3": 283,
+   "top1_rate": 0.7232142857142857,
+   "top3_rate": 0.8422619047619048
+  },
+  "matched:600": {
+   "n": 204,
+   "top1": 153,
+   "top3": 173,
+   "top1_rate": 0.75,
+   "top3_rate": 0.8480392156862745
+  },
+  "mismatched:600": {
+   "n": 204,
+   "top1": 150,
+   "top3": 168,
+   "top1_rate": 0.7352941176470589,
+   "top3_rate": 0.8235294117647058
+  }
+ },
+ "paired": {
+  "matched-minus-mismatched:30": {
+   "delta": 0.07538659793814434,
+   "ci95": [
+    0.051387855393296746,
+    0.10071703732222119
+   ]
+  },
+  "full-minus-matched:30": {
+   "delta": 0.19687885602834054,
+   "ci95": [
+    0.16027701895645322,
+    0.23768539230621655
+   ]
+  },
+  "matched-minus-mismatched:60": {
+   "delta": 0.0566280566280567,
+   "ci95": [
+    0.02848919944537692,
+    0.08349762117499675
+   ]
+  },
+  "full-minus-matched:60": {
+   "delta": 0.11840411840411835,
+   "ci95": [
+    0.0800373540977189,
+    0.15794723792382606
+   ]
+  },
+  "matched-minus-mismatched:120": {
+   "delta": 0.03185955786736028,
+   "ci95": [
+    0.011334749634502945,
+    0.051784756970569654
+   ]
+  },
+  "full-minus-matched:120": {
+   "delta": 0.0835161745434827,
+   "ci95": [
+    0.04847417111313794,
+    0.12418937397021791
+   ]
+  },
+  "matched-minus-mismatched:300": {
+   "delta": 0.0025210084033613356,
+   "ci95": [
+    -0.026346781716417914,
+    0.024437780026015325
+   ]
+  },
+  "full-minus-matched:300": {
+   "delta": 0.03377242789007495,
+   "ci95": [
+    -0.008422601879278058,
+    0.08187216774378568
+   ]
+  },
+  "matched-minus-mismatched:600": {
+   "delta": 0.01295896328293733,
+   "ci95": [
+    -0.005908463147455653,
+    0.03215253024221847
+   ]
+  },
+  "full-minus-matched:600": {
+   "delta": 0.012504482266901262,
+   "ci95": [
+    -0.021647195219118315,
+    0.04942190637537909
+   ]
+  },
+  "full-minus-matched:full": {
+   "delta": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ]
+  }
+ }
+}
