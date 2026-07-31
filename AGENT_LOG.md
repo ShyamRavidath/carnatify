@@ -4084,3 +4084,190 @@ Prospective long OOC audio and the 28-clip short-OOC sentinel were both queued
 to strengthen a safety arm for a lever that has now been ruled out. Neither
 should be acquired or built on this probe's account. If they are wanted later it
 will be for a different question, and they should be re-justified then.
+
+## [2026-07-30] Opus 5 workhorse — Qmax contamination audit: 60.0% → 9.5%
+
+Executed `WORKHORSE_QMAX_AUDIT_BRIEF.md`. Read-only: no retraining, no catalog
+rebuild, no edit to `identify_clip.py`. Readings were registered in
+`data/qmax_audit/PREREGISTRATION.md` before the first row of the distance matrix
+existed. Full write-up in `data/QMAX_CONTAMINATION_AUDIT.md`; quote numbers from
+there rather than recomputing them.
+
+**"60-67%" was never one number.** Commit `7e9bc7e` reports two separate runs: an
+internal Saraga arm at 66.7% top-1 / 76.7% top-5, and an external archive arm at
+60.0% top-1 / 61.7% top-5 on 60 queries. The top-5 figures pin the internal
+denominator exactly — 76.7% = 23/30 — so the internal arm was n=30. Both eval
+scripts are byte-identical to their state at that commit, so the audit ran
+against the exact code that produced the claim.
+
+**The harness was not bit-rotted and needed no repair.** essentia runs in both
+venvs. The original protocol state reproduced on every figure: 1,203 tracks,
+1,011 works, 108 multi-rendition works, N=800 after the seeded distractor slim,
+60 queries. Level (a) then reproduced the historical score exactly — 36/60 =
+60.0% top-1 and 37/60 = 61.7% top-5, matching the commit message in both places.
+
+**The leakage control was one line.** `evaluate_composition_external.py`'s
+`if j == i: continue` excludes the query's own array index and nothing else. The
+internal script has the same single guard. Nothing excluded another file holding
+the same recording, another track from the same upload, or the same artist.
+
+**Provenance was recoverable and the corpus was not what the eval assumed.**
+`melodia_full/` filenames carry no provenance, so `scripts/qmax_provenance.py`
+rebuilt it: the download manifest resolves 735 of 1,232 tracks, and an exact
+file-size join against the 1,857 cached archive.org item listings (MD5 to break
+ties) resolves the other 497. The join was validated against the manifest before
+use — 400 of 400 agreeing, none contradicting — giving archive_identifier for
+1,232 of 1,232 tracks across 292 items. Hashing the melodia contours then found
+72 groups covering 182 tracks and **110 redundant byte-identical copies**.
+Because `work_key()` strips `_r\d+$`, one recording filed as `X`, `X_r2`, `X_r3`
+counts as three renditions of one work and each is eligible as another's correct
+answer. 51 of the 128 positive pairs available to the 60 queries are
+byte-identical to the query. A near-duplicate sweep over all 128 pairs found
+zero near-identical pairs that were not also byte-identical, so the exact test is
+the complete test on this corpus.
+
+**Result, one matrix computed once and read out four times under different
+masks:**
+
+```
+(a)  as-originally-run   n=60/60  top1 36/60 = 60.0%  [46.5, 72.4]  chance 0.0027
+(b)  recording-disjoint  n=43/60  top1  3/43 =  7.0%  [ 1.5, 19.1]  chance 0.0023
+(c)  source-disjoint     n=42/60  top1  4/42 =  9.5%  [ 2.7, 22.6]  chance 0.0023
+(c') +identifier family  n=39/60  top1  4/39 = 10.3%  [ 2.9, 24.2]  chance 0.0022
+```
+
+Counting queries with no surviving positive as misses instead, (b) is 5.0% and
+(c) is 6.7%. Chance floors are mean positives per clip over references, per
+`colab_coverhunter_rescore.py:212`, never averaged over songs.
+
+**Of the 36 top-1 hits at level (a), 34 were won by a byte-identical copy of the
+query.** Every one sits at distance exactly 0.036, the Serra09 asymmetric floor
+for an identical sequence, while genuine cross-recording matches land at
+0.064-0.108. Level (c) scores above level (b) because masking removes
+distractors as well as positives; no query that hit at (b) lost at (c). All four
+survivors at (c) were verified by hand as genuine cross-recording, cross-upload
+matches, two of them cross-artist by name.
+
+**The "cross-artist" label was never checked.** At level (c) only 4 of 42
+evaluable queries have an artist recorded on both sides; 38 are cross-artist by
+assumption. Corpus-wide, 13 of 1,011 works have two or more known distinct
+artists, and 32 of the 42 evaluable queries draw all surviving positives from a
+single archive item. The corpus cannot support a cross-artist claim at any
+level.
+
+**The internal arm is clean, and separately unreproducible.** A declared
+reconstruction from the committed `models/qmax_catalog.npz` scores 26.9% top-1 /
+30.8% top-5 at n=26 and is **identical at all three levels — not one query, not
+one rank**. That is structural and provable without any Qmax score: all 17
+Saraga multi-rendition works span distinct concerts and distinct artists. But
+26.9% is not a corrected 66.7% and must never be written as one — the
+reconstruction uses one channel instead of the min-ensemble, `W_REF` 800
+zero-padded instead of 1000 unpadded, and `MIN_CHROMA` 200 instead of 30, and 60
+of its 187 tracks receive up to 800 frames of zero padding. It is a floor.
+
+**Repair cost, measured rather than guessed.** The pyin-vocal channel is not
+repairable at any price: twelve scripts read `comp_pitch_cache/`, and nothing in
+the repo or in any commit ever wrote it (`git log --all -S"comp_pitch_cache"`
+returns only consumers), so `d['f']` and `d['tonic']` have no recorded
+provenance. The melodia-mix channel is repairable in about 2.2 h wall on 8 cores
+— `comp_melodia_full.py:32` documents it exactly, all 249 Saraga mixes are on
+disk, and one 34-minute track measured 13× realtime. That spend was not taken:
+it refines a number outside the registered question and cannot change an
+internal contamination answer that is already zero with certainty.
+
+**Verdict against the table fixed in advance.** Level (c) does not hold near
+60-67% and does not reach the 20-40% band; the closest row is "collapses toward
+the chance floor — the last positive number was contamination", and that is the
+reading taken. Two qualifications travel with it: the residual 9.5% is about 41×
+chance with four individually verified genuine hits, so it is real signal rather
+than zero, though its CI is [2.7%, 22.6%] and it is not product-relevant at an
+85% bar; and the internal 66.7% is a different claim that is uncontaminated but
+unreproducible and was always n=30. **"60-67% top-1 (Qmax)" should stop being
+quoted as a single range** — the external half was contamination and the
+internal half cannot be reproduced.
+
+**Side finding, relevant to the rendition-corpus lever.**
+`HANDOFF_SESSION_0725.md:88` counts "65 titles with 2+ renditions" as a retrain
+asset. On the same corpus, 121 titles have ≥2 tracks but only 87 have ≥2
+distinct recordings, and 367 tracks in those groups collapse to 261 distinct
+recordings. The lever is real but roughly 28% smaller than a file count implies,
+and any future melodic corpus should be built recording-disjoint from the start.
+
+Scope: full-recording archive-domain Qmax only. Graduates nothing, does not
+touch `~/sung_tests --cache-v2`, and does not revisit Qmax on wild 30-60s clips,
+where `ARCHITECTURE.md:72` already records 0%. Nothing committed — the working
+tree carries the audit for the verifier seat to read first.
+
+## [2026-07-30] Opus 5 (verifier) — Qmax audit verified and accepted; raga number found to have the same hole; first demand datapoint recorded
+
+**Verification of the Qmax audit.** Independently re-hashed
+`data/raga_v2_cache/melodia_full/` with my own code rather than the workhorse's:
+1,232 tracks, 72 identical groups, 182 tracks inside them, 110 redundant
+byte-identical copies — reproducing the audit's figures exactly. Level (a)
+reproduces commit `7e9bc7e` on both printed figures (36/60 = 60.0% top-1,
+37/60 = 61.7% top-5), so the harness is faithful and the delta is trustworthy.
+Prereg mtime 18:30 precedes the matrix rows (20:51) and the matrix script's last
+edit (19:52), so the registered-before-scored ordering holds. **Verdict accepted
+as written**, including its two qualifications: the residual 9.5% is real signal
+at ~41× chance with four hand-verified genuine hits, and the internal 66.7% is a
+separate, uncontaminated, unreproducible claim that must never be restated as
+26.9%.
+
+One weakness worth naming: the audit's prereg ordering currently rests on file
+mtimes, because nothing is committed. That is weaker than the duration probe's
+guarantee. Commit it.
+
+Agreed with the workhorse's call **not** to spend the 2.2 h melodia rebuild for
+the internal arm — it refines a number outside the registered question and
+cannot change a contamination answer that is already zero with certainty from
+Saraga metadata alone.
+
+**The finding the audit's scope did not cover.** The audit asked only about
+Qmax. The same cache feeds the raga classifier.
+`train_raga_v3_tdms.py:102` loads archive features from
+`MEL_DIR / f'{p.stem}.npy'` — the identical directory — and the CV groups on
+`track_ids`, where `tid = str(d['track_id'])` is one value per npz file. So the
+grouping key is filename identity, not recording identity, and `X` / `X_r2` /
+`X_r3` land on opposite sides of the split. Joining `archive_v3/*.npz` stems
+against `data/qmax_audit/provenance.json` (1,168 of 1,170 join; 2 have no
+melodia file):
+
+- **97 redundant byte-identical copies inside the raga trainset.**
+- **283 archive items, 210 of them contributing more than one track, and 251 of
+  1,168 tracks (21.5%) sitting in a same-raga cluster inside a single archive
+  item** — one upload's alapana and its kriti in that raga, one performance, one
+  singer, one tonic, one recording chain, two track_ids. That is 2.6× the
+  byte-copy exposure and, for a raga classifier, the more dangerous of the two.
+
+Separately, and with the same shape as `comp_pitch_cache`: **the CV harness that
+produced 72.8 / 84.7 was never committed.** `train_raga_v3_tdms.py` only fits
+and exports; the number survives as a docstring note and a `cv_note` string
+dated 2026-07-08, and `git log --all -S"72.8" -- '*.py'` returns only the commit
+that added the note. Unlike `comp_pitch_cache`, the features are fully
+reproducible from committed code and on-disk caches, so a reconstruction can be
+gated on reproducing the historical figure before any delta is read.
+
+`WORKHORSE_RAGA_AUDIT_BRIEF.md` written accordingly: reproduction gate at ±2pp
+first, then three levels differing only in the `groups` vector, tier frozen at
+`min_tracks >= 25`, interpretation table fixed in advance. This displaces the
+catalog-restriction experiment as the next job — that experiment moves lyrics
+precision, and if the raga number does not survive, the product question it
+serves changes shape entirely.
+
+**Demand: no longer zero.** Recorded as zero in every handoff since 2026-07-25.
+Deepti reports that Jon — the one named real user, a Western listener with no
+Carnatic exposure — was genuinely confused at a concert, and **unprompted,
+reached for an AI assistant to identify the piece, which failed.** What this
+establishes: one observed, self-initiated attempt to use exactly this product,
+in exactly the target situation, by a non-musician; and that the obvious
+general-purpose substitute does not solve it. What it does not establish: n is
+1, the observer is not neutral, and no willingness to pay was tested. It is
+nevertheless the strongest demand signal the project has ever had, and the
+handoffs' "demand evidence is zero" line is now stale and must be corrected
+rather than repeated.
+
+Two cheap follow-ups worth more than another model: (1) find out what Jon
+actually wanted named — the composition, the raga, or simply "what is happening
+right now" — because a raga-first product answers only one of those; (2) record
+which assistant he tried and how it failed, which is the only competitive
+evidence the repo would contain.
