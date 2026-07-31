@@ -94,3 +94,9 @@ data/duration_probe/**/*.wav
 # regenerable in ~2.5 min by scripts/raga_audit_protocol.py from the committed
 # melodia contours. Prereg, protocol.json, results.json and the scripts ARE tracked.
 /data/raga_audit/tdms_cache.npz
+
+# Raga duration curve (2026-07-31): the per-window TDMS shards total ~190MB and
+# are regenerable by scripts/raga_duration_windows.py from the committed melodia
+# contours. Prereg, protocol.json, results.json and the scripts ARE tracked.
+/data/raga_duration/tdms_*.npz
+/data/raga_duration/preds_fold*.json
