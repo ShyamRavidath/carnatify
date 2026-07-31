@@ -1,0 +1,247 @@
+{
+ "tier": {
+  "min_tracks": 25,
+  "ragas": [
+   "Aṭāna",
+   "Bhairavi",
+   "Hamsadhvāni",
+   "Harikāmbhōji",
+   "Kalyāṇi",
+   "Kamās",
+   "Karaharapriya",
+   "Kāmavardani",
+   "Kānaḍa",
+   "Mōhanaṁ",
+   "Nāṭa",
+   "Pūrvīkaḷyāṇi",
+   "Sindhubhairavi",
+   "Sāvēri",
+   "Tōḍi",
+   "Vasanta",
+   "Śankarābharaṇaṁ",
+   "Ṣanmukhapriya"
+  ],
+  "track_counts": {
+   "Aṭāna": 26,
+   "Bhairavi": 30,
+   "Hamsadhvāni": 30,
+   "Harikāmbhōji": 29,
+   "Kalyāṇi": 30,
+   "Kamās": 29,
+   "Karaharapriya": 27,
+   "Kāmavardani": 30,
+   "Kānaḍa": 25,
+   "Mōhanaṁ": 30,
+   "Nāṭa": 30,
+   "Pūrvīkaḷyāṇi": 26,
+   "Sindhubhairavi": 29,
+   "Sāvēri": 30,
+   "Tōḍi": 30,
+   "Vasanta": 28,
+   "Śankarābharaṇaṁ": 30,
+   "Ṣanmukhapriya": 29
+  }
+ },
+ "notes": {
+  "unresolved_contour": 0,
+  "unresolved_identifier": 0,
+  "artist_merges_c": 90,
+  "artist_merges_c2": 82
+ },
+ "levels": {
+  "a": {
+   "n_ragas": 18,
+   "n_tracks": 518,
+   "n_groups": 518,
+   "n_folds": 5,
+   "top1": 377,
+   "top3": 439,
+   "top1_rate": 0.7277992277992278,
+   "top3_rate": 0.8474903474903475,
+   "majority_class_rate": 0.05791505791505792,
+   "class_prior_expectation": 0.05573113102070631
+  },
+  "b": {
+   "n_ragas": 18,
+   "n_tracks": 518,
+   "n_groups": 507,
+   "n_folds": 5,
+   "top1": 371,
+   "top3": 433,
+   "top1_rate": 0.7162162162162162,
+   "top3_rate": 0.8359073359073359,
+   "majority_class_rate": 0.05791505791505792,
+   "class_prior_expectation": 0.05573113102070631
+  },
+  "c": {
+   "n_ragas": 18,
+   "n_tracks": 518,
+   "n_groups": 155,
+   "n_folds": 5,
+   "top1": 374,
+   "top3": 435,
+   "top1_rate": 0.722007722007722,
+   "top3_rate": 0.8397683397683398,
+   "majority_class_rate": 0.05791505791505792,
+   "class_prior_expectation": 0.05573113102070631
+  },
+  "c2": {
+   "n_ragas": 18,
+   "n_tracks": 518,
+   "n_groups": 150,
+   "n_folds": 5,
+   "top1": 369,
+   "top3": 428,
+   "top1_rate": 0.7123552123552124,
+   "top3_rate": 0.8262548262548263,
+   "majority_class_rate": 0.05791505791505792,
+   "class_prior_expectation": 0.05573113102070631
+  }
+ },
+ "gate_exact": true,
+ "per_raga_level_c": {
+  "Aṭāna": {
+   "n_tracks": 26,
+   "top1_a": 0.7692307692307693,
+   "top1_c": 0.8076923076923077,
+   "top3_c": 0.8846153846153846
+  },
+  "Bhairavi": {
+   "n_tracks": 30,
+   "top1_a": 0.7333333333333333,
+   "top1_c": 0.6333333333333333,
+   "top3_c": 0.8
+  },
+  "Hamsadhvāni": {
+   "n_tracks": 30,
+   "top1_a": 0.7,
+   "top1_c": 0.7,
+   "top3_c": 0.7666666666666667
+  },
+  "Harikāmbhōji": {
+   "n_tracks": 29,
+   "top1_a": 0.6206896551724138,
+   "top1_c": 0.6551724137931034,
+   "top3_c": 0.7586206896551724
+  },
+  "Kalyāṇi": {
+   "n_tracks": 30,
+   "top1_a": 0.8333333333333334,
+   "top1_c": 0.8333333333333334,
+   "top3_c": 0.9
+  },
+  "Kamās": {
+   "n_tracks": 29,
+   "top1_a": 0.7586206896551724,
+   "top1_c": 0.7241379310344828,
+   "top3_c": 0.8620689655172413
+  },
+  "Karaharapriya": {
+   "n_tracks": 27,
+   "top1_a": 0.5555555555555556,
+   "top1_c": 0.5925925925925926,
+   "top3_c": 0.8148148148148148
+  },
+  "Kāmavardani": {
+   "n_tracks": 30,
+   "top1_a": 0.8333333333333334,
+   "top1_c": 0.8,
+   "top3_c": 0.9
+  },
+  "Kānaḍa": {
+   "n_tracks": 25,
+   "top1_a": 0.6,
+   "top1_c": 0.64,
+   "top3_c": 0.92
+  },
+  "Mōhanaṁ": {
+   "n_tracks": 30,
+   "top1_a": 0.8333333333333334,
+   "top1_c": 0.8333333333333334,
+   "top3_c": 0.9
+  },
+  "Nāṭa": {
+   "n_tracks": 30,
+   "top1_a": 0.7666666666666667,
+   "top1_c": 0.7666666666666667,
+   "top3_c": 0.8333333333333334
+  },
+  "Pūrvīkaḷyāṇi": {
+   "n_tracks": 26,
+   "top1_a": 0.9230769230769231,
+   "top1_c": 0.9615384615384616,
+   "top3_c": 0.9615384615384616
+  },
+  "Sindhubhairavi": {
+   "n_tracks": 29,
+   "top1_a": 0.7931034482758621,
+   "top1_c": 0.7586206896551724,
+   "top3_c": 0.8620689655172413
+  },
+  "Sāvēri": {
+   "n_tracks": 30,
+   "top1_a": 0.6333333333333333,
+   "top1_c": 0.6333333333333333,
+   "top3_c": 0.9
+  },
+  "Tōḍi": {
+   "n_tracks": 30,
+   "top1_a": 0.8333333333333334,
+   "top1_c": 0.8333333333333334,
+   "top3_c": 0.9
+  },
+  "Vasanta": {
+   "n_tracks": 28,
+   "top1_a": 0.42857142857142855,
+   "top1_c": 0.35714285714285715,
+   "top3_c": 0.5357142857142857
+  },
+  "Śankarābharaṇaṁ": {
+   "n_tracks": 30,
+   "top1_a": 0.7333333333333333,
+   "top1_c": 0.7333333333333333,
+   "top3_c": 0.8
+  },
+  "Ṣanmukhapriya": {
+   "n_tracks": 29,
+   "top1_a": 0.7241379310344828,
+   "top1_c": 0.7241379310344828,
+   "top3_c": 0.8275862068965517
+  }
+ },
+ "exposure": {
+  "clustered": {
+   "n": 243,
+   "top1_a": 0.7119341563786008,
+   "top1_c": 0.6995884773662552
+  },
+  "solo": {
+   "n": 275,
+   "top1_a": 0.7418181818181818,
+   "top1_c": 0.7418181818181818
+  }
+ },
+ "flips_a_to_c": [
+  "225_Seetapati_Namanasuna",
+  "archive__Bhairavi__apuroopamAna peN",
+  "archive__Bhairavi__nee pAdamulE",
+  "archive__Bhairavi__nee pAdamulE_r2",
+  "archive__Bhairavi__tonDru nigazhdandai",
+  "archive__Bhairavi__upachAramu",
+  "archive__Kāmavardani__Alapana",
+  "archive__Sindhubhairavi__thillAna",
+  "archive__Vasanta__Emani pogaDudurA",
+  "archive__Vasanta__Emani pogaDudurA_r2",
+  "archive__Ṣanmukhapriya__Melakartha Chakkaram Syamalangi"
+ ],
+ "gains_a_to_c": [
+  "33_Entara_Nitana",
+  "archive__Aṭāna__VamanKaSthithaya",
+  "archive__Bhairavi__RTP",
+  "archive__Bhairavi__Virboni varnam",
+  "archive__Karaharapriya__rAma nee",
+  "archive__Kānaḍa__chuinna jAti",
+  "archive__Pūrvīkaḷyāṇi__Ananda naDamADuvAr",
+  "archive__Ṣanmukhapriya__durgA pancaratnam"
+ ]
+}

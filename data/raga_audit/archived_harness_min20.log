@@ -1,0 +1,9 @@
+min>=20: 32 ragas, 826 tracks
+RF800 tdms (repro)                           top1=67.2% top3=79.2%
+RF2000 tdms                                  top1=67.3% top3=78.9%
+ET800 tdms                                   top1=68.2% top3=78.8%
+ET2000 tdms                                  top1=68.9% top3=80.9%
+RF800 tdms + hist w=0.2                      top1=68.9% top3=79.8%
+RF800 tdms + hist w=0.3                      top1=69.4% top3=79.5%
+RF800 tdms + hist w=0.4                      top1=69.0% top3=79.5%
+ET2000 tdms + hist w=0.3                     top1=69.4% top3=80.6%

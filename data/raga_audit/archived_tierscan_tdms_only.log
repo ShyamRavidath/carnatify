@@ -1,0 +1,5 @@
+1287 tracks with full melody
+final multi-tau                                min>=10 ragas=54 top1=61.6% top3=75.2%
+final multi-tau                                min>=15 ragas=44 top1=63.4% top3=76.7%
+final multi-tau                                min>=20 ragas=32 top1=67.6% top3=79.4%
+final multi-tau                                min>=25 ragas=18 top1=72.8% top3=84.7%

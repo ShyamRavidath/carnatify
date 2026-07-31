@@ -1,0 +1,3 @@
+min>=25: 18 ragas, 518 tracks
+RF800 tdms + hist w=0.4  [the exported config] top1=75.7% top3=84.2%  (n=518)
+RF800 tdms only          [reference]         top1=73.7% top3=84.2%  (n=518)

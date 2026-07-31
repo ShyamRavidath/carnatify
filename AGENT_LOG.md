@@ -4304,3 +4304,81 @@ is commodity, which is a cost advantage rather than a risk.
 This does not change the ordering — the raga audit still gates everything,
 because a raga-first product built on a contaminated 72.8% is built on sand with
 a real user watching. It changes what the audit is *for*.
+
+## [2026-07-30] Opus 5 (verifier, completing a workhorse run) — raga audit: 72.8% survives source-disjointness at 72.2%
+
+The Opus 5 workhorse ran the raga contamination audit against
+`WORKHORSE_RAGA_AUDIT_BRIEF.md` and terminated on a session limit after
+committing the preregistration (`ec3578d`), an addendum (`b21a687`) and the
+fusion arm. The primary arm and the write-up were completed from its own
+committed scripts by the verifier seat. Result:
+`data/RAGA_CONTAMINATION_AUDIT.md`.
+
+**The brief's premise was wrong and the workhorse caught it.** I asserted the
+72.8/84.7 CV harness was never committed, on the strength of
+`git log --all -S"72.8" -- '*.py'` returning only the commit that added the
+docstring note. That search finds files which *hardcode* the string; the harness
+*computes* it. `scratch_archive_0711/raga_final_eval.py` (commit `c1fca59`) is
+the harness, and run verbatim it prints both recorded tiers and both metrics
+exactly — `min>=20 ragas=32 top1=67.6% top3=79.4%` and `min>=25 ragas=18
+top1=72.8% top3=84.7%`. It also appeared in my own grep output while I was
+writing the brief and I did not follow it. The lesson generalizes: `-S` over
+source is a test for a *literal*, not for a capability, and it is the wrong tool
+for asking "was this measurement reproducible".
+
+**Reproduction gate: EXACT, not within tolerance.** `raga_audit_levels.py` is
+that harness with exactly one thing changed — the `groups=` argument. Level (a)
+returns 377/518 = 72.8% and 439/518 = 84.7%, the same integer counts as the
+2026-07-08 record. Every delta below is measured off the original measurement
+rather than an approximation of it, which is the guarantee the Qmax internal arm
+could not offer.
+
+**Primary arm (multi-tau TDMS, the historical config), tier frozen at 18 ragas /
+`min_tracks >= 25` / 518 tracks, no raga dropped at any level:**
+
+```
+(a) as-originally-run   groups 518  top1 377/518 = 72.8%  top3 84.7%
+(b) recording-disjoint  groups 507  top1 371/518 = 71.6%  top3 83.6%
+(c) source-disjoint     groups 155  top1 374/518 = 72.2%  top3 84.0%
+(c') identifier-family  groups 150  top1 369/518 = 71.2%  top3 82.6%
+floors: majority 0.0579, class-prior 0.0557 (identical at all levels)
+```
+
+Fusion arm — the actually-exported `models/raga_v3_*` config — runs 75.7 / 73.9
+/ 73.6 / 73.0 over the same four levels.
+
+**(a) → (c) is −0.6pp on the primary arm, −2.1pp on the fusion arm**, while the
+independent-unit count collapses 518 → 155, a 3.3× coarsening. All four primary
+levels sit inside 71.2-72.8%, a spread of about eight tracks on n=518; they are
+not distinguishable. Level (c) above (b) is the same fold-composition effect the
+Qmax audit saw, worth three tracks.
+
+**The mechanism the brief flagged was real in count and negligible in effect.**
+Splitting the tier by exposure: the 243 tracks in a same-raga cluster inside one
+archive item go 71.2% → 70.0% (−1.2pp, three tracks); the 275 solo tracks go
+74.2% → 74.2% (+0.0pp). The prediction identified the right tracks and
+overestimated the consequence by an order of magnitude. Total churn between (a)
+and (c): 11 tracks lost, 8 gained, net −3.
+
+**Verdict against the fixed table: top row, "≥65% — raga genuinely generalizes
+to unseen sources."** This is the opposite outcome to the Qmax audit on the same
+corpus and the same cache, where 34 of 36 hits were byte-identical copies. Full
+-recording raga is a real, source-disjoint, leak-free result at ~13× the
+class-prior floor, and it is now the only such result in the repository.
+
+Two qualifications travel with it. It is **full-recording raga and nothing
+else** — `handoff.md:279` already records the same TDMS path at **0/10 on wild
+short clips**, and the domain gap, not contamination, is what closed every other
+door. And the artist merge at level (c) is partial, because artist is
+recoverable for only a minority of archive tracks; (c′) bounds that residue at a
+further 1.0pp.
+
+**Side finding worth fixing:** the archived harness is TDMS-only, but its score
+is quoted as the `cv_note` on the *fused* exported model in
+`train_raga_v3_tdms.py` and `models/raga_v3_meta.json`. Harmless in direction —
+fusion scores higher — but mislabelled.
+
+**Per-raga at (c):** fourteen of eighteen ragas hold at or above 63% top-1 and
+thirteen clear 80% top-3. **Vasanta is the one genuine weak class** at 35.7%
+top-1 / 53.6% top-3, far below every other raga and below where its n=28 should
+put it. Any per-raga confidence surface must know this.
