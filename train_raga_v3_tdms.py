@@ -143,7 +143,14 @@ def main() -> None:
         'taus_s': TAUS, 'n_bins': NB, 'sigma': 1.0, 'alpha': 0.75,
         'fusion_w_hist': FUSION_W_HIST, 'min_tracks': args.min_tracks,
         'ragas': list(le.classes_),
-        'cv_note': 'grouped 5-fold track-level 2026-07-08: min>=25 72.8/84.7, min>=20 67.6/79.4',
+        # NOTE: 72.8/84.7 is a TDMS-ONLY score (scratch_archive_0711/raga_final_eval.py),
+        # not a score of the fused model exported here. The fused model measures
+        # 75.7/84.2 at the same tier and grouping. Source-disjoint (2026-07-30 audit,
+        # data/RAGA_CONTAMINATION_AUDIT.md): TDMS-only 72.2/84.0, fused 73.6/83.6.
+        'cv_note': ('TDMS-only, grouped 5-fold track-level 2026-07-08: '
+                    'min>=25 72.8/84.7, min>=20 67.6/79.4; '
+                    'fused at min>=25: 75.7/84.2; '
+                    'source-disjoint 2026-07-30: TDMS-only 72.2/84.0, fused 73.6/83.6'),
     }, ensure_ascii=False, indent=2))
     print('exported models/raga_v3_* (candidate; production pkl untouched)')
 

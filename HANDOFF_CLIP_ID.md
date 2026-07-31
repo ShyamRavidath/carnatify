@@ -39,10 +39,20 @@ filenames carry ground truth as `<title>__<raga>.m4a`). Treat that folder
 not matcher ceiling. Alapana clips have no lyrics by definition; raga path
 is their only hope.)
 
-Numbers that still stand (full-recording domain, grouped CV, leak-free):
+Numbers that still stand (full-recording domain, **source-disjoint**, audited
+2026-07-30):
 - **Raga from full track: 72.8% top-1 / 84.7% top-3** (18 ragas, ≥25
   tracks/raga tier) — models exported `models/raga_v3_*`, TDMS features.
-- **Composition, full-recording cross-artist: 60-67% top-1** (Qmax).
+  **Audited and clean:** source-disjoint grouping (518 independent units → 155)
+  moves it to 72.2% / 84.0%, a −0.6pp delta. `data/RAGA_CONTAMINATION_AUDIT.md`.
+  This is the only surviving positive result in the repository.
+- ~~**Composition, full-recording cross-artist: 60-67% top-1** (Qmax).~~
+  **RETRACTED 2026-07-30.** The external arm was 60.0% → **9.5%** source-disjoint;
+  34 of its 36 top-1 hits were byte-identical copies of the query. The internal
+  66.7% is a separate, uncontaminated, but unreproducible n=30 claim. The corpus
+  cannot support a cross-artist claim at any level (13 of 1,011 works have two or
+  more known distinct artists). **Do not quote "60-67%" as a range again.**
+  `data/QMAX_CONTAMINATION_AUDIT.md`.
 - Corpus: ~1,290 feature-complete tracks / 87 ragas (was 597 two days ago).
 
 ## 3. Current state of the code (all committed + pushed, main)

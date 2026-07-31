@@ -69,7 +69,7 @@ dead; do not re-derive them.
 |---|---|---|
 | `dtw_matcher`, `contour_preprocessor` (DTW / contour melody matching) | 16-20% same-corpus, **0% on wild 60 s clips** | dead; structural variation + gamaka defeat it |
 | melodic n-grams, Smith-Waterman, subsequence DTW | <=10% | dead |
-| Qmax cover-song (`build_qmax_catalog.py`, `models/qmax_catalog.npz`) | 63-67% full-recording, **0% on wild clips** | still valid for full-recording mode ONLY |
+| Qmax cover-song (`build_qmax_catalog.py`, `models/qmax_catalog.npz`) | **9.5% source-disjoint** full-recording (was 60-67% before audit), **0% on wild clips** | **dead** — 34 of 36 hits were byte-identical copies; see `data/QMAX_CONTAMINATION_AUDIT.md` |
 | `composition_matcher` (L2-500pt, shipped) | ~16% | superseded by `identify_clip.py` |
 | `composition_evaluator` | n/a | zero references; safe to delete |
 | `tala_analyzer`, `tala_detector`, `tala_validator` | 16.5% vs 72% majority baseline | workstream closed |

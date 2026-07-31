@@ -74,10 +74,13 @@ link that people use beats a polished unpublished app with better numbers.
 
 ### Alive
 
-1. **Full-recording performance.** Composition cross-artist 60-67% top-1 (Qmax),
-   raga 72.8% top-1 / 84.7% top-3 (18 ragas, grouped CV, leak-free). Same music,
-   same pipeline family, radically better numbers. This is the strongest asset the
-   project has and it has never been exploited product-side.
+1. **Full-recording performance.** ~~Composition cross-artist 60-67% top-1
+   (Qmax)~~ — **RETRACTED 2026-07-30, it was 9.5% source-disjoint; see
+   `data/QMAX_CONTAMINATION_AUDIT.md`.** Raga 72.8% top-1 / 84.7% top-3
+   (18 ragas) **survives audit at 72.2% / 84.0% source-disjoint** and is now the
+   only surviving positive result. Same music, same pipeline family, radically
+   better numbers. This is the strongest asset the project has and it has never
+   been exploited product-side.
 2. **The duration hypothesis (P1, explicitly a hypothesis, not a premise).** Input
    length is the *leading* candidate explanation for the collapse. Codex attacked
    this correctly in a cold read: full recordings and wild clips differ in

@@ -33,6 +33,12 @@ Fuller graveyard: `HANDOFF_SESSION_0725.md` §6, `REVIEW_BRIEF.md` §4,
 **benchmarks lie, wild clips don't**, and **every internal benchmark built so
 far was flattered by same-corpus effects.**
 
+> **STALE 2026-07-30.** The composition half of the observation below did not
+> survive audit: 60-67% Qmax was 9.5% source-disjoint
+> (`data/QMAX_CONTAMINATION_AUDIT.md`). The raga half did (72.2% source-disjoint).
+> This brief is kept as the historical record of the duration probe; do not quote
+> its numbers.
+
 The live observation: **every measured failure is on 30-60s clips, and the same
 pipeline family scores 60-67% composition top-1 and 72.8% raga top-1 on full
 recordings.** Hypothesis P1 is that **listening length** is the binding
