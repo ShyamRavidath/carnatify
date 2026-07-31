@@ -89,3 +89,8 @@ data/duration_probe/**/*.wav
 # Local editor + agent-skill tooling
 /.vscode/
 /.agents/
+
+# Raga contamination audit (2026-07-30): the TDMS feature cache is 20MB and is
+# regenerable in ~2.5 min by scripts/raga_audit_protocol.py from the committed
+# melodia contours. Prereg, protocol.json, results.json and the scripts ARE tracked.
+/data/raga_audit/tdms_cache.npz
