@@ -4271,3 +4271,36 @@ actually wanted named — the composition, the raga, or simply "what is happenin
 right now" — because a raga-first product answers only one of those; (2) record
 which assistant he tried and how it failed, which is the only competitive
 evidence the repo would contain.
+
+### Addendum, same session — what Jon actually asked
+
+Deepti supplied the detail. Jon asked **two** questions at the concert: *what is
+the song being sung*, and *what does the melody mean*. He tried frontier LLMs
+and got garbage — **mostly refusals, "I cannot help with this request"**, not
+wrong answers.
+
+Both halves matter and they point in different directions.
+
+The first question is composition ID — the thing every closed door in this repo
+was trying to build, and the thing that is now measured as not working.
+
+**The second question is not composition ID at all.** "What does the melody
+mean" is explanation: the raga's character, and the sahitya's meaning. It needs
+no ASR, no CSI, no Qmax. It needs (i) a raga name, which is the one path still
+plausibly alive and now under audit, and (ii) a lyrics/meaning catalog, which is
+a text asset. **Half of the only real user's actual ask is served by the half of
+the pipeline that was never the bottleneck.** The repo has been optimizing the
+harder half of a two-part question and has no record of ever having tried to
+answer the easier half.
+
+The failure mode of the substitutes is worth recording precisely: **refusal, not
+error.** General assistants declined to attempt audio identification rather than
+attempting it badly. That is a narrower moat than "this task is hard for LLMs" —
+those same models would answer "what does raga Kalyani express" or "what does
+this kriti mean" perfectly well from text. So the defensible step is
+audio → symbol (raga, and OOC rejection), and the explanation layer on top of it
+is commodity, which is a cost advantage rather than a risk.
+
+This does not change the ordering — the raga audit still gates everything,
+because a raga-first product built on a contaminated 72.8% is built on sand with
+a real user watching. It changes what the audit is *for*.
