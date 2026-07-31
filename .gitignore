@@ -100,3 +100,10 @@ data/duration_probe/**/*.wav
 # contours. Prereg, protocol.json, results.json and the scripts ARE tracked.
 /data/raga_duration/tdms_*.npz
 /data/raga_duration/preds_fold*.json
+
+# Domain decomposition: per-cell TDMS + stored voiced contours (~40 MB/cell) and
+# per-cell prediction rows. Regenerable by scripts/raga_domain_cells.py from the
+# committed protocol + the source audio.
+/data/raga_domain/cell_*.npz
+/data/raga_domain/preds_*.json
+/data/raga_domain/tmp/
