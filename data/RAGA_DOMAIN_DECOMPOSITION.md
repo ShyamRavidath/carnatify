@@ -212,3 +212,42 @@ separate channel.
 | `data/raga_domain/results.json` | machine-readable results |
 | `data/raga_domain/cell_*.npz` | per-cell TDMS + tonic (gitignored, regenerable) |
 | `data/raga_domain/score_run.log`, `cells_field.log` | raw run output |
+
+---
+
+## 9. Verifier addendum, same day — the mundane candidate was the answer
+
+§7 left the wild 0/10 without a mechanism and named the cheapest candidate
+first: *"whether the ten wild clips' true ragas were even inside the trained
+18-raga tier."* Checked immediately, since the wild set carries its raga truth
+in the filename (`Title__Raga.ext`) and `data/raga_aliases.json` folds the
+spellings.
+
+Over the whole wild set (`~/sung_tests`, audio files only):
+
+| | count |
+|---|---|
+| clips with a raga label | 81 |
+| **label inside the trained 18-raga tier** | **29 (35.8%)** |
+| label outside it | 52 |
+| `NA` or Rāgamālika (the latter dropped from training by construction) | 25 |
+
+**Only 29 of 106 clips — 27% — have a true raga the model is capable of
+emitting.** The 52 outside include Bilahari, Madhyamāvati, Kambhōji,
+Jaganmōhini, Śrī, Ānandabhairavi, Kēdāram, Rēvati, Śrīranjani and Bōwli. On
+those the classifier cannot be right; the answer is not in its label set.
+
+If the ten clips behind the 0/10 were drawn like the set as a whole, the
+expected number even *eligible* to be correct is ~3.6, and at the in-tier
+accuracy this job measures on degraded audio (~50%) the expected hits are ~1.8.
+**P(0 hits) ≈ 14% — an unremarkable draw, not a signal.**
+
+This does not prove the raga path works in the field; it removes the evidence
+that it does not. The honest position is that **the raga path has never been
+measured on wild audio it could answer.** The 0/10 should stop being quoted as a
+domain result, and the measurement that would replace it is a re-score on the
+**29 in-tier wild clips** — small, but real, and it has never been run.
+
+Caveat: the exact ten clips behind the historical 0/10 are not recorded, so this
+is a base-rate argument about how that sample was probably drawn, not a
+reconstruction of it.
