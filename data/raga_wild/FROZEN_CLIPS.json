@@ -1,0 +1,287 @@
+{
+ "note": "FROZEN in-tier wild clip list. Selected on filename raga label folded through data/raga_aliases.json against the 18-raga min_tracks>=25 tier. Frozen before any prediction was made.",
+ "tier": [
+  "Aṭāna",
+  "Bhairavi",
+  "Hamsadhvāni",
+  "Harikāmbhōji",
+  "Kalyāṇi",
+  "Kamās",
+  "Karaharapriya",
+  "Kāmavardani",
+  "Kānaḍa",
+  "Mōhanaṁ",
+  "Nāṭa",
+  "Pūrvīkaḷyāṇi",
+  "Sindhubhairavi",
+  "Sāvēri",
+  "Tōḍi",
+  "Vasanta",
+  "Śankarābharaṇaṁ",
+  "Ṣanmukhapriya"
+ ],
+ "n": 29,
+ "clips": [
+  {
+   "file": "Amba Kamakshi__Bhairavi.mp3",
+   "title": "Amba Kamakshi",
+   "raga_label": "Bhairavi",
+   "raga_canonical": "Bhairavi",
+   "ooc_marked": false,
+   "bytes": 2828160,
+   "sha256": "caf69ed6e0bf810f54a69ec5e85748dfdf7f2dd12aa1437e76bdd02734a765df"
+  },
+  {
+   "file": "Enu Dhanyalo Lakumi__Todi.mp3",
+   "title": "Enu Dhanyalo Lakumi",
+   "raga_label": "Todi",
+   "raga_canonical": "Tōḍi",
+   "ooc_marked": false,
+   "bytes": 2627520,
+   "sha256": "93b749e62ea05fc46bcb2a47228224a73a3ff854b164ad02c81e90ddfc08b2ba"
+  },
+  {
+   "file": "Jagadanandakaraka__Nata.m4a",
+   "title": "Jagadanandakaraka",
+   "raga_label": "Nata",
+   "raga_canonical": "Nāṭa",
+   "ooc_marked": false,
+   "bytes": 973219,
+   "sha256": "119ed4c72d65d24ecb28821a390eadddc28610e274f2e5554826174ea57afc66"
+  },
+  {
+   "file": "Kaddanuvariki__Todi.mp3",
+   "title": "Kaddanuvariki",
+   "raga_label": "Todi",
+   "raga_canonical": "Tōḍi",
+   "ooc_marked": false,
+   "bytes": 3392640,
+   "sha256": "e3b3fd358a89182d5ffbded629071e5bae9d249354c4845ef1bc5a8e5e356c53"
+  },
+  {
+   "file": "Koluvamaregada kodandapani__Tōḍi.mp3",
+   "title": "Koluvamaregada kodandapani",
+   "raga_label": "Tōḍi",
+   "raga_canonical": "Tōḍi",
+   "ooc_marked": false,
+   "bytes": 2689920,
+   "sha256": "b7fc7dcb3d5e643eee167c7beb586e440c31034ff22bd575be6f5043b980c073"
+  },
+  {
+   "file": "Maithreem Bhajata__Kalyani__OOC.mp3",
+   "title": "Maithreem Bhajata",
+   "raga_label": "Kalyani",
+   "raga_canonical": "Kalyāṇi",
+   "ooc_marked": true,
+   "bytes": 3372480,
+   "sha256": "5eadbb8309be207c865a44950034dea49e9f8b82cd376fb05aae7b989ebc6e6a"
+  },
+  {
+   "file": "Ninnukori Yunnanura__Mohanam.m4a",
+   "title": "Ninnukori Yunnanura",
+   "raga_label": "Mohanam",
+   "raga_canonical": "Mōhanaṁ",
+   "ooc_marked": false,
+   "bytes": 972805,
+   "sha256": "3cb98249d81fce347b0e57602af77f1dd865e1c2f11fc09d5136569355b5d665"
+  },
+  {
+   "file": "Pillangoviya__Mohanam.mp3",
+   "title": "Pillangoviya",
+   "raga_label": "Mohanam",
+   "raga_canonical": "Mōhanaṁ",
+   "ooc_marked": false,
+   "bytes": 2238720,
+   "sha256": "b0580b629832721140cbdc5a210f5c4a47933a496476adfdcdb13f2ab87a409d"
+  },
+  {
+   "file": "Ranga Baro__Sindhu Bhairavi.mp3",
+   "title": "Ranga Baro",
+   "raga_label": "Sindhu Bhairavi",
+   "raga_canonical": "Sindhubhairavi",
+   "ooc_marked": false,
+   "bytes": 2505600,
+   "sha256": "5635643bcf1268f5cba9c510f328b579c1f909143dcb20e4c1e2ebcf18eb9956"
+  },
+  {
+   "file": "Thaye Yashoda__Todi__OOC.mp3",
+   "title": "Thaye Yashoda",
+   "raga_label": "Todi",
+   "raga_canonical": "Tōḍi",
+   "ooc_marked": true,
+   "bytes": 2315520,
+   "sha256": "7ddb126501874a1538428a5b59bce1cdea91e07a81f6bee2ca036ceeb2775446"
+  },
+  {
+   "file": "bhajarE bhaja mAnasa__Kanada.m4a",
+   "title": "bhajarE bhaja mAnasa",
+   "raga_label": "Kanada",
+   "raga_canonical": "Kānaḍa",
+   "ooc_marked": false,
+   "bytes": 973561,
+   "sha256": "21eb129ffdb9d1793d816ced31589db9be997b23b1cfc08906e152a3b65ffc90"
+  },
+  {
+   "file": "bhajare__Kalyani.m4a",
+   "title": "bhajare",
+   "raga_label": "Kalyani",
+   "raga_canonical": "Kalyāṇi",
+   "ooc_marked": false,
+   "bytes": 973643,
+   "sha256": "b9c41a0c2fb9b6858605c475b9e47ae167d38d178ca7b59d6a570be599321c88"
+  },
+  {
+   "file": "brOchevarevarura__Khamas.m4a",
+   "title": "brOchevarevarura",
+   "raga_label": "Khamas",
+   "raga_canonical": "Kamās",
+   "ooc_marked": false,
+   "bytes": 983231,
+   "sha256": "3e1c86bcf8fb8e804c51f5c0559990f741a4f85956f165152d6d1138fe4278e4"
+  },
+  {
+   "file": "chakkani rAja__Kharaharapriya.m4a",
+   "title": "chakkani rAja",
+   "raga_label": "Kharaharapriya",
+   "raga_canonical": "Karaharapriya",
+   "ooc_marked": false,
+   "bytes": 973793,
+   "sha256": "6336c0a38a97c4cb3bd7f53bd5b524acc46037e53bc75e0ba329f06a556791dd"
+  },
+  {
+   "file": "entara__Harikambhoji.m4a",
+   "title": "entara",
+   "raga_label": "Harikambhoji",
+   "raga_canonical": "Harikāmbhōji",
+   "ooc_marked": false,
+   "bytes": 981272,
+   "sha256": "49d50bf434d5aec8e7922558d63d1e5faf60e607535f45dbeec73c005746a5a6"
+  },
+  {
+   "file": "himAdrisutE__Kalyani.m4a",
+   "title": "himAdrisutE",
+   "raga_label": "Kalyani",
+   "raga_canonical": "Kalyāṇi",
+   "ooc_marked": false,
+   "bytes": 975140,
+   "sha256": "08e62012160dbcea2e5e7fa2bb04064068a4e91cad01d359310e5de3cdb5be9f"
+  },
+  {
+   "file": "nagumomu ganaleni__Saveri.m4a",
+   "title": "nagumomu ganaleni",
+   "raga_label": "Saveri",
+   "raga_canonical": "Sāvēri",
+   "ooc_marked": false,
+   "bytes": 978909,
+   "sha256": "efda92423cb1efef4c451f6593818e7621cf8d687be412a5f68f89397c46b3eb"
+  },
+  {
+   "file": "nannu pAlimpa__Mōhanaṁ.mp3",
+   "title": "nannu pAlimpa",
+   "raga_label": "Mōhanaṁ",
+   "raga_canonical": "Mōhanaṁ",
+   "ooc_marked": false,
+   "bytes": 3357120,
+   "sha256": "54a83bda2aa70fa3c1abad17559c8166dda00490c0d222bec1bb42f3f4a26345"
+  },
+  {
+   "file": "nidhi chAla sukhamA__Kalyani.m4a",
+   "title": "nidhi chAla sukhamA",
+   "raga_label": "Kalyani",
+   "raga_canonical": "Kalyāṇi",
+   "ooc_marked": false,
+   "bytes": 974457,
+   "sha256": "99f994d267991dc2a01063a21e90dae5a09986f055cb45b0ebd0e4ee350e10f4"
+  },
+  {
+   "file": "rAma nannu brOvara__Harikambhoji.m4a",
+   "title": "rAma nannu brOvara",
+   "raga_label": "Harikambhoji",
+   "raga_canonical": "Harikāmbhōji",
+   "ooc_marked": false,
+   "bytes": 969494,
+   "sha256": "8de1f9f6584e4a024ebfdc9de0c85ab48029e530901bd3c1c4c6f4ccb94e217b"
+  },
+  {
+   "file": "rAma nee__Karaharapriya.m4a",
+   "title": "rAma nee",
+   "raga_label": "Karaharapriya",
+   "raga_canonical": "Karaharapriya",
+   "ooc_marked": false,
+   "bytes": 973650,
+   "sha256": "8af77b8d271e53192950928bce9854fb8a4a287dbfdcfbce7cea149241e92967"
+  },
+  {
+   "file": "raghuvara__Kamavardani.m4a",
+   "title": "raghuvara",
+   "raga_label": "Kamavardani",
+   "raga_canonical": "Kāmavardani",
+   "ooc_marked": false,
+   "bytes": 972597,
+   "sha256": "c378cd7c0563c0308e1585ee310d3f942679d8b673c05eb5a7f6164db16e1f74"
+  },
+  {
+   "file": "sarOja daLa nEtri__Śankarābharaṇaṁ.mp3",
+   "title": "sarOja daLa nEtri",
+   "raga_label": "Śankarābharaṇaṁ",
+   "raga_canonical": "Śankarābharaṇaṁ",
+   "ooc_marked": false,
+   "bytes": 3154560,
+   "sha256": "4f75f5d677af0c1f99236d021ca2d6bc94082a528fb09e7dee182ddbc210aff9"
+  },
+  {
+   "file": "sarasijanAba murArE__Tōḍi.mp3",
+   "title": "sarasijanAba murArE",
+   "raga_label": "Tōḍi",
+   "raga_canonical": "Tōḍi",
+   "ooc_marked": false,
+   "bytes": 1728000,
+   "sha256": "4f53943680af1fc82decdc19a1fa8ecc062daa4a8216ef0ab2c43ecb9fe5748a"
+  },
+  {
+   "file": "siddhi vinAyakam__Shanmukhapriya.m4a",
+   "title": "siddhi vinAyakam",
+   "raga_label": "Shanmukhapriya",
+   "raga_canonical": "Ṣanmukhapriya",
+   "ooc_marked": false,
+   "bytes": 969918,
+   "sha256": "3f4973415d6da85100d01d3deb4252c26914a0f49d0729b49fd68e9b7170afe2"
+  },
+  {
+   "file": "swAminatha__Nata.m4a",
+   "title": "swAminatha",
+   "raga_label": "Nata",
+   "raga_canonical": "Nāṭa",
+   "ooc_marked": false,
+   "bytes": 980170,
+   "sha256": "90a87328bae810f9fc130c8c578d516b51489b4f8a1093ed585e7cd9c6293892"
+  },
+  {
+   "file": "vAtApi gaNapathim__Hamsadhvāni.mp3",
+   "title": "vAtApi gaNapathim",
+   "raga_label": "Hamsadhvāni",
+   "raga_canonical": "Hamsadhvāni",
+   "ooc_marked": false,
+   "bytes": 2111040,
+   "sha256": "e860ebcbd290de46207c864a227ac012ec6ebdb8dfee0641b0336ae3fda1e174"
+  },
+  {
+   "file": "yArO ivar yArO__Bhairavi.m4a",
+   "title": "yArO ivar yArO",
+   "raga_label": "Bhairavi",
+   "raga_canonical": "Bhairavi",
+   "ooc_marked": false,
+   "bytes": 1057241,
+   "sha256": "3f103f41996da68ff19b2c315a332f2c526b16c9aed4c074ef67793d4cfd3f52"
+  },
+  {
+   "file": "yEnATi mOmu palamu__Bhairavi.m4a",
+   "title": "yEnATi mOmu palamu",
+   "raga_label": "Bhairavi",
+   "raga_canonical": "Bhairavi",
+   "ooc_marked": false,
+   "bytes": 974906,
+   "sha256": "f1c8cd15884e470938df72605a5e39285d80799a0e3f6c48f4831bcbaa11ee6a"
+  }
+ ]
+}
