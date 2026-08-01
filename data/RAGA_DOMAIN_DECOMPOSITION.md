@@ -251,3 +251,24 @@ domain result, and the measurement that would replace it is a re-score on the
 Caveat: the exact ten clips behind the historical 0/10 are not recorded, so this
 is a base-rate argument about how that sample was probably drawn, not a
 reconstruction of it.
+
+### Correction, 2026-08-01 — this addendum claimed more than it could support
+
+`data/RAGA_WILD_MEASUREMENT.md` established something this section did not know:
+the 0/10 was produced by `identify_clip.raga_top5` using **a different model**,
+`raga_clip_rf.pkl`, with **a different tonic convention** — the 12-rotation vote
+that `HANDOFF_CLIP_ID.md` §5 already records as anti-informative — on ten clips
+whose identities were never recorded.
+
+So **coverage, model and tonic are all confounded** in the 0/10, and the heading
+above, "the wild 0/10 is mostly a catalog-coverage artifact", asserts a
+decomposition this evidence cannot make. Coverage is *a* sufficient explanation
+for the draw and remains an unremarkable one; it is not established as the
+dominant one, and the other two candidates are at least as plausible given that
+the tonic convention involved is independently documented as harmful.
+
+The claim that survives unchanged, and it is the one that mattered: **the 0/10
+was never evidence that the raga path fails on wild audio**, because 77 of 106
+clips were unanswerable by construction and the model behind it was not the
+model in question. What replaced it is a direct measurement — 55.2% [37.5, 71.6]
+on 29 answerable clips with the exported model.

@@ -1,6 +1,6 @@
-# HANDOFF_SESSION_0731 — four audits, three reversals, and the first real field measurement running
+# HANDOFF_SESSION_0731 — five audits, three reversals, and a real field number
 
-Written 2026-07-31 for **whoever holds the verifier seat next — that is you.**
+Written 2026-07-31, extended 2026-08-01, for **whoever holds the verifier seat next — that is you.**
 Supersedes `HANDOFF_SESSION_0730.md`, which is still correct on its §5
 (graveyard additions) and §8 (environment facts).
 
@@ -15,7 +15,7 @@ Respond to Deepti in **caveman style** (standing preference). Write docs,
 commits and `AGENT_LOG.md` in normal prose.
 
 **Read order:** this file → `AGENT_LOG.md` entries dated 2026-07-30 and 07-31 →
-the four audit docs in §3 → `HANDOFF_CLIP_ID.md` §5 (the graveyard) →
+the five audit docs in §3 → `HANDOFF_CLIP_ID.md` §5 (the graveyard) →
 `HANDOFF_SESSION_0730.md` §5, §8.
 
 ---
@@ -51,9 +51,9 @@ one says "demand evidence is zero" — **that line is stale.**
 | **Qmax composition "60-67%"** | **RETRACTED — 9.5% source-disjoint** | this session |
 | **raga "72.8% leak-free"** | **HELD — 72.2% source-disjoint** | this session |
 | **"raga dies on short clips"** | **mostly false — 60.4% @60s, 52.5% @30s** | this session |
-| **"raga dies on wild audio"** | **never measured on audio it could answer** | this session |
+| **"raga dies on wild audio"** | **FALSE — 55.2% [37.5, 71.6] on 29 real wild clips** | this session |
 
-Four numbers were audited in two days. **One fell, three moved the other way.**
+Five numbers were audited in three days. **One fell, four moved the other way.**
 The composition side is genuinely closed. The raga pessimism was built on
 figures that had never been checked, and every one of them has now moved toward
 "fine".
@@ -63,11 +63,11 @@ strongest behaviour. Full-recording raga, now audited.
 
 ## 3. Current state of the code
 
-Branch **`probe/duration-and-negative-arm`**, **23 commits, NOT PUSHED**.
+Branch **`probe/duration-and-negative-arm`**, **30 commits, NOT PUSHED**.
 `identify_clip.py` has zero diff vs `main` — nothing in this series touched the
 production path. `103 passed, 1 xfailed` on the three runnable test files.
 
-Four audits, each with its preregistration committed **before** the scoring
+Five audits, each with its preregistration committed **before** the scoring
 harness and before any fold was scored:
 
 | doc | what it established |
@@ -77,7 +77,9 @@ harness and before any fold was scored:
 | `data/RAGA_DURATION_CURVE.md` | 52.5% @30s → 60.4% @60s → 63.8% @120s → 68.8% @300s → 71.0% @600s → 72.2% full. Knee bracketed in (120s, 300s]. Top-3 decays far more gently: 84.0% → 77.1% @60s. |
 | `data/RAGA_DOMAIN_DECOMPOSITION.md` | Field-realistic degradation costs **7.5pp, not 44**. Phone chain +0.4pp, room +2.1pp, pink noise +2.7pp — each CI touching or crossing zero. Pitch shift alone +10.6pp and time stretch alone +11.0pp, **each worse than all three field components combined**. The 2×2 kills the tonic hypothesis: contour beats tonic 3:1 in the field cell, 5:1 in the worst. §9: only **29 of 106** wild clips name a raga the model can emit, so P(0/10) ≈ 14%. |
 
-Supporting artifacts: `scripts/qmax_*`, `scripts/raga_audit_*`,
+| `data/RAGA_WILD_MEASUREMENT.md` | **The first real field number.** Exported fused model, `mix` arm, whole clip, on the 29 frozen in-tier wild clips: **16/29 = 55.2% top-1, 95% CI [37.5, 71.6]**, top-3 22/29 = 75.9% tier-restricted. CI contains the 48.7% simulation and excludes both the 5.6% chance floor and the 17.2% best-constant floor. Hash gate 29/29; **zero** recording overlap against all 2,229 training audio files; zero contour or tonic failures. **Demucs does not beat mix** (51.7% vs 55.2%, McNemar p = 1.000) — separation is *not* load-bearing on the raga path. Labels unaudited; the number is a floor pending review. |
+
+Supporting artifacts: `scripts/qmax_*`, `scripts/raga_audit_*`, `scripts/raga_wild_*`,
 `scripts/raga_duration_*`, `scripts/raga_domain_*`,
 `data/qmax_audit/provenance.json` (track → archive item → artist, 1,232 of 1,232
 resolved).
@@ -90,16 +92,16 @@ score that was stapled to the *fused* exported model, which is 75.7/84.2).
 
 ## 4. Files being edited right now
 
-**A workhorse is running** on `WORKHORSE_RAGA_WILD_BRIEF.md`. It will create
-`data/raga_wild/PREREGISTRATION.md`, `scripts/raga_wild_*.py`,
-`data/RAGA_WILD_MEASUREMENT.md`, and append to `AGENT_LOG.md`. **Do not edit
-those files or `AGENT_LOG.md` until it lands.**
+**Nothing is mid-edit and no agent is running.** The wild measurement landed and
+is committed (`87850b1`); its preregistration was committed first (`463da3d`),
+ahead of all three harness stages.
 
-`data/raga_wild/FROZEN_CLIPS.json` is **frozen and committed** (`f67ef98`) with
-per-clip sha256, written before any prediction existed. Selection is closed.
+`data/raga_wild/FROZEN_CLIPS.json` is frozen and committed (`f67ef98`) with
+per-clip sha256, written before any prediction existed. Selection is closed and
+must stay closed.
 
-Nothing else is mid-edit. Deepti also works in this repo from a **separate
-terminal** — prefer targeted `git add <path>`, never `git add -A`.
+Deepti also works in this repo from a **separate terminal** — prefer targeted
+`git add <path>`, never `git add -A`.
 
 ## 5. What was tried and failed
 
@@ -143,29 +145,42 @@ holds the duration-probe additions. New this session, including my own errors:
 
 ## 6. The next step
 
-1. **Read the wild measurement when it lands** and verify it independently —
-   re-derive at least one headline figure with your own code, as was done for
-   every audit in this series. Then apply the fixed table in
-   `WORKHORSE_RAGA_WILD_BRIEF.md`: ≥40% means the simulation was valid and raga
-   survives the field; 20-40% means an unmodelled field factor, look at the
-   demucs arm first; <20% means raga joins the closed doors.
-2. **Get Deepti to read the 29 label rows.** The wild raga labels have never
-   been audited and some clips were auto-fetched. It is 29 lines and it converts
-   the result from provisional to solid. **This is the single highest
-   value-per-minute action available.**
-3. **If raga survives: build the thing Jon asked for.** Raga name + raga
-   character + sahitya meaning, on long-form audio, with OOC rejection as the
-   guard against lying. The explanation layer is text and commodity. **Do not
-   start with composition ID.**
-4. **Catalog restriction** — still the one untested cheap lever on the lyrics
+**Raga survived every audit, including the field.** 55.2% [37.5, 71.6] on real
+wild clips, independently recounted from the per-clip rows by the verifier seat.
+That closes the measurement phase. The next moves are product, not model.
+
+1. **Get Deepti to read the 29 label rows** (`data/raga_wild/tables.md`, or
+   `FROZEN_CLIPS.json`). The labels are unaudited and two are already suspect on
+   musical grounds — `nagumomu ganaleni` is filed Sāvēri when that kriti is
+   normally **Ābhēri**, and `Maithreem Bhajata` is filed Kalyāṇi when it is
+   normally **Yamunākalyāṇi**. Both are currently *misses*, so the headline can
+   only move up: dropping just those two gives 16/27 = 59.3%. **Highest
+   value-per-minute action available, and it is 29 lines.**
+2. **Build the thing Jon actually asked for.** Raga name + raga character +
+   sahitya meaning, on long-form audio, with OOC rejection (24/28) as the guard
+   against lying. Half his question — *what does the melody mean* — needs no
+   ASR, no CSI and no Qmax, and has never been attempted. **Do not start with
+   composition ID.**
+3. **The abstain gate is the one model-side thing still worth building.** The
+   wild failures are bimodal: median rank of the true raga is **1**, eight of
+   thirteen misses put it at rank 2-7, but five are catastrophic at rank 21-30
+   of 32. A confidence threshold that abstains on the catastrophic tail would
+   turn 55.2% top-1 / 75.9% top-3 into a readout that is rarely confidently
+   wrong — which is what a companion needs. OOC rejection is the existing proof
+   that this pipeline can abstain well.
+4. **Look at `vAtApi gaNapathim__Hamsadhvāni` specifically.** Rank 25 of 32 on
+   the single most famous concert opener in the repertoire is not a
+   near-miss-shaped failure; something specific went wrong on that clip and it
+   is one clip to inspect.
+5. **Catalog restriction** — still the one untested cheap lever on the lyrics
    side (load-time restriction in `load_targets` plus a re-score). Deprioritized
-   twice, still not in the graveyard, honest expectation is precision up and
-   recall flat.
-5. **Push the branch.** 23 commits sitting local. Deepti's call.
+   three times now, still not in the graveyard, honest expectation is precision
+   up and recall flat.
+6. **Push the branch.** 30 commits sitting local. Deepti's call.
 
 ## 7. Pending Deepti
 
-1. **Push the branch / open a PR** — 23 commits, none pushed.
+1. **Push the branch / open a PR** — 30 commits, none pushed.
 2. **Verify the 29 wild raga labels** (see §6.2).
 3. `asr_cache_fullhistory/` is local-only and gitignored; if deleted,
    `DEVICE_MAP.md` becomes unfalsifiable. Back it up outside the repo.
