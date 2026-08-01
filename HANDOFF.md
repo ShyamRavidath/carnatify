@@ -52,7 +52,8 @@ pipeline's strongest behaviour (24/28 on the wild set). Full-recording raga is
 
 - The 60-67% full-recording result belongs to **Qmax**; the 8-13/78 wild-clip
   result belongs to the **lyrics matcher**. Comparing them was a matcher-identity
-  confound.
+  confound. **Superseded 2026-07-30: the 60-67% itself was contamination — 9.5%
+  source-disjoint (`data/QMAX_CONTAMINATION_AUDIT.md`). Do not quote it.**
 - **Qmax cannot be evaluated on `data/concert_audio`** — `models/qmax_catalog.npz`
   was built from those recordings; it would be same-recording leakage.
 - The duration KILL establishes only an **archive-domain lyrics-matcher** result.
@@ -276,7 +277,11 @@ absent genuinely new evidence.
 
 ### Raga and tala
 
-- TDMS raga: 72.8% top-1 on full tracks, **0/10** on wild short clips.
+- TDMS raga: 72.8% top-1 on full tracks (**72.2% source-disjoint after audit**),
+  **0/10** on wild short clips. **The gap is domain, not duration** — the same
+  path scores 60.4% on clean 60s windows and 52.5% on clean 30s windows
+  (`data/RAGA_DURATION_CURVE.md`), matching the independent 6/10 on clean 60s
+  crops recorded at `HANDOFF_SESSION_0719.md:100`.
 - Tala: 16.5% → 32.9%, both below a 72% majority-class baseline.
 
 ### Duration

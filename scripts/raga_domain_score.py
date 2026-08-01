@@ -139,6 +139,7 @@ def tally(meta):
     return dict(n_windows=len(meta), scored=t.get('scored', 0),
                 no_contour=t.get('no_contour', 0), min_voiced=t.get('min_voiced', 0),
                 tdms_none=t.get('tdms_none', 0), error=t.get('error', 0),
+                audio_unavailable=t.get('audio_unavailable', 0),
                 tonic_fail=sum(1 for m in meta if m.get('tonic_fail')))
 
 

@@ -1,0 +1,1655 @@
+518 windows, 155 level-(c) groups, offset index 0, 60.0s
+== building cell clean  ([])  workers=5
+/Users/shyamravidath/carnatify/scripts/raga_domain_cells.py:268: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
+/Users/shyamravidath/carnatify/venv_train/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45450.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46477.
+Note: Trying to resync...
+Note: Skipped 767 bytes in input.
+   clean: 50/518  50s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45450.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46477.
+Note: Trying to resync...
+Note: Skipped 767 bytes in input.
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   clean: 100/518  86s
+Note: Illegal Audio-MPEG-Header 0x38202020 at offset 4327.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x3430382e at offset 5354.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x416c6170 at offset 6381.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 7408.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x54504531 at offset 8435.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 9462.
+Note: Trying to resync...
+Note: Skipped 933 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x31332020 at offset 4335.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x38382e35 at offset 5362.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x2d50616e at offset 6389.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 7416.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 8443.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 9470.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 10497.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 11524.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 12551.
+Note: Trying to resync...
+Note: Skipped 357 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 44610.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x41686972 at offset 45637.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46664.
+Note: Trying to resync...
+Note: Skipped 585 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45496.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46523.
+Note: Trying to resync...
+Note: Skipped 725 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4301.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 5328.
+Note: Trying to resync...
+Note: Skipped 344 bytes in input.
+   clean: 150/518  126s
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4303.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x4b000000 at offset 5330.
+Note: Trying to resync...
+Note: Skipped 315 bytes in input.
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   clean: 200/518  163s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46878.
+Note: Trying to resync...
+Note: Skipped 371 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4311.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 5338.
+Note: Trying to resync...
+Note: Skipped 380 bytes in input.
+   clean: 250/518  199s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   clean: 300/518  234s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5145495.
+Note: Trying to resync...
+Note: Skipped 181 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xb5ee75ef at offset 5146094.
+Note: Trying to resync...
+Note: Skipped 237 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5528346.
+Note: Trying to resync...
+Note: Skipped 397 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xf3d6dc79 at offset 5528747.
+Note: Trying to resync...
+Note: Skipped 17 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5572649.
+Note: Trying to resync...
+Note: Skipped 836 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xffffffff at offset 6013596.
+Note: Trying to resync...
+Note: Skipped 2 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xffff014b at offset 6013598.
+Note: Trying to resync...
+Note: Skipped 416 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 6057482.
+Note: Trying to resync...
+Note: Skipped 545 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xfff203e7 at offset 6058027.
+Note: Trying to resync...
+Note: Skipped 291 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 6440333.
+Note: Trying to resync...
+Note: Skipped 157 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1844] error: dequantization failed!
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5145495.
+Note: Trying to resync...
+Note: Skipped 181 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xb5ee75ef at offset 5146094.
+Note: Trying to resync...
+Note: Skipped 237 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1804] error: dequantization failed!
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5528346.
+Note: Trying to resync...
+Note: Skipped 397 bytes in input.
+   clean: 350/518  273s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+/Users/shyamravidath/carnatify/scripts/raga_domain_cells.py:268: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
+/Users/shyamravidath/carnatify/venv_train/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+   clean: 400/518  310s
+Note: Illegal Audio-MPEG-Header 0x33202020 at offset 8391.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x38322e35 at offset 9418.
+Note: Trying to resync...
+Note: Skipped 841 bytes in input.
+   clean: 450/518  352s
+/Users/shyamravidath/carnatify/scripts/raga_domain_cells.py:268: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
+/Users/shyamravidath/carnatify/venv_train/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 8464.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 9491.
+Note: Trying to resync...
+Note: Skipped 339 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1804] error: dequantization failed!
+   clean: 500/518  390s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   -> cell_clean.npz: {'scored': 517, 'audio_unavailable': 1}, tonic_fail 0, 10 MB feats, 406s
+== building cell phone  (['phone'])  workers=5
+/Users/shyamravidath/carnatify/scripts/raga_domain_cells.py:268: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
+/Users/shyamravidath/carnatify/venv_train/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45450.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46477.
+Note: Trying to resync...
+Note: Skipped 767 bytes in input.
+   phone: 50/518  49s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45450.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46477.
+Note: Trying to resync...
+Note: Skipped 767 bytes in input.
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   phone: 100/518  91s
+Note: Illegal Audio-MPEG-Header 0x38202020 at offset 4327.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x3430382e at offset 5354.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x416c6170 at offset 6381.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 7408.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x54504531 at offset 8435.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 9462.
+Note: Trying to resync...
+Note: Skipped 933 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x31332020 at offset 4335.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x38382e35 at offset 5362.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x2d50616e at offset 6389.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 7416.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 8443.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 9470.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 10497.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 11524.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 12551.
+Note: Trying to resync...
+Note: Skipped 357 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 44610.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x41686972 at offset 45637.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46664.
+Note: Trying to resync...
+Note: Skipped 585 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45496.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46523.
+Note: Trying to resync...
+Note: Skipped 725 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4301.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 5328.
+Note: Trying to resync...
+Note: Skipped 344 bytes in input.
+   phone: 150/518  129s
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4303.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x4b000000 at offset 5330.
+Note: Trying to resync...
+Note: Skipped 315 bytes in input.
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   phone: 200/518  164s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46878.
+Note: Trying to resync...
+Note: Skipped 371 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4311.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 5338.
+Note: Trying to resync...
+Note: Skipped 380 bytes in input.
+   phone: 250/518  199s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   phone: 300/518  233s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5145495.
+Note: Trying to resync...
+Note: Skipped 181 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xb5ee75ef at offset 5146094.
+Note: Trying to resync...
+Note: Skipped 237 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5528346.
+Note: Trying to resync...
+Note: Skipped 397 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xf3d6dc79 at offset 5528747.
+Note: Trying to resync...
+Note: Skipped 17 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5572649.
+Note: Trying to resync...
+Note: Skipped 836 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xffffffff at offset 6013596.
+Note: Trying to resync...
+Note: Skipped 2 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xffff014b at offset 6013598.
+Note: Trying to resync...
+Note: Skipped 416 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 6057482.
+Note: Trying to resync...
+Note: Skipped 545 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xfff203e7 at offset 6058027.
+Note: Trying to resync...
+Note: Skipped 291 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 6440333.
+Note: Trying to resync...
+Note: Skipped 157 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1844] error: dequantization failed!
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5145495.
+Note: Trying to resync...
+Note: Skipped 181 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xb5ee75ef at offset 5146094.
+Note: Trying to resync...
+Note: Skipped 237 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1804] error: dequantization failed!
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5528346.
+Note: Trying to resync...
+Note: Skipped 397 bytes in input.
+   phone: 350/518  272s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+/Users/shyamravidath/carnatify/scripts/raga_domain_cells.py:268: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
+/Users/shyamravidath/carnatify/venv_train/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+   phone: 400/518  308s
+/Users/shyamravidath/carnatify/scripts/raga_domain_cells.py:268: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
+/Users/shyamravidath/carnatify/venv_train/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+Note: Illegal Audio-MPEG-Header 0x33202020 at offset 8391.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x38322e35 at offset 9418.
+Note: Trying to resync...
+Note: Skipped 841 bytes in input.
+   phone: 450/518  344s
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 8464.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 9491.
+Note: Trying to resync...
+Note: Skipped 339 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1804] error: dequantization failed!
+   phone: 500/518  380s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   -> cell_phone.npz: {'scored': 517, 'audio_unavailable': 1}, tonic_fail 0, 10 MB feats, 394s
+== building cell noise  (['noise'])  workers=5
+/Users/shyamravidath/carnatify/scripts/raga_domain_cells.py:268: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
+/Users/shyamravidath/carnatify/venv_train/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45450.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46477.
+Note: Trying to resync...
+Note: Skipped 767 bytes in input.
+   noise: 50/518  53s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45450.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46477.
+Note: Trying to resync...
+Note: Skipped 767 bytes in input.
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   noise: 100/518  94s
+Note: Illegal Audio-MPEG-Header 0x38202020 at offset 4327.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x3430382e at offset 5354.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x416c6170 at offset 6381.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 7408.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x54504531 at offset 8435.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 9462.
+Note: Trying to resync...
+Note: Skipped 933 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x31332020 at offset 4335.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x38382e35 at offset 5362.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x2d50616e at offset 6389.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 7416.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 8443.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 9470.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 10497.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 11524.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 12551.
+Note: Trying to resync...
+Note: Skipped 357 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 44610.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x41686972 at offset 45637.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46664.
+Note: Trying to resync...
+Note: Skipped 585 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45496.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46523.
+Note: Trying to resync...
+Note: Skipped 725 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4301.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 5328.
+Note: Trying to resync...
+Note: Skipped 344 bytes in input.
+   noise: 150/518  136s
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4303.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x4b000000 at offset 5330.
+Note: Trying to resync...
+Note: Skipped 315 bytes in input.
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   noise: 200/518  180s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46878.
+Note: Trying to resync...
+Note: Skipped 371 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4311.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 5338.
+Note: Trying to resync...
+Note: Skipped 380 bytes in input.
+   noise: 250/518  223s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   noise: 300/518  266s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5145495.
+Note: Trying to resync...
+Note: Skipped 181 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xb5ee75ef at offset 5146094.
+Note: Trying to resync...
+Note: Skipped 237 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5528346.
+Note: Trying to resync...
+Note: Skipped 397 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xf3d6dc79 at offset 5528747.
+Note: Trying to resync...
+Note: Skipped 17 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5572649.
+Note: Trying to resync...
+Note: Skipped 836 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xffffffff at offset 6013596.
+Note: Trying to resync...
+Note: Skipped 2 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xffff014b at offset 6013598.
+Note: Trying to resync...
+Note: Skipped 416 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 6057482.
+Note: Trying to resync...
+Note: Skipped 545 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xfff203e7 at offset 6058027.
+Note: Trying to resync...
+Note: Skipped 291 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 6440333.
+Note: Trying to resync...
+Note: Skipped 157 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1844] error: dequantization failed!
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5145495.
+Note: Trying to resync...
+Note: Skipped 181 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xb5ee75ef at offset 5146094.
+Note: Trying to resync...
+Note: Skipped 237 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1804] error: dequantization failed!
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5528346.
+Note: Trying to resync...
+Note: Skipped 397 bytes in input.
+   noise: 350/518  307s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   noise: 400/518  350s
+Note: Illegal Audio-MPEG-Header 0x33202020 at offset 8391.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x38322e35 at offset 9418.
+Note: Trying to resync...
+Note: Skipped 841 bytes in input.
+   noise: 450/518  390s
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 8464.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 9491.
+Note: Trying to resync...
+Note: Skipped 339 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1804] error: dequantization failed!
+   noise: 500/518  427s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   -> cell_noise.npz: {'scored': 517, 'audio_unavailable': 1}, tonic_fail 0, 10 MB feats, 442s
+== building cell reverb  (['reverb'])  workers=5
+/Users/shyamravidath/carnatify/scripts/raga_domain_cells.py:268: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
+/Users/shyamravidath/carnatify/venv_train/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45450.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46477.
+Note: Trying to resync...
+Note: Skipped 767 bytes in input.
+   reverb: 50/518  41s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45450.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46477.
+Note: Trying to resync...
+Note: Skipped 767 bytes in input.
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   reverb: 100/518  75s
+Note: Illegal Audio-MPEG-Header 0x38202020 at offset 4327.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x3430382e at offset 5354.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x416c6170 at offset 6381.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 7408.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x54504531 at offset 8435.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 9462.
+Note: Trying to resync...
+Note: Skipped 933 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x31332020 at offset 4335.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x38382e35 at offset 5362.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x2d50616e at offset 6389.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 7416.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 8443.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 9470.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 10497.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 11524.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 12551.
+Note: Trying to resync...
+Note: Skipped 357 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 44610.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x41686972 at offset 45637.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46664.
+Note: Trying to resync...
+Note: Skipped 585 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45496.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46523.
+Note: Trying to resync...
+Note: Skipped 725 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4301.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 5328.
+Note: Trying to resync...
+Note: Skipped 344 bytes in input.
+   reverb: 150/518  109s
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4303.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x4b000000 at offset 5330.
+Note: Trying to resync...
+Note: Skipped 315 bytes in input.
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   reverb: 200/518  142s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46878.
+Note: Trying to resync...
+Note: Skipped 371 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4311.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 5338.
+Note: Trying to resync...
+Note: Skipped 380 bytes in input.
+   reverb: 250/518  175s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   reverb: 300/518  207s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5145495.
+Note: Trying to resync...
+Note: Skipped 181 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xb5ee75ef at offset 5146094.
+Note: Trying to resync...
+Note: Skipped 237 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5528346.
+Note: Trying to resync...
+Note: Skipped 397 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xf3d6dc79 at offset 5528747.
+Note: Trying to resync...
+Note: Skipped 17 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5572649.
+Note: Trying to resync...
+Note: Skipped 836 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xffffffff at offset 6013596.
+Note: Trying to resync...
+Note: Skipped 2 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xffff014b at offset 6013598.
+Note: Trying to resync...
+Note: Skipped 416 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 6057482.
+Note: Trying to resync...
+Note: Skipped 545 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xfff203e7 at offset 6058027.
+Note: Trying to resync...
+Note: Skipped 291 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 6440333.
+Note: Trying to resync...
+Note: Skipped 157 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1844] error: dequantization failed!
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5145495.
+Note: Trying to resync...
+Note: Skipped 181 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xb5ee75ef at offset 5146094.
+Note: Trying to resync...
+Note: Skipped 237 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1804] error: dequantization failed!
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5528346.
+Note: Trying to resync...
+Note: Skipped 397 bytes in input.
+   reverb: 350/518  241s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+/Users/shyamravidath/carnatify/scripts/raga_domain_cells.py:268: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
+/Users/shyamravidath/carnatify/venv_train/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+   reverb: 400/518  274s
+/Users/shyamravidath/carnatify/scripts/raga_domain_cells.py:268: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
+/Users/shyamravidath/carnatify/venv_train/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+Note: Illegal Audio-MPEG-Header 0x33202020 at offset 8391.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x38322e35 at offset 9418.
+Note: Trying to resync...
+Note: Skipped 841 bytes in input.
+   reverb: 450/518  306s
+/Users/shyamravidath/carnatify/scripts/raga_domain_cells.py:268: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
+/Users/shyamravidath/carnatify/venv_train/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 8464.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 9491.
+Note: Trying to resync...
+Note: Skipped 339 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1804] error: dequantization failed!
+   reverb: 500/518  339s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   -> cell_reverb.npz: {'scored': 517, 'audio_unavailable': 1}, tonic_fail 0, 10 MB feats, 352s
+== building cell field_all  (['reverb', 'noise', 'phone'])  workers=5
+/Users/shyamravidath/carnatify/scripts/raga_domain_cells.py:268: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
+/Users/shyamravidath/carnatify/venv_train/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45450.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46477.
+Note: Trying to resync...
+Note: Skipped 767 bytes in input.
+   field_all: 50/518  47s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45450.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46477.
+Note: Trying to resync...
+Note: Skipped 767 bytes in input.
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   field_all: 100/518  85s
+Note: Illegal Audio-MPEG-Header 0x38202020 at offset 4327.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x3430382e at offset 5354.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x416c6170 at offset 6381.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 7408.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x54504531 at offset 8435.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 9462.
+Note: Trying to resync...
+Note: Skipped 933 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x31332020 at offset 4335.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x38382e35 at offset 5362.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x2d50616e at offset 6389.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 7416.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 8443.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 9470.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 10497.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 11524.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 12551.
+Note: Trying to resync...
+Note: Skipped 357 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 44610.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x41686972 at offset 45637.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46664.
+Note: Trying to resync...
+Note: Skipped 585 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45496.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46523.
+Note: Trying to resync...
+Note: Skipped 725 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4301.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 5328.
+Note: Trying to resync...
+Note: Skipped 344 bytes in input.
+   field_all: 150/518  123s
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4303.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x4b000000 at offset 5330.
+Note: Trying to resync...
+Note: Skipped 315 bytes in input.
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   field_all: 200/518  161s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46878.
+Note: Trying to resync...
+Note: Skipped 371 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4311.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 5338.
+Note: Trying to resync...
+Note: Skipped 380 bytes in input.
+   field_all: 250/518  198s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   field_all: 300/518  236s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5145495.
+Note: Trying to resync...
+Note: Skipped 181 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xb5ee75ef at offset 5146094.
+Note: Trying to resync...
+Note: Skipped 237 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5528346.
+Note: Trying to resync...
+Note: Skipped 397 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xf3d6dc79 at offset 5528747.
+Note: Trying to resync...
+Note: Skipped 17 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5572649.
+Note: Trying to resync...
+Note: Skipped 836 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xffffffff at offset 6013596.
+Note: Trying to resync...
+Note: Skipped 2 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xffff014b at offset 6013598.
+Note: Trying to resync...
+Note: Skipped 416 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 6057482.
+Note: Trying to resync...
+Note: Skipped 545 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xfff203e7 at offset 6058027.
+Note: Trying to resync...
+Note: Skipped 291 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 6440333.
+Note: Trying to resync...
+Note: Skipped 157 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1844] error: dequantization failed!
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5145495.
+Note: Trying to resync...
+Note: Skipped 181 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xb5ee75ef at offset 5146094.
+Note: Trying to resync...
+Note: Skipped 237 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1804] error: dequantization failed!
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5528346.
+Note: Trying to resync...
+Note: Skipped 397 bytes in input.
+   field_all: 350/518  273s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   field_all: 400/518  312s
+Note: Illegal Audio-MPEG-Header 0x33202020 at offset 8391.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x38322e35 at offset 9418.
+Note: Trying to resync...
+Note: Skipped 841 bytes in input.
+   field_all: 450/518  350s
+/Users/shyamravidath/carnatify/scripts/raga_domain_cells.py:268: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
+/Users/shyamravidath/carnatify/venv_train/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 8464.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 9491.
+Note: Trying to resync...
+Note: Skipped 339 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1804] error: dequantization failed!
+   field_all: 500/518  388s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   -> cell_field_all.npz: {'scored': 517, 'audio_unavailable': 1}, tonic_fail 0, 10 MB feats, 403s
+== building cell all  (['pitch', 'stretch', 'reverb', 'noise', 'phone', 'agc'])  workers=5
+/Users/shyamravidath/carnatify/scripts/raga_domain_cells.py:268: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
+/Users/shyamravidath/carnatify/venv_train/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45450.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46477.
+Note: Trying to resync...
+Note: Skipped 767 bytes in input.
+   all: 50/518  51s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45450.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46477.
+Note: Trying to resync...
+Note: Skipped 767 bytes in input.
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   all: 100/518  94s
+Note: Illegal Audio-MPEG-Header 0x38202020 at offset 4327.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x3430382e at offset 5354.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x416c6170 at offset 6381.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 7408.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x54504531 at offset 8435.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 9462.
+Note: Trying to resync...
+Note: Skipped 933 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x31332020 at offset 4335.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x38382e35 at offset 5362.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x2d50616e at offset 6389.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 7416.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 8443.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 9470.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 10497.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 11524.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 12551.
+Note: Trying to resync...
+Note: Skipped 357 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 44610.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x41686972 at offset 45637.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46664.
+Note: Trying to resync...
+Note: Skipped 585 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45496.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46523.
+Note: Trying to resync...
+Note: Skipped 725 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4301.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 5328.
+Note: Trying to resync...
+Note: Skipped 344 bytes in input.
+   all: 150/518  136s
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4303.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x4b000000 at offset 5330.
+Note: Trying to resync...
+Note: Skipped 315 bytes in input.
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   all: 200/518  178s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46878.
+Note: Trying to resync...
+Note: Skipped 371 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4311.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 5338.
+Note: Trying to resync...
+Note: Skipped 380 bytes in input.
+   all: 250/518  221s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   all: 300/518  262s
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5145495.
+Note: Trying to resync...
+Note: Skipped 181 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xb5ee75ef at offset 5146094.
+Note: Trying to resync...
+Note: Skipped 237 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5528346.
+Note: Trying to resync...
+Note: Skipped 397 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xf3d6dc79 at offset 5528747.
+Note: Trying to resync...
+Note: Skipped 17 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5572649.
+Note: Trying to resync...
+Note: Skipped 836 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xffffffff at offset 6013596.
+Note: Trying to resync...
+Note: Skipped 2 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xffff014b at offset 6013598.
+Note: Trying to resync...
+Note: Skipped 416 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 6057482.
+Note: Trying to resync...
+Note: Skipped 545 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xfff203e7 at offset 6058027.
+Note: Trying to resync...
+Note: Skipped 291 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 6440333.
+Note: Trying to resync...
+Note: Skipped 157 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1844] error: dequantization failed!
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5145495.
+Note: Trying to resync...
+Note: Skipped 181 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xb5ee75ef at offset 5146094.
+Note: Trying to resync...
+Note: Skipped 237 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1804] error: dequantization failed!
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5528346.
+Note: Trying to resync...
+Note: Skipped 397 bytes in input.
+   all: 350/518  304s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+/Users/shyamravidath/carnatify/scripts/raga_domain_cells.py:268: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
+/Users/shyamravidath/carnatify/venv_train/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+   all: 400/518  345s
+Note: Illegal Audio-MPEG-Header 0x33202020 at offset 8391.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x38322e35 at offset 9418.
+Note: Trying to resync...
+Note: Skipped 841 bytes in input.
+   all: 450/518  386s
+/Users/shyamravidath/carnatify/scripts/raga_domain_cells.py:268: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
+/Users/shyamravidath/carnatify/venv_train/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 8464.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 9491.
+Note: Trying to resync...
+Note: Skipped 339 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1804] error: dequantization failed!
+   all: 500/518  430s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   -> cell_all.npz: {'scored': 517, 'audio_unavailable': 1}, tonic_fail 0, 10 MB feats, 445s
+== building cell pitch  (['pitch'])  workers=5
+/Users/shyamravidath/carnatify/scripts/raga_domain_cells.py:268: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
+/Users/shyamravidath/carnatify/venv_train/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45450.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46477.
+Note: Trying to resync...
+Note: Skipped 767 bytes in input.
+   pitch: 50/518  46s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45450.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46477.
+Note: Trying to resync...
+Note: Skipped 767 bytes in input.
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   pitch: 100/518  81s
+Note: Illegal Audio-MPEG-Header 0x38202020 at offset 4327.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x3430382e at offset 5354.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x416c6170 at offset 6381.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 7408.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x54504531 at offset 8435.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 9462.
+Note: Trying to resync...
+Note: Skipped 933 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x31332020 at offset 4335.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x38382e35 at offset 5362.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x2d50616e at offset 6389.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 7416.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 8443.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 9470.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 10497.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 11524.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 12551.
+Note: Trying to resync...
+Note: Skipped 357 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 44610.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x41686972 at offset 45637.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46664.
+Note: Trying to resync...
+Note: Skipped 585 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45496.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46523.
+Note: Trying to resync...
+Note: Skipped 725 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4301.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 5328.
+Note: Trying to resync...
+Note: Skipped 344 bytes in input.
+   pitch: 150/518  119s
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4303.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x4b000000 at offset 5330.
+Note: Trying to resync...
+Note: Skipped 315 bytes in input.
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   pitch: 200/518  154s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46878.
+Note: Trying to resync...
+Note: Skipped 371 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4311.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 5338.
+Note: Trying to resync...
+Note: Skipped 380 bytes in input.
+   pitch: 250/518  189s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   pitch: 300/518  224s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5145495.
+Note: Trying to resync...
+Note: Skipped 181 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xb5ee75ef at offset 5146094.
+Note: Trying to resync...
+Note: Skipped 237 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5528346.
+Note: Trying to resync...
+Note: Skipped 397 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xf3d6dc79 at offset 5528747.
+Note: Trying to resync...
+Note: Skipped 17 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5572649.
+Note: Trying to resync...
+Note: Skipped 836 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xffffffff at offset 6013596.
+Note: Trying to resync...
+Note: Skipped 2 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xffff014b at offset 6013598.
+Note: Trying to resync...
+Note: Skipped 416 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 6057482.
+Note: Trying to resync...
+Note: Skipped 545 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xfff203e7 at offset 6058027.
+Note: Trying to resync...
+Note: Skipped 291 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 6440333.
+Note: Trying to resync...
+Note: Skipped 157 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1844] error: dequantization failed!
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5145495.
+Note: Trying to resync...
+Note: Skipped 181 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xb5ee75ef at offset 5146094.
+Note: Trying to resync...
+Note: Skipped 237 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1804] error: dequantization failed!
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5528346.
+Note: Trying to resync...
+Note: Skipped 397 bytes in input.
+   pitch: 350/518  265s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+/Users/shyamravidath/carnatify/scripts/raga_domain_cells.py:268: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
+/Users/shyamravidath/carnatify/venv_train/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+   pitch: 400/518  302s
+Note: Illegal Audio-MPEG-Header 0x33202020 at offset 8391.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x38322e35 at offset 9418.
+Note: Trying to resync...
+Note: Skipped 841 bytes in input.
+   pitch: 450/518  340s
+/Users/shyamravidath/carnatify/scripts/raga_domain_cells.py:268: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
+/Users/shyamravidath/carnatify/venv_train/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 8464.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 9491.
+Note: Trying to resync...
+Note: Skipped 339 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1804] error: dequantization failed!
+   pitch: 500/518  376s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   -> cell_pitch.npz: {'scored': 517, 'audio_unavailable': 1}, tonic_fail 0, 10 MB feats, 390s
+== building cell stretch  (['stretch'])  workers=5
+/Users/shyamravidath/carnatify/scripts/raga_domain_cells.py:268: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
+/Users/shyamravidath/carnatify/venv_train/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45450.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46477.
+Note: Trying to resync...
+Note: Skipped 767 bytes in input.
+   stretch: 50/518  45s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45450.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46477.
+Note: Trying to resync...
+Note: Skipped 767 bytes in input.
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   stretch: 100/518  78s
+Note: Illegal Audio-MPEG-Header 0x38202020 at offset 4327.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x3430382e at offset 5354.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x416c6170 at offset 6381.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 7408.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x54504531 at offset 8435.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 9462.
+Note: Trying to resync...
+Note: Skipped 933 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x31332020 at offset 4335.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x38382e35 at offset 5362.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x2d50616e at offset 6389.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 7416.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 8443.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 9470.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x20202020 at offset 10497.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 11524.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 12551.
+Note: Trying to resync...
+Note: Skipped 357 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 44610.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x41686972 at offset 45637.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46664.
+Note: Trying to resync...
+Note: Skipped 585 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 45496.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46523.
+Note: Trying to resync...
+Note: Skipped 725 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4301.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 5328.
+Note: Trying to resync...
+Note: Skipped 344 bytes in input.
+   stretch: 150/518  114s
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4303.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x4b000000 at offset 5330.
+Note: Trying to resync...
+Note: Skipped 315 bytes in input.
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   stretch: 200/518  145s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 46878.
+Note: Trying to resync...
+Note: Skipped 371 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 4311.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 5338.
+Note: Trying to resync...
+Note: Skipped 380 bytes in input.
+   stretch: 250/518  180s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   stretch: 300/518  213s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5145495.
+Note: Trying to resync...
+Note: Skipped 181 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xb5ee75ef at offset 5146094.
+Note: Trying to resync...
+Note: Skipped 237 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5528346.
+Note: Trying to resync...
+Note: Skipped 397 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xf3d6dc79 at offset 5528747.
+Note: Trying to resync...
+Note: Skipped 17 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5572649.
+Note: Trying to resync...
+Note: Skipped 836 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xffffffff at offset 6013596.
+Note: Trying to resync...
+Note: Skipped 2 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xffff014b at offset 6013598.
+Note: Trying to resync...
+Note: Skipped 416 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 6057482.
+Note: Trying to resync...
+Note: Skipped 545 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xfff203e7 at offset 6058027.
+Note: Trying to resync...
+Note: Skipped 291 bytes in input.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 6440333.
+Note: Trying to resync...
+Note: Skipped 157 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1844] error: dequantization failed!
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5145495.
+Note: Trying to resync...
+Note: Skipped 181 bytes in input.
+Note: Illegal Audio-MPEG-Header 0xb5ee75ef at offset 5146094.
+Note: Trying to resync...
+Note: Skipped 237 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1804] error: dequantization failed!
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 5528346.
+Note: Trying to resync...
+Note: Skipped 397 bytes in input.
+   stretch: 350/518  250s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   stretch: 400/518  283s
+Note: Illegal Audio-MPEG-Header 0x33202020 at offset 8391.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x38322e35 at offset 9418.
+Note: Trying to resync...
+Note: Skipped 841 bytes in input.
+   stretch: 450/518  316s
+/Users/shyamravidath/carnatify/scripts/raga_domain_cells.py:268: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
+/Users/shyamravidath/carnatify/venv_train/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+Note: Illegal Audio-MPEG-Header 0x32202020 at offset 8464.
+Note: Trying to resync...
+Note: Skipped 1024 bytes in input.
+[src/libmpg123/parse.c:wetwork():1349] error: Giving up resync after 1024 bytes - your stream is not nice... (maybe increasing resync limit could help).
+Note: Illegal Audio-MPEG-Header 0x58000000 at offset 9491.
+Note: Trying to resync...
+Note: Skipped 339 bytes in input.
+[src/libmpg123/layer3.c:INT123_do_layer3():1804] error: dequantization failed!
+   stretch: 500/518  352s
+[src/libmpg123/id3.c:process_comment():587] error: No comment text / valid description?
+   -> cell_stretch.npz: {'scored': 517, 'audio_unavailable': 1}, tonic_fail 0, 10 MB feats, 366s

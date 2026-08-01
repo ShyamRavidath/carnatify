@@ -4458,3 +4458,74 @@ domain: a 60s archive window at 60.4% and a 60s phone-mic clip at 0/10 are
 consistent with each other and the difference between them is untested here. It
 graduates nothing; `~/sung_tests --cache-v2` remains the only scoreboard. The
 verdict and the decision about what comes next are the verifier's.
+
+## [2026-07-31] Opus 5 (verifier, completing a workhorse run) — domain decomposition: field degradation costs 7.5pp, not 44, and the wild 0/10 is now unexplained
+
+The Opus 5 workhorse built all eight degradation cells against
+`WORKHORSE_RAGA_DOMAIN_BRIEF.md` and terminated on a session limit before
+scoring. Scoring and the write-up were completed from its own committed scripts
+by the verifier seat. Result: `data/RAGA_DOMAIN_DECOMPOSITION.md`. Ordering is
+in git history: prereg `3792d42`, harness `c236462`, then scores.
+
+Gate 1 bit-level against the duration curve's own 60 s shard: `max|diff| =
+0.000e+00`. Same harness, 518 tracks, 155 level-(c) groups, one fold assignment
+reused by every cell and arm, so all cells are exactly paired. The anchor is the
+within-experiment `clean` cell at **56.3% mismatched**, not the duration curve's
+60.4%, which was matched training on a cached contour; the prereg registered
+that distinction before scoring.
+
+**Nothing failed to produce a contour, in any cell.** 517 scored of 518 (one
+`audio_unavailable` source file), zero no-contour, zero min-voiced discards,
+zero tonic failures, everywhere. **The brief's registered prediction is
+refuted:** it predicted that `phone_mic`'s 120-350 Hz high-pass would strip the
+fundamental from most male voices and leave melodia tracking nothing. Melodia
+produced a usable contour through bandpass, 8 kHz resample and mu-law companding
+in all 517 windows. The brief's own rule — no-contour is a different finding
+from wrong-answer — resolves entirely to wrong-answer.
+
+**Primary arm, mismatched, source-disjoint, n=517, paired source-group
+bootstrap:**
+
+```
+clean      56.3%   --                       phone      55.9%   +0.4pp [-2.5, +4.1]
+reverb     54.2%   +2.1pp [-0.8, +5.2]      noise      53.6%   +2.7pp [+0.0, +5.3]
+field_all  48.7%   +7.5pp [+3.7, +12.4]     pitch      45.6%  +10.6pp [+7.6, +13.8]
+stretch    45.3%  +11.0pp [+7.8, +14.7]     all        35.0%  +21.3pp [+16.0, +26.8]
+```
+
+No single field-realistic component does measurable damage — a phone capture
+chain costs 0.4pp, a 0.15-0.6 s room 2.1pp, pink noise at 8-25 dB SNR 2.7pp, all
+three with CIs touching or straddling zero. Together they cost 7.5pp. **Each
+non-field artifact alone costs more than all three field components combined**:
+pitch 10.6pp, stretch 11.0pp. The `all` cell, the condition behind the
+historical 12/77 ≈ 16%, costs 21.3pp, roughly two thirds of it from
+transformations that cannot happen to a phone recording of a hall.
+
+**The 2×2 kills the tonic hypothesis.** Contour damage alone vs tonic damage
+alone: `field_all` −6.2pp vs −2.2pp (3:1); `all` −19.6pp vs −3.9pp (5:1), where
+degraded-contour-with-clean-tonic at 37.1% is already indistinguishable from the
+full 35.0%. Perfect tonic recovery buys 2.2pp in the field cell. **No
+tonic-estimation work is worth funding, including asking the listener for the
+shruti.** Drift corroborates independently and before any forest was fit: median
+|drift| is 10 cents at `field_all` with 75% within 25 cents, and the *clean*
+cell already carries 17.4% outside 25 cents and 8.7% at a fifth or octave — most
+tonic error is pre-existing in the archive corpus, not induced by degradation.
+
+**Verdict against the fixed table: top row, "≥45% — field-realistic degradation
+is survivable, the 16% was dominated by pitch/stretch artifacts, and the 0/10 on
+wild clips is still unexplained."**
+
+That last clause is the finding. Clean 60 s archive windows score 56.3%; an
+honest simulation of a phone in a hall scores 48.7%; real wild clips score 0/10.
+The simulation does not reproduce the wild failure, so no statement of the form
+"the raga path fails on wild audio because X" is currently supported. The
+mundane candidates must be eliminated first: whether the ten wild clips' true
+ragas were even inside the trained 18-raga tier, n=10 itself, and the
+`--fast`/Demucs difference this job registered and did not spend.
+
+Confounds measured and not repaired, per the brief: voicing density moves
+0.621-0.703 so effective tau moves 0.142-0.161 s, too small to explain 21 points
+and pointing the wrong way; `all` and `stretch` have real window length 56.2 s
+because time-stretch changes duration; `augment_wild.py:21`'s "No ffmpeg on this
+machine" is still false and still not acted on. The Demucs tertiary was not run
+and is reported as not run rather than subsampled.

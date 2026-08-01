@@ -46,10 +46,18 @@ from __future__ import annotations
 import argparse
 import json
 import multiprocessing as mp
+import os
 import random
 import sys
 import time
 from pathlib import Path
+
+# librosa's audioread fallback pulls in macOS ObjC audio frameworks for the mp3s
+# libsndfile cannot open. Once the ObjC runtime is initialised in the parent,
+# every fork() child aborts with "+[NSNumber initialize] may have been in
+# progress in another thread when fork() was called". The Pool then hangs
+# forever on imap. Must be set before any framework loads.
+os.environ.setdefault('OBJC_DISABLE_INITIALIZE_FORK_SAFETY', 'YES')
 
 import numpy as np
 from scipy.ndimage import gaussian_filter
@@ -85,6 +93,7 @@ ALPHA = 0.75
 MIN_VOICED = 500          # the frozen harness's own guard, reused verbatim
 TONIC_MIN_HZ, TONIC_MAX_HZ = 80.0, 400.0     # identify_clip.py's own range
 TONIC_FALLBACK = 146.83                      # identify_clip.py's own default
+FFMPEG = '/opt/homebrew/bin/ffmpeg'          # decode fallback for damaged mp3s
 
 # cell -> components in augment_chain order. Registered in PREREGISTRATION.md §3.
 CELLS = {
@@ -238,6 +247,46 @@ def cached_contour(rec):
 _SARAGA_PITCH = {}
 
 
+def load_window(rec):
+    """The registered 60 s window, decoded at 22050 Hz.
+
+    Two corpus defects force a fallback and an outcome that is NOT a finding:
+
+    * some archive mp3s are damaged (the benign `Illegal Audio-MPEG-Header ...
+      resync` warnings in `HANDOFF_SESSION_0719.md` §4), libsndfile refuses
+      them, and librosa's audioread fallback can return ZERO samples when asked
+      to seek — so a failed seek is retried by decoding the whole file and
+      slicing;
+    * at least one Saraga track's audio on disk is far shorter than its pitch
+      annotation, so the registered window does not exist in the audio at all.
+
+    Returns (audio, None) or (None, 'audio_unavailable'). The window must be the
+    full registered length: a partial window would be a duration cell in
+    disguise. `audio_unavailable` does not depend on the degradation, so it
+    removes the same tracks from every cell and the cells stay paired."""
+    need = int(round(rec['win_s'] * SR_AUG))
+    y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
+                    offset=rec['win_start_s'], duration=rec['win_s'])
+    if y.size >= 0.98 * need:
+        return y, None
+    full, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True)
+    a = int(round(rec['win_start_s'] * SR_AUG))
+    yy = full[a:a + need]
+    if yy.size >= 0.98 * need:
+        return yy, None
+    # Last resort: ffmpeg. `augment_wild.py:21` says "No ffmpeg on this machine";
+    # that is stale — ffmpeg 8.1.2 is at /opt/homebrew/bin/ffmpeg — and libavcodec
+    # decodes the damaged archive mp3s that libmpg123 gives up on midway. This is
+    # a DECODE path only; no registered severity is touched by it.
+    import subprocess
+    r = subprocess.run([FFMPEG, '-v', 'error', '-ss', f"{rec['win_start_s']:.6f}",
+                        '-t', f"{rec['win_s']:.6f}", '-i', rec['audio'],
+                        '-f', 'f32le', '-ac', '1', '-ar', str(SR_AUG), '-'],
+                       capture_output=True)
+    z = np.frombuffer(r.stdout, dtype=np.float32)
+    return (z.copy(), None) if z.size >= 0.98 * need else (None, 'audio_unavailable')
+
+
 def run_window(job):
     rec, cell, tmpdir = job
     comps = CELLS[cell]
@@ -253,8 +302,10 @@ def run_window(job):
             row['real_s'] = float(seg.size * hop)
             tonic_est = None
         else:
-            y, _ = _lb.load(rec['audio'], sr=SR_AUG, mono=True,
-                            offset=rec['win_start_s'], duration=rec['win_s'])
+            y, bad = load_window(rec)
+            if bad:
+                row['outcome'] = bad
+                return row, None, None
             y, row['params'] = degrade(y, comps, stem)
             if cell.endswith('_demucs'):
                 y = demucs_vocals(y, stem, tmpdir)

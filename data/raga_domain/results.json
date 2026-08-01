@@ -1,0 +1,1871 @@
+{
+ "tier_ragas": [
+  "Aṭāna",
+  "Bhairavi",
+  "Hamsadhvāni",
+  "Harikāmbhōji",
+  "Kalyāṇi",
+  "Kamās",
+  "Karaharapriya",
+  "Kāmavardani",
+  "Kānaḍa",
+  "Mōhanaṁ",
+  "Nāṭa",
+  "Pūrvīkaḷyāṇi",
+  "Sindhubhairavi",
+  "Sāvēri",
+  "Tōḍi",
+  "Vasanta",
+  "Śankarābharaṇaṁ",
+  "Ṣanmukhapriya"
+ ],
+ "level_c_groups": 155,
+ "n_tracks": 518,
+ "gates": {
+  "bitlevel_max_abs_diff": 0.0,
+  "bitlevel_n": 518,
+  "bitlevel_pass": true
+ },
+ "cells": {
+  "cached": {
+   "n_windows": 518,
+   "scored": 518,
+   "no_contour": 0,
+   "min_voiced": 0,
+   "tdms_none": 0,
+   "error": 0,
+   "audio_unavailable": 0,
+   "tonic_fail": 0,
+   "components": null
+  },
+  "clean": {
+   "n_windows": 518,
+   "scored": 517,
+   "no_contour": 0,
+   "min_voiced": 0,
+   "tdms_none": 0,
+   "error": 0,
+   "audio_unavailable": 1,
+   "tonic_fail": 0,
+   "components": null
+  },
+  "noise": {
+   "n_windows": 518,
+   "scored": 517,
+   "no_contour": 0,
+   "min_voiced": 0,
+   "tdms_none": 0,
+   "error": 0,
+   "audio_unavailable": 1,
+   "tonic_fail": 0,
+   "components": null
+  },
+  "reverb": {
+   "n_windows": 518,
+   "scored": 517,
+   "no_contour": 0,
+   "min_voiced": 0,
+   "tdms_none": 0,
+   "error": 0,
+   "audio_unavailable": 1,
+   "tonic_fail": 0,
+   "components": null
+  },
+  "phone": {
+   "n_windows": 518,
+   "scored": 517,
+   "no_contour": 0,
+   "min_voiced": 0,
+   "tdms_none": 0,
+   "error": 0,
+   "audio_unavailable": 1,
+   "tonic_fail": 0,
+   "components": null
+  },
+  "field_all": {
+   "n_windows": 518,
+   "scored": 517,
+   "no_contour": 0,
+   "min_voiced": 0,
+   "tdms_none": 0,
+   "error": 0,
+   "audio_unavailable": 1,
+   "tonic_fail": 0,
+   "components": null
+  },
+  "all": {
+   "n_windows": 518,
+   "scored": 517,
+   "no_contour": 0,
+   "min_voiced": 0,
+   "tdms_none": 0,
+   "error": 0,
+   "audio_unavailable": 1,
+   "tonic_fail": 0,
+   "components": null
+  },
+  "pitch": {
+   "n_windows": 518,
+   "scored": 517,
+   "no_contour": 0,
+   "min_voiced": 0,
+   "tdms_none": 0,
+   "error": 0,
+   "audio_unavailable": 1,
+   "tonic_fail": 0,
+   "components": null
+  },
+  "stretch": {
+   "n_windows": 518,
+   "scored": 517,
+   "no_contour": 0,
+   "min_voiced": 0,
+   "tdms_none": 0,
+   "error": 0,
+   "audio_unavailable": 1,
+   "tonic_fail": 0,
+   "components": null
+  }
+ },
+ "drift": {
+  "cached": {
+   "n": 0,
+   "n_tonic_fail": 0
+  },
+  "clean": {
+   "n": 517,
+   "n_tonic_fail": 1,
+   "median_abs_cents": 2.852969816382893,
+   "mean_abs_cents": 119.00762419619359,
+   "p90_abs_cents": 514.8627236992714,
+   "frac_within_25": 0.8259187620889749,
+   "frac_within_50": 0.8355899419729207,
+   "frac_near_700": 0.05415860735009671,
+   "frac_near_1200": 0.03288201160541586,
+   "median_abs_cents_octfold": 2.685210702651274,
+   "frac_within_25_octfold": 0.8588007736943907,
+   "frac_near_700_octfold": 0.0
+  },
+  "noise": {
+   "n": 517,
+   "n_tonic_fail": 1,
+   "median_abs_cents": 3.692066810250115,
+   "mean_abs_cents": 137.1613382068158,
+   "p90_abs_cents": 691.1579671368402,
+   "frac_within_25": 0.804642166344294,
+   "frac_within_50": 0.816247582205029,
+   "frac_near_700": 0.058027079303675046,
+   "frac_near_1200": 0.04448742746615087,
+   "median_abs_cents_octfold": 2.869886349775615,
+   "frac_within_25_octfold": 0.8491295938104448,
+   "frac_near_700_octfold": 0.0
+  },
+  "reverb": {
+   "n": 517,
+   "n_tonic_fail": 1,
+   "median_abs_cents": 3.692066810250115,
+   "mean_abs_cents": 143.72956970772165,
+   "p90_abs_cents": 701.1745625278935,
+   "frac_within_25": 0.7949709864603481,
+   "frac_within_50": 0.8007736943907157,
+   "frac_near_700": 0.0735009671179884,
+   "frac_near_1200": 0.0425531914893617,
+   "median_abs_cents_octfold": 2.869886349775615,
+   "frac_within_25_octfold": 0.8375241779497099,
+   "frac_near_700_octfold": 0.0
+  },
+  "phone": {
+   "n": 517,
+   "n_tonic_fail": 1,
+   "median_abs_cents": 2.869886349775615,
+   "mean_abs_cents": 127.89086412670007,
+   "p90_abs_cents": 675.1311774669593,
+   "frac_within_25": 0.8104448742746615,
+   "frac_within_50": 0.8201160541586073,
+   "frac_near_700": 0.05222437137330754,
+   "frac_near_1200": 0.03868471953578337,
+   "median_abs_cents_octfold": 2.852969816382893,
+   "frac_within_25_octfold": 0.8491295938104448,
+   "frac_near_700_octfold": 0.0
+  },
+  "field_all": {
+   "n": 517,
+   "n_tonic_fail": 1,
+   "median_abs_cents": 10.01662865653469,
+   "mean_abs_cents": 166.35279509812463,
+   "p90_abs_cents": 701.1746945365139,
+   "frac_within_25": 0.7504835589941973,
+   "frac_within_50": 0.7620889748549323,
+   "frac_near_700": 0.06963249516441006,
+   "frac_near_1200": 0.048355899419729204,
+   "median_abs_cents_octfold": 8.0030114663507,
+   "frac_within_25_octfold": 0.7988394584139265,
+   "frac_near_700_octfold": 0.0
+  },
+  "all": {
+   "n": 517,
+   "n_tonic_fail": 1,
+   "median_abs_cents": 9.086288370397844,
+   "mean_abs_cents": 315.3709068992235,
+   "p90_abs_cents": 1196.6020828837159,
+   "frac_within_25": 0.6112185686653772,
+   "frac_within_50": 0.6189555125725339,
+   "frac_near_700": 0.11992263056092843,
+   "frac_near_1200": 0.12572533849129594,
+   "median_abs_cents_octfold": 7.0678780868033755,
+   "frac_within_25_octfold": 0.7350096711798839,
+   "frac_near_700_octfold": 0.0
+  },
+  "pitch": {
+   "n": 517,
+   "n_tonic_fail": 1,
+   "median_abs_cents": 7.298425961454915,
+   "mean_abs_cents": 262.88669009184065,
+   "p90_abs_cents": 1194.7661330920862,
+   "frac_within_25": 0.6866537717601547,
+   "frac_within_50": 0.6982591876208898,
+   "frac_near_700": 0.08123791102514506,
+   "frac_near_1200": 0.1218568665377176,
+   "median_abs_cents_octfold": 5.983146439308348,
+   "frac_within_25_octfold": 0.8085106382978723,
+   "frac_near_700_octfold": 0.0
+  },
+  "stretch": {
+   "n": 517,
+   "n_tonic_fail": 1,
+   "median_abs_cents": 3.692066810250115,
+   "mean_abs_cents": 129.01791608838977,
+   "p90_abs_cents": 580.9734429800633,
+   "frac_within_25": 0.8104448742746615,
+   "frac_within_50": 0.816247582205029,
+   "frac_near_700": 0.05415860735009671,
+   "frac_near_1200": 0.0367504835589942,
+   "median_abs_cents_octfold": 2.869886349775615,
+   "frac_within_25_octfold": 0.8471953578336557,
+   "frac_near_700_octfold": 0.0
+  }
+ },
+ "voicing": {
+  "cached": {
+   "n": 518,
+   "density_mean": 0.6937977582569301,
+   "density_sd": 0.1306647770936843,
+   "density_p05": 0.4586155185758514,
+   "voiced_frames_mean": 14342.187258687258,
+   "voiced_frames_min": 663,
+   "voiced_frames_p05": 9480.5,
+   "mean_real_s": 60.0003628117914,
+   "min_real_s": 60.00036281179138,
+   "max_real_s": 60.00036281179138,
+   "effective_tau_s": {
+    "0.1": 0.14413422183899244,
+    "0.15": 0.21620133275848863,
+    "0.25": 0.36033555459748107
+   }
+  },
+  "clean": {
+   "n": 517,
+   "density_mean": 0.6764241119968757,
+   "density_sd": 0.07617242978797753,
+   "density_p05": 0.5519953562617907,
+   "voiced_frames_mean": 13983.715667311411,
+   "voiced_frames_min": 8591,
+   "voiced_frames_p05": 11411.4,
+   "mean_real_s": 60.0,
+   "min_real_s": 60.0,
+   "max_real_s": 60.0,
+   "effective_tau_s": {
+    "0.1": 0.14783624389850533,
+    "0.15": 0.22175436584775798,
+    "0.25": 0.36959060974626334
+   }
+  },
+  "noise": {
+   "n": 517,
+   "density_mean": 0.7029662682456799,
+   "density_sd": 0.07915222957782085,
+   "density_p05": 0.5798481110627388,
+   "voiced_frames_mean": 14532.42166344294,
+   "voiced_frames_min": 7011,
+   "voiced_frames_p05": 11987.2,
+   "mean_real_s": 60.0,
+   "min_real_s": 60.0,
+   "max_real_s": 60.0,
+   "effective_tau_s": {
+    "0.1": 0.1422543363987573,
+    "0.15": 0.21338150459813593,
+    "0.25": 0.3556358409968932
+   }
+  },
+  "reverb": {
+   "n": 517,
+   "density_mean": 0.664865571394902,
+   "density_sd": 0.07744048708218648,
+   "density_p05": 0.5344845934310454,
+   "voiced_frames_mean": 13744.765957446809,
+   "voiced_frames_min": 7960,
+   "voiced_frames_p05": 11049.4,
+   "mean_real_s": 60.0,
+   "min_real_s": 60.0,
+   "max_real_s": 60.0,
+   "effective_tau_s": {
+    "0.1": 0.15040634423316265,
+    "0.15": 0.22560951634974394,
+    "0.25": 0.3760158605829066
+   }
+  },
+  "phone": {
+   "n": 517,
+   "density_mean": 0.677442081688138,
+   "density_sd": 0.07185924618307754,
+   "density_p05": 0.5502829777971268,
+   "voiced_frames_mean": 14004.760154738879,
+   "voiced_frames_min": 8975,
+   "voiced_frames_p05": 11376.0,
+   "mean_real_s": 60.0,
+   "min_real_s": 60.0,
+   "max_real_s": 60.0,
+   "effective_tau_s": {
+    "0.1": 0.14761409529034134,
+    "0.15": 0.221421142935512,
+    "0.25": 0.3690352382258533
+   }
+  },
+  "field_all": {
+   "n": 517,
+   "density_mean": 0.700778662606764,
+   "density_sd": 0.08015060820067205,
+   "density_p05": 0.569457746819523,
+   "voiced_frames_mean": 14487.197292069632,
+   "voiced_frames_min": 9415,
+   "voiced_frames_p05": 11772.4,
+   "mean_real_s": 60.0,
+   "min_real_s": 60.0,
+   "max_real_s": 60.0,
+   "effective_tau_s": {
+    "0.1": 0.14269840869300862,
+    "0.15": 0.2140476130395129,
+    "0.25": 0.3567460217325215
+   }
+  },
+  "all": {
+   "n": 517,
+   "density_mean": 0.6692851753224835,
+   "density_sd": 0.08896732529042214,
+   "density_p05": 0.5379419255344375,
+   "voiced_frames_mean": 12959.458413926499,
+   "voiced_frames_min": 6868,
+   "voiced_frames_p05": 9794.2,
+   "mean_real_s": 56.159334903529434,
+   "min_real_s": 48.01260770975057,
+   "max_real_s": 60.0,
+   "effective_tau_s": {
+    "0.1": 0.14941314059708063,
+    "0.15": 0.22411971089562094,
+    "0.25": 0.3735328514927016
+   }
+  },
+  "pitch": {
+   "n": 517,
+   "density_mean": 0.6213929324647283,
+   "density_sd": 0.07431284662377981,
+   "density_p05": 0.498273109853432,
+   "voiced_frames_mean": 12846.056092843326,
+   "voiced_frames_min": 8545,
+   "voiced_frames_p05": 10300.8,
+   "mean_real_s": 60.0,
+   "min_real_s": 60.0,
+   "max_real_s": 60.0,
+   "effective_tau_s": {
+    "0.1": 0.1609287695039503,
+    "0.15": 0.24139315425592542,
+    "0.25": 0.4023219237598757
+   }
+  },
+  "stretch": {
+   "n": 517,
+   "density_mean": 0.6223179941204601,
+   "density_sd": 0.07454065172353118,
+   "density_p05": 0.501961865847077,
+   "voiced_frames_mean": 12046.497098646034,
+   "voiced_frames_min": 6438,
+   "voiced_frames_p05": 9172.0,
+   "mean_real_s": 56.15930016623026,
+   "min_real_s": 48.01256235827665,
+   "max_real_s": 60.0,
+   "effective_tau_s": {
+    "0.1": 0.16068955251942038,
+    "0.15": 0.24103432877913053,
+    "0.25": 0.4017238812985509
+   }
+  }
+ },
+ "arms": {
+  "cached:mismatched": {
+   "cell": "cached",
+   "arm": "mismatched",
+   "n": 518,
+   "n_all_windows": 518,
+   "top1": 292,
+   "top3": 384,
+   "top1_rate": 0.5637065637065637,
+   "top3_rate": 0.7413127413127413,
+   "top1_rate_all_windows": 0.5637065637065637,
+   "majority_class_rate": 0.05791505791505792,
+   "class_prior_expectation": 0.055731131020706315,
+   "boot_ci95": [
+    0.5075627713320978,
+    0.6166725352112676
+   ]
+  },
+  "cached:matched": {
+   "cell": "cached",
+   "arm": "matched",
+   "n": 518,
+   "n_all_windows": 518,
+   "top1": 299,
+   "top3": 392,
+   "top1_rate": 0.5772200772200772,
+   "top3_rate": 0.7567567567567568,
+   "top1_rate_all_windows": 0.5772200772200772,
+   "majority_class_rate": 0.05791505791505792,
+   "class_prior_expectation": 0.055731131020706315,
+   "boot_ci95": [
+    0.5268324438749562,
+    0.6289629936481634
+   ]
+  },
+  "clean:mismatched": {
+   "cell": "clean",
+   "arm": "mismatched",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 291,
+   "top3": 385,
+   "top1_rate": 0.562862669245648,
+   "top3_rate": 0.7446808510638298,
+   "top1_rate_all_windows": 0.5617760617760618,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.5062105325945759,
+    0.6197458487434604
+   ]
+  },
+  "clean:matched": {
+   "cell": "clean",
+   "arm": "matched",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 283,
+   "top3": 398,
+   "top1_rate": 0.5473887814313346,
+   "top3_rate": 0.769825918762089,
+   "top1_rate_all_windows": 0.5463320463320464,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.48906593406593407,
+    0.6029566438225774
+   ]
+  },
+  "clean:cd_tc": {
+   "cell": "clean",
+   "arm": "cd_tc",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 293,
+   "top3": 393,
+   "top1_rate": 0.5667311411992263,
+   "top3_rate": 0.7601547388781431,
+   "top1_rate_all_windows": 0.5656370656370656,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.5079072313878487,
+    0.6244278169014084
+   ]
+  },
+  "clean:cc_td": {
+   "cell": "clean",
+   "arm": "cc_td",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 291,
+   "top3": 385,
+   "top1_rate": 0.562862669245648,
+   "top3_rate": 0.7446808510638298,
+   "top1_rate_all_windows": 0.5617760617760618,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.5062105325945759,
+    0.6197458487434604
+   ]
+  },
+  "noise:mismatched": {
+   "cell": "noise",
+   "arm": "mismatched",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 277,
+   "top3": 385,
+   "top1_rate": 0.5357833655705996,
+   "top3_rate": 0.7446808510638298,
+   "top1_rate_all_windows": 0.5347490347490348,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.47579876763655526,
+    0.59697601010101
+   ]
+  },
+  "noise:matched": {
+   "cell": "noise",
+   "arm": "matched",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 288,
+   "top3": 388,
+   "top1_rate": 0.5570599613152805,
+   "top3_rate": 0.7504835589941973,
+   "top1_rate_all_windows": 0.555984555984556,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.4985321549319774,
+    0.6052077979922568
+   ]
+  },
+  "noise:cd_tc": {
+   "cell": "noise",
+   "arm": "cd_tc",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 281,
+   "top3": 386,
+   "top1_rate": 0.5435203094777563,
+   "top3_rate": 0.746615087040619,
+   "top1_rate_all_windows": 0.5424710424710425,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.48402355623100307,
+    0.6055706033863661
+   ]
+  },
+  "noise:cc_td": {
+   "cell": "noise",
+   "arm": "cc_td",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 290,
+   "top3": 388,
+   "top1_rate": 0.5609284332688588,
+   "top3_rate": 0.7504835589941973,
+   "top1_rate_all_windows": 0.5598455598455598,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.5082206131000514,
+    0.6128348856107013
+   ]
+  },
+  "reverb:mismatched": {
+   "cell": "reverb",
+   "arm": "mismatched",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 280,
+   "top3": 382,
+   "top1_rate": 0.5415860735009671,
+   "top3_rate": 0.7388781431334622,
+   "top1_rate_all_windows": 0.5405405405405406,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.4934074121720859,
+    0.5947967115019651
+   ]
+  },
+  "reverb:matched": {
+   "cell": "reverb",
+   "arm": "matched",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 277,
+   "top3": 390,
+   "top1_rate": 0.5357833655705996,
+   "top3_rate": 0.7543520309477756,
+   "top1_rate_all_windows": 0.5347490347490348,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.48979328844940034,
+    0.5820337828710375
+   ]
+  },
+  "reverb:cd_tc": {
+   "cell": "reverb",
+   "arm": "cd_tc",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 273,
+   "top3": 382,
+   "top1_rate": 0.528046421663443,
+   "top3_rate": 0.7388781431334622,
+   "top1_rate_all_windows": 0.527027027027027,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.47262711228877113,
+    0.581889734049126
+   ]
+  },
+  "reverb:cc_td": {
+   "cell": "reverb",
+   "arm": "cc_td",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 287,
+   "top3": 389,
+   "top1_rate": 0.5551257253384912,
+   "top3_rate": 0.7524177949709865,
+   "top1_rate_all_windows": 0.5540540540540541,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.506870407621602,
+    0.6124721603563474
+   ]
+  },
+  "phone:mismatched": {
+   "cell": "phone",
+   "arm": "mismatched",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 289,
+   "top3": 388,
+   "top1_rate": 0.5589941972920697,
+   "top3_rate": 0.7504835589941973,
+   "top1_rate_all_windows": 0.5579150579150579,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.5028002523198486,
+    0.613528211622344
+   ]
+  },
+  "phone:matched": {
+   "cell": "phone",
+   "arm": "matched",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 300,
+   "top3": 399,
+   "top1_rate": 0.5802707930367504,
+   "top3_rate": 0.7717601547388782,
+   "top1_rate_all_windows": 0.5791505791505791,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.5207270240905174,
+    0.6288358076386246
+   ]
+  },
+  "phone:cd_tc": {
+   "cell": "phone",
+   "arm": "cd_tc",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 278,
+   "top3": 381,
+   "top1_rate": 0.5377176015473888,
+   "top3_rate": 0.7369439071566731,
+   "top1_rate_all_windows": 0.5366795366795367,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.4832615190715648,
+    0.5908277731442869
+   ]
+  },
+  "phone:cc_td": {
+   "cell": "phone",
+   "arm": "cc_td",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 301,
+   "top3": 395,
+   "top1_rate": 0.5822050290135397,
+   "top3_rate": 0.7640232108317214,
+   "top1_rate_all_windows": 0.581081081081081,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.5281400225232796,
+    0.6359108139815945
+   ]
+  },
+  "field_all:mismatched": {
+   "cell": "field_all",
+   "arm": "mismatched",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 252,
+   "top3": 359,
+   "top1_rate": 0.4874274661508704,
+   "top3_rate": 0.6943907156673114,
+   "top1_rate_all_windows": 0.4864864864864865,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.4388289107264495,
+    0.5350215779797547
+   ]
+  },
+  "field_all:matched": {
+   "cell": "field_all",
+   "arm": "matched",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 252,
+   "top3": 358,
+   "top1_rate": 0.4874274661508704,
+   "top3_rate": 0.6924564796905223,
+   "top1_rate_all_windows": 0.4864864864864865,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.4409576561278672,
+    0.5265313192251496
+   ]
+  },
+  "field_all:cd_tc": {
+   "cell": "field_all",
+   "arm": "cd_tc",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 261,
+   "top3": 374,
+   "top1_rate": 0.504835589941973,
+   "top3_rate": 0.723404255319149,
+   "top1_rate_all_windows": 0.5038610038610039,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.44866126269168094,
+    0.5536864988558352
+   ]
+  },
+  "field_all:cc_td": {
+   "cell": "field_all",
+   "arm": "cc_td",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 282,
+   "top3": 377,
+   "top1_rate": 0.5454545454545454,
+   "top3_rate": 0.7292069632495164,
+   "top1_rate_all_windows": 0.5444015444015444,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.4934555452829462,
+    0.597701732639551
+   ]
+  },
+  "all:mismatched": {
+   "cell": "all",
+   "arm": "mismatched",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 181,
+   "top3": 286,
+   "top1_rate": 0.35009671179883944,
+   "top3_rate": 0.5531914893617021,
+   "top1_rate_all_windows": 0.34942084942084944,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.3075085744004948,
+    0.3936069683382622
+   ]
+  },
+  "all:matched": {
+   "cell": "all",
+   "arm": "matched",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 168,
+   "top3": 298,
+   "top1_rate": 0.32495164410058025,
+   "top3_rate": 0.5764023210831721,
+   "top1_rate_all_windows": 0.32432432432432434,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.27628853376351675,
+    0.36422669387554796
+   ]
+  },
+  "all:cd_tc": {
+   "cell": "all",
+   "arm": "cd_tc",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 192,
+   "top3": 316,
+   "top1_rate": 0.3713733075435203,
+   "top3_rate": 0.6112185686653772,
+   "top1_rate_all_windows": 0.37065637065637064,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.32701324948022265,
+    0.41472942185928163
+   ]
+  },
+  "all:cc_td": {
+   "cell": "all",
+   "arm": "cc_td",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 273,
+   "top3": 365,
+   "top1_rate": 0.528046421663443,
+   "top3_rate": 0.7059961315280464,
+   "top1_rate_all_windows": 0.527027027027027,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.4769973254176502,
+    0.5799701997663901
+   ]
+  },
+  "pitch:mismatched": {
+   "cell": "pitch",
+   "arm": "mismatched",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 236,
+   "top3": 348,
+   "top1_rate": 0.4564796905222437,
+   "top3_rate": 0.6731141199226306,
+   "top1_rate_all_windows": 0.4555984555984556,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.4076069881351963,
+    0.5082305737109658
+   ]
+  },
+  "pitch:matched": {
+   "cell": "pitch",
+   "arm": "matched",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 238,
+   "top3": 362,
+   "top1_rate": 0.46034816247582205,
+   "top3_rate": 0.7001934235976789,
+   "top1_rate_all_windows": 0.4594594594594595,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.40212992745688475,
+    0.5077775425873604
+   ]
+  },
+  "pitch:cd_tc": {
+   "cell": "pitch",
+   "arm": "cd_tc",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 241,
+   "top3": 366,
+   "top1_rate": 0.4661508704061896,
+   "top3_rate": 0.7079303675048356,
+   "top1_rate_all_windows": 0.46525096525096526,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.41792367125704827,
+    0.5155698341183698
+   ]
+  },
+  "pitch:cc_td": {
+   "cell": "pitch",
+   "arm": "cc_td",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 279,
+   "top3": 376,
+   "top1_rate": 0.539651837524178,
+   "top3_rate": 0.7272727272727273,
+   "top1_rate_all_windows": 0.5386100386100386,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.484573502722323,
+    0.5976253799392097
+   ]
+  },
+  "stretch:mismatched": {
+   "cell": "stretch",
+   "arm": "mismatched",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 234,
+   "top3": 352,
+   "top1_rate": 0.4526112185686654,
+   "top3_rate": 0.6808510638297872,
+   "top1_rate_all_windows": 0.4517374517374517,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.40756825868184443,
+    0.5011185545014
+   ]
+  },
+  "stretch:matched": {
+   "cell": "stretch",
+   "arm": "matched",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 247,
+   "top3": 365,
+   "top1_rate": 0.47775628626692457,
+   "top3_rate": 0.7059961315280464,
+   "top1_rate_all_windows": 0.4768339768339768,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.42340277262955,
+    0.5254790622035506
+   ]
+  },
+  "stretch:cd_tc": {
+   "cell": "stretch",
+   "arm": "cd_tc",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 232,
+   "top3": 362,
+   "top1_rate": 0.44874274661508706,
+   "top3_rate": 0.7001934235976789,
+   "top1_rate_all_windows": 0.44787644787644787,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.3999899598393575,
+    0.49670709793351303
+   ]
+  },
+  "stretch:cc_td": {
+   "cell": "stretch",
+   "arm": "cc_td",
+   "n": 517,
+   "n_all_windows": 518,
+   "top1": 280,
+   "top3": 384,
+   "top1_rate": 0.5415860735009671,
+   "top3_rate": 0.7427466150870407,
+   "top1_rate_all_windows": 0.5405405405405406,
+   "majority_class_rate": 0.058027079303675046,
+   "class_prior_expectation": 0.05572619898312313,
+   "boot_ci95": [
+    0.48577031615483285,
+    0.5948529704547263
+   ]
+  }
+ },
+ "paired": {
+  "clean-minus-cached": {
+   "delta": -0.0008438944609157062,
+   "ci95": [
+    -0.032468852285925415,
+    0.03226624313806347
+   ]
+  },
+  "clean-minus-noise": {
+   "delta": 0.027079303675048405,
+   "ci95": [
+    0.0,
+    0.05263878217441415
+   ]
+  },
+  "clean-minus-reverb": {
+   "delta": 0.021276595744680882,
+   "ci95": [
+    -0.007615428749246325,
+    0.051547414498445354
+   ]
+  },
+  "clean-minus-phone": {
+   "delta": 0.003868471953578312,
+   "ci95": [
+    -0.025341851810640005,
+    0.04081723275455835
+   ]
+  },
+  "clean-minus-field_all": {
+   "delta": 0.07543520309477758,
+   "ci95": [
+    0.036831978407620966,
+    0.12359772324068599
+   ]
+  },
+  "clean-minus-all": {
+   "delta": 0.21276595744680854,
+   "ci95": [
+    0.15982496892589942,
+    0.2683034275276672
+   ]
+  },
+  "clean-minus-pitch": {
+   "delta": 0.1063829787234043,
+   "ci95": [
+    0.07562715694012413,
+    0.13826930417081124
+   ]
+  },
+  "clean-minus-stretch": {
+   "delta": 0.11025145067698261,
+   "ci95": [
+    0.078223044397463,
+    0.14666915422885565
+   ]
+  }
+ },
+ "per_raga": {
+  "cached": {
+   "Aṭāna": {
+    "n": 26,
+    "top1": 0.6923076923076923,
+    "top3": 0.8461538461538461
+   },
+   "Bhairavi": {
+    "n": 30,
+    "top1": 0.36666666666666664,
+    "top3": 0.5666666666666667
+   },
+   "Hamsadhvāni": {
+    "n": 30,
+    "top1": 0.6333333333333333,
+    "top3": 0.7666666666666667
+   },
+   "Harikāmbhōji": {
+    "n": 29,
+    "top1": 0.41379310344827586,
+    "top3": 0.6551724137931034
+   },
+   "Kalyāṇi": {
+    "n": 30,
+    "top1": 0.6333333333333333,
+    "top3": 0.7666666666666667
+   },
+   "Kamās": {
+    "n": 29,
+    "top1": 0.6896551724137931,
+    "top3": 0.8275862068965517
+   },
+   "Karaharapriya": {
+    "n": 27,
+    "top1": 0.4444444444444444,
+    "top3": 0.5925925925925926
+   },
+   "Kāmavardani": {
+    "n": 30,
+    "top1": 0.7666666666666667,
+    "top3": 0.8666666666666667
+   },
+   "Kānaḍa": {
+    "n": 25,
+    "top1": 0.44,
+    "top3": 0.8
+   },
+   "Mōhanaṁ": {
+    "n": 30,
+    "top1": 0.6666666666666666,
+    "top3": 0.7666666666666667
+   },
+   "Nāṭa": {
+    "n": 30,
+    "top1": 0.7333333333333333,
+    "top3": 0.8666666666666667
+   },
+   "Pūrvīkaḷyāṇi": {
+    "n": 26,
+    "top1": 0.5769230769230769,
+    "top3": 0.8846153846153846
+   },
+   "Sindhubhairavi": {
+    "n": 29,
+    "top1": 0.6896551724137931,
+    "top3": 0.8275862068965517
+   },
+   "Sāvēri": {
+    "n": 30,
+    "top1": 0.4666666666666667,
+    "top3": 0.8333333333333334
+   },
+   "Tōḍi": {
+    "n": 30,
+    "top1": 0.5,
+    "top3": 0.6
+   },
+   "Vasanta": {
+    "n": 28,
+    "top1": 0.39285714285714285,
+    "top3": 0.5357142857142857
+   },
+   "Śankarābharaṇaṁ": {
+    "n": 30,
+    "top1": 0.5,
+    "top3": 0.7
+   },
+   "Ṣanmukhapriya": {
+    "n": 29,
+    "top1": 0.5172413793103449,
+    "top3": 0.6551724137931034
+   }
+  },
+  "clean": {
+   "Aṭāna": {
+    "n": 26,
+    "top1": 0.5769230769230769,
+    "top3": 0.6923076923076923
+   },
+   "Bhairavi": {
+    "n": 30,
+    "top1": 0.3333333333333333,
+    "top3": 0.6666666666666666
+   },
+   "Hamsadhvāni": {
+    "n": 30,
+    "top1": 0.6333333333333333,
+    "top3": 0.7666666666666667
+   },
+   "Harikāmbhōji": {
+    "n": 29,
+    "top1": 0.5172413793103449,
+    "top3": 0.6896551724137931
+   },
+   "Kalyāṇi": {
+    "n": 30,
+    "top1": 0.5666666666666667,
+    "top3": 0.8
+   },
+   "Kamās": {
+    "n": 29,
+    "top1": 0.6206896551724138,
+    "top3": 0.7931034482758621
+   },
+   "Karaharapriya": {
+    "n": 27,
+    "top1": 0.6296296296296297,
+    "top3": 0.6666666666666666
+   },
+   "Kāmavardani": {
+    "n": 30,
+    "top1": 0.7666666666666667,
+    "top3": 0.9
+   },
+   "Kānaḍa": {
+    "n": 25,
+    "top1": 0.44,
+    "top3": 0.8
+   },
+   "Mōhanaṁ": {
+    "n": 30,
+    "top1": 0.6666666666666666,
+    "top3": 0.7666666666666667
+   },
+   "Nāṭa": {
+    "n": 30,
+    "top1": 0.7666666666666667,
+    "top3": 0.7666666666666667
+   },
+   "Pūrvīkaḷyāṇi": {
+    "n": 26,
+    "top1": 0.5384615384615384,
+    "top3": 0.8846153846153846
+   },
+   "Sindhubhairavi": {
+    "n": 29,
+    "top1": 0.6896551724137931,
+    "top3": 0.8620689655172413
+   },
+   "Sāvēri": {
+    "n": 30,
+    "top1": 0.5333333333333333,
+    "top3": 0.8333333333333334
+   },
+   "Tōḍi": {
+    "n": 29,
+    "top1": 0.5172413793103449,
+    "top3": 0.6896551724137931
+   },
+   "Vasanta": {
+    "n": 28,
+    "top1": 0.35714285714285715,
+    "top3": 0.5
+   },
+   "Śankarābharaṇaṁ": {
+    "n": 30,
+    "top1": 0.5,
+    "top3": 0.7333333333333333
+   },
+   "Ṣanmukhapriya": {
+    "n": 29,
+    "top1": 0.4482758620689655,
+    "top3": 0.5862068965517241
+   }
+  },
+  "noise": {
+   "Aṭāna": {
+    "n": 26,
+    "top1": 0.6538461538461539,
+    "top3": 0.8076923076923077
+   },
+   "Bhairavi": {
+    "n": 30,
+    "top1": 0.3333333333333333,
+    "top3": 0.6333333333333333
+   },
+   "Hamsadhvāni": {
+    "n": 30,
+    "top1": 0.6666666666666666,
+    "top3": 0.7666666666666667
+   },
+   "Harikāmbhōji": {
+    "n": 29,
+    "top1": 0.41379310344827586,
+    "top3": 0.5862068965517241
+   },
+   "Kalyāṇi": {
+    "n": 30,
+    "top1": 0.5,
+    "top3": 0.8
+   },
+   "Kamās": {
+    "n": 29,
+    "top1": 0.6551724137931034,
+    "top3": 0.9310344827586207
+   },
+   "Karaharapriya": {
+    "n": 27,
+    "top1": 0.5185185185185185,
+    "top3": 0.6666666666666666
+   },
+   "Kāmavardani": {
+    "n": 30,
+    "top1": 0.7,
+    "top3": 0.8666666666666667
+   },
+   "Kānaḍa": {
+    "n": 25,
+    "top1": 0.44,
+    "top3": 0.76
+   },
+   "Mōhanaṁ": {
+    "n": 30,
+    "top1": 0.6333333333333333,
+    "top3": 0.8
+   },
+   "Nāṭa": {
+    "n": 30,
+    "top1": 0.7666666666666667,
+    "top3": 0.8333333333333334
+   },
+   "Pūrvīkaḷyāṇi": {
+    "n": 26,
+    "top1": 0.5769230769230769,
+    "top3": 0.8461538461538461
+   },
+   "Sindhubhairavi": {
+    "n": 29,
+    "top1": 0.6206896551724138,
+    "top3": 0.8275862068965517
+   },
+   "Sāvēri": {
+    "n": 30,
+    "top1": 0.4,
+    "top3": 0.8
+   },
+   "Tōḍi": {
+    "n": 29,
+    "top1": 0.4827586206896552,
+    "top3": 0.6551724137931034
+   },
+   "Vasanta": {
+    "n": 28,
+    "top1": 0.32142857142857145,
+    "top3": 0.4642857142857143
+   },
+   "Śankarābharaṇaṁ": {
+    "n": 30,
+    "top1": 0.4666666666666667,
+    "top3": 0.7333333333333333
+   },
+   "Ṣanmukhapriya": {
+    "n": 29,
+    "top1": 0.4827586206896552,
+    "top3": 0.6206896551724138
+   }
+  },
+  "reverb": {
+   "Aṭāna": {
+    "n": 26,
+    "top1": 0.6538461538461539,
+    "top3": 0.8461538461538461
+   },
+   "Bhairavi": {
+    "n": 30,
+    "top1": 0.36666666666666664,
+    "top3": 0.6666666666666666
+   },
+   "Hamsadhvāni": {
+    "n": 30,
+    "top1": 0.6666666666666666,
+    "top3": 0.7333333333333333
+   },
+   "Harikāmbhōji": {
+    "n": 29,
+    "top1": 0.41379310344827586,
+    "top3": 0.6206896551724138
+   },
+   "Kalyāṇi": {
+    "n": 30,
+    "top1": 0.5,
+    "top3": 0.8666666666666667
+   },
+   "Kamās": {
+    "n": 29,
+    "top1": 0.5517241379310345,
+    "top3": 0.8275862068965517
+   },
+   "Karaharapriya": {
+    "n": 27,
+    "top1": 0.5555555555555556,
+    "top3": 0.6666666666666666
+   },
+   "Kāmavardani": {
+    "n": 30,
+    "top1": 0.7333333333333333,
+    "top3": 0.8666666666666667
+   },
+   "Kānaḍa": {
+    "n": 25,
+    "top1": 0.32,
+    "top3": 0.68
+   },
+   "Mōhanaṁ": {
+    "n": 30,
+    "top1": 0.7,
+    "top3": 0.7666666666666667
+   },
+   "Nāṭa": {
+    "n": 30,
+    "top1": 0.7666666666666667,
+    "top3": 0.8
+   },
+   "Pūrvīkaḷyāṇi": {
+    "n": 26,
+    "top1": 0.5384615384615384,
+    "top3": 0.8076923076923077
+   },
+   "Sindhubhairavi": {
+    "n": 29,
+    "top1": 0.6551724137931034,
+    "top3": 0.8275862068965517
+   },
+   "Sāvēri": {
+    "n": 30,
+    "top1": 0.5,
+    "top3": 0.8
+   },
+   "Tōḍi": {
+    "n": 29,
+    "top1": 0.5862068965517241,
+    "top3": 0.6896551724137931
+   },
+   "Vasanta": {
+    "n": 28,
+    "top1": 0.32142857142857145,
+    "top3": 0.5
+   },
+   "Śankarābharaṇaṁ": {
+    "n": 30,
+    "top1": 0.5,
+    "top3": 0.7333333333333333
+   },
+   "Ṣanmukhapriya": {
+    "n": 29,
+    "top1": 0.3793103448275862,
+    "top3": 0.5862068965517241
+   }
+  },
+  "phone": {
+   "Aṭāna": {
+    "n": 26,
+    "top1": 0.7307692307692307,
+    "top3": 0.8461538461538461
+   },
+   "Bhairavi": {
+    "n": 30,
+    "top1": 0.3,
+    "top3": 0.6333333333333333
+   },
+   "Hamsadhvāni": {
+    "n": 30,
+    "top1": 0.6666666666666666,
+    "top3": 0.8
+   },
+   "Harikāmbhōji": {
+    "n": 29,
+    "top1": 0.4827586206896552,
+    "top3": 0.6896551724137931
+   },
+   "Kalyāṇi": {
+    "n": 30,
+    "top1": 0.5333333333333333,
+    "top3": 0.7666666666666667
+   },
+   "Kamās": {
+    "n": 29,
+    "top1": 0.7241379310344828,
+    "top3": 0.9310344827586207
+   },
+   "Karaharapriya": {
+    "n": 27,
+    "top1": 0.7407407407407407,
+    "top3": 0.8518518518518519
+   },
+   "Kāmavardani": {
+    "n": 30,
+    "top1": 0.6333333333333333,
+    "top3": 0.8333333333333334
+   },
+   "Kānaḍa": {
+    "n": 25,
+    "top1": 0.32,
+    "top3": 0.64
+   },
+   "Mōhanaṁ": {
+    "n": 30,
+    "top1": 0.7333333333333333,
+    "top3": 0.8333333333333334
+   },
+   "Nāṭa": {
+    "n": 30,
+    "top1": 0.7,
+    "top3": 0.7666666666666667
+   },
+   "Pūrvīkaḷyāṇi": {
+    "n": 26,
+    "top1": 0.6153846153846154,
+    "top3": 0.8076923076923077
+   },
+   "Sindhubhairavi": {
+    "n": 29,
+    "top1": 0.5517241379310345,
+    "top3": 0.7931034482758621
+   },
+   "Sāvēri": {
+    "n": 30,
+    "top1": 0.6,
+    "top3": 0.8666666666666667
+   },
+   "Tōḍi": {
+    "n": 29,
+    "top1": 0.5172413793103449,
+    "top3": 0.6551724137931034
+   },
+   "Vasanta": {
+    "n": 28,
+    "top1": 0.32142857142857145,
+    "top3": 0.42857142857142855
+   },
+   "Śankarābharaṇaṁ": {
+    "n": 30,
+    "top1": 0.43333333333333335,
+    "top3": 0.7333333333333333
+   },
+   "Ṣanmukhapriya": {
+    "n": 29,
+    "top1": 0.4482758620689655,
+    "top3": 0.6206896551724138
+   }
+  },
+  "field_all": {
+   "Aṭāna": {
+    "n": 26,
+    "top1": 0.6153846153846154,
+    "top3": 0.8076923076923077
+   },
+   "Bhairavi": {
+    "n": 30,
+    "top1": 0.3,
+    "top3": 0.6
+   },
+   "Hamsadhvāni": {
+    "n": 30,
+    "top1": 0.5666666666666667,
+    "top3": 0.7333333333333333
+   },
+   "Harikāmbhōji": {
+    "n": 29,
+    "top1": 0.41379310344827586,
+    "top3": 0.7241379310344828
+   },
+   "Kalyāṇi": {
+    "n": 30,
+    "top1": 0.4666666666666667,
+    "top3": 0.8
+   },
+   "Kamās": {
+    "n": 29,
+    "top1": 0.5862068965517241,
+    "top3": 0.7586206896551724
+   },
+   "Karaharapriya": {
+    "n": 27,
+    "top1": 0.4444444444444444,
+    "top3": 0.7037037037037037
+   },
+   "Kāmavardani": {
+    "n": 30,
+    "top1": 0.7333333333333333,
+    "top3": 0.7666666666666667
+   },
+   "Kānaḍa": {
+    "n": 25,
+    "top1": 0.32,
+    "top3": 0.68
+   },
+   "Mōhanaṁ": {
+    "n": 30,
+    "top1": 0.6333333333333333,
+    "top3": 0.7333333333333333
+   },
+   "Nāṭa": {
+    "n": 30,
+    "top1": 0.6,
+    "top3": 0.6666666666666666
+   },
+   "Pūrvīkaḷyāṇi": {
+    "n": 26,
+    "top1": 0.5,
+    "top3": 0.6538461538461539
+   },
+   "Sindhubhairavi": {
+    "n": 29,
+    "top1": 0.5517241379310345,
+    "top3": 0.7931034482758621
+   },
+   "Sāvēri": {
+    "n": 30,
+    "top1": 0.4666666666666667,
+    "top3": 0.7666666666666667
+   },
+   "Tōḍi": {
+    "n": 29,
+    "top1": 0.4482758620689655,
+    "top3": 0.5862068965517241
+   },
+   "Vasanta": {
+    "n": 28,
+    "top1": 0.32142857142857145,
+    "top3": 0.5
+   },
+   "Śankarābharaṇaṁ": {
+    "n": 30,
+    "top1": 0.43333333333333335,
+    "top3": 0.6666666666666666
+   },
+   "Ṣanmukhapriya": {
+    "n": 29,
+    "top1": 0.3448275862068966,
+    "top3": 0.5517241379310345
+   }
+  },
+  "all": {
+   "Aṭāna": {
+    "n": 26,
+    "top1": 0.46153846153846156,
+    "top3": 0.6153846153846154
+   },
+   "Bhairavi": {
+    "n": 30,
+    "top1": 0.16666666666666666,
+    "top3": 0.36666666666666664
+   },
+   "Hamsadhvāni": {
+    "n": 30,
+    "top1": 0.6,
+    "top3": 0.6333333333333333
+   },
+   "Harikāmbhōji": {
+    "n": 29,
+    "top1": 0.1724137931034483,
+    "top3": 0.3793103448275862
+   },
+   "Kalyāṇi": {
+    "n": 30,
+    "top1": 0.16666666666666666,
+    "top3": 0.5
+   },
+   "Kamās": {
+    "n": 29,
+    "top1": 0.5862068965517241,
+    "top3": 0.8275862068965517
+   },
+   "Karaharapriya": {
+    "n": 27,
+    "top1": 0.2222222222222222,
+    "top3": 0.4074074074074074
+   },
+   "Kāmavardani": {
+    "n": 30,
+    "top1": 0.5,
+    "top3": 0.7333333333333333
+   },
+   "Kānaḍa": {
+    "n": 25,
+    "top1": 0.24,
+    "top3": 0.32
+   },
+   "Mōhanaṁ": {
+    "n": 30,
+    "top1": 0.36666666666666664,
+    "top3": 0.5666666666666667
+   },
+   "Nāṭa": {
+    "n": 30,
+    "top1": 0.5,
+    "top3": 0.6333333333333333
+   },
+   "Pūrvīkaḷyāṇi": {
+    "n": 26,
+    "top1": 0.38461538461538464,
+    "top3": 0.6153846153846154
+   },
+   "Sindhubhairavi": {
+    "n": 29,
+    "top1": 0.5517241379310345,
+    "top3": 0.6896551724137931
+   },
+   "Sāvēri": {
+    "n": 30,
+    "top1": 0.3333333333333333,
+    "top3": 0.7
+   },
+   "Tōḍi": {
+    "n": 29,
+    "top1": 0.20689655172413793,
+    "top3": 0.5172413793103449
+   },
+   "Vasanta": {
+    "n": 28,
+    "top1": 0.2857142857142857,
+    "top3": 0.5
+   },
+   "Śankarābharaṇaṁ": {
+    "n": 30,
+    "top1": 0.26666666666666666,
+    "top3": 0.5666666666666667
+   },
+   "Ṣanmukhapriya": {
+    "n": 29,
+    "top1": 0.27586206896551724,
+    "top3": 0.3448275862068966
+   }
+  },
+  "pitch": {
+   "Aṭāna": {
+    "n": 26,
+    "top1": 0.5769230769230769,
+    "top3": 0.7692307692307693
+   },
+   "Bhairavi": {
+    "n": 30,
+    "top1": 0.3,
+    "top3": 0.5
+   },
+   "Hamsadhvāni": {
+    "n": 30,
+    "top1": 0.6666666666666666,
+    "top3": 0.7666666666666667
+   },
+   "Harikāmbhōji": {
+    "n": 29,
+    "top1": 0.2413793103448276,
+    "top3": 0.5172413793103449
+   },
+   "Kalyāṇi": {
+    "n": 30,
+    "top1": 0.23333333333333334,
+    "top3": 0.6333333333333333
+   },
+   "Kamās": {
+    "n": 29,
+    "top1": 0.6551724137931034,
+    "top3": 0.8620689655172413
+   },
+   "Karaharapriya": {
+    "n": 27,
+    "top1": 0.5555555555555556,
+    "top3": 0.7407407407407407
+   },
+   "Kāmavardani": {
+    "n": 30,
+    "top1": 0.7333333333333333,
+    "top3": 0.8666666666666667
+   },
+   "Kānaḍa": {
+    "n": 25,
+    "top1": 0.2,
+    "top3": 0.48
+   },
+   "Mōhanaṁ": {
+    "n": 30,
+    "top1": 0.5333333333333333,
+    "top3": 0.7333333333333333
+   },
+   "Nāṭa": {
+    "n": 30,
+    "top1": 0.7,
+    "top3": 0.7
+   },
+   "Pūrvīkaḷyāṇi": {
+    "n": 26,
+    "top1": 0.3076923076923077,
+    "top3": 0.5
+   },
+   "Sindhubhairavi": {
+    "n": 29,
+    "top1": 0.6206896551724138,
+    "top3": 0.8275862068965517
+   },
+   "Sāvēri": {
+    "n": 30,
+    "top1": 0.43333333333333335,
+    "top3": 0.8333333333333334
+   },
+   "Tōḍi": {
+    "n": 29,
+    "top1": 0.3448275862068966,
+    "top3": 0.5517241379310345
+   },
+   "Vasanta": {
+    "n": 28,
+    "top1": 0.35714285714285715,
+    "top3": 0.5
+   },
+   "Śankarābharaṇaṁ": {
+    "n": 30,
+    "top1": 0.36666666666666664,
+    "top3": 0.7333333333333333
+   },
+   "Ṣanmukhapriya": {
+    "n": 29,
+    "top1": 0.3448275862068966,
+    "top3": 0.5517241379310345
+   }
+  },
+  "stretch": {
+   "Aṭāna": {
+    "n": 26,
+    "top1": 0.5384615384615384,
+    "top3": 0.6923076923076923
+   },
+   "Bhairavi": {
+    "n": 30,
+    "top1": 0.16666666666666666,
+    "top3": 0.4666666666666667
+   },
+   "Hamsadhvāni": {
+    "n": 30,
+    "top1": 0.6333333333333333,
+    "top3": 0.7333333333333333
+   },
+   "Harikāmbhōji": {
+    "n": 29,
+    "top1": 0.27586206896551724,
+    "top3": 0.6206896551724138
+   },
+   "Kalyāṇi": {
+    "n": 30,
+    "top1": 0.26666666666666666,
+    "top3": 0.6666666666666666
+   },
+   "Kamās": {
+    "n": 29,
+    "top1": 0.6206896551724138,
+    "top3": 0.8620689655172413
+   },
+   "Karaharapriya": {
+    "n": 27,
+    "top1": 0.4074074074074074,
+    "top3": 0.48148148148148145
+   },
+   "Kāmavardani": {
+    "n": 30,
+    "top1": 0.7,
+    "top3": 0.9
+   },
+   "Kānaḍa": {
+    "n": 25,
+    "top1": 0.16,
+    "top3": 0.56
+   },
+   "Mōhanaṁ": {
+    "n": 30,
+    "top1": 0.5666666666666667,
+    "top3": 0.6666666666666666
+   },
+   "Nāṭa": {
+    "n": 30,
+    "top1": 0.7333333333333333,
+    "top3": 0.7666666666666667
+   },
+   "Pūrvīkaḷyāṇi": {
+    "n": 26,
+    "top1": 0.4230769230769231,
+    "top3": 0.6923076923076923
+   },
+   "Sindhubhairavi": {
+    "n": 29,
+    "top1": 0.6551724137931034,
+    "top3": 0.896551724137931
+   },
+   "Sāvēri": {
+    "n": 30,
+    "top1": 0.5333333333333333,
+    "top3": 0.7666666666666667
+   },
+   "Tōḍi": {
+    "n": 29,
+    "top1": 0.3103448275862069,
+    "top3": 0.5862068965517241
+   },
+   "Vasanta": {
+    "n": 28,
+    "top1": 0.32142857142857145,
+    "top3": 0.4642857142857143
+   },
+   "Śankarābharaṇaṁ": {
+    "n": 30,
+    "top1": 0.36666666666666664,
+    "top3": 0.7666666666666667
+   },
+   "Ṣanmukhapriya": {
+    "n": 29,
+    "top1": 0.41379310344827586,
+    "top3": 0.6206896551724138
+   }
+  }
+ }
+}
