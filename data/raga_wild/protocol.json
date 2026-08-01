@@ -1,0 +1,1368 @@
+{
+ "frozen_n": 29,
+ "tier": [
+  "Aṭāna",
+  "Bhairavi",
+  "Hamsadhvāni",
+  "Harikāmbhōji",
+  "Kalyāṇi",
+  "Kamās",
+  "Karaharapriya",
+  "Kāmavardani",
+  "Kānaḍa",
+  "Mōhanaṁ",
+  "Nāṭa",
+  "Pūrvīkaḷyāṇi",
+  "Sindhubhairavi",
+  "Sāvēri",
+  "Tōḍi",
+  "Vasanta",
+  "Śankarābharaṇaṁ",
+  "Ṣanmukhapriya"
+ ],
+ "hash_gate": [
+  {
+   "file": "Amba Kamakshi__Bhairavi.mp3",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "caf69ed6e0bf810f54a69ec5e85748dfdf7f2dd12aa1437e76bdd02734a765df",
+   "bytes_disk": 2828160
+  },
+  {
+   "file": "Enu Dhanyalo Lakumi__Todi.mp3",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "93b749e62ea05fc46bcb2a47228224a73a3ff854b164ad02c81e90ddfc08b2ba",
+   "bytes_disk": 2627520
+  },
+  {
+   "file": "Jagadanandakaraka__Nata.m4a",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "119ed4c72d65d24ecb28821a390eadddc28610e274f2e5554826174ea57afc66",
+   "bytes_disk": 973219
+  },
+  {
+   "file": "Kaddanuvariki__Todi.mp3",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "e3b3fd358a89182d5ffbded629071e5bae9d249354c4845ef1bc5a8e5e356c53",
+   "bytes_disk": 3392640
+  },
+  {
+   "file": "Koluvamaregada kodandapani__Tōḍi.mp3",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "b7fc7dcb3d5e643eee167c7beb586e440c31034ff22bd575be6f5043b980c073",
+   "bytes_disk": 2689920
+  },
+  {
+   "file": "Maithreem Bhajata__Kalyani__OOC.mp3",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "5eadbb8309be207c865a44950034dea49e9f8b82cd376fb05aae7b989ebc6e6a",
+   "bytes_disk": 3372480
+  },
+  {
+   "file": "Ninnukori Yunnanura__Mohanam.m4a",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "3cb98249d81fce347b0e57602af77f1dd865e1c2f11fc09d5136569355b5d665",
+   "bytes_disk": 972805
+  },
+  {
+   "file": "Pillangoviya__Mohanam.mp3",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "b0580b629832721140cbdc5a210f5c4a47933a496476adfdcdb13f2ab87a409d",
+   "bytes_disk": 2238720
+  },
+  {
+   "file": "Ranga Baro__Sindhu Bhairavi.mp3",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "5635643bcf1268f5cba9c510f328b579c1f909143dcb20e4c1e2ebcf18eb9956",
+   "bytes_disk": 2505600
+  },
+  {
+   "file": "Thaye Yashoda__Todi__OOC.mp3",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "7ddb126501874a1538428a5b59bce1cdea91e07a81f6bee2ca036ceeb2775446",
+   "bytes_disk": 2315520
+  },
+  {
+   "file": "bhajarE bhaja mAnasa__Kanada.m4a",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "21eb129ffdb9d1793d816ced31589db9be997b23b1cfc08906e152a3b65ffc90",
+   "bytes_disk": 973561
+  },
+  {
+   "file": "bhajare__Kalyani.m4a",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "b9c41a0c2fb9b6858605c475b9e47ae167d38d178ca7b59d6a570be599321c88",
+   "bytes_disk": 973643
+  },
+  {
+   "file": "brOchevarevarura__Khamas.m4a",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "3e1c86bcf8fb8e804c51f5c0559990f741a4f85956f165152d6d1138fe4278e4",
+   "bytes_disk": 983231
+  },
+  {
+   "file": "chakkani rAja__Kharaharapriya.m4a",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "6336c0a38a97c4cb3bd7f53bd5b524acc46037e53bc75e0ba329f06a556791dd",
+   "bytes_disk": 973793
+  },
+  {
+   "file": "entara__Harikambhoji.m4a",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "49d50bf434d5aec8e7922558d63d1e5faf60e607535f45dbeec73c005746a5a6",
+   "bytes_disk": 981272
+  },
+  {
+   "file": "himAdrisutE__Kalyani.m4a",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "08e62012160dbcea2e5e7fa2bb04064068a4e91cad01d359310e5de3cdb5be9f",
+   "bytes_disk": 975140
+  },
+  {
+   "file": "nagumomu ganaleni__Saveri.m4a",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "efda92423cb1efef4c451f6593818e7621cf8d687be412a5f68f89397c46b3eb",
+   "bytes_disk": 978909
+  },
+  {
+   "file": "nannu pAlimpa__Mōhanaṁ.mp3",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "54a83bda2aa70fa3c1abad17559c8166dda00490c0d222bec1bb42f3f4a26345",
+   "bytes_disk": 3357120
+  },
+  {
+   "file": "nidhi chAla sukhamA__Kalyani.m4a",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "99f994d267991dc2a01063a21e90dae5a09986f055cb45b0ebd0e4ee350e10f4",
+   "bytes_disk": 974457
+  },
+  {
+   "file": "rAma nannu brOvara__Harikambhoji.m4a",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "8de1f9f6584e4a024ebfdc9de0c85ab48029e530901bd3c1c4c6f4ccb94e217b",
+   "bytes_disk": 969494
+  },
+  {
+   "file": "rAma nee__Karaharapriya.m4a",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "8af77b8d271e53192950928bce9854fb8a4a287dbfdcfbce7cea149241e92967",
+   "bytes_disk": 973650
+  },
+  {
+   "file": "raghuvara__Kamavardani.m4a",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "c378cd7c0563c0308e1585ee310d3f942679d8b673c05eb5a7f6164db16e1f74",
+   "bytes_disk": 972597
+  },
+  {
+   "file": "sarOja daLa nEtri__Śankarābharaṇaṁ.mp3",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "4f75f5d677af0c1f99236d021ca2d6bc94082a528fb09e7dee182ddbc210aff9",
+   "bytes_disk": 3154560
+  },
+  {
+   "file": "sarasijanAba murArE__Tōḍi.mp3",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "4f53943680af1fc82decdc19a1fa8ecc062daa4a8216ef0ab2c43ecb9fe5748a",
+   "bytes_disk": 1728000
+  },
+  {
+   "file": "siddhi vinAyakam__Shanmukhapriya.m4a",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "3f4973415d6da85100d01d3deb4252c26914a0f49d0729b49fd68e9b7170afe2",
+   "bytes_disk": 969918
+  },
+  {
+   "file": "swAminatha__Nata.m4a",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "90a87328bae810f9fc130c8c578d516b51489b4f8a1093ed585e7cd9c6293892",
+   "bytes_disk": 980170
+  },
+  {
+   "file": "vAtApi gaNapathim__Hamsadhvāni.mp3",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "e860ebcbd290de46207c864a227ac012ec6ebdb8dfee0641b0336ae3fda1e174",
+   "bytes_disk": 2111040
+  },
+  {
+   "file": "yArO ivar yArO__Bhairavi.m4a",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "3f103f41996da68ff19b2c315a332f2c526b16c9aed4c074ef67793d4cfd3f52",
+   "bytes_disk": 1057241
+  },
+  {
+   "file": "yEnATi mOmu palamu__Bhairavi.m4a",
+   "present": true,
+   "size_ok": true,
+   "sha_ok": true,
+   "sha256_disk": "f1c8cd15884e470938df72605a5e39285d80799a0e3f6c48f4831bcbaa11ee6a",
+   "bytes_disk": 974906
+  }
+ ],
+ "n_hash_bad": 0,
+ "labels": [
+  {
+   "file": "Amba Kamakshi__Bhairavi.mp3",
+   "raga_label": "Bhairavi",
+   "raga_canonical": "Bhairavi",
+   "ooc_marked": false
+  },
+  {
+   "file": "Enu Dhanyalo Lakumi__Todi.mp3",
+   "raga_label": "Todi",
+   "raga_canonical": "Tōḍi",
+   "ooc_marked": false
+  },
+  {
+   "file": "Jagadanandakaraka__Nata.m4a",
+   "raga_label": "Nata",
+   "raga_canonical": "Nāṭa",
+   "ooc_marked": false
+  },
+  {
+   "file": "Kaddanuvariki__Todi.mp3",
+   "raga_label": "Todi",
+   "raga_canonical": "Tōḍi",
+   "ooc_marked": false
+  },
+  {
+   "file": "Koluvamaregada kodandapani__Tōḍi.mp3",
+   "raga_label": "Tōḍi",
+   "raga_canonical": "Tōḍi",
+   "ooc_marked": false
+  },
+  {
+   "file": "Maithreem Bhajata__Kalyani__OOC.mp3",
+   "raga_label": "Kalyani",
+   "raga_canonical": "Kalyāṇi",
+   "ooc_marked": true
+  },
+  {
+   "file": "Ninnukori Yunnanura__Mohanam.m4a",
+   "raga_label": "Mohanam",
+   "raga_canonical": "Mōhanaṁ",
+   "ooc_marked": false
+  },
+  {
+   "file": "Pillangoviya__Mohanam.mp3",
+   "raga_label": "Mohanam",
+   "raga_canonical": "Mōhanaṁ",
+   "ooc_marked": false
+  },
+  {
+   "file": "Ranga Baro__Sindhu Bhairavi.mp3",
+   "raga_label": "Sindhu Bhairavi",
+   "raga_canonical": "Sindhubhairavi",
+   "ooc_marked": false
+  },
+  {
+   "file": "Thaye Yashoda__Todi__OOC.mp3",
+   "raga_label": "Todi",
+   "raga_canonical": "Tōḍi",
+   "ooc_marked": true
+  },
+  {
+   "file": "bhajarE bhaja mAnasa__Kanada.m4a",
+   "raga_label": "Kanada",
+   "raga_canonical": "Kānaḍa",
+   "ooc_marked": false
+  },
+  {
+   "file": "bhajare__Kalyani.m4a",
+   "raga_label": "Kalyani",
+   "raga_canonical": "Kalyāṇi",
+   "ooc_marked": false
+  },
+  {
+   "file": "brOchevarevarura__Khamas.m4a",
+   "raga_label": "Khamas",
+   "raga_canonical": "Kamās",
+   "ooc_marked": false
+  },
+  {
+   "file": "chakkani rAja__Kharaharapriya.m4a",
+   "raga_label": "Kharaharapriya",
+   "raga_canonical": "Karaharapriya",
+   "ooc_marked": false
+  },
+  {
+   "file": "entara__Harikambhoji.m4a",
+   "raga_label": "Harikambhoji",
+   "raga_canonical": "Harikāmbhōji",
+   "ooc_marked": false
+  },
+  {
+   "file": "himAdrisutE__Kalyani.m4a",
+   "raga_label": "Kalyani",
+   "raga_canonical": "Kalyāṇi",
+   "ooc_marked": false
+  },
+  {
+   "file": "nagumomu ganaleni__Saveri.m4a",
+   "raga_label": "Saveri",
+   "raga_canonical": "Sāvēri",
+   "ooc_marked": false
+  },
+  {
+   "file": "nannu pAlimpa__Mōhanaṁ.mp3",
+   "raga_label": "Mōhanaṁ",
+   "raga_canonical": "Mōhanaṁ",
+   "ooc_marked": false
+  },
+  {
+   "file": "nidhi chAla sukhamA__Kalyani.m4a",
+   "raga_label": "Kalyani",
+   "raga_canonical": "Kalyāṇi",
+   "ooc_marked": false
+  },
+  {
+   "file": "rAma nannu brOvara__Harikambhoji.m4a",
+   "raga_label": "Harikambhoji",
+   "raga_canonical": "Harikāmbhōji",
+   "ooc_marked": false
+  },
+  {
+   "file": "rAma nee__Karaharapriya.m4a",
+   "raga_label": "Karaharapriya",
+   "raga_canonical": "Karaharapriya",
+   "ooc_marked": false
+  },
+  {
+   "file": "raghuvara__Kamavardani.m4a",
+   "raga_label": "Kamavardani",
+   "raga_canonical": "Kāmavardani",
+   "ooc_marked": false
+  },
+  {
+   "file": "sarOja daLa nEtri__Śankarābharaṇaṁ.mp3",
+   "raga_label": "Śankarābharaṇaṁ",
+   "raga_canonical": "Śankarābharaṇaṁ",
+   "ooc_marked": false
+  },
+  {
+   "file": "sarasijanAba murArE__Tōḍi.mp3",
+   "raga_label": "Tōḍi",
+   "raga_canonical": "Tōḍi",
+   "ooc_marked": false
+  },
+  {
+   "file": "siddhi vinAyakam__Shanmukhapriya.m4a",
+   "raga_label": "Shanmukhapriya",
+   "raga_canonical": "Ṣanmukhapriya",
+   "ooc_marked": false
+  },
+  {
+   "file": "swAminatha__Nata.m4a",
+   "raga_label": "Nata",
+   "raga_canonical": "Nāṭa",
+   "ooc_marked": false
+  },
+  {
+   "file": "vAtApi gaNapathim__Hamsadhvāni.mp3",
+   "raga_label": "Hamsadhvāni",
+   "raga_canonical": "Hamsadhvāni",
+   "ooc_marked": false
+  },
+  {
+   "file": "yArO ivar yArO__Bhairavi.m4a",
+   "raga_label": "Bhairavi",
+   "raga_canonical": "Bhairavi",
+   "ooc_marked": false
+  },
+  {
+   "file": "yEnATi mOmu palamu__Bhairavi.m4a",
+   "raga_label": "Bhairavi",
+   "raga_canonical": "Bhairavi",
+   "ooc_marked": false
+  }
+ ],
+ "probes": {
+  "Amba Kamakshi__Bhairavi.mp3": {
+   "readable": true,
+   "duration_s": 70.704,
+   "bit_rate": 320000,
+   "codec": "mp3",
+   "sr": 48000,
+   "channels": 2
+  },
+  "Enu Dhanyalo Lakumi__Todi.mp3": {
+   "readable": true,
+   "duration_s": 65.688,
+   "bit_rate": 320000,
+   "codec": "mp3",
+   "sr": 48000,
+   "channels": 2
+  },
+  "Jagadanandakaraka__Nata.m4a": {
+   "readable": true,
+   "duration_s": 60.0,
+   "bit_rate": 129762,
+   "codec": "aac",
+   "sr": 44100,
+   "channels": 2
+  },
+  "Kaddanuvariki__Todi.mp3": {
+   "readable": true,
+   "duration_s": 84.816,
+   "bit_rate": 320000,
+   "codec": "mp3",
+   "sr": 48000,
+   "channels": 2
+  },
+  "Koluvamaregada kodandapani__Tōḍi.mp3": {
+   "readable": true,
+   "duration_s": 67.248,
+   "bit_rate": 320000,
+   "codec": "mp3",
+   "sr": 48000,
+   "channels": 2
+  },
+  "Maithreem Bhajata__Kalyani__OOC.mp3": {
+   "readable": true,
+   "duration_s": 84.312,
+   "bit_rate": 320000,
+   "codec": "mp3",
+   "sr": 48000,
+   "channels": 2
+  },
+  "Ninnukori Yunnanura__Mohanam.m4a": {
+   "readable": true,
+   "duration_s": 60.0,
+   "bit_rate": 129707,
+   "codec": "aac",
+   "sr": 44100,
+   "channels": 2
+  },
+  "Pillangoviya__Mohanam.mp3": {
+   "readable": true,
+   "duration_s": 55.968,
+   "bit_rate": 320000,
+   "codec": "mp3",
+   "sr": 48000,
+   "channels": 2
+  },
+  "Ranga Baro__Sindhu Bhairavi.mp3": {
+   "readable": true,
+   "duration_s": 62.64,
+   "bit_rate": 320000,
+   "codec": "mp3",
+   "sr": 48000,
+   "channels": 2
+  },
+  "Thaye Yashoda__Todi__OOC.mp3": {
+   "readable": true,
+   "duration_s": 57.888,
+   "bit_rate": 320000,
+   "codec": "mp3",
+   "sr": 48000,
+   "channels": 2
+  },
+  "bhajarE bhaja mAnasa__Kanada.m4a": {
+   "readable": true,
+   "duration_s": 60.0,
+   "bit_rate": 129808,
+   "codec": "aac",
+   "sr": 44100,
+   "channels": 2
+  },
+  "bhajare__Kalyani.m4a": {
+   "readable": true,
+   "duration_s": 60.0,
+   "bit_rate": 129819,
+   "codec": "aac",
+   "sr": 44100,
+   "channels": 2
+  },
+  "brOchevarevarura__Khamas.m4a": {
+   "readable": true,
+   "duration_s": 60.0,
+   "bit_rate": 131097,
+   "codec": "aac",
+   "sr": 44100,
+   "channels": 2
+  },
+  "chakkani rAja__Kharaharapriya.m4a": {
+   "readable": true,
+   "duration_s": 60.0,
+   "bit_rate": 129839,
+   "codec": "aac",
+   "sr": 44100,
+   "channels": 2
+  },
+  "entara__Harikambhoji.m4a": {
+   "readable": true,
+   "duration_s": 60.0,
+   "bit_rate": 130836,
+   "codec": "aac",
+   "sr": 44100,
+   "channels": 2
+  },
+  "himAdrisutE__Kalyani.m4a": {
+   "readable": true,
+   "duration_s": 60.0,
+   "bit_rate": 130018,
+   "codec": "aac",
+   "sr": 44100,
+   "channels": 2
+  },
+  "nagumomu ganaleni__Saveri.m4a": {
+   "readable": true,
+   "duration_s": 60.0,
+   "bit_rate": 130521,
+   "codec": "aac",
+   "sr": 44100,
+   "channels": 2
+  },
+  "nannu pAlimpa__Mōhanaṁ.mp3": {
+   "readable": true,
+   "duration_s": 83.928,
+   "bit_rate": 320000,
+   "codec": "mp3",
+   "sr": 48000,
+   "channels": 2
+  },
+  "nidhi chAla sukhamA__Kalyani.m4a": {
+   "readable": true,
+   "duration_s": 60.0,
+   "bit_rate": 129927,
+   "codec": "aac",
+   "sr": 44100,
+   "channels": 2
+  },
+  "rAma nannu brOvara__Harikambhoji.m4a": {
+   "readable": true,
+   "duration_s": 60.0,
+   "bit_rate": 129265,
+   "codec": "aac",
+   "sr": 44100,
+   "channels": 2
+  },
+  "rAma nee__Karaharapriya.m4a": {
+   "readable": true,
+   "duration_s": 60.0,
+   "bit_rate": 129820,
+   "codec": "aac",
+   "sr": 44100,
+   "channels": 2
+  },
+  "raghuvara__Kamavardani.m4a": {
+   "readable": true,
+   "duration_s": 60.0,
+   "bit_rate": 129679,
+   "codec": "aac",
+   "sr": 44100,
+   "channels": 2
+  },
+  "sarOja daLa nEtri__Śankarābharaṇaṁ.mp3": {
+   "readable": true,
+   "duration_s": 78.864,
+   "bit_rate": 320000,
+   "codec": "mp3",
+   "sr": 48000,
+   "channels": 2
+  },
+  "sarasijanAba murArE__Tōḍi.mp3": {
+   "readable": true,
+   "duration_s": 43.2,
+   "bit_rate": 320000,
+   "codec": "mp3",
+   "sr": 48000,
+   "channels": 2
+  },
+  "siddhi vinAyakam__Shanmukhapriya.m4a": {
+   "readable": true,
+   "duration_s": 60.0,
+   "bit_rate": 129322,
+   "codec": "aac",
+   "sr": 44100,
+   "channels": 2
+  },
+  "swAminatha__Nata.m4a": {
+   "readable": true,
+   "duration_s": 60.0,
+   "bit_rate": 130689,
+   "codec": "aac",
+   "sr": 44100,
+   "channels": 2
+  },
+  "vAtApi gaNapathim__Hamsadhvāni.mp3": {
+   "readable": true,
+   "duration_s": 52.776,
+   "bit_rate": 320000,
+   "codec": "mp3",
+   "sr": 48000,
+   "channels": 2
+  },
+  "yArO ivar yArO__Bhairavi.m4a": {
+   "readable": true,
+   "duration_s": 60.0,
+   "bit_rate": 140965,
+   "codec": "h264",
+   "sr": 0,
+   "channels": 0
+  },
+  "yEnATi mOmu palamu__Bhairavi.m4a": {
+   "readable": true,
+   "duration_s": 60.0,
+   "bit_rate": 129987,
+   "codec": "aac",
+   "sr": 44100,
+   "channels": 2
+  }
+ },
+ "window_plan": {
+  "Amba Kamakshi__Bhairavi.mp3": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 70.704
+   },
+   {
+    "kind": "w60",
+    "start_s": 8.284426,
+    "dur_s": 60.0,
+    "offset_frac": 0.7739560485559633
+   }
+  ],
+  "Enu Dhanyalo Lakumi__Todi.mp3": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 65.688
+   },
+   {
+    "kind": "w60",
+    "start_s": 3.966629,
+    "dur_s": 60.0,
+    "offset_frac": 0.6973680290593639
+   }
+  ],
+  "Jagadanandakaraka__Nata.m4a": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 60.0
+   }
+  ],
+  "Kaddanuvariki__Todi.mp3": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 84.816
+   },
+   {
+    "kind": "w60",
+    "start_s": 11.176777,
+    "dur_s": 60.0,
+    "offset_frac": 0.45038593789556713
+   }
+  ],
+  "Koluvamaregada kodandapani__Tōḍi.mp3": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 67.248
+   },
+   {
+    "kind": "w60",
+    "start_s": 4.666734,
+    "dur_s": 60.0,
+    "offset_frac": 0.6438651200806645
+   }
+  ],
+  "Maithreem Bhajata__Kalyani__OOC.mp3": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 84.312
+   },
+   {
+    "kind": "w60",
+    "start_s": 5.524628,
+    "dur_s": 60.0,
+    "offset_frac": 0.2272387217847769
+   }
+  ],
+  "Ninnukori Yunnanura__Mohanam.m4a": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 60.0
+   }
+  ],
+  "Pillangoviya__Mohanam.mp3": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 55.968
+   }
+  ],
+  "Ranga Baro__Sindhu Bhairavi.mp3": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 62.64
+   },
+   {
+    "kind": "w60",
+    "start_s": 2.054932,
+    "dur_s": 60.0,
+    "offset_frac": 0.7783834970737619
+   }
+  ],
+  "Thaye Yashoda__Todi__OOC.mp3": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 57.888
+   }
+  ],
+  "bhajarE bhaja mAnasa__Kanada.m4a": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 60.0
+   }
+  ],
+  "bhajare__Kalyani.m4a": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 60.0
+   }
+  ],
+  "brOchevarevarura__Khamas.m4a": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 60.0
+   }
+  ],
+  "chakkani rAja__Kharaharapriya.m4a": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 60.0
+   }
+  ],
+  "entara__Harikambhoji.m4a": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 60.0
+   }
+  ],
+  "himAdrisutE__Kalyani.m4a": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 60.0
+   }
+  ],
+  "nagumomu ganaleni__Saveri.m4a": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 60.0
+   }
+  ],
+  "nannu pAlimpa__Mōhanaṁ.mp3": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 83.928
+   },
+   {
+    "kind": "w60",
+    "start_s": 0.176164,
+    "dur_s": 60.0,
+    "offset_frac": 0.007362269751005512
+   }
+  ],
+  "nidhi chAla sukhamA__Kalyani.m4a": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 60.0
+   }
+  ],
+  "rAma nannu brOvara__Harikambhoji.m4a": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 60.0
+   }
+  ],
+  "rAma nee__Karaharapriya.m4a": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 60.0
+   }
+  ],
+  "raghuvara__Kamavardani.m4a": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 60.0
+   }
+  ],
+  "sarOja daLa nEtri__Śankarābharaṇaṁ.mp3": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 78.864
+   },
+   {
+    "kind": "w60",
+    "start_s": 10.548884,
+    "dur_s": 60.0,
+    "offset_frac": 0.5592071607454135
+   }
+  ],
+  "sarasijanAba murArE__Tōḍi.mp3": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 43.2
+   }
+  ],
+  "siddhi vinAyakam__Shanmukhapriya.m4a": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 60.0
+   }
+  ],
+  "swAminatha__Nata.m4a": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 60.0
+   }
+  ],
+  "vAtApi gaNapathim__Hamsadhvāni.mp3": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 52.776
+   }
+  ],
+  "yArO ivar yArO__Bhairavi.m4a": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 60.0
+   }
+  ],
+  "yEnATi mOmu palamu__Bhairavi.m4a": [
+   {
+    "kind": "whole",
+    "start_s": 0.0,
+    "dur_s": 60.0
+   }
+  ]
+ },
+ "window_s": 60.0,
+ "seed": 42,
+ "k_windows": 3,
+ "offset_index": 0,
+ "hash_disjointness": {
+  "n_train_files": 2229,
+  "n_hashed": 2229,
+  "size_collisions": [],
+  "sha256_collisions": []
+ },
+ "identity_disjointness": [
+  {
+   "file": "Amba Kamakshi__Bhairavi.mp3",
+   "title": "Amba Kamakshi",
+   "raga_canonical": "Bhairavi",
+   "fetch_source": null,
+   "n_work_matches": 0,
+   "work_matches": []
+  },
+  {
+   "file": "Enu Dhanyalo Lakumi__Todi.mp3",
+   "title": "Enu Dhanyalo Lakumi",
+   "raga_canonical": "Tōḍi",
+   "fetch_source": null,
+   "n_work_matches": 0,
+   "work_matches": []
+  },
+  {
+   "file": "Jagadanandakaraka__Nata.m4a",
+   "title": "Jagadanandakaraka",
+   "raga_canonical": "Nāṭa",
+   "fetch_source": {
+    "video_title": "Semmangudi Srinivasa Iyer - jagadAnandakArakA jayajAnaki - nATa - tyAgarAja",
+    "url": "https://www.youtube.com/watch?v=lRHhI8g8RVA",
+    "window": "565s @197s",
+    "raw": "Jagadanandakaraka__Nata.m4a\tSemmangudi Srinivasa Iyer - jagadAnandakArakA jayajAnaki - nATa - tyAgarAja\thttps://www.youtube.com/watch?v=lRHhI8g8RVA\t565s @197s"
+   },
+   "n_work_matches": 1,
+   "work_matches": [
+    {
+     "train_stem": "archive__Nāṭa__jagadAnandakArakA",
+     "archive_identifier": "43-3ss",
+     "raga_dir": "Nāṭa",
+     "artist": null,
+     "audio_path": "data/concert_audio/Nāṭa/jagadAnandakArakA.mp3",
+     "audio_size": 9205146,
+     "same_raga": true
+    }
+   ]
+  },
+  {
+   "file": "Kaddanuvariki__Todi.mp3",
+   "title": "Kaddanuvariki",
+   "raga_canonical": "Tōḍi",
+   "fetch_source": null,
+   "n_work_matches": 0,
+   "work_matches": []
+  },
+  {
+   "file": "Koluvamaregada kodandapani__Tōḍi.mp3",
+   "title": "Koluvamaregada kodandapani",
+   "raga_canonical": "Tōḍi",
+   "fetch_source": null,
+   "n_work_matches": 0,
+   "work_matches": []
+  },
+  {
+   "file": "Maithreem Bhajata__Kalyani__OOC.mp3",
+   "title": "Maithreem Bhajata",
+   "raga_canonical": "Kalyāṇi",
+   "fetch_source": null,
+   "n_work_matches": 0,
+   "work_matches": []
+  },
+  {
+   "file": "Ninnukori Yunnanura__Mohanam.m4a",
+   "title": "Ninnukori Yunnanura",
+   "raga_canonical": "Mōhanaṁ",
+   "fetch_source": {
+    "video_title": "Ninnu Kori Varnam in Mohana Ragam",
+    "url": "https://www.youtube.com/watch?v=pHO_AO6X_JM",
+    "window": "313s @109s",
+    "raw": "Ninnukori Yunnanura__Mohanam.m4a\tNinnu Kori Varnam in Mohana Ragam\thttps://www.youtube.com/watch?v=pHO_AO6X_JM\t313s @109s"
+   },
+   "n_work_matches": 0,
+   "work_matches": []
+  },
+  {
+   "file": "Pillangoviya__Mohanam.mp3",
+   "title": "Pillangoviya",
+   "raga_canonical": "Mōhanaṁ",
+   "fetch_source": null,
+   "n_work_matches": 0,
+   "work_matches": []
+  },
+  {
+   "file": "Ranga Baro__Sindhu Bhairavi.mp3",
+   "title": "Ranga Baro",
+   "raga_canonical": "Sindhubhairavi",
+   "fetch_source": null,
+   "n_work_matches": 0,
+   "work_matches": []
+  },
+  {
+   "file": "Thaye Yashoda__Todi__OOC.mp3",
+   "title": "Thaye Yashoda",
+   "raga_canonical": "Tōḍi",
+   "fetch_source": null,
+   "n_work_matches": 0,
+   "work_matches": []
+  },
+  {
+   "file": "bhajarE bhaja mAnasa__Kanada.m4a",
+   "title": "bhajarE bhaja mAnasa",
+   "raga_canonical": "Kānaḍa",
+   "fetch_source": {
+    "video_title": "MD Ramanathan - bhajarE bhaja mAnasa - kannaDa - tyAgarAja",
+    "url": "https://www.youtube.com/watch?v=zbY3OFKjYWQ",
+    "window": "632s @221s",
+    "raw": "bhajarE bhaja mAnasa__Kanada.m4a\tMD Ramanathan - bhajarE bhaja mAnasa - kannaDa - tyAgarAja\thttps://www.youtube.com/watch?v=zbY3OFKjYWQ\t632s @221s"
+   },
+   "n_work_matches": 0,
+   "work_matches": []
+  },
+  {
+   "file": "bhajare__Kalyani.m4a",
+   "title": "bhajare",
+   "raga_canonical": "Kalyāṇi",
+   "fetch_source": {
+    "video_title": "Carnatic music vocal- Bhajare Chitta- Kalyani ragam- Mishrachappu",
+    "url": "https://www.youtube.com/watch?v=ad6UhYwTXXQ",
+    "window": "394s @137s",
+    "raw": "bhajare__Kalyani.m4a\tCarnatic music vocal- Bhajare Chitta- Kalyani ragam- Mishrachappu\thttps://www.youtube.com/watch?v=ad6UhYwTXXQ\t394s @137s"
+   },
+   "n_work_matches": 0,
+   "work_matches": []
+  },
+  {
+   "file": "brOchevarevarura__Khamas.m4a",
+   "title": "brOchevarevarura",
+   "raga_canonical": "Kamās",
+   "fetch_source": {
+    "video_title": "బ్రోచేవారెవరురా (Brochevarevarura) - Khamas",
+    "url": "https://www.youtube.com/watch?v=lFqbACkgpjo",
+    "window": "2270s @794s",
+    "raw": "brOchevarevarura__Khamas.m4a\tబ్రోచేవారెవరురా (Brochevarevarura) - Khamas\thttps://www.youtube.com/watch?v=lFqbACkgpjo\t2270s @794s"
+   },
+   "n_work_matches": 1,
+   "work_matches": [
+    {
+     "train_stem": "archive__Kamās__brOchevArevarurA",
+     "archive_identifier": "78RPM-M-S-Subbalakshmi",
+     "raga_dir": "Kamās",
+     "artist": "78 RPM Recordings – Part 2",
+     "audio_path": "data/concert_audio/Kamās/brOchevArevarurA.mp3",
+     "audio_size": 4703704,
+     "same_raga": true
+    }
+   ]
+  },
+  {
+   "file": "chakkani rAja__Kharaharapriya.m4a",
+   "title": "chakkani rAja",
+   "raga_canonical": "Karaharapriya",
+   "fetch_source": {
+    "video_title": "Chakkani Raja",
+    "url": "https://www.youtube.com/watch?v=ZvzmrIECBl8",
+    "window": "Kharaharapriya s @20s",
+    "raw": "chakkani rAja__Kharaharapriya.m4a\tChakkani Raja \t Mathangi Sathyamoorthi|1682|https://www.youtube.com/watch?v=ZvzmrIECBl8\t Kharaharapriya s @20s"
+   },
+   "n_work_matches": 2,
+   "work_matches": [
+    {
+     "train_stem": "archive__Karaharapriya__chakkani rAja",
+     "archive_identifier": "39-ab",
+     "raga_dir": "Karaharapriya",
+     "artist": "Alathur Brothers",
+     "audio_path": "data/concert_audio/Karaharapriya/chakkani rAja.mp3",
+     "audio_size": 23165234,
+     "same_raga": true
+    },
+    {
+     "train_stem": "archive__Karaharapriya__chakkani-rAja",
+     "archive_identifier": "assorted-artists-78rpm",
+     "raga_dir": "Karaharapriya",
+     "artist": "78 RPM Recordings – Part 3",
+     "audio_path": "data/concert_audio/Karaharapriya/chakkani-rAja.mp3",
+     "audio_size": 3922686,
+     "same_raga": true
+    }
+   ]
+  },
+  {
+   "file": "entara__Harikambhoji.m4a",
+   "title": "entara",
+   "raga_canonical": "Harikāmbhōji",
+   "fetch_source": {
+    "video_title": "Enthara Neethana - Harikambhoji - Aadi",
+    "url": "https://www.youtube.com/watch?v=WUkViRiTB_o",
+    "window": "388s @135s",
+    "raw": "entara__Harikambhoji.m4a\tEnthara Neethana - Harikambhoji - Aadi\thttps://www.youtube.com/watch?v=WUkViRiTB_o\t388s @135s"
+   },
+   "n_work_matches": 0,
+   "work_matches": []
+  },
+  {
+   "file": "himAdrisutE__Kalyani.m4a",
+   "title": "himAdrisutE",
+   "raga_canonical": "Kalyāṇi",
+   "fetch_source": {
+    "video_title": "Himaadri Suthe",
+    "url": "https://www.youtube.com/watch?v=rO9gXgJ721U",
+    "window": "Bombay Sjayashri s @20s",
+    "raw": "himAdrisutE__Kalyani.m4a\tHimaadri Suthe \t Ragam Kalyani | Syama Sastry | Carnatic Music | Carnatic Songs|1287|https://www.youtube.com/watch?v=rO9gXgJ721U\t Bombay Sjayashri s @20s"
+   },
+   "n_work_matches": 0,
+   "work_matches": []
+  },
+  {
+   "file": "nagumomu ganaleni__Saveri.m4a",
+   "title": "nagumomu ganaleni",
+   "raga_canonical": "Sāvēri",
+   "fetch_source": {
+    "video_title": "Nagumomu Ganaleni",
+    "url": "https://www.youtube.com/watch?v=j-1FPDdY8sU",
+    "window": "Musiri Subramania Iyer s @20s",
+    "raw": "nagumomu ganaleni__Saveri.m4a\tNagumomu Ganaleni \t Tyagaraja | Carnatic Classical Music|405|https://www.youtube.com/watch?v=j-1FPDdY8sU\t Musiri Subramania Iyer s @20s"
+   },
+   "n_work_matches": 1,
+   "work_matches": [
+    {
+     "train_stem": "archive__Sāvēri__nagumOmu ganalEni",
+     "archive_identifier": "mbk-msg-tvg-concert",
+     "raga_dir": "Sāvēri",
+     "artist": "M Balamuralikrishna",
+     "audio_path": "data/concert_audio/Sāvēri/nagumOmu ganalEni.mp3",
+     "audio_size": 61299887,
+     "same_raga": true
+    }
+   ]
+  },
+  {
+   "file": "nannu pAlimpa__Mōhanaṁ.mp3",
+   "title": "nannu pAlimpa",
+   "raga_canonical": "Mōhanaṁ",
+   "fetch_source": null,
+   "n_work_matches": 2,
+   "work_matches": [
+    {
+     "train_stem": "archive__Mōhanaṁ__nannu pAlimpa",
+     "archive_identifier": "Bidaram-Krishnappa",
+     "raga_dir": "Mōhanaṁ",
+     "artist": "78 RPM Recordings – Part 3",
+     "audio_path": "data/concert_audio/Mōhanaṁ/nannu pAlimpa.mp3",
+     "audio_size": 2060280,
+     "same_raga": true
+    },
+    {
+     "train_stem": "archive__Mōhanaṁ__nannupAlimpa",
+     "archive_identifier": "tsk-whistle",
+     "raga_dir": "Mōhanaṁ",
+     "artist": null,
+     "audio_path": "data/concert_audio/Mōhanaṁ/nannupAlimpa.mp3",
+     "audio_size": 14245436,
+     "same_raga": true
+    }
+   ]
+  },
+  {
+   "file": "nidhi chAla sukhamA__Kalyani.m4a",
+   "title": "nidhi chAla sukhamA",
+   "raga_canonical": "Kalyāṇi",
+   "fetch_source": {
+    "video_title": "Nedunuri Krishnamurthy vocal Nidhichala Sukhama Kalyani misrachapu Thyagarajar",
+    "url": "https://www.youtube.com/watch?v=staBlOuHEt0",
+    "window": "1041s @364s",
+    "raw": "nidhi chAla sukhamA__Kalyani.m4a\tNedunuri Krishnamurthy vocal Nidhichala Sukhama Kalyani misrachapu Thyagarajar\thttps://www.youtube.com/watch?v=staBlOuHEt0\t1041s @364s"
+   },
+   "n_work_matches": 1,
+   "work_matches": [
+    {
+     "train_stem": "archive__Kalyāṇi__nidhi chAla sukhamA",
+     "archive_identifier": "kvn-229",
+     "raga_dir": "Kalyāṇi",
+     "artist": "K V Narayanaswamy",
+     "audio_path": "data/concert_audio/Kalyāṇi/nidhi chAla sukhamA.mp3",
+     "audio_size": 20497667,
+     "same_raga": true
+    }
+   ]
+  },
+  {
+   "file": "rAma nannu brOvara__Harikambhoji.m4a",
+   "title": "rAma nannu brOvara",
+   "raga_canonical": "Harikāmbhōji",
+   "fetch_source": {
+    "video_title": "Mandolin U. Shrinivas & U. Rajesh - Rama Nannu Brovara",
+    "url": "https://www.youtube.com/watch?v=QoNfl2abIsI",
+    "window": "310s @108s",
+    "raw": "rAma nannu brOvara__Harikambhoji.m4a\tMandolin U. Shrinivas & U. Rajesh - Rama Nannu Brovara\thttps://www.youtube.com/watch?v=QoNfl2abIsI\t310s @108s"
+   },
+   "n_work_matches": 1,
+   "work_matches": [
+    {
+     "train_stem": "archive__Harikāmbhōji__rAma nannu brOvara",
+     "archive_identifier": "78RPMDKPattammal",
+     "raga_dir": "Harikāmbhōji",
+     "artist": "78 RPM Recordings – Part 2",
+     "audio_path": "data/concert_audio/Harikāmbhōji/rAma nannu brOvara.mp3",
+     "audio_size": 4086806,
+     "same_raga": true
+    }
+   ]
+  },
+  {
+   "file": "rAma nee__Karaharapriya.m4a",
+   "title": "rAma nee",
+   "raga_canonical": "Karaharapriya",
+   "fetch_source": {
+    "video_title": "Rama Nee Samanamevaru / Kharaharapriya / Rupakam / Thyagaraja / M L Vasanthakumari",
+    "url": "https://www.youtube.com/watch?v=Tqv19g98LXI",
+    "window": "2614s @914s",
+    "raw": "rAma nee__Karaharapriya.m4a\tRama Nee Samanamevaru / Kharaharapriya / Rupakam / Thyagaraja / M L Vasanthakumari\thttps://www.youtube.com/watch?v=Tqv19g98LXI\t2614s @914s"
+   },
+   "n_work_matches": 1,
+   "work_matches": [
+    {
+     "train_stem": "archive__Karaharapriya__rAma nee",
+     "archive_identifier": "78RPM-S-V-Subbiah-Bhagavathar",
+     "raga_dir": "Karaharapriya",
+     "artist": "78 RPM Recordings – Part 2",
+     "audio_path": "data/concert_audio/Karaharapriya/rAma nee.mp3",
+     "audio_size": 3359850,
+     "same_raga": true
+    }
+   ]
+  },
+  {
+   "file": "raghuvara__Kamavardani.m4a",
+   "title": "raghuvara",
+   "raga_canonical": "Kāmavardani",
+   "fetch_source": {
+    "video_title": "K.V.Narayanaswamy- Raghuvara Nannu -Pantuvarali- Adi- Thyagaraja",
+    "url": "https://www.youtube.com/watch?v=16dIDxk9tbE",
+    "window": "720s @252s",
+    "raw": "raghuvara__Kamavardani.m4a\tK.V.Narayanaswamy- Raghuvara Nannu -Pantuvarali- Adi- Thyagaraja\thttps://www.youtube.com/watch?v=16dIDxk9tbE\t720s @252s"
+   },
+   "n_work_matches": 1,
+   "work_matches": [
+    {
+     "train_stem": "archive__Kāmavardani__raghuvara",
+     "archive_identifier": "19-ab",
+     "raga_dir": "Kāmavardani",
+     "artist": "Alathur Brothers",
+     "audio_path": "data/concert_audio/Kāmavardani/raghuvara.mp3",
+     "audio_size": 6166153,
+     "same_raga": true
+    }
+   ]
+  },
+  {
+   "file": "sarOja daLa nEtri__Śankarābharaṇaṁ.mp3",
+   "title": "sarOja daLa nEtri",
+   "raga_canonical": "Śankarābharaṇaṁ",
+   "fetch_source": null,
+   "n_work_matches": 0,
+   "work_matches": []
+  },
+  {
+   "file": "sarasijanAba murArE__Tōḍi.mp3",
+   "title": "sarasijanAba murArE",
+   "raga_canonical": "Tōḍi",
+   "fetch_source": null,
+   "n_work_matches": 0,
+   "work_matches": []
+  },
+  {
+   "file": "siddhi vinAyakam__Shanmukhapriya.m4a",
+   "title": "siddhi vinAyakam",
+   "raga_canonical": "Ṣanmukhapriya",
+   "fetch_source": {
+    "video_title": "Maharajapuram Santhanam- Siddhi Vinayakam Anisham- Shanmukhapriya- Rupakam- Dikshitar",
+    "url": "https://www.youtube.com/watch?v=_SJCsV-1O2s",
+    "window": "350s @122s",
+    "raw": "siddhi vinAyakam__Shanmukhapriya.m4a\tMaharajapuram Santhanam- Siddhi Vinayakam Anisham- Shanmukhapriya- Rupakam- Dikshitar\thttps://www.youtube.com/watch?v=_SJCsV-1O2s\t350s @122s"
+   },
+   "n_work_matches": 1,
+   "work_matches": [
+    {
+     "train_stem": "archive__Ṣanmukhapriya__siddhi vinAyakam",
+     "archive_identifier": "1-MR-VT-ManakkalSriram",
+     "raga_dir": "Ṣanmukhapriya",
+     "artist": "Manakkal Rangarajan",
+     "audio_path": "data/concert_audio/Ṣanmukhapriya/siddhi vinAyakam.mp3",
+     "audio_size": 7591954,
+     "same_raga": true
+    }
+   ]
+  },
+  {
+   "file": "swAminatha__Nata.m4a",
+   "title": "swAminatha",
+   "raga_canonical": "Nāṭa",
+   "fetch_source": {
+    "video_title": "Swaminatha Paripalaya",
+    "url": "https://www.youtube.com/watch?v=CEt-viITlws",
+    "window": "Natta s @20s",
+    "raw": "swAminatha__Nata.m4a\tSwaminatha Paripalaya \t Dr N J Nandini | Vijayadasami Music Concert 2023|813|https://www.youtube.com/watch?v=CEt-viITlws\t Natta s @20s"
+   },
+   "n_work_matches": 0,
+   "work_matches": []
+  },
+  {
+   "file": "vAtApi gaNapathim__Hamsadhvāni.mp3",
+   "title": "vAtApi gaNapathim",
+   "raga_canonical": "Hamsadhvāni",
+   "fetch_source": null,
+   "n_work_matches": 0,
+   "work_matches": []
+  },
+  {
+   "file": "yArO ivar yArO__Bhairavi.m4a",
+   "title": "yArO ivar yArO",
+   "raga_canonical": "Bhairavi",
+   "fetch_source": {
+    "video_title": "MS Subbulakshmi- Yaro Ivar Yaro- Bhairavi- Adi- Arunachala Kavirayar",
+    "url": "https://www.youtube.com/watch?v=RWIZJQ9QT6U",
+    "window": "1388s @485s",
+    "raw": "yArO ivar yArO__Bhairavi.m4a\tMS Subbulakshmi- Yaro Ivar Yaro- Bhairavi- Adi- Arunachala Kavirayar\thttps://www.youtube.com/watch?v=RWIZJQ9QT6U\t1388s @485s"
+   },
+   "n_work_matches": 0,
+   "work_matches": []
+  },
+  {
+   "file": "yEnATi mOmu palamu__Bhairavi.m4a",
+   "title": "yEnATi mOmu palamu",
+   "raga_canonical": "Bhairavi",
+   "fetch_source": {
+    "video_title": "Enati nomu phalamo- Bhairavi- Thyagaraja Swamy- by Sarvepalli Sreya- 2019 Concert",
+    "url": "https://www.youtube.com/watch?v=8Ub9i6OXirQ",
+    "window": "2249s @787s",
+    "raw": "yEnATi mOmu palamu__Bhairavi.m4a\tEnati nomu phalamo- Bhairavi- Thyagaraja Swamy- by Sarvepalli Sreya- 2019 Concert\thttps://www.youtube.com/watch?v=8Ub9i6OXirQ\t2249s @787s"
+   },
+   "n_work_matches": 0,
+   "work_matches": []
+  }
+ ]
+}

@@ -1,0 +1,45 @@
+29 clips, 37 (clip, window) rows, arms ('mix', 'mix_voiceband', 'demucs')
+  [  1/37] Amba_Kamakshi__Bhairavi__whole  70.7s  tonic=131.0  mix=scored mix_voiceband=scored demucs=scored  hist=scored  63.0s [elapsed 63s]
+  [  2/37] Amba_Kamakshi__Bhairavi__w60  60.0s  tonic=131.0  mix=scored mix_voiceband=scored demucs=scored  hist=scored  53.6s [elapsed 117s]
+  [  3/37] Enu_Dhanyalo_Lakumi__Todi__whole  65.7s  tonic=197.6  mix=scored mix_voiceband=scored demucs=scored  hist=scored  58.1s [elapsed 175s]
+  [  4/37] Enu_Dhanyalo_Lakumi__Todi__w60  60.0s  tonic=197.6  mix=scored mix_voiceband=scored demucs=scored  hist=scored  51.8s [elapsed 227s]
+/Users/shyamravidath/carnatify/scripts/raga_wild_features.py:149: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = _lb.load(str(path), sr=sr, mono=True, offset=start_s, duration=dur_s)
+/Users/shyamravidath/carnatify/venv_train/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+  [  5/37] Jagadanandakaraka__Nata__whole  60.0s  tonic=125.1  mix=scored mix_voiceband=scored demucs=scored  hist=scored  52.1s [elapsed 279s]
+  [  6/37] Kaddanuvariki__Todi__whole  84.8s  tonic=147.9  mix=scored mix_voiceband=scored demucs=scored  hist=scored  72.7s [elapsed 351s]
+  [  7/37] Kaddanuvariki__Todi__w60  60.0s  tonic=147.1  mix=scored mix_voiceband=scored demucs=scored  hist=scored  54.8s [elapsed 406s]
+  [  8/37] Koluvamaregada_kodandapani__To_d_i__whole  67.2s  tonic=147.1  mix=scored mix_voiceband=scored demucs=scored  hist=scored  58.8s [elapsed 465s]
+  [  9/37] Koluvamaregada_kodandapani__To_d_i__w60  60.0s  tonic=147.1  mix=scored mix_voiceband=scored demucs=scored  hist=scored  53.9s [elapsed 519s]
+  [ 10/37] Maithreem_Bhajata__Kalyani__OOC__whole  84.3s  tonic=138.8  mix=scored mix_voiceband=scored demucs=scored  hist=scored  72.0s [elapsed 591s]
+  [ 11/37] Maithreem_Bhajata__Kalyani__OOC__w60  60.0s  tonic=138.8  mix=scored mix_voiceband=scored demucs=scored  hist=scored  53.3s [elapsed 644s]
+  [ 12/37] Ninnukori_Yunnanura__Mohanam__whole  60.0s  tonic=268.5  mix=scored mix_voiceband=scored demucs=scored  hist=scored  59.1s [elapsed 703s]
+  [ 13/37] Pillangoviya__Mohanam__whole  56.0s  tonic=110.1  mix=scored mix_voiceband=scored demucs=scored  hist=scored  54.4s [elapsed 758s]
+  [ 14/37] Ranga_Baro__Sindhu_Bhairavi__whole  62.6s  tonic=171.0  mix=scored mix_voiceband=scored demucs=scored  hist=scored  58.6s [elapsed 816s]
+  [ 15/37] Ranga_Baro__Sindhu_Bhairavi__w60  60.0s  tonic=171.0  mix=scored mix_voiceband=scored demucs=scored  hist=scored  58.6s [elapsed 875s]
+  [ 16/37] Thaye_Yashoda__Todi__OOC__whole  57.9s  tonic=104.5  mix=scored mix_voiceband=scored demucs=scored  hist=scored  55.3s [elapsed 930s]
+  [ 17/37] bhajarE_bhaja_mAnasa__Kanada__whole  60.0s  tonic=114.7  mix=scored mix_voiceband=scored demucs=scored  hist=scored  54.3s [elapsed 984s]
+  [ 18/37] bhajare__Kalyani__whole  60.0s  tonic=129.5  mix=scored mix_voiceband=scored demucs=scored  hist=scored  57.2s [elapsed 1042s]
+  [ 19/37] brOchevarevarura__Khamas__whole  60.0s  tonic=147.1  mix=scored mix_voiceband=scored demucs=scored  hist=scored  56.0s [elapsed 1098s]
+  [ 20/37] chakkani_rAja__Kharaharapriya__whole  60.0s  tonic=184.3  mix=scored mix_voiceband=scored demucs=scored  hist=scored  54.1s [elapsed 1152s]
+  [ 21/37] entara__Harikambhoji__whole  60.0s  tonic=171.9  mix=scored mix_voiceband=scored demucs=scored  hist=scored  53.4s [elapsed 1205s]
+  [ 22/37] himAdrisutE__Kalyani__whole  60.0s  tonic=106.4  mix=scored mix_voiceband=scored demucs=scored  hist=scored  53.6s [elapsed 1259s]
+  [ 23/37] nagumomu_ganaleni__Saveri__whole  60.0s  tonic=179.0  mix=scored mix_voiceband=scored demucs=scored  hist=scored  53.2s [elapsed 1312s]
+  [ 24/37] nannu_pAlimpa__Mo_hanam___whole  83.9s  tonic=147.1  mix=scored mix_voiceband=scored demucs=scored  hist=scored  73.1s [elapsed 1385s]
+  [ 25/37] nannu_pAlimpa__Mo_hanam___w60  60.0s  tonic=147.1  mix=scored mix_voiceband=scored demucs=scored  hist=scored  53.9s [elapsed 1439s]
+  [ 26/37] nidhi_chAla_sukhamA__Kalyani__whole  60.0s  tonic=131.0  mix=scored mix_voiceband=scored demucs=scored  hist=scored  54.3s [elapsed 1493s]
+  [ 27/37] rAma_nannu_brOvara__Harikambhoji__whole  60.0s  tonic=132.5  mix=scored mix_voiceband=scored demucs=scored  hist=scored  55.1s [elapsed 1548s]
+  [ 28/37] rAma_nee__Karaharapriya__whole  60.0s  tonic=132.5  mix=scored mix_voiceband=scored demucs=scored  hist=scored  52.0s [elapsed 1600s]
+  [ 29/37] raghuvara__Kamavardani__whole  60.0s  tonic=141.2  mix=scored mix_voiceband=scored demucs=scored  hist=scored  57.4s [elapsed 1658s]
+  [ 30/37] sarOja_daLa_nEtri__S_ankara_bharan_am___whole  78.9s  tonic=196.4  mix=scored mix_voiceband=scored demucs=scored  hist=scored  71.6s [elapsed 1729s]
+  [ 31/37] sarOja_daLa_nEtri__S_ankara_bharan_am___w60  60.0s  tonic=196.4  mix=scored mix_voiceband=scored demucs=scored  hist=scored  54.9s [elapsed 1784s]
+  [ 32/37] sarasijanAba_murArE__To_d_i__whole: cached
+  [ 33/37] siddhi_vinAyakam__Shanmukhapriya__whole  60.0s  tonic=131.0  mix=scored mix_voiceband=scored demucs=scored  hist=scored  53.4s [elapsed 1838s]
+  [ 34/37] swAminatha__Nata__whole  60.0s  tonic=103.9  mix=scored mix_voiceband=scored demucs=scored  hist=scored  54.9s [elapsed 1892s]
+  [ 35/37] vAtApi_gaNapathim__Hamsadhva_ni__whole  52.8s  tonic=165.1  mix=scored mix_voiceband=scored demucs=scored  hist=scored  50.3s [elapsed 1943s]
+  [ 36/37] yArO_ivar_yArO__Bhairavi__whole  60.0s  tonic=189.7  mix=scored mix_voiceband=scored demucs=scored  hist=scored  57.0s [elapsed 2000s]
+  [ 37/37] yEnATi_mOmu_palamu__Bhairavi__whole  60.0s  tonic=208.1  mix=scored mix_voiceband=scored demucs=scored  hist=scored  56.2s [elapsed 2056s]
+done in 2056s; rows in /Users/shyamravidath/carnatify/data/raga_wild/rows

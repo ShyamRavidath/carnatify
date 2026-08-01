@@ -107,3 +107,7 @@ data/duration_probe/**/*.wav
 /data/raga_domain/cell_*.npz
 /data/raga_domain/preds_*.json
 /data/raga_domain/tmp/
+
+# Wild raga measurement: Demucs scratch dir only. The 2 MB feature rows in
+# data/raga_wild/rows/ ARE committed so the scorer re-runs without rebuilding.
+/data/raga_wild/tmp/

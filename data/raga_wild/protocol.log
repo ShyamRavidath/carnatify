@@ -1,0 +1,134 @@
+FROZEN_CLIPS.json: n=29, 29 rows, 18 tier ragas
+
+== GATE 1: sha256 of every frozen clip
+  OK  Amba Kamakshi__Bhairavi.mp3
+  OK  Enu Dhanyalo Lakumi__Todi.mp3
+  OK  Jagadanandakaraka__Nata.m4a
+  OK  Kaddanuvariki__Todi.mp3
+  OK  Koluvamaregada kodandapani__Tōḍi.mp3
+  OK  Maithreem Bhajata__Kalyani__OOC.mp3
+  OK  Ninnukori Yunnanura__Mohanam.m4a
+  OK  Pillangoviya__Mohanam.mp3
+  OK  Ranga Baro__Sindhu Bhairavi.mp3
+  OK  Thaye Yashoda__Todi__OOC.mp3
+  OK  bhajarE bhaja mAnasa__Kanada.m4a
+  OK  bhajare__Kalyani.m4a
+  OK  brOchevarevarura__Khamas.m4a
+  OK  chakkani rAja__Kharaharapriya.m4a
+  OK  entara__Harikambhoji.m4a
+  OK  himAdrisutE__Kalyani.m4a
+  OK  nagumomu ganaleni__Saveri.m4a
+  OK  nannu pAlimpa__Mōhanaṁ.mp3
+  OK  nidhi chAla sukhamA__Kalyani.m4a
+  OK  rAma nannu brOvara__Harikambhoji.m4a
+  OK  rAma nee__Karaharapriya.m4a
+  OK  raghuvara__Kamavardani.m4a
+  OK  sarOja daLa nEtri__Śankarābharaṇaṁ.mp3
+  OK  sarasijanAba murArE__Tōḍi.mp3
+  OK  siddhi vinAyakam__Shanmukhapriya.m4a
+  OK  swAminatha__Nata.m4a
+  OK  vAtApi gaNapathim__Hamsadhvāni.mp3
+  OK  yArO ivar yArO__Bhairavi.m4a
+  OK  yEnATi mOmu palamu__Bhairavi.m4a
+  -> 29/29 verified, 0 mismatch
+
+== LABEL TABLE (unaudited filename labels)
+  Amba Kamakshi__Bhairavi.mp3                      | Bhairavi           | Bhairavi
+  Enu Dhanyalo Lakumi__Todi.mp3                    | Todi               | Tōḍi
+  Jagadanandakaraka__Nata.m4a                      | Nata               | Nāṭa
+  Kaddanuvariki__Todi.mp3                          | Todi               | Tōḍi
+  Koluvamaregada kodandapani__Tōḍi.mp3           | Tōḍi             | Tōḍi
+  Maithreem Bhajata__Kalyani__OOC.mp3              | Kalyani            | Kalyāṇi
+  Ninnukori Yunnanura__Mohanam.m4a                 | Mohanam            | Mōhanaṁ
+  Pillangoviya__Mohanam.mp3                        | Mohanam            | Mōhanaṁ
+  Ranga Baro__Sindhu Bhairavi.mp3                  | Sindhu Bhairavi    | Sindhubhairavi
+  Thaye Yashoda__Todi__OOC.mp3                     | Todi               | Tōḍi
+  bhajarE bhaja mAnasa__Kanada.m4a                 | Kanada             | Kānaḍa
+  bhajare__Kalyani.m4a                             | Kalyani            | Kalyāṇi
+  brOchevarevarura__Khamas.m4a                     | Khamas             | Kamās
+  chakkani rAja__Kharaharapriya.m4a                | Kharaharapriya     | Karaharapriya
+  entara__Harikambhoji.m4a                         | Harikambhoji       | Harikāmbhōji
+  himAdrisutE__Kalyani.m4a                         | Kalyani            | Kalyāṇi
+  nagumomu ganaleni__Saveri.m4a                    | Saveri             | Sāvēri
+  nannu pAlimpa__Mōhanaṁ.mp3                     | Mōhanaṁ          | Mōhanaṁ
+  nidhi chAla sukhamA__Kalyani.m4a                 | Kalyani            | Kalyāṇi
+  rAma nannu brOvara__Harikambhoji.m4a             | Harikambhoji       | Harikāmbhōji
+  rAma nee__Karaharapriya.m4a                      | Karaharapriya      | Karaharapriya
+  raghuvara__Kamavardani.m4a                       | Kamavardani        | Kāmavardani
+  sarOja daLa nEtri__Śankarābharaṇaṁ.mp3       | Śankarābharaṇaṁ | Śankarābharaṇaṁ
+  sarasijanAba murArE__Tōḍi.mp3                  | Tōḍi             | Tōḍi
+  siddhi vinAyakam__Shanmukhapriya.m4a             | Shanmukhapriya     | Ṣanmukhapriya
+  swAminatha__Nata.m4a                             | Nata               | Nāṭa
+  vAtApi gaNapathim__Hamsadhvāni.mp3              | Hamsadhvāni       | Hamsadhvāni
+  yArO ivar yArO__Bhairavi.m4a                     | Bhairavi           | Bhairavi
+  yEnATi mOmu palamu__Bhairavi.m4a                 | Bhairavi           | Bhairavi
+
+== GATE 4: readability + duration + window plan
+     70.7s  mp3  48000Hz  Amba Kamakshi__Bhairavi.mp3
+     65.7s  mp3  48000Hz  Enu Dhanyalo Lakumi__Todi.mp3
+     60.0s  aac  44100Hz  Jagadanandakaraka__Nata.m4a
+     84.8s  mp3  48000Hz  Kaddanuvariki__Todi.mp3
+     67.2s  mp3  48000Hz  Koluvamaregada kodandapani__Tōḍi.mp3
+     84.3s  mp3  48000Hz  Maithreem Bhajata__Kalyani__OOC.mp3
+     60.0s  aac  44100Hz  Ninnukori Yunnanura__Mohanam.m4a
+     56.0s  mp3  48000Hz  Pillangoviya__Mohanam.mp3
+     62.6s  mp3  48000Hz  Ranga Baro__Sindhu Bhairavi.mp3
+     57.9s  mp3  48000Hz  Thaye Yashoda__Todi__OOC.mp3
+     60.0s  aac  44100Hz  bhajarE bhaja mAnasa__Kanada.m4a
+     60.0s  aac  44100Hz  bhajare__Kalyani.m4a
+     60.0s  aac  44100Hz  brOchevarevarura__Khamas.m4a
+     60.0s  aac  44100Hz  chakkani rAja__Kharaharapriya.m4a
+     60.0s  aac  44100Hz  entara__Harikambhoji.m4a
+     60.0s  aac  44100Hz  himAdrisutE__Kalyani.m4a
+     60.0s  aac  44100Hz  nagumomu ganaleni__Saveri.m4a
+     83.9s  mp3  48000Hz  nannu pAlimpa__Mōhanaṁ.mp3
+     60.0s  aac  44100Hz  nidhi chAla sukhamA__Kalyani.m4a
+     60.0s  aac  44100Hz  rAma nannu brOvara__Harikambhoji.m4a
+     60.0s  aac  44100Hz  rAma nee__Karaharapriya.m4a
+     60.0s  aac  44100Hz  raghuvara__Kamavardani.m4a
+     78.9s  mp3  48000Hz  sarOja daLa nEtri__Śankarābharaṇaṁ.mp3
+     43.2s  mp3  48000Hz  sarasijanAba murArE__Tōḍi.mp3
+     60.0s  aac  44100Hz  siddhi vinAyakam__Shanmukhapriya.m4a
+     60.0s  aac  44100Hz  swAminatha__Nata.m4a
+     52.8s  mp3  48000Hz  vAtApi gaNapathim__Hamsadhvāni.mp3
+     60.0s  h264  0Hz  yArO ivar yArO__Bhairavi.m4a
+     60.0s  aac  44100Hz  yEnATi mOmu palamu__Bhairavi.m4a
+  -> 8 clips longer than 60s get a seeded 60s window as well as the whole clip; 21 score whole-clip only
+
+== GATE 3a: audio-hash disjointness against the training corpus
+  2229 training audio files hashed
+  byte-length collisions: 0
+  sha256 collisions: 0
+
+== GATE 3b: identity join against data/qmax_audit/provenance.json
+  Amba Kamakshi__Bhairavi.mp3                      work-matches  0  source unknown
+  Enu Dhanyalo Lakumi__Todi.mp3                    work-matches  0  source unknown
+  Jagadanandakaraka__Nata.m4a                      work-matches  1  source youtube:lRHhI8g8RVA
+  Kaddanuvariki__Todi.mp3                          work-matches  0  source unknown
+  Koluvamaregada kodandapani__Tōḍi.mp3           work-matches  0  source unknown
+  Maithreem Bhajata__Kalyani__OOC.mp3              work-matches  0  source unknown
+  Ninnukori Yunnanura__Mohanam.m4a                 work-matches  0  source youtube:pHO_AO6X_JM
+  Pillangoviya__Mohanam.mp3                        work-matches  0  source unknown
+  Ranga Baro__Sindhu Bhairavi.mp3                  work-matches  0  source unknown
+  Thaye Yashoda__Todi__OOC.mp3                     work-matches  0  source unknown
+  bhajarE bhaja mAnasa__Kanada.m4a                 work-matches  0  source youtube:zbY3OFKjYWQ
+  bhajare__Kalyani.m4a                             work-matches  0  source youtube:ad6UhYwTXXQ
+  brOchevarevarura__Khamas.m4a                     work-matches  1  source youtube:lFqbACkgpjo
+  chakkani rAja__Kharaharapriya.m4a                work-matches  2  source youtube:ZvzmrIECBl8
+  entara__Harikambhoji.m4a                         work-matches  0  source youtube:WUkViRiTB_o
+  himAdrisutE__Kalyani.m4a                         work-matches  0  source youtube:rO9gXgJ721U
+  nagumomu ganaleni__Saveri.m4a                    work-matches  1  source youtube:j-1FPDdY8sU
+  nannu pAlimpa__Mōhanaṁ.mp3                     work-matches  2  source unknown
+  nidhi chAla sukhamA__Kalyani.m4a                 work-matches  1  source youtube:staBlOuHEt0
+  rAma nannu brOvara__Harikambhoji.m4a             work-matches  1  source youtube:QoNfl2abIsI
+  rAma nee__Karaharapriya.m4a                      work-matches  1  source youtube:Tqv19g98LXI
+  raghuvara__Kamavardani.m4a                       work-matches  1  source youtube:16dIDxk9tbE
+  sarOja daLa nEtri__Śankarābharaṇaṁ.mp3       work-matches  0  source unknown
+  sarasijanAba murArE__Tōḍi.mp3                  work-matches  0  source unknown
+  siddhi vinAyakam__Shanmukhapriya.m4a             work-matches  1  source youtube:_SJCsV-1O2s
+  swAminatha__Nata.m4a                             work-matches  0  source youtube:CEt-viITlws
+  vAtApi gaNapathim__Hamsadhvāni.mp3              work-matches  0  source unknown
+  yArO ivar yArO__Bhairavi.m4a                     work-matches  0  source youtube:RWIZJQ9QT6U
+  yEnATi mOmu palamu__Bhairavi.m4a                 work-matches  0  source youtube:8Ub9i6OXirQ
+
+wrote /Users/shyamravidath/carnatify/data/raga_wild/protocol.json

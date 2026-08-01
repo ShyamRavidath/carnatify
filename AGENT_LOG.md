@@ -4529,3 +4529,79 @@ and pointing the wrong way; `all` and `stretch` have real window length 56.2 s
 because time-stretch changes duration; `augment_wild.py:21`'s "No ffmpeg on this
 machine" is still false and still not acted on. The Demucs tertiary was not run
 and is reported as not run rather than subsampled.
+
+## [2026-08-01 00:20] Fable (Opus 5 workhorse) — raga measured on 29 wild clips it can answer: 55.2% top-1, top row
+
+Executed `WORKHORSE_RAGA_WILD_BRIEF.md`. Write-up in
+`data/RAGA_WILD_MEASUREMENT.md`; prereg committed at `463da3d` before the
+harness (`b97a580`, `4c951b3`) and before any clip was predicted. The clip set
+was already frozen and committed by the verifier seat at `f67ef98` and this job
+did not reopen selection.
+
+**Headline: 16/29 = 55.2% top-1, 95% CI [37.5, 71.6]** — exported fused
+`models/raga_v3_*`, `mix` arm, whole clip. Top-3 is 19/29 = 65.5% unrestricted
+and 22/29 = 75.9% restricted to the 18-raga tier. **That is the top row of the
+brief's fixed table**: the interval contains the domain job's 48.7% simulation
+and excludes the 5.6% chance floor and the 17.2% best-constant-guess floor.
+
+**The gates hold, and they are the reason the number means anything.** All 29
+clips re-hashed bit-for-bit against the frozen list, 29/29. All 2229 training
+audio files under `data/concert_audio` and `saraga1.5_carnatic` (28 GB) hashed
+against the 29: **zero byte-length collisions, zero sha256 collisions**. Ten
+clips have a *work* match in training — same kriti, same raga — and every one is
+a different artist at a different source duration, so **zero recording
+matches**; nothing had to be scored with and without a contaminated clip because
+no clip qualified. Seventeen clips carry a specific YouTube source URL in
+`fetch_manifest.tsv`. Residual risk named rather than hidden: a byte hash cannot
+see a re-encode, and several training items are public-domain 78 RPM transfers
+that YouTube re-hosts — bounded to those ten clips, and the artist/duration
+evidence points away from it in each.
+
+**Nothing failed anywhere.** 29/29 produced a usable contour in all three arms,
+zero `no_contour`, zero `min_voiced`, zero `tdms_none`, zero `demucs_fail`, and
+**the tonic fallback never fired** — `TonicIndianArtMusic` landed inside
+`identify_clip.py`'s own [80,400] band on all 29. Voicing density 0.699
+[0.564, 0.824], inside the archive corpus's own 0.671-0.693 band.
+
+**The `demucs` arm does not materially beat `mix`** — 51.7% vs 55.2%, one fix
+against two breaks, exact McNemar p = 1.000. The brief's condition for
+separation being load-bearing in the field is **not met**. On the TDMS-only
+secondary the sign flips (48.3% vs 41.4%), which at n=29 is the same non-result
+read the other way. Registered caveat: the fused model's histogram half is
+Demucs-derived in *both* arms by construction, so the clean contrast is the
+TDMS-only row. Fusion itself earns its keep — fused beats TDMS-only 16/29 vs
+12/29 with four fixes and zero breaks. `identify_clip.py`'s wild-clip melodia
+constraint (`minFrequency=90, maxFrequency=900, voicingTolerance=0.6`), run as a
+registered non-gating diagnostic, **costs 7 points and rescues nothing** (48.3%,
+two breaks, zero fixes).
+
+Failure shape is bimodal: median rank of the true raga is **1**, but five clips
+put it at rank 21-30 of 32. Fifteen distinct classes were emitted over 29 clips,
+so this is not the model matching the set's skew.
+
+**Three of five pre-registered expectations were wrong and are reported as
+wrong.** I predicted the 20-40% band (it is 55.2%), predicted `demucs` would win
+(it loses), and predicted the 32-class read-out would sit 5-12 pp under the
+18-class one (top-1 is identical — restricting the label set never changed which
+class ranked first, only pulled truths into the top three).
+
+Two carried caveats. **The labels are unaudited**; I would ask a musician about
+`nagumomu ganaleni__Saveri` (that kriti is normally Ābhēri, which is outside the
+tier — though the archive corpus independently carries the same Sāvēri label)
+and `Maithreem Bhajata__Kalyani` (usually Yamunākalyāṇi or a rāgamālika). Both
+are currently misses, so dropping them *raises* the headline to 16/27 = 59.3%
+[40.7, 75.5]; the headline stays 16/29. And **this job cannot attribute the gap
+between the historical 0/10 and 55.2%** — that 0/10 came from
+`identify_clip.raga_top5`, a different model (`raga_clip_rf.pkl`) with the
+12-rotation tonic vote the graveyard records as anti-informative, on ten clips
+whose identities were never recorded. Coverage, model and tonic are confounded
+in that comparison and none of them can be credited here.
+
+Scope: graduates nothing, writes nothing under `models/`, and is a **raga**
+measurement on `~/sung_tests` that is never to be merged into or reported
+alongside the `--cache-v2` composition scoreboard, which this job did not touch.
+No conclusion about the lyrics-ASR path follows from it. `tests/test_clip_policy.py
+tests/test_registry_junk.py tests/test_negative_arm.py`: 103 passed, 1 xfailed.
+
+**The verdict on what to do next belongs to the verifier seat.** This entry
+states the measurement and the row it lands on.

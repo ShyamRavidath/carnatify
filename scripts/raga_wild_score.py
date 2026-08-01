@@ -257,6 +257,47 @@ def main() -> None:
         print(f'  {scope}: n={len(common)}  demucs-only {b_only}  mix-only {a_only}  '
               f'exact p={p:.3f}', flush=True)
 
+    # --------------------------------- window: whole vs 60 s on the SAME clips
+    print('\n== WINDOW, paired on the clips that have both (fused, mix)', flush=True)
+    win_pair = {}
+    for scope in ('all', 'tier'):
+        a = cells.get(('fused', scope, 'mix', 'whole'), {})
+        b = cells.get(('fused', scope, 'mix', 'w60'), {})
+        common = sorted(set(a) & set(b))
+        ka = sum(1 for f in common if a[f]['c1'])
+        kb = sum(1 for f in common if b[f]['c1'])
+        p = mcnemar_exact(sum(1 for f in common if a[f]['c1'] and not b[f]['c1']),
+                          sum(1 for f in common if b[f]['c1'] and not a[f]['c1']))
+        win_pair[scope] = dict(n=len(common), whole=ka, w60=kb, p=p)
+        print(f'  {scope}: n={len(common)}  whole {pct(ka, len(common))}  '
+              f'60s {pct(kb, len(common))}  exact p={p:.3f}', flush=True)
+
+    # ------------------------------------------------------- per-raga, primary
+    print('\n== PER-RAGA (fused, all-class, mix, whole clip)', flush=True)
+    d = cells.get(('fused', 'all', 'mix', 'whole'), {})
+    dt = cells.get(('fused', 'tier', 'mix', 'whole'), {})
+    per_raga = {}
+    for r in sorted({truth[f] for f in d}):
+        fs = [f for f in d if truth[f] == r]
+        per_raga[r] = dict(n=len(fs), top1=sum(1 for f in fs if d[f]['c1']),
+                           top3=sum(1 for f in fs if d[f]['c3']),
+                           top1_tier=sum(1 for f in fs if dt[f]['c1']))
+        print(f"  {r:<18} n={len(fs)}  top-1 {per_raga[r]['top1']}/{len(fs)}  "
+              f"top-3 {per_raga[r]['top3']}/{len(fs)}", flush=True)
+
+    # ------------------------------------------------- prediction concentration
+    pred = Counter(v['top1'] for v in d.values())
+    print(f'\n== PREDICTION SPREAD (fused, all, mix, whole): '
+          f'{len(pred)} distinct classes predicted over {len(d)} clips; '
+          f'most frequent {pred.most_common(3)}', flush=True)
+    dens = [r['density'] for r in per_clip
+            if r['arm'] == 'mix' and r['window'] == 'whole' and r.get('density')]
+    vs = [r['voiced_s'] for r in per_clip
+          if r['arm'] == 'mix' and r['window'] == 'whole' and r.get('voiced_s')]
+    print(f'   voicing density mean {np.mean(dens):.3f} '
+          f'[{min(dens):.3f}, {max(dens):.3f}]; voiced seconds mean {np.mean(vs):.1f} '
+          f'[{min(vs):.1f}, {max(vs):.1f}]', flush=True)
+
     # ------------------------------------------------------------ rank profile
     print('\n== RANK OF THE TRUE RAGA (fused, mix, whole clip)', flush=True)
     for scope in ('all', 'tier'):
@@ -282,11 +323,45 @@ def main() -> None:
                   f"  tier-top1={dt['top1'] if dt else '-'}"
                   f" {'HIT' if dt and dt['c1'] else ''}", flush=True)
 
+    # ------------------------------------------------- markdown for the write-up
+    md = ['### Per-clip — fused model, `mix` arm (whole clip, and the 60 s window '
+          'where the clip has one)', '',
+          '| clip | dur | truth | top-1 (32-class) | p | rank | hit | top-1 '
+          '(18-class) | hit | 60 s top-1 | hit |',
+          '|---|---|---|---|---|---|---|---|---|---|---|']
+    for f in files:
+        a = cells.get(('fused', 'all', 'mix', 'whole'), {}).get(f)
+        t = cells.get(('fused', 'tier', 'mix', 'whole'), {}).get(f)
+        w = cells.get(('fused', 'all', 'mix', 'w60'), {}).get(f)
+        dur = next((r['dur_s'] for r in per_clip
+                    if r['file'] == f and r['window'] == 'whole'), 0.0)
+        if a is None:
+            md.append(f'| `{f}` | {dur:.1f} s | {truth[f]} | — | — | — | — | — | — '
+                      f'| — | — |')
+            continue
+        md.append(
+            f'| `{f}` | {dur:.1f} s | {truth[f]} | {a["top1"]} | {a["top1_p"]:.2f} '
+            f'| {a["rank"]} | {"**Y**" if a["c1"] else ("t3" if a["c3"] else "n")} '
+            f'| {t["top1"] if t else "—"} '
+            f'| {"**Y**" if t and t["c1"] else ("t3" if t and t["c3"] else "n")} '
+            f'| {w["top1"] if w else "—"} '
+            f'| {("**Y**" if w["c1"] else ("t3" if w["c3"] else "n")) if w else "—"} |')
+    md += ['', '### Read-outs', '',
+           '| model | scope | arm | window | n scored | top-1 (95% CI) | '
+           'top-3 (95% CI) |', '|---|---|---|---|---|---|---|']
+    for k, s in summary.items():
+        md.append(f"| {s['model']} | {s['scope']} | `{s['arm']}` | {s['window']} "
+                  f"| {s['n_scored']}/{n_all} | {pct(s['top1'], s['n_scored'])} "
+                  f"| {pct(s['top3'], s['n_scored'])} |")
+    (OUT_DIR / 'tables.md').write_text('\n'.join(md))
+    print(f"wrote {OUT_DIR / 'tables.md'}")
+
     out = dict(n_frozen=n_all, model_classes=classes, tier=tier,
                fusion_w_hist=w_hist, primary=f'fused|all|{PRIMARY_ARM}|{PRIMARY_WINDOW}',
                outcomes={f'{a}|{w}': dict(c) for (a, w), c in outcomes.items()},
                tonic_fallback_whole_mix=nfb,
-               summary=summary, mcnemar=mc,
+               summary=summary, mcnemar=mc, window_paired=win_pair,
+               per_raga=per_raga,
                cells={'|'.join(k): v for k, v in cells.items()},
                per_clip=per_clip)
     (OUT_DIR / 'results.json').write_text(json.dumps(out, ensure_ascii=False, indent=1,
