@@ -4743,3 +4743,109 @@ about the fused arm's behaviour at wider tiers, nothing about tier × duration
 interaction, nothing about the field, and nothing about the lyrics-ASR, Qmax or
 CSI paths in either direction. Graduates nothing. **The verdict on what to do
 with this belongs to the verifier seat.**
+
+## [2026-08-13] Workhorse (Opus 5) — coverage follow-ups: the fetch is worth doing, per-class admission is not
+
+Executed the verifier seat's two follow-ups to `data/RAGA_COVERAGE_CURVE.md`.
+Preregistration `data/raga_coverage/PREREGISTRATION_FOLLOWUP.md` committed as its
+own commit (`87bfb42`) **before either scoring script existed**; results and both
+new sections in `9cb12b5`. `data/raga_coverage/PREREGISTRATION.md` and
+`RAGA_COVERAGE_CURVE.md` §§1-9 were not modified. Nothing under `models/`,
+`identify_clip.py` untouched, no tuning, both gates registered before the run.
+
+**Gate A** (`c=30` is the whole tier, since no class has more than 30 tracks):
+reproduced 649/1139 and 812/1139 exactly for all three cap seeds. **Gate B**
+(`t=0` admits every class): reproduced the same. Both PASS.
+
+### Job A — the within-class learning curve
+
+`r(tracks, top-1) = 0.519` across classes is confounded — the 25-30 bin is
+exactly the set `dl_deficits30.py` topped up as `PRIORITY_20`/`SECONDARY_20`.
+Subsampling every class against itself (nested from one permutation per class,
+cap seeds 0/1/2, tier held at 54 classes), primary read-out the 18 classes with
+≥25 tracks evaluated inside the full 54-way model:
+
+`c=10` **50.4%** [45.0-55.6] → `c=15` **57.8%** → `c=20` **64.1%** → `c=25`
+**66.5%** → `c=30` **68.7%**. **Total +18.4 pp.** All-54 read-out +10.6 pp.
+
+**The confound was real and the conclusion survived it.** The apparent
+flattening is an artifact of plotting against the cap: each cap step adds fewer
+tracks because fewer classes are still truncated. Per 100 tracks *added* the
+marginal value is **3.10 / 3.62 / 2.07 / 3.25 pp** across the four steps — the
+last 68 tracks were worth as much as the first 239. **No saturation signal
+anywhere in this corpus.** Lands on the registered *"still climbing at c=30 — the
+fetch is the best-value job on the board"* row.
+
+**The part that changes what to fetch:** correlating a class's accuracy at
+`c=10` against what tripling its data buys it gives **r = −0.777, p = 1.5e-04**
+(Spearman −0.804). Classes below 50% gain **+28.4 pp**; classes above 50% gain
+**+7.9 pp**. Bhairavi 20.0% → 70.0%; Kānaḍa 20.0% → 60.0%; Karaharapriya 20.0% →
+48.1%. Kalyāṇi, Mōhanaṁ, Hamsadhvāni and Sāvēri are saturated or negative by
+10-15 tracks. **`dl_deficits30.py` topped up the popular classes, which are
+precisely the ones with nothing left to gain.** Three of 18 classes have a
+non-positive slope, exactly as registered — n is not destiny inside a class
+either. Vasanta is weak *and* flat (+5.7 pp over a tripling): its problem is not
+data volume.
+
+### Job B — per-class admission, nested
+
+Outer folds are the committed `min>=10` level-(c) split, computed once and
+identical at every threshold; the admitted set for each outer fold comes from an
+inner 5-fold group CV over that fold's training rows only, so the selection never
+sees the fold it is scored on.
+
+Expected hits per 100 fall **monotonically**: `t=0` **45.1** → `.10` 43.6 → `.20`
+42.8 → `.30` 42.1 → `.40` 39.6. **No threshold beats `t = 0`.** Dropping a class
+costs its repertoire mass at once and buys accuracy only slowly — at `t=0.10`,
+−6.6 pp of coverage for +3.0 pp of top-1. This also puts a number on
+`RAGA_COVERAGE_CURVE.md` §4's estimate that dropping the four sub-10% classes
+would be "roughly a wash": measured honestly it is **−1.5 hits per 100**, so that
+wording was optimistic.
+
+**The selection-on-noise effect, isolated:** at `t=0.40` both arms admit the same
+class count at the same coverage (37.2 / 62.2% nested, 37.0 / 62.1% in-sample)
+and the in-sample arm reports **68.2%** against the honest **63.8%** — **4.4 pp
+of pure inflation.** At `t=0.20`, 15 of the 51 ever-admitted classes flip in and
+out across the five outer folds; the in-sample arm admits an identical set every
+time and looks perfectly stable. That stability is the illusion.
+
+**What admission does buy is precision, not hits:** 57.0% → 63.8%
+accuracy-when-it-speaks at 79.2% → 62.2% coverage — the abstain-gate axis, which
+expected hits is blind to by construction. And the extreme case works:
+**Nāṭakurinji, Janaranjani and Haṁsānandi are never admitted in any fold** at
+`t=0.10`. So the defensible version of §4's recommendation is narrow — drop
+classes that are stably near-zero out of sample, and do **not** sweep a threshold
+as a tuning knob.
+
+### Predictions refuted
+
+- **Verifier, "+6 to +12 pp within-class":** measured **+18.4 pp** — refuted, the
+  curve is steeper than "much flatter than the cross-class correlation implies".
+- **Verifier, "visibly flattening by c=25":** confirmed on the registered
+  operationalisation (the `25→30` step is under half the `15→20` step) — but §10.3
+  shows it is *not* flattening per track added, so both readings are true of
+  different x-axes.
+- **This seat, "the verifier's flattening claim is wrong":** refuted as stated;
+  mine was the sloppier claim. My +13-20 pp band, the ≥1.5 pp top step, the
+  all-54-smaller-than-restricted-18 prediction, the ≥3 non-positive slopes and the
+  monotone seed spread all held.
+- **This seat, Job B honest gain "0 to +3 hits/100":** refuted — it is **−1.5 to
+  −5.5**. The registered hedge ("possibly no threshold beats t=0") covered the
+  outcome but the band is what was registered.
+- **This seat, "in-sample inflated by ≥2 hits/100 at its maximising threshold":**
+  refuted — the inflation is real but lands in *top-1* (+4.4 pp at matched
+  coverage), not in expected hits.
+- **This seat, "optimum at t=0.10 or 0.20":** refuted — it is `t = 0`.
+- **This seat, "admission unstable, ≥4 classes differing across folds at t=0.30":**
+  confirmed, 5.
+
+### Joint reading
+
+More classes is a real lever (§3, monotone expected hits, incumbents pay 3.5 pp).
+More audio per class is **also** a real lever and the confound did not explain it
+away (+18.4 pp within-class, no saturation). **Both are worth funding, and the
+audio should go to the weak classes rather than the popular ones.** Per-class
+admission is not the lever the earlier section suggested. Scope is unchanged:
+full-recording, corpus-against-itself, TDMS-only primary arm; graduates nothing;
+says nothing about the lyrics-ASR, Qmax or CSI paths. **The verdict on what to
+fund belongs to the verifier seat.**
