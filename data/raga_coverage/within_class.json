@@ -1,0 +1,1485 @@
+{
+ "tier": {
+  "min_tracks": 10,
+  "classes": [
+   "Aṭāna",
+   "Behāg",
+   "Bhairavi",
+   "Bilahari",
+   "Bēgaḍa",
+   "Bṛndāvana sāranga",
+   "Cakravākaṁ",
+   "Dhanyāsi",
+   "Dvijāvanti",
+   "Gauḷa",
+   "Hamsadhvāni",
+   "Harikāmbhōji",
+   "Haṁsānandi",
+   "Hindōḷaṁ",
+   "Jaganmōhini",
+   "Janaranjani",
+   "Jōnpuri",
+   "Kalyāṇi",
+   "Kamās",
+   "Karaharapriya",
+   "Kāmavardani",
+   "Kānaḍa",
+   "Kāpi",
+   "Kāṁbhōji",
+   "Kēdāragauḷa",
+   "Latāngi",
+   "Madhyamāvati",
+   "Maṇirangu",
+   "Mukhāri",
+   "Māyāmāḷavagauḷa",
+   "Mōhanaṁ",
+   "Nāṭa",
+   "Nāṭakurinji",
+   "Nīlāṁbari",
+   "Puṇṇāgavarāḷi",
+   "Pūrvīkaḷyāṇi",
+   "Pūrṇacandrika",
+   "Rītigauḷa",
+   "Sahānā",
+   "Saurāṣtraṁ",
+   "Sencuruṭṭi",
+   "Sindhubhairavi",
+   "Suraṭi",
+   "Sāma",
+   "Sāvēri",
+   "Tōḍi",
+   "Varāḷi",
+   "Vasanta",
+   "Ābhōgi",
+   "Ānandabhairavi",
+   "Śankarābharaṇaṁ",
+   "Śrīranjani",
+   "Śuddadhanyāsi",
+   "Ṣanmukhapriya"
+  ]
+ },
+ "caps": [
+  10,
+  15,
+  20,
+  25,
+  30
+ ],
+ "cap_seeds": [
+  0,
+  1,
+  2
+ ],
+ "restrict_min_tracks": 25,
+ "restricted_classes": [
+  "Aṭāna",
+  "Bhairavi",
+  "Hamsadhvāni",
+  "Harikāmbhōji",
+  "Kalyāṇi",
+  "Kamās",
+  "Karaharapriya",
+  "Kāmavardani",
+  "Kānaḍa",
+  "Mōhanaṁ",
+  "Nāṭa",
+  "Pūrvīkaḷyāṇi",
+  "Sindhubhairavi",
+  "Sāvēri",
+  "Tōḍi",
+  "Vasanta",
+  "Śankarābharaṇaṁ",
+  "Ṣanmukhapriya"
+ ],
+ "cells": {
+  "c10_s0": {
+   "cap": 10,
+   "seed": 0,
+   "n_tracks": 540,
+   "n_groups": 152,
+   "n_classes": 54,
+   "n_folds": 5,
+   "class_prior_expectation": 0.018518518518518514,
+   "all54_top1": 235,
+   "all54_top3": 322,
+   "all54_top1_rate": 0.4351851851851852,
+   "all54_top3_rate": 0.5962962962962963,
+   "restricted_n": 180,
+   "restricted_top1": 81,
+   "restricted_top3": 112,
+   "restricted_top1_rate": 0.45,
+   "restricted_top3_rate": 0.6222222222222222,
+   "per_class_restricted": {
+    "Aṭāna": {
+     "n": 10,
+     "top1": 0.6
+    },
+    "Bhairavi": {
+     "n": 10,
+     "top1": 0.2
+    },
+    "Hamsadhvāni": {
+     "n": 10,
+     "top1": 0.7
+    },
+    "Harikāmbhōji": {
+     "n": 10,
+     "top1": 0.0
+    },
+    "Kalyāṇi": {
+     "n": 10,
+     "top1": 0.8
+    },
+    "Kamās": {
+     "n": 10,
+     "top1": 0.5
+    },
+    "Karaharapriya": {
+     "n": 10,
+     "top1": 0.2
+    },
+    "Kāmavardani": {
+     "n": 10,
+     "top1": 0.3
+    },
+    "Kānaḍa": {
+     "n": 10,
+     "top1": 0.2
+    },
+    "Mōhanaṁ": {
+     "n": 10,
+     "top1": 0.5
+    },
+    "Nāṭa": {
+     "n": 10,
+     "top1": 0.7
+    },
+    "Pūrvīkaḷyāṇi": {
+     "n": 10,
+     "top1": 0.7
+    },
+    "Sindhubhairavi": {
+     "n": 10,
+     "top1": 0.3
+    },
+    "Sāvēri": {
+     "n": 10,
+     "top1": 0.5
+    },
+    "Tōḍi": {
+     "n": 10,
+     "top1": 0.7
+    },
+    "Vasanta": {
+     "n": 10,
+     "top1": 0.2
+    },
+    "Śankarābharaṇaṁ": {
+     "n": 10,
+     "top1": 0.5
+    },
+    "Ṣanmukhapriya": {
+     "n": 10,
+     "top1": 0.5
+    }
+   }
+  },
+  "c10_s1": {
+   "cap": 10,
+   "seed": 1,
+   "n_tracks": 540,
+   "n_groups": 152,
+   "n_classes": 54,
+   "n_folds": 5,
+   "class_prior_expectation": 0.018518518518518514,
+   "all54_top1": 257,
+   "all54_top3": 356,
+   "all54_top1_rate": 0.4759259259259259,
+   "all54_top3_rate": 0.6592592592592592,
+   "restricted_n": 180,
+   "restricted_top1": 91,
+   "restricted_top3": 124,
+   "restricted_top1_rate": 0.5055555555555555,
+   "restricted_top3_rate": 0.6888888888888889,
+   "per_class_restricted": {
+    "Aṭāna": {
+     "n": 10,
+     "top1": 0.6
+    },
+    "Bhairavi": {
+     "n": 10,
+     "top1": 0.1
+    },
+    "Hamsadhvāni": {
+     "n": 10,
+     "top1": 0.7
+    },
+    "Harikāmbhōji": {
+     "n": 10,
+     "top1": 0.6
+    },
+    "Kalyāṇi": {
+     "n": 10,
+     "top1": 0.9
+    },
+    "Kamās": {
+     "n": 10,
+     "top1": 0.5
+    },
+    "Karaharapriya": {
+     "n": 10,
+     "top1": 0.2
+    },
+    "Kāmavardani": {
+     "n": 10,
+     "top1": 0.5
+    },
+    "Kānaḍa": {
+     "n": 10,
+     "top1": 0.2
+    },
+    "Mōhanaṁ": {
+     "n": 10,
+     "top1": 0.9
+    },
+    "Nāṭa": {
+     "n": 10,
+     "top1": 0.6
+    },
+    "Pūrvīkaḷyāṇi": {
+     "n": 10,
+     "top1": 0.6
+    },
+    "Sindhubhairavi": {
+     "n": 10,
+     "top1": 0.6
+    },
+    "Sāvēri": {
+     "n": 10,
+     "top1": 0.7
+    },
+    "Tōḍi": {
+     "n": 10,
+     "top1": 0.6
+    },
+    "Vasanta": {
+     "n": 10,
+     "top1": 0.2
+    },
+    "Śankarābharaṇaṁ": {
+     "n": 10,
+     "top1": 0.3
+    },
+    "Ṣanmukhapriya": {
+     "n": 10,
+     "top1": 0.3
+    }
+   }
+  },
+  "c10_s2": {
+   "cap": 10,
+   "seed": 2,
+   "n_tracks": 540,
+   "n_groups": 146,
+   "n_classes": 54,
+   "n_folds": 5,
+   "class_prior_expectation": 0.018518518518518514,
+   "all54_top1": 259,
+   "all54_top3": 343,
+   "all54_top1_rate": 0.47962962962962963,
+   "all54_top3_rate": 0.6351851851851852,
+   "restricted_n": 180,
+   "restricted_top1": 100,
+   "restricted_top3": 124,
+   "restricted_top1_rate": 0.5555555555555556,
+   "restricted_top3_rate": 0.6888888888888889,
+   "per_class_restricted": {
+    "Aṭāna": {
+     "n": 10,
+     "top1": 0.6
+    },
+    "Bhairavi": {
+     "n": 10,
+     "top1": 0.3
+    },
+    "Hamsadhvāni": {
+     "n": 10,
+     "top1": 0.8
+    },
+    "Harikāmbhōji": {
+     "n": 10,
+     "top1": 0.3
+    },
+    "Kalyāṇi": {
+     "n": 10,
+     "top1": 0.8
+    },
+    "Kamās": {
+     "n": 10,
+     "top1": 0.4
+    },
+    "Karaharapriya": {
+     "n": 10,
+     "top1": 0.2
+    },
+    "Kāmavardani": {
+     "n": 10,
+     "top1": 0.6
+    },
+    "Kānaḍa": {
+     "n": 10,
+     "top1": 0.2
+    },
+    "Mōhanaṁ": {
+     "n": 10,
+     "top1": 0.9
+    },
+    "Nāṭa": {
+     "n": 10,
+     "top1": 0.5
+    },
+    "Pūrvīkaḷyāṇi": {
+     "n": 10,
+     "top1": 0.8
+    },
+    "Sindhubhairavi": {
+     "n": 10,
+     "top1": 0.4
+    },
+    "Sāvēri": {
+     "n": 10,
+     "top1": 0.6
+    },
+    "Tōḍi": {
+     "n": 10,
+     "top1": 0.9
+    },
+    "Vasanta": {
+     "n": 10,
+     "top1": 0.5
+    },
+    "Śankarābharaṇaṁ": {
+     "n": 10,
+     "top1": 0.9
+    },
+    "Ṣanmukhapriya": {
+     "n": 10,
+     "top1": 0.3
+    }
+   }
+  },
+  "c15_s0": {
+   "cap": 15,
+   "seed": 0,
+   "n_tracks": 779,
+   "n_groups": 176,
+   "n_classes": 54,
+   "n_folds": 5,
+   "class_prior_expectation": 0.01866881110538015,
+   "all54_top1": 391,
+   "all54_top3": 526,
+   "all54_top1_rate": 0.5019255455712451,
+   "all54_top3_rate": 0.675224646983312,
+   "restricted_n": 270,
+   "restricted_top1": 148,
+   "restricted_top3": 196,
+   "restricted_top1_rate": 0.5481481481481482,
+   "restricted_top3_rate": 0.725925925925926,
+   "per_class_restricted": {
+    "Aṭāna": {
+     "n": 15,
+     "top1": 0.6666666666666666
+    },
+    "Bhairavi": {
+     "n": 15,
+     "top1": 0.3333333333333333
+    },
+    "Hamsadhvāni": {
+     "n": 15,
+     "top1": 0.7333333333333333
+    },
+    "Harikāmbhōji": {
+     "n": 15,
+     "top1": 0.2
+    },
+    "Kalyāṇi": {
+     "n": 15,
+     "top1": 0.8
+    },
+    "Kamās": {
+     "n": 15,
+     "top1": 0.4666666666666667
+    },
+    "Karaharapriya": {
+     "n": 15,
+     "top1": 0.13333333333333333
+    },
+    "Kāmavardani": {
+     "n": 15,
+     "top1": 0.6666666666666666
+    },
+    "Kānaḍa": {
+     "n": 15,
+     "top1": 0.26666666666666666
+    },
+    "Mōhanaṁ": {
+     "n": 15,
+     "top1": 0.7333333333333333
+    },
+    "Nāṭa": {
+     "n": 15,
+     "top1": 0.7333333333333333
+    },
+    "Pūrvīkaḷyāṇi": {
+     "n": 15,
+     "top1": 0.7333333333333333
+    },
+    "Sindhubhairavi": {
+     "n": 15,
+     "top1": 0.6666666666666666
+    },
+    "Sāvēri": {
+     "n": 15,
+     "top1": 0.4666666666666667
+    },
+    "Tōḍi": {
+     "n": 15,
+     "top1": 0.8666666666666667
+    },
+    "Vasanta": {
+     "n": 15,
+     "top1": 0.26666666666666666
+    },
+    "Śankarābharaṇaṁ": {
+     "n": 15,
+     "top1": 0.4666666666666667
+    },
+    "Ṣanmukhapriya": {
+     "n": 15,
+     "top1": 0.6666666666666666
+    }
+   }
+  },
+  "c15_s1": {
+   "cap": 15,
+   "seed": 1,
+   "n_tracks": 779,
+   "n_groups": 174,
+   "n_classes": 54,
+   "n_folds": 5,
+   "class_prior_expectation": 0.01866881110538015,
+   "all54_top1": 409,
+   "all54_top3": 533,
+   "all54_top1_rate": 0.5250320924261874,
+   "all54_top3_rate": 0.6842105263157895,
+   "restricted_n": 270,
+   "restricted_top1": 155,
+   "restricted_top3": 196,
+   "restricted_top1_rate": 0.5740740740740741,
+   "restricted_top3_rate": 0.725925925925926,
+   "per_class_restricted": {
+    "Aṭāna": {
+     "n": 15,
+     "top1": 0.5333333333333333
+    },
+    "Bhairavi": {
+     "n": 15,
+     "top1": 0.3333333333333333
+    },
+    "Hamsadhvāni": {
+     "n": 15,
+     "top1": 0.7333333333333333
+    },
+    "Harikāmbhōji": {
+     "n": 15,
+     "top1": 0.4666666666666667
+    },
+    "Kalyāṇi": {
+     "n": 15,
+     "top1": 0.7333333333333333
+    },
+    "Kamās": {
+     "n": 15,
+     "top1": 0.5333333333333333
+    },
+    "Karaharapriya": {
+     "n": 15,
+     "top1": 0.26666666666666666
+    },
+    "Kāmavardani": {
+     "n": 15,
+     "top1": 0.5333333333333333
+    },
+    "Kānaḍa": {
+     "n": 15,
+     "top1": 0.2
+    },
+    "Mōhanaṁ": {
+     "n": 15,
+     "top1": 0.8666666666666667
+    },
+    "Nāṭa": {
+     "n": 15,
+     "top1": 0.6666666666666666
+    },
+    "Pūrvīkaḷyāṇi": {
+     "n": 15,
+     "top1": 0.7333333333333333
+    },
+    "Sindhubhairavi": {
+     "n": 15,
+     "top1": 0.7333333333333333
+    },
+    "Sāvēri": {
+     "n": 15,
+     "top1": 0.5333333333333333
+    },
+    "Tōḍi": {
+     "n": 15,
+     "top1": 0.8666666666666667
+    },
+    "Vasanta": {
+     "n": 15,
+     "top1": 0.4666666666666667
+    },
+    "Śankarābharaṇaṁ": {
+     "n": 15,
+     "top1": 0.6
+    },
+    "Ṣanmukhapriya": {
+     "n": 15,
+     "top1": 0.5333333333333333
+    }
+   }
+  },
+  "c15_s2": {
+   "cap": 15,
+   "seed": 2,
+   "n_tracks": 779,
+   "n_groups": 180,
+   "n_classes": 54,
+   "n_folds": 5,
+   "class_prior_expectation": 0.018668811105380153,
+   "all54_top1": 424,
+   "all54_top3": 543,
+   "all54_top1_rate": 0.5442875481386393,
+   "all54_top3_rate": 0.6970474967907574,
+   "restricted_n": 270,
+   "restricted_top1": 165,
+   "restricted_top3": 204,
+   "restricted_top1_rate": 0.6111111111111112,
+   "restricted_top3_rate": 0.7555555555555555,
+   "per_class_restricted": {
+    "Aṭāna": {
+     "n": 15,
+     "top1": 0.7333333333333333
+    },
+    "Bhairavi": {
+     "n": 15,
+     "top1": 0.2
+    },
+    "Hamsadhvāni": {
+     "n": 15,
+     "top1": 0.7333333333333333
+    },
+    "Harikāmbhōji": {
+     "n": 15,
+     "top1": 0.3333333333333333
+    },
+    "Kalyāṇi": {
+     "n": 15,
+     "top1": 0.8
+    },
+    "Kamās": {
+     "n": 15,
+     "top1": 0.7333333333333333
+    },
+    "Karaharapriya": {
+     "n": 15,
+     "top1": 0.26666666666666666
+    },
+    "Kāmavardani": {
+     "n": 15,
+     "top1": 0.6666666666666666
+    },
+    "Kānaḍa": {
+     "n": 15,
+     "top1": 0.3333333333333333
+    },
+    "Mōhanaṁ": {
+     "n": 15,
+     "top1": 0.8666666666666667
+    },
+    "Nāṭa": {
+     "n": 15,
+     "top1": 0.7333333333333333
+    },
+    "Pūrvīkaḷyāṇi": {
+     "n": 15,
+     "top1": 0.7333333333333333
+    },
+    "Sindhubhairavi": {
+     "n": 15,
+     "top1": 0.8
+    },
+    "Sāvēri": {
+     "n": 15,
+     "top1": 0.5333333333333333
+    },
+    "Tōḍi": {
+     "n": 15,
+     "top1": 0.9333333333333333
+    },
+    "Vasanta": {
+     "n": 15,
+     "top1": 0.3333333333333333
+    },
+    "Śankarābharaṇaṁ": {
+     "n": 15,
+     "top1": 0.6666666666666666
+    },
+    "Ṣanmukhapriya": {
+     "n": 15,
+     "top1": 0.6
+    }
+   }
+  },
+  "c20_s0": {
+   "cap": 20,
+   "seed": 0,
+   "n_tracks": 953,
+   "n_groups": 191,
+   "n_classes": 54,
+   "n_folds": 5,
+   "class_prior_expectation": 0.019146473994421983,
+   "all54_top1": 520,
+   "all54_top3": 653,
+   "all54_top1_rate": 0.5456453305351522,
+   "all54_top3_rate": 0.6852046169989506,
+   "restricted_n": 360,
+   "restricted_top1": 219,
+   "restricted_top3": 262,
+   "restricted_top1_rate": 0.6083333333333333,
+   "restricted_top3_rate": 0.7277777777777777,
+   "per_class_restricted": {
+    "Aṭāna": {
+     "n": 20,
+     "top1": 0.65
+    },
+    "Bhairavi": {
+     "n": 20,
+     "top1": 0.35
+    },
+    "Hamsadhvāni": {
+     "n": 20,
+     "top1": 0.7
+    },
+    "Harikāmbhōji": {
+     "n": 20,
+     "top1": 0.35
+    },
+    "Kalyāṇi": {
+     "n": 20,
+     "top1": 0.8
+    },
+    "Kamās": {
+     "n": 20,
+     "top1": 0.7
+    },
+    "Karaharapriya": {
+     "n": 20,
+     "top1": 0.45
+    },
+    "Kāmavardani": {
+     "n": 20,
+     "top1": 0.7
+    },
+    "Kānaḍa": {
+     "n": 20,
+     "top1": 0.5
+    },
+    "Mōhanaṁ": {
+     "n": 20,
+     "top1": 0.9
+    },
+    "Nāṭa": {
+     "n": 20,
+     "top1": 0.8
+    },
+    "Pūrvīkaḷyāṇi": {
+     "n": 20,
+     "top1": 0.9
+    },
+    "Sindhubhairavi": {
+     "n": 20,
+     "top1": 0.5
+    },
+    "Sāvēri": {
+     "n": 20,
+     "top1": 0.5
+    },
+    "Tōḍi": {
+     "n": 20,
+     "top1": 0.85
+    },
+    "Vasanta": {
+     "n": 20,
+     "top1": 0.2
+    },
+    "Śankarābharaṇaṁ": {
+     "n": 20,
+     "top1": 0.5
+    },
+    "Ṣanmukhapriya": {
+     "n": 20,
+     "top1": 0.6
+    }
+   }
+  },
+  "c20_s1": {
+   "cap": 20,
+   "seed": 1,
+   "n_tracks": 953,
+   "n_groups": 190,
+   "n_classes": 54,
+   "n_folds": 5,
+   "class_prior_expectation": 0.019146473994421983,
+   "all54_top1": 533,
+   "all54_top3": 669,
+   "all54_top1_rate": 0.559286463798531,
+   "all54_top3_rate": 0.70199370409234,
+   "restricted_n": 360,
+   "restricted_top1": 235,
+   "restricted_top3": 280,
+   "restricted_top1_rate": 0.6527777777777778,
+   "restricted_top3_rate": 0.7777777777777778,
+   "per_class_restricted": {
+    "Aṭāna": {
+     "n": 20,
+     "top1": 0.7
+    },
+    "Bhairavi": {
+     "n": 20,
+     "top1": 0.5
+    },
+    "Hamsadhvāni": {
+     "n": 20,
+     "top1": 0.8
+    },
+    "Harikāmbhōji": {
+     "n": 20,
+     "top1": 0.6
+    },
+    "Kalyāṇi": {
+     "n": 20,
+     "top1": 0.75
+    },
+    "Kamās": {
+     "n": 20,
+     "top1": 0.6
+    },
+    "Karaharapriya": {
+     "n": 20,
+     "top1": 0.45
+    },
+    "Kāmavardani": {
+     "n": 20,
+     "top1": 0.6
+    },
+    "Kānaḍa": {
+     "n": 20,
+     "top1": 0.6
+    },
+    "Mōhanaṁ": {
+     "n": 20,
+     "top1": 0.85
+    },
+    "Nāṭa": {
+     "n": 20,
+     "top1": 0.7
+    },
+    "Pūrvīkaḷyāṇi": {
+     "n": 20,
+     "top1": 0.8
+    },
+    "Sindhubhairavi": {
+     "n": 20,
+     "top1": 0.7
+    },
+    "Sāvēri": {
+     "n": 20,
+     "top1": 0.55
+    },
+    "Tōḍi": {
+     "n": 20,
+     "top1": 0.85
+    },
+    "Vasanta": {
+     "n": 20,
+     "top1": 0.35
+    },
+    "Śankarābharaṇaṁ": {
+     "n": 20,
+     "top1": 0.7
+    },
+    "Ṣanmukhapriya": {
+     "n": 20,
+     "top1": 0.65
+    }
+   }
+  },
+  "c20_s2": {
+   "cap": 20,
+   "seed": 2,
+   "n_tracks": 953,
+   "n_groups": 191,
+   "n_classes": 54,
+   "n_folds": 5,
+   "class_prior_expectation": 0.019146473994421983,
+   "all54_top1": 530,
+   "all54_top3": 661,
+   "all54_top1_rate": 0.5561385099685204,
+   "all54_top3_rate": 0.6935991605456453,
+   "restricted_n": 360,
+   "restricted_top1": 238,
+   "restricted_top3": 275,
+   "restricted_top1_rate": 0.6611111111111111,
+   "restricted_top3_rate": 0.7638888888888888,
+   "per_class_restricted": {
+    "Aṭāna": {
+     "n": 20,
+     "top1": 0.8
+    },
+    "Bhairavi": {
+     "n": 20,
+     "top1": 0.6
+    },
+    "Hamsadhvāni": {
+     "n": 20,
+     "top1": 0.7
+    },
+    "Harikāmbhōji": {
+     "n": 20,
+     "top1": 0.5
+    },
+    "Kalyāṇi": {
+     "n": 20,
+     "top1": 0.8
+    },
+    "Kamās": {
+     "n": 20,
+     "top1": 0.7
+    },
+    "Karaharapriya": {
+     "n": 20,
+     "top1": 0.4
+    },
+    "Kāmavardani": {
+     "n": 20,
+     "top1": 0.7
+    },
+    "Kānaḍa": {
+     "n": 20,
+     "top1": 0.3
+    },
+    "Mōhanaṁ": {
+     "n": 20,
+     "top1": 0.85
+    },
+    "Nāṭa": {
+     "n": 20,
+     "top1": 0.75
+    },
+    "Pūrvīkaḷyāṇi": {
+     "n": 20,
+     "top1": 0.8
+    },
+    "Sindhubhairavi": {
+     "n": 20,
+     "top1": 0.75
+    },
+    "Sāvēri": {
+     "n": 20,
+     "top1": 0.6
+    },
+    "Tōḍi": {
+     "n": 20,
+     "top1": 0.8
+    },
+    "Vasanta": {
+     "n": 20,
+     "top1": 0.45
+    },
+    "Śankarābharaṇaṁ": {
+     "n": 20,
+     "top1": 0.7
+    },
+    "Ṣanmukhapriya": {
+     "n": 20,
+     "top1": 0.7
+    }
+   }
+  },
+  "c25_s0": {
+   "cap": 25,
+   "seed": 0,
+   "n_tracks": 1071,
+   "n_groups": 200,
+   "n_classes": 54,
+   "n_folds": 5,
+   "class_prior_expectation": 0.019742101633681803,
+   "all54_top1": 598,
+   "all54_top3": 762,
+   "all54_top1_rate": 0.5583566760037348,
+   "all54_top3_rate": 0.711484593837535,
+   "restricted_n": 450,
+   "restricted_top1": 293,
+   "restricted_top3": 348,
+   "restricted_top1_rate": 0.6511111111111111,
+   "restricted_top3_rate": 0.7733333333333333,
+   "per_class_restricted": {
+    "Aṭāna": {
+     "n": 25,
+     "top1": 0.72
+    },
+    "Bhairavi": {
+     "n": 25,
+     "top1": 0.6
+    },
+    "Hamsadhvāni": {
+     "n": 25,
+     "top1": 0.68
+    },
+    "Harikāmbhōji": {
+     "n": 25,
+     "top1": 0.44
+    },
+    "Kalyāṇi": {
+     "n": 25,
+     "top1": 0.76
+    },
+    "Kamās": {
+     "n": 25,
+     "top1": 0.68
+    },
+    "Karaharapriya": {
+     "n": 25,
+     "top1": 0.48
+    },
+    "Kāmavardani": {
+     "n": 25,
+     "top1": 0.76
+    },
+    "Kānaḍa": {
+     "n": 25,
+     "top1": 0.64
+    },
+    "Mōhanaṁ": {
+     "n": 25,
+     "top1": 0.76
+    },
+    "Nāṭa": {
+     "n": 25,
+     "top1": 0.8
+    },
+    "Pūrvīkaḷyāṇi": {
+     "n": 25,
+     "top1": 0.8
+    },
+    "Sindhubhairavi": {
+     "n": 25,
+     "top1": 0.6
+    },
+    "Sāvēri": {
+     "n": 25,
+     "top1": 0.44
+    },
+    "Tōḍi": {
+     "n": 25,
+     "top1": 0.84
+    },
+    "Vasanta": {
+     "n": 25,
+     "top1": 0.28
+    },
+    "Śankarābharaṇaṁ": {
+     "n": 25,
+     "top1": 0.68
+    },
+    "Ṣanmukhapriya": {
+     "n": 25,
+     "top1": 0.76
+    }
+   }
+  },
+  "c25_s1": {
+   "cap": 25,
+   "seed": 1,
+   "n_tracks": 1071,
+   "n_groups": 199,
+   "n_classes": 54,
+   "n_folds": 5,
+   "class_prior_expectation": 0.019742101633681803,
+   "all54_top1": 608,
+   "all54_top3": 767,
+   "all54_top1_rate": 0.5676937441643324,
+   "all54_top3_rate": 0.7161531279178338,
+   "restricted_n": 450,
+   "restricted_top1": 298,
+   "restricted_top3": 354,
+   "restricted_top1_rate": 0.6622222222222223,
+   "restricted_top3_rate": 0.7866666666666666,
+   "per_class_restricted": {
+    "Aṭāna": {
+     "n": 25,
+     "top1": 0.72
+    },
+    "Bhairavi": {
+     "n": 25,
+     "top1": 0.4
+    },
+    "Hamsadhvāni": {
+     "n": 25,
+     "top1": 0.76
+    },
+    "Harikāmbhōji": {
+     "n": 25,
+     "top1": 0.48
+    },
+    "Kalyāṇi": {
+     "n": 25,
+     "top1": 0.84
+    },
+    "Kamās": {
+     "n": 25,
+     "top1": 0.72
+    },
+    "Karaharapriya": {
+     "n": 25,
+     "top1": 0.44
+    },
+    "Kāmavardani": {
+     "n": 25,
+     "top1": 0.72
+    },
+    "Kānaḍa": {
+     "n": 25,
+     "top1": 0.6
+    },
+    "Mōhanaṁ": {
+     "n": 25,
+     "top1": 0.84
+    },
+    "Nāṭa": {
+     "n": 25,
+     "top1": 0.76
+    },
+    "Pūrvīkaḷyāṇi": {
+     "n": 25,
+     "top1": 0.84
+    },
+    "Sindhubhairavi": {
+     "n": 25,
+     "top1": 0.72
+    },
+    "Sāvēri": {
+     "n": 25,
+     "top1": 0.6
+    },
+    "Tōḍi": {
+     "n": 25,
+     "top1": 0.84
+    },
+    "Vasanta": {
+     "n": 25,
+     "top1": 0.28
+    },
+    "Śankarābharaṇaṁ": {
+     "n": 25,
+     "top1": 0.72
+    },
+    "Ṣanmukhapriya": {
+     "n": 25,
+     "top1": 0.64
+    }
+   }
+  },
+  "c25_s2": {
+   "cap": 25,
+   "seed": 2,
+   "n_tracks": 1071,
+   "n_groups": 201,
+   "n_classes": 54,
+   "n_folds": 5,
+   "class_prior_expectation": 0.019742101633681803,
+   "all54_top1": 606,
+   "all54_top3": 768,
+   "all54_top1_rate": 0.5658263305322129,
+   "all54_top3_rate": 0.7170868347338936,
+   "restricted_n": 450,
+   "restricted_top1": 307,
+   "restricted_top3": 357,
+   "restricted_top1_rate": 0.6822222222222222,
+   "restricted_top3_rate": 0.7933333333333333,
+   "per_class_restricted": {
+    "Aṭāna": {
+     "n": 25,
+     "top1": 0.76
+    },
+    "Bhairavi": {
+     "n": 25,
+     "top1": 0.64
+    },
+    "Hamsadhvāni": {
+     "n": 25,
+     "top1": 0.72
+    },
+    "Harikāmbhōji": {
+     "n": 25,
+     "top1": 0.52
+    },
+    "Kalyāṇi": {
+     "n": 25,
+     "top1": 0.84
+    },
+    "Kamās": {
+     "n": 25,
+     "top1": 0.76
+    },
+    "Karaharapriya": {
+     "n": 25,
+     "top1": 0.48
+    },
+    "Kāmavardani": {
+     "n": 25,
+     "top1": 0.72
+    },
+    "Kānaḍa": {
+     "n": 25,
+     "top1": 0.64
+    },
+    "Mōhanaṁ": {
+     "n": 25,
+     "top1": 0.8
+    },
+    "Nāṭa": {
+     "n": 25,
+     "top1": 0.8
+    },
+    "Pūrvīkaḷyāṇi": {
+     "n": 25,
+     "top1": 0.84
+    },
+    "Sindhubhairavi": {
+     "n": 25,
+     "top1": 0.72
+    },
+    "Sāvēri": {
+     "n": 25,
+     "top1": 0.64
+    },
+    "Tōḍi": {
+     "n": 25,
+     "top1": 0.72
+    },
+    "Vasanta": {
+     "n": 25,
+     "top1": 0.36
+    },
+    "Śankarābharaṇaṁ": {
+     "n": 25,
+     "top1": 0.72
+    },
+    "Ṣanmukhapriya": {
+     "n": 25,
+     "top1": 0.6
+    }
+   }
+  },
+  "c30_s0": {
+   "cap": 30,
+   "seed": 0,
+   "n_tracks": 1139,
+   "n_groups": 204,
+   "n_classes": 54,
+   "n_folds": 5,
+   "class_prior_expectation": 0.02031031641359386,
+   "all54_top1": 649,
+   "all54_top3": 812,
+   "all54_top1_rate": 0.5697980684811238,
+   "all54_top3_rate": 0.7129060579455663,
+   "restricted_n": 518,
+   "restricted_top1": 356,
+   "restricted_top3": 414,
+   "restricted_top1_rate": 0.6872586872586872,
+   "restricted_top3_rate": 0.7992277992277992,
+   "per_class_restricted": {
+    "Aṭāna": {
+     "n": 26,
+     "top1": 0.7692307692307693
+    },
+    "Bhairavi": {
+     "n": 30,
+     "top1": 0.7
+    },
+    "Hamsadhvāni": {
+     "n": 30,
+     "top1": 0.7
+    },
+    "Harikāmbhōji": {
+     "n": 29,
+     "top1": 0.5517241379310345
+    },
+    "Kalyāṇi": {
+     "n": 30,
+     "top1": 0.8333333333333334
+    },
+    "Kamās": {
+     "n": 29,
+     "top1": 0.6896551724137931
+    },
+    "Karaharapriya": {
+     "n": 27,
+     "top1": 0.48148148148148145
+    },
+    "Kāmavardani": {
+     "n": 30,
+     "top1": 0.7333333333333333
+    },
+    "Kānaḍa": {
+     "n": 25,
+     "top1": 0.6
+    },
+    "Mōhanaṁ": {
+     "n": 30,
+     "top1": 0.8
+    },
+    "Nāṭa": {
+     "n": 30,
+     "top1": 0.7333333333333333
+    },
+    "Pūrvīkaḷyāṇi": {
+     "n": 26,
+     "top1": 0.8461538461538461
+    },
+    "Sindhubhairavi": {
+     "n": 29,
+     "top1": 0.6896551724137931
+    },
+    "Sāvēri": {
+     "n": 30,
+     "top1": 0.5666666666666667
+    },
+    "Tōḍi": {
+     "n": 30,
+     "top1": 0.8666666666666667
+    },
+    "Vasanta": {
+     "n": 28,
+     "top1": 0.35714285714285715
+    },
+    "Śankarābharaṇaṁ": {
+     "n": 30,
+     "top1": 0.7333333333333333
+    },
+    "Ṣanmukhapriya": {
+     "n": 29,
+     "top1": 0.6896551724137931
+    }
+   }
+  },
+  "c30_s1": {
+   "cap": 30,
+   "seed": 1,
+   "n_tracks": 1139,
+   "n_groups": 204,
+   "n_classes": 54,
+   "n_folds": 5,
+   "class_prior_expectation": 0.02031031641359386,
+   "all54_top1": 649,
+   "all54_top3": 812,
+   "all54_top1_rate": 0.5697980684811238,
+   "all54_top3_rate": 0.7129060579455663,
+   "restricted_n": 518,
+   "restricted_top1": 356,
+   "restricted_top3": 414,
+   "restricted_top1_rate": 0.6872586872586872,
+   "restricted_top3_rate": 0.7992277992277992,
+   "per_class_restricted": {
+    "Aṭāna": {
+     "n": 26,
+     "top1": 0.7692307692307693
+    },
+    "Bhairavi": {
+     "n": 30,
+     "top1": 0.7
+    },
+    "Hamsadhvāni": {
+     "n": 30,
+     "top1": 0.7
+    },
+    "Harikāmbhōji": {
+     "n": 29,
+     "top1": 0.5517241379310345
+    },
+    "Kalyāṇi": {
+     "n": 30,
+     "top1": 0.8333333333333334
+    },
+    "Kamās": {
+     "n": 29,
+     "top1": 0.6896551724137931
+    },
+    "Karaharapriya": {
+     "n": 27,
+     "top1": 0.48148148148148145
+    },
+    "Kāmavardani": {
+     "n": 30,
+     "top1": 0.7333333333333333
+    },
+    "Kānaḍa": {
+     "n": 25,
+     "top1": 0.6
+    },
+    "Mōhanaṁ": {
+     "n": 30,
+     "top1": 0.8
+    },
+    "Nāṭa": {
+     "n": 30,
+     "top1": 0.7333333333333333
+    },
+    "Pūrvīkaḷyāṇi": {
+     "n": 26,
+     "top1": 0.8461538461538461
+    },
+    "Sindhubhairavi": {
+     "n": 29,
+     "top1": 0.6896551724137931
+    },
+    "Sāvēri": {
+     "n": 30,
+     "top1": 0.5666666666666667
+    },
+    "Tōḍi": {
+     "n": 30,
+     "top1": 0.8666666666666667
+    },
+    "Vasanta": {
+     "n": 28,
+     "top1": 0.35714285714285715
+    },
+    "Śankarābharaṇaṁ": {
+     "n": 30,
+     "top1": 0.7333333333333333
+    },
+    "Ṣanmukhapriya": {
+     "n": 29,
+     "top1": 0.6896551724137931
+    }
+   }
+  },
+  "c30_s2": {
+   "cap": 30,
+   "seed": 2,
+   "n_tracks": 1139,
+   "n_groups": 204,
+   "n_classes": 54,
+   "n_folds": 5,
+   "class_prior_expectation": 0.02031031641359386,
+   "all54_top1": 649,
+   "all54_top3": 812,
+   "all54_top1_rate": 0.5697980684811238,
+   "all54_top3_rate": 0.7129060579455663,
+   "restricted_n": 518,
+   "restricted_top1": 356,
+   "restricted_top3": 414,
+   "restricted_top1_rate": 0.6872586872586872,
+   "restricted_top3_rate": 0.7992277992277992,
+   "per_class_restricted": {
+    "Aṭāna": {
+     "n": 26,
+     "top1": 0.7692307692307693
+    },
+    "Bhairavi": {
+     "n": 30,
+     "top1": 0.7
+    },
+    "Hamsadhvāni": {
+     "n": 30,
+     "top1": 0.7
+    },
+    "Harikāmbhōji": {
+     "n": 29,
+     "top1": 0.5517241379310345
+    },
+    "Kalyāṇi": {
+     "n": 30,
+     "top1": 0.8333333333333334
+    },
+    "Kamās": {
+     "n": 29,
+     "top1": 0.6896551724137931
+    },
+    "Karaharapriya": {
+     "n": 27,
+     "top1": 0.48148148148148145
+    },
+    "Kāmavardani": {
+     "n": 30,
+     "top1": 0.7333333333333333
+    },
+    "Kānaḍa": {
+     "n": 25,
+     "top1": 0.6
+    },
+    "Mōhanaṁ": {
+     "n": 30,
+     "top1": 0.8
+    },
+    "Nāṭa": {
+     "n": 30,
+     "top1": 0.7333333333333333
+    },
+    "Pūrvīkaḷyāṇi": {
+     "n": 26,
+     "top1": 0.8461538461538461
+    },
+    "Sindhubhairavi": {
+     "n": 29,
+     "top1": 0.6896551724137931
+    },
+    "Sāvēri": {
+     "n": 30,
+     "top1": 0.5666666666666667
+    },
+    "Tōḍi": {
+     "n": 30,
+     "top1": 0.8666666666666667
+    },
+    "Vasanta": {
+     "n": 28,
+     "top1": 0.35714285714285715
+    },
+    "Śankarābharaṇaṁ": {
+     "n": 30,
+     "top1": 0.7333333333333333
+    },
+    "Ṣanmukhapriya": {
+     "n": 29,
+     "top1": 0.6896551724137931
+    }
+   }
+  }
+ },
+ "gate_a": {
+  "passed": true,
+  "per_seed": [
+   true,
+   true,
+   true
+  ],
+  "expected": "649/1139 top-1 and 812/1139 top-3"
+ }
+}

@@ -1,0 +1,23 @@
+1287 tracks with full melody
+built and cached: 1287 tracks, 4800 features, provenance gaps {'unresolved_contour': 0, 'unresolved_identifier': 0, 'artist_merges_c': 90, 'artist_merges_c2': 82}
+tier min>=10: 54 classes, 1139 tracks; read-out (ii) restricted to 18 classes with >=25 tracks
+cap 10 seed 0:  tracks  540 groups 152  |  all-54  235/540   43.5%  |  restricted-18  81/180  45.0% (top3 62.2%)
+cap 10 seed 1:  tracks  540 groups 152  |  all-54  257/540   47.6%  |  restricted-18  91/180  50.6% (top3 68.9%)
+cap 10 seed 2:  tracks  540 groups 146  |  all-54  259/540   48.0%  |  restricted-18 100/180  55.6% (top3 68.9%)
+cap 15 seed 0:  tracks  779 groups 176  |  all-54  391/779   50.2%  |  restricted-18 148/270  54.8% (top3 72.6%)
+cap 15 seed 1:  tracks  779 groups 174  |  all-54  409/779   52.5%  |  restricted-18 155/270  57.4% (top3 72.6%)
+cap 15 seed 2:  tracks  779 groups 180  |  all-54  424/779   54.4%  |  restricted-18 165/270  61.1% (top3 75.6%)
+cap 20 seed 0:  tracks  953 groups 191  |  all-54  520/953   54.6%  |  restricted-18 219/360  60.8% (top3 72.8%)
+cap 20 seed 1:  tracks  953 groups 190  |  all-54  533/953   55.9%  |  restricted-18 235/360  65.3% (top3 77.8%)
+cap 20 seed 2:  tracks  953 groups 191  |  all-54  530/953   55.6%  |  restricted-18 238/360  66.1% (top3 76.4%)
+cap 25 seed 0:  tracks 1071 groups 200  |  all-54  598/1071  55.8%  |  restricted-18 293/450  65.1% (top3 77.3%)
+cap 25 seed 1:  tracks 1071 groups 199  |  all-54  608/1071  56.8%  |  restricted-18 298/450  66.2% (top3 78.7%)
+cap 25 seed 2:  tracks 1071 groups 201  |  all-54  606/1071  56.6%  |  restricted-18 307/450  68.2% (top3 79.3%)
+cap 30 seed 0:  tracks 1139 groups 204  |  all-54  649/1139  57.0%  |  restricted-18 356/518  68.7% (top3 79.9%)
+cap 30 seed 1:  tracks 1139 groups 204  |  all-54  649/1139  57.0%  |  restricted-18 356/518  68.7% (top3 79.9%)
+cap 30 seed 2:  tracks 1139 groups 204  |  all-54  649/1139  57.0%  |  restricted-18 356/518  68.7% (top3 79.9%)
+
+GATE A (c=30 is the whole tier, must reproduce 649/1139 and 812/1139): PASS  per-seed [True, True, True]
+
+wrote /Users/shyamravidath/carnatify/data/raga_coverage/within_class.json
+EXIT=0

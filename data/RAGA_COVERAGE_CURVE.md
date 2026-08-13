@@ -476,6 +476,288 @@ series exists to avoid.
   be quoted as evidence about the lyrics-ASR, Qmax or CSI paths in either
   direction.
 
+## 10. Follow-up A — the within-class learning curve: is `r = 0.519` a confound?
+
+Added 2026-08-13 at the verifier seat's request. Registered in
+`data/raga_coverage/PREREGISTRATION_FOLLOWUP.md` §A and **committed (`87bfb42`)
+before either scoring script existed**. §§1-9 above are unchanged.
+
+### 10.1 Why the cross-class correlation could not settle it
+
+`data/RAGA_CEILING_EVALUATION.md` reports `r(tracks, top-1) = 0.519`
+(`p = 5.8e-05`, `n = 54`) across the 54 classes, monotone in bins: 39.9%
+(10-14 tracks) → 41.5% (15-19) → 52.6% (20-24) → 68.6% (25-30). It cannot be
+read as "audio buys accuracy", because the 25-30 bin is exactly the set
+`scratch_archive_0711/dl_deficits30.py` topped up as `PRIORITY_20` /
+`SECONDARY_20` / `TOPUP_30` — the popular, canonical, well-recorded ragas. Track
+count and "easy to classify" are entangled through popularity, and §4 above
+already contains the counterexamples: Saurāṣtraṁ 92.3% on 13 tracks,
+Nāṭakurinji 0.0% on 11.
+
+**The within-class test breaks the confound by comparing every class against
+itself.** The 54-class tier is held fixed (the class set is computed on full,
+uncapped level-(a) counts and never moves), and every class is subsampled to at
+most `c` tracks. Each class's tracks are permuted once per seed and cap `c` takes
+the first `c`, so `c=10 ⊂ c=15 ⊂ … ⊂ c=30` and the arms are paired by
+construction. Three cap seeds (0, 1, 2), all reported.
+
+**Gate A, registered in advance and passed.** No class in the corpus has more
+than 30 tracks, so `c = 30` is the whole tier and must reproduce the committed
+`min>=10` result exactly. It does, for all three seeds:
+`649/1139 = 57.0%` top-1, `812/1139 = 71.3%` top-3, `PASS [True, True, True]`.
+
+### 10.2 The curve
+
+Mean over the three cap seeds, level (c) source-disjoint, `[min-max]` across
+seeds. **Read-out (ii), the 18 classes with ≥ 25 tracks, is primary** — the
+classifier stays the full 54-way problem at every cell and only the evaluation
+set is restricted, because only those classes vary across the whole range.
+
+| cap `c` | tracks | (c) groups | **(ii) restricted-18 top-1** | seed spread | (ii) top-3 | (i) all-54 top-1 |
+|---|---|---|---|---|---|---|
+| 10 | 540 | 146-152 | **50.4%** [45.0 – 55.6] | 10.6 pp | 66.7% | 46.4% [43.5 – 48.0] |
+| 15 | 779 | 174-180 | **57.8%** [54.8 – 61.1] | 6.3 pp | 73.6% | 52.4% [50.2 – 54.4] |
+| 20 | 953 | 190-191 | **64.1%** [60.8 – 66.1] | 5.3 pp | 75.6% | 55.4% [54.6 – 55.9] |
+| 25 | 1071 | 199-201 | **66.5%** [65.1 – 68.2] | 3.1 pp | 78.4% | 56.4% [55.8 – 56.8] |
+| **30** | **1139** | **204** | **68.7%** (all seeds) | 0.0 pp | 79.9% | **57.0%** (all seeds) |
+
+**Total rise `c=10 → c=30`: +18.4 pp on the restricted-18, +10.6 pp on all 54.**
+
+Steps: **+7.4, +6.3, +2.4, +2.2 pp**. Seed spread falls monotonically, 10.6 → 6.3
+→ 5.3 → 3.1 → 0.0 pp, exactly as registered — at `c = 10` two thirds of some
+classes are thrown away and one draw is genuinely noisy, which is why three seeds
+were registered rather than one.
+
+### 10.3 The deceleration is in cap-space, not in track-space
+
+The step sizes shrink, which looks like saturation. It mostly is not. **Each cap
+step adds fewer tracks than the last**, because fewer classes are still truncated
+— 53 classes are truncated at `c=10` but only 17 at `c=25`. Normalising:
+
+| step | tracks added | rise | **pp per 100 tracks added** |
+|---|---|---|---|
+| 10 → 15 | +239 | +7.4 pp | **3.10** |
+| 15 → 20 | +174 | +6.3 pp | **3.62** |
+| 20 → 25 | +118 | +2.4 pp | **2.07** |
+| **25 → 30** | **+68** | **+2.2 pp** | **3.25** |
+
+**Per track added, the marginal value at the top of the range is the same as at
+the bottom.** There is no saturation signal in this corpus at all: the last 68
+tracks bought 3.25 pp per hundred, the first 239 bought 3.10. The apparent
+flattening is an artifact of plotting against the cap rather than against the
+data actually added.
+
+### 10.4 Per-class slopes — and the finding that inverts the fetch priority
+
+Mean over seeds, restricted-18, sorted by `c=10 → c=30` gain:
+
+| class | c=10 | c=20 | c=25 | c=30 | **10→30** | 25→30 |
+|---|---|---|---|---|---|---|
+| Bhairavi | 20.0 | 48.3 | 54.7 | 70.0 | **+50.0** | +15.3 |
+| Kānaḍa | 20.0 | 46.7 | 62.7 | 60.0 | **+40.0** | −2.7 |
+| Ṣanmukhapriya | 36.7 | 65.0 | 66.7 | 69.0 | **+32.3** | +2.3 |
+| Karaharapriya | 20.0 | 43.3 | 46.7 | 48.1 | **+28.1** | +1.5 |
+| Kāmavardani | 46.7 | 66.7 | 73.3 | 73.3 | **+26.7** | −0.0 |
+| Sindhubhairavi | 43.3 | 65.0 | 68.0 | 69.0 | **+25.6** | +1.0 |
+| Harikāmbhōji | 30.0 | 48.3 | 48.0 | 55.2 | **+25.2** | +7.2 |
+| Kamās | 46.7 | 66.7 | 72.0 | 69.0 | **+22.3** | −3.0 |
+| Aṭāna | 60.0 | 71.7 | 73.3 | 76.9 | +16.9 | +3.6 |
+| Śankarābharaṇaṁ | 56.7 | 63.3 | 70.7 | 73.3 | +16.7 | +2.7 |
+| Pūrvīkaḷyāṇi | 70.0 | 83.3 | 82.7 | 84.6 | +14.6 | +1.9 |
+| Tōḍi | 73.3 | 83.3 | 80.0 | 86.7 | +13.3 | +6.7 |
+| Nāṭa | 60.0 | 75.0 | 78.7 | 73.3 | +13.3 | −5.3 |
+| Vasanta | 30.0 | 33.3 | 30.7 | 35.7 | +5.7 | +5.0 |
+| Mōhanaṁ | 76.7 | 86.7 | 80.0 | 80.0 | +3.3 | +0.0 |
+| Kalyāṇi | 83.3 | 78.3 | 81.3 | 83.3 | **+0.0** | +2.0 |
+| Sāvēri | 60.0 | 55.0 | 56.0 | 56.7 | **−3.3** | +0.7 |
+| Hamsadhvāni | 73.3 | 73.3 | 72.0 | 70.0 | **−3.3** | −2.0 |
+
+Three classes have a non-positive `c=10 → c=30` slope, exactly the "at least 3"
+registered in advance. **n is not destiny inside a class either.**
+
+**The pattern is the actionable finding, and it inverts what the fetcher did.**
+Correlating each class's accuracy at `c = 10` against its gain from tripling its
+data: **`r = −0.777`, `p = 1.5e-04`** (Spearman −0.804, `p = 5.8e-05`).
+
+- classes **below** 50% at `c = 10` gain **+28.4 pp** on average;
+- classes **above** 50% at `c = 10` gain **+7.9 pp**.
+
+Kalyāṇi, Mōhanaṁ, Hamsadhvāni and Tōḍi are already saturated at 10-15 tracks;
+Bhairavi goes 20.0% → 70.0%. **`dl_deficits30.py` topped up the popular classes,
+which are precisely the ones with nothing left to gain.** The audio is worth
+three to four times as much per track when it is spent on a class the model is
+currently bad at.
+
+Vasanta is the exception that proves it is not a rule: weak *and* flat (+5.7 pp
+over a tripling), consistent with §4 above and with the duration curve. Vasanta's
+problem is not data volume.
+
+### 10.5 Where this lands on the registered decision table
+
+Registered thresholds: "still climbing at `c=30`" requires the `c=25→30` step
+≥ 1.5 pp **and** the `c=20→30` step ≥ 3 pp. Measured: **+2.2 pp** and
+**+4.6 pp**. Both clear. The row is:
+
+> **still climbing at `c=30`** — *the corpus is under a collection cap that is
+> costing real accuracy. The fetch is the best-value job on the board, and the
+> fetch target should go above 30.*
+
+**`r = 0.519` is confounded but the conclusion it pointed at survives the
+deconfounding.** Within-class, holding popularity and recording quality fixed,
+tripling a class's audio is worth **+18.4 pp**, and the marginal track at the
+30-track cap is worth as much as the marginal track at 10.
+
+Two qualifications, both registered before the numbers. First, the cap applies to
+**every** class at once, so this measures "what happens if the whole corpus
+deepens" — which is the fetch decision as it would actually be executed — and not
+the pure own-data effect for one class. Second, only 17 of the 18 classes have
+more than 25 tracks and only 9 have 30, so the `c=25 → c=30` segment moves less
+data than any other and is the least well determined point on the curve. Both are
+reasons to treat +2.2 pp as an estimate with real uncertainty, not to discount the
+direction.
+
+### 10.6 Predictions, scored
+
+| prediction | registered | measured | verdict |
+|---|---|---|---|
+| **verifier:** total rise `c=10→30` on read-out (ii) | 6-12 pp | **+18.4 pp** | **refuted** — the within-class curve is *steeper* than the "much flatter" expectation |
+| **verifier:** visibly flattening by `c=25`, operationalised as the `25→30` step being under half the `15→20` step | yes | 2.2 vs 6.3/2 = 3.15 → **yes** | **confirmed** in cap-space — but §10.3 shows it is not flattening per track added |
+| **this seat:** total rise 13-20 pp | 13-20 pp | **+18.4 pp** | **confirmed** |
+| **this seat:** `25→30` step ≥ 1.5 pp, i.e. the curve is not flat at the top | ≥ 1.5 pp | **+2.2 pp** | **confirmed** |
+| **this seat:** and therefore the verifier's "visibly flattening" is wrong | — | flattening in cap-space, flat in neither per-track nor decision terms | **refuted as stated** — both readings are true of different x-axes and mine was the sloppier claim |
+| **this seat:** all-54 rise smaller than restricted-18 | smaller | +10.6 vs +18.4 pp | **confirmed** |
+| **this seat:** ≥ 3 of 18 classes with non-positive slope | ≥ 3 | exactly 3 | **confirmed** |
+| **this seat:** seed spread widest at `c=10`, falling monotonically | yes | 10.6 → 6.3 → 5.3 → 3.1 → 0.0 | **confirmed** |
+
+---
+
+## 11. Follow-up B — pricing per-class admission
+
+Registered in `data/raga_coverage/PREREGISTRATION_FOLLOWUP.md` §B, committed
+before the scorer existed. §4 above argues that a global `min_tracks` cannot
+separate Saurāṣtraṁ (13 tracks, 92.3%) from Nāṭakurinji (11 tracks, 0.0%) and
+that the lever is per-class admission. **This prices that argument, and it does
+not survive.**
+
+### 11.1 The trap, and how it was avoided
+
+Selecting classes on the same folds you then score on is selection on noise: with
+10-30 tracks per class a class's measured top-1 has a standard error of 9-15 pp,
+so thresholding keeps whichever classes got lucky. The primary arm is therefore
+**nested** — the outer fold assignment is the committed `min>=10` level-(c) split
+(computed once, identical at every threshold, so two thresholds cannot differ by
+fold churn), and for each outer fold the admitted set comes from an **inner**
+5-fold group CV over that fold's *training rows only*. The selection for a fold
+never sees the fold.
+
+**Gate B, registered in advance and passed.** At `t = 0` every class is admitted
+and both arms must collapse to the plain 54-class tier: `649/1139` top-1 and
+`812/1139` top-3. `PASS`.
+
+### 11.2 The result
+
+| `t` | arm | classes admitted | coverage | top-1 | top-3 | **expected hits / 100** |
+|---|---|---|---|---|---|---|
+| 0.00 | **nested** | 54.0 [54-54] | 79.2% | 649/1139 = 57.0% | 71.3% | **45.1** |
+| 0.10 | **nested** | 47.2 [46-49] | 72.6% | 618/1030 = 60.0% | 74.2% | **43.6** |
+| 0.20 | **nested** | 44.0 [43-45] | 69.4% | 598/969 = 61.7% | 74.9% | **42.8** |
+| 0.30 | **nested** | 41.2 [39-44] | 66.9% | 585/929 = 63.0% | 76.6% | **42.1** |
+| 0.40 | **nested** | 37.2 [35-41] | 62.2% | 543/851 = 63.8% | 76.7% | **39.6** |
+| 0.10 | *in-sample bound* | 50.0 [50-50] | 75.3% | 59.2% | 73.4% | *44.6* |
+| 0.20 | *in-sample bound* | 48.0 [48-48] | 73.7% | 60.5% | 74.3% | *44.6* |
+| 0.30 | *in-sample bound* | 43.0 [43-43] | 66.7% | 64.4% | 77.1% | *42.9* |
+| 0.40 | *in-sample bound* | 37.0 [37-37] | 62.1% | 68.2% | 79.7% | *42.3* |
+
+**No threshold beats `t = 0`. Per-class admission does not beat the best global
+`min_tracks`; it is strictly worse at every threshold tested**, monotonically:
+45.1 → 43.6 → 42.8 → 42.1 → 39.6. Compared against the exported model's tier
+(`min>=20`, 38.2), only the most aggressive admission is worse.
+
+The mechanism is arithmetic, and it is the same one that killed the narrow tier
+in §3: **dropping a class costs its repertoire mass immediately and buys accuracy
+only slowly.** At `t = 0.10` the honest arm drops ~7 classes, loses 6.6 pp of
+coverage and gains 3.0 pp of top-1 — and 0.726 × 0.600 < 0.792 × 0.570.
+
+This also puts a measured number on §4's estimate that dropping the four sub-10%
+classes would be "roughly a wash": measured with honest selection it is **−1.5
+expected hits per 100**. Slightly worse than a wash, and §4's wording was
+optimistic.
+
+### 11.3 The selection-on-noise effect, isolated
+
+At `t = 0.40` the two arms admit **the same number of classes at the same
+coverage** — 37.2 classes / 62.2% nested, 37.0 / 62.1% in-sample — and report:
+
+| arm | classes | coverage | top-1 |
+|---|---|---|---|
+| nested (honest) | 37.2 | 62.2% | **63.8%** |
+| in-sample (bound) | 37.0 | 62.1% | **68.2%** |
+
+**4.4 pp of pure selection-on-noise inflation, at matched coverage and matched
+class count.** Anything that picks classes on measured per-class accuracy and
+reports that same accuracy is overstating by about that much on this corpus. This
+is the deliverable of Job B whichever way the headline landed.
+
+The instability is visible directly. At `t = 0.20` the nested arm ever admits 51
+classes, and **15 of them flip in and out across the five outer folds** —
+Jōnpuri, Pūrṇacandrika and Sencuruṭṭi are admitted in 1 fold of 5; Cakravākaṁ,
+Dvijāvanti, Mukhāri and Śuddadhanyāsi in 4 of 5. The in-sample arm, by
+construction, admits an identical set every time and looks perfectly stable. That
+apparent stability is the illusion.
+
+### 11.4 What per-class admission *does* buy
+
+It is not worthless — it is just not an expected-hits lever. Along the honest
+arm, **accuracy-when-it-speaks rises from 57.0% to 63.8% while coverage falls
+79.2% → 62.2%.** That is a precision/coverage trade, and it is the same axis as
+the abstain gate in `HANDOFF_SESSION_0731.md` §6.3. Expected hits prices a wrong
+answer at zero, not at negative, so it is by construction blind to the thing
+admission is actually for.
+
+And the extreme case does work. At `t = 0.10` exactly three classes are **never**
+admitted in any of the five folds — **Nāṭakurinji, Janaranjani and Haṁsānandi** —
+which are three of the four §4 named as functionally noise. **A per-class rule
+identifies the genuinely dead classes stably; it is the marginal decisions, in the
+20-40% band, that are noise.** The defensible version of §4's recommendation is
+therefore narrow: drop the handful of classes that are stably near-zero out of
+sample, and do **not** run a threshold sweep as a tuning knob.
+
+### 11.5 Predictions, scored
+
+| prediction | registered | measured | verdict |
+|---|---|---|---|
+| honest gain over the best global tier | 0 to +3 hits/100 (hedged: "possibly no threshold beats `t = 0`") | **−1.5 to −5.5** | **refuted** — the band excluded negatives; the hedge covered the outcome but the band is what was registered |
+| in-sample arm inflated by ≥ 2 hits/100 at the threshold that maximises it | ≥ 2 | +1.0 at `t=0.10`, +1.8 at `t=0.20`, **+2.7 at `t=0.40`** | **refuted as stated** — the inflation is real but shows up in *top-1* (+4.4 pp at matched coverage), not in expected hits |
+| optimum at `t = 0.10` or `0.20` | low but non-zero | **`t = 0`** | **refuted** |
+| admitted count varies by ≥ 4 across folds at `t = 0.30` | ≥ 4 | **5** (39-44) | **confirmed** |
+
+---
+
+## 12. What the two follow-ups jointly say
+
+`data/RAGA_CEILING_EVALUATION.md` frames the product constraint as: the model
+cannot **name** 40-60% of what a listener hears, and wild audio costs
+approximately nothing. Against that frame:
+
+1. **More classes is a real lever and it is cheap.** §3: expected hits rise
+   monotonically to 45.1 at 54 classes, and the incumbents pay only 3.5 pp (§5).
+2. **More audio per class is *also* a real lever, and the confound did not
+   explain it away.** §10: +18.4 pp within-class from 10 to 30 tracks, with the
+   marginal track at the cap worth as much as the marginal track at the floor.
+   **The fetch is worth doing.**
+3. **But spend it on the weak classes, not the popular ones.** §10.4: `r = −0.777`
+   between a class's current accuracy and what more audio buys it. This is the
+   one place where a scarce-hours decision changes on this evidence.
+4. **Per-class admission is not the lever §4 suggested it was.** §11: it loses
+   expected hits at every threshold, and selecting on measured per-class accuracy
+   inflates the reported number by 4.4 pp. Keep only the narrow version — drop
+   classes that are stably near-zero out of sample.
+
+**The verdict on what to fund belongs to the verifier seat.** These sections state
+the measurements and the rows they land on.
+
+---
+
 ## 9. Artifacts
 
 | file | what |
@@ -489,3 +771,8 @@ series exists to avoid.
 | `data/raga_coverage/levels_min{25,20,15,10}.json` | per-tier level (a)/(c) results **with per-track correctness and level-(c) group ids** |
 | `data/raga_coverage/curve.json` | every table in this document, machine-readable |
 | `data/raga_coverage/*.log` | raw run output, including the reproduction gate verbatim |
+| `data/raga_coverage/PREREGISTRATION_FOLLOWUP.md` | Jobs A and B registered and committed (`87bfb42`) before either scorer existed |
+| `scripts/raga_coverage_matrix.py` | the feature matrix and level-(c) groups, built once through the gated harness's own `collect`/`build` and cached |
+| `scripts/raga_coverage_within_class.py` | Job A — nested per-class subsampling, three cap seeds, Gate A |
+| `scripts/raga_coverage_admission.py` | Job B — nested and in-sample admission arms, Gate B |
+| `data/raga_coverage/within_class.json`, `admission.json` | every cell of both follow-ups, written after each cell |

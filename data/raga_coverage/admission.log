@@ -1,0 +1,30 @@
+loaded cached matrix: 1287 tracks, 4800 features
+54 classes, 1139 tracks, 204 level-(c) groups; repertoire denominator 3009
+
+=== arm: nested ===
+  fold 0: inner selection CV done
+  fold 1: inner selection CV done
+  fold 2: inner selection CV done
+  fold 3: inner selection CV done
+  fold 4: inner selection CV done
+
+    t           admitted         coverage             top-1    top-3  exp hits/100
+ 0.00    54.0 [54-54]           79.2%   649/1139   57.0%   71.3%         45.1
+ 0.10    47.2 [46-49]           72.6%   618/1030   60.0%   74.2%         43.6
+ 0.20    44.0 [43-45]           69.4%   598/969    61.7%   74.9%         42.8
+ 0.30    41.2 [39-44]           66.9%   585/929    63.0%   76.6%         42.1
+ 0.40    37.2 [35-41]           62.2%   543/851    63.8%   76.7%         39.6
+
+=== arm: in_sample  (OPTIMISTIC BOUND — selection sees the evaluation folds) ===
+
+    t           admitted         coverage             top-1    top-3  exp hits/100
+ 0.00    54.0 [54-54]           79.2%   649/1139   57.0%   71.3%         45.1
+ 0.10    50.0 [50-50]           75.3%   643/1086   59.2%   73.4%         44.6
+ 0.20    48.0 [48-48]           73.7%   634/1048   60.5%   74.3%         44.6
+ 0.30    43.0 [43-43]           66.7%   618/959    64.4%   77.1%         42.9
+ 0.40    37.0 [37-37]           62.1%   588/862    68.2%   79.7%         42.3
+
+GATE B (t=0 admits everything, must reproduce 649/1139 and 812/1139): PASS  got 649/1139 and 812/1139
+
+wrote /Users/shyamravidath/carnatify/data/raga_coverage/admission.json
+EXIT=0
