@@ -1,0 +1,52 @@
+{
+ "repertoire": {
+  "file": "data/scraped_compositions.json",
+  "items": 3698,
+  "items_with_canonical_raga": 3009,
+  "distinct_ragas": 100
+ },
+ "wild": {
+  "dir": "/Users/shyamravidath/sung_tests",
+  "clips": 106,
+  "clips_with_label": 103,
+  "distinct_ragas": 51
+ },
+ "tiers": {
+  "25": {
+   "classes": 18,
+   "n_tracks": 518,
+   "repertoire_hits": 1176,
+   "repertoire_coverage": 0.39082751744765704,
+   "wild_hits": 29,
+   "wild_coverage": 0.2815533980582524,
+   "ragas_absent_from_repertoire": []
+  },
+  "20": {
+   "classes": 32,
+   "n_tracks": 826,
+   "repertoire_hits": 1794,
+   "repertoire_coverage": 0.5962113659022931,
+   "wild_hits": 50,
+   "wild_coverage": 0.4854368932038835,
+   "ragas_absent_from_repertoire": []
+  },
+  "15": {
+   "classes": 44,
+   "n_tracks": 1020,
+   "repertoire_hits": 2134,
+   "repertoire_coverage": 0.709205716184779,
+   "wild_hits": 58,
+   "wild_coverage": 0.5631067961165048,
+   "ragas_absent_from_repertoire": []
+  },
+  "10": {
+   "classes": 54,
+   "n_tracks": 1139,
+   "repertoire_hits": 2383,
+   "repertoire_coverage": 0.7919574609504819,
+   "wild_hits": 64,
+   "wild_coverage": 0.6213592233009708,
+   "ragas_absent_from_repertoire": []
+  }
+ }
+}

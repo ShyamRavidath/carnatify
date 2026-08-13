@@ -25,9 +25,23 @@ Read-only. Fits in memory; nothing under `models/` is written.
 Writes `data/raga_audit/levels.json`.
 
 Usage: venv/bin/python scripts/raga_audit_levels.py
+
+2026-08-13 (`WORKHORSE_RAGA_COVERAGE_BRIEF.md`): the tier constant `MIN` is now
+reachable from the command line as `--min-tracks`, which accepts a comma list so
+several tiers can be scored off **one** feature matrix and **one** group vector
+build. `MIN = 25` remains the default and bare
+`venv/bin/python scripts/raga_audit_levels.py` is byte-identical in behaviour to
+the version that produced `data/raga_audit/levels.json`. Nothing else moved: not
+the features, not the taus, not the forest, not the splitter, not the seed, not
+the level-(c) group construction.
+
+Usage (coverage sweep):
+  venv/bin/python scripts/raga_audit_levels.py --min-tracks 25,20,15,10 \
+      --levels a,c --out-dir data/raga_coverage --per-track
 """
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 import unicodedata
@@ -169,6 +183,7 @@ def run_cv(X, y, g_track, g_split, keep):
     cnt = Counter(yk); tot = sum(cnt.values())
     prior = np.array([c / tot for c in cnt.values()])
     label_of = {tid: yk[gk == tid][0] for tid in correct1}
+    group_of = {tid: gs[gk == tid][0] for tid in correct1}
     return dict(
         n_ragas=len(le.classes_), n_tracks=ntot, n_groups=int(len(set(gs))),
         n_folds=len(set(fold_of.values())),
@@ -176,26 +191,50 @@ def run_cv(X, y, g_track, g_split, keep):
         top1_rate=t1 / ntot, top3_rate=t3 / ntot,
         majority_class_rate=float(prior.max()),
         class_prior_expectation=float((prior ** 2).sum()),
-        correct1=correct1, correct3=correct3, label_of=label_of,
+        correct1=correct1, correct3=correct3, label_of=label_of, group_of=group_of,
     )
 
 
-def main() -> None:
-    tracks, concert, artists = collect()
-    print(f'{len(tracks)} tracks with full melody', flush=True)
-    X, y, g, stem, src = build(tracks)
+def inventory(y, g, groups, keep, levels):
+    """Everything derivable from set membership alone — no fold is scored here.
 
-    Mt = dict(tid=g, src=src, stem=stem, saraga_concert=concert, saraga_artists=artists)
-    groups, notes = P.build_groups(Mt)
+    Exists so a preregistration can state n, the floors and the per-class group
+    counts of a tier *before* that tier's first `RandomForestClassifier` is fit.
+    """
+    m = np.isin(y, keep)
+    yk = y[m]
+    cnt = Counter(yk)
+    tot = sum(cnt.values())
+    prior = np.array([c / tot for c in cnt.values()])
+    inv = dict(
+        n_ragas=len(keep), n_tracks=int(len(set(g[m]))), n_rows=int(m.sum()),
+        majority_class_rate=float(prior.max()),
+        class_prior_expectation=float((prior ** 2).sum()),
+        track_counts={r: int(cnt[r]) for r in keep},
+        levels={},
+    )
+    for lv in levels:
+        gl = groups[lv][m]
+        per_raga = {r: int(len(set(gl[yk == r]))) for r in keep}
+        inv['levels'][lv] = dict(
+            n_groups=int(len(set(gl))),
+            groups_per_raga=per_raga,
+            min_groups_per_raga=int(min(per_raga.values())),
+            ragas_below_n_splits=sorted(r for r, k in per_raga.items() if k < N_SPLITS),
+        )
+    return inv
 
-    ntr = {r: len(set(g[y == r])) for r in set(y)}
-    keep = sorted(r for r, n in ntr.items() if n >= MIN)      # FROZEN on level (a)
-    print(f'min>={MIN}: {len(keep)} ragas, {len(set(g[np.isin(y, keep)]))} tracks', flush=True)
 
-    out = {'tier': {'min_tracks': MIN, 'ragas': keep, 'track_counts': {r: ntr[r] for r in keep}},
+def score_tier(X, y, g, groups, keep, min_tracks, ntr, notes, levels, per_track):
+    """One tier, scored at each requested level. Returns (out, res)."""
+    print(f'\n===== min>={min_tracks}: {len(keep)} ragas, '
+          f'{len(set(g[np.isin(y, keep)]))} tracks =====', flush=True)
+
+    out = {'tier': {'min_tracks': min_tracks, 'ragas': keep,
+                    'track_counts': {r: ntr[r] for r in keep}},
            'notes': notes, 'levels': {}}
     res = {}
-    for lv in P.LEVELS:
+    for lv in levels:
         r = run_cv(X, y, g, groups[lv], keep)
         res[lv] = r
         print(f"({lv}) {P.LEVEL_NAMES[lv]}", flush=True)
@@ -207,22 +246,41 @@ def main() -> None:
               f"top3={r['top3']}/{r['n_tracks']} = {r['top3_rate']:.1%}", flush=True)
 
     # --- the reproduction gate, checked explicitly -------------------------
-    a = res['a']
-    gate = (abs(a['top1_rate'] * 100 - 72.8) < 0.05 and abs(a['top3_rate'] * 100 - 84.7) < 0.05)
-    print(f"\nREPRODUCTION GATE: level (a) = {a['top1_rate']:.1%} / {a['top3_rate']:.1%} "
-          f"vs recorded 72.8% / 84.7%  ->  {'EXACT' if gate else 'MISMATCH'}", flush=True)
+    # Only the recorded tier has a recorded number to reproduce. At any other
+    # tier there is nothing to gate on and claiming a gate would be a lie.
+    gate = None
+    if min_tracks == 25 and 'a' in res:
+        a = res['a']
+        gate = (abs(a['top1_rate'] * 100 - 72.8) < 0.05
+                and abs(a['top3_rate'] * 100 - 84.7) < 0.05)
+        print(f"\nREPRODUCTION GATE: level (a) = {a['top1_rate']:.1%} / {a['top3_rate']:.1%} "
+              f"vs recorded 72.8% / 84.7%  ->  {'EXACT' if gate else 'MISMATCH'}", flush=True)
+        print(f"                   {a['top1']}/{a['n_tracks']} = {a['top1_rate']:.3%}"
+              f"      {a['top3']}/{a['n_tracks']} = {a['top3_rate']:.3%}", flush=True)
+        if 'c' in res:
+            cc = res['c']
+            cgate = (abs(cc['top1_rate'] * 100 - 72.2) < 0.05
+                     and abs(cc['top3_rate'] * 100 - 84.0) < 0.05)
+            print(f"REPRODUCTION GATE: level (c) = {cc['top1_rate']:.1%} / "
+                  f"{cc['top3_rate']:.1%} vs recorded 72.2% / 84.0%  ->  "
+                  f"{'EXACT' if cgate else 'MISMATCH'}", flush=True)
+            print(f"                   {cc['top1']}/{cc['n_tracks']} = {cc['top1_rate']:.3%}"
+                  f"      {cc['top3']}/{cc['n_tracks']} = {cc['top3_rate']:.3%}", flush=True)
+            gate = bool(gate and cgate)
 
     # --- per-raga at level (c), and the a->c flip table --------------------
     c = res['c']
     per_raga = {}
     for r in keep:
         ts = [t for t, lab in c['label_of'].items() if lab == r]
-        per_raga[r] = dict(
-            n_tracks=len(ts),
-            top1_a=float(np.mean([res['a']['correct1'][t] for t in ts])),
-            top1_c=float(np.mean([c['correct1'][t] for t in ts])),
-            top3_c=float(np.mean([c['correct3'][t] for t in ts])),
-        )
+        if not ts:
+            continue
+        d = dict(n_tracks=len(ts))
+        if 'a' in res:
+            d['top1_a'] = float(np.mean([res['a']['correct1'][t] for t in ts]))
+        d['top1_c'] = float(np.mean([c['correct1'][t] for t in ts]))
+        d['top3_c'] = float(np.mean([c['correct3'][t] for t in ts]))
+        per_raga[r] = d
 
     # exposure: does a track share its level-(c) source with a SAME-RAGA sibling?
     m = np.isin(y, keep)
@@ -237,33 +295,112 @@ def main() -> None:
             if lc[lab] > 1:
                 clustered.add(t)
     expo = {}
-    for name, sel in (('clustered', clustered),
-                      ('solo', set(c['correct1']) - clustered)):
-        if not sel:
-            continue
-        expo[name] = dict(
-            n=len(sel),
-            top1_a=float(np.mean([res['a']['correct1'][t] for t in sel])),
-            top1_c=float(np.mean([c['correct1'][t] for t in sel])),
-        )
-    print('\nsame-raga-in-one-source exposure (the mechanism the brief flagged):')
-    for k, v in expo.items():
-        print(f"  {k:10s} n={v['n']:3d}   (a) {v['top1_a']:.1%}  ->  (c) {v['top1_c']:.1%}"
-              f"   delta {100 * (v['top1_c'] - v['top1_a']):+.1f}pp")
+    if 'a' in res:
+        for name, sel in (('clustered', clustered),
+                          ('solo', set(c['correct1']) - clustered)):
+            if not sel:
+                continue
+            expo[name] = dict(
+                n=len(sel),
+                top1_a=float(np.mean([res['a']['correct1'][t] for t in sel])),
+                top1_c=float(np.mean([c['correct1'][t] for t in sel])),
+            )
+        print('\nsame-raga-in-one-source exposure (the mechanism the brief flagged):')
+        for k, v in expo.items():
+            print(f"  {k:10s} n={v['n']:3d}   (a) {v['top1_a']:.1%}  ->  (c) {v['top1_c']:.1%}"
+                  f"   delta {100 * (v['top1_c'] - v['top1_a']):+.1f}pp")
 
     for lv, r in res.items():
         out['levels'][lv] = {k: v for k, v in r.items()
-                             if k not in ('correct1', 'correct3', 'label_of')}
+                             if k not in ('correct1', 'correct3', 'label_of', 'group_of')}
     out['gate_exact'] = bool(gate)
     out['per_raga_level_c'] = per_raga
     out['exposure'] = expo
-    out['flips_a_to_c'] = sorted(t for t in res['a']['correct1']
-                                 if res['a']['correct1'][t] and not c['correct1'][t])
-    out['gains_a_to_c'] = sorted(t for t in res['a']['correct1']
-                                 if not res['a']['correct1'][t] and c['correct1'][t])
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-    (OUT_DIR / 'levels.json').write_text(json.dumps(out, ensure_ascii=False, indent=1))
-    print(f"\nwrote {OUT_DIR / 'levels.json'}")
+    if 'a' in res:
+        out['flips_a_to_c'] = sorted(t for t in res['a']['correct1']
+                                     if res['a']['correct1'][t] and not c['correct1'][t])
+        out['gains_a_to_c'] = sorted(t for t in res['a']['correct1']
+                                     if not res['a']['correct1'][t] and c['correct1'][t])
+    if per_track:
+        out['per_track'] = {lv: dict(correct1={k: bool(v) for k, v in r['correct1'].items()},
+                                     correct3={k: bool(v) for k, v in r['correct3'].items()},
+                                     label_of={k: str(v) for k, v in r['label_of'].items()},
+                                     group_of={k: str(v) for k, v in r['group_of'].items()})
+                            for lv, r in res.items()}
+    return out
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--min-tracks', default=str(MIN),
+                    help='comma-separated tier thresholds on LEVEL-(a) track '
+                         f'counts; default {MIN} = the frozen historical tier')
+    ap.add_argument('--levels', default=','.join(P.LEVELS),
+                    help='comma-separated disjointness levels to score')
+    ap.add_argument('--out-dir', default=str(OUT_DIR))
+    ap.add_argument('--out-name', default=None,
+                    help="output filename; default 'levels.json' for a single "
+                         "tier, 'levels_min<N>.json' when several are swept")
+    ap.add_argument('--per-track', action='store_true',
+                    help='carry per-track correctness into the json (needed to '
+                         'pair tiers at the track level)')
+    ap.add_argument('--inventory-only', action='store_true',
+                    help='n, floors and group counts per tier; fits nothing')
+    args = ap.parse_args()
+
+    mins = [int(s) for s in args.min_tracks.split(',') if s.strip()]
+    levels = [s.strip() for s in args.levels.split(',') if s.strip()]
+    for lv in levels:
+        if lv not in P.LEVELS:
+            raise SystemExit(f'unknown level {lv!r}; known: {P.LEVELS}')
+    out_dir = Path(args.out_dir)
+    if not out_dir.is_absolute():
+        out_dir = ROOT / out_dir
+
+    # ---- built ONCE, shared by every tier --------------------------------
+    tracks, concert, artists = collect()
+    print(f'{len(tracks)} tracks with full melody', flush=True)
+    X, y, g, stem, src = build(tracks)
+
+    Mt = dict(tid=g, src=src, stem=stem, saraga_concert=concert, saraga_artists=artists)
+    groups, notes = P.build_groups(Mt)
+
+    ntr = {r: len(set(g[y == r])) for r in set(y)}
+
+    if args.inventory_only:
+        inv = {'notes': notes, 'n_tracks_total': int(len(set(g))),
+               'n_ragas_total': int(len(set(y))), 'tiers': {}}
+        for mt in mins:
+            keep = sorted(r for r, n in ntr.items() if n >= mt)
+            st = inventory(y, g, groups, keep, levels)
+            st['ragas'] = keep
+            inv['tiers'][str(mt)] = st
+            print(f"\nmin>={mt}: {st['n_ragas']} ragas, {st['n_tracks']} tracks", flush=True)
+            print(f"  floors: majority {st['majority_class_rate']:.4f}  "
+                  f"class-prior {st['class_prior_expectation']:.4f}", flush=True)
+            for lv in levels:
+                L = st['levels'][lv]
+                print(f"  ({lv}) groups {L['n_groups']}   min groups/raga "
+                      f"{L['min_groups_per_raga']}   ragas with <{N_SPLITS} groups "
+                      f"{len(L['ragas_below_n_splits'])}", flush=True)
+        out_dir.mkdir(parents=True, exist_ok=True)
+        p = out_dir / (args.out_name or 'inventory.json')
+        p.write_text(json.dumps(inv, ensure_ascii=False, indent=1))
+        print(f'\nwrote {p}')
+        return
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for mt in mins:
+        keep = sorted(r for r, n in ntr.items() if n >= mt)   # FROZEN on level (a)
+        out = score_tier(X, y, g, groups, keep, mt, ntr, notes, levels, args.per_track)
+        if args.out_name:
+            name = args.out_name if len(mins) == 1 else f'{Path(args.out_name).stem}_min{mt}.json'
+        else:
+            name = 'levels.json' if len(mins) == 1 and mt == MIN else f'levels_min{mt}.json'
+        p = out_dir / name
+        # written after EVERY tier, never at the end, so a session limit is survivable
+        p.write_text(json.dumps(out, ensure_ascii=False, indent=1))
+        print(f'\nwrote {p}', flush=True)
 
 
 if __name__ == '__main__':
