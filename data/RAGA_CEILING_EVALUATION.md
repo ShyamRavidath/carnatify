@@ -267,7 +267,7 @@ selecting classes on the folds you then score on — called out in advance.
 |---|---|---|
 | "wild audio kills the raga path" | **false** | 59.3% wild ≈ 60.4% clean at matched duration; 7.5 pp measured field cost; zero contour failures |
 | "we need better features / a better model" | **not yet the constraint** | the binding loss is 61-73% of field clips having no emittable class at all |
-| "we need more audio per class" | **open, and the evidence flipped** | across the 54 classes r(tracks, top-1) = **0.519**, p = 5.8e-05, cleanly monotone in bins: 39.9% (10-14 tracks) → 41.5% (15-19) → 52.6% (20-24) → **68.6%** (25-30). An earlier draft called this "weakly contradicted" on r = 0.066 — that r was computed over the 18-class tier, whose track counts only span 25-30, and range restriction made it meaningless. **But 0.519 is confounded**: the 25-30 bin is exactly the `PRIORITY_20`/`SECONDARY_20` set the fetcher deliberately topped up, so track count and "popular, canonical, easy" are entangled. Saurāṣtraṁ is 92.3% on 13 tracks and Nāṭakurinji 0.0% on 11 — n is not destiny. The within-class subsampling curve settles it and is in flight |
+| "we need more audio per class" | **yes — measured, and there is no saturation anywhere in this corpus** | Within-class subsampling (the confound-free test: every class compared against itself, nested subsets, 3 seeds) gives **+18.4 pp from 10 to 30 tracks** on the 18 classes that actually span the range — 50.4% → 57.8% → 64.1% → 66.5% → **68.7%**. The apparent flattening is an x-axis artifact: per **100 tracks added** the steps are 3.10 / 3.62 / 2.07 / **3.25 pp**, so the last 68 tracks bought as much as the first 239. The cross-class r = 0.519 was confounded, as suspected, but the within-class answer is *steeper*, not flatter. My registered prediction of "+6 to +12 pp, flattening by c=25" was **refuted** |
 | "we need more *classes*" | **yes, and they are free** | +60% correct answers per concert (28.2 → 45.1 per 100), measured source-disjoint, from a retrain on existing data |
 | "we need more audio, full stop" | **yes — but far less of it is reachable than §2 implies** | 1,712 scraped-and-labelled items are unfetched and 561 more are recoverable from the null bucket, but only ~10-13% of programme rows exact-match cached archive.org metadata, and on the 57 demonstrably matchable recoveries **zero** new classes clear `min_tracks = 10`. Programme rows are not training audio |
 | "training labels are clean" | **false, newly** | eight live wrong merges in the non-null alias map, `AbEri -> Sāvēri` among them — the exact mechanism behind one of the two wild-set label errors |
@@ -318,15 +318,26 @@ Three things, so this document is not just optimism.
 
 ## 6. What to do, in cost order
 
-1. **Retrain the raga model at `min_tracks = 10`, with per-class admission on
-   top.** Zero new data, zero dollars, hours not days. **+60% correct answers
-   per concert, measured source-disjoint, not estimated.** Drop Nāṭakurinji
-   (0/11, the one class below the class-prior floor) and whatever else the
-   per-class admission sweep condemns. **No longer blocked** —
-   `data/RAGA_COVERAGE_CURVE.md` has landed and the curve is monotone to the
-   widest tier measured. The one thing still open is whether admission should be
-   priced per class rather than by track count; the sweep is in flight, and it
-   only improves this number.
+1. **Retrain the raga model at `min_tracks = 10`. Admit every class.** Zero new
+   data, zero dollars, hours not days. **+60% correct answers per concert,
+   measured source-disjoint, not estimated.** Unblocked — the curve is monotone
+   to the widest tier measured.
+
+   **Do not add a per-class admission threshold on top.** It was measured and it
+   loses: expected hits fall monotonically, 45.1 → 43.6 → 42.8 → 42.1 → 39.6 as
+   the threshold rises, and **no threshold beats admitting everything.** Dropping
+   a class forfeits its repertoire mass all at once and buys accuracy slowly
+   (−6.6 pp coverage for +3.0 pp top-1 at t = 0.10). My §3 guess that this was
+   "roughly a wash" was optimistic by 1.5 hits/100.
+
+   The narrow version survives: **drop only classes that are near-zero in every
+   fold.** Nāṭakurinji, Janaranjani and Haṁsānandi are never admitted at any
+   threshold in any fold. That is three named classes, not a knob.
+
+   What admission does buy is **precision, not hits** — 57.0% → 63.8%
+   accuracy-when-it-speaks at 79.2% → 62.2% coverage. That is the abstain-gate
+   axis (§5.2), which expected-hits is blind to by construction, and it should be
+   built there rather than smuggled into the tier.
 2. **Fix the alias map — as an exact reviewed registry expansion, never a lower
    fuzzy cutoff.** 561 recoverable items, +18 candidate classes at `min>=10`,
    and the eight live wrong merges above. *Landed:
@@ -344,15 +355,18 @@ Three things, so this document is not just optimism.
    recordings of full concert items, frozen and hashed before anything is
    predicted. This is the one place where **Deepti's own attendance is the
    scarce resource**, and it is worth more than any model change on this list.
-4. **Raise the fetch target from 30 — but only if the within-class curve says
-   so.** 1,712 identified items are unfetched; ~13 GB more disk and a few hours
-   of melodia at 5 workers, on free archive.org. **This is now explicitly
-   conditional.** The cross-class r = 0.519 argues for it and is confounded; the
-   within-class subsampling curve is the honest test and is in flight. If that
-   curve is flat from 20 to 30 tracks, more classes is the whole lever and this
-   job is not worth doing. Note also the outside-voice seat's early finding that
-   only ~10% of recoverable null items exact-match cached archive.org metadata,
-   so 1,712 is an **optimistic ceiling, not a promised corpus**.
+4. **Raise the fetch target from 30. The condition it was waiting on came back
+   yes.** The within-class curve is **+18.4 pp from 10 to 30 tracks with no
+   saturation** — per 100 tracks added, the last step (3.25 pp) is as productive
+   as the first (3.10 pp). Every class in this corpus is capped at 30 and the
+   curve is still climbing there, so nobody has ever seen where it bends.
+   ~13 GB more disk, a few hours of melodia at 5 workers, free archive.org.
+
+   Two constraints on scope. The outside-voice seat found only ~10-13% of
+   programme rows exact-match cached archive.org metadata, so **1,712 is an
+   optimistic ceiling, not a promised corpus** — recount before committing to it.
+   And **do not target the fetch by measured weakness** (see the verifier note
+   below).
 5. **Build the abstain gate, with a held-out set.** Not with the threshold in
    §5.2 — with a fresh one, fit on data the score never sees.
 6. **Then, and only then, ask about features.** No feature work is justified
@@ -373,3 +387,49 @@ None of that is reopened by anything here.
 | `WORKHORSE_RAGA_COVERAGE_BRIEF.md` | the source-disjoint coverage/accuracy sweep — in flight |
 | `CODEX_RAGA_VOCABULARY_BRIEF.md` | the 274-null alias audit — in flight |
 | `data/raga_audit/archived_tierscan_tdms_only.log` | the tier scan that has been on disk since July and was never read against coverage |
+
+---
+
+## 8. Verifier note — one workhorse finding that does not survive re-derivation
+
+Everything in `data/RAGA_COVERAGE_CURVE.md` §§10-12 was re-derived by this seat
+from the raw per-cell counts in `data/raga_coverage/within_class.json` and
+`admission.json`. The curve (+18.4 pp restricted-18, +10.6 pp all-54), the
+pp-per-100-tracks series, Gate A collapsing exactly onto the committed 649/1139
+in all three seeds, the monotone fall of expected hits under admission, and the
+4.4 pp in-sample inflation at matched coverage — **all reproduce exactly.**
+
+**One conclusion drawn from them does not.** The workhorse reports
+r(accuracy at cap 10, gain from tripling data) = **−0.777, p = 1.5e-04**, and
+concludes that the fetch should be **pointed at the weak classes** — that
+`dl_deficits30.py` topped up the popular ragas, which had nothing left to gain.
+The correlation reproduces to three decimals. **The inference is regression to
+the mean.**
+
+The gain is `acc@30 − acc@10`, and `acc@10` is on both sides of that
+subtraction. `acc@10` is measured on a 10-track draw and is extremely noisy;
+`acc@30` is the full class and is not. Any class that drew unlucky at 10 shows a
+large "gain" by arithmetic. Bhairavi is the tell: **20.0% → 70.0%**, a 50-point
+"gain" for a class that simply sits at 70%.
+
+Regress the gain on the **noise-free** endpoint instead and the signal
+evaporates:
+
+| framing | r | p |
+|---|---|---|
+| gain vs `acc@10` (workhorse) | −0.777 | 1.5e-04 |
+| **gain vs `acc@30` (noise-free)** | **−0.114** | **0.65** |
+
+Splitting on the noise-free endpoint reverses the direction outright: classes
+below 60% at cap 30 gain **+13.9 pp**, classes at or above gain **+19.4 pp**.
+
+**What changes:** recommendation §6.4 stands — fetch more audio, the +18.4 pp is
+real and confound-free. **What does not:** there is no evidence that targeting
+weak classes beats fetching broadly, so fetch broadly. With n = 18 this is
+underpowered and the honest statement is *no targeting signal was found*, not
+*no targeting signal exists*.
+
+**The one case that survives both framings is Vasanta** — 30.0% at cap 10,
+35.7% at cap 30, +5.7 pp, and identical at every tier in the wider sweep. Weak
+*and* flat. The workhorse called that correctly: Vasanta is not a data problem,
+and more Vasanta audio will not fix it.
