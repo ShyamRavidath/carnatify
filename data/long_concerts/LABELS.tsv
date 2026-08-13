@@ -1,0 +1,43 @@
+# Long-concert item labels — Deepti fills this in. One row per ITEM.
+#
+#   concert     file stem, e.g. long_concert_3   (do not rename)
+#   start       when the item STARTS, mm:ss or h:mm:ss. The item ends where the
+#               next one starts, so you never type an end time. Use the last row
+#               of a concert for whatever runs to the finish.
+#   raga        raga name, any spelling you like. If an item is a ragamalika or
+#               you are not sure, write ragamalika / unsure and it is excluded
+#               rather than counted wrong.
+#   item        composition name if you know it, otherwise anything ("alapana",
+#               "thani", "viruttam"). Never scored — it is for reading the
+#               results table afterwards.
+#   confidence  high / medium / low. Only `high` rows are in the primary
+#               read-out; the rest are reported beside it and never merged in.
+#   notes       anything. Applause, tuning, a false start, a mic problem.
+#
+# Rows starting with # are ignored. Order within a concert must be by start time.
+# Leave a concert's seed row alone and add rows under it if you have not done
+# that concert yet — an unfilled concert is dropped, not guessed at.
+
+concert	start	raga	item	confidence	notes
+# long_concert_1: 26.8 min total
+long_concert_1	0:00				
+# long_concert_2: 32.5 min total
+long_concert_2	0:00				
+# long_concert_3: 91.6 min total
+long_concert_3	0:00				
+# long_concert_4: 44.2 min total
+long_concert_4	0:00				
+# long_concert_5: 113.8 min total
+long_concert_5	0:00				
+# long_concert_6: 67.5 min total
+long_concert_6	0:00				
+# long_concert_7: 44.8 min total
+long_concert_7	0:00				
+# long_concert_8: 34.7 min total
+long_concert_8	0:00				
+# long_concert_9: 37.1 min total
+long_concert_9	0:00				
+# long_concert_10: 31.5 min total
+long_concert_10	0:00				
+# long_concert_11: 66.4 min total
+long_concert_11	0:00				

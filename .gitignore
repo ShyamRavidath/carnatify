@@ -111,3 +111,8 @@ data/duration_probe/**/*.wav
 # Wild raga measurement: Demucs scratch dir only. The 2 MB feature rows in
 # data/raga_wild/rows/ ARE committed so the scorer re-runs without rebuilding.
 /data/raga_wild/tmp/
+
+# Long-form concerts (2026-08-13): 11 of Deepti's own concert recordings, 851 MB
+# of mp3. The freeze record, the labels and the scripts ARE tracked; the audio is
+# not. Sources are her .mp4/.MOV in ~/Downloads.
+/data/long_concerts/audio/
