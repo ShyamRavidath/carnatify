@@ -97,11 +97,55 @@ selected into the frozen 29** because the spelling `Shankarabharana` is not in
 the alias file. `Ma Janaki__Khamboji.mp3` is a second. The frozen set should
 have been at least 31.
 
-*A full classification of the 274 nulls is under audit by the outside-voice seat
-(`CODEX_RAGA_VOCABULARY_BRIEF.md` → `data/RAGA_VOCABULARY_AUDIT.md`). The
-adversarial half matters: `_CANONICAL_ALIASES` exists because fuzzy matching at
-0.6 merges genuinely different ragas, and a wrong merge poisons a class more
-than a null does.*
+### That audit landed, and it corrected me three ways
+
+`data/RAGA_VOCABULARY_AUDIT.md` classified all 274 nulls. The headline confirms
+the hypothesis: **561 of the 689 null items (81.4%) carry recoverable raga
+labels; only 126 (18.3%) are junk.** Correct canonicalisation would take
+labelled programme rows from 81.4% to 96.5% of the corpus. "Junk keys → null" is
+wrong as a description and this repo should stop repeating it.
+
+Three corrections to what I wrote above, all of which stand:
+
+1. **The nulls were deliberate, not accidental.** `normalize_ragas.py` has a
+   `_FORCE_NONE` set that *quarantines* absent names on purpose — 59 raw keys
+   and 326 items — precisely because the 0.6-0.9 fuzzy band merges distinct
+   ragas. **Preferring a null to a poisoned class was the right call.** The
+   failure was downstream: calling the whole bucket junk and never expanding the
+   registry. I framed this as a bug; it is an un-finished job.
+2. **Ārabhi is not an alias bug.** It is absent from the 103-name
+   CompMusic ∪ Saraga union entirely, so it is a missing raga, not a missing
+   spelling. My "should have matched" framing was wrong for the single
+   highest-count entry.
+3. **The class ceiling is real but the audio is not there.** At `min>=10`,
+   correct labelling would admit **+18 classes (54 → 72)** — Ārabhi, Darbār,
+   Kīravāṇi, Dēvamanōhari, Kannaḍagauḷa, **Ābhēri**, Hamsanādam, Rēvati,
+   Vācaspati and more. But only **57 of the 561 recoverable rows (10.2%)**
+   exact-match already-cached archive.org metadata, and **on those 57, zero new
+   classes clear `min_tracks = 10`.** Programme rows are not training audio.
+   Treat §2's "1,712 unfetched items" as an **optimistic ceiling, not a promised
+   corpus** — see §6.4.
+
+### And it found something worse than the nulls
+
+The **non-null** aliases contain live wrong merges, silently poisoning training
+labels. Verified against `data/raga_aliases.json` by this seat:
+
+```
+'AbEri'             -> 'Sāvēri'              'gaulipantu'  -> 'Gauḷa'
+'garuDwani'         -> 'Kāmavardani'         'jayantasri'  -> 'Dhanaśrī'
+'sunAdavinOdhini'   -> 'Jaganmōhini'         'nalainakAnti'-> 'Kalāvati'
+'navarasas kannaDa' -> 'Bṛndāvana sāranga'   'veera vasanatam' -> 'Vasanta'
+```
+
+**`AbEri -> Sāvēri` is the exact mechanism behind Deepti's correction #2.**
+`data/RAGA_WILD_MEASUREMENT.md` §3 flagged that the archive training corpus
+carries `nagumomu ganaleni` under a `Sāvēri` directory and said "either the
+label is right or both inherited the same error". They inherited the same error,
+and the error is **one line in the alias map**. It is small in volume — 17
+scraped items across all eight merges — but it is label noise pointing in a
+direction no accuracy metric can see, and it is the first evidence in this
+project of *wrong* training labels rather than *missing* ones.
 
 ### Cap 2 — the download target is literally `30`
 
@@ -225,8 +269,9 @@ selecting classes on the folds you then score on — called out in advance.
 | "we need better features / a better model" | **not yet the constraint** | the binding loss is 61-73% of field clips having no emittable class at all |
 | "we need more audio per class" | **open, and the evidence flipped** | across the 54 classes r(tracks, top-1) = **0.519**, p = 5.8e-05, cleanly monotone in bins: 39.9% (10-14 tracks) → 41.5% (15-19) → 52.6% (20-24) → **68.6%** (25-30). An earlier draft called this "weakly contradicted" on r = 0.066 — that r was computed over the 18-class tier, whose track counts only span 25-30, and range restriction made it meaningless. **But 0.519 is confounded**: the 25-30 bin is exactly the `PRIORITY_20`/`SECONDARY_20` set the fetcher deliberately topped up, so track count and "popular, canonical, easy" are entangled. Saurāṣtraṁ is 92.3% on 13 tracks and Nāṭakurinji 0.0% on 11 — n is not destiny. The within-class subsampling curve settles it and is in flight |
 | "we need more *classes*" | **yes, and they are free** | +60% correct answers per concert (28.2 → 45.1 per 100), measured source-disjoint, from a retrain on existing data |
-| "we need more audio, full stop" | **yes, and it is already identified** | 1,712 scraped-and-labelled items never fetched, plus ~689 behind a fixable alias map |
-| **"we have hit a data ceiling"** | **no** | nothing here has been tested at the ceiling. The corpus is 43% of the repertoire already scraped, under a fetch target that says `30` |
+| "we need more audio, full stop" | **yes — but far less of it is reachable than §2 implies** | 1,712 scraped-and-labelled items are unfetched and 561 more are recoverable from the null bucket, but only ~10-13% of programme rows exact-match cached archive.org metadata, and on the 57 demonstrably matchable recoveries **zero** new classes clear `min_tracks = 10`. Programme rows are not training audio |
+| "training labels are clean" | **false, newly** | eight live wrong merges in the non-null alias map, `AbEri -> Sāvēri` among them — the exact mechanism behind one of the two wild-set label errors |
+| **"we have hit a data ceiling"** | **no** | the largest single lever, +60% correct answers per concert, is a retrain on data already on disk. The corpus is 43% of the repertoire already scraped, under a fetch target hard-coded to `30`. Nothing here has been tested at a ceiling |
 
 The honest summary of a month and a half: the measurement discipline has been
 excellent and it worked — five audits in three days killed one inflated number
@@ -282,11 +327,18 @@ Three things, so this document is not just optimism.
    widest tier measured. The one thing still open is whether admission should be
    priced per class rather than by track count; the sweep is in flight, and it
    only improves this number.
-2. **Fix the alias map.** ~689 concert items and an unknown number of real
-   classes are behind a `null` that says "not in compmusic's 40". Ābhēri alone
-   would have changed the wild set. *In flight —
-   `data/RAGA_VOCABULARY_AUDIT.md`. Note the risk: a wrong merge is worse than a
-   null.*
+2. **Fix the alias map — as an exact reviewed registry expansion, never a lower
+   fuzzy cutoff.** 561 recoverable items, +18 candidate classes at `min>=10`,
+   and the eight live wrong merges above. *Landed:
+   `data/RAGA_VOCABULARY_AUDIT.md` + `data/raga_aliases_audit.json`, which is a
+   NEW file — `data/raga_aliases.json` is untouched because five committed
+   measurements read it.* **Needs Deepti before any merge**: nine
+   low-confidence rows, two ambiguous, and the equivalence table
+   (Ābhēri / Karṇāṭaka dēvagāndhāri, Bhīmpalās, Udayaravicandrika /
+   Śuddhadhanyāsi, Durgā / Śuddha Sāvēri). Merging Ābhēri into Karṇāṭaka
+   dēvagāndhāri adds a class at `min>=15` and `min>=20`; splitting does not.
+   That is a musician's call, not a model's. Fixing the eight wrong merges is
+   the part that needs no adjudication — do it with regression tests.
 3. **Measure long-form wild audio.** The entire product case rests on 10-30
    minute items and every wild clip on disk is under 85 s. Needs ~10 new
    recordings of full concert items, frozen and hashed before anything is

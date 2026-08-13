@@ -1,0 +1,1646 @@
+{
+  "14 April, 1991": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "1973": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "1975": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "1982": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "1989": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "1993": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "1999": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "9-9-2002": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "???": {
+    "bucket": "ambiguous",
+    "canonical": null,
+    "confidence": "low",
+    "why": "No candidate name survives; audio or the original programme would settle it."
+  },
+  "AIR Sangeeth Sammelan concert": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Aarabhi": {
+    "bucket": "raga",
+    "canonical": "Ārabhi",
+    "confidence": "high",
+    "why": "Distinct from Devagandhari; do not fuzzy-merge."
+  },
+  "AbhEri": {
+    "bucket": "raga",
+    "canonical": "Ābhēri",
+    "confidence": "medium",
+    "why": "Real raga; Karnataka-devagandhari equivalence is tradition-dependent."
+  },
+  "AbhOgi (Patnam Subramanya Iyer)": {
+    "bucket": "raga_variant",
+    "canonical": "Ābhōgī",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "AbhOgi (incomplete)": {
+    "bucket": "raga_variant",
+    "canonical": "Ābhōgī",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "Abheri": {
+    "bucket": "raga",
+    "canonical": "Ābhēri",
+    "confidence": "medium",
+    "why": "Real raga; Karnataka-devagandhari equivalence is tradition-dependent."
+  },
+  "Ahiri (initial parts missing)": {
+    "bucket": "raga_variant",
+    "canonical": "Āhiri",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "Arabhi": {
+    "bucket": "raga",
+    "canonical": "Ārabhi",
+    "confidence": "high",
+    "why": "Distinct from Devagandhari; do not fuzzy-merge."
+  },
+  "Arabhi (a bit too slow)": {
+    "bucket": "raga",
+    "canonical": "Ārabhi",
+    "confidence": "high",
+    "why": "Distinct from Devagandhari; do not fuzzy-merge."
+  },
+  "Arabhi (speed variations)": {
+    "bucket": "raga",
+    "canonical": "Ārabhi",
+    "confidence": "high",
+    "why": "Distinct from Devagandhari; do not fuzzy-merge."
+  },
+  "Arabi": {
+    "bucket": "raga",
+    "canonical": "Ārabhi",
+    "confidence": "high",
+    "why": "Distinct from Devagandhari; do not fuzzy-merge."
+  },
+  "Ashok Kumar": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Bangalore": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Charukesi": {
+    "bucket": "raga",
+    "canonical": "Cārukēśi",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "Click on the line": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Concert incomplete": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Dance Music": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Darbar": {
+    "bucket": "raga",
+    "canonical": "Darbār",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "Dec 12, 2003": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Deekshadar Concert": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Dharmavati": {
+    "bucket": "raga",
+    "canonical": "Dharmavati",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "Durga": {
+    "bucket": "raga",
+    "canonical": "Durgā",
+    "confidence": "medium",
+    "why": "Real import; allied to but not safely identical with Shuddha Saveri."
+  },
+  "EtAvunara": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Fabulous concert": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Gottuvadyam": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Gurukulam": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Hamsanadam": {
+    "bucket": "raga",
+    "canonical": "Hamsanādam",
+    "confidence": "high",
+    "why": "Distinct from Hamsanandi and Hamsadhvani."
+  },
+  "Harikesanallur L Muthayya Bhagavatar": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "House concert with no accompaniments": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Incomplete": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "July 24, 1988": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "July 27, 1991": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Kalyani (rest missing :-()": {
+    "bucket": "raga_variant",
+    "canonical": "Kalyāṇi",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "Krishna Gana Sabha 1972": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "MMG": {
+    "bucket": "raga_variant",
+    "canonical": "Māyāmāḷavagauḷa",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "Malayamarutham": {
+    "bucket": "raga",
+    "canonical": "Malayamārutam",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "Music Academy": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Music Academy 1965": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Oct 19, 1985": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "OmkarapOshini": {
+    "bucket": "raga",
+    "canonical": "Ōmkārapōṣiṇi",
+    "confidence": "low",
+    "why": "Established raga absent from the capped canonical vocabulary. Audio or authoritative musician review is required."
+  },
+  "Orchestra": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Poornashadjam": {
+    "bucket": "raga",
+    "canonical": "Pūrṇaṣaḍjam",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "Puthu Vazhvu": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Raajamukthi": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Rajamukthi": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Sathiya Seelan": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Sep 23, 2004": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Sept 13, 1997": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Sept 26, 1998": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Sivakavi": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Sree- (incomplete)": {
+    "bucket": "raga_variant",
+    "canonical": "Śrī",
+    "confidence": "medium",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "Suddhaseemantini": {
+    "bucket": "raga",
+    "canonical": "Śuddhasīmantini",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "Thirumazhisai Aazhvar": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Thiruneelakantar": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Thriuneela Kantar": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Thukaram Film": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Tiruneelakantar": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "US/Canada tour 1980": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Veera Vasantham": {
+    "bucket": "raga",
+    "canonical": "Vīravasantam",
+    "confidence": "high",
+    "why": "Distinct from Vasanta."
+  },
+  "Vocal": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "Young": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "abheri": {
+    "bucket": "raga",
+    "canonical": "Ābhēri",
+    "confidence": "medium",
+    "why": "Real raga; Karnataka-devagandhari equivalence is tradition-dependent."
+  },
+  "arabhi": {
+    "bucket": "raga",
+    "canonical": "Ārabhi",
+    "confidence": "high",
+    "why": "Distinct from Devagandhari; do not fuzzy-merge."
+  },
+  "bEgaDA (lots of speed variations)": {
+    "bucket": "raga_variant",
+    "canonical": "Bēgaḍa",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "balahamsa": {
+    "bucket": "raga",
+    "canonical": "Balahamsa",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "bhairavam": {
+    "bucket": "raga",
+    "canonical": "Bhairavam",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "bhairavi (initial parts missing)": {
+    "bucket": "raga_variant",
+    "canonical": "Bhairavi",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "bhavapriyA": {
+    "bucket": "raga",
+    "canonical": "Bhāvapriya",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "bhimpaLAs": {
+    "bucket": "raga",
+    "canonical": "Bhīmpalās",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "bhimpalAs": {
+    "bucket": "raga",
+    "canonical": "Bhīmpalās",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "bhimpalAs may be": {
+    "bucket": "raga",
+    "canonical": "Bhīmpalās",
+    "confidence": "low",
+    "why": "Established raga absent from the capped canonical vocabulary. Audio or authoritative musician review is required."
+  },
+  "bhimpalas": {
+    "bucket": "raga",
+    "canonical": "Bhīmpalās",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "bhimplAs": {
+    "bucket": "raga",
+    "canonical": "Bhīmpalās",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "bhimplaAs": {
+    "bucket": "raga",
+    "canonical": "Bhīmpalās",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "bhoopALam": {
+    "bucket": "raga",
+    "canonical": "Bhūpāḷam",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "bhujAngini": {
+    "bucket": "raga",
+    "canonical": "Bhujaṅgini",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "bowLi": {
+    "bucket": "raga",
+    "canonical": "Bauli",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "bowli": {
+    "bucket": "raga",
+    "canonical": "Bauli",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "chArukEsi": {
+    "bucket": "raga",
+    "canonical": "Cārukēśi",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "chAyAnATTai": {
+    "bucket": "raga",
+    "canonical": "Chāyānāṭa",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "chAyanATTai": {
+    "bucket": "raga",
+    "canonical": "Chāyānāṭa",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "chakkani rAja": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "chandrajyOti": {
+    "bucket": "raga",
+    "canonical": "Candrajyōti",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "chandrakauns": {
+    "bucket": "raga",
+    "canonical": "Candrakauns",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "chandrikA (chandrakauns)": {
+    "bucket": "raga",
+    "canonical": "Candrakauns",
+    "confidence": "low",
+    "why": "Established raga absent from the capped canonical vocabulary. Audio or authoritative musician review is required."
+  },
+  "chandrjyOti": {
+    "bucket": "raga",
+    "canonical": "Candrajyōti",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "charukEsi": {
+    "bucket": "raga",
+    "canonical": "Cārukēśi",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "dEsiyatODi": {
+    "bucket": "raga",
+    "canonical": "Dēśiya Tōḍi",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "dEva manOhari": {
+    "bucket": "raga",
+    "canonical": "Dēvamanōhari",
+    "confidence": "high",
+    "why": "Distinct from Devagandhari and Sarasvati Manohari."
+  },
+  "dEvamanOhari": {
+    "bucket": "raga",
+    "canonical": "Dēvamanōhari",
+    "confidence": "high",
+    "why": "Distinct from Devagandhari and Sarasvati Manohari."
+  },
+  "dEvamanohari": {
+    "bucket": "raga",
+    "canonical": "Dēvamanōhari",
+    "confidence": "high",
+    "why": "Distinct from Devagandhari and Sarasvati Manohari."
+  },
+  "darbAr": {
+    "bucket": "raga",
+    "canonical": "Darbār",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "darbar": {
+    "bucket": "raga",
+    "canonical": "Darbār",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "darbar ?": {
+    "bucket": "raga",
+    "canonical": "Darbār",
+    "confidence": "low",
+    "why": "Established raga absent from the capped canonical vocabulary. Audio or authoritative musician review is required."
+  },
+  "deepAli": {
+    "bucket": "raga",
+    "canonical": "Dīpāli",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "deepakam": {
+    "bucket": "raga",
+    "canonical": "Dīpakaṁ",
+    "confidence": "low",
+    "why": "Established raga absent from the capped canonical vocabulary. Audio or authoritative musician review is required."
+  },
+  "devamanohari": {
+    "bucket": "raga",
+    "canonical": "Dēvamanōhari",
+    "confidence": "high",
+    "why": "Distinct from Devagandhari and Sarasvati Manohari."
+  },
+  "dhEnukA": {
+    "bucket": "raga",
+    "canonical": "Dhēnukā",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "dhEnuka": {
+    "bucket": "raga",
+    "canonical": "Dhēnukā",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "dharmavati": {
+    "bucket": "raga",
+    "canonical": "Dharmavati",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "dharmavati (Koteeswara Iyer)": {
+    "bucket": "raga",
+    "canonical": "Dharmavati",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "dhenuka": {
+    "bucket": "raga",
+    "canonical": "Dhēnukā",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "durgA": {
+    "bucket": "raga",
+    "canonical": "Durgā",
+    "confidence": "medium",
+    "why": "Real import; allied to but not safely identical with Shuddha Saveri."
+  },
+  "durvAnki (Mysore Jayachamaraja Wodeyar)": {
+    "bucket": "raga",
+    "canonical": "Durvāṅki",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "eesamanOhari": {
+    "bucket": "raga",
+    "canonical": "Īśamanōhari",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "entanErcina": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "film song": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "film song (poor audio quality)": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "gAnamoorti": {
+    "bucket": "raga",
+    "canonical": "Gānamūrti",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "gAngEyabhooshaNi": {
+    "bucket": "raga",
+    "canonical": "Gāṅgēyabhūṣaṇi",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "gAngeyabhooshaNi": {
+    "bucket": "raga",
+    "canonical": "Gāṅgēyabhūṣaṇi",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "gOmedakapriya or gOmethakapriya": {
+    "bucket": "raga",
+    "canonical": "Gōmēdakapriya",
+    "confidence": "low",
+    "why": "Established raga absent from the capped canonical vocabulary. Audio or authoritative musician review is required."
+  },
+  "gOpikatilakam": {
+    "bucket": "raga",
+    "canonical": "Gōpikātilakam",
+    "confidence": "low",
+    "why": "Established raga absent from the capped canonical vocabulary. Audio or authoritative musician review is required."
+  },
+  "garuDadwani": {
+    "bucket": "raga",
+    "canonical": "Garuḍadhvani",
+    "confidence": "high",
+    "why": "Distinct from the currently fuzzy-selected Kāmavardani."
+  },
+  "genius’ at work": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "gowDamalhAr": {
+    "bucket": "raga",
+    "canonical": "Gauḍ Malhār",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "gowDmalhAr": {
+    "bucket": "raga",
+    "canonical": "Gauḍ Malhār",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "gowLipantu": {
+    "bucket": "raga",
+    "canonical": "Gauḷipantu",
+    "confidence": "high",
+    "why": "Distinct from Gauḷa."
+  },
+  "gowlipantu": {
+    "bucket": "raga",
+    "canonical": "Gauḷipantu",
+    "confidence": "high",
+    "why": "Distinct from Gauḷa."
+  },
+  "gowrimanOhari": {
+    "bucket": "raga",
+    "canonical": "Gaurīmanōhari",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "gowrimanohari": {
+    "bucket": "raga",
+    "canonical": "Gaurīmanōhari",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "hamsanAdam": {
+    "bucket": "raga",
+    "canonical": "Hamsanādam",
+    "confidence": "high",
+    "why": "Distinct from Hamsanandi and Hamsadhvani."
+  },
+  "hamsanandi gives you the goosebumps": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "he adds an interesting twist": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "hindOlam (m d rAmanAdhan)": {
+    "bucket": "raga_variant",
+    "canonical": "Hindōḷaṁ",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "hindustani kApi": {
+    "bucket": "raga",
+    "canonical": "Hindustāni Kāpi",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "hiss and distortion": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "hope you enjoy as I did": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "incomplete": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "janjooTi": {
+    "bucket": "raga",
+    "canonical": "Jhinjhōṭi",
+    "confidence": "medium",
+    "why": "Real import; do not silently merge with Sencurutti."
+  },
+  "jaya manohari": {
+    "bucket": "raga",
+    "canonical": "Jayamanōhari",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "jayamanOhari": {
+    "bucket": "raga",
+    "canonical": "Jayamanōhari",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "jayamanohari": {
+    "bucket": "raga",
+    "canonical": "Jayamanōhari",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "jayantasree": {
+    "bucket": "raga",
+    "canonical": "Jayantaśrī",
+    "confidence": "high",
+    "why": "Distinct from Dhanashri despite current fuzzy mappings."
+  },
+  "jenjooTi": {
+    "bucket": "raga",
+    "canonical": "Jhinjhōṭi",
+    "confidence": "medium",
+    "why": "Real import; do not silently merge with Sencurutti."
+  },
+  "jinjooTi": {
+    "bucket": "raga",
+    "canonical": "Jhinjhōṭi",
+    "confidence": "medium",
+    "why": "Real import; do not silently merge with Sencurutti."
+  },
+  "jyOtiswaroopiNi": {
+    "bucket": "raga",
+    "canonical": "Jyōtisvarūpiṇi",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "jyotiswaroopiNi": {
+    "bucket": "raga",
+    "canonical": "Jyōtisvarūpiṇi",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "kAmbhOji (rAgam, tAnam and kriti)": {
+    "bucket": "raga_variant",
+    "canonical": "Kāṁbhōji",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "kAnaDA (incomplete)": {
+    "bucket": "raga_variant",
+    "canonical": "Kānaḍa",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "kAnaDA (starts midway)": {
+    "bucket": "raga_variant",
+    "canonical": "Kānaḍa",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "kAvaDichindu": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "kOkiladwani": {
+    "bucket": "raga",
+    "canonical": "Kōkiladhvani",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "kOsalam": {
+    "bucket": "raga",
+    "canonical": "Kōsalam",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "kaNmaNiyE sollaDi": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "kalgaDA (incomplete)": {
+    "bucket": "raga_variant",
+    "canonical": "Kalgaḍa",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "kalyANavasantam": {
+    "bucket": "raga",
+    "canonical": "Kalyāṇavasantam",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "kalyANi (Alapana part missing)": {
+    "bucket": "raga_variant",
+    "canonical": "Kalyāṇi",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "kalyANi (incomplete)": {
+    "bucket": "raga_variant",
+    "canonical": "Kalyāṇi",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "kalyANi tyAgarAjar": {
+    "bucket": "raga_variant",
+    "canonical": "Kalyāṇi",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "kalyAnavasantam": {
+    "bucket": "raga",
+    "canonical": "Kalyāṇavasantam",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "kamAs (Periyasami Thooran)": {
+    "bucket": "raga_variant",
+    "canonical": "Kamās",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "kamAs (incomplete)": {
+    "bucket": "raga_variant",
+    "canonical": "Kamās",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "kamalAmanOhari": {
+    "bucket": "raga",
+    "canonical": "Kamalāmanōhari",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "kamalamanOhari": {
+    "bucket": "raga",
+    "canonical": "Kamalāmanōhari",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "kanDEn seetayai": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "kannaDagowLa": {
+    "bucket": "raga",
+    "canonical": "Kannaḍagauḷa",
+    "confidence": "high",
+    "why": "Distinct from Kanada, Gaula, and Kedaragaula."
+  },
+  "kannaDagowla": {
+    "bucket": "raga",
+    "canonical": "Kannaḍagauḷa",
+    "confidence": "high",
+    "why": "Distinct from Kanada, Gaula, and Kedaragaula."
+  },
+  "keeravANi": {
+    "bucket": "raga",
+    "canonical": "Kīravāṇi",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "keeravAni": {
+    "bucket": "raga",
+    "canonical": "Kīravāṇi",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "keeravaNi": {
+    "bucket": "raga",
+    "canonical": "Kīravāṇi",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "keervANi": {
+    "bucket": "raga",
+    "canonical": "Kīravāṇi",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "mALavi": {
+    "bucket": "raga",
+    "canonical": "Māḷavi",
+    "confidence": "high",
+    "why": "Distinct from Kalavati."
+  },
+  "mAnji": {
+    "bucket": "raga",
+    "canonical": "Māñji",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "mOhanakalyANi": {
+    "bucket": "raga",
+    "canonical": "Mōhanakalyāṇi",
+    "confidence": "high",
+    "why": "Distinct from Kalyani, Hamir Kalyani, and Yamuna Kalyani."
+  },
+  "mOhanakalyANi (Lalgudi Jayaraman)": {
+    "bucket": "raga",
+    "canonical": "Mōhanakalyāṇi",
+    "confidence": "high",
+    "why": "Distinct from Kalyani, Hamir Kalyani, and Yamuna Kalyani."
+  },
+  "mOhanakalyAni": {
+    "bucket": "raga",
+    "canonical": "Mōhanakalyāṇi",
+    "confidence": "high",
+    "why": "Distinct from Kalyani, Hamir Kalyani, and Yamuna Kalyani."
+  },
+  "mOhanam (incomplete)": {
+    "bucket": "raga_variant",
+    "canonical": "Mōhanaṁ",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "mOmujeppevE": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "malavi": {
+    "bucket": "raga",
+    "canonical": "Māḷavi",
+    "confidence": "high",
+    "why": "Distinct from Kalavati."
+  },
+  "malayamArutam": {
+    "bucket": "raga",
+    "canonical": "Malayamārutam",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "malayamArutam (pApanAsam sivan)": {
+    "bucket": "raga",
+    "canonical": "Malayamārutam",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "malayamArutham": {
+    "bucket": "raga",
+    "canonical": "Malayamārutam",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "misra yaman": {
+    "bucket": "raga",
+    "canonical": "Miśra Yaman",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "mohanakalyANi": {
+    "bucket": "raga",
+    "canonical": "Mōhanakalyāṇi",
+    "confidence": "high",
+    "why": "Distinct from Kalyani, Hamir Kalyani, and Yamuna Kalyani."
+  },
+  "mridangam comes thru poorly": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "muktidAyini": {
+    "bucket": "raga",
+    "canonical": "Muktidāyini",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "nATa (incomplete)": {
+    "bucket": "raga_variant",
+    "canonical": "Nāṭa",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "nAgasvarAvaLi & hamsadhwani": {
+    "bucket": "ambiguous",
+    "canonical": null,
+    "confidence": "low",
+    "why": "Two real ragas are named; segment boundaries or audio are needed for one label."
+  },
+  "nAsikAbhooshaNi": {
+    "bucket": "raga",
+    "canonical": "Nāsikābhūṣaṇi",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "nAsikAbhooshani": {
+    "bucket": "raga",
+    "canonical": "Nāsikābhūṣaṇi",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "nAsikabhooshaNi": {
+    "bucket": "raga",
+    "canonical": "Nāsikābhūṣaṇi",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "nAyaki": {
+    "bucket": "raga",
+    "canonical": "Nāyaki",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "naLinakAnti": {
+    "bucket": "raga",
+    "canonical": "Nalinakānti",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "naTabhairavi": {
+    "bucket": "raga",
+    "canonical": "Naṭabhairavi",
+    "confidence": "high",
+    "why": "Distinct from Bhairavi and Anandabhairavi."
+  },
+  "naliNakAnti": {
+    "bucket": "raga",
+    "canonical": "Nalinakānti",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "nalinakAnti": {
+    "bucket": "raga",
+    "canonical": "Nalinakānti",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "natabhairavi": {
+    "bucket": "raga",
+    "canonical": "Naṭabhairavi",
+    "confidence": "high",
+    "why": "Distinct from Bhairavi and Anandabhairavi."
+  },
+  "navarasa kannaDA": {
+    "bucket": "raga",
+    "canonical": "Navarasakannaḍa",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "navarasakannaDA": {
+    "bucket": "raga",
+    "canonical": "Navarasakannaḍa",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "neelAmbari (incomplete)": {
+    "bucket": "raga_variant",
+    "canonical": "Nīlāṁbari",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "neetimati": {
+    "bucket": "raga",
+    "canonical": "Nītimati",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "niravati sukadA": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "oormikA": {
+    "bucket": "raga",
+    "canonical": "Ūrmikā",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "ottupetra": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "pantuvaraLi (Hindustani leaning )": {
+    "bucket": "raga_variant",
+    "canonical": "Kāmavardani",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "paras": {
+    "bucket": "raga",
+    "canonical": "Paras",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "paras (starts from the middle)": {
+    "bucket": "raga",
+    "canonical": "Paras",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "parts of the concert": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "peelu": {
+    "bucket": "raga",
+    "canonical": "Pīlū",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "pilu": {
+    "bucket": "raga",
+    "canonical": "Pīlū",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "poorNashadjam": {
+    "bucket": "raga",
+    "canonical": "Pūrṇaṣaḍjam",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "poornashadjam": {
+    "bucket": "raga",
+    "canonical": "Pūrṇaṣaḍjam",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "poorvi": {
+    "bucket": "raga",
+    "canonical": "Pūrvī",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "pooryA": {
+    "bucket": "raga",
+    "canonical": "Pūriyā",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "poorya": {
+    "bucket": "raga",
+    "canonical": "Pūriyā",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "pushpalatikA": {
+    "bucket": "raga",
+    "canonical": "Puṣpalatikā",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "pushpalatika": {
+    "bucket": "raga",
+    "canonical": "Puṣpalatikā",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "pushpatilakam": {
+    "bucket": "raga",
+    "canonical": "Puṣpalatikā",
+    "confidence": "low",
+    "why": "Established raga absent from the capped canonical vocabulary. Audio or authoritative musician review is required."
+  },
+  "rAgasudhArasa": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "rAjadheeya": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "rAma nee samAna": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "rAmapriyA": {
+    "bucket": "raga",
+    "canonical": "Rāmapriya",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "rEvagupti": {
+    "bucket": "raga",
+    "canonical": "Rēvagupti",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "rEvati": {
+    "bucket": "raga",
+    "canonical": "Rēvati",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "ranjani (incomplete)": {
+    "bucket": "raga_variant",
+    "canonical": "Ranjani",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "rasALi (Film Thyagaraja)": {
+    "bucket": "raga",
+    "canonical": "Rāsāli",
+    "confidence": "low",
+    "why": "Established raga absent from the capped canonical vocabulary. Audio or authoritative musician review is required."
+  },
+  "reetigowLa (chatter in background)": {
+    "bucket": "raga_variant",
+    "canonical": "Rītigauḷa",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "reetigowLa (incomplete)": {
+    "bucket": "raga_variant",
+    "canonical": "Rītigauḷa",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "reetogowLa": {
+    "bucket": "raga_variant",
+    "canonical": "Rītigauḷa",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "revati": {
+    "bucket": "raga",
+    "canonical": "Rēvati",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "rishabapriyA (Kotteswara Iyer)": {
+    "bucket": "raga",
+    "canonical": "Ṛṣabhapriya",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "sAmA (incomplete)": {
+    "bucket": "raga_variant",
+    "canonical": "Sāma",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "sArangA (Annasami Sastry)": {
+    "bucket": "raga_variant",
+    "canonical": "Sāranga",
+    "confidence": "medium",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "sAveri  (Incomplete)": {
+    "bucket": "raga_variant",
+    "canonical": "Sāvēri",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "sahAnA -tyAgarAja": {
+    "bucket": "raga_variant",
+    "canonical": "Sahānā",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "sangeeta gyAnamu": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "saraswati": {
+    "bucket": "raga",
+    "canonical": "Sarasvati",
+    "confidence": "high",
+    "why": "Distinct from Saramati."
+  },
+  "second half of the concert": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "shadvidamArgiNi": {
+    "bucket": "raga",
+    "canonical": "Ṣaḍvidhamārgiṇi",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "sindhunAmakriyA": {
+    "bucket": "raga",
+    "canonical": "Sindhunāmakriyā",
+    "confidence": "high",
+    "why": "Distinct from Nadanamakriya."
+  },
+  "sivapriyA": {
+    "bucket": "raga",
+    "canonical": "Śivapriya",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "sivaranjani": {
+    "bucket": "raga",
+    "canonical": "Śivaranjani",
+    "confidence": "high",
+    "why": "Distinct from Ranjani and Sriranjani."
+  },
+  "sooryA (sallAbam)": {
+    "bucket": "raga",
+    "canonical": "Sūryā",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "sooryakAntam": {
+    "bucket": "raga",
+    "canonical": "Sūryakāntam",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "sri krishnam bhaja": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "suddha seemandini": {
+    "bucket": "raga",
+    "canonical": "Śuddhasīmantini",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "suddhaseemandini": {
+    "bucket": "raga",
+    "canonical": "Śuddhasīmantini",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "suddhaseemantini": {
+    "bucket": "raga",
+    "canonical": "Śuddhasīmantini",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "sujana jeevana": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "sunAda vinOdini": {
+    "bucket": "raga",
+    "canonical": "Sunādavinōdini",
+    "confidence": "high",
+    "why": "Distinct from Jaganmohini."
+  },
+  "sunAdavinOdini": {
+    "bucket": "raga",
+    "canonical": "Sunādavinōdini",
+    "confidence": "high",
+    "why": "Distinct from Jaganmohini."
+  },
+  "sunAdavonOdini": {
+    "bucket": "raga",
+    "canonical": "Sunādavinōdini",
+    "confidence": "high",
+    "why": "Distinct from Jaganmohini."
+  },
+  "sunAdhavinOdini": {
+    "bucket": "raga",
+    "canonical": "Sunādavinōdini",
+    "confidence": "high",
+    "why": "Distinct from Jaganmohini."
+  },
+  "sunadavonodini": {
+    "bucket": "raga",
+    "canonical": "Sunādavinōdini",
+    "confidence": "high",
+    "why": "Distinct from Jaganmohini."
+  },
+  "suraTi (unable to decipher :-()": {
+    "bucket": "raga_variant",
+    "canonical": "Suraṭi",
+    "confidence": "low",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "tODi (2 tracks)": {
+    "bucket": "raga_variant",
+    "canonical": "Tōḍi",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "tODi (Starts midway Alapana by Violin)": {
+    "bucket": "raga_variant",
+    "canonical": "Tōḍi",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "tODi (incomplete)": {
+    "bucket": "raga_variant",
+    "canonical": "Tōḍi",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "tODi (oottukADu)": {
+    "bucket": "raga_variant",
+    "canonical": "Tōḍi",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "tODi- syAmA sastry": {
+    "bucket": "raga_variant",
+    "canonical": "Tōḍi",
+    "confidence": "high",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "tiruppAvai": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "tirupugazh": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "tiruvempAvai": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "udayaravichamdrikA (suddha dhanyAsi)": {
+    "bucket": "raga_variant",
+    "canonical": "Śuddadhanyāsi",
+    "confidence": "medium",
+    "why": "Existing-vocabulary raga obscured by spelling, abbreviation, or annotation; this is a normalization bug."
+  },
+  "vAchaspati": {
+    "bucket": "raga",
+    "canonical": "Vācaspati",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "valaji": {
+    "bucket": "raga",
+    "canonical": "Valaji",
+    "confidence": "high",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "veera vasantam": {
+    "bucket": "raga",
+    "canonical": "Vīravasantam",
+    "confidence": "high",
+    "why": "Distinct from Vasanta."
+  },
+  "veera vasantam (diff concert ?)": {
+    "bucket": "raga",
+    "canonical": "Vīravasantam",
+    "confidence": "high",
+    "why": "Distinct from Vasanta."
+  },
+  "veeravasantam": {
+    "bucket": "raga",
+    "canonical": "Vīravasantam",
+    "confidence": "high",
+    "why": "Distinct from Vasanta."
+  },
+  "vijayaSree": {
+    "bucket": "raga",
+    "canonical": "Vijayaśrī",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "vijayasree": {
+    "bucket": "raga",
+    "canonical": "Vijayaśrī",
+    "confidence": "medium",
+    "why": "Established raga absent from the capped canonical vocabulary."
+  },
+  "virutham": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "viruttam": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  },
+  "with S D Sridhar": {
+    "bucket": "junk",
+    "canonical": null,
+    "confidence": "high",
+    "why": "Date, person, venue, work, form, composition, or commentary leaked into the raga field."
+  }
+}
