@@ -4605,3 +4605,141 @@ tests/test_registry_junk.py tests/test_negative_arm.py`: 103 passed, 1 xfailed.
 
 **The verdict on what to do next belongs to the verifier seat.** This entry
 states the measurement and the row it lands on.
+
+## [2026-08-13] Outside-voice verifier — raga vocabulary null bucket is 81.4% recoverable metadata, not junk
+
+Executed `CODEX_RAGA_VOCABULARY_BRIEF.md` as an audit only. Wrote
+`data/RAGA_VOCABULARY_AUDIT.md` and the 274-key sidecar
+`data/raga_aliases_audit.json`; did not modify `data/raga_aliases.json`,
+`normalize_ragas.py`, models, production identification code, or frozen audit
+paths.
+
+Independent recount: 958 alias keys, 274 null; 689/3,698 programme items behind
+null. Classification is 158 real-raga spellings / 518 items, 37
+existing-vocabulary variants / 43 items, 77 junk keys / 126 items, and two
+ambiguous keys / two items. Therefore 561/689 = **81.4%** of null items are
+recoverable raga metadata and only 18.3% are junk. The old blanket description
+is refuted.
+
+Adversarial qualification: the original `e216c53` code deliberately put 59 raw
+keys / 326 items behind `_FORCE_NONE` to avoid poisonous fuzzy merges. That
+safety choice was sound; the defect was treating its null output as junk and
+never expanding the registry. The cache independently contains 1,297 NPZs and
+89 label strings / 88 musical classes (the extra string is the
+`Ābhōgī`/`Ābhōgi` spelling duplicate).
+
+Programme-count ceiling adds 18/7/4/5 classes at `min_tracks` 10/15/20/25 under
+a strict split. But only 57/561 recoverable rows (10.2%) exact-match the cached
+Archive.org metadata, spread over 37 classes with a maximum of four; **zero new
+classes clear 10 on demonstrated exact matches**. Conclusion: vocabulary is a
+real metadata ceiling and possible corpus ceiling, not yet a demonstrated model
+ceiling. Recommendation is reviewed exact aliases plus annotation parsing and a
+junk quarantine, never broader fuzzy recovery; audio acquisition remains the
+binding cost.
+
+## [2026-08-13] Workhorse (Opus 5) — the coverage/accuracy curve: widening the raga tier is worth 60% more correct answers per concert
+
+Executed `WORKHORSE_RAGA_COVERAGE_BRIEF.md`. Preregistration
+`data/raga_coverage/PREREGISTRATION.md` committed as its own commit (`51065a2`)
+**before** the parameterised harness (`93a49ef`) and before a single fold was
+scored; results committed after every tier (`3eb77f9`); write-up
+`data/RAGA_COVERAGE_CURVE.md` (`0297e17`). Nothing under `models/` written,
+`identify_clip.py` untouched, `data/raga_aliases.json` read but never modified,
+no audio in `~/sung_tests` opened. `tests/test_clip_policy.py
+tests/test_registry_junk.py tests/test_negative_arm.py`: 103 passed, 1 xfailed.
+
+**Gate 1 passed on the exact integer counts.** Verbatim:
+
+```
+REPRODUCTION GATE: level (a) = 72.8% / 84.7% vs recorded 72.8% / 84.7%  ->  EXACT
+                   377/518 = 72.780%      439/518 = 84.749%
+REPRODUCTION GATE: level (c) = 72.2% / 84.0% vs recorded 72.2% / 84.0%  ->  EXACT
+                   374/518 = 72.201%      435/518 = 83.977%
+```
+
+Stronger: the default run rewrote `data/raga_audit/levels.json` and `git diff` on
+it is empty, so the parameterisation is behaviour-preserving and not merely
+number-preserving. A second, unregistered gate fell out of the sweep and also
+passed — level (a) at `--min-tracks 20` returns 558/826 = 67.6% and 656/826 =
+79.4%, the archived harness's *other* recorded tier, which verifies the argument
+at a tier that is not the default.
+
+**The curve, level (c) source-disjoint, tier the only thing that moved:**
+`min>=25` 374/518 = 72.2% (155 groups), `min>=20` 529/826 = 64.0% (185),
+`min>=15` 611/1020 = 59.9% (198), `min>=10` 649/1139 = 57.0% (204). Top-3 84.0 /
+76.5 / 71.3 / 71.3. Cluster-bootstrap CIs over source groups: [66.4, 78.1],
+[60.0, 68.3], [55.8, 64.4], [52.7, 61.7]. Class-prior floors fall faster than the
+score, so top-1 ÷ floor **rises** 13.0× → 28.1×.
+
+**Expected hits per 100 heard concert items = 28.2 / 38.2 / 42.5 / 45.1.** It
+rises monotonically and peaks at the widest tier measured. `min>=10` is worth
+**60% more correct raga calls per concert** than `min>=25`, and 72% more on
+top-3. For the narrow tier to win, top-1 at 54 classes would have to be below
+35.6%; it is 57.0% with a lower CI bound of 52.7%. **The 18-class tier is not on
+the efficient frontier and neither is any tier narrower than the ones measured.**
+
+**The crux — the added classes do not poison the incumbents much.** Paired on the
+518 tracks of the `min>=25` tier at level (c): −2.5 pp at 32 classes (b=22, c=9,
+p=0.0295), −3.1 pp at 44 (b=28, c=12, p=0.0166), **−3.5 pp at 54 (b=31, c=13,
+McNemar exact p=0.0096)**. Real, significant, monotone and small. Meanwhile the
+added tracks themselves run at 47.2% — 23× their own chance floor. Most of the
+15.2 pp aggregate fall is composition, not damage. Registered caveat, and it
+stands: the pairing is exact at the track level but **not** at the fold level, so
+the p-value is an upper bound on the evidence, and the 13 wrong→right flips are
+the visible noise floor.
+
+**Incidental finding that changes a published conclusion.**
+`data/RAGA_CONTAMINATION_AUDIT.md` §3's "the levels are not distinguishable from
+each other" is **tier-specific and true only at `min>=25`**. Level (a)→(c) costs
+0.6 pp at 18 classes but 3.5 pp at 32, 3.5 at 44 and 4.7 at 54; among tracks in a
+same-raga same-source cluster it costs 8.0 → 11.8 pp against 1.2 pp at the narrow
+tier. The narrow tier's classes are simply the best-sampled ones. **Any raga
+figure quoted at `min>=20` or wider that was measured at level (a) is inflated by
+3.5-4.7 pp.** This also gives the *exported* model's own tier (`min_tracks >= 20`,
+32 classes) a source-disjoint number for the first time: **64.0% / 76.5%**,
+TDMS-only arm.
+
+**Per-class:** exactly one class falls below the class-prior floor —
+**Nāṭakurinji, 0/11 top-1, 2/11 top-3, over eight independent sources.** Three
+more (Janaranjani 6.7%, Pūrṇacandrika 6.7%, Sencuruṭṭi 8.3%) are functionally
+noise. Dropping those four removes 50 near-certain errors and costs 3.9 pp of
+repertoire coverage. But the added classes are **not** uniformly weak: five of
+the ten best classes at `min>=10` are new (Saurāṣtraṁ 92.3%, Gauḷa 86.7%, Bēgaḍa
+83.3%, Varāḷi 81.0%, Rītigauḷa 79.2%), and a global `min_tracks` cannot separate
+Saurāṣtraṁ (13 tracks, 92.3%) from Nāṭakurinji (11 tracks, 0.0%). **The lever is
+per-class admission, not a global threshold.** Vasanta is 35.7% at *every* tier,
+unchanged by 36 added competitors.
+
+**Predictions refuted, as the brief requires.**
+
+- Verifier, level at `min>=15`: registered 63-65%, measured **59.9%** — refuted.
+- Verifier, level at `min>=10`: registered 58-61%, measured **57.0%** — refuted.
+  (Both misses are point-estimate misses the cluster CIs do not exclude; they are
+  recorded as refutations anyway because the bands were fixed before the numbers.)
+- Verifier, "the sub-40% tail carries most of the loss": operationalised in the
+  prereg as >50% of top-1 errors, measured **43.3%** — refuted. The tail itself is
+  confirmed (1 class at `min>=25` → 17 at `min>=10`).
+- Verifier, shape "roughly log-linear in class count": **confirmed far more
+  exactly than claimed** — −13.8 pp per natural-log unit, R² = 0.9997, max
+  residual 0.16 pp. A doubling of the class count costs 9.6 pp wherever you start.
+- Brief §4.4, "expected hits will peak somewhere in the middle": **refuted**, it
+  is monotone increasing.
+- This seat's own magnitude prediction on the flip test (5-12 pp net loss on the
+  incumbents): **refuted**, it is 3.5 pp — the added classes are cheaper than I
+  expected. Its other three (CIs will not narrow; expected hits monotone; Vasanta
+  stays below 45%) hold.
+
+**Where it lands on the fixed interpretation table:** the 50-60% row — *"a real
+but payable trade; decide on expected-hits-per-concert-item, not on top-1."*
+Decided that way the trade is not close. The row's own qualification is the part
+to carry forward: a confidently wrong raga name is a different failure from
+silence, and that belongs to the abstain gate (`HANDOFF_SESSION_0731.md` §6.3),
+not to the tier. What is now measured is that the narrow tier is **not** how to
+buy that safety — it buys it by silently refusing 61% of the repertoire,
+including the parts it would have got right.
+
+Scope: full-recording, corpus-against-itself, TDMS-only primary arm. Says nothing
+about the fused arm's behaviour at wider tiers, nothing about tier × duration
+interaction, nothing about the field, and nothing about the lyrics-ASR, Qmax or
+CSI paths in either direction. Graduates nothing. **The verdict on what to do
+with this belongs to the verifier seat.**
