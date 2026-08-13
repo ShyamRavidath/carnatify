@@ -1,0 +1,71 @@
+1287 tracks with full melody
+
+===== min>=25: 18 ragas, 518 tracks =====
+(a) as-originally-run (groups = track_id)
+     n: tracks 518  groups 518  ragas 18  folds 5
+     floors: majority 0.0579  class-prior 0.0557
+     top1=377/518 = 72.8%   top3=439/518 = 84.7%
+(c) source-disjoint (archive item / Saraga concert, + artist merge)
+     n: tracks 518  groups 155  ragas 18  folds 5
+     floors: majority 0.0579  class-prior 0.0557
+     top1=374/518 = 72.2%   top3=435/518 = 84.0%
+
+REPRODUCTION GATE: level (a) = 72.8% / 84.7% vs recorded 72.8% / 84.7%  ->  EXACT
+                   377/518 = 72.780%      439/518 = 84.749%
+REPRODUCTION GATE: level (c) = 72.2% / 84.0% vs recorded 72.2% / 84.0%  ->  EXACT
+                   374/518 = 72.201%      435/518 = 83.977%
+
+same-raga-in-one-source exposure (the mechanism the brief flagged):
+  clustered  n=243   (a) 71.2%  ->  (c) 70.0%   delta -1.2pp
+  solo       n=275   (a) 74.2%  ->  (c) 74.2%   delta +0.0pp
+
+wrote /Users/shyamravidath/carnatify/data/raga_coverage/levels_min25.json
+
+===== min>=20: 32 ragas, 826 tracks =====
+(a) as-originally-run (groups = track_id)
+     n: tracks 826  groups 826  ragas 32  folds 5
+     floors: majority 0.0363  class-prior 0.0319
+     top1=558/826 = 67.6%   top3=656/826 = 79.4%
+(c) source-disjoint (archive item / Saraga concert, + artist merge)
+     n: tracks 826  groups 185  ragas 32  folds 5
+     floors: majority 0.0363  class-prior 0.0319
+     top1=529/826 = 64.0%   top3=632/826 = 76.5%
+
+same-raga-in-one-source exposure (the mechanism the brief flagged):
+  clustered  n=386   (a) 69.4%  ->  (c) 61.4%   delta -8.0pp
+  solo       n=440   (a) 65.9%  ->  (c) 66.4%   delta +0.5pp
+
+wrote /Users/shyamravidath/carnatify/data/raga_coverage/levels_min20.json
+
+===== min>=15: 44 ragas, 1020 tracks =====
+(a) as-originally-run (groups = track_id)
+     n: tracks 1020  groups 1020  ragas 44  folds 5
+     floors: majority 0.0294  class-prior 0.0240
+     top1=647/1020 = 63.4%   top3=782/1020 = 76.7%
+(c) source-disjoint (archive item / Saraga concert, + artist merge)
+     n: tracks 1020  groups 198  ragas 44  folds 5
+     floors: majority 0.0294  class-prior 0.0240
+     top1=611/1020 = 59.9%   top3=727/1020 = 71.3%
+
+same-raga-in-one-source exposure (the mechanism the brief flagged):
+  clustered  n=472   (a) 68.4%  ->  (c) 57.6%   delta -10.8pp
+  solo       n=548   (a) 59.1%  ->  (c) 61.9%   delta +2.7pp
+
+wrote /Users/shyamravidath/carnatify/data/raga_coverage/levels_min15.json
+
+===== min>=10: 54 ragas, 1139 tracks =====
+(a) as-originally-run (groups = track_id)
+     n: tracks 1139  groups 1139  ragas 54  folds 5
+     floors: majority 0.0263  class-prior 0.0203
+     top1=702/1139 = 61.6%   top3=857/1139 = 75.2%
+(c) source-disjoint (archive item / Saraga concert, + artist merge)
+     n: tracks 1139  groups 204  ragas 54  folds 5
+     floors: majority 0.0263  class-prior 0.0203
+     top1=649/1139 = 57.0%   top3=812/1139 = 71.3%
+
+same-raga-in-one-source exposure (the mechanism the brief flagged):
+  clustered  n=510   (a) 66.3%  ->  (c) 54.5%   delta -11.8pp
+  solo       n=629   (a) 57.9%  ->  (c) 59.0%   delta +1.1pp
+
+wrote /Users/shyamravidath/carnatify/data/raga_coverage/levels_min10.json
+EXIT=0

@@ -1,0 +1,723 @@
+{
+ "tiers": {
+  "25": {
+   "classes": 18,
+   "n_tracks": 518,
+   "n_groups": 155,
+   "n_folds": 5,
+   "top1": 374,
+   "top1_rate": 0.722007722007722,
+   "top1_ci": [
+    0.6642217796647262,
+    0.7805432873434477
+   ],
+   "top1_wilson": [
+    0.6818994863180516,
+    0.7588472843495226
+   ],
+   "top3": 435,
+   "top3_rate": 0.8397683397683398,
+   "top3_ci": [
+    0.7913279132791328,
+    0.8809128669610794
+   ],
+   "majority_class_rate": 0.05791505791505792,
+   "class_prior_expectation": 0.05573113102070631,
+   "top1_minus_floor": 0.6662765909870157,
+   "top1_over_floor": 12.955195934198208,
+   "level_a_top1_rate": 0.7277992277992278,
+   "level_a_top1": 377,
+   "level_a_top3": 439,
+   "level_a_top3_rate": 0.8474903474903475,
+   "repertoire_coverage": 0.39082751744765704,
+   "expected_hits_per_100": 28.21804855703161
+  },
+  "20": {
+   "classes": 32,
+   "n_tracks": 826,
+   "n_groups": 185,
+   "n_folds": 5,
+   "top1": 529,
+   "top1_rate": 0.6404358353510896,
+   "top1_ci": [
+    0.599993842364532,
+    0.683315837511215
+   ],
+   "top1_wilson": [
+    0.6071291438335095,
+    0.6724422828098403
+   ],
+   "top3": 632,
+   "top3_rate": 0.7651331719128329,
+   "top3_ci": [
+    0.7314111866793302,
+    0.8
+   ],
+   "majority_class_rate": 0.03631961259079903,
+   "class_prior_expectation": 0.03189325141145226,
+   "top1_minus_floor": 0.6085425839396373,
+   "top1_over_floor": 20.08060661764706,
+   "level_a_top1_rate": 0.6755447941888619,
+   "level_a_top1": 558,
+   "level_a_top3": 656,
+   "level_a_top3_rate": 0.7941888619854721,
+   "repertoire_coverage": 0.5962113659022931,
+   "expected_hits_per_100": 38.18351241674492
+  },
+  "15": {
+   "classes": 44,
+   "n_tracks": 1020,
+   "n_groups": 198,
+   "n_folds": 5,
+   "top1": 611,
+   "top1_rate": 0.5990196078431372,
+   "top1_ci": [
+    0.5581637338363407,
+    0.6435793595645503
+   ],
+   "top1_wilson": [
+    0.5686250069078972,
+    0.6286711373394159
+   ],
+   "top3": 727,
+   "top3_rate": 0.7127450980392157,
+   "top3_ci": [
+    0.6814515216756677,
+    0.7525058509179723
+   ],
+   "majority_class_rate": 0.029411764705882353,
+   "class_prior_expectation": 0.023952326028450596,
+   "top1_minus_floor": 0.5750672818146867,
+   "top1_over_floor": 25.008828250401283,
+   "level_a_top1_rate": 0.634313725490196,
+   "level_a_top1": 647,
+   "level_a_top3": 782,
+   "level_a_top3_rate": 0.7666666666666667,
+   "repertoire_coverage": 0.709205716184779,
+   "expected_hits_per_100": 42.48281299891176
+  },
+  "10": {
+   "classes": 54,
+   "n_tracks": 1139,
+   "n_groups": 204,
+   "n_folds": 5,
+   "top1": 649,
+   "top1_rate": 0.5697980684811238,
+   "top1_ci": [
+    0.5268205018076945,
+    0.6170505197322058
+   ],
+   "top1_wilson": [
+    0.5408573441857768,
+    0.5982695479399561
+   ],
+   "top3": 812,
+   "top3_rate": 0.7129060579455663,
+   "top3_ci": [
+    0.679605365316218,
+    0.7522772848047325
+   ],
+   "majority_class_rate": 0.02633889376646181,
+   "class_prior_expectation": 0.02031031641359386,
+   "top1_minus_floor": 0.54948775206753,
+   "top1_over_floor": 28.054613078295194,
+   "level_a_top1_rate": 0.6163301141352063,
+   "level_a_top1": 702,
+   "level_a_top3": 857,
+   "level_a_top3_rate": 0.752414398595259,
+   "repertoire_coverage": 0.7919574609504819,
+   "expected_hits_per_100": 45.12558315687996
+  }
+ },
+ "method": {
+  "bootstrap": "cluster bootstrap over level-(c) source groups, 2000 replicates, default_rng(42), percentile",
+  "expected_hits": "repertoire coverage x level-(c) top-1, per 100 items",
+  "mcnemar": "exact two-sided binomial on discordant pairs, 518 tracks of the min>=25 tier, level (c)"
+ },
+ "per_class_min10": [
+  {
+   "raga": "Saurāṣtraṁ",
+   "n_tracks": 13,
+   "n_groups": 11,
+   "top1": 0.9230769230769231,
+   "top3": 0.9230769230769231,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Gauḷa",
+   "n_tracks": 15,
+   "n_groups": 12,
+   "top1": 0.8666666666666667,
+   "top3": 0.8666666666666667,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Tōḍi",
+   "n_tracks": 30,
+   "n_groups": 16,
+   "top1": 0.8666666666666667,
+   "top3": 0.9,
+   "added_since_min25": false
+  },
+  {
+   "raga": "Pūrvīkaḷyāṇi",
+   "n_tracks": 26,
+   "n_groups": 17,
+   "top1": 0.8461538461538461,
+   "top3": 0.9615384615384616,
+   "added_since_min25": false
+  },
+  {
+   "raga": "Bēgaḍa",
+   "n_tracks": 24,
+   "n_groups": 19,
+   "top1": 0.8333333333333334,
+   "top3": 1.0,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Kalyāṇi",
+   "n_tracks": 30,
+   "n_groups": 13,
+   "top1": 0.8333333333333334,
+   "top3": 0.9,
+   "added_since_min25": false
+  },
+  {
+   "raga": "Varāḷi",
+   "n_tracks": 21,
+   "n_groups": 15,
+   "top1": 0.8095238095238095,
+   "top3": 0.9047619047619048,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Mōhanaṁ",
+   "n_tracks": 30,
+   "n_groups": 22,
+   "top1": 0.8,
+   "top3": 0.8666666666666667,
+   "added_since_min25": false
+  },
+  {
+   "raga": "Rītigauḷa",
+   "n_tracks": 24,
+   "n_groups": 22,
+   "top1": 0.7916666666666666,
+   "top3": 0.9583333333333334,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Aṭāna",
+   "n_tracks": 26,
+   "n_groups": 21,
+   "top1": 0.7692307692307693,
+   "top3": 0.8076923076923077,
+   "added_since_min25": false
+  },
+  {
+   "raga": "Kāmavardani",
+   "n_tracks": 30,
+   "n_groups": 20,
+   "top1": 0.7333333333333333,
+   "top3": 0.8333333333333334,
+   "added_since_min25": false
+  },
+  {
+   "raga": "Nāṭa",
+   "n_tracks": 30,
+   "n_groups": 22,
+   "top1": 0.7333333333333333,
+   "top3": 0.8,
+   "added_since_min25": false
+  },
+  {
+   "raga": "Śankarābharaṇaṁ",
+   "n_tracks": 30,
+   "n_groups": 19,
+   "top1": 0.7333333333333333,
+   "top3": 0.8333333333333334,
+   "added_since_min25": false
+  },
+  {
+   "raga": "Māyāmāḷavagauḷa",
+   "n_tracks": 11,
+   "n_groups": 10,
+   "top1": 0.7272727272727273,
+   "top3": 0.9090909090909091,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Bhairavi",
+   "n_tracks": 30,
+   "n_groups": 21,
+   "top1": 0.7,
+   "top3": 0.8,
+   "added_since_min25": false
+  },
+  {
+   "raga": "Hamsadhvāni",
+   "n_tracks": 30,
+   "n_groups": 24,
+   "top1": 0.7,
+   "top3": 0.7333333333333333,
+   "added_since_min25": false
+  },
+  {
+   "raga": "Kamās",
+   "n_tracks": 29,
+   "n_groups": 20,
+   "top1": 0.6896551724137931,
+   "top3": 0.896551724137931,
+   "added_since_min25": false
+  },
+  {
+   "raga": "Sindhubhairavi",
+   "n_tracks": 29,
+   "n_groups": 21,
+   "top1": 0.6896551724137931,
+   "top3": 0.8620689655172413,
+   "added_since_min25": false
+  },
+  {
+   "raga": "Ṣanmukhapriya",
+   "n_tracks": 29,
+   "n_groups": 24,
+   "top1": 0.6896551724137931,
+   "top3": 0.7241379310344828,
+   "added_since_min25": false
+  },
+  {
+   "raga": "Latāngi",
+   "n_tracks": 15,
+   "n_groups": 13,
+   "top1": 0.6666666666666666,
+   "top3": 0.8666666666666667,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Behāg",
+   "n_tracks": 22,
+   "n_groups": 21,
+   "top1": 0.6363636363636364,
+   "top3": 0.8181818181818182,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Nīlāṁbari",
+   "n_tracks": 18,
+   "n_groups": 15,
+   "top1": 0.6111111111111112,
+   "top3": 0.7777777777777778,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Ānandabhairavi",
+   "n_tracks": 18,
+   "n_groups": 12,
+   "top1": 0.6111111111111112,
+   "top3": 0.6111111111111112,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Kānaḍa",
+   "n_tracks": 25,
+   "n_groups": 19,
+   "top1": 0.6,
+   "top3": 0.76,
+   "added_since_min25": false
+  },
+  {
+   "raga": "Kāpi",
+   "n_tracks": 20,
+   "n_groups": 13,
+   "top1": 0.6,
+   "top3": 0.7,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Dvijāvanti",
+   "n_tracks": 12,
+   "n_groups": 10,
+   "top1": 0.5833333333333334,
+   "top3": 0.5833333333333334,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Hindōḷaṁ",
+   "n_tracks": 24,
+   "n_groups": 20,
+   "top1": 0.5833333333333334,
+   "top3": 0.7916666666666666,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Śrīranjani",
+   "n_tracks": 21,
+   "n_groups": 14,
+   "top1": 0.5714285714285714,
+   "top3": 0.6190476190476191,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Sāvēri",
+   "n_tracks": 30,
+   "n_groups": 20,
+   "top1": 0.5666666666666667,
+   "top3": 0.7333333333333333,
+   "added_since_min25": false
+  },
+  {
+   "raga": "Dhanyāsi",
+   "n_tracks": 23,
+   "n_groups": 13,
+   "top1": 0.5652173913043478,
+   "top3": 0.5652173913043478,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Harikāmbhōji",
+   "n_tracks": 29,
+   "n_groups": 21,
+   "top1": 0.5517241379310345,
+   "top3": 0.7241379310344828,
+   "added_since_min25": false
+  },
+  {
+   "raga": "Śuddadhanyāsi",
+   "n_tracks": 15,
+   "n_groups": 10,
+   "top1": 0.5333333333333333,
+   "top3": 0.5333333333333333,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Madhyamāvati",
+   "n_tracks": 24,
+   "n_groups": 17,
+   "top1": 0.5,
+   "top3": 0.625,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Suraṭi",
+   "n_tracks": 18,
+   "n_groups": 13,
+   "top1": 0.5,
+   "top3": 0.5555555555555556,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Karaharapriya",
+   "n_tracks": 27,
+   "n_groups": 19,
+   "top1": 0.48148148148148145,
+   "top3": 0.7037037037037037,
+   "added_since_min25": false
+  },
+  {
+   "raga": "Sāma",
+   "n_tracks": 21,
+   "n_groups": 15,
+   "top1": 0.47619047619047616,
+   "top3": 0.5238095238095238,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Ābhōgi",
+   "n_tracks": 13,
+   "n_groups": 12,
+   "top1": 0.46153846153846156,
+   "top3": 0.7692307692307693,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Puṇṇāgavarāḷi",
+   "n_tracks": 21,
+   "n_groups": 13,
+   "top1": 0.38095238095238093,
+   "top3": 0.5238095238095238,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Kēdāragauḷa",
+   "n_tracks": 11,
+   "n_groups": 11,
+   "top1": 0.36363636363636365,
+   "top3": 0.5454545454545454,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Vasanta",
+   "n_tracks": 28,
+   "n_groups": 21,
+   "top1": 0.35714285714285715,
+   "top3": 0.5357142857142857,
+   "added_since_min25": false
+  },
+  {
+   "raga": "Bṛndāvana sāranga",
+   "n_tracks": 12,
+   "n_groups": 9,
+   "top1": 0.3333333333333333,
+   "top3": 0.6666666666666666,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Cakravākaṁ",
+   "n_tracks": 15,
+   "n_groups": 12,
+   "top1": 0.3333333333333333,
+   "top3": 0.6,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Maṇirangu",
+   "n_tracks": 10,
+   "n_groups": 9,
+   "top1": 0.3,
+   "top3": 0.8,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Jaganmōhini",
+   "n_tracks": 18,
+   "n_groups": 12,
+   "top1": 0.2777777777777778,
+   "top3": 0.5555555555555556,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Mukhāri",
+   "n_tracks": 15,
+   "n_groups": 11,
+   "top1": 0.26666666666666666,
+   "top3": 0.6666666666666666,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Kāṁbhōji",
+   "n_tracks": 20,
+   "n_groups": 9,
+   "top1": 0.25,
+   "top3": 0.6,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Bilahari",
+   "n_tracks": 22,
+   "n_groups": 20,
+   "top1": 0.22727272727272727,
+   "top3": 0.5,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Sahānā",
+   "n_tracks": 14,
+   "n_groups": 10,
+   "top1": 0.21428571428571427,
+   "top3": 0.5,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Jōnpuri",
+   "n_tracks": 17,
+   "n_groups": 12,
+   "top1": 0.17647058823529413,
+   "top3": 0.35294117647058826,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Haṁsānandi",
+   "n_tracks": 21,
+   "n_groups": 11,
+   "top1": 0.14285714285714285,
+   "top3": 0.3333333333333333,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Sencuruṭṭi",
+   "n_tracks": 12,
+   "n_groups": 7,
+   "top1": 0.08333333333333333,
+   "top3": 0.5,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Janaranjani",
+   "n_tracks": 15,
+   "n_groups": 10,
+   "top1": 0.06666666666666667,
+   "top3": 0.06666666666666667,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Pūrṇacandrika",
+   "n_tracks": 15,
+   "n_groups": 12,
+   "top1": 0.06666666666666667,
+   "top3": 0.4666666666666667,
+   "added_since_min25": true
+  },
+  {
+   "raga": "Nāṭakurinji",
+   "n_tracks": 11,
+   "n_groups": 8,
+   "top1": 0.0,
+   "top3": 0.18181818181818182,
+   "added_since_min25": true
+  }
+ ],
+ "errors_from_classes_below_40pct": {
+  "errors_attributed": 212.0,
+  "errors_total": 490,
+  "share": 0.4326530612244898
+ },
+ "classes_below_class_prior_floor_min10": [
+  "Nāṭakurinji"
+ ],
+ "flips": {
+  "20": {
+   "n": 518,
+   "top1_at_25": 374,
+   "top1_at_tier": 361,
+   "delta_pp": -2.5096525096525095,
+   "b_correct_to_wrong": 22,
+   "c_wrong_to_correct": 9,
+   "mcnemar_exact_p": 0.029449373483657837
+  },
+  "15": {
+   "n": 518,
+   "top1_at_25": 374,
+   "top1_at_tier": 358,
+   "delta_pp": -3.088803088803089,
+   "b_correct_to_wrong": 28,
+   "c_wrong_to_correct": 12,
+   "mcnemar_exact_p": 0.01658900337497471
+  },
+  "10": {
+   "n": 518,
+   "top1_at_25": 374,
+   "top1_at_tier": 356,
+   "delta_pp": -3.474903474903475,
+   "b_correct_to_wrong": 31,
+   "c_wrong_to_correct": 13,
+   "mcnemar_exact_p": 0.009559878856634896
+  }
+ },
+ "incumbent_vs_added": {
+  "25": {
+   "incumbent_hits": 374,
+   "incumbent_n": 518,
+   "incumbent_rate": 0.722007722007722,
+   "added_hits": 0,
+   "added_n": 0,
+   "added_rate": null
+  },
+  "20": {
+   "incumbent_hits": 361,
+   "incumbent_n": 518,
+   "incumbent_rate": 0.696911196911197,
+   "added_hits": 168,
+   "added_n": 308,
+   "added_rate": 0.5454545454545454
+  },
+  "15": {
+   "incumbent_hits": 358,
+   "incumbent_n": 518,
+   "incumbent_rate": 0.6911196911196911,
+   "added_hits": 253,
+   "added_n": 502,
+   "added_rate": 0.5039840637450199
+  },
+  "10": {
+   "incumbent_hits": 356,
+   "incumbent_n": 518,
+   "incumbent_rate": 0.6872586872586872,
+   "added_hits": 293,
+   "added_n": 621,
+   "added_rate": 0.4718196457326892
+  }
+ },
+ "log_linear_fit": {
+  "slope_pp_per_ln_class": -13.805747333411404,
+  "intercept": 1.120478528918252,
+  "r2": 0.9997145569330547,
+  "residuals_pp": [
+   0.05666149808961629,
+   -0.15719515833074738,
+   0.09767384007863811,
+   0.0028598201625484876
+  ]
+ },
+ "weak_classes": {
+  "25": {
+   "vasanta_top1": 0.35714285714285715,
+   "n_below_40pct": 1,
+   "classes_below_40pct": [
+    "Vasanta"
+   ],
+   "errors_from_them": 18.0,
+   "errors_total": 144,
+   "share_of_errors": 0.125
+  },
+  "20": {
+   "vasanta_top1": 0.35714285714285715,
+   "n_below_40pct": 5,
+   "classes_below_40pct": [
+    "Bilahari",
+    "Haṁsānandi",
+    "Kāṁbhōji",
+    "Vasanta",
+    "Puṇṇāgavarāḷi"
+   ],
+   "errors_from_them": 79.0,
+   "errors_total": 297,
+   "share_of_errors": 0.265993265993266
+  },
+  "15": {
+   "vasanta_top1": 0.35714285714285715,
+   "n_below_40pct": 9,
+   "classes_below_40pct": [
+    "Janaranjani",
+    "Haṁsānandi",
+    "Pūrṇacandrika",
+    "Bilahari",
+    "Jaganmōhini",
+    "Jōnpuri",
+    "Puṇṇāgavarāḷi",
+    "Kāṁbhōji",
+    "Vasanta"
+   ],
+   "errors_from_them": 135.0,
+   "errors_total": 409,
+   "share_of_errors": 0.33007334963325186
+  },
+  "10": {
+   "vasanta_top1": 0.35714285714285715,
+   "n_below_40pct": 17,
+   "classes_below_40pct": [
+    "Nāṭakurinji",
+    "Janaranjani",
+    "Pūrṇacandrika",
+    "Sencuruṭṭi",
+    "Haṁsānandi",
+    "Jōnpuri",
+    "Sahānā",
+    "Bilahari",
+    "Kāṁbhōji",
+    "Mukhāri",
+    "Jaganmōhini",
+    "Maṇirangu",
+    "Bṛndāvana sāranga",
+    "Cakravākaṁ",
+    "Vasanta",
+    "Kēdāragauḷa",
+    "Puṇṇāgavarāḷi"
+   ],
+   "errors_from_them": 212.0,
+   "errors_total": 490,
+   "share_of_errors": 0.4326530612244898
+  }
+ }
+}

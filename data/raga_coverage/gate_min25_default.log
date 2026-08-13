@@ -1,0 +1,30 @@
+1287 tracks with full melody
+
+===== min>=25: 18 ragas, 518 tracks =====
+(a) as-originally-run (groups = track_id)
+     n: tracks 518  groups 518  ragas 18  folds 5
+     floors: majority 0.0579  class-prior 0.0557
+     top1=377/518 = 72.8%   top3=439/518 = 84.7%
+(b) recording-disjoint (archive groups = contour sha1)
+     n: tracks 518  groups 507  ragas 18  folds 5
+     floors: majority 0.0579  class-prior 0.0557
+     top1=371/518 = 71.6%   top3=433/518 = 83.6%
+(c) source-disjoint (archive item / Saraga concert, + artist merge)
+     n: tracks 518  groups 155  ragas 18  folds 5
+     floors: majority 0.0579  class-prior 0.0557
+     top1=374/518 = 72.2%   top3=435/518 = 84.0%
+(c2) (c') identifier-family disjoint — registered sensitivity
+     n: tracks 518  groups 150  ragas 18  folds 5
+     floors: majority 0.0579  class-prior 0.0557
+     top1=369/518 = 71.2%   top3=428/518 = 82.6%
+
+REPRODUCTION GATE: level (a) = 72.8% / 84.7% vs recorded 72.8% / 84.7%  ->  EXACT
+                   377/518 = 72.780%      439/518 = 84.749%
+REPRODUCTION GATE: level (c) = 72.2% / 84.0% vs recorded 72.2% / 84.0%  ->  EXACT
+                   374/518 = 72.201%      435/518 = 83.977%
+
+same-raga-in-one-source exposure (the mechanism the brief flagged):
+  clustered  n=243   (a) 71.2%  ->  (c) 70.0%   delta -1.2pp
+  solo       n=275   (a) 74.2%  ->  (c) 74.2%   delta +0.0pp
+
+wrote /Users/shyamravidath/carnatify/data/raga_audit/levels.json
