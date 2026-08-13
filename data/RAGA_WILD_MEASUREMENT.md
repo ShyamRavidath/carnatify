@@ -455,3 +455,83 @@ document states the measurement and the row.
 | `data/raga_wild/tables.md` | the two tables above, generated from `results.json` |
 | `data/raga_wild/protocol.log`, `features.log`, `score.log` | raw run output |
 | `data/raga_wild/rows/*.npz` | per (clip, window) features — 2 MB, committed, so `raga_wild_score.py` re-runs in seconds without the 34-minute Demucs/pyin rebuild |
+
+---
+
+## 11. Label audit, 2026-08-13 — the expert read the 29 rows, and §3's two questions were both right
+
+`HANDOFF_SESSION_0731.md` §6.1 named this the highest value-per-minute action
+available. Deepti — the domain expert — read all 29 label rows and returned
+four corrections. Two are real raga corrections, two are not:
+
+| # | file | filed | correct | effect |
+|---|---|---|---|---|
+| 6 | `Maithreem Bhajata__Kalyani__OOC.mp3` | Kalyāṇi | **Yamunākalyāṇi** | not a model class → **ineligible, dropped** |
+| 17 | `nagumomu ganaleni__Saveri.m4a` | Sāvēri | **Ābhēri** | not a model class → **ineligible, dropped** |
+| 29 | `yEnATi mOmu palamu__Bhairavi.m4a` | Bhairavi | Bhairavi; title is `EnATi nOmu phalamO` | title transliteration only, **no effect on any count** |
+| 11 | `bhajarE bhaja mAnasa__Kanada.m4a` | Kānaḍa | Kānaḍa | **confirmed correct**; stays a miss |
+
+The remaining 25 rows were confirmed correct. **The label column is now
+audited**, which is the condition §3 attached to every number in this document.
+
+### The headline moves to 16/27 = 59.3% [40.7, 75.5]
+
+This is not a post-hoc rescue. §3 above published the 27-clip figure — the same
+16/27 = 59.3% [40.7, 75.5] — as a registered sensitivity, naming these two clips
+and no others, **before** the audit was requested and on the brief's own
+"report the number both ways" rule. The expert audit selected between two
+already-published branches; it did not generate a new one.
+
+Recomputed by `scripts/raga_wild_relabel.py`, which re-scores from the
+`results.json` written before any label was questioned. No model was re-run and
+no prediction moved:
+
+| cell | before (29 clips) | after (27 clips, audited) |
+|---|---|---|
+| fused, `all` scope, `mix`, whole, **top-1** | 16/29 = 55.2% [37.5, 71.6] | **16/27 = 59.3% [40.7, 75.5]** |
+| fused, `all` scope, `mix`, whole, top-3 | 19/29 = 65.5% [47.3, 80.1] | 19/27 = 70.4% [51.5, 84.1] |
+| fused, `tier` scope, `mix`, whole, top-1 | 16/29 = 55.2% [37.5, 71.6] | **16/27 = 59.3% [40.7, 75.5]** |
+| fused, `tier` scope, `mix`, whole, top-3 | 22/29 = 75.9% [57.9, 87.8] | 20/27 = 74.1% [55.3, 86.8] |
+
+Both dropped clips were tier-scope top-3 hits, so tier top-3 falls slightly
+while everything else rises. The CI still excludes the 5.6% chance floor and
+the 17.2% best-constant floor.
+
+**Why "dropped" and not "wrong".** Neither Yamunākalyāṇi nor Ābhēri is one of
+the 32 classes the exported model can emit, so on those two clips the model was
+never able to be right. The preregistration's eligibility rule is "truth is a
+model class"; correcting a label out of the class set removes the row from the
+denominator. Scoring them as misses would be scoring the model on a question it
+was never asked.
+
+### The two dropped clips are the more interesting result
+
+They are not noise in a label file. Both are **coverage failures with a common
+cause**, and the cause is upstream of the model:
+
+- **Ābhēri** appears in `data/raga_aliases.json` as `'AbhEri' -> None`. It is
+  mapped to null — the same bucket as `'14 April, 1991'` and `'Music Academy'` —
+  because it is absent from the compmusic-40 reference vocabulary that
+  `normalize_ragas.py` canonicalises against. It is one of the most-performed
+  ragas in the repertoire, and `nagumomu ganaleni` is one of its warhorses.
+- **Yamunākalyāṇi** canonicalises fine (`'yamunAkalyANi' -> 'Yamuna kalyāṇi'`)
+  and has **zero** tracks in the training cache.
+
+Neither is a modelling failure. Both are inventory failures. See
+`data/RAGA_CEILING_EVALUATION.md` §2.
+
+### One more thing the audit exposes, in the other direction
+
+`~/sung_tests` contains `Kande Kandenu__Shankarabharana.mp3`.
+Śankarābharaṇaṁ is in the 18-raga tier with 30 training tracks, so that clip was
+eligible for the frozen set and was **not selected** — the spelling
+`Shankarabharana` is not in `data/raga_aliases.json` and did not fuzzy-match, so
+the selector could not see it. `Ma Janaki__Khamboji.mp3` (Kāṁbhōji, a 32-class
+model class) is a second instance.
+
+The frozen 29 should have been at least 31. **`FROZEN_CLIPS.json` stays frozen
+and this document's numbers stand** — the selection is closed and reopening it
+to add clips after predictions exist is exactly the move the preregistration
+forbids. It is recorded here because it biases the *eligibility* accounting in
+§9 and everywhere the "29 of 106" figure is quoted, and because the same alias
+gap that lost these two clips is the one that lost Ābhēri.
