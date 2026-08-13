@@ -151,34 +151,69 @@ A companion that is right 72.8% of the time about 39.1% of what it hears is
 product metric is **expected correct answers per 100 items heard = coverage ×
 top-1**, and it has never been computed.
 
-Both columns already exist. The accuracy column has been sitting in
-`data/raga_audit/archived_tierscan_tdms_only.log` since the July audit:
+**Measured, 2026-08-13**, by `data/RAGA_COVERAGE_CURVE.md` — source-disjoint
+(level c), tier the only thing that moved, reproduction gate EXACT on the
+integer counts at both level (a) and level (c). Counts independently re-derived
+by this seat from `data/raga_coverage/levels_min*.json` and they match:
 
-| `min_tracks` | classes | coverage | top-1 | **correct per 100 items heard** |
-|---|---|---|---|---|
-| 25 | 18 | 39.1% | 72.8% | **28.5** |
-| 20 | 32 | 59.6% | 67.6% | **40.3** |
-| 15 | 44 | 70.9% | 63.4% | **45.0** |
-| 10 | 54 | 79.2% | 61.6% | **48.8** |
+| `min_tracks` | classes | tracks | groups | top-1 (source-disjoint) | top-3 | coverage | **correct per 100 items heard** |
+|---|---|---|---|---|---|---|---|
+| 25 | 18 | 518 | 155 | **72.2%** [66.4, 78.1] | 84.0% | 39.1% | **28.2** |
+| 20 | 32 | 826 | 185 | **64.0%** [60.0, 68.3] | 76.5% | 59.6% | **38.2** |
+| 15 | 44 | 1,020 | 198 | **59.9%** [55.8, 64.4] | 71.3% | 70.9% | **42.5** |
+| 10 | 54 | 1,139 | 204 | **57.0%** [52.7, 61.7] | 71.3% | 79.2% | **45.1** |
 
-**Monotone increasing, and it nearly doubles.** Going from the 18-class tier to
-a 54-class tier costs 11.2 pp of top-1 and buys **+71% more correct answers per
-concert**.
+**Monotone increasing, and it peaks at the widest tier measured.** Going from
+18 to 54 classes costs 15.2 pp of top-1 and buys **+60% more correct answers per
+concert** (+72% on top-3). For the 18-class tier to win, top-1 at 54 classes
+would have to be below **35.6%**; it is 57.0%. Top-1 falls log-linearly in class
+count (R² = 0.9997, −13.8 pp per natural-log unit) while coverage rises faster.
 
-**Caveats, stated plainly.** Those top-1 figures are level (a), not
-source-disjoint — but the audit measured the disjointness penalty at the 18-tier
-as **0.6 pp** (72.8 → 72.2), so it is small and there is no reason it explodes
-at a wider tier. Coverage is repertoire mass, which weights by how often a raga
-is *programmed*, not by how often it is programmed in the concerts Deepti
-attends. And a wider tier means more ways to be confidently wrong, which is what
-§5 is about. **A workhorse seat is re-running this column source-disjoint with
-per-class accuracy and a McNemar test on whether the added classes poison the
-existing 18** (`WORKHORSE_RAGA_COVERAGE_BRIEF.md` →
-`data/RAGA_COVERAGE_CURVE.md`). Until that lands, this table is the best
-available estimate and not a measurement.
+### Correction to an earlier draft of this section
 
-**But the direction is not in doubt, and the 54-class model needs no new data.
-It is trainable today, from the cache that is already on disk.**
+The first version of this table used the level (a) figures sitting in
+`data/raga_audit/archived_tierscan_tdms_only.log` and argued the
+source-disjointness penalty was 0.6 pp at the 18-tier and would not explode at a
+wider one. **That was wrong, and it is the most useful thing the workhorse seat
+found.** The level (a)→(c) penalty is tier-dependent: 0.6 pp at 18 classes but
+**3.5 / 3.5 / 4.7 pp** at 32 / 44 / 54, and 8.0-11.8 pp on same-raga-same-source
+clustered tracks against 1.2 pp at the narrow tier. So 61.6% at 54 classes was
+optimistic by 4.6 pp and 48.8 hits/100 by 3.7.
+
+Two consequences beyond this table:
+
+- **Any raga figure at `min_tracks >= 20` or wider that was measured at level
+  (a) is inflated.** That includes the `min>=20 67.6/79.4` line in
+  `models/raga_v3_meta.json`'s `cv_note` and in `train_raga_v3_tdms.py`'s
+  docstring. The exported model's own tier now has its first source-disjoint
+  number: **64.0% / 76.5%**, TDMS-only arm.
+- The conclusion survives the correction with room to spare. The direction was
+  never in doubt; the magnitude was, and it is now measured rather than
+  estimated.
+
+**The 54-class model needs no new data. It is trainable today, from the cache
+already on disk.**
+
+### The added classes do damage the existing ones — a little, and significantly
+
+McNemar, paired on the 518 tracks of the `min>=25` tier at level (c): −2.5 pp at
+32 classes (p = 0.0295), −3.1 pp at 44 (p = 0.0166), **−3.5 pp at 54**
+(b = 31, c = 13, exact p = 0.0096). Real, monotone, statistically significant —
+and small. The added tracks themselves run at 47.2%, so most of the 15.2 pp
+aggregate fall is **composition, not damage**: the wide tier is not mostly
+breaking what worked, it is mostly adding harder classes. Pairing is exact at
+the track level but not the fold level, so p is an upper bound on the evidence.
+
+### A global `min_tracks` is the wrong knob
+
+Only one class at 54 sits below the class-prior floor of 2.03%: **Nāṭakurinji,
+0/11 top-1** (2/11 top-3, across eight distinct sources). Meanwhile five of the
+ten best classes at that tier are *new* ones — Saurāṣtraṁ 92.3% on 13 tracks,
+Gauḷa 86.7% on 15, Bēgaḍa 83.3%, Varāḷi 81.0%, Rītigauḷa 79.2%. A track-count
+threshold cannot tell Saurāṣtraṁ (13 tracks, 92.3%) from Nāṭakurinji (11 tracks,
+0.0%). **Per-class admission, priced on measured accuracy rather than on corpus
+size, is the lever.** It is under measurement now, with the obvious trap —
+selecting classes on the folds you then score on — called out in advance.
 
 ---
 
@@ -188,8 +223,8 @@ It is trainable today, from the cache that is already on disk.**
 |---|---|---|
 | "wild audio kills the raga path" | **false** | 59.3% wild ≈ 60.4% clean at matched duration; 7.5 pp measured field cost; zero contour failures |
 | "we need better features / a better model" | **not yet the constraint** | the binding loss is 61-73% of field clips having no emittable class at all |
-| "we need more audio per class" | **unproven, and weakly contradicted** | r(tracks, top-1) = 0.066 over the 18 tier classes; Vasanta 35.7% at 28 tracks vs Pūrvīkaḷyāṇi 96.2% at 26. Range is restricted to 25-30 so this is weak — the wide-tier per-class curve settles it |
-| "we need more *classes*" | **yes, and they are free** | +71% correct answers per concert from a retrain on existing data |
+| "we need more audio per class" | **open, and the evidence flipped** | across the 54 classes r(tracks, top-1) = **0.519**, p = 5.8e-05, cleanly monotone in bins: 39.9% (10-14 tracks) → 41.5% (15-19) → 52.6% (20-24) → **68.6%** (25-30). An earlier draft called this "weakly contradicted" on r = 0.066 — that r was computed over the 18-class tier, whose track counts only span 25-30, and range restriction made it meaningless. **But 0.519 is confounded**: the 25-30 bin is exactly the `PRIORITY_20`/`SECONDARY_20` set the fetcher deliberately topped up, so track count and "popular, canonical, easy" are entangled. Saurāṣtraṁ is 92.3% on 13 tracks and Nāṭakurinji 0.0% on 11 — n is not destiny. The within-class subsampling curve settles it and is in flight |
+| "we need more *classes*" | **yes, and they are free** | +60% correct answers per concert (28.2 → 45.1 per 100), measured source-disjoint, from a retrain on existing data |
 | "we need more audio, full stop" | **yes, and it is already identified** | 1,712 scraped-and-labelled items never fetched, plus ~689 behind a fixable alias map |
 | **"we have hit a data ceiling"** | **no** | nothing here has been tested at the ceiling. The corpus is 43% of the repertoire already scraped, under a fetch target that says `30` |
 
@@ -238,10 +273,15 @@ Three things, so this document is not just optimism.
 
 ## 6. What to do, in cost order
 
-1. **Retrain the raga model at `min_tracks = 10` and measure it properly.**
-   Zero new data, zero dollars, hours not days. Estimated +71% correct answers
-   per concert. Blocked only on `data/RAGA_COVERAGE_CURVE.md` confirming the
-   estimate source-disjoint. *In flight.*
+1. **Retrain the raga model at `min_tracks = 10`, with per-class admission on
+   top.** Zero new data, zero dollars, hours not days. **+60% correct answers
+   per concert, measured source-disjoint, not estimated.** Drop Nāṭakurinji
+   (0/11, the one class below the class-prior floor) and whatever else the
+   per-class admission sweep condemns. **No longer blocked** —
+   `data/RAGA_COVERAGE_CURVE.md` has landed and the curve is monotone to the
+   widest tier measured. The one thing still open is whether admission should be
+   priced per class rather than by track count; the sweep is in flight, and it
+   only improves this number.
 2. **Fix the alias map.** ~689 concert items and an unknown number of real
    classes are behind a `null` that says "not in compmusic's 40". Ābhēri alone
    would have changed the wild set. *In flight —
@@ -252,10 +292,15 @@ Three things, so this document is not just optimism.
    recordings of full concert items, frozen and hashed before anything is
    predicted. This is the one place where **Deepti's own attendance is the
    scarce resource**, and it is worth more than any model change on this list.
-4. **Raise the fetch target from 30.** 1,712 identified items are unfetched;
-   ~13 GB more disk and a few hours of melodia at 5 workers, on free
-   archive.org. Do this *after* (1) tells us whether the wide tier holds up,
-   because it is the same lever aimed at the classes that are short.
+4. **Raise the fetch target from 30 — but only if the within-class curve says
+   so.** 1,712 identified items are unfetched; ~13 GB more disk and a few hours
+   of melodia at 5 workers, on free archive.org. **This is now explicitly
+   conditional.** The cross-class r = 0.519 argues for it and is confounded; the
+   within-class subsampling curve is the honest test and is in flight. If that
+   curve is flat from 20 to 30 tracks, more classes is the whole lever and this
+   job is not worth doing. Note also the outside-voice seat's early finding that
+   only ~10% of recoverable null items exact-match cached archive.org metadata,
+   so 1,712 is an **optimistic ceiling, not a promised corpus**.
 5. **Build the abstain gate, with a held-out set.** Not with the threshold in
    §5.2 — with a fresh one, fit on data the score never sees.
 6. **Then, and only then, ask about features.** No feature work is justified
