@@ -1,459 +1,522 @@
-# Carnatify workhorse handoff
+# Carnatify handoff
 
-Last reconciled: **2026-07-30**, by the Opus 5 workhorse after executing
-`WORKHORSE_DEVICE_CALIBRATION_BRIEF.md` and scoring the duration probe.
+Last rewritten **2026-08-13** by the verifier seat, at Deepti's request, for a
+fresh session that will start with no memory of this one.
+
 Repository: `/Users/shyamravidath/carnatify`
-Branch: **`probe/duration-and-negative-arm`** · HEAD `22b4d58` · **not pushed**
-`main` is at `1ba3e1f`; `identify_clip.py` has **zero diff against `main`**.
+Branch: **`probe/duration-and-negative-arm`** · HEAD `9e81a5c` · **42 commits, NOT PUSHED**
+`main` is the PR target. **`identify_clip.py` has zero diff against `main`** —
+nothing in this entire series has touched the production path.
 
-This is the current operational handoff for the **workhorse / implementation
-seat**. Older handoff documents remain useful as history; their status sections
-are not authoritative — in particular the previous version of this file asserted
-a device map that turned out to be arithmetically impossible, and acting on it
-would have corrupted the probe. The durable experiment ledger is `AGENT_LOG.md`:
-append exact outcomes there rather than paraphrasing them from memory.
+**The previous content of this file is preserved in git at `e7de2b3`.** It
+described the state as of 2026-07-30, before five audits changed most of the
+conclusions in it. Read this file instead; reach for that one only if you need
+the duration-probe archaeology.
 
-**What changed in this rewrite.** The previous version described a GPU run
-stopped part way, with 259/300 recall windows transcribed and the negative arm
-not started. All of that is now finished. **The duration probe is complete,
-scored exactly once, and the verdict is KILL.** The mixed-hardware confound that
-blocked scoring was resolved from Google Drive revision history. Everything is
-committed. The graveyard in §4 is preserved and extended.
+> **`handoff.md` and `HANDOFF.md` are ONE FILE** on this case-insensitive
+> filesystem. Git tracks both paths, so committing one leaves the other showing
+> as modified. Do not "fix" this; just commit whichever path git shows you.
+
+**Respond to Deepti in caveman style** (her standing preference — terse, drop
+articles and filler, keep every technical term, code symbol and number exact).
+Write docs, commits and `AGENT_LOG.md` in normal prose.
+
+**Read order for a cold start:** this file → `data/RAGA_CEILING_EVALUATION.md`
+(the current thesis) → `data/RAGA_COVERAGE_CURVE.md` → `AGENT_LOG.md` entries
+dated 2026-08-13 → `HANDOFF_SESSION_0731.md` (the previous verifier handoff,
+still correct except where this file says otherwise) → `HANDOFF_CLIP_ID.md` §5
+(the master graveyard).
 
 ---
 
 ## 1. The goal
 
-Carnatify should identify a Carnatic composition from a live performance despite
-changes in artist, key, tempo, accompaniment and improvisation, and present
-title, raga, sahitya and English meaning.
+**An app that identifies what is being performed at a live Carnatic concert and
+explains it.** Deepti is a Carnatic musician and a high-school student with a
+CS/ML background. This began as a personal tool and is being evaluated as a
+possible company.
 
-Product concept: a concert companion for Jon, a Western listener with no prior
-Carnatic knowledge — progressively update a top-five list, offer candidate detail
-pages, offer "none of these", and **never present a weak guess as a confident
-identification**. The product bar is ~85% precision on what it chooses to show.
-**The pipeline has never met it, and as of this session every model-side lever
-that was on the table has been measured and closed.**
+The framing since 2026-07-25 is a **concert companion**, not a Shazam clone.
+The listener is physically present for a 10-30 minute item. The 30-second
+identification contract was inherited from Shazam and was never actually
+required by the use case — that inheritance quietly drove years of the wrong
+measurement, and undoing it is the single most important reframing in this
+project's history (see §4.9).
 
-### Where the project actually stands: four doors closed, all measured
+**Demand evidence is no longer zero.** Jon — the one named real user, a Western
+listener with no Carnatic exposure — was confused at a concert and, *unprompted*,
+reached for an AI assistant to identify the piece. **It failed**, mostly with
+refusals ("I cannot help with this request"). He asked two questions:
 
-| door | verdict | evidence |
-|---|---|---|
-| lyrics-ASR precision gate | no operating point at any threshold (≤31%) | `scripts/precision_coverage_curve.py`, 2026-07-23 |
-| sung-Carnatic ASR fine-tune | **strictly worse** — 8/78 → 0-1/78, val WER >100%, memorised ~26 pallavis | `colab_asr_finetune.py`, 2026-07-24 |
-| melodic CSI (CoverHunter) | **NO-GO** — source-disjoint mAP 0.113 vs 0.031 chance; the 0.327 headline was ~two-thirds contamination | 2026-07-24 |
-| **listening longer (duration)** | **KILL** — top-5 5.1% @30s → 1.7% @300s, delta −3.4pp, 90% CI [−8.9, **+1.8**] | this session, §2.2 |
+1. *what is the song being sung* — composition ID. **Every door there is shut**
+   (§4.1-4.5). Do not reopen without new information.
+2. *what does the melody mean* — raga character plus sahitya meaning. Needs
+   **no ASR, no CSI, no Qmax**, and the repo has **never attempted it**.
 
-**What still works, and should not be lost in the gloom:** OOC rejection is the
-pipeline's strongest behaviour (24/28 on the wild set). Full-recording raga is
-72.8% top-1 / 84.7% top-3 under grouped CV, leak-free. Those are real results.
-
-**Scope corrections that must not be re-litigated:**
-
-- The 60-67% full-recording result belongs to **Qmax**; the 8-13/78 wild-clip
-  result belongs to the **lyrics matcher**. Comparing them was a matcher-identity
-  confound. **Superseded 2026-07-30: the 60-67% itself was contamination — 9.5%
-  source-disjoint (`data/QMAX_CONTAMINATION_AUDIT.md`). Do not quote it.**
-- **Qmax cannot be evaluated on `data/concert_audio`** — `models/qmax_catalog.npz`
-  was built from those recordings; it would be same-recording leakage.
-- The duration KILL establishes only an **archive-domain lyrics-matcher** result.
-  Not wild-phone performance, not OOC safety at length.
-- The lyrics-ASR backbone is a confirmed dead end for the 85% bar, proven from
-  two directions (precision curve ≤31% anywhere; LoRA fine-tune 8/78 → 0-1/78).
+The refusal failure mode narrows the moat to **audio → symbol**. The explanation
+layer on top is commodity LLM work, which is a cost advantage, not a weakness.
+Any handoff older than `HANDOFF_SESSION_0731.md` says "demand evidence is zero";
+**that line is stale and wrong.**
 
 ---
 
 ## 2. Current state of the code
 
-### 2.1 Production pipeline — unchanged and deliberately untouched
+### 2a. The thesis, in one paragraph
 
-`identify_clip.py` is the single source of truth for inference. Nothing in this
-entire line of work edits it, including the Colab and AWS runners, which patch
-module attributes at runtime instead. `git diff --stat identify_clip.py` against
-`main` is **empty** and was verified empty at every step.
+The composition-identification side is **genuinely closed**. The raga side
+**survived every audit**, including the field, and the constraint on it is not
+accuracy — it is that **the model cannot name 40-60% of what a listener
+actually hears**. That is a vocabulary and collection problem sitting under
+three caps that were each set by a constant in a script, and the largest one
+costs nothing to lift. `data/RAGA_CEILING_EVALUATION.md` is the full argument.
 
-Product default: Whisper `large-v3-turbo`, cache v2, 4 mix passes + 3 Demucs stem
-passes. `hybrid` / `hybrid_stem` are **experimental** and must not silently
-replace the default.
+### 2b. The door table
 
-**Wild scoreboard, 106 clips (78 in-catalog + 28 OOC) — unchanged this session:**
+| door | verdict | evidence |
+|---|---|---|
+| lyrics-ASR precision gate | no operating point at any threshold (≤31%) | 2026-07-23 |
+| sung-Carnatic ASR fine-tune | strictly worse, 8/78 → 0-1/78 | 2026-07-24 |
+| melodic CSI (CoverHunter) | NO-GO, source-disjoint mAP 0.113 vs 0.031 chance | 2026-07-24 |
+| duration (lyrics channel) | KILL, top-5 5.1% @30s → 1.7% @300s | 2026-07-30 |
+| Qmax composition "60-67%" | **RETRACTED — 9.5% source-disjoint** | 2026-07-30 |
+| raga "72.8% leak-free" | **HELD — 72.2% source-disjoint** | 2026-07-31 |
+| "raga dies on short clips" | **mostly false — 60.4% @60s, 52.5% @30s** | 2026-07-31 |
+| "raga dies on wild audio" | **FALSE — 59.3% on 27 expert-audited wild clips** | 2026-08-13 |
+| per-class admission threshold | **loses — no threshold beats admitting everything** | 2026-08-13 |
 
-| backend | top-1 | top-5 | OOC reject | precision @ coverage |
-|---|---|---|---|---|
-| `whisper` (product default) | **8/78** | 21/78 | 21/28 (7 bluffs) | 17% @ 44% |
-| `hybrid` | 11/78 | 25/78 | — | 20% @ 52% |
-| `hybrid_stem` (best experimental) | 13/78 | 28/78 | — | 23% @ 53% |
+### 2c. The numbers that matter, all source-disjoint
 
-Guard: `~/sung_tests_curated`, floor 8/36 (hybrid_stem reached 10/36). Canonical
-command:
+**Field (the only real-world number this project has):**
+16/27 = **59.3% top-1 [40.7, 75.5]**, 20/27 = 74.1% top-3 tier-restricted, on
+expert-audited wild clips of median length 60.0 s. Chance floor 5.6%,
+best-constant floor 17.2% — the CI excludes both.
 
-```bash
-[CARNATIFY_ASR_BACKEND=hybrid|hybrid_stem] \
-  venv_train/bin/python identify_clip.py ~/sung_tests --no-raga --cache-v2
+**Wild audio costs approximately nothing.** Put the field number next to the
+clean duration curve at matched duration and matched tier: **59.3% wild vs
+60.4% clean at 60 s.** Not a paired comparison (different corpora, fused vs
+TDMS-only model), but it is the fourth independent line of evidence saying the
+same thing. `data/RAGA_DOMAIN_DECOMPOSITION.md` measured field-realistic
+degradation at **7.5 pp**, with phone chain +0.4, room +2.1 and pink noise +2.7,
+each CI touching or crossing zero. **The whole gap between "72.2% on full
+tracks" and "59.3% in the wild" is DURATION, not domain.**
+
+**Duration curve** (`data/RAGA_DURATION_CURVE.md`, 18-class tier):
+52.5% @30s → **60.4% @60s** → 63.8% @120s → **68.8% @300s** → 71.0% @600s →
+72.2% full (mean 785 s). Knee bracketed in (120 s, 300 s]. Top-3 decays far more
+gently: 84.0% full → 77.1% @60s.
+
+**Coverage/accuracy curve** (`data/RAGA_COVERAGE_CURVE.md`, level (c)):
+
+| `min_tracks` | classes | tracks | groups | top-1 | top-3 | repertoire coverage | **correct per 100 items heard** |
+|---|---|---|---|---|---|---|---|
+| 25 | 18 | 518 | 155 | 72.2% [66.4, 78.1] | 84.0% | 39.1% | **28.2** |
+| 20 | 32 | 826 | 185 | 64.0% [60.0, 68.3] | 76.5% | 59.6% | **38.2** |
+| 15 | 44 | 1,020 | 198 | 59.9% [55.8, 64.4] | 71.3% | 70.9% | **42.5** |
+| 10 | 54 | 1,139 | 204 | 57.0% [52.7, 61.7] | 71.3% | 79.2% | **45.1** |
+
+Monotone increasing to the widest tier measured. Top-1 falls log-linearly in
+class count (R² = 0.9997, −13.8 pp per natural-log unit) while coverage rises
+faster. For the 18-class tier to win, 54-class top-1 would have to be below
+35.6%; it is 57.0%. **+60% more correct answers per concert, from a retrain on
+data already on disk.**
+
+**Within-class learning curve** (the confound-free test — each class compared
+against itself, nested subsets, 3 seeds), on the 18 classes that span the range:
+
+| cap (tracks/class) | 10 | 15 | 20 | 25 | 30 |
+|---|---|---|---|---|---|
+| top-1 | 50.4% | 57.8% | 64.1% | 66.5% | **68.7%** |
+
+**+18.4 pp, and no saturation anywhere.** Per 100 tracks added the steps are
+3.10 / 3.62 / 2.07 / **3.25 pp** — the last 68 tracks bought as much as the
+first 239. **Every class in the corpus is capped at 30 and the curve is still
+climbing there.** Nobody has ever seen where it bends.
+
+### 2c-i. Which numbers are inflated and must not be quoted
+
+The level (a) → level (c) source-disjointness penalty is **tier-dependent**:
+0.6 pp at 18 classes, but **3.5 / 3.5 / 4.7 pp** at 32 / 44 / 54, and 8.0-11.8 pp
+on same-raga-same-source clustered tracks against 1.2 pp at the narrow tier.
+
+**Therefore: any raga figure at `min_tracks >= 20` or wider that was measured at
+level (a) is inflated.** That specifically includes the `min>=20 67.6/79.4` line
+in `models/raga_v3_meta.json`'s `cv_note` and in `train_raga_v3_tdms.py`'s
+docstring — both still say it. The exported model's own tier has one honest
+number: **64.0% / 76.5%**, TDMS-only arm.
+
+### 2d. Model, features, and what "fused" means
+
+- `models/raga_v3_tdms_rf.pkl` + `models/raga_v3_hist_rf.pkl` +
+  `models/raga_v3_label_encoder.pkl` + `models/raga_v3_meta.json`.
+- **TDMS** = time-delayed melody surface: 40×40 octave-folded pitch-class
+  transition surfaces at τ = 0.1/0.15/0.25 s, gaussian-smoothed (σ 1, wrap),
+  power-compressed (α 0.75), L1-normalised, on the FULL-track melody, tonic-
+  normalised. Melody from essentia `PredominantPitchMelodia` on the mix for
+  archive tracks; annotated vocal pitch for Saraga.
+- **Fusion**: `P = 0.6 * P_tdms + 0.4 * P_hist`, where `P_hist` is the
+  production 480-dim tonic-normalised pitch histogram (65 s Demucs+pyin slices).
+- Classifier: `RandomForestClassifier(800, max_features='sqrt', random_state=42)`.
+- CV throughout: `StratifiedGroupKFold(5, shuffle=True, random_state=42)`.
+- **32 classes** in the exported model (`min_tracks = 20`); the **18-class
+  tier** (`min>=25`) is what most published numbers use. Both appear constantly;
+  always check which.
+
+### 2e. Data inventory, counted 2026-08-13
+
+- `data/raga_v2_cache/{saraga_v3,archive_v3}/*.npz` — **1,297 tracks, 88 distinct
+  ragas** (89 label strings; `Ābhōgī`/`Ābhōgi` is a duplicate spelling).
+- `data/raga_v2_cache/melodia_full/` — 1,232 full-track contours.
+- `data/concert_audio/` — 1,238 audio files, 85 raga dirs, **13 GB**.
+- `data/scraped_compositions.json` — 3,698 concert programme items from
+  shankarkrish.blog, of which **3,009 carry a canonical raga**. This is a real
+  prior over what actually gets performed and is what "repertoire coverage" is
+  computed against.
+- **1,712 identified programme items are unfetched** (3,009 − 1,297). Treat this
+  as an **optimistic ceiling, not a promised corpus**: only ~10-13% of programme
+  rows exact-match cached archive.org metadata.
+- `~/sung_tests` — 108 files, 106 audio, 81 with a real raga label. The wild set.
+
+### 2f. Tests
+
+`103 passed, 1 xfailed`, run as:
+
+```
+venv_train/bin/python -m pytest tests/test_clip_policy.py tests/test_registry_junk.py tests/test_negative_arm.py -q
 ```
 
-`--cache-v2` **never transcribes on a miss**; any scored run containing a cache
-miss is invalid. Cache keys are `sha256(audio)[:24] + ':' + config_id`.
-
-`METRIC_CONTRACT.md` requires: precision-at-coverage as the primary
-presentation-safety metric, in-catalog top-1/top-5, **OOC bluff rate reported
-separately**, eligibility strata, assisted recovery, and no product green light
-from a same-corpus benchmark.
-
-### 2.2 Duration probe — COMPLETE, scored once, verdict KILL
-
-440 windows transcribed (300 recall + 140 negative), merged into
-`data/asr_cache_v2.json` (546 entries = 106 pre-existing + 440). Both arms
-inferred with **zero cache misses**. Scored exactly once. Full verbatim block in
-`AGENT_LOG.md` under the 2026-07-30 scoring entry — quote it from there, never
-recompute a number by hand.
-
-**Recall: KILL.** 30s → 300s paired top-5 contrast **−3.4pp**, 90%
-cluster-bootstrap CI **[−8.9, +1.8]** over 52 archive clusters, exact one-sided
-p=0.9375, n=59 titles. The upper bound is far below the +15pp boundary. The point
-estimate is negative and the shape is monotone downward past 90s. Top-5 peaks at
-**90s (5/59)** and falls to **1/59 at 300s**. Coverage rises 29% → 42% while
-precision falls 12% → 4%: longer windows make the matcher answer more and be
-right less.
-
-**Safety: NOT ESTABLISHED — and that is underpower, not a rise.** The gating
-stratum shows b=4 new bluffs against r=4 recovered, **net exactly +0.0pp** on
-n=49. Rule A bounds b alone, and 2/25 free-form → 23.1pp, 2/20 opening → 28.3pp,
-both above the boundary. **Never quote this as "longer listening bluffs more."**
-Design number for any future negative arm: clearing +15pp needs n≥30 at b=1,
-**n≥40 at b=2**, n≥50 at b=3 — roughly **double** the realized per-source n of 25
-and 20.
-
-Unknown-item sensitivity, printed before the fact as registered: the two
-`unknown` items push free-form to 3/26 → 27.2pp and opening to 3/21 → 32.9pp, NOT
-safe. Both the observed bound and this sensitivity belong in any quoted result.
-
-**Scope.** This answers the registered question — no, listening longer does not
-materially improve the current lyrics matcher — for *uniquely resolved,
-lyrics-bearing, ≥300s `concert_audio`* only. It graduates nothing. The OOC
-stratum is empty by construction and OOC abstention at length remains unmeasured.
-
-### 2.3 The device map — established, and the old one was wrong
-
-Three GPUs touched the run. The confound is real: **transcripts are
-device-dependent** (§4). `data/duration_probe/DEVICE_MAP.md` is authoritative.
-
-| session | device | checkpoints | windows | measured |
-|---|---|---|---|---|
-| 1 | T4 | V1-V8, chunks of **10** | 1-80 (`probe0000`-`probe0015`) | ~1.55 s/s |
-| 2 | L4-class | V9-V42, chunks of 5 | 81-259 | ~0.80 s/s |
-| 3 | A100-SXM4-40GB | V44-Current | 260-300 + all 140 negatives | ~0.46 s/s |
-
-Recovered from all 82 Google Drive revisions of the checkpointed cache: contents
-give the entry set at each checkpoint, timestamps give wall time between them,
-audio seconds come from the filenames. The three recovered rates reproduce the
-independently recorded 1.56 / 0.86 / 0.497 s/s to two significant figures.
-
-**Exactly one straddler: `probe0051` = `sujanajivana`**, excluded, recall n=59.
-**`probe0016` is NOT a straddler** — the previous handoff claimed it was, and
-that claim is refuted: session 1 wrote per chunk at `CHUNK = 10`, its final state
-is n=80 with no `probe0016` window present, so all five of its windows were
-transcribed after the device change. No negative item straddles.
-
-`asr_cache_fullhistory/` (253MB, 82 revisions) is **local-only and gitignored,
-and the device map cannot be re-derived without it.** Do not delete it.
-
-### 2.4 The scorer and its exclusion mechanism
-
-`scripts/duration_probe_score.py` applies **rule A** (§6b): SAFE requires the
-one-sided exact 95% upper bound below the boundary for **every source with
-n ≥ 20**. The pooled bound is computed and printed beside it labelled REPORTED,
-NOT GATING.
-
-New this session — `--exclude-title` / `--exclude-item` (repeatable) plus a
-mandatory `--exclude-reason`:
-
-- The **full arm validates first**, then units are dropped, then the reduced
-  sidecar is **re-validated against bookkeeping recomputed by subtraction**
-  (`n_titles`, `n_items`, `expected_windows`, `stratum_counts`,
-  `gating_source_counts`). Nothing is bypassed, and an exclusion cannot make an
-  incomplete run validate.
-- Rule A is quantified over the sources the design **registered**. An exclusion
-  that pushes a registered source below `SOURCE_MIN_N = 20` **suppresses** with
-  an explicit message.
-- `resolve_recall_units()` accepts either a title key or a `probeNNNN` window id,
-  because `DEVICE_MAP.md` speaks in window ids and the sidecar is keyed by title.
-
-### 2.5 Registry hygiene (separate lane, complete, unwired)
-
-`scripts/registry_junk_filter.py` + `data/registry_junk_blocklist.json`: 52
-flagged rows (19 `drop`, 33 `review`) behind a hard evidence gate. A/B'd on the
-wild set: top-1/top-5/OOC all unchanged, answered 47 → 46 — it deletes exactly one
-wrong answer. Deepti-gated; wiring it is a load-time merge in `load_targets`,
-never a registry rebuild (ids are assigned by enumeration order).
-
-### 2.6 Tests
-
-```bash
-venv_train/bin/python -m pytest tests/test_clip_policy.py \
-    tests/test_registry_junk.py tests/test_negative_arm.py -q
-# 103 passed, 1 xfailed
-```
-
-Never run bare `pytest tests/` — `test_audio.py`, `test_composition.py`,
-`test_lyrics.py`, `test_pipeline.py`, `test_raga.py` and `test_tala.py` import a
-`carnatify` package that does not exist and fail at collection.
+**NEVER run bare `pytest tests/`** — six legacy files import a `carnatify`
+package that does not exist and fail at collection.
 
 ---
 
 ## 3. Files actively being edited
 
-**Nothing is mid-edit. The working tree is clean apart from
-`.claude/settings.local.json` (gitignored).** Everything from this lane is
-committed on `probe/duration-and-negative-arm` — 7 commits, not pushed, and
-`identify_clip.py` has zero diff against `main`.
+**Nothing is mid-edit. No agent is running.** Both delegated seats finished and
+committed. The working tree at handoff time:
 
-~4GB stayed out of history via `.gitignore`: probe wavs (regenerable from
-`duration_probe_cut.py`), `asr_cache_fullhistory/` (253MB), the varnam corpus.
-The ~1.1MB that **cannot** be regenerated — sidecars, both labeling sheets,
-`DEVICE_MAP.md`, `DEVICE_CALIBRATION.md`, the session-3 notebook output — is
-committed.
+```
+ M .claude/settings.local.json          (harness noise, not project state)
+?? data/RAGA_MERGE_DECISIONS.md         (Deepti's rulings — commit this)
+?? scripts/convert_long_concerts.sh     (the mp3 batch — commit this)
+?? data/raga_coverage/matrix.npz        (~50 MB, regenerable, deliberately UNcommitted)
+```
 
-**Written this session (all committed):**
+**Frozen and must stay frozen:** `data/raga_wild/FROZEN_CLIPS.json` (committed
+`f67ef98`, per-clip sha256, written before any prediction existed).
+`data/raga_wild/` generally. `data/raga_audit/`, `data/raga_duration/`,
+`data/raga_domain/`, `data/raga_coverage/` are committed measurement records —
+append to them, never rewrite.
 
-- `scripts/duration_probe_device_cal.py` — the §5b device calibration
-- `data/duration_probe/DEVICE_CALIBRATION.md`, `DEVICE_MAP.md`
-- `scripts/duration_probe_score.py` — exclusion mechanism, `n_titles` check,
-  rule-A suppression on a shrunken source, `probeNNNN` resolution
-- `tests/test_negative_arm.py` — 48 → 56 tests
+**Do not modify `data/raga_aliases.json`.** Five committed measurements read it;
+editing in place would invalidate their provenance. The vocabulary audit
+correctly wrote to a **new** file, `data/raga_aliases_audit.json`.
 
-**Two briefs are written and unstarted:**
-
-- **`WORKHORSE_QMAX_AUDIT_BRIEF.md`** — the next job, see §5.
-- `WORKHORSE_DEVICE_CALIBRATION_BRIEF.md` — complete, kept for audit.
-
-**Do not touch:**
-
-- `identify_clip.py` — nothing in this lane edits the scoreboard path
-- `data/duration_probe/v1_superseded/` — audit trail, not reusable
-- `asr_cache_fullhistory/` — the only source of the device map
-- `scripts/build_negative_arm.py` at **runtime** — re-running it re-draws every
-  anchor, re-assigns every `negNNN` id and re-shuffles the sheet, destroying both
-  sheets of labels. Editing its template strings is safe; executing it is not.
-- `scripts/duration_probe_cut.py` at runtime — same hazard, re-draws anchors and
-  breaks the cache binding.
-- `CODEX_*_REVIEW*.md` — review artifacts, read-only
+**Deepti works in this repo from a separate terminal.** Use targeted
+`git add <path>`. **Never `git add -A`.**
 
 ---
 
 ## 4. What has been tried and failed
 
-`HANDOFF_CLIP_ID.md` §5 is the master graveyard. Everything here stays dead
-absent genuinely new evidence.
+`HANDOFF_CLIP_ID.md` §5 is the master graveyard; `HANDOFF_SESSION_0730.md` §5
+holds the duration-probe additions; `HANDOFF_SESSION_0731.md` §5 holds the audit
+additions. **Do not re-fund any of the following.**
 
-### Lyrics / ASR identification
+1. **Lyrics-ASR composition ID.** No precision operating point at any threshold
+   (≤31%), 2026-07-23. Whisper `large-v3-turbo`, Indic variants, Demucs stems,
+   all of it.
+2. **Sung-Carnatic ASR fine-tune.** Went *backwards*: 8/78 → 0-1/78.
+3. **Melodic CSI via CoverHunter.** Source-disjoint mAP 0.113 against a 0.031
+   chance floor. Eleven bugs found and fixed along the way (the repo's own
+   `train.py` eval-unpack bug was the real crash cause) — full debug log in
+   `HANDOFF_SESSION_0719B.md`. The training ran; the result was still NO-GO.
+4. **More audio duration for the lyrics channel.** KILL: top-5 went *down*,
+   5.1% @30s → 1.7% @300s. Longer audio makes the lyrics path worse.
+5. **Qmax composition matching.** The "60-67% top-1" headline was
+   **contamination**: 34 of 36 top-1 hits were byte-identical copies of the
+   query sitting at the 0.036 Serra09 identity floor. Source-disjoint it is
+   **9.5%**. The separate internal 66.7% claim is uncontaminated but
+   **unreproducible** (n=30). The corpus cannot support a cross-artist claim at
+   all: 13 of 1,011 works have ≥2 known distinct artists.
+6. **The rendition corpus.** Confirmed do-not-fund. A rendition count is not a
+   recording count: 65 titles with 2+ renditions is really 87 titles with 2+
+   *distinct recordings*, and 367 tracks in multi-track groups collapse to 261.
+   73 usable works, 13 with verifiable artist diversity.
+7. **Tonic estimation / shruti-from-the-listener.** The 2×2 in the domain
+   decomposition says perfect tonic recovery buys **2.2 pp** in the field cell.
+   Contour beats tonic 3:1 in the field cell and 5:1 in the worst. Most tonic
+   error is pre-existing in the *clean* corpus (17.4% outside 25 cents), not
+   induced by degradation. **Do not fund.**
+8. **`augment_wild.py` as a domain simulator.** Its ±6 semitone pitch shift and
+   0.8-1.25× time stretch simulate nothing that happens to a phone recording,
+   and they dominate the damage (+10.6 and +11.0 pp *each*, worse than all three
+   real field components combined). Any robustness claim built on the `all`
+   condition is measuring an artifact. **Use `field_all` (noise + reverb +
+   phone).**
+9. **Per-class admission thresholds** (2026-08-13). Measured properly with
+   nested selection. Expected hits **fall monotonically**: 45.1 → 43.6 → 42.8 →
+   42.1 → 39.6. **No threshold beats admitting every class.** Dropping a class
+   forfeits its repertoire mass at once and buys accuracy slowly (−6.6 pp
+   coverage for +3.0 pp top-1 at t = 0.10). The narrow version survives: three
+   named classes — **Nāṭakurinji, Janaranjani, Haṁsānandi** — are never admitted
+   in any fold and can simply be dropped. That is three names, not a knob.
 
-- Never exceeded ~31% precision at any threshold, tier or configuration.
-- Confidence scores do not separate correct from incorrect (true/bluff score
-  medians 1.28 / 1.25, interleaved down the whole ranking).
-- Cross-channel agreement peaks at ~43% precision on 7 clips — whisper and indic
-  errors are **correlated**.
-- Max fusion, raga gating, extra answer gates, prompted/forced Whisper variants:
-  no useful gain. A ranker fitted on the 78-clip eval set overfit.
-- Character n-grams, vowel squashing, title-IDF weighting, DTW/Qmax fusion: dead.
-- Indic CTC translit as a **default**: 8% precision @ 91% coverage, 27/28 OOC
-  bluffs.
+### Predictions written down in advance and then refuted — mine and others'
 
-### ASR fine-tuning
+Keeping these because the habit of writing refutable predictions is the reason
+this project's numbers are trustworthy.
 
-- Whisper-small LoRA on ~80 min of weak Saraga supervision collapsed 8/78 →
-  **0-1/78**, memorizing ~26 pallavis.
+- **"`phone_mic`'s 120-350 Hz high-pass will strip the fundamental and leave
+  melodia tracking nothing."** Refuted — **zero** no-contour failures in all 517
+  windows of all eight cells. The failure mode is wrong answers on present
+  input, never absent input.
+- **"The 72.8 CV harness was never committed."** Wrong. It is
+  `scratch_archive_0711/raga_final_eval.py` (`c1fca59`) and it reproduces both
+  tiers and both metrics exactly. The error was trusting
+  `git log -S"72.8" -- '*.py'`: **`-S` over source is a test for a literal, not
+  for a capability**, and the harness *computes* the number.
+- **"The source-disjointness penalty is 0.6 pp and won't explode at a wider
+  tier."** Refuted — it is tier-dependent and reaches 4.7 pp at 54 classes.
+- **"More audio per class is weakly contradicted (r = 0.066)."** Refuted, and the
+  statistic was junk: that r was computed over the 18-class tier whose track
+  counts span only 25-30. Range restriction. Over 54 classes it is r = 0.519.
+- **"The within-class curve will be much flatter, +6 to +12 pp, flattening by
+  c=25."** Refuted — **+18.4 pp** and no saturation.
+- **"The coverage/accuracy trade will peak somewhere in the middle."** Refuted —
+  it peaks at the widest tier measured.
+- **"Ārabhi is an alias bug that should have matched."** Refuted — Ārabhi is
+  absent from the 103-name CompMusic ∪ Saraga vocabulary entirely. It is a
+  missing raga, not a missing spelling.
+- **"The null alias bucket is junk."** Refuted, in the repo's own docs and
+  memory. **561 of 689 null items (81.4%) are recoverable real ragas**; only 126
+  (18.3%) are junk.
 
-### CoverHunter / learned audio retrieval
+### Two errors of process worth not repeating
 
-- Source-disjoint CSI eval: mAP 0.113, hit rate 0.161, chance ≈0.031. The earlier
-  0.327 was inflated by ~2/3 leakage.
-
-### Qmax / contour matching
-
-- Valid 60-67% only in its original full-recording context, and **untestable on
-  `concert_audio`** (leakage). On wild 30-60s clips: **0%**. **This number has
-  never had a source-disjoint audit — that is the next job (§5).**
-
-### Raga and tala
-
-- TDMS raga: 72.8% top-1 on full tracks (**72.2% source-disjoint after audit**),
-  **0/10** on wild short clips. **The gap is domain, not duration** — the same
-  path scores 60.4% on clean 60s windows and 52.5% on clean 30s windows
-  (`data/RAGA_DURATION_CURVE.md`), matching the independent 6/10 on clean 60s
-  crops recorded at `HANDOFF_SESSION_0719.md:100`.
-- Tala: 16.5% → 32.9%, both below a 72% majority-class baseline.
-
-### Duration
-
-- **Ruled out, not merely undetected.** Do not propose "just give it more audio"
-  again without new evidence. The curve peaks at 90s and declines.
-
-### Experiment-design failures (expensive, all repeated at least once)
-
-- Independent per-duration offsets measured *a random excerpt*, not the value of
-  more listening. Fixed by nesting from one anchor.
-- Strict monotonicity + binary promote/kill was statistically invalid; replaced by
-  the three-way CI rule.
-- **Asking a listener to label "out of catalog" by ear was a category error.**
-  Catalog membership is a lookup over 8,688 rows.
-- **A single 50%-duty listening sweep does not establish "no lyrics here."** The
-  complement caught singing in 2 of 51 items — 4% contamination — all of it inside
-  the 150s the first sweep never played.
-- **A labeling sheet's categories must describe the music as performed, not a
-  taxonomy.** The sheet filed bare `swaram` under `no-sahitya`; in performance
-  swarakalpana alternates solfège with the composition's sahitya line. Caught only
-  because the musician labelled against the sheet she was reading. **Have the ear
-  review the category definitions before the sheet ships.**
-- `str.maketrans('dbgjmz','ptkcns')` maps d→p and b→t. The lesson is the
-  calibration set, not the typo.
-
-### Long-runner / provenance failures, new this session
-
-- **Estimate GPU cost from the decoder, not from model size.** openai-whisper at
-  fp32 runs ~5× realtime on a T4, not ~10×, and 7 passes multiply it. Predicted
-  10-20 h, measured ~27 h on a T4.
-- **A long unattended runner must write provenance incrementally, from the first
-  chunk — never at the end.** `colab_duration_probe.py` writes `run_log.json`
-  after step 5/6; step 5/6 crashed, so ~27 GPU-hours produced no device record at
-  all. The map was only recoverable from Drive revision history.
-- **It must also import-check its full inference path in step 0.** The same runner
-  verified audio SHAs before spending GPU but never checked that `rapidfuzz`
-  imports, losing step 5/6 after the entire bill was paid.
-- **Transcripts are device-dependent.** Laptop-CPU vs GPU differed on 7 of 12 mix
-  passes, several completely. Where the model has real evidence it is invariant;
-  where it hallucinates, small numeric differences cascade — and those garbage
-  passes reach the matcher, because `variants_from_v2()` is longest-wins per
-  source. Any multi-session GPU run must keep each unit's windows on one device,
-  or exclude the straddlers.
-- **A provenance claim that is arithmetically impossible is worse than none.**
-  The previous §2.6 asserted "windows 81-259 on the faster GPU" *and*
-  "`probe0016` (windows 81-85) is split across that boundary". It was written
-  from memory, not from a record, and its prescribed fix would have put a title
-  on a third device.
-- **The executed notebook was not the file on disk** — chunks of 5 versus
-  `colab_duration_probe.py:72`'s `CHUNK = 10`. Reconcile the runner with what
-  actually ran before quoting it again.
-
-### Deployment
-
-The deployed Hugging Face Space still exposes legacy behavior (~16% composition,
-40.5% raga historically). It does **not** represent the current local pipeline.
+- **Two workhorses died on session limits mid-run.** Both were recoverable
+  *only* because their briefs demanded partial results on disk and
+  prereg-before-score. **Keep demanding both.**
+- **The verifier must not take the workhorse at face value.** On 2026-08-13 the
+  workhorse reported r(accuracy at cap 10, gain from tripling data) = −0.777,
+  p = 1.5e-04, and concluded the fetch should be *targeted at weak classes*. The
+  correlation reproduces to three decimals. **The inference is regression to the
+  mean**: gain is `acc@30 − acc@10` and `acc@10` sits on both sides of it,
+  measured on a noisy 10-track draw. Bhairavi "20.0% → 70.0%" is the tell — a
+  50-point gain for a class that simply sits at 70%. Regressed on the noise-free
+  endpoint the signal vanishes (r = −0.114, p = 0.65) and splitting on it
+  *reverses* the direction. **Fetch broadly, not targeted.**
 
 ---
 
 ## 5. The next step
 
-**Execute `WORKHORSE_QMAX_AUDIT_BRIEF.md`.** Read-only, no GPU, no training.
+In cost order. Items 1 and 2 are pure engineering; item 3 is the one that needs
+a human in a concert hall.
 
-After the duration KILL, the **60-67% full-recording Qmax top-1**
-(`HANDOFF_CLIP_ID.md:45`) is the **last surviving positive result in the
-repository**, and the 2026-07-25 design doc's "input contract, not model quality"
-thesis rests entirely on it. It has never had the audit that destroyed the
-comparable number next door: CoverHunter's headline dev mAP was 0.327, and a
-source-disjoint re-score put it at 0.113 against a 0.031 chance floor. Qmax was
-evaluated in the same era, on the same corpus, by the same hands, and
-`HANDOFF_CLIP_ID.md:107` already flags that its short-clip sibling was
-"artist/recording-family flattered".
+1. **Measure the 11 long-form concerts.** *This is now the top item and the data
+   landed today.* Deepti recorded **11 concerts, her own audio**, converted to
+   mp3 on 2026-08-13 by `scripts/convert_long_concerts.sh` — 44.1 kHz stereo
+   192 kbps, matching both her own `long_concert_6.mp3` and the existing
+   `data/concert_audio` corpus, so nothing downstream sees a new audio regime.
+   **10 converted, 0 failed**, every output's duration exact against its source
+   and every file re-decoded end to end without error.
 
-The narrow question: **how much of 60-67% survives when a query can never be
-scored against its own recording, its own artist, or its own archive upload?**
+   | file | duration | size | | file | duration | size |
+   |---|---|---|---|---|---|---|
+   | `long_concert_1.mp3` | 26.8 min | 38M | | `long_concert_7.mp3` | 44.8 min | 62M |
+   | `long_concert_2.mp3` | 32.5 min | 46M | | `long_concert_8.mp3` | 34.7 min | 48M |
+   | `long_concert_3.mp3` | 91.6 min | 129M | | `long_concert_9.mp3` | 37.1 min | 52M |
+   | `long_concert_4.mp3` | 44.2 min | 62M | | `long_concert_10.mp3` | 31.5 min | 44M |
+   | `long_concert_5.mp3` | 113.8 min | 161M | | `long_concert_11.mp3` | 66.4 min | 97M |
+   | `long_concert_6.mp3` | 67.5 min | 96M | | **total** | **9.85 h** | **831M** |
 
-Assets all exist — `models/qmax_catalog.npz` (1,421 tracks, 3,465 chroma
-windows), `models/qmax_catalog_meta.json`, `build_qmax_catalog.py`,
-`evaluate_composition_qmax.py`, `evaluate_composition_external.py`.
+   **Currently in `~/Downloads`, not in the repo.** They need a home — do not
+   drop them into `~/sung_tests`, which is the short-clip wild set and whose
+   composition is load-bearing for six committed measurements. Give them their
+   own directory. `long_concert_9` came from a `.MOV`; sources total 8.1 GB and
+   are Deepti's to delete.
 
-1. **Reconstruct what the original evaluation did**, quoting the code. If the
-   protocol cannot be determined from the repo, that is itself the finding, and
-   60-67% should stop being quoted at all.
-2. **Re-score at three levels:** (a) as-originally-run, to reproduce the baseline
-   and confirm the harness works; (b) recording-disjoint; (c) source-disjoint on
-   `archive_identifier`, plus artist where recoverable.
-3. **Report the chance floor at each level**, computed as
-   `colab_coverhunter_rescore.py` does it — mean positives per query divided by
-   references, averaged **over clips, not over songs**. Getting this wrong once
-   printed 0.006 instead of 0.031.
-4. **Report n at every level.** Only 65 of 1,118 titles have 2+ renditions, so
-   source-disjointness may shrink the evaluable set to nothing. If it does, that
-   is the headline, not a footnote under a percentage.
+   **This is the only unmeasured cell in the entire product case.** Every wild
+   clip previously on disk is 43-85 s. The concert-companion thesis rests on
+   10-30 minute items and the duration curve says that region is 68.8-71.0% on
+   *clean* audio — never tested on *wild* audio. **Do it with the same
+   discipline as `data/raga_wild/`:** hash and freeze the clip list and the
+   labels *before* any prediction exists, commit the preregistration as its own
+   commit before the scoring harness, and get Deepti to label the items (she is
+   the ground truth; her audit of the 29-clip wild set found exactly the two
+   errors the doc had flagged and confirmed the rest).
 
-Write it up in `data/QMAX_CONTAMINATION_AUDIT.md`. The interpretation table is
-**fixed in advance in the brief** — read it before running anything, and do not
-choose a reading after seeing the number.
+   Note these are **whole concerts**, not single items — they will need
+   segmentation into items, or a windowed read-out, before they are comparable
+   to anything. Decide and register that *before* scoring, not after.
+
+2. **Retrain the raga model at `min_tracks = 10` and admit every class.** Zero
+   new data, zero dollars, hours not days. **+60% correct answers per concert,
+   measured source-disjoint.** Drop only Nāṭakurinji, Janaranjani and
+   Haṁsānandi. Do **not** add a per-class admission threshold (§4.9). Expect the
+   incumbent 18 classes to pay 3.5 pp (McNemar exact p = 0.0096) — that is real,
+   significant, and small; most of the aggregate fall is composition, not damage
+   (the added tracks themselves run at 47.2%).
+
+3. **Raise the fetch target above 30.** The within-class curve came back **+18.4
+   pp with no saturation**, which was the condition this job was waiting on.
+   ~13 GB more disk, a few hours of melodia at 5 workers, free archive.org.
+   **Fetch broadly, not targeted at weak classes** (§4, second process error).
+   Recount reachable audio first — 1,712 is an optimistic ceiling.
+
+4. **Fix the eight live wrong merges in `data/raga_aliases.json`.** These need no
+   musical adjudication; they are mistakes. `'AbEri' -> 'Sāvēri'` is the exact
+   mechanism behind one of Deepti's two wild-set label corrections. Do it in a
+   commit of its own, with regression tests, and understand that it invalidates
+   the provenance of measurements that read the file — so decide the tier work
+   first. Full list in `data/RAGA_MERGE_DECISIONS.md`.
+
+5. **Build the abstain gate, with a genuinely held-out set.** The wild failures
+   are bimodal: on the 27 audited clips the miss ranks are
+   `[2, 2, 2, 4, 5, 5, 21, 22, 25, 28, 30]` out of 32 — six near-misses and
+   **five catastrophes**, including `vAtApi gaNapathim` (Hamsadhvāni, the most
+   famous concert opener in the repertoire) at rank 25. Thresholding the fused
+   top-1 probability at p ≥ 0.20 fires on 63% of clips at 76.5% top-1 and drops
+   four of the five catastrophes. **That threshold was chosen by reading the
+   table on the same 27 clips it is scored on — it is a hypothesis, not a
+   result.** The admission experiment showed exactly this class of inflation is
+   worth 4.4 pp at matched coverage. Fit the threshold on data the score never
+   sees. What admission *does* buy is precision, not hits (57.0% → 63.8%
+   accuracy-when-it-speaks at 79.2% → 62.2% coverage) — that is this axis, and
+   it should be built here rather than smuggled into the tier.
+
+6. **Build what Jon actually asked for.** Raga name + raga character + sahitya
+   meaning, on long-form audio, with abstention as the guard against lying. Half
+   his question — *what does the melody mean* — needs no ASR, no CSI, no Qmax,
+   and has never been attempted. **Do not start with composition ID.**
+
+7. **Only then, features.** No feature work is justified while the model cannot
+   name 40-60% of what it hears.
+
+Also open, unowned, cheap: `vAtApi gaNapathim__Hamsadhvāni` at rank 25 of 32 is
+not a near-miss-shaped failure — something specific went wrong on **one clip**
+and it is one clip to inspect. And **catalog restriction** in `load_targets`
+remains the one untested cheap lever on the lyrics side; deprioritised four
+times, still not in the graveyard, honest expectation is precision up and recall
+flat.
 
 ---
 
-## 6. Pending Deepti — do not decide these
+## 6. Pending Deepti — do not decide these for her
 
-1. **Push the branch.** `probe/duration-and-negative-arm`, 7 commits, unpushed.
-2. **Prospective long OOC audio** — the only route to measuring OOC abstention at
-   length. `~/sung_tests/fetch_manifest.tsv` retains source URLs and durations, so
-   this is reacquisition rather than discovery; 9 reviewed OOC sources carry a
-   parseable source duration ≥300s.
-3. **The 28-clip short-OOC sentinel** — nested 30s → full-clip (43-84s) over
-   existing reviewed OOC clips, reusing existing caches. n=28 gives 10.1pp at b=0,
-   15.9pp at b=1. It **cannot** speak to 300s and must be pre-registered as
-   non-gating before it is built.
-4. **The registry junk blocklist** — 19 `drop` + 33 `review` rows, unwired.
-   `comp01994` is the one `drop` row with real recall cost. `comp06030` "Ragam
-   Thanam Pallavi", a section name the live matcher can return as a composition,
-   is not on the blocklist.
+1. **Push the branch / open a PR.** 42 commits, none pushed. Her call. Pushes and
+   deploys are always hers.
+2. **Delete the source `.mp4`/`.MOV` files in `~/Downloads`** after checking the
+   mp3s. The conversion script never deletes a source; that is deliberate.
+3. **Label the 11 long concerts** — item, raga, and (if segmenting) rough
+   timings. Nothing in §5.1 can be scored without this.
+4. **Four raga-equivalence rulings**, three answered on 2026-08-13 and recorded
+   in `data/RAGA_MERGE_DECISIONS.md`. **Recorded, deliberately NOT applied.**
+   One is still open: **Udayaravicandrika / Śuddhadhanyāsi** was asked and not
+   answered. It has no threshold consequence, so nothing is blocked.
+5. **Nine low-confidence rows, one low-confidence variant and two ambiguous
+   rows** in `data/raga_aliases_audit.json` (filter `"confidence": "low"`).
+6. **Hindustani imports as product policy**, not musical fact: 31 items
+   (Bhīmpalās 8, Durgā 6, Gauḍ Malhār 3, Jhinjhōṭi 3, …), all attached to
+   Carnatic artists on Carnatic-vocal concert pages, so repertoire rather than
+   noise. Does "concert companion" cover every item on a programme, or only core
+   elaborated Carnatic ragas?
+7. **Back up `asr_cache_fullhistory/`** — local-only and gitignored. If deleted,
+   `DEVICE_MAP.md` becomes unfalsifiable.
+8. **Wire the registry junk blocklist** (a load-time merge in `load_targets`).
+9. **Do NOT fund:** the rendition corpus, tonic-estimation work, prospective long
+   OOC audio, the 28-clip short-OOC sentinel, or anything on the composition
+   path.
 
 ---
 
-## 7. Guardrails
+## 7. Guardrails — the discipline that produced these results
 
-- **Do not commit or push without being asked.** Deepti owns repository history.
-  Do not reset, clean or revert the working tree.
-- Do not change the product default from `whisper`.
-- Do not run Qmax against `data/concert_audio` (leakage).
-- Do not re-run `build_negative_arm.py` or `duration_probe_cut.py` (§3).
-- Do not loosen the OOC definition. That defect killed the v1 negative arm.
-- Do not revert rule A to a pooled gate — that is a pre-registration change
-  requiring a registered argument for the mixture weights.
-- **Do not change anything that feeds `asr_config_id()`** — model, `fp16`,
-  language lanes, separation. It is the cache key, so a change silently
-  invalidates every window already paid for. This is why Whisper runs fp32 even on
-  a GPU and why that is not a bug to fix.
-- Do not retune a threshold, or choose an interpretation, after seeing a SCORE.
-- **Pre-register the reading before running the measurement.** Both surviving
-  good results in this lane came from doing that; every discredited number came
-  from not doing it.
-- **Flag, never self-adjudicate, a truth change that favors your own result.**
-- Preserve exact metric definitions and keep lyrics-matcher, Qmax, hybrid and
-  hybrid-stem numbers distinct.
-- Respond to Deepti in caveman style; write docs, commits and `AGENT_LOG.md`
-  entries in normal prose.
+This is the part to copy, not the numbers.
+
+- **Preregister, and commit the prereg as its own commit before the scoring
+  harness exists.** Every audit in this series did it. Ordering lives in git
+  history, not in file mtimes. (The Qmax audit rests on mtimes because it was
+  committed late; that is the weakest link in the set.)
+- **Gate on reproducing the historical number first, on the exact integer
+  counts.** The raga audit returned 377/518 and 439/518 — the *same integers* —
+  so every delta afterwards was measured against the original measurement rather
+  than an approximation of it. The coverage sweep went further: its default run
+  rewrote `data/raga_audit/levels.json` and `git diff` on it came back **empty**,
+  proving the parameterisation was behaviour-preserving and not merely
+  number-preserving.
+- **Fix the interpretation table in the brief before the number exists.**
+- **Freeze the tunable that could launder the result**, and say in the brief that
+  touching it voids the run rather than improving it.
+- **Write predictions down so they can be refuted.** Eight were, this month.
+- **Separate "produced no output" from "produced a wrong output"** and never sum
+  them into one percentage.
+- **The verifier re-derives every headline with its own code.** It has caught a
+  wrong premise of its own once and a regression-to-the-mean inference once.
+- **Coverage × accuracy, not accuracy.** A companion right 72.8% of the time
+  about 39.1% of what it hears is worse than one right 57.0% of the time about
+  79.2% of it. Nobody computed this for a month and a half, and it inverted the
+  conclusion when they did.
+- **Selection on the folds you then score on inflates by ~4.4 pp.** Measured, not
+  assumed. Nested selection or an explicit "optimistic bound" label — never a
+  quiet in-sample number.
 
 ---
 
 ## 8. Environment facts worth not rediscovering
 
-- `venv_train` is py3.11. **ffmpeg 8.1.2 is installed** at
-  `/opt/homebrew/bin/ffmpeg` (the "no local ffmpeg" line in `ARCHITECTURE.md` is
-  stale).
-- `--cache-v2` is keyed by **`audio_sha256`**, not filename. The `path.name`
-  collision hazard is in the **legacy** `transcribe()` path only.
-- Cache keys contain nothing machine-specific, so a half-finished GPU run travels
-  between boxes. Symlinked staging directories hash to the same key as the real
-  file, which is how chunked resumption works.
-- Demucs is pinned to CPU inside `identify_clip.py:644`. Runners patch
-  `demucs.apply.apply_model` instead of editing the file, because identify_clip
-  imports that symbol *inside* the function.
-- The v2 cache's `hypotheses` field is a **real JSON list of dicts**, not a repr
-  string. Read it structurally.
-- Probe window filenames deliberately contain no `__`, so `identify_clip.py`
-  skips truth-matching and the scorer joins against the sidecar instead.
-- APFS filenames are **NFD**; JSON/manifest keys are NFC. A clip that "isn't in
-  the manifest" is almost always Unicode normalization.
-- macOS uses **fork**, not spawn; the matcher's worker pool depends on it. Tests
-  set `CARNATIFY_MATCH_WORKERS=2`.
-- `identify_clip.py` buffers behind pipes — use `python -u` for long evals, and
-  background + `caffeinate -i` for anything over ~10 min.
-- `backend/` holds a deploy-time **copy** of `identify_clip.py` that can shadow
-  the root module; tests must insert root first on `sys.path`.
-- `data/raga_aliases.json` maps 684 aliases → 101 canonicals with junk keys
-  mapping to null. A `None` value means "not one of the model classes", **not**
-  "not a raga".
-- Rebuilding the composition registry reshuffles every `comp#####` id and breaks
-  `data/wild_truth_manifest.json`. Merge at load time instead.
+- **`venv_train`** py3.11 — demucs, essentia, whisper, rapidfuzz, **pytest**.
+  **`venv`** py3.14 — sklearn, librosa, mirdata, scipy, **no pytest**.
+  essentia must run in `venv_train`, **fork not spawn**.
+- **Never run bare `pytest tests/`.** Run the three named files (§2f).
+- **ffmpeg 8.1.2 IS installed** at `/opt/homebrew/bin/ffmpeg`. The "no local
+  ffmpeg" lines in `ARCHITECTURE.md`, `HANDOFF_CLIP_ID.md` §3 and
+  `augment_wild.py:21` are **stale**.
+- `codex` CLI 0.145.0 at `/opt/homebrew/bin/codex`. Non-interactive:
+  `codex exec --sandbox workspace-write --skip-git-repo-check "<prompt>"`.
+  Give it a brief on disk and tell it to read the brief; do not inline the job.
+- **Zsh eats `"` inside `git commit -m`** when the message contains quoted
+  phrases. Use `git commit -F -` with a heredoc. Zsh also fails on unmatched
+  globs (`ls data/raga_v3*` → "no matches found") — quote or guard them.
+- `data/raga_aliases.json`: 958 keys → 274 null. **Never trust registry `ragas`
+  metadata without it, and never trust it without `data/raga_aliases_audit.json`.**
+- The composition registry contains junk rows — addresses and dates parsed as
+  compositions. Never trust registry raga metadata without a raga-vocabulary
+  check.
+- Melodia runs **~13× realtime**; the domain cells took ~400 s each at 5 workers,
+  6× faster than the single-threaded estimate.
+- **Billing:** a 30-day no-billing window is in force. Submits are gated on
+  `CARNATIFY_BILLING_OK=1`. There is no GEMINI key locally. archive.org is free;
+  Colab Pro T4 has been used for GPU work (`colab_coverhunter.py`,
+  `colab_duration_probe.py`).
+- **Production deploys are Deepti-run** — the permission classifier blocks them
+  from an agent seat. Never keep the Space mirror in `/tmp`.
+- **Synth clips must never enter `~/sung_tests`.** That directory is the wild
+  set and its purity is load-bearing.
+
+### The agent roster and how seats collaborate
+
+- **Verifier seat** (Opus 5) — owns briefs, prereg discipline, and re-derivation
+  of every headline. Does not take a workhorse at face value.
+- **Workhorse seats** (Opus 5, GPT-5.6 / codex) — execute a brief on disk.
+- Seats collaborate **only through files on disk and `AGENT_LOG.md`**, never
+  through chat. A brief goes on disk; the agent is told to read the brief.
+- Deepti also launches workhorses by hand in a separate terminal. **Assume
+  concurrent repo work at all times.**
+- Briefs must demand: prereg-before-score, partial results to disk after every
+  cell, targeted `git add`, an `AGENT_LOG.md` entry naming refuted predictions,
+  and an explicit list of paths the seat must not touch.
+
+---
+
+## 9. The one-line version, if you read nothing else
+
+**The composition path is dead. The raga path works in the field at 59.3% on
+60-second clips, wild audio costs nothing, and the binding constraint is that the
+model cannot name 40-60% of what a listener hears. Two independent levers are
+measured, real, and stack: more classes is free (+60% correct answers per
+concert, retrain only), and more audio per class is worth +18.4 pp with no
+saturation in sight. Eleven long-form concerts just landed and are the only
+unmeasured cell in the entire product case — measure them first, and freeze
+before you predict.**
