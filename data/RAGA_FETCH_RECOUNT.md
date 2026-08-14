@@ -71,10 +71,10 @@ archive.org metadata" and told the reader to treat 1,712 as a ceiling. **That
 warning was exactly right and is now a measurement.** The 1,712 figure should not
 appear again except as a ceiling.
 
-### How much more metadata could be pulled
+### How much more metadata could be pulled — asked, and then answered
 
 The recount is bounded by what is cached, so the obvious objection is that more
-metadata would find more audio. It is bounded:
+metadata would find more audio:
 
 | source | identifiers |
 |---|---|
@@ -84,9 +84,22 @@ metadata would find more audio. It is bounded:
 | metadata already cached | 1,857 |
 | **identifiers with no cached metadata** | **258 (12%)** |
 
-Pulling the remaining 258 is a cheap network job and would, at the same yield,
-add roughly 50 more tier-relevant pairs. **It does not change the verdict** —
-193 does not become 1,712 by adding 12% more metadata.
+**Both fetchers were then run to exhaustion, and the answer is zero.**
+
+```
+fetch_all_archive_metadata.py     425 identifiers,   0 need fetch  (blog pages already complete)
+fetch_archive_search_metadata.py  2022 identifiers, 258 need fetch
+                                  Done: 0 items with mp3s, 258 empty, 0 failed
+```
+
+All 258 uncached identifiers returned **no mp3 files at all** — they are archive
+items with no original-source audio, which is why they were never cached in the
+first place. The metadata cache is genuinely exhausted and stayed at 1,857 files.
+
+**So 378 / 193 is not an artefact of incomplete metadata.** The archive.org
+sources this repo knows about have been fully enumerated, and this is the whole
+of the reachable audio, not a sample of it. That converts the estimate in this
+section's first draft — "would add roughly 50 more" — into a measured **zero**.
 
 ## 3. Where the reachable audio is, and it is not where it is needed
 
@@ -172,9 +185,10 @@ The recount is done and it changes the job:
    hears — and 185 recordings spread over new classes is a **vocabulary** lever,
    not a depth lever. Whether it is enough to bring any class over the line is
    not measured here and is the obvious next question.
-4. **The cheap network job first.** Pull metadata for the 258 uncached
-   identifiers before deciding anything. It is free, it is offline-safe
-   afterwards, and it bounds the whole question properly.
+4. **The bounding job is done.** Both metadata fetchers were run to exhaustion
+   and the 258 uncached identifiers hold **no audio at all**. There is no
+   cheaper step left that would change these numbers, and no reason to revisit
+   the count unless a *new source* is added.
 
 **This does not retire the within-class curve.** +18.4 pp from tripling a class's
 audio remains the best-measured lever in the repo. What changed is the estimate of
@@ -186,8 +200,9 @@ how much audio can be tripled with: for most classes, none.
   still has to survive download, Demucs, melodia, and the frozen `v.size < 500`
   / `tonic <= 0` drops. **378 is itself an upper bound**, a tighter one than
   1,712 but an upper bound.
-- **It is bounded by cached metadata**, and 258 identifiers (12%) are uncached.
-  §2 bounds what that can add; it does not measure it.
+- **It is bounded by the sources this repo knows about.** Within those, it is
+  exhaustive: both fetchers were run to completion and the 258 uncached
+  identifiers returned zero mp3s.
 - **It says nothing about audio outside archive.org.** Other sources exist and
   none of them were counted.
 - **It does not measure what the off-tier audio would buy.** 185 pairs across
@@ -201,3 +216,4 @@ how much audio can be tripled with: for most classes, none.
 |---|---|
 | `scripts/raga_fetch_recount.py` | the recount, offline, using the fetchers' own matchers |
 | `data/raga_tier/fetch_recount.json` | per-class counts, machine-readable |
+| `data/raga_tier/metadata_fetch*.log` | both fetchers run to exhaustion; 258 identifiers, 0 mp3s |
