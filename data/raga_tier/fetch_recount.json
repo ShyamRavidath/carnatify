@@ -1,0 +1,391 @@
+{
+ "mp3_files_in_cached_metadata": 6692,
+ "calibration_resolved_to_a_pair_already_on_disk": 1291,
+ "calibration_files_actually_on_disk": 1238,
+ "reachable_new_distinct_pairs_total": 378,
+ "reachable_new_in_54_tier": 193,
+ "reachable_new_off_tier": 185,
+ "classes_with_zero_reachable": 10,
+ "classes_with_under_5_reachable": 41,
+ "optimistic_ceiling_in_handoff": 1712,
+ "per_class": [
+  {
+   "raga": "Tōḍi",
+   "on_disk_recordings": 23,
+   "reachable_new": 26,
+   "via_own_label": 24,
+   "via_title_join": 2
+  },
+  {
+   "raga": "Kalyāṇi",
+   "on_disk_recordings": 26,
+   "reachable_new": 22,
+   "via_own_label": 21,
+   "via_title_join": 1
+  },
+  {
+   "raga": "Sāvēri",
+   "on_disk_recordings": 27,
+   "reachable_new": 11,
+   "via_own_label": 11,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Hamsadhvāni",
+   "on_disk_recordings": 30,
+   "reachable_new": 10,
+   "via_own_label": 10,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Kāmavardani",
+   "on_disk_recordings": 30,
+   "reachable_new": 9,
+   "via_own_label": 7,
+   "via_title_join": 2
+  },
+  {
+   "raga": "Śankarābharaṇaṁ",
+   "on_disk_recordings": 27,
+   "reachable_new": 9,
+   "via_own_label": 8,
+   "via_title_join": 1
+  },
+  {
+   "raga": "Kāṁbhōji",
+   "on_disk_recordings": 27,
+   "reachable_new": 8,
+   "via_own_label": 5,
+   "via_title_join": 3
+  },
+  {
+   "raga": "Nāṭa",
+   "on_disk_recordings": 28,
+   "reachable_new": 7,
+   "via_own_label": 6,
+   "via_title_join": 1
+  },
+  {
+   "raga": "Kamās",
+   "on_disk_recordings": 23,
+   "reachable_new": 7,
+   "via_own_label": 7,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Kānaḍa",
+   "on_disk_recordings": 27,
+   "reachable_new": 7,
+   "via_own_label": 7,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Vasanta",
+   "on_disk_recordings": 28,
+   "reachable_new": 6,
+   "via_own_label": 6,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Mōhanaṁ",
+   "on_disk_recordings": 26,
+   "reachable_new": 5,
+   "via_own_label": 4,
+   "via_title_join": 1
+  },
+  {
+   "raga": "Behāg",
+   "on_disk_recordings": 18,
+   "reachable_new": 5,
+   "via_own_label": 5,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Sindhubhairavi",
+   "on_disk_recordings": 27,
+   "reachable_new": 4,
+   "via_own_label": 4,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Ṣanmukhapriya",
+   "on_disk_recordings": 25,
+   "reachable_new": 4,
+   "via_own_label": 4,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Madhyamāvati",
+   "on_disk_recordings": 28,
+   "reachable_new": 4,
+   "via_own_label": 3,
+   "via_title_join": 1
+  },
+  {
+   "raga": "Saurāṣtraṁ",
+   "on_disk_recordings": 9,
+   "reachable_new": 3,
+   "via_own_label": 3,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Aṭāna",
+   "on_disk_recordings": 26,
+   "reachable_new": 3,
+   "via_own_label": 3,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Bhairavi",
+   "on_disk_recordings": 25,
+   "reachable_new": 3,
+   "via_own_label": 2,
+   "via_title_join": 1
+  },
+  {
+   "raga": "Ānandabhairavi",
+   "on_disk_recordings": 18,
+   "reachable_new": 3,
+   "via_own_label": 3,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Dhanyāsi",
+   "on_disk_recordings": 23,
+   "reachable_new": 3,
+   "via_own_label": 3,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Harikāmbhōji",
+   "on_disk_recordings": 26,
+   "reachable_new": 3,
+   "via_own_label": 3,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Mukhāri",
+   "on_disk_recordings": 15,
+   "reachable_new": 3,
+   "via_own_label": 3,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Pūrvīkaḷyāṇi",
+   "on_disk_recordings": 27,
+   "reachable_new": 2,
+   "via_own_label": 2,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Rītigauḷa",
+   "on_disk_recordings": 24,
+   "reachable_new": 2,
+   "via_own_label": 2,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Kāpi",
+   "on_disk_recordings": 28,
+   "reachable_new": 2,
+   "via_own_label": 2,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Karaharapriya",
+   "on_disk_recordings": 25,
+   "reachable_new": 2,
+   "via_own_label": 2,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Cakravākaṁ",
+   "on_disk_recordings": 15,
+   "reachable_new": 2,
+   "via_own_label": 2,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Bilahari",
+   "on_disk_recordings": 22,
+   "reachable_new": 2,
+   "via_own_label": 2,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Pūrṇacandrika",
+   "on_disk_recordings": 14,
+   "reachable_new": 2,
+   "via_own_label": 2,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Gauḷa",
+   "on_disk_recordings": 13,
+   "reachable_new": 1,
+   "via_own_label": 1,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Bēgaḍa",
+   "on_disk_recordings": 21,
+   "reachable_new": 1,
+   "via_own_label": 1,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Varāḷi",
+   "on_disk_recordings": 23,
+   "reachable_new": 1,
+   "via_own_label": 1,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Māyāmāḷavagauḷa",
+   "on_disk_recordings": 11,
+   "reachable_new": 1,
+   "via_own_label": 1,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Hindōḷaṁ",
+   "on_disk_recordings": 24,
+   "reachable_new": 1,
+   "via_own_label": 1,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Suraṭi",
+   "on_disk_recordings": 15,
+   "reachable_new": 1,
+   "via_own_label": 1,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Sāma",
+   "on_disk_recordings": 21,
+   "reachable_new": 1,
+   "via_own_label": 1,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Ābhōgi",
+   "on_disk_recordings": 11,
+   "reachable_new": 1,
+   "via_own_label": 1,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Jaganmōhini",
+   "on_disk_recordings": 16,
+   "reachable_new": 1,
+   "via_own_label": 1,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Sahānā",
+   "on_disk_recordings": 12,
+   "reachable_new": 1,
+   "via_own_label": 1,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Haṁsānandi",
+   "on_disk_recordings": 24,
+   "reachable_new": 1,
+   "via_own_label": 1,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Sencuruṭṭi",
+   "on_disk_recordings": 12,
+   "reachable_new": 1,
+   "via_own_label": 1,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Janaranjani",
+   "on_disk_recordings": 15,
+   "reachable_new": 1,
+   "via_own_label": 1,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Nāṭakurinji",
+   "on_disk_recordings": 11,
+   "reachable_new": 1,
+   "via_own_label": 1,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Latāngi",
+   "on_disk_recordings": 17,
+   "reachable_new": 0,
+   "via_own_label": 0,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Nīlāṁbari",
+   "on_disk_recordings": 16,
+   "reachable_new": 0,
+   "via_own_label": 0,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Dvijāvanti",
+   "on_disk_recordings": 12,
+   "reachable_new": 0,
+   "via_own_label": 0,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Śrīranjani",
+   "on_disk_recordings": 19,
+   "reachable_new": 0,
+   "via_own_label": 0,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Śuddadhanyāsi",
+   "on_disk_recordings": 13,
+   "reachable_new": 0,
+   "via_own_label": 0,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Puṇṇāgavarāḷi",
+   "on_disk_recordings": 21,
+   "reachable_new": 0,
+   "via_own_label": 0,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Kēdāragauḷa",
+   "on_disk_recordings": 13,
+   "reachable_new": 0,
+   "via_own_label": 0,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Bṛndāvana sāranga",
+   "on_disk_recordings": 12,
+   "reachable_new": 0,
+   "via_own_label": 0,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Maṇirangu",
+   "on_disk_recordings": 8,
+   "reachable_new": 0,
+   "via_own_label": 0,
+   "via_title_join": 0
+  },
+  {
+   "raga": "Jōnpuri",
+   "on_disk_recordings": 14,
+   "reachable_new": 0,
+   "via_own_label": 0,
+   "via_title_join": 0
+  }
+ ]
+}
