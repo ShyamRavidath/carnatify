@@ -4,7 +4,7 @@ Last rewritten **2026-08-13** (second rewrite that day) by the verifier seat, fo
 a fresh session that will start with no memory of this one.
 
 Repository: `/Users/shyamravidath/carnatify`
-Branch: **`probe/duration-and-negative-arm`** · HEAD `079367e` · **51 commits, NOT PUSHED**
+Branch: **`probe/duration-and-negative-arm`** · HEAD `3218fdc` · **53 commits at the time of writing, NOT PUSHED**
 `main` is the PR target. **`identify_clip.py` has zero diff against `main`** —
 nothing in this entire series has touched the production path.
 
@@ -427,7 +427,7 @@ honest expectation is precision up and recall flat.
 
 ## 6. Pending Deepti — do not decide these for her
 
-1. **Push the branch / open a PR.** 51 commits, none pushed. Pushes and deploys
+1. **Push the branch / open a PR.** ~53 commits, none pushed. Pushes and deploys
    are always hers.
 2. **Label the 11 long concerts** — `data/long_concerts/LABELS.tsv`. **Nothing in
    §5.1 can be scored without this**, and it is the only unmeasured cell in the
