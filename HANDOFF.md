@@ -1,17 +1,16 @@
 # Carnatify handoff
 
-Last rewritten **2026-08-13** by the verifier seat, at Deepti's request, for a
-fresh session that will start with no memory of this one.
+Last rewritten **2026-08-13** (second rewrite that day) by the verifier seat, for
+a fresh session that will start with no memory of this one.
 
 Repository: `/Users/shyamravidath/carnatify`
-Branch: **`probe/duration-and-negative-arm`** · HEAD `9e81a5c` · **42 commits, NOT PUSHED**
+Branch: **`probe/duration-and-negative-arm`** · HEAD `f5346f9` · **53 commits, NOT PUSHED**
 `main` is the PR target. **`identify_clip.py` has zero diff against `main`** —
 nothing in this entire series has touched the production path.
 
-**The previous content of this file is preserved in git at `e7de2b3`.** It
-described the state as of 2026-07-30, before five audits changed most of the
-conclusions in it. Read this file instead; reach for that one only if you need
-the duration-probe archaeology.
+**The previous version of this file is in git at `c84a4b4`.** It described the
+state before the tier graduation, the alias repair and the fetch recount. Read
+this one; reach for that only for archaeology.
 
 > **`handoff.md` and `HANDOFF.md` are ONE FILE** on this case-insensitive
 > filesystem. Git tracks both paths, so committing one leaves the other showing
@@ -21,11 +20,11 @@ the duration-probe archaeology.
 articles and filler, keep every technical term, code symbol and number exact).
 Write docs, commits and `AGENT_LOG.md` in normal prose.
 
-**Read order for a cold start:** this file → `data/RAGA_CEILING_EVALUATION.md`
-(the current thesis) → `data/RAGA_COVERAGE_CURVE.md` → `AGENT_LOG.md` entries
-dated 2026-08-13 → `HANDOFF_SESSION_0731.md` (the previous verifier handoff,
-still correct except where this file says otherwise) → `HANDOFF_CLIP_ID.md` §5
-(the master graveyard).
+**Read order for a cold start:** this file → `data/RAGA_TIER_GRADUATION.md` (the
+current model) → `data/RAGA_FETCH_RECOUNT.md` (why the fetch just got much
+smaller) → `data/RAGA_CEILING_EVALUATION.md` (the thesis) →
+`data/RAGA_COVERAGE_CURVE.md` → `HANDOFF_SESSION_0731.md` → `HANDOFF_CLIP_ID.md`
+§5 (the master graveyard).
 
 ---
 
@@ -36,40 +35,39 @@ explains it.** Deepti is a Carnatic musician and a high-school student with a
 CS/ML background. This began as a personal tool and is being evaluated as a
 possible company.
 
-The framing since 2026-07-25 is a **concert companion**, not a Shazam clone.
-The listener is physically present for a 10-30 minute item. The 30-second
+The framing since 2026-07-25 is a **concert companion**, not a Shazam clone. The
+listener is physically present for a 10-30 minute item. The 30-second
 identification contract was inherited from Shazam and was never actually
-required by the use case — that inheritance quietly drove years of the wrong
-measurement, and undoing it is the single most important reframing in this
-project's history (see §4.9).
+required by the use case — undoing that inheritance is the single most important
+reframing in this project's history.
 
 **Demand evidence is no longer zero.** Jon — the one named real user, a Western
 listener with no Carnatic exposure — was confused at a concert and, *unprompted*,
 reached for an AI assistant to identify the piece. **It failed**, mostly with
-refusals ("I cannot help with this request"). He asked two questions:
+refusals. He asked two questions:
 
 1. *what is the song being sung* — composition ID. **Every door there is shut**
-   (§4.1-4.5). Do not reopen without new information.
+   (§4). Do not reopen without new information.
 2. *what does the melody mean* — raga character plus sahitya meaning. Needs
    **no ASR, no CSI, no Qmax**, and the repo has **never attempted it**.
 
-The refusal failure mode narrows the moat to **audio → symbol**. The explanation
-layer on top is commodity LLM work, which is a cost advantage, not a weakness.
 Any handoff older than `HANDOFF_SESSION_0731.md` says "demand evidence is zero";
 **that line is stale and wrong.**
 
 ---
 
-## 2. Current state of the code
+## 2. Current state
 
 ### 2a. The thesis, in one paragraph
 
-The composition-identification side is **genuinely closed**. The raga side
-**survived every audit**, including the field, and the constraint on it is not
-accuracy — it is that **the model cannot name 40-60% of what a listener
-actually hears**. That is a vocabulary and collection problem sitting under
-three caps that were each set by a constant in a script, and the largest one
-costs nothing to lift. `data/RAGA_CEILING_EVALUATION.md` is the full argument.
+The composition side is **genuinely closed**. The raga side **survived every
+audit**, including the field. Its constraint is not accuracy — it is that the
+model **cannot name 40-60% of what a listener actually hears**. As of today one
+of the two levers against that has been **taken** (the tier is now 54 classes,
+exported) and the other has been **re-priced and mostly closed** (there are only
+193 more reachable tracks in the world this repo knows about, not 1,712). So the
+vocabulary problem is now bounded by **data that does not exist**, not by a
+constant in a script.
 
 ### 2b. The door table
 
@@ -83,84 +81,98 @@ costs nothing to lift. `data/RAGA_CEILING_EVALUATION.md` is the full argument.
 | raga "72.8% leak-free" | **HELD — 72.2% source-disjoint** | 2026-07-31 |
 | "raga dies on short clips" | **mostly false — 60.4% @60s, 52.5% @30s** | 2026-07-31 |
 | "raga dies on wild audio" | **FALSE — 59.3% on 27 expert-audited wild clips** | 2026-08-13 |
-| per-class admission threshold | **loses — no threshold beats admitting everything** | 2026-08-13 |
+| per-class admission threshold | **loses at every threshold** | 2026-08-13 |
+| **the narrow 3-class drop** | **also loses — sign flips between arms, p = 0.31 / 0.46** | **2026-08-13** |
+| **fusion at a wide tier** | **HELPS, and more than at a narrow one: +1.84 pp** | **2026-08-13** |
+| **"1,712 more tracks are fetchable"** | **FALSE — 193 in-tier, and the metadata is exhausted** | **2026-08-13** |
 
 ### 2c. The numbers that matter, all source-disjoint
 
-**Field (the only real-world number this project has):**
-16/27 = **59.3% top-1 [40.7, 75.5]**, 20/27 = 74.1% top-3 tier-restricted, on
-expert-audited wild clips of median length 60.0 s. Chance floor 5.6%,
-best-constant floor 17.2% — the CI excludes both.
+**The exported model** (`models/raga_v4_*`, `min_tracks = 10`, 54 classes,
+fused): **top-1 59.2% [55.0, 64.1], top-3 72.8%, repertoire coverage 79.2%,
+46.86 expected correct raga identifications per 100 heard concert items.**
 
-**Wild audio costs approximately nothing.** Put the field number next to the
-clean duration curve at matched duration and matched tier: **59.3% wild vs
-60.4% clean at 60 s.** Not a paired comparison (different corpora, fused vs
-TDMS-only model), but it is the fourth independent line of evidence saying the
-same thing. `data/RAGA_DOMAIN_DECOMPOSITION.md` measured field-realistic
-degradation at **7.5 pp**, with phone chain +0.4, room +2.1 and pink noise +2.7,
-each CI touching or crossing zero. **The whole gap between "72.2% on full
-tracks" and "59.3% in the wild" is DURATION, not domain.**
+Expected hits by tier, all fused, all level (c) — this is the product number and
+it is monotone:
 
-**Duration curve** (`data/RAGA_DURATION_CURVE.md`, 18-class tier):
-52.5% @30s → **60.4% @60s** → 63.8% @120s → **68.8% @300s** → 71.0% @600s →
-72.2% full (mean 785 s). Knee bracketed in (120 s, 300 s]. Top-3 decays far more
-gently: 84.0% full → 77.1% @60s.
+| tier | classes | top-1 | top-3 | coverage | **exp hits / 100** |
+|---|---|---|---|---|---|
+| `min>=25` | 18 | 73.6% | 83.6% | 39.1% | 28.75 |
+| `min>=20` | 32 | 65.6% | 76.3% | 59.6% | 39.12 |
+| **`min>=10`** | **54** | **59.2%** | **72.8%** | **79.2%** | **46.86** |
 
-**Coverage/accuracy curve** (`data/RAGA_COVERAGE_CURVE.md`, level (c)):
+**Field (the only real-world number this project has):** 16/27 = **59.3% top-1
+[40.7, 75.5]** on expert-audited wild clips of median length 60.0 s, 18-class
+tier, `raga_v3`. Chance floor 5.6%, best-constant floor 17.2% — the CI excludes
+both. **This has not been re-measured against the 54-class model.**
 
-| `min_tracks` | classes | tracks | groups | top-1 | top-3 | repertoire coverage | **correct per 100 items heard** |
-|---|---|---|---|---|---|---|---|
-| 25 | 18 | 518 | 155 | 72.2% [66.4, 78.1] | 84.0% | 39.1% | **28.2** |
-| 20 | 32 | 826 | 185 | 64.0% [60.0, 68.3] | 76.5% | 59.6% | **38.2** |
-| 15 | 44 | 1,020 | 198 | 59.9% [55.8, 64.4] | 71.3% | 70.9% | **42.5** |
-| 10 | 54 | 1,139 | 204 | 57.0% [52.7, 61.7] | 71.3% | 79.2% | **45.1** |
+**Wild audio costs approximately nothing.** 59.3% wild against 60.4% clean at
+matched 60 s duration and matched tier. `data/RAGA_DOMAIN_DECOMPOSITION.md`
+measured field-realistic degradation at **7.5 pp** (phone +0.4, room +2.1, pink
+noise +2.7, each CI touching or crossing zero). **The whole gap between "72.2% on
+full tracks" and "59.3% in the wild" is DURATION, not domain.**
 
-Monotone increasing to the widest tier measured. Top-1 falls log-linearly in
-class count (R² = 0.9997, −13.8 pp per natural-log unit) while coverage rises
-faster. For the 18-class tier to win, 54-class top-1 would have to be below
-35.6%; it is 57.0%. **+60% more correct answers per concert, from a retrain on
-data already on disk.**
+**Duration curve** (18-class tier, TDMS-only): 52.5% @30s → **60.4% @60s** →
+63.8% @120s → **68.8% @300s** → 71.0% @600s → 72.2% full. Knee in (120 s, 300 s].
+Top-3 decays far more gently: 84.0% full → 77.1% @60s.
 
-**Within-class learning curve** (the confound-free test — each class compared
-against itself, nested subsets, 3 seeds), on the 18 classes that span the range:
+**Within-class learning curve** (confound-free, each class against itself, 3
+seeds), on the 18 classes spanning the range:
 
 | cap (tracks/class) | 10 | 15 | 20 | 25 | 30 |
 |---|---|---|---|---|---|
 | top-1 | 50.4% | 57.8% | 64.1% | 66.5% | **68.7%** |
 
-**+18.4 pp, and no saturation anywhere.** Per 100 tracks added the steps are
-3.10 / 3.62 / 2.07 / **3.25 pp** — the last 68 tracks bought as much as the
-first 239. **Every class in the corpus is capped at 30 and the curve is still
-climbing there.** Nobody has ever seen where it bends.
+**+18.4 pp, no saturation anywhere**; the last 68 tracks bought as much per track
+as the first 239. **This lever is real and it is now supply-constrained** — see
+§2f.
 
 ### 2c-i. Which numbers are inflated and must not be quoted
 
-The level (a) → level (c) source-disjointness penalty is **tier-dependent**:
-0.6 pp at 18 classes, but **3.5 / 3.5 / 4.7 pp** at 32 / 44 / 54, and 8.0-11.8 pp
-on same-raga-same-source clustered tracks against 1.2 pp at the narrow tier.
+The level-(a) → level-(c) penalty is **tier-dependent**: 0.6 pp at 18 classes but
+**3.5 / 3.5 / 4.7 pp** at 32 / 44 / 54. **Any raga figure at `min_tracks >= 20`
+or wider measured at level (a) is inflated.**
 
-**Therefore: any raga figure at `min_tracks >= 20` or wider that was measured at
-level (a) is inflated.** That specifically includes the `min>=20 67.6/79.4` line
-in `models/raga_v3_meta.json`'s `cv_note` and in `train_raga_v3_tdms.py`'s
-docstring — both still say it. The exported model's own tier has one honest
-number: **64.0% / 76.5%**, TDMS-only arm.
+The two places that carried such a figure — `train_raga_v3_tdms.py`'s docstring
+and `models/raga_v3_meta.json`'s `cv_note`, both quoting `min>=20 67.6/79.4` —
+**were repaired on 2026-08-13**. Both now carry source-disjoint fused numbers
+keyed by tier, and a tier off the measured grid gets **no** figure rather than a
+borrowed one.
+
+**A second, smaller correction, new today.** There are two harnesses and they
+carry a different number of rows per track — one row (`raga_audit_levels`, the
+coverage curve) versus three (`raga_audit_protocol`, the fused arm). Replication
+is worth about **+0.35 pp** and grows with tier width (+1 track at 18 classes, +3
+at 32, +4 at 54). **That is the noise floor of this whole audit series**, and any
+delta under half a point should be read against it. Deduplicating the fused
+harness reproduces the coverage curve's integers exactly — 649/1139 and 812/1139
+— so the harnesses do not disagree about anything.
 
 ### 2d. Model, features, and what "fused" means
 
-- `models/raga_v3_tdms_rf.pkl` + `models/raga_v3_hist_rf.pkl` +
-  `models/raga_v3_label_encoder.pkl` + `models/raga_v3_meta.json`.
+- **Exported and current: `models/raga_v4_*`** — `raga_v4_tdms_rf.pkl`,
+  `raga_v4_hist_rf.pkl`, `raga_v4_label_encoder.pkl`, `raga_v4_meta.json`.
+  54 classes, `min_tracks = 10`, fused. The two forests are **gitignored**
+  (1.2 GB) and regenerate in ~7 min via
+  `venv/bin/python train_raga_v3_tdms.py --min-tracks 10 --out-prefix raga_v4`.
+- **`models/raga_v3_*` is deliberately untouched** — 32 classes. The wild,
+  duration and domain measurements all scored against it and overwriting it
+  would invalidate their provenance. Numbers quoted from those docs are v3
+  numbers.
 - **TDMS** = time-delayed melody surface: 40×40 octave-folded pitch-class
   transition surfaces at τ = 0.1/0.15/0.25 s, gaussian-smoothed (σ 1, wrap),
   power-compressed (α 0.75), L1-normalised, on the FULL-track melody, tonic-
   normalised. Melody from essentia `PredominantPitchMelodia` on the mix for
   archive tracks; annotated vocal pitch for Saraga.
-- **Fusion**: `P = 0.6 * P_tdms + 0.4 * P_hist`, where `P_hist` is the
-  production 480-dim tonic-normalised pitch histogram (65 s Demucs+pyin slices).
+- **Fusion**: `P = 0.6 * P_tdms + 0.4 * P_hist`, where `P_hist` is the production
+  480-dim tonic-normalised pitch histogram (65 s Demucs+pyin slices). **Fusion
+  is now measured at three tiers and its advantage grows with tier width**:
+  +1.16 pp at 18 classes, +1.21 at 32, **+1.84 at 54** (McNemar exact
+  p = 0.0011). It is not optional and it is not free — it doubles the forests and
+  drags the Demucs+pyin front end into inference.
 - Classifier: `RandomForestClassifier(800, max_features='sqrt', random_state=42)`.
-- CV throughout: `StratifiedGroupKFold(5, shuffle=True, random_state=42)`.
-- **32 classes** in the exported model (`min_tracks = 20`); the **18-class
-  tier** (`min>=25`) is what most published numbers use. Both appear constantly;
-  always check which.
+- CV: `StratifiedGroupKFold(5, shuffle=True, random_state=42)` on level-(c)
+  source groups.
 
 ### 2e. Data inventory, counted 2026-08-13
 
@@ -168,21 +180,45 @@ number: **64.0% / 76.5%**, TDMS-only arm.
   ragas** (89 label strings; `Ābhōgī`/`Ābhōgi` is a duplicate spelling).
 - `data/raga_v2_cache/melodia_full/` — 1,232 full-track contours.
 - `data/concert_audio/` — 1,238 audio files, 85 raga dirs, **13 GB**.
-- `data/scraped_compositions.json` — 3,698 concert programme items from
-  shankarkrish.blog, of which **3,009 carry a canonical raga**. This is a real
-  prior over what actually gets performed and is what "repertoire coverage" is
-  computed against.
-- **1,712 identified programme items are unfetched** (3,009 − 1,297). Treat this
-  as an **optimistic ceiling, not a promised corpus**: only ~10-13% of programme
-  rows exact-match cached archive.org metadata.
-- `~/sung_tests` — 108 files, 106 audio, 81 with a real raga label. The wild set.
+- `data/scraped_compositions.json` — 3,698 programme items, **3,009 with a
+  canonical raga**. This is the repertoire prior coverage is computed against.
+- `~/sung_tests` — 108 files, 106 audio, 81 with a real raga label. The short-clip
+  wild set. **Its composition is load-bearing for six committed measurements.**
+- **`data/long_concerts/audio/` — 11 concerts, 9.85 h, 851 MB, frozen, gitignored,
+  UNLABELLED.** New today. See §5.1.
 
-### 2f. Tests
+### 2f. Reachable audio — the number that changed today
 
-`103 passed, 1 xfailed`, run as:
+`data/RAGA_FETCH_RECOUNT.md`. Done entirely offline against the metadata cache,
+then bounded by running both fetchers to exhaustion.
+
+| quantity | value |
+|---|---|
+| mp3 files in cached archive.org metadata | 6,692 |
+| **reachable NEW (raga, title) pairs** | **378** |
+| — in the 54-class tier | **193** |
+| — off-tier (would add *new* classes) | **185** |
+| the old "optimistic ceiling" | 1,712 |
+| **realised fraction** | **11%** |
+
+**Ten of 54 classes have ZERO reachable audio; 41 of 54 have fewer than five;
+only 4 have ten or more.** The top two classes hold 25% of it and the bottom 27
+hold 10%.
+
+**The metadata is exhausted.** All 258 previously-uncached identifiers were
+fetched and returned **zero** mp3s. There is no cheaper step that changes this
+short of adding a genuinely new source.
+
+**Calibration, so the count can be trusted:** the same pass predicts 1,291 files
+already on disk against 1,238 actually there — within 4.3%.
+
+### 2g. Tests
+
+**`126 passed, 1 xfailed`** (was 103 + 1 before today's 23 new alias tests):
 
 ```
-venv_train/bin/python -m pytest tests/test_clip_policy.py tests/test_registry_junk.py tests/test_negative_arm.py -q
+venv_train/bin/python -m pytest tests/test_clip_policy.py tests/test_registry_junk.py \
+    tests/test_negative_arm.py tests/test_raga_aliases.py -q
 ```
 
 **NEVER run bare `pytest tests/`** — six legacy files import a `carnatify`
@@ -192,25 +228,24 @@ package that does not exist and fail at collection.
 
 ## 3. Files actively being edited
 
-**Nothing is mid-edit. No agent is running.** Both delegated seats finished and
-committed. The working tree at handoff time:
+**Nothing is mid-edit. No agent is running.** Working tree at handoff time:
 
 ```
  M .claude/settings.local.json          (harness noise, not project state)
-?? data/RAGA_MERGE_DECISIONS.md         (Deepti's rulings — commit this)
-?? scripts/convert_long_concerts.sh     (the mp3 batch — commit this)
 ?? data/raga_coverage/matrix.npz        (~50 MB, regenerable, deliberately UNcommitted)
+?? data/long_concerts/labels_validation.json  (regenerated by --validate; harmless)
 ```
 
-**Frozen and must stay frozen:** `data/raga_wild/FROZEN_CLIPS.json` (committed
-`f67ef98`, per-clip sha256, written before any prediction existed).
-`data/raga_wild/` generally. `data/raga_audit/`, `data/raga_duration/`,
-`data/raga_domain/`, `data/raga_coverage/` are committed measurement records —
-append to them, never rewrite.
+**Frozen and must stay frozen:** `data/raga_wild/FROZEN_CLIPS.json`,
+`data/long_concerts/FROZEN_CONCERTS.json`, and the committed measurement records
+`data/raga_audit/`, `data/raga_duration/`, `data/raga_domain/`,
+`data/raga_coverage/`, `data/raga_tier/` — append, never rewrite.
 
-**Do not modify `data/raga_aliases.json`.** Five committed measurements read it;
-editing in place would invalidate their provenance. The vocabulary audit
-correctly wrote to a **new** file, `data/raga_aliases_audit.json`.
+**`data/raga_aliases.json` was edited today** (ten wrongly-merged keys → `null`)
+after the tier work was decided, which was the required ordering.
+`data/scraped_compositions.json` was **deliberately not regenerated**, so the map
+and the materialised `raga_canonical` field disagree by 20 items. Re-deriving is
+a separate dated step and its only measured effect is coverage 79.196% → 79.224%.
 
 **Deepti works in this repo from a separate terminal.** Use targeted
 `git add <path>`. **Never `git add -A`.**
@@ -219,215 +254,209 @@ correctly wrote to a **new** file, `data/raga_aliases_audit.json`.
 
 ## 4. What has been tried and failed
 
-`HANDOFF_CLIP_ID.md` §5 is the master graveyard; `HANDOFF_SESSION_0730.md` §5
-holds the duration-probe additions; `HANDOFF_SESSION_0731.md` §5 holds the audit
-additions. **Do not re-fund any of the following.**
+`HANDOFF_CLIP_ID.md` §5 is the master graveyard. **Do not re-fund any of these.**
 
 1. **Lyrics-ASR composition ID.** No precision operating point at any threshold
-   (≤31%), 2026-07-23. Whisper `large-v3-turbo`, Indic variants, Demucs stems,
-   all of it.
+   (≤31%). Whisper `large-v3-turbo`, Indic variants, Demucs stems, all of it.
 2. **Sung-Carnatic ASR fine-tune.** Went *backwards*: 8/78 → 0-1/78.
 3. **Melodic CSI via CoverHunter.** Source-disjoint mAP 0.113 against a 0.031
-   chance floor. Eleven bugs found and fixed along the way (the repo's own
-   `train.py` eval-unpack bug was the real crash cause) — full debug log in
+   chance floor. Eleven bugs found and fixed on the way; full log in
    `HANDOFF_SESSION_0719B.md`. The training ran; the result was still NO-GO.
-4. **More audio duration for the lyrics channel.** KILL: top-5 went *down*,
-   5.1% @30s → 1.7% @300s. Longer audio makes the lyrics path worse.
+4. **More audio duration for the lyrics channel.** KILL: top-5 went *down*.
 5. **Qmax composition matching.** The "60-67% top-1" headline was
-   **contamination**: 34 of 36 top-1 hits were byte-identical copies of the
-   query sitting at the 0.036 Serra09 identity floor. Source-disjoint it is
-   **9.5%**. The separate internal 66.7% claim is uncontaminated but
-   **unreproducible** (n=30). The corpus cannot support a cross-artist claim at
-   all: 13 of 1,011 works have ≥2 known distinct artists.
-6. **The rendition corpus.** Confirmed do-not-fund. A rendition count is not a
-   recording count: 65 titles with 2+ renditions is really 87 titles with 2+
-   *distinct recordings*, and 367 tracks in multi-track groups collapse to 261.
-   73 usable works, 13 with verifiable artist diversity.
-7. **Tonic estimation / shruti-from-the-listener.** The 2×2 in the domain
-   decomposition says perfect tonic recovery buys **2.2 pp** in the field cell.
-   Contour beats tonic 3:1 in the field cell and 5:1 in the worst. Most tonic
-   error is pre-existing in the *clean* corpus (17.4% outside 25 cents), not
-   induced by degradation. **Do not fund.**
+   **contamination** — 34 of 36 top-1 hits were byte-identical copies of the
+   query. Source-disjoint it is **9.5%**.
+6. **The rendition corpus.** Confirmed do-not-fund. 73 usable works, 13 with
+   verifiable artist diversity.
+7. **Tonic estimation / shruti-from-the-listener.** Perfect tonic recovery buys
+   **2.2 pp** in the field cell. Contour beats tonic 3:1. **Do not fund.**
 8. **`augment_wild.py` as a domain simulator.** Its ±6 semitone pitch shift and
-   0.8-1.25× time stretch simulate nothing that happens to a phone recording,
-   and they dominate the damage (+10.6 and +11.0 pp *each*, worse than all three
-   real field components combined). Any robustness claim built on the `all`
-   condition is measuring an artifact. **Use `field_all` (noise + reverb +
-   phone).**
-9. **Per-class admission thresholds** (2026-08-13). Measured properly with
-   nested selection. Expected hits **fall monotonically**: 45.1 → 43.6 → 42.8 →
-   42.1 → 39.6. **No threshold beats admitting every class.** Dropping a class
-   forfeits its repertoire mass at once and buys accuracy slowly (−6.6 pp
-   coverage for +3.0 pp top-1 at t = 0.10). The narrow version survives: three
-   named classes — **Nāṭakurinji, Janaranjani, Haṁsānandi** — are never admitted
-   in any fold and can simply be dropped. That is three names, not a knob.
+   0.8-1.25× time stretch dominate the damage and simulate nothing real. **Use
+   `field_all`.**
+9. **Per-class admission thresholds.** Expected hits fall monotonically:
+   45.1 → 43.6 → 42.8 → 42.1 → 39.6. No threshold beats admitting everything.
+10. **The narrow version of admission — dropping the stably-dead classes — also
+    loses.** *New today, and it closes the last live remnant of this idea.*
+    `data/RAGA_COVERAGE_CURVE.md` §11.4 had preserved a defensible narrow
+    version: drop the three classes never admitted in any fold (Nāṭakurinji,
+    Janaranjani, Haṁsānandi). Priced properly it does not pay. The second-order
+    help to the surviving 51 is **+0.73 pp in the TDMS arm and −0.55 pp in the
+    fused arm** — the sign flips between two arms of the same model on the same
+    folds — and neither direction is significant (McNemar p = 0.31, p = 0.46). On
+    expected hits: fused **46.10 against 46.86**. **All 54 classes are admitted.**
+11. **"Raise the fetch target above 30" as a broad top-up.** *New today.* Not
+    refuted in principle — the within-class curve still says +18.4 pp — but **not
+    executable**: only 4 of 54 classes have ten or more reachable recordings and
+    ten have none (§2f).
 
-### Predictions written down in advance and then refuted — mine and others'
+### Predictions written down in advance and then refuted
 
-Keeping these because the habit of writing refutable predictions is the reason
-this project's numbers are trustworthy.
+Keeping these because the habit is why this project's numbers are trustworthy.
 
-- **"`phone_mic`'s 120-350 Hz high-pass will strip the fundamental and leave
-  melodia tracking nothing."** Refuted — **zero** no-contour failures in all 517
-  windows of all eight cells. The failure mode is wrong answers on present
-  input, never absent input.
-- **"The 72.8 CV harness was never committed."** Wrong. It is
-  `scratch_archive_0711/raga_final_eval.py` (`c1fca59`) and it reproduces both
-  tiers and both metrics exactly. The error was trusting
-  `git log -S"72.8" -- '*.py'`: **`-S` over source is a test for a literal, not
-  for a capability**, and the harness *computes* the number.
-- **"The source-disjointness penalty is 0.6 pp and won't explode at a wider
-  tier."** Refuted — it is tier-dependent and reaches 4.7 pp at 54 classes.
-- **"More audio per class is weakly contradicted (r = 0.066)."** Refuted, and the
-  statistic was junk: that r was computed over the 18-class tier whose track
-  counts span only 25-30. Range restriction. Over 54 classes it is r = 0.519.
-- **"The within-class curve will be much flatter, +6 to +12 pp, flattening by
-  c=25."** Refuted — **+18.4 pp** and no saturation.
-- **"The coverage/accuracy trade will peak somewhere in the middle."** Refuted —
-  it peaks at the widest tier measured.
-- **"Ārabhi is an alias bug that should have matched."** Refuted — Ārabhi is
-  absent from the 103-name CompMusic ∪ Saraga vocabulary entirely. It is a
-  missing raga, not a missing spelling.
-- **"The null alias bucket is junk."** Refuted, in the repo's own docs and
-  memory. **561 of 689 null items (81.4%) are recoverable real ragas**; only 126
-  (18.3%) are junk.
+- **"`phone_mic`'s high-pass will strip the fundamental."** Refuted — **zero**
+  no-contour failures in all 517 windows.
+- **"The 72.8 CV harness was never committed."** Wrong. `-S` over source is a
+  test for a literal, not for a capability.
+- **"The source-disjointness penalty won't explode at a wider tier."** Refuted —
+  4.7 pp at 54 classes.
+- **"More audio per class is weakly contradicted (r = 0.066)."** Refuted; that r
+  was range-restricted.
+- **"The within-class curve will be flatter, +6 to +12 pp."** Refuted — **+18.4**.
+- **"The coverage/accuracy trade will peak in the middle."** Refuted — it peaks
+  at the widest tier measured.
+- **"Ārabhi is an alias bug."** Refuted — it is absent from the vocabulary
+  entirely. A missing raga, not a missing spelling.
+- **"The null alias bucket is junk."** Refuted — 81.4% are recoverable ragas.
+- **"Fusion's advantage will shrink or reverse at a wide tier; band [−2.0, +1.4]
+  pp."** *New today.* **Refuted at +1.84 pp, p = 0.0011** — and refuted as a
+  *trend*, not a point: fusion helps more at every wider tier (+1.16 / +1.21 /
+  +1.84). The stated mechanism was backwards; fusion's biggest gains are
+  Hindōḷaṁ +12.5 pp and Śrīranjani +9.5 pp, exactly the gamaka-and-phrase classes
+  I predicted the marginal pitch histogram would be useless on.
+- **"Gate 2 will pass."** *New today.* Refuted — and the registered contingency
+  ("that disagreement is a more important finding than anything else in this
+  job") is what actually happened. See §2c-i.
 
-### Two errors of process worth not repeating
+### Three errors of process worth not repeating
 
-- **Two workhorses died on session limits mid-run.** Both were recoverable
-  *only* because their briefs demanded partial results on disk and
-  prereg-before-score. **Keep demanding both.**
-- **The verifier must not take the workhorse at face value.** On 2026-08-13 the
-  workhorse reported r(accuracy at cap 10, gain from tripling data) = −0.777,
-  p = 1.5e-04, and concluded the fetch should be *targeted at weak classes*. The
-  correlation reproduces to three decimals. **The inference is regression to the
-  mean**: gain is `acc@30 − acc@10` and `acc@10` sits on both sides of it,
-  measured on a noisy 10-track draw. Bhairavi "20.0% → 70.0%" is the tell — a
-  50-point gain for a class that simply sits at 70%. Regressed on the noise-free
-  endpoint the signal vanishes (r = −0.114, p = 0.65) and splitting on it
-  *reverses* the direction. **Fetch broadly, not targeted.**
+- **Two workhorses died on session limits mid-run.** Both recoverable *only*
+  because their briefs demanded partial results on disk and prereg-before-score.
+  **Keep demanding both.**
+- **The verifier must not take the workhorse at face value.** On 2026-08-13 a
+  workhorse reported r = −0.777 between a class's accuracy and what more data
+  buys it and concluded the fetch should be *targeted at weak classes*. The
+  correlation reproduces; **the inference is regression to the mean**, because
+  `gain = acc@30 − acc@10` carries `acc@10` on both sides. Regressed on the
+  noise-free endpoint the signal vanishes. **Fetch broadly, not targeted.**
+- **The verifier must not take *itself* at face value either.** *New today.* The
+  fetch recount initially found reachable-audio-versus-gain at Spearman −0.531,
+  p = 0.023, and reachable-versus-accuracy@10 at r = +0.556, p = 0.017 — and I
+  nearly published "the audio that exists is the audio that buys least" on that.
+  It is **the same trap**, one step removed. On `acc@30` it falls to p = 0.10 and
+  is not significant. The published finding is the *concentration* (10 classes at
+  zero, 41 under five), which is set-membership arithmetic with no model in it.
 
 ---
 
 ## 5. The next step
 
-In cost order. Items 1 and 2 are pure engineering; item 3 is the one that needs
-a human in a concert hall.
+Items 1 and 2 are the live ones. **Item 2 is the top unblocked engineering job.**
 
-1. **Measure the 11 long-form concerts.** *This is now the top item and the data
-   landed today.* Deepti recorded **11 concerts, her own audio**, converted to
-   mp3 on 2026-08-13 by `scripts/convert_long_concerts.sh` — 44.1 kHz stereo
-   192 kbps, matching both her own `long_concert_6.mp3` and the existing
-   `data/concert_audio` corpus, so nothing downstream sees a new audio regime.
-   **10 converted, 0 failed**, every output's duration exact against its source
-   and every file re-decoded end to end without error.
+1. **Measure the 11 long-form concerts. BLOCKED ON DEEPTI'S LABELS.**
+   Still the only unmeasured cell in the product case: every wild clip on disk is
+   43-85 s, the concert-companion thesis rests on 10-30 minute items, and that
+   region has never been tested on *wild* audio.
 
-   | file | duration | size | | file | duration | size |
-   |---|---|---|---|---|---|---|
-   | `long_concert_1.mp3` | 26.8 min | 38M | | `long_concert_7.mp3` | 44.8 min | 62M |
-   | `long_concert_2.mp3` | 32.5 min | 46M | | `long_concert_8.mp3` | 34.7 min | 48M |
-   | `long_concert_3.mp3` | 91.6 min | 129M | | `long_concert_9.mp3` | 37.1 min | 52M |
-   | `long_concert_4.mp3` | 44.2 min | 62M | | `long_concert_10.mp3` | 31.5 min | 44M |
-   | `long_concert_5.mp3` | 113.8 min | 161M | | `long_concert_11.mp3` | 66.4 min | 97M |
-   | `long_concert_6.mp3` | 67.5 min | 96M | | **total** | **9.85 h** | **831M** |
+   **Done today:** the audio has a home at `data/long_concerts/audio/`
+   (gitignored) and is **frozen** at `data/long_concerts/FROZEN_CONCERTS.json` —
+   per-file sha256, byte length, ffprobe duration, committed before any scoring
+   harness or preregistration exists. All eleven are byte-identical to their
+   `~/Downloads` copies and every duration reproduces the conversion table.
+   `scripts/long_concert_freeze.py --verify` re-checks and exits non-zero on any
+   mismatch.
 
-   **Currently in `~/Downloads`, not in the repo.** They need a home — do not
-   drop them into `~/sung_tests`, which is the short-clip wild set and whose
-   composition is load-bearing for six committed measurements. Give them their
-   own directory. `long_concert_9` came from a `.MOV`; sources total 8.1 GB and
-   are Deepti's to delete.
+   **What is needed:** Deepti fills `data/long_concerts/LABELS.tsv` — one row per
+   item: concert, start time, raga. The item ends where the next starts, so no
+   end times are typed. `scripts/long_concert_labels.py --validate` checks it
+   with no model in the loop and reports, never summed together: items excluded
+   as `ragamalika`/`unsure`, items whose raga **is** in the corpus vocabulary,
+   and items whose raga is **not** — that last count is the **out-of-vocabulary
+   rate measured on concerts a real listener attended**, which is worth as much
+   as the accuracy number given §2a.
 
-   **This is the only unmeasured cell in the entire product case.** Every wild
-   clip previously on disk is 43-85 s. The concert-companion thesis rests on
-   10-30 minute items and the duration curve says that region is 68.8-71.0% on
-   *clean* audio — never tested on *wild* audio. **Do it with the same
-   discipline as `data/raga_wild/`:** hash and freeze the clip list and the
-   labels *before* any prediction exists, commit the preregistration as its own
-   commit before the scoring harness, and get Deepti to label the items (she is
-   the ground truth; her audit of the 29-clip wild set found exactly the two
-   errors the doc had flagged and confirmed the rest).
+   **Deliberately not done:** no preregistration, no harness, no prediction. The
+   prereg must fix the model, the windowing and the read-outs and be committed
+   before the harness. It was correct to wait: the tier moved today, so a prereg
+   written this morning would have registered a model that no longer exists.
+   **Write it once the labels are in, against `raga_v4`.**
 
-   Note these are **whole concerts**, not single items — they will need
-   segmentation into items, or a windowed read-out, before they are comparable
-   to anything. Decide and register that *before* scoring, not after.
+2. **Build the abstain gate, with a genuinely held-out set. THE TOP UNBLOCKED
+   JOB.** It got more valuable today, not less: a 54-class model that speaks
+   about 79% of the repertoire needs to know when to shut up, and §4.9/§4.10 just
+   established that **the tier is the wrong place to buy that safety** — it buys
+   it only by refusing to answer on 61% of the repertoire, silently and
+   unconditionally, including on the classes it would have got right.
 
-2. **Retrain the raga model at `min_tracks = 10` and admit every class.** Zero
-   new data, zero dollars, hours not days. **+60% correct answers per concert,
-   measured source-disjoint.** Drop only Nāṭakurinji, Janaranjani and
-   Haṁsānandi. Do **not** add a per-class admission threshold (§4.9). Expect the
-   incumbent 18 classes to pay 3.5 pp (McNemar exact p = 0.0096) — that is real,
-   significant, and small; most of the aggregate fall is composition, not damage
-   (the added tracks themselves run at 47.2%).
-
-3. **Raise the fetch target above 30.** The within-class curve came back **+18.4
-   pp with no saturation**, which was the condition this job was waiting on.
-   ~13 GB more disk, a few hours of melodia at 5 workers, free archive.org.
-   **Fetch broadly, not targeted at weak classes** (§4, second process error).
-   Recount reachable audio first — 1,712 is an optimistic ceiling.
-
-4. **Fix the eight live wrong merges in `data/raga_aliases.json`.** These need no
-   musical adjudication; they are mistakes. `'AbEri' -> 'Sāvēri'` is the exact
-   mechanism behind one of Deepti's two wild-set label corrections. Do it in a
-   commit of its own, with regression tests, and understand that it invalidates
-   the provenance of measurements that read the file — so decide the tier work
-   first. Full list in `data/RAGA_MERGE_DECISIONS.md`.
-
-5. **Build the abstain gate, with a genuinely held-out set.** The wild failures
-   are bimodal: on the 27 audited clips the miss ranks are
+   The wild failures are bimodal: on the 27 audited clips the miss ranks are
    `[2, 2, 2, 4, 5, 5, 21, 22, 25, 28, 30]` out of 32 — six near-misses and
    **five catastrophes**, including `vAtApi gaNapathim` (Hamsadhvāni, the most
-   famous concert opener in the repertoire) at rank 25. Thresholding the fused
-   top-1 probability at p ≥ 0.20 fires on 63% of clips at 76.5% top-1 and drops
-   four of the five catastrophes. **That threshold was chosen by reading the
-   table on the same 27 clips it is scored on — it is a hypothesis, not a
-   result.** The admission experiment showed exactly this class of inflation is
-   worth 4.4 pp at matched coverage. Fit the threshold on data the score never
-   sees. What admission *does* buy is precision, not hits (57.0% → 63.8%
-   accuracy-when-it-speaks at 79.2% → 62.2% coverage) — that is this axis, and
-   it should be built here rather than smuggled into the tier.
+   famous concert opener in the repertoire) at rank 25. Thresholding fused top-1
+   probability at p ≥ 0.20 fires on 63% of clips at 76.5% top-1 and drops four of
+   five catastrophes. **That threshold was chosen by reading the table on the
+   same 27 clips it is scored on — it is a hypothesis, not a result**, and the
+   admission experiment measured exactly this class of inflation at **4.4 pp**.
+   Fit it on data the score never sees; the nested pattern in
+   `scripts/raga_coverage_admission.py` is the template. What this axis buys is
+   **precision, not hits** (57.0% → 63.8% accuracy-when-it-speaks at 79.2% →
+   62.2% coverage).
 
-6. **Build what Jon actually asked for.** Raga name + raga character + sahitya
+3. **Build what Jon actually asked for.** Raga name + raga character + sahitya
    meaning, on long-form audio, with abstention as the guard against lying. Half
-   his question — *what does the melody mean* — needs no ASR, no CSI, no Qmax,
-   and has never been attempted. **Do not start with composition ID.**
+   his question needs no ASR, no CSI, no Qmax, and has never been attempted.
+   **Do not start with composition ID.**
+
+4. **Re-measure the field against `raga_v4`.** The 59.3% wild number is
+   18-class `raga_v3`. The 54-class model puts far more wild clips in scope
+   (62.1% of labelled `~/sung_tests` clips against 28.2%) and **nothing says what
+   its field accuracy on them would be.** Cheap: the harness is
+   `scripts/raga_wild_*.py` and the clip set is frozen. **Do not touch
+   `FROZEN_CLIPS.json`.**
+
+5. **Measure the tier × duration interaction.** The duration curve is 18-class;
+   the model is now 54-class. A companion working on minute-scale audio at 54
+   classes has **no measurement at all** in this repo. This is the largest hole
+   left in the raga case and item 1 would close much of it.
+
+6. **The fetch, re-scoped.** §2f killed the broad top-up. What survives:
+   **185 off-tier pairs attach to ragas *below* `min_tracks = 10`** — classes the
+   model cannot name at all today. Given that the thesis is a vocabulary
+   constraint, that is a **vocabulary lever, not a depth lever**, and whether it
+   brings any class over the line is unmeasured and cheap to check offline.
+   Do that before fetching anything.
 
 7. **Only then, features.** No feature work is justified while the model cannot
    name 40-60% of what it hears.
 
 Also open, unowned, cheap: `vAtApi gaNapathim__Hamsadhvāni` at rank 25 of 32 is
-not a near-miss-shaped failure — something specific went wrong on **one clip**
-and it is one clip to inspect. And **catalog restriction** in `load_targets`
-remains the one untested cheap lever on the lyrics side; deprioritised four
-times, still not in the graveyard, honest expectation is precision up and recall
-flat.
+not a near-miss-shaped failure — something specific went wrong on **one clip**.
+And **catalog restriction** in `load_targets` remains the one untested cheap
+lever on the lyrics side; deprioritised five times, still not in the graveyard,
+honest expectation is precision up and recall flat.
 
 ---
 
 ## 6. Pending Deepti — do not decide these for her
 
-1. **Push the branch / open a PR.** 42 commits, none pushed. Her call. Pushes and
-   deploys are always hers.
-2. **Delete the source `.mp4`/`.MOV` files in `~/Downloads`** after checking the
-   mp3s. The conversion script never deletes a source; that is deliberate.
-3. **Label the 11 long concerts** — item, raga, and (if segmenting) rough
-   timings. Nothing in §5.1 can be scored without this.
-4. **Four raga-equivalence rulings**, three answered on 2026-08-13 and recorded
-   in `data/RAGA_MERGE_DECISIONS.md`. **Recorded, deliberately NOT applied.**
-   One is still open: **Udayaravicandrika / Śuddhadhanyāsi** was asked and not
-   answered. It has no threshold consequence, so nothing is blocked.
-5. **Nine low-confidence rows, one low-confidence variant and two ambiguous
+1. **Push the branch / open a PR.** 53 commits, none pushed. Pushes and deploys
+   are always hers.
+2. **Label the 11 long concerts** — `data/long_concerts/LABELS.tsv`. **Nothing in
+   §5.1 can be scored without this**, and it is the only unmeasured cell in the
+   product case. Partial is fine and useful.
+3. **Delete the source `.mp4`/`.MOV` files in `~/Downloads`** (8.1 GB). The
+   mp3s are verified byte-identical to the copies now in the repo, so the
+   `~/Downloads` mp3s are redundant too. Nothing here deletes a source.
+4. **Wire `raga_v4` into the product?** It is a candidate only.
+   `identify_clip.py` is untouched and has zero diff against `main`. Wiring it
+   changes 32 classes to 54 and requires the fused front end.
+5. **`'garuDadhwani' -> 'Śuddadhanyāsi'` in `data/raga_aliases.json`.** Looks like
+   the same class of wrong merge as the ten repaired today and its sibling
+   `garuDadwani` is `null`, but unlike them it asserts a *specific different
+   raga* rather than being a typo of an already-null name, so repairing it is a
+   musical claim. A test pins its current value so it cannot be closed silently.
+6. **One raga-equivalence ruling still open:** Udayaravicandrika /
+   Śuddhadhanyāsi. No threshold consequence, so nothing is blocked.
+7. **Nine low-confidence rows, one low-confidence variant and two ambiguous
    rows** in `data/raga_aliases_audit.json` (filter `"confidence": "low"`).
-6. **Hindustani imports as product policy**, not musical fact: 31 items
-   (Bhīmpalās 8, Durgā 6, Gauḍ Malhār 3, Jhinjhōṭi 3, …), all attached to
-   Carnatic artists on Carnatic-vocal concert pages, so repertoire rather than
-   noise. Does "concert companion" cover every item on a programme, or only core
-   elaborated Carnatic ragas?
-7. **Back up `asr_cache_fullhistory/`** — local-only and gitignored. If deleted,
+8. **Hindustani imports as product policy**, not musical fact: 31 items
+   (Bhīmpalās 8, Durgā 6, Gauḍ Malhār 3, …), all attached to Carnatic artists on
+   Carnatic-vocal concert pages. Does "concert companion" cover every item on a
+   programme, or only core elaborated Carnatic ragas?
+9. **Back up `asr_cache_fullhistory/`** — local-only and gitignored. If deleted,
    `DEVICE_MAP.md` becomes unfalsifiable.
-8. **Wire the registry junk blocklist** (a load-time merge in `load_targets`).
-9. **Do NOT fund:** the rendition corpus, tonic-estimation work, prospective long
-   OOC audio, the 28-clip short-OOC sentinel, or anything on the composition
-   path.
+10. **Wire the registry junk blocklist** (a load-time merge in `load_targets`).
+11. **Do NOT fund:** the rendition corpus, tonic-estimation work, prospective long
+    OOC audio, the 28-clip short-OOC sentinel, or anything on the composition
+    path.
 
 ---
 
@@ -436,31 +465,34 @@ flat.
 This is the part to copy, not the numbers.
 
 - **Preregister, and commit the prereg as its own commit before the scoring
-  harness exists.** Every audit in this series did it. Ordering lives in git
-  history, not in file mtimes. (The Qmax audit rests on mtimes because it was
-  committed late; that is the weakest link in the set.)
+  harness exists.** Every audit in this series did it, including today's tier
+  job (`eb1278d` before `a7eb0dc`).
 - **Gate on reproducing the historical number first, on the exact integer
-  counts.** The raga audit returned 377/518 and 439/518 — the *same integers* —
-  so every delta afterwards was measured against the original measurement rather
-  than an approximation of it. The coverage sweep went further: its default run
-  rewrote `data/raga_audit/levels.json` and `git diff` on it came back **empty**,
-  proving the parameterisation was behaviour-preserving and not merely
-  number-preserving.
-- **Fix the interpretation table in the brief before the number exists.**
-- **Freeze the tunable that could launder the result**, and say in the brief that
-  touching it voids the run rather than improving it.
-- **Write predictions down so they can be refuted.** Eight were, this month.
+  counts** — and prefer the *strong* form: the tier job's Gate 1 required
+  `git diff` on `data/raga_audit/results.json` to come back empty, and the entire
+  diff was four `fit_seconds` lines. That proves the parameterisation is
+  behaviour-preserving, not merely number-preserving.
+- **When a gate fails, stop and diagnose it.** Today's Gate 2 failed by 4 tracks.
+  Chasing it produced exact agreement between two harnesses *and* a measured
+  noise floor for the whole series. Register in advance what a gate failure
+  means, so the temptation to wave it through never arises.
+- **Fix the interpretation table in the brief before the number exists**, and fix
+  the tie-break too. Today's tier decision was a near-tie and the rule "ties go
+  to admitting everything" had been written down first.
+- **Write predictions down so they can be refuted.** Ten have been, this month;
+  two of the four registered today were wrong.
 - **Separate "produced no output" from "produced a wrong output"** and never sum
   them into one percentage.
-- **The verifier re-derives every headline with its own code.** It has caught a
-  wrong premise of its own once and a regression-to-the-mean inference once.
+- **The verifier re-derives every headline with its own code, and distrusts its
+  own findings as hard as a workhorse's.** It has now caught regression to the
+  mean twice — once in a workhorse's inference and once in its own.
 - **Coverage × accuracy, not accuracy.** A companion right 72.8% of the time
-  about 39.1% of what it hears is worse than one right 57.0% of the time about
-  79.2% of it. Nobody computed this for a month and a half, and it inverted the
-  conclusion when they did.
+  about 39.1% of what it hears is worse than one right 59.2% of the time about
+  79.2% of it.
 - **Selection on the folds you then score on inflates by ~4.4 pp.** Measured, not
-  assumed. Nested selection or an explicit "optimistic bound" label — never a
-  quiet in-sample number.
+  assumed. Nested selection or an explicit "optimistic bound" label.
+- **A named list is not a threshold.** Dropping three classes by name after the
+  tier rule is auditable; a threshold sweep is a tuning knob and it is dead.
 
 ---
 
@@ -469,39 +501,40 @@ This is the part to copy, not the numbers.
 - **`venv_train`** py3.11 — demucs, essentia, whisper, rapidfuzz, **pytest**.
   **`venv`** py3.14 — sklearn, librosa, mirdata, scipy, **no pytest**.
   essentia must run in `venv_train`, **fork not spawn**.
-- **Never run bare `pytest tests/`.** Run the three named files (§2f).
+- **Never run bare `pytest tests/`.** Run the four named files (§2g).
 - **ffmpeg 8.1.2 IS installed** at `/opt/homebrew/bin/ffmpeg`. The "no local
   ffmpeg" lines in `ARCHITECTURE.md`, `HANDOFF_CLIP_ID.md` §3 and
   `augment_wild.py:21` are **stale**.
-- `codex` CLI 0.145.0 at `/opt/homebrew/bin/codex`. Non-interactive:
+- `codex` CLI 0.145.0. Non-interactive:
   `codex exec --sandbox workspace-write --skip-git-repo-check "<prompt>"`.
-  Give it a brief on disk and tell it to read the brief; do not inline the job.
-- **Zsh eats `"` inside `git commit -m`** when the message contains quoted
-  phrases. Use `git commit -F -` with a heredoc. Zsh also fails on unmatched
-  globs (`ls data/raga_v3*` → "no matches found") — quote or guard them.
-- `data/raga_aliases.json`: 958 keys → 274 null. **Never trust registry `ragas`
-  metadata without it, and never trust it without `data/raga_aliases_audit.json`.**
+  Give it a brief on disk and tell it to read the brief.
+- **Zsh eats `"` inside `git commit -m`.** Use `git commit -F -` with a heredoc.
+  Zsh also fails on unmatched globs — quote or guard them.
+- **Logs are gitignored** (`*.log`). The series tracks them anyway; use
+  `git add -f data/<dir>/*.log`.
+- `data/raga_aliases.json`: 958 keys → **284 null** (was 274 before today's
+  repair). **Never trust registry `ragas` metadata without it, and never trust it
+  without `data/raga_aliases_audit.json`.**
 - The composition registry contains junk rows — addresses and dates parsed as
-  compositions. Never trust registry raga metadata without a raga-vocabulary
-  check.
-- Melodia runs **~13× realtime**; the domain cells took ~400 s each at 5 workers,
-  6× faster than the single-threaded estimate.
-- **Billing:** a 30-day no-billing window is in force. Submits are gated on
-  `CARNATIFY_BILLING_OK=1`. There is no GEMINI key locally. archive.org is free;
-  Colab Pro T4 has been used for GPU work (`colab_coverhunter.py`,
-  `colab_duration_probe.py`).
+  compositions.
+- Melodia runs **~13× realtime**; ~400 s per domain cell at 5 workers.
+- The fused 2×2 at 54 classes is **~90 s per tier** on this machine. Cheap. The
+  matrix build is the slow part and it is cached at
+  `data/raga_coverage/matrix.npz` and `data/raga_audit/tdms_cache.npz`.
+- **Billing:** a 30-day no-billing window is in force. Submits gated on
+  `CARNATIFY_BILLING_OK=1`. No GEMINI key locally. archive.org is free; Colab
+  Pro T4 has been used for GPU work.
 - **Production deploys are Deepti-run** — the permission classifier blocks them
   from an agent seat. Never keep the Space mirror in `/tmp`.
-- **Synth clips must never enter `~/sung_tests`.** That directory is the wild
-  set and its purity is load-bearing.
+- **Synth clips must never enter `~/sung_tests`.** Its purity is load-bearing.
 
 ### The agent roster and how seats collaborate
 
-- **Verifier seat** (Opus 5) — owns briefs, prereg discipline, and re-derivation
-  of every headline. Does not take a workhorse at face value.
+- **Verifier seat** (Opus 5) — owns briefs, prereg discipline, re-derivation of
+  every headline. Does not take a workhorse at face value, or itself.
 - **Workhorse seats** (Opus 5, GPT-5.6 / codex) — execute a brief on disk.
 - Seats collaborate **only through files on disk and `AGENT_LOG.md`**, never
-  through chat. A brief goes on disk; the agent is told to read the brief.
+  through chat.
 - Deepti also launches workhorses by hand in a separate terminal. **Assume
   concurrent repo work at all times.**
 - Briefs must demand: prereg-before-score, partial results to disk after every
@@ -512,11 +545,12 @@ This is the part to copy, not the numbers.
 
 ## 9. The one-line version, if you read nothing else
 
-**The composition path is dead. The raga path works in the field at 59.3% on
-60-second clips, wild audio costs nothing, and the binding constraint is that the
-model cannot name 40-60% of what a listener hears. Two independent levers are
-measured, real, and stack: more classes is free (+60% correct answers per
-concert, retrain only), and more audio per class is worth +18.4 pp with no
-saturation in sight. Eleven long-form concerts just landed and are the only
-unmeasured cell in the entire product case — measure them first, and freeze
-before you predict.**
+**The composition path is dead. The raga model was graduated today to 54 classes,
+fused, and exported as `models/raga_v4_*` — 46.86 expected correct answers per
+100 concert items against 39.12 for the tier the product ships, source-disjoint,
+from a retrain on data already on disk. The free lever is now spent: the second
+lever, more audio per class, is real (+18.4 pp, no saturation) but the audio does
+not exist — 193 reachable tracks in the tier, not 1,712, and the metadata is
+exhausted. So the two live jobs are the abstain gate, which is what actually buys
+safety, and the eleven long-form concerts, which are frozen and waiting only on
+Deepti's labels and are still the only unmeasured cell in the product case.**

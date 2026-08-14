@@ -4849,3 +4849,61 @@ admission is not the lever the earlier section suggested. Scope is unchanged:
 full-recording, corpus-against-itself, TDMS-only primary arm; graduates nothing;
 says nothing about the lyrics-ASR, Qmax or CSI paths. **The verdict on what to
 fund belongs to the verifier seat.**
+
+---
+
+## 2026-08-13 — verifier seat: tier graduation, alias repair, fetch recount
+
+Four of `handoff.md` §5's seven next-steps moved in one session. Full write-ups
+in `data/RAGA_TIER_GRADUATION.md` and `data/RAGA_FETCH_RECOUNT.md`.
+
+**§5.1 long concerts — frozen, blocked on labels.** The 11 concerts (9.85 h) got
+a home at `data/long_concerts/audio/` and a freeze record committed before any
+prediction exists: per-file sha256, byte length, ffprobe duration. All eleven
+byte-identical to their `~/Downloads` copies; every duration reproduces the
+conversion table. `LABELS.tsv` and a model-free validator are ready for Deepti.
+No prereg written, deliberately — the tier moved the same day, so one written
+that morning would have registered a model that no longer exists.
+
+**§5.2 tier graduation — done, and the answer changed.** Not the script run the
+handoff described: every coverage-curve number is TDMS-only and the exported
+model is fused, so the job was a 2×2. Result: **fused, 54 classes, admit
+everything. 46.86 expected hits/100 against 39.12 for the shipped tier.**
+
+**§5.4 alias repair — done, ten keys not eight.** Every repaired key had sibling
+spellings already mapping to `null`, so the repair was bookkeeping rather than
+adjudication; 23 regression tests encode that invariant. Found a tenth key the
+audit missed (`'navasrasa kannaDA'`). Left `'garuDadhwani'` flagged for Deepti
+because it asserts a different raga rather than being a typo.
+
+**§5.3 fetch recount — done, and it re-prices the job severely.** 193 reachable
+in-tier tracks against the 1,712 ceiling, and both metadata fetchers run to
+exhaustion returned zero additional mp3s. Ten of 54 classes have no reachable
+audio at all.
+
+### Predictions refuted
+
+- **"Fusion's advantage shrinks or reverses at a wide tier, band [−2.0, +1.4] pp."**
+  Refuted at **+1.84 pp, p = 0.0011**, and refuted as a trend rather than a point:
+  +1.16 / +1.21 / +1.84 at 18 / 32 / 54 classes. The stated mechanism was
+  backwards — fusion's biggest gains are Hindōḷaṁ +12.5 pp and Śrīranjani +9.5 pp,
+  exactly the gamaka-and-phrase classes I said the marginal pitch histogram would
+  be useless on.
+- **"Gate 2 will pass."** Refuted. The registered contingency — that a Gate 2
+  failure would matter more than anything else in the job — is what happened, and
+  chasing it produced exact agreement between the two harnesses plus a measured
+  **+0.35 pp** noise floor for the whole audit series.
+- **"The three-class drop lands in 44.9–45.6 expected hits."** Direction
+  confirmed (it does not clear the bar), band refuted — fusion lifted the whole
+  table.
+
+### The process error worth recording
+
+I nearly published "the reachable audio is the audio that buys least" on
+Spearman −0.531, p = 0.023. It is **the same regression-to-the-mean trap** this
+log recorded against a workhorse eleven days ago, one step removed: `gain` carries
+`acc@10` on both sides. On the noise-free endpoint it falls to p = 0.10 and is not
+significant at n = 18. What got published is the concentration — 10 classes at
+zero reachable, 41 under five — which is set-membership arithmetic with no model
+in it. **The verifier has now caught this twice, once in a workhorse and once in
+itself.**
