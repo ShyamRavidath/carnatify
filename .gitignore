@@ -123,3 +123,7 @@ data/duration_probe/**/*.wav
 # The meta and the label encoder ARE tracked, as they are for raga_v3.
 /models/raga_v4_tdms_rf.pkl
 /models/raga_v4_hist_rf.pkl
+
+# Test pollution: tests/test_raga.py trains a checkpoint into models/.
+# Harmless, but it should not show up as an untracked file after a test run.
+/models/test_raga_tmp.pt
