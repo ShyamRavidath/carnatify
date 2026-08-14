@@ -1,0 +1,29 @@
+{
+ "committed": {
+  "top1": 649,
+  "top3": 812,
+  "n": 1139
+ },
+ "arms": [
+  {
+   "label": "replicated (3 rows/track)",
+   "n_rows": 3417,
+   "n_tracks": 1139,
+   "top1": 653,
+   "top3": 816,
+   "top1_rate": 0.5733099209833187
+  },
+  {
+   "label": "deduplicated (1 row/track)",
+   "n_rows": 1139,
+   "n_tracks": 1139,
+   "top1": 649,
+   "top3": 812,
+   "top1_rate": 0.5697980684811238
+  }
+ ],
+ "tdms_identical_within_track": true,
+ "row_multiplicity_explains_gate2": true,
+ "delta_top1_replicated_minus_committed": 4,
+ "delta_top1_dedup_minus_committed": 0
+}

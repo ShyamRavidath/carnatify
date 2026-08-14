@@ -1,0 +1,11 @@
+54 classes, 1139 tracks, 3417 rows (3.00 rows/track), 204 level-(c) groups
+
+  TDMS vectors identical within a track (50 sampled): True
+
+  replicated (3 rows/track)          rows  3417  tracks 1139  top-1 653/1139 = 57.331%  top-3 816
+  deduplicated (1 row/track)         rows  1139  tracks 1139  top-1 649/1139 = 56.980%  top-3 812
+
+committed (levels harness, 1 row/track): 649/1139 and 812
+row multiplicity explains the Gate 2 gap: YES
+
+wrote /Users/shyamravidath/carnatify/data/raga_tier/gate2_diagnosis.json

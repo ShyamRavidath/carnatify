@@ -116,3 +116,10 @@ data/duration_probe/**/*.wav
 # of mp3. The freeze record, the labels and the scripts ARE tracked; the audio is
 # not. Sources are her .mp4/.MOV in ~/Downloads.
 /data/long_concerts/audio/
+
+# Graduated wide-tier raga model (2026-08-13, data/RAGA_TIER_GRADUATION.md).
+# The forests are 1.2 GB and are regenerable in ~7 min by
+#   venv/bin/python train_raga_v3_tdms.py --min-tracks 10 --out-prefix raga_v4
+# The meta and the label encoder ARE tracked, as they are for raga_v3.
+/models/raga_v4_tdms_rf.pkl
+/models/raga_v4_hist_rf.pkl

@@ -1,0 +1,20 @@
+
+=== min>=20: 32 classes ===
+    min20: fold 0 done (10s)
+    min20: fold 1 done (19s)
+    min20: fold 2 done (28s)
+    min20: fold 3 done (38s)
+    min20: fold 4 done (47s)
+  tdms   top-1  532/826=64.407% top-3 77.240% cov 59.6% exp hits 38.40
+  fused  top-1  542/826=65.617% top-3 76.271% cov 59.6% exp hits 39.12
+
+=== min>=25: 18 classes ===
+    min25: fold 0 done (5s)
+    min25: fold 1 done (9s)
+    min25: fold 2 done (14s)
+    min25: fold 3 done (19s)
+    min25: fold 4 done (24s)
+  tdms   top-1  375/518=72.394% top-3 82.819% cov 39.1% exp hits 28.29
+  fused  top-1  381/518=73.552% top-3 83.591% cov 39.1% exp hits 28.75
+
+wrote data/raga_tier/posthoc_min20_min25.json

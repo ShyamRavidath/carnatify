@@ -248,10 +248,19 @@ def build_groups(M):
 # --------------------------------------------------------------------------
 # The frozen tier, and per-level n
 # --------------------------------------------------------------------------
-def frozen_tier(y, tid):
-    """min_tracks >= 25 on LEVEL-(a) track counts. Frozen; never re-tuned."""
+def frozen_tier(y, tid, min_tracks: int = MIN_TRACKS):
+    """min_tracks >= 25 on LEVEL-(a) track counts. Frozen; never re-tuned.
+
+    2026-08-13 (`data/raga_tier/PREREGISTRATION.md`): the tier constant is now
+    reachable as an argument so the fused arm can be measured at a tier other
+    than its default, exactly as `scripts/raga_audit_levels.py` was
+    parameterised for the coverage sweep. **The default is unchanged**, so
+    `raga_audit_score.py`'s bare run is byte-identical — that is Gate 1, and it
+    is verified by `git diff` on `data/raga_audit/results.json` coming back
+    empty, not by the headline reproducing.
+    """
     ntr = {r: len(set(tid[y == r])) for r in set(y)}
-    return sorted(r for r, k in ntr.items() if k >= MIN_TRACKS), ntr
+    return sorted(r for r, k in ntr.items() if k >= min_tracks), ntr
 
 
 def level_stats(y, groups, keep_ragas, n_splits=N_SPLITS):
