@@ -1,43 +1,193 @@
-# Long-concert item labels — Deepti fills this in. One row per ITEM.
+# Long-concert item labels.
 #
-#   concert     file stem, e.g. long_concert_3   (do not rename)
-#   start       when the item STARTS, mm:ss or h:mm:ss. The item ends where the
-#               next one starts, so you never type an end time. Use the last row
-#               of a concert for whatever runs to the finish.
-#   raga        raga name, any spelling you like. If an item is a ragamalika or
-#               you are not sure, write ragamalika / unsure and it is excluded
-#               rather than counted wrong.
-#   item        composition name if you know it, otherwise anything ("alapana",
-#               "thani", "viruttam"). Never scored — it is for reading the
-#               results table afterwards.
-#   confidence  high / medium / low. Only `high` rows are in the primary
-#               read-out; the rest are reported beside it and never merged in.
+# ONE ROW PER SONG. Each concert has MANY songs, so each concert gets MANY rows
+# — that is the whole point of this file. Blank rows are already laid out under
+# each concert heading below; just type into them. Add more rows if a concert
+# has more songs than there are blanks, delete the ones you do not use.
+#
+# WORKED EXAMPLE — this is what one concert with four songs looks like:
+#
+#   concert         start   raga          item                confidence  notes
+#   long_concert_1  0:00    Nata          jagadanandakaraka   high
+#   long_concert_1  9:20    Kalyani       alapana + nidhi     high        long alapana
+#   long_concert_1  31:05   ragamalika    viruttam            medium      excluded
+#   long_concert_1  38:40   Sindhubhairavi  thillana          low         noisy, unsure
+#
+# Four rows, one concert. The 2nd song runs 9:20 -> 31:05 because the next row
+# starts there. You never type an end time.
+#
+# COLUMNS
+#   concert     file stem, already filled in. Do not rename.
+#   start       when the song STARTS, mm:ss or h:mm:ss. The song ends where the
+#               next row starts; the last row of a concert runs to the finish.
+#   raga        any spelling you like. If a song is a ragamalika, or you are not
+#               sure, write `ragamalika` or `unsure` — it is then EXCLUDED
+#               rather than counted wrong. That is always better than guessing.
+#   item        song name if you know it, otherwise anything at all ("alapana",
+#               "thani", "viruttam", "the fast one"). NEVER scored — it only
+#               makes the results table readable afterwards.
+#   confidence  high / medium / low. Only `high` rows go in the primary result;
+#               medium and low are reported beside it and never merged in.
 #   notes       anything. Applause, tuning, a false start, a mic problem.
 #
-# Rows starting with # are ignored. Order within a concert must be by start time.
-# Leave a concert's seed row alone and add rows under it if you have not done
-# that concert yet — an unfilled concert is dropped, not guessed at.
+# RULES
+#   * Rows starting with # are ignored.
+#   * Within a concert, rows must be in increasing start-time order.
+#   * A row with an empty `raga` is ignored completely — leftover blanks are
+#     fine and cost nothing.
+#   * A concert with no ragas filled in is DROPPED, not guessed at. Doing three
+#     concerts properly is worth more than eleven done vaguely.
+#
+# Check your work any time (it never edits this file):
+#   venv_train/bin/python scripts/long_concert_labels.py --validate
 
 concert	start	raga	item	confidence	notes
-# long_concert_1: 26.8 min total
+
+# ---- long_concert_1  (26.8 min) --------------------------------
 long_concert_1	0:00				
-# long_concert_2: 32.5 min total
+long_concert_1					
+long_concert_1					
+long_concert_1					
+long_concert_1					
+long_concert_1					
+long_concert_1					
+
+# ---- long_concert_2  (32.5 min) --------------------------------
 long_concert_2	0:00				
-# long_concert_3: 91.6 min total
+long_concert_2					
+long_concert_2					
+long_concert_2					
+long_concert_2					
+long_concert_2					
+long_concert_2					
+long_concert_2					
+
+# ---- long_concert_3  (91.6 min) --------------------------------
 long_concert_3	0:00				
-# long_concert_4: 44.2 min total
+long_concert_3					
+long_concert_3					
+long_concert_3					
+long_concert_3					
+long_concert_3					
+long_concert_3					
+long_concert_3					
+long_concert_3					
+long_concert_3					
+long_concert_3					
+long_concert_3					
+long_concert_3					
+long_concert_3					
+long_concert_3					
+long_concert_3					
+long_concert_3					
+long_concert_3					
+
+# ---- long_concert_4  (44.2 min) --------------------------------
 long_concert_4	0:00				
-# long_concert_5: 113.8 min total
+long_concert_4					
+long_concert_4					
+long_concert_4					
+long_concert_4					
+long_concert_4					
+long_concert_4					
+long_concert_4					
+long_concert_4					
+long_concert_4					
+
+# ---- long_concert_5  (113.8 min) --------------------------------
 long_concert_5	0:00				
-# long_concert_6: 67.5 min total
+long_concert_5					
+long_concert_5					
+long_concert_5					
+long_concert_5					
+long_concert_5					
+long_concert_5					
+long_concert_5					
+long_concert_5					
+long_concert_5					
+long_concert_5					
+long_concert_5					
+long_concert_5					
+long_concert_5					
+long_concert_5					
+long_concert_5					
+long_concert_5					
+long_concert_5					
+long_concert_5					
+long_concert_5					
+
+# ---- long_concert_6  (67.5 min) --------------------------------
 long_concert_6	0:00				
-# long_concert_7: 44.8 min total
+long_concert_6					
+long_concert_6					
+long_concert_6					
+long_concert_6					
+long_concert_6					
+long_concert_6					
+long_concert_6					
+long_concert_6					
+long_concert_6					
+long_concert_6					
+long_concert_6					
+long_concert_6					
+long_concert_6					
+
+# ---- long_concert_7  (44.8 min) --------------------------------
 long_concert_7	0:00				
-# long_concert_8: 34.7 min total
+long_concert_7					
+long_concert_7					
+long_concert_7					
+long_concert_7					
+long_concert_7					
+long_concert_7					
+long_concert_7					
+long_concert_7					
+long_concert_7					
+
+# ---- long_concert_8  (34.7 min) --------------------------------
 long_concert_8	0:00				
-# long_concert_9: 37.1 min total
+long_concert_8					
+long_concert_8					
+long_concert_8					
+long_concert_8					
+long_concert_8					
+long_concert_8					
+long_concert_8					
+long_concert_8					
+
+# ---- long_concert_9  (37.1 min) --------------------------------
 long_concert_9	0:00				
-# long_concert_10: 31.5 min total
+long_concert_9					
+long_concert_9					
+long_concert_9					
+long_concert_9					
+long_concert_9					
+long_concert_9					
+long_concert_9					
+long_concert_9					
+
+# ---- long_concert_10  (31.5 min) -------------------------------
 long_concert_10	0:00				
-# long_concert_11: 66.4 min total
+long_concert_10					
+long_concert_10					
+long_concert_10					
+long_concert_10					
+long_concert_10					
+long_concert_10					
+long_concert_10					
+
+# ---- long_concert_11  (66.4 min) -------------------------------
 long_concert_11	0:00				
+long_concert_11					
+long_concert_11					
+long_concert_11					
+long_concert_11					
+long_concert_11					
+long_concert_11					
+long_concert_11					
+long_concert_11					
+long_concert_11					
+long_concert_11					
+long_concert_11					
+long_concert_11					
+long_concert_11					

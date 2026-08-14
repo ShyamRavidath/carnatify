@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 """Generate the long-concert labeling template, and validate it once filled.
 
-`--template` writes `data/long_concerts/LABELS.tsv` with one seed row per frozen
-concert. Deepti fills it in; every other row is added by her.
+`--template` writes `data/long_concerts/LABELS.tsv`. **Each concert holds many
+songs and therefore many rows**, so the template lays out 7-20 blank song rows
+under each concert heading, scaled by that concert's length, plus a worked
+four-song example in the header. The first version of this template wrote a
+single row per concert; that visually contradicted its own "one row per item"
+instruction and left nowhere to type, which is exactly the confusion it caused.
 
 `--validate` is the gate. It checks only things that are checkable without any
 model: monotone non-decreasing start times inside each concert, every start
@@ -16,8 +20,12 @@ out-of-vocabulary for scoring. Both counts are reported.
 Validation writes `data/long_concerts/labels_validation.json` and never edits
 `LABELS.tsv`.
 
+A row with an empty `raga` is an unused blank, not a mistake: it is skipped
+silently and its missing start time is not reported. A concert whose rows are all
+blank is "not yet done" and is dropped rather than guessed at.
+
 Usage:
-    venv_train/bin/python scripts/long_concert_labels.py --template
+    venv_train/bin/python scripts/long_concert_labels.py --template [--force]
     venv_train/bin/python scripts/long_concert_labels.py --validate
 """
 from __future__ import annotations
@@ -38,25 +46,48 @@ CACHE = ROOT / 'data' / 'raga_v2_cache'
 COLUMNS = ['concert', 'start', 'raga', 'item', 'confidence', 'notes']
 
 HEADER = """\
-# Long-concert item labels — Deepti fills this in. One row per ITEM.
+# Long-concert item labels.
 #
-#   concert     file stem, e.g. long_concert_3   (do not rename)
-#   start       when the item STARTS, mm:ss or h:mm:ss. The item ends where the
-#               next one starts, so you never type an end time. Use the last row
-#               of a concert for whatever runs to the finish.
-#   raga        raga name, any spelling you like. If an item is a ragamalika or
-#               you are not sure, write ragamalika / unsure and it is excluded
-#               rather than counted wrong.
-#   item        composition name if you know it, otherwise anything ("alapana",
-#               "thani", "viruttam"). Never scored — it is for reading the
-#               results table afterwards.
-#   confidence  high / medium / low. Only `high` rows are in the primary
-#               read-out; the rest are reported beside it and never merged in.
+# ONE ROW PER SONG. Each concert has MANY songs, so each concert gets MANY rows
+# — that is the whole point of this file. Blank rows are already laid out under
+# each concert heading below; just type into them. Add more rows if a concert
+# has more songs than there are blanks, delete the ones you do not use.
+#
+# WORKED EXAMPLE — this is what one concert with four songs looks like:
+#
+#   concert         start   raga          item                confidence  notes
+#   long_concert_1  0:00    Nata          jagadanandakaraka   high
+#   long_concert_1  9:20    Kalyani       alapana + nidhi     high        long alapana
+#   long_concert_1  31:05   ragamalika    viruttam            medium      excluded
+#   long_concert_1  38:40   Sindhubhairavi  thillana          low         noisy, unsure
+#
+# Four rows, one concert. The 2nd song runs 9:20 -> 31:05 because the next row
+# starts there. You never type an end time.
+#
+# COLUMNS
+#   concert     file stem, already filled in. Do not rename.
+#   start       when the song STARTS, mm:ss or h:mm:ss. The song ends where the
+#               next row starts; the last row of a concert runs to the finish.
+#   raga        any spelling you like. If a song is a ragamalika, or you are not
+#               sure, write `ragamalika` or `unsure` — it is then EXCLUDED
+#               rather than counted wrong. That is always better than guessing.
+#   item        song name if you know it, otherwise anything at all ("alapana",
+#               "thani", "viruttam", "the fast one"). NEVER scored — it only
+#               makes the results table readable afterwards.
+#   confidence  high / medium / low. Only `high` rows go in the primary result;
+#               medium and low are reported beside it and never merged in.
 #   notes       anything. Applause, tuning, a false start, a mic problem.
 #
-# Rows starting with # are ignored. Order within a concert must be by start time.
-# Leave a concert's seed row alone and add rows under it if you have not done
-# that concert yet — an unfilled concert is dropped, not guessed at.
+# RULES
+#   * Rows starting with # are ignored.
+#   * Within a concert, rows must be in increasing start-time order.
+#   * A row with an empty `raga` is ignored completely — leftover blanks are
+#     fine and cost nothing.
+#   * A concert with no ragas filled in is DROPPED, not guessed at. Doing three
+#     concerts properly is worth more than eleven done vaguely.
+#
+# Check your work any time (it never edits this file):
+#   venv_train/bin/python scripts/long_concert_labels.py --validate
 """
 
 
@@ -96,17 +127,43 @@ def corpus_vocabulary() -> dict[str, str]:
     return vocab
 
 
-def write_template() -> None:
+def blank_rows_for(duration_s: float) -> int:
+    """How many blank song rows to lay out under a concert heading.
+
+    A Carnatic concert runs roughly one item per 7-8 minutes once alapana,
+    thani and viruttam are counted separately, so scale with length and leave
+    slack. These are only blanks — extras are ignored and more can be added.
+    """
+    return int(min(20, max(6, round(duration_s / 60 / 6) + 3)))
+
+
+def write_template(force: bool = False) -> None:
     frozen = json.loads(FROZEN.read_text())
-    if LABELS.exists():
-        sys.exit(f'{LABELS} already exists — refusing to overwrite labels.')
+    if LABELS.exists() and not force:
+        sys.exit(f'{LABELS} already exists — refusing to overwrite labels. '
+                 f'Pass --force only if you are certain nothing is filled in.')
     lines = [HEADER, '\t'.join(COLUMNS)]
+    total_blanks = 0
     for c in frozen['concerts']:
         stem = c['file'].rsplit('.', 1)[0]
-        lines.append(f"# {stem}: {c['duration_s']/60:.1f} min total")
+        mins = c['duration_s'] / 60
+        n = blank_rows_for(c['duration_s'])
+        total_blanks += n
+        lines.append('')
+        lines.append(f'# ---- {stem}  ({mins:.1f} min) '
+                     f'{"-" * max(4, 46 - len(stem))}')
+        # first row pre-seeded at 0:00 because a concert almost always has
+        # something at the very start; the rest are wholly blank.
         lines.append('\t'.join([stem, '0:00', '', '', '', '']))
+        for _ in range(n - 1):
+            lines.append('\t'.join([stem, '', '', '', '', '']))
     LABELS.write_text('\n'.join(lines) + '\n')
-    print(f'wrote {LABELS} — {len(frozen["concerts"])} seed rows')
+    print(f'wrote {LABELS}')
+    print(f'  {len(frozen["concerts"])} concerts, {total_blanks} blank song rows '
+          f'laid out ({blank_rows_for(frozen["concerts"][0]["duration_s"])}-'
+          f'{max(blank_rows_for(c["duration_s"]) for c in frozen["concerts"])} '
+          f'per concert, scaled by length)')
+    print('  add more rows if a concert has more songs; leftover blanks are ignored')
 
 
 def validate(labels: Path = LABELS, out: Path = OUT) -> int:
@@ -115,6 +172,7 @@ def validate(labels: Path = LABELS, out: Path = OUT) -> int:
     dur = {c['file'].rsplit('.', 1)[0]: c['duration_s'] for c in frozen['concerts']}
 
     rows, errors, warnings = [], [], []
+    n_blank = [0]
     for ln, raw in enumerate(LABELS_.read_text().splitlines(), 1):
         if not raw.strip() or raw.lstrip().startswith('#'):
             continue
@@ -128,8 +186,15 @@ def validate(labels: Path = LABELS, out: Path = OUT) -> int:
         if r['concert'] not in dur:
             errors.append(f'line {ln}: unknown concert {r["concert"]!r}')
             continue
+        # A row with no raga carries no label. It is an unused blank from the
+        # template, not a mistake — ignore it silently and do not complain about
+        # its missing start time.
+        if not r['raga']:
+            n_blank[0] += 1
+            continue
         if r['start_s'] is None:
-            errors.append(f'line {ln}: unparseable start {r["start"]!r}')
+            errors.append(f'line {ln}: {r["raga"]!r} has no start time — '
+                          f'every labelled song needs one')
             continue
         if r['start_s'] > dur[r['concert']]:
             errors.append(f'line {ln}: start {r["start"]} past end of '
@@ -150,9 +215,6 @@ def validate(labels: Path = LABELS, out: Path = OUT) -> int:
             errors.append(f'{concert}: start times are not in increasing order')
         if len(set(starts)) != len(starts):
             errors.append(f'{concert}: duplicate start times')
-        if all(not r['raga'] for r in rs):
-            unfilled.append(concert)
-            continue
         for i, r in enumerate(rs):
             end = rs[i + 1]['start_s'] if i + 1 < len(rs) else dur[concert]
             length = end - r['start_s']
@@ -183,8 +245,10 @@ def validate(labels: Path = LABELS, out: Path = OUT) -> int:
     oov = [i for i in scorable if not i['in_corpus_vocabulary']]
     high = [i for i in in_vocab if i['confidence'] == 'high']
 
+    unfilled = sorted(set(dur) - set(by_concert))
     report = {
-        'n_concerts_labelled': len(by_concert) - len(unfilled),
+        'n_concerts_labelled': len(by_concert),
+        'n_blank_rows_ignored': n_blank[0],
         'unfilled_concerts': unfilled,
         'n_items': len(items),
         'n_excluded_ragamalika_or_unsure': len(items) - len(scorable),
@@ -199,8 +263,10 @@ def validate(labels: Path = LABELS, out: Path = OUT) -> int:
     }
     out.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
 
-    print(f'concerts labelled     {report["n_concerts_labelled"]}/11'
-          + (f'  (unfilled: {", ".join(unfilled)})' if unfilled else ''))
+    print(f'concerts labelled     {report["n_concerts_labelled"]}/{len(dur)}'
+          + (f'  (not yet done: {", ".join(unfilled)})' if unfilled else ''))
+    print(f'blank rows ignored    {report["n_blank_rows_ignored"]}  '
+          f'(unused template rows — harmless)')
     print(f'items                 {report["n_items"]}')
     print(f'  excluded            {report["n_excluded_ragamalika_or_unsure"]}'
           '  (ragamalika / unsure)')
@@ -221,12 +287,14 @@ def validate(labels: Path = LABELS, out: Path = OUT) -> int:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument('--template', action='store_true')
+    ap.add_argument('--force', action='store_true',
+                    help='overwrite an existing LABELS.tsv')
     ap.add_argument('--validate', action='store_true')
     ap.add_argument('--labels', type=Path, default=LABELS)
     ap.add_argument('--out', type=Path, default=OUT)
     args = ap.parse_args()
     if args.template:
-        write_template()
+        write_template(args.force)
     elif args.validate:
         sys.exit(validate(args.labels, args.out))
     else:

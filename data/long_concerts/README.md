@@ -41,8 +41,33 @@ It exits non-zero on any mismatch and never edits the frozen record.
 
 ## What is needed from Deepti
 
-**Fill in `LABELS.tsv`.** One row per item: which concert, when it starts, what
-raga. The item ends where the next one starts, so no end times are ever typed.
+**Fill in `LABELS.tsv`.**
+
+**Each of these recordings contains MANY songs, so each concert gets MANY rows.**
+One row per song: which concert, when it starts, what raga. The song ends where
+the next row starts, so no end times are ever typed.
+
+The file already lays out blank rows under each concert heading — **7 to 20 of
+them, scaled by the concert's length** — so there is somewhere to type. Add more
+rows if a concert has more songs than there are blanks; leftover blanks are
+ignored completely and cost nothing.
+
+```
+concert         start   raga            item                confidence  notes
+long_concert_1  0:00    Nata            jagadanandakaraka   high
+long_concert_1  9:20    Kalyani         alapana + nidhi     high        long alapana
+long_concert_1  31:05   ragamalika      viruttam            medium      excluded
+long_concert_1  38:40   Sindhubhairavi  thillana            low         noisy, unsure
+```
+
+Four rows, one concert. The second song runs 9:20 → 31:05 because the next row
+starts there.
+
+**A song you are unsure about is not a problem — write `unsure` or `ragamalika`
+and it is excluded rather than counted wrong.** Guessing is the only thing that
+would damage the measurement. Likewise, doing three concerts properly is worth
+more than eleven done vaguely: a concert with no ragas filled in is dropped, not
+guessed at.
 
 ```
 venv_train/bin/python scripts/long_concert_labels.py --validate
