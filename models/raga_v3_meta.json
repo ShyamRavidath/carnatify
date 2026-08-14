@@ -43,5 +43,13 @@
     "Śrīranjani",
     "Ṣanmukhapriya"
   ],
-  "cv_note": "TDMS-only, grouped 5-fold track-level 2026-07-08: min>=25 72.8/84.7, min>=20 67.6/79.4; fused (this model) at min>=25: 75.7/84.2; source-disjoint 2026-07-30: TDMS-only 72.2/84.0, fused 73.6/83.6"
+  "cv_note": "See \"measured\" above. Source: data/RAGA_TIER_GRADUATION.md, registered at data/raga_tier/PREREGISTRATION.md, harness scripts/raga_tier_score.py. DO NOT substitute a level-(a) or TDMS-only figure here: the level-(a) penalty is tier-dependent (0.6 pp at 18 classes, 3.5 pp at 32, 4.7 pp at 54) and this is a fused model, so the previous \"min>=25 72.8/84.7, min>=20 67.6/79.4\" line was wrong on both counts. That error is recorded in handoff.md §2c-i. SUPERSEDED as a product candidate by models/raga_v4_* (54 classes, 46.86 expected hits/100); raga_v3 is kept unchanged because data/RAGA_WILD_MEASUREMENT.md, data/RAGA_DURATION_CURVE.md and data/RAGA_DOMAIN_DECOMPOSITION.md all scored against these exact forests.",
+  "measured": {
+    "classes": 32,
+    "top1": 0.6562,
+    "top3": 0.7627,
+    "coverage": 0.5962,
+    "expected_hits_per_100": 39.12
+  },
+  "measurement_protocol": "FUSED (P = 0.6*P_tdms + 0.4*P_hist), track-level, level (c) SOURCE-DISJOINT, StratifiedGroupKFold(5, shuffle, seed 42) over archive-item / Saraga-concert groups with the artist merge. expected_hits_per_100 = repertoire coverage x top-1, where coverage is the share of the 3,009 canonical-raga-carrying programme items in data/scraped_compositions.json whose raga this tier can emit."
 }
