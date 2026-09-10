@@ -38,11 +38,16 @@ class FeatureExtractor:
     def extract(self, audio: NDArray[np.float32], sr: int) -> AudioFeatures:
         """Run the full extraction pipeline on a mono audio clip."""
         audio = np.asarray(audio, dtype=np.float32)
+        if audio.ndim != 1 or sr <= 0 or not np.isfinite(audio).all():
+            raise ValueError("expected finite mono audio and a positive sample rate")
 
         tonic_hz = self._detect_tonic(audio, sr)
         pitch_contour = self._extract_pitch_contour(audio, sr)
         normalized = self._normalize_pitch_contour(pitch_contour, tonic_hz)
-        pcd = self._compute_pitch_class_distribution(normalized)
+        pcd = self._compute_pitch_class_distribution(
+            normalized, voiced_mask=(pitch_contour > 0) & np.isfinite(pitch_contour)
+            & (np.isfinite(tonic_hz) and tonic_hz > 0)
+        )
         beat_times, onset_times = self._detect_beats(audio, sr)
 
         duration = float(audio.size) / sr if sr else 0.0
@@ -63,7 +68,7 @@ class FeatureExtractor:
         if HAS_ESSENTIA:
             try:
                 resampled = self._resample_for_essentia(audio, sr)
-                tonic = es.TonicIndianArtMusic()(resampled)
+                tonic = es.TonicIndianArtMusic(sampleRate=self.sample_rate)(resampled)
                 if tonic and np.isfinite(tonic) and tonic > 0:
                     return float(tonic)
             except Exception:
@@ -71,12 +76,16 @@ class FeatureExtractor:
         return self._detect_tonic_librosa(audio, sr)
 
     def _detect_tonic_librosa(self, audio: NDArray[np.float32], sr: int) -> float:
-        """Fallback tonic detection: median of the voiced pyin pitch track."""
-        contour = self._pyin_contour(audio, sr)
-        voiced = contour[contour > 0]
-        if voiced.size == 0:
-            return 0.0
-        return float(np.median(voiced))
+        """No validated librosa tonic fallback exists for this feature contract.
+
+        Median sung pitch varies with the phrase and is not adhara shadjam.
+        Retain the method name for compatibility, but never turn that statistic
+        into an apparently valid tonic when Essentia is absent or fails.
+        """
+        raise RuntimeError(
+            'Tonic estimation unavailable or failed; a median pitch is not a '
+            'validated tonic. Check the Essentia tonic estimator and input audio.'
+        )
 
     def _extract_pitch_contour(
         self, audio: NDArray[np.float32], sr: int
@@ -86,7 +95,8 @@ class FeatureExtractor:
             try:
                 resampled = self._resample_for_essentia(audio, sr)
                 pitch, _ = es.PredominantPitchMelodia(
-                    hopSize=self.hop_size, frameSize=self.frame_size
+                    hopSize=self.hop_size, frameSize=self.frame_size,
+                    sampleRate=self.sample_rate,
                 )(resampled)
                 contour = np.asarray(pitch, dtype=np.float32)
                 contour[~np.isfinite(contour)] = 0.0
@@ -131,16 +141,22 @@ class FeatureExtractor:
         return normalized
 
     def _compute_pitch_class_distribution(
-        self, normalized_contour: NDArray[np.float32]
+        self, normalized_contour: NDArray[np.float32],
+        voiced_mask: NDArray[np.bool_] | None = None,
     ) -> NDArray[np.float32]:
         """12-bin pitch-class histogram from a cents contour, normalized to sum to 1.
 
         Each voiced frame is folded into one of 12 semitone bins (mod octave).
-        Unvoiced frames (value == 0, the silent baseline) are excluded.
+        Pass the Hz contour's voicing mask to distinguish tonic Sa (0 cents)
+        from silence. The mask-free form retains the historical convention.
         """
         pcd = np.zeros(12, dtype=np.float32)
         normalized_contour = np.asarray(normalized_contour, dtype=np.float32)
-        voiced = normalized_contour != 0
+        voiced = (normalized_contour != 0 if voiced_mask is None
+                  else np.asarray(voiced_mask, dtype=bool))
+        if voiced.shape != normalized_contour.shape:
+            raise ValueError("voiced_mask must match the contour shape")
+        voiced = voiced & np.isfinite(normalized_contour)
         if not np.any(voiced):
             return pcd
         semitones = normalized_contour[voiced] / 100.0
