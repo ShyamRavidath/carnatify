@@ -1,12 +1,20 @@
 # Carnatify
 
+> September 2026 overhaul: a separate, reproducible **candidate** pipeline now
+> runs end to end. It has not replaced the deployed models and does not establish
+> state-of-the-art performance. See the [current audit](ARCHITECTURE_AUDIT_2026-09-08.md)
+> and [current evidence / execution log](OVERHAUL_EXECUTION.md). No additional
+> manual labeling is required by this workflow; existing labels are preserved.
+
 A Carnatic music identification and enrichment app: given a live recording or an archival clip, it identifies the raga (melodic framework) and the specific composition being performed, and surfaces the composition's lyrics and an English meaning. Built for concert-goers and students of Carnatic music who don't recognize what's being sung in real time.
 
 Carnatic performance is inherently variable — the same composition, in the same raga, sounds different across artists (tonic, tempo, gamaka ornamentation), and improvised passages (alapana) have no fixed melody at all. Shazam-style acoustic fingerprinting fails on this outright, and static raga-reference apps don't listen to anything. Carnatify instead extracts the predominant pitch contour, normalizes it by the estimated tonic, and matches on that normalized representation — matching the actual structure of the genre rather than the raw waveform.
 
 ## What's actually working vs. what's still research
 
-This project has an ML core with three sub-tasks, each at a different stage of maturity. Numbers below are measured, not aspirational:
+The table below describes the historical deployed stack, not the new candidate.
+Its measurements use different cohorts and must not be directly compared with
+the newer matched benchmarks.
 
 | Module | Status | Measured performance |
 |---|---|---|
@@ -15,7 +23,70 @@ This project has an ML core with three sub-tasks, each at a different stage of m
 | **Tala (rhythmic cycle) detection** | Not shipped | Unsupervised beat-tracking + cycle-periodicity approaches topped out at 32.9% (vs. a 72% majority-class baseline of always guessing Ādi) across 170 Saraga tracks — concluded not viable without supervised training on cycle annotations. Excluded from the API and the frontend; not a claimed feature. |
 | **Lyrics & meaning** | Shipping (demo-scale) | 3,252 composition titles seeded from performance metadata; meanings are generated on-demand via Gemini and cached. A small number are pre-generated as a fallback for HuggingFace Spaces' ephemeral filesystem — most titles generate a meaning on first request rather than serving a pre-baked one. |
 
-The honest read: this is a working, deployed research prototype that proves the pitch-contour-matching approach is sound, with raga classification as the open problem (data-bound, not modeling-bound — see below) and tala detection abandoned as not tractable with the unsupervised methods tried.
+This remains a research prototype. The audit found both data problems and
+implementation defects; the evidence does not justify attributing all errors
+to dataset size alone. Unsupervised tala experiments were unsuccessful.
+
+### Reproducible candidate workflow
+
+Use the existing Python 3.11 training environment. Core package versions are
+recorded in [constraints-overhaul.txt](constraints-overhaul.txt), which is not
+a complete cross-platform lock file. Preparation currently requires the local
+archive contour caches, CompMusic reference data, and Saraga metadata/audio.
+The audio-event model is fetched separately by
+`scripts/fetch_audio_event_model.py`; its dependencies stay isolated.
+
+```sh
+venv_train/bin/python scripts/carnatify_pipeline.py data-prep --run data/overhaul/example_run
+venv_train/bin/python scripts/carnatify_pipeline.py feature-extract --run data/overhaul/example_run
+venv_train/bin/python scripts/carnatify_pipeline.py train --run data/overhaul/example_run
+venv_train/bin/python scripts/carnatify_pipeline.py evaluate --run data/overhaul/example_run
+venv_train/bin/python scripts/carnatify_pipeline.py infer --run data/overhaul/example_run --audio data/long_concerts/audio/long_concert_1.mp3 --output data/overhaul/example_run/concert.json
+```
+
+Use a new run directory for a new experiment. Inference uses bounded audio reads,
+tonic-relative melody features, automatic segment proposals, and a versioned
+composition reference index. Raga and composition identities remain unverified
+candidates: production rejection calibration and reliable item boundaries are
+not established. No candidate is automatically deployed or used as evaluation
+ground truth.
+
+An experimental pitch-activity detector can be selected explicitly for inference
+with `--pitch-activity-model data/overhaul/pitch_activity_expanded_exact/model.joblib`.
+It requires its matching training report beside the artifact and remains off by
+default. Its activity-boundary results are development diagnostics, not raga or
+song accuracy. No additional human labeling is needed to run this candidate.
+
+The completed reference-expansion experiment is available explicitly, without
+changing defaults. With the existing broader-model and full-catalog artifacts:
+
+```sh
+venv_train/bin/python scripts/carnatify_pipeline.py infer --run data/overhaul/broader --audio data/long_concerts/audio/long_concert_1.mp3 --output data/overhaul/broader/concert_song_experiment.json --window-s 180 --composition-window-s 180 --composition-catalog data/overhaul/compmusic_compositions_full_unique.npz --composition-raga-prior
+```
+
+`--silence-bounded-context` is a separate experimental inference option. It
+caps raga and song queries at detected near-digital silence, including a
+conservative interior-energy check for resampling edge transients, and adds
+query anchors when silence ends to preserve coverage. It does not
+recognize semantic song boundaries, and noisy pauses may not be detected.
+It remains off by default; longer context can span different items.
+Scanning all 9.85 hours of the frozen natural recordings found only one
+110-second muted region. This option is not a general natural song-boundary
+detector, despite its improvement on the silence-separated synthetic fixture.
+
+The song preference uses the selected model's estimated raga on the exact song
+query, only above its existing development confidence gate. It never uses an
+annotated query raga. This configuration scored 37/53 answerable song queries
+(37/181 overall) in development; rejection still failed, so outputs remain
+unverified candidates, not recognized identities.
+
+Matched results: the combined model scored 71/108 known-raga Saraga clips versus
+62/108 for a rebuilt strong RF; the artist-cluster confidence interval on the
+gain includes zero. A frozen, size-limited Saraga AV test scored 19/29 versus
+17/29. Song retrieval scored 19/27 across independent-artist renditions, but
+open-set rejection remains weak. These are distinct tasks/cohorts, not one
+production accuracy number. Later ablations and limitations are recorded in
+the execution log.
 
 ## Architecture
 
@@ -47,7 +118,7 @@ carnatify/
 MediaRecorder (browser) → POST /predict-audio
   → Demucs htdemucs (vocal separation, two-stems)
   → librosa.pyin (pitch extraction, 60-1000 Hz)
-  → tonic = median of voiced F0
+  → Essentia tonic on the exact first 60s of mixed audio; fail explicitly if unavailable
   → 480-dim tonic-normalized histogram + bigram/trigram features
   → RandomForest (raga) + L2-distance catalog lookup (composition), run concurrently
   → {raga: [...], matches: [...]}
