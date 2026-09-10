@@ -134,6 +134,10 @@ class RagaTrainer:
 
         history["checkpoint_path"] = str(checkpoint_path)
         if val_dataset is not None:
+            if history["best_epoch"]:
+                self.model.load_state_dict(torch.load(
+                    checkpoint_path, map_location=self.device, weights_only=True
+                ))
             history["confusion_matrix"] = self._confusion_matrix(val_dataset)
         return history
 

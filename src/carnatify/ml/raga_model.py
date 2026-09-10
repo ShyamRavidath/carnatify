@@ -67,6 +67,7 @@ class _RagaModelMixin:
         self.eval()  # type: ignore[attr-defined]
         encoder = label_encoder or getattr(self, "label_encoder", None)
         x = self._input_tensor(features)
+        x = x.to(next(self.parameters()).device)
         logits = self(x)  # type: ignore[operator]
         probs = F.softmax(logits, dim=-1).squeeze(0).cpu().numpy()
         return _topk_predictions(probs, encoder, top_k)
@@ -77,7 +78,7 @@ class _RagaModelMixin:
         torch.save(self.state_dict(), path)  # type: ignore[attr-defined]
 
     def load(self, path: str | Path, map_location: str = "cpu") -> None:
-        state = torch.load(Path(path), map_location=map_location)
+        state = torch.load(Path(path), map_location=map_location, weights_only=True)
         self.load_state_dict(state)  # type: ignore[attr-defined]
 
 

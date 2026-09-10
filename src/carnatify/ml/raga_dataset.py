@@ -172,7 +172,10 @@ class Compose:
 def default_augmentation(mode: str = "pcd") -> Compose:
     """A reasonable default augmentation pipeline for the given feature mode."""
     if mode == "pcd":
-        return Compose([PitchShiftPCD(), AddGaussianNoise(std=0.01)])
+        # These bins are already relative to Sa. Rotating them changes the
+        # scale while retaining its label; a joint audio+tonic transposition
+        # would leave this representation unchanged.
+        return Compose([AddGaussianNoise(std=0.01)])
     if mode == "contour":
         return Compose([PitchShiftContour(), AddGaussianNoise(std=2.0)])
     raise ValueError(f"Unknown feature mode: {mode!r}")

@@ -1,5 +1,11 @@
 """Sklearn-compatible feature extraction for the raga classifier.
 
+LEGACY ARTIFACT CONTRACT: repeated-index bigram/trigram updates below preserve
+the presence-like features used by existing pickles. They are not frequency
+counts. New training must use carnatify.ml.melody_features, which counts repeated
+transitions correctly and preserves time/voicing. Do not change these vectors
+without retraining and versioning the consuming model.
+
 Shared between train_raga.py (training) and predict_raga() (inference) so
 the feature pipeline is always identical. Three feature groups concatenated:
 
