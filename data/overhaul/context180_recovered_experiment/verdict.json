@@ -1,0 +1,668 @@
+{
+  "status": "paired development comparison; not a fresh test, not production evidence",
+  "prereg": "data/overhaul/CANDIDATE_VERDICT_PREREG.md",
+  "inputs": {
+    "candidate:kernel_benchmark.json": "9ff9d5a830cb7958718373947af3c6e0d6af9aef1629da90799b9abf1aeb51c1",
+    "candidate:evaluation180.json": "f3bee8c23a967232c8e70c6afd0b0968e5e198c1b782da085e78d9c7e029c0bd",
+    "candidate:folds.json": "02f1a46aa5879c18d99e9258b56f57238d104fa174298c7ae11caaeafdab8300",
+    "candidate:manifest.json": "9f19a5f9c1600967ebd385def773e2b2e85ff13fd5f98db632891d8b950201c6",
+    "candidate:model_sha256": "f594584402cb2ae35532612e673c194661706fcdfe4b69bbecc69b6d50316e2b",
+    "comparator:kernel_benchmark.json": "cc392569e9f6969e2f903feacab02cd3c6a48fdd77d85932c42872f4a2145b7c",
+    "comparator:evaluation180.json": "816d6bc5305d25ce68a2818dafd66584cc4066cd11103b998146f61f7c0d6d2c",
+    "comparator:folds.json": "7608e42687f5d9371ca29f2a4b729997298f05e7fd244941ce4f9b38e3cb6814",
+    "comparator:manifest.json": "c4e34a3609439c7795017025ebd5e7beb69ecb059a57c5b471ca724746faec89",
+    "comparator:model_sha256": "9de6629ce13442bf04ca4b7a6eac54c898343b3ff0316dc425a1a6aa57ad2458",
+    "corpus": "7ab2e7c3a91f89397e225c63b458f432aaf9ba00402c228126e9bbbd7a0fc056",
+    "script": "ed64f68ebc392b02b7160617da8159d1623fdee59abc0fc36795834f5df4d2ce",
+    "prereg": "473855a5593e714e591d320992c75998c7ce8de710ce1a1dc662175a1a62f4f7"
+  },
+  "candidate": "data/overhaul/context180_recovered_experiment/training",
+  "comparator": "data/overhaul/file_artist_strict_decode",
+  "gate1": "pass",
+  "gate2": {
+    "cv_candidate_correct": 953,
+    "cv_comparator_correct": 855,
+    "cv_wins": 140,
+    "cv_losses": 42,
+    "dev_known_candidate": 102,
+    "dev_known_comparator": 97,
+    "n_tracks": 1243,
+    "n_groups": 133,
+    "n_dev": 184,
+    "n_known": 139,
+    "n_oov": 45,
+    "n_mixed": 8,
+    "n_query_clusters": 17,
+    "reported_summary_candidate": {
+      "context180_recovered_estimated": {
+        "n": 184,
+        "n_in_vocabulary": 139,
+        "n_answered": 184,
+        "correct": 102,
+        "top1_all": 0.5543478260869565,
+        "top1_in_vocabulary": 0.7338129496402878,
+        "top3_in_vocabulary": 0.8489208633093526,
+        "n_accepted": 145,
+        "coverage": 0.7880434782608695,
+        "accepted_precision": 0.6551724137931034,
+        "oov_false_acceptance": 0.6444444444444445
+      },
+      "context180_recovered_annotated": {
+        "n": 184,
+        "n_in_vocabulary": 139,
+        "n_answered": 184,
+        "correct": 97,
+        "top1_all": 0.5271739130434783,
+        "top1_in_vocabulary": 0.697841726618705,
+        "top3_in_vocabulary": 0.841726618705036,
+        "n_accepted": 137,
+        "coverage": 0.7445652173913043,
+        "accepted_precision": 0.7007299270072993,
+        "oov_false_acceptance": 0.4888888888888889
+      }
+    },
+    "reported_summary_comparator": {
+      "strict_decode_estimated": {
+        "n": 184,
+        "n_in_vocabulary": 139,
+        "n_answered": 184,
+        "correct": 97,
+        "top1_all": 0.5271739130434783,
+        "top1_in_vocabulary": 0.697841726618705,
+        "top3_in_vocabulary": 0.8489208633093526,
+        "n_accepted": 90,
+        "coverage": 0.4891304347826087,
+        "accepted_precision": 0.7777777777777778,
+        "oov_false_acceptance": 0.24444444444444444
+      },
+      "strict_decode_annotated": {
+        "n": 184,
+        "n_in_vocabulary": 139,
+        "n_answered": 184,
+        "correct": 94,
+        "top1_all": 0.5108695652173914,
+        "top1_in_vocabulary": 0.6762589928057554,
+        "top3_in_vocabulary": 0.8057553956834532,
+        "n_accepted": 86,
+        "coverage": 0.4673913043478261,
+        "accepted_precision": 0.7674418604651163,
+        "oov_false_acceptance": 0.2
+      }
+    }
+  },
+  "analyses": {
+    "A1_cv_top1_all": {
+      "mean": 0.07884151246983105,
+      "ci95": [
+        0.05694917137674147,
+        0.1019380695283584
+      ],
+      "n": 1243,
+      "n_clusters": 133,
+      "bootstrap": 5000,
+      "candidate_correct": 953,
+      "comparator_correct": 855,
+      "wins": 140,
+      "losses": 42
+    },
+    "A2_cv_top3_all": {
+      "mean": 0.04022526146419952,
+      "ci95": [
+        0.022236397014814478,
+        0.06149142156561799
+      ],
+      "n": 1243,
+      "n_clusters": 133,
+      "bootstrap": 5000,
+      "candidate_correct": 1058,
+      "comparator_correct": 1008,
+      "wins": 76,
+      "losses": 26
+    },
+    "A3_cv_top1_archive": {
+      "mean": 0.09175377468060394,
+      "ci95": [
+        0.06255368942731278,
+        0.12294324413963016
+      ],
+      "n": 861,
+      "n_clusters": 98,
+      "bootstrap": 5000,
+      "candidate_correct": 601,
+      "comparator_correct": 522,
+      "wins": 115,
+      "losses": 36
+    },
+    "A3_cv_top1_compmusic": {
+      "mean": 0.049738219895287955,
+      "ci95": [
+        0.023410502540937322,
+        0.07462901012180473
+      ],
+      "n": 382,
+      "n_clusters": 47,
+      "bootstrap": 5000,
+      "candidate_correct": 352,
+      "comparator_correct": 333,
+      "wins": 25,
+      "losses": 6
+    },
+    "A4_macro_recall": {
+      "candidate": 0.6624927848233898,
+      "comparator": 0.5784229099513625,
+      "delta": 0.08406987487202733,
+      "per_class": {
+        "Cakravākaṁ": {
+          "support": 11,
+          "candidate": 0.45454545454545453,
+          "comparator": 0.8181818181818182,
+          "delta": -0.3636363636363637
+        },
+        "Kuntalavarāḷi": {
+          "support": 5,
+          "candidate": 0.6,
+          "comparator": 0.8,
+          "delta": -0.20000000000000007
+        },
+        "Puṇṇāgavarāḷi": {
+          "support": 13,
+          "candidate": 0.38461538461538464,
+          "comparator": 0.5384615384615384,
+          "delta": -0.1538461538461538
+        },
+        "Kēdāragauḷa": {
+          "support": 14,
+          "candidate": 0.7857142857142857,
+          "comparator": 0.8571428571428571,
+          "delta": -0.0714285714285714
+        },
+        "Śrīranjani": {
+          "support": 21,
+          "candidate": 0.5714285714285714,
+          "comparator": 0.6190476190476191,
+          "delta": -0.04761904761904767
+        },
+        "Sindhubhairavi": {
+          "support": 32,
+          "candidate": 0.8125,
+          "comparator": 0.84375,
+          "delta": -0.03125
+        },
+        "Amṛtavarṣiṇi": {
+          "support": 2,
+          "candidate": 0.0,
+          "comparator": 0.0,
+          "delta": 0.0
+        },
+        "Behāg": {
+          "support": 26,
+          "candidate": 0.8846153846153846,
+          "comparator": 0.8846153846153846,
+          "delta": 0.0
+        },
+        "Cittaranjani": {
+          "support": 3,
+          "candidate": 0.3333333333333333,
+          "comparator": 0.3333333333333333,
+          "delta": 0.0
+        },
+        "Dēvagāndhāri": {
+          "support": 13,
+          "candidate": 0.8461538461538461,
+          "comparator": 0.8461538461538461,
+          "delta": 0.0
+        },
+        "Gauḷa": {
+          "support": 15,
+          "candidate": 0.7333333333333333,
+          "comparator": 0.7333333333333333,
+          "delta": 0.0
+        },
+        "Haṁsānandi": {
+          "support": 14,
+          "candidate": 0.35714285714285715,
+          "comparator": 0.35714285714285715,
+          "delta": 0.0
+        },
+        "Jaganmōhini": {
+          "support": 7,
+          "candidate": 0.14285714285714285,
+          "comparator": 0.14285714285714285,
+          "delta": 0.0
+        },
+        "Kamās": {
+          "support": 30,
+          "candidate": 0.7,
+          "comparator": 0.7,
+          "delta": 0.0
+        },
+        "Karṇāṭaka dēvagāndhāri": {
+          "support": 1,
+          "candidate": 0.0,
+          "comparator": 0.0,
+          "delta": 0.0
+        },
+        "Kedāraṁ": {
+          "support": 6,
+          "candidate": 0.5,
+          "comparator": 0.5,
+          "delta": 0.0
+        },
+        "Kāmavardani": {
+          "support": 36,
+          "candidate": 0.8055555555555556,
+          "comparator": 0.8055555555555556,
+          "delta": 0.0
+        },
+        "Lalita": {
+          "support": 4,
+          "candidate": 0.0,
+          "comparator": 0.0,
+          "delta": 0.0
+        },
+        "Mukhāri": {
+          "support": 23,
+          "candidate": 0.8260869565217391,
+          "comparator": 0.8260869565217391,
+          "delta": 0.0
+        },
+        "Mānḍu": {
+          "support": 3,
+          "candidate": 0.0,
+          "comparator": 0.0,
+          "delta": 0.0
+        },
+        "Māyāmāḷavagauḷa": {
+          "support": 22,
+          "candidate": 0.8636363636363636,
+          "comparator": 0.8636363636363636,
+          "delta": 0.0
+        },
+        "Saurāṣtraṁ": {
+          "support": 7,
+          "candidate": 1.0,
+          "comparator": 1.0,
+          "delta": 0.0
+        },
+        "Sāranga": {
+          "support": 3,
+          "candidate": 0.0,
+          "comparator": 0.0,
+          "delta": 0.0
+        },
+        "Vasanta": {
+          "support": 21,
+          "candidate": 0.47619047619047616,
+          "comparator": 0.47619047619047616,
+          "delta": 0.0
+        },
+        "Śuddadhanyāsi": {
+          "support": 4,
+          "candidate": 0.0,
+          "comparator": 0.0,
+          "delta": 0.0
+        },
+        "Aṭāna": {
+          "support": 36,
+          "candidate": 0.8611111111111112,
+          "comparator": 0.8333333333333334,
+          "delta": 0.02777777777777779
+        },
+        "Mōhanaṁ": {
+          "support": 33,
+          "candidate": 0.8484848484848485,
+          "comparator": 0.8181818181818182,
+          "delta": 0.030303030303030276
+        },
+        "Nāṭa": {
+          "support": 33,
+          "candidate": 0.9090909090909091,
+          "comparator": 0.8787878787878788,
+          "delta": 0.030303030303030276
+        },
+        "Ṣanmukhapriya": {
+          "support": 33,
+          "candidate": 0.7575757575757576,
+          "comparator": 0.7272727272727273,
+          "delta": 0.030303030303030276
+        },
+        "Pūrvīkaḷyāṇi": {
+          "support": 31,
+          "candidate": 1.0,
+          "comparator": 0.967741935483871,
+          "delta": 0.032258064516129004
+        },
+        "Madhyamāvati": {
+          "support": 26,
+          "candidate": 0.6538461538461539,
+          "comparator": 0.6153846153846154,
+          "delta": 0.038461538461538436
+        },
+        "Sāma": {
+          "support": 26,
+          "candidate": 0.8461538461538461,
+          "comparator": 0.8076923076923077,
+          "delta": 0.038461538461538436
+        },
+        "Varāḷi": {
+          "support": 25,
+          "candidate": 0.96,
+          "comparator": 0.92,
+          "delta": 0.039999999999999925
+        },
+        "Hamsadhvāni": {
+          "support": 25,
+          "candidate": 0.68,
+          "comparator": 0.64,
+          "delta": 0.040000000000000036
+        },
+        "Dhanyāsi": {
+          "support": 22,
+          "candidate": 0.8636363636363636,
+          "comparator": 0.8181818181818182,
+          "delta": 0.045454545454545414
+        },
+        "Suraṭi": {
+          "support": 22,
+          "candidate": 0.9545454545454546,
+          "comparator": 0.9090909090909091,
+          "delta": 0.045454545454545525
+        },
+        "Nāṭakurinji": {
+          "support": 18,
+          "candidate": 0.7777777777777778,
+          "comparator": 0.7222222222222222,
+          "delta": 0.05555555555555558
+        },
+        "Tōḍi": {
+          "support": 30,
+          "candidate": 0.9333333333333333,
+          "comparator": 0.8666666666666667,
+          "delta": 0.06666666666666665
+        },
+        "Rītigauḷa": {
+          "support": 26,
+          "candidate": 1.0,
+          "comparator": 0.9230769230769231,
+          "delta": 0.07692307692307687
+        },
+        "Hussēnī": {
+          "support": 12,
+          "candidate": 0.5,
+          "comparator": 0.4166666666666667,
+          "delta": 0.08333333333333331
+        },
+        "Kalyāṇi": {
+          "support": 33,
+          "candidate": 0.9090909090909091,
+          "comparator": 0.8181818181818182,
+          "delta": 0.09090909090909083
+        },
+        "Bēgaḍa": {
+          "support": 22,
+          "candidate": 1.0,
+          "comparator": 0.9090909090909091,
+          "delta": 0.09090909090909094
+        },
+        "Sencuruṭṭi": {
+          "support": 21,
+          "candidate": 0.7619047619047619,
+          "comparator": 0.6666666666666666,
+          "delta": 0.09523809523809523
+        },
+        "Śrī": {
+          "support": 10,
+          "candidate": 0.9,
+          "comparator": 0.8,
+          "delta": 0.09999999999999998
+        },
+        "Śankarābharaṇaṁ": {
+          "support": 29,
+          "candidate": 0.8275862068965517,
+          "comparator": 0.7241379310344828,
+          "delta": 0.10344827586206895
+        },
+        "Kāpi": {
+          "support": 28,
+          "candidate": 0.7857142857142857,
+          "comparator": 0.6785714285714286,
+          "delta": 0.1071428571428571
+        },
+        "Sāvēri": {
+          "support": 28,
+          "candidate": 0.6428571428571429,
+          "comparator": 0.5357142857142857,
+          "delta": 0.1071428571428572
+        },
+        "Dvijāvanti": {
+          "support": 9,
+          "candidate": 0.7777777777777778,
+          "comparator": 0.6666666666666666,
+          "delta": 0.11111111111111116
+        },
+        "Harikāmbhōji": {
+          "support": 27,
+          "candidate": 0.5555555555555556,
+          "comparator": 0.4444444444444444,
+          "delta": 0.11111111111111116
+        },
+        "Janaranjani": {
+          "support": 8,
+          "candidate": 0.375,
+          "comparator": 0.25,
+          "delta": 0.125
+        },
+        "Yadukula kāṁbōji": {
+          "support": 16,
+          "candidate": 0.9375,
+          "comparator": 0.8125,
+          "delta": 0.125
+        },
+        "Ānandabhairavi": {
+          "support": 23,
+          "candidate": 0.9130434782608695,
+          "comparator": 0.782608695652174,
+          "delta": 0.13043478260869557
+        },
+        "Nādanāmakriya": {
+          "support": 7,
+          "candidate": 0.5714285714285714,
+          "comparator": 0.42857142857142855,
+          "delta": 0.14285714285714285
+        },
+        "Karaharapriya": {
+          "support": 29,
+          "candidate": 0.6896551724137931,
+          "comparator": 0.5172413793103449,
+          "delta": 0.1724137931034483
+        },
+        "Hindōḷaṁ": {
+          "support": 17,
+          "candidate": 0.7647058823529411,
+          "comparator": 0.5882352941176471,
+          "delta": 0.17647058823529405
+        },
+        "Nīlāṁbari": {
+          "support": 11,
+          "candidate": 0.2727272727272727,
+          "comparator": 0.09090909090909091,
+          "delta": 0.1818181818181818
+        },
+        "Sahānā": {
+          "support": 22,
+          "candidate": 0.8181818181818182,
+          "comparator": 0.6363636363636364,
+          "delta": 0.18181818181818188
+        },
+        "Kānaḍa": {
+          "support": 26,
+          "candidate": 0.8461538461538461,
+          "comparator": 0.6538461538461539,
+          "delta": 0.1923076923076923
+        },
+        "Bilahari": {
+          "support": 31,
+          "candidate": 0.7741935483870968,
+          "comparator": 0.5806451612903226,
+          "delta": 0.19354838709677413
+        },
+        "Āhiri": {
+          "support": 5,
+          "candidate": 1.0,
+          "comparator": 0.8,
+          "delta": 0.19999999999999996
+        },
+        "Bhairavi": {
+          "support": 32,
+          "candidate": 0.84375,
+          "comparator": 0.625,
+          "delta": 0.21875
+        },
+        "Jōnpuri": {
+          "support": 9,
+          "candidate": 0.4444444444444444,
+          "comparator": 0.2222222222222222,
+          "delta": 0.2222222222222222
+        },
+        "Latāngi": {
+          "support": 13,
+          "candidate": 0.8461538461538461,
+          "comparator": 0.5384615384615384,
+          "delta": 0.3076923076923077
+        },
+        "Bṛndāvana sāranga": {
+          "support": 3,
+          "candidate": 0.3333333333333333,
+          "comparator": 0.0,
+          "delta": 0.3333333333333333
+        },
+        "Vakuḷābharaṇaṁ": {
+          "support": 3,
+          "candidate": 0.6666666666666666,
+          "comparator": 0.3333333333333333,
+          "delta": 0.3333333333333333
+        },
+        "Pūrṇacandrika": {
+          "support": 9,
+          "candidate": 0.5555555555555556,
+          "comparator": 0.2222222222222222,
+          "delta": 0.33333333333333337
+        },
+        "Kāṁbhōji": {
+          "support": 22,
+          "candidate": 0.9090909090909091,
+          "comparator": 0.4090909090909091,
+          "delta": 0.49999999999999994
+        },
+        "Ābhōgi": {
+          "support": 10,
+          "candidate": 0.7,
+          "comparator": 0.2,
+          "delta": 0.49999999999999994
+        },
+        "Maṇirangu": {
+          "support": 6,
+          "candidate": 0.6666666666666666,
+          "comparator": 0.16666666666666666,
+          "delta": 0.5
+        }
+      }
+    },
+    "B1_dev_est_top1_known_single": {
+      "mean": 0.03597122302158273,
+      "ci95": [
+        -0.01680672268907563,
+        0.0857198660714285
+      ],
+      "n": 139,
+      "n_clusters": 17,
+      "bootstrap": 5000,
+      "candidate_correct": 102,
+      "comparator_correct": 97,
+      "wins": 11,
+      "losses": 6
+    },
+    "B1m_dev_est_top1_mixed_only": {
+      "n": 8,
+      "candidate_correct": 0,
+      "comparator_correct": 0,
+      "tracks": [
+        "105_Karuvutranaal_Mudalaaga",
+        "178_Muruga_Muruga_Muruga",
+        "187_Aaniraimekkani",
+        "25_Sanchara_Dhadhara",
+        "52_Geeta_Nayakan",
+        "58_Nera_Nammiti",
+        "85_Chinnanchiru_Kiliye",
+        "90_Vandu_Ketpaar_Illayo"
+      ]
+    },
+    "B2_dev_ann_top1_known_single": {
+      "mean": 0.02158273381294964,
+      "ci95": [
+        -0.0274004021616187,
+        0.07086753783436643
+      ],
+      "n": 139,
+      "n_clusters": 17,
+      "bootstrap": 5000,
+      "candidate_correct": 97,
+      "comparator_correct": 94,
+      "wins": 8,
+      "losses": 5
+    },
+    "B3_dev_est_top3_known_single": {
+      "mean": 0.0,
+      "ci95": [
+        -0.05224862529457973,
+        0.06086956521739131
+      ],
+      "n": 139,
+      "n_clusters": 17,
+      "bootstrap": 5000,
+      "candidate_correct": 118,
+      "comparator_correct": 118,
+      "wins": 5,
+      "losses": 5
+    },
+    "C1_oov_false_accepts": {
+      "n": 45,
+      "candidate": 29,
+      "comparator": 11
+    }
+  },
+  "dev_wins": [
+    "108_Pullum_Silambena_Kan",
+    "119_Shlokam_-_Shivah_Shaktyayukto",
+    "137_Telisi_Rama",
+    "227_Endaro_Mahanubhavulu",
+    "23_Niraimadi_Mugam_Thiruppugazh",
+    "34_Teerthakarayinile",
+    "51_Pavamana_Suthudu_Mangalam",
+    "55_Enadhu_Manam_Kavalai",
+    "72_Ni_Ninaindhal_Aagadhadhu",
+    "78_Rama_Neepai",
+    "87_Pavamana_Suttudu_Pattu"
+  ],
+  "dev_losses": [
+    "139_Mangalam_Avanisutanatha",
+    "179_Chenduril_Nindradum_Kanda",
+    "182_Dinamani_Vamsa",
+    "222_Madhava_Mamava",
+    "225_Seetapati_Namanasuna",
+    "40_Kamakshi"
+  ],
+  "decision": {
+    "rule1_cv_lower_bound_above_zero": true,
+    "rule2_dev_paired_mean_nonnegative": true,
+    "promote_candidate_to_reference": true
+  },
+  "predictions": {
+    "P1_cv_interval_excludes_zero": true,
+    "P2_dev_interval_includes_zero": true,
+    "P3_archive_gain_exceeds_compmusic": true,
+    "P4_annotated_gain_smaller_than_estimated": true
+  },
+  "seed": 42,
+  "bootstrap": 5000
+}
