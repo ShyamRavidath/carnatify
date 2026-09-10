@@ -9,10 +9,10 @@ the classifier was actually trained on:
   * saraga_carnatic            — the raaga vocabulary in its track metadata
 
 Matching strategy, per spelling:
-  1. a hand-coded alias dict for common variants (highest priority), then
-  2. difflib.get_close_matches (cutoff 0.6) on a diacritic-stripped "fold" of
-     both the spelling and every canonical name.
-Unmatched spellings map to None.
+  1. exact diacritic-stripped vocabulary match, then
+  2. an explicit spelling alias whose target exists in the vocabulary.
+Unmatched or ambiguous spellings map to None. Similarity is not equivalence:
+fuzzy matches must never create training labels.
 
 Outputs (no models retrained, lyrics DB untouched):
   * data/scraped_compositions.json — each record gains a ``raga_canonical`` field
@@ -21,7 +21,6 @@ Outputs (no models retrained, lyrics DB untouched):
 
 from __future__ import annotations
 
-import difflib
 import json
 import sys
 import unicodedata
@@ -33,15 +32,13 @@ _ALIASES_OUT = _ROOT / "data" / "raga_aliases.json"
 _COMPMUSIC_MAP = _ROOT / "RagaDataset" / "Carnatic" / "_info_" / "ragaId_to_ragaName_mapping.json"
 _COMPMUSIC_PMR = _ROOT / "RagaDataset" / "Carnatic" / "_info_" / "path_mbid_ragaid.json"
 
-FUZZY_CUTOFF = 0.6
-
 # Hand-curated aliases, keyed by folded ASCII -> canonical display name.
 # Difflib alone is unreliable for Carnatic raga transliterations: genuine
 # spelling variants and *different* ragas overlap across the whole 0.6–0.9
 # similarity band (e.g. "saraswati"~"saramati"=0.82, "hamsanadam"~"hamsanandi"
 # =0.80 are both wrong). So every spelling occurring >= 4 times in the corpus is
 # pinned here by hand. Canonical names use the compmusic/label-encoder spelling
-# where one exists. Less-frequent spellings fall back to fuzzy matching.
+# where one exists. Less-frequent spellings remain unresolved, never guessed.
 _CANONICAL_ALIASES: dict[str, str] = {
     "todi": "Tōḍi",
     "kalyani": "Kalyāṇi",
@@ -52,8 +49,6 @@ _CANONICAL_ALIASES: dict[str, str] = {
     "kamboji": "Kāṁbhōji",
     "kaambhoji": "Kāṁbhōji",
     "pantuvarali": "Kāmavardani",
-    "subhapantuvarali": "Kāmavardani",
-    "subapantuvarali": "Kāmavardani",
     "kamavardani": "Kāmavardani",
     "hamsadwani": "Hamsadhvāni",
     "hamsadhwani": "Hamsadhvāni",
@@ -76,8 +71,6 @@ _CANONICAL_ALIASES: dict[str, str] = {
     "natakurinji": "Nāṭakurinji",
     "natakurunji": "Nāṭakurinji",
     "natakuranji": "Nāṭakurinji",
-    "kurunji": "Nāṭakurinji",
-    "kurinji": "Nāṭakurinji",
     "varali": "Varāḷi",
     "dhanyasi": "Dhanyāsi",
     "sri": "Śrī",
@@ -117,7 +110,6 @@ _CANONICAL_ALIASES: dict[str, str] = {
     "madyamavati": "Madhyamāvati",
     "mukhari": "Mukhāri",
     "kanada": "Kānaḍa",
-    "kannada": "Kānaḍa",
     "bilahari": "Bilahari",
     "kamas": "Kamās",
     "khamas": "Kamās",
@@ -215,19 +207,19 @@ def build_fold_index(canonicals: list[str]) -> dict[str, str]:
 
 
 def resolve(spelling: str, fold_index: dict[str, str], fold_keys: list[str]) -> str | None:
-    """Canonical name for one raw spelling, or None."""
+    """Resolve without fuzzy label creation; fold_keys is legacy CLI compatibility.
+
+    The old generated alias JSON remains a historical artifact until explicitly
+    regenerated. New training admission must call this resolver, not trust it.
+    """
     fk = fold(spelling)
     if not fk:
         return None
-    # 1. hand alias
-    if fk in HAND_ALIASES:
-        return HAND_ALIASES[fk]
-    # 2. exact fold hit against the canonical vocabulary
+    # A real vocabulary entry must not be suppressed by an obsolete force-none.
     if fk in fold_index:
         return fold_index[fk]
-    # 3. fuzzy match on folded keys
-    match = difflib.get_close_matches(fk, fold_keys, n=1, cutoff=FUZZY_CUTOFF)
-    return fold_index[match[0]] if match else None
+    alias = HAND_ALIASES.get(fk)
+    return fold_index.get(fold(alias)) if alias else None
 
 
 def main() -> None:
