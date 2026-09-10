@@ -10,14 +10,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path[:0] = [str(ROOT), str(ROOT/'src')]
-import joblib
 import numpy as np
 from normalize_ragas import fold
 from scripts.raga_pipeline import sha, write_json
 from scripts.long_concert_score import validate_intervals
 from carnatify.audio.melody_frontend import extract_query, HOP_S, VERSION
 from carnatify.ml.melody_features import feature_vector
-from carnatify.ml.inference_runtime import serial_forest_prediction
+from carnatify.ml.raga_runtime import RagaCandidate, RagaGate, score_contour
 
 
 def plan_queries(labels, duration=180):
@@ -41,7 +40,9 @@ def plan_queries(labels, duration=180):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('--models', nargs='+', type=Path, required=True)
+    ap.add_argument('--models', nargs='+', required=True,
+                    help='Registry names from configs/raga_candidates.json or bundle paths')
+    ap.add_argument('--gate', type=Path, help='Registered gate JSON to report (never tuned here)')
     ap.add_argument('--labels', type=Path, default=ROOT/'data/architecture_audit/label_intervals.json')
     ap.add_argument('--window-s', type=int, choices=[60, 180], default=180)
     ap.add_argument('--profile', choices=['default', 'harmonic'], default='default')
@@ -71,9 +72,8 @@ def main():
     frozen = json.loads((ROOT/'data/long_concerts/FROZEN_CONCERTS.json').read_text())
     concerts = validate_intervals(labels, frozen)
     queries = plan_queries(labels, args.window_s)
-    bundles = {str(p): joblib.load(p) for p in args.models}
-    for bundle in bundles.values():
-        serial_forest_prediction(bundle['model'])
+    candidates = {ref: RagaCandidate.load(ref) for ref in args.models}
+    gate = RagaGate.load(args.gate) if args.gate else None
     paths = {}
     for concert in {q['concert'] for q in queries}:
         path = ROOT/'data/long_concerts/audio'/concerts[concert]['file']
@@ -83,7 +83,9 @@ def main():
     report = dict(status='existing-label oracle-boundary field diagnostic; not fresh or artist-independence proof',
                   query_policy='longest explicit interval per primary item; centered fixed-duration query',
                   label_manifest_sha256=sha(args.labels), query_frontend=VERSION,
-                  model_sha256={str(p): sha(p) for p in args.models},
+                  model_sha256={ref: c.sha256 for ref, c in candidates.items()},
+                  models={ref: c.describe() for ref, c in candidates.items()},
+                  gate=gate.describe() if gate else None,
                   profile=args.profile, window_s=args.window_s, rows=[], summary={})
     report['pitch_frontend']=args.pitch_frontend
     if args.tonic_mixture:
@@ -103,31 +105,40 @@ def main():
             f0,separation=separated_query(paths[concert],concerts[concert]['sha256'],
                 query['start_s'],query['duration_s'],ROOT/'data/overhaul/cache/demucs',separator)
             row['separation']=separation
-        for name, bundle in bundles.items():
-            model = bundle['model']
-            pred = dict(correct=False, answered=False, top3=[],
-                        in_vocabulary=fold(query['truth']) in {fold(c) for c in model.classes_})
-            if meta['tonic_hz'] and np.sum(f0>0)*hop_s >= 10:
-                vector = feature_vector(f0, meta['tonic_hz'], hop_s, bundle['representation'])
-                if vector is not None:
-                    p = model.predict_proba(vector[None])[0]
-                    if args.tonic_mixture:
-                        from carnatify.audio.tonic_evidence import tonic_candidates
-                        from scripts.benchmark_tonic_marginalization import mixture
-                        vectors=[feature_vector(f0,t,hop_s,bundle['representation'])
-                                 for t in tonic_candidates(meta['tonic_hz'])]
-                        if any(v is None for v in vectors):raise ValueError('Missing tonic candidate feature')
-                        p=mixture(model.predict_proba(np.stack(vectors)))
+        for name, candidate in candidates.items():
+            result = score_contour(candidate, f0, meta['tonic_hz'], hop_s, gate)
+            pred = dict(correct=False, answered=result['answered'], top3=[], reason=result['reason'],
+                        in_vocabulary=fold(query['truth']) in {fold(c) for c in candidate.classes},
+                        accepted=result['accepted'], signals=result['signals'])
+            if result['answered']:
+                top = [r['raga'] for r in result['ranked'][:3]]
+                confidence = result['ranked'][0]['probability']
+                if args.tonic_mixture:
+                    from carnatify.audio.tonic_evidence import tonic_candidates
+                    from scripts.benchmark_tonic_marginalization import mixture
+                    model = candidate.model
+                    vectors=[feature_vector(f0,t,hop_s,candidate.representation)
+                             for t in tonic_candidates(meta['tonic_hz'])]
+                    if any(v is None for v in vectors):raise ValueError('Missing tonic candidate feature')
+                    p=mixture(model.predict_proba(np.stack(vectors)))
                     order = np.argsort(-p)[:3]
-                    top = [str(model.classes_[i]) for i in order]
-                    pred.update(answered=True, top3=top, confidence=float(p[order[0]]),
-                                correct=fold(top[0]) == fold(query['truth']))
+                    top = [str(model.classes_[i]) for i in order]; confidence = float(p[order[0]])
+                pred.update(top3=top, confidence=confidence, correct=fold(top[0]) == fold(query['truth']))
             row['predictions'][name] = pred
         report['rows'].append(row)
-        for name in bundles:
+        for name in candidates:
             preds = [r['predictions'][name] for r in report['rows']]
+            known = [p for p in preds if p['in_vocabulary']]
             report['summary'][name] = dict(n=len(preds), correct=sum(p['correct'] for p in preds),
-                                          n_in_vocabulary=sum(p['in_vocabulary'] for p in preds))
+                                          n_in_vocabulary=len(known),
+                                          correct_in_vocabulary=sum(p['correct'] for p in known),
+                                          top3_in_vocabulary=sum(fold(query_truth) in {fold(c) for c in p['top3']}
+                                                                 for p, query_truth in
+                                                                 ((p, r['truth']) for p, r in zip(preds, report['rows'])
+                                                                  if p['in_vocabulary'])),
+                                          n_accepted=sum(p['accepted'] for p in preds),
+                                          accepted_correct=sum(p['accepted'] and p['correct'] for p in preds),
+                                          accepted_oov=sum(p['accepted'] and not p['in_vocabulary'] for p in preds))
         write_json(args.out, report)
         print(query['item_id'], {k: v['top3'] for k,v in row['predictions'].items()}, flush=True)
     print(json.dumps(report['summary'], indent=2))

@@ -1,0 +1,362 @@
+{
+  "status": "existing-label oracle-boundary field diagnostic; not fresh or artist-independence proof",
+  "query_policy": "longest explicit interval per primary item; centered fixed-duration query",
+  "label_manifest_sha256": "33e1edd5cb80ef6e26f0f1d06203e87a9b87b1b955c856a16a307ef894833892",
+  "query_frontend": "mixed_tonic_query_melodia_v1",
+  "model_sha256": {
+    "context180": "f594584402cb2ae35532612e673c194661706fcdfe4b69bbecc69b6d50316e2b"
+  },
+  "models": {
+    "context180": {
+      "name": "context180",
+      "sha256": "f594584402cb2ae35532612e673c194661706fcdfe4b69bbecc69b6d50316e2b",
+      "path": "/Users/shyamravidath/carnatify/data/overhaul/context180_recovered_experiment/training/raga.joblib",
+      "feature_version": "melody_v1_voiced_compressed",
+      "representation": "voiced",
+      "window_s": 180,
+      "n_classes": 69
+    }
+  },
+  "gate": {
+    "name": "margin_v1_context180",
+    "signal": "margin",
+    "threshold": 0.16277227656365623,
+    "status": "registered; dev bar (precision>=0.85, OOV-FA<=0.15) FAILED narrowly (82.9% / 15.6% at 38% coverage); off in the product by rule",
+    "source": "data/overhaul/context180_recovered_experiment/gate.json"
+  },
+  "profile": "default",
+  "window_s": 180,
+  "rows": [
+    {
+      "item_id": "c1_1",
+      "concert": "long_concert_1",
+      "truth": "Śankarābharaṇaṁ",
+      "start_s": 288.5,
+      "duration_s": 180,
+      "metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "22216d830a8423890b6f2db63073304f2ec1d304aa03c048eae75d763f26d7c1",
+          "start_s": 288.5,
+          "duration_s": 180.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 138.8064422607422,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.8337111517029628,
+          "clipping_fraction": 0.0,
+          "rms": 0.08870181457381898
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 180.0
+      },
+      "predictions": {
+        "context180": {
+          "correct": false,
+          "answered": true,
+          "top3": [
+            "Dēvagāndhāri",
+            "Kalyāṇi",
+            "Nāṭa"
+          ],
+          "reason": null,
+          "in_vocabulary": true,
+          "accepted": false,
+          "signals": {
+            "max_score": 0.22268585089728,
+            "margin": 0.008548266105041336,
+            "softmax_max": 0.17567216927592091
+          },
+          "confidence": 0.17567216927592091
+        }
+      }
+    },
+    {
+      "item_id": "c2_1",
+      "concert": "long_concert_2",
+      "truth": "Tōḍi",
+      "start_s": 127.0,
+      "duration_s": 180,
+      "metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "0a1325fa5b4a4f77787207142b790dc0945b52261b2d3d4370d665f813cc42bc",
+          "start_s": 127.0,
+          "duration_s": 180.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 139.6118927001953,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.6465217253080209,
+          "clipping_fraction": 0.0,
+          "rms": 0.0866864093729058
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 180.0
+      },
+      "predictions": {
+        "context180": {
+          "correct": false,
+          "answered": true,
+          "top3": [
+            "Cakravākaṁ",
+            "Dhanyāsi",
+            "Amṛtavarṣiṇi"
+          ],
+          "reason": null,
+          "in_vocabulary": true,
+          "accepted": false,
+          "signals": {
+            "max_score": 0.15279829324781424,
+            "margin": 0.01858733444304761,
+            "softmax_max": 0.08188524768350389
+          },
+          "confidence": 0.08188524768350389
+        }
+      }
+    },
+    {
+      "item_id": "c2_2",
+      "concert": "long_concert_2",
+      "truth": "Hindōḷaṁ",
+      "start_s": 1226.0,
+      "duration_s": 180,
+      "metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "0a1325fa5b4a4f77787207142b790dc0945b52261b2d3d4370d665f813cc42bc",
+          "start_s": 1226.0,
+          "duration_s": 180.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 139.6118927001953,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.6189622523283066,
+          "clipping_fraction": 0.0,
+          "rms": 0.07984510047828573
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 180.0
+      },
+      "predictions": {
+        "context180": {
+          "correct": true,
+          "answered": true,
+          "top3": [
+            "Hindōḷaṁ",
+            "Nāṭa",
+            "Āhiri"
+          ],
+          "reason": null,
+          "in_vocabulary": true,
+          "accepted": true,
+          "signals": {
+            "max_score": 0.4274389735479627,
+            "margin": 0.17870830736379162,
+            "softmax_max": 0.8282645024495211
+          },
+          "confidence": 0.8282645024495211
+        }
+      }
+    },
+    {
+      "item_id": "c2_3",
+      "concert": "long_concert_2",
+      "truth": "Dhēnukā",
+      "start_s": 1763.4924999999998,
+      "duration_s": 180,
+      "metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "0a1325fa5b4a4f77787207142b790dc0945b52261b2d3d4370d665f813cc42bc",
+          "start_s": 1763.4924999999998,
+          "duration_s": 180.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 139.6118927001953,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.6352099653024292,
+          "clipping_fraction": 0.0,
+          "rms": 0.08717665126111601
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 180.0
+      },
+      "predictions": {
+        "context180": {
+          "correct": false,
+          "answered": true,
+          "top3": [
+            "Māyāmāḷavagauḷa",
+            "Nāṭa",
+            "Varāḷi"
+          ],
+          "reason": null,
+          "in_vocabulary": false,
+          "accepted": false,
+          "signals": {
+            "max_score": 0.3877839096822875,
+            "margin": 0.15393008010340203,
+            "softmax_max": 0.7340094245392056
+          },
+          "confidence": 0.7340094245392056
+        }
+      }
+    },
+    {
+      "item_id": "c3_1",
+      "concert": "long_concert_3",
+      "truth": "Ānandabhairavi",
+      "start_s": 169.0,
+      "duration_s": 180,
+      "metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "544dffd4a31840e36485d38597235e2086e8feede64bbe1b4f5db86b1d4258a1",
+          "start_s": 169.0,
+          "duration_s": 180.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 110.12802124023438,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.5887281285249903,
+          "clipping_fraction": 0.0,
+          "rms": 0.08481995314529937
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 180.0
+      },
+      "predictions": {
+        "context180": {
+          "correct": true,
+          "answered": true,
+          "top3": [
+            "Ānandabhairavi",
+            "Śrī",
+            "Bṛndāvana sāranga"
+          ],
+          "reason": null,
+          "in_vocabulary": true,
+          "accepted": false,
+          "signals": {
+            "max_score": 0.3270018279731275,
+            "margin": 0.042670042191151225,
+            "softmax_max": 0.44659936394199906
+          },
+          "confidence": 0.44659936394199906
+        }
+      }
+    },
+    {
+      "item_id": "c3_2",
+      "concert": "long_concert_3",
+      "truth": "Varāḷi",
+      "start_s": 1467.5,
+      "duration_s": 180,
+      "metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "544dffd4a31840e36485d38597235e2086e8feede64bbe1b4f5db86b1d4258a1",
+          "start_s": 1467.5,
+          "duration_s": 180.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 110.76707458496094,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.5535051349211532,
+          "clipping_fraction": 0.0,
+          "rms": 0.0809753257941619
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 180.0
+      },
+      "predictions": {
+        "context180": {
+          "correct": true,
+          "answered": true,
+          "top3": [
+            "Varāḷi",
+            "Bṛndāvana sāranga",
+            "Ṣanmukhapriya"
+          ],
+          "reason": null,
+          "in_vocabulary": true,
+          "accepted": true,
+          "signals": {
+            "max_score": 0.4706012681891445,
+            "margin": 0.29117925245701004,
+            "softmax_max": 0.9084381413681776
+          },
+          "confidence": 0.9084381413681776
+        }
+      }
+    }
+  ],
+  "summary": {
+    "context180": {
+      "n": 6,
+      "correct": 3,
+      "n_in_vocabulary": 5,
+      "correct_in_vocabulary": 3,
+      "top3_in_vocabulary": 3,
+      "n_accepted": 2,
+      "accepted_correct": 2,
+      "accepted_oov": 0
+    }
+  },
+  "pitch_frontend": "melodia"
+}
