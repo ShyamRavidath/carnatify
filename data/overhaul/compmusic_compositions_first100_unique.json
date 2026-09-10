@@ -1,0 +1,130 @@
+{
+  "version": "relative_24bin_halfsecond_oti_v1",
+  "catalog_sha256": "dacd87679e3fccb07a28f5f89bddbf1412a042aa05dfd7c0188d75540737329c",
+  "base_catalog_sha256": "7ffc5d778871bbeb2630cf1b3d0018f45e97cf8765c825fb32b2b443c4971759",
+  "source_links_sha256": "ede13bc09b10f5771c1016fc332a6e937872276cc88673762c34317211e17815",
+  "source_links_snapshot_sha256": "ede13bc09b10f5771c1016fc332a6e937872276cc88673762c34317211e17815",
+  "metadata_lookup_complete": false,
+  "receipt_directory": "/Users/shyamravidath/carnatify/data/overhaul/compmusic_work_links",
+  "n_lookup_records_used": 100,
+  "selection": "recording-ID-sorted prefix",
+  "n_tracks": 255,
+  "n_works": 224,
+  "n_added": 74,
+  "skipped": [
+    {
+      "track": "S_Sundar.Eppadi_Manam_Thunindhadho",
+      "reason": "duplicate_recording",
+      "existing_track": "68_Eppadi_Manam_Thunindhadho"
+    },
+    {
+      "track": "Chaitra_Sairam.Rakta_Ganapatim",
+      "reason": "duplicate_recording",
+      "existing_track": "247_Rakta_Ganapatim"
+    },
+    {
+      "track": "K__V__Narayanaswami.Rasa_Vilasa",
+      "reason": "no_unique_work"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.Aadum_Mayilai_Karpagambikai_-_Viruttam",
+      "reason": "no_unique_work"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.Sama_geeta_priyan",
+      "reason": "duplicate_recording",
+      "existing_track": "167_Sama_geeta_priyan"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.Marivere_Gathi",
+      "reason": "no_unique_work"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.O_Rangashayee",
+      "reason": "duplicate_recording",
+      "existing_track": "166_O_Rangashayee"
+    },
+    {
+      "track": "M_S__Subbulakshmi.Gajavadana",
+      "reason": "no_unique_work"
+    },
+    {
+      "track": "Akkarai_Sisters.Siddhi_Vinayakam",
+      "reason": "duplicate_recording",
+      "existing_track": "53_Siddhi_Vinayakam"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.Saamageeta_Priyan",
+      "reason": "no_unique_work"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.Janani",
+      "reason": "duplicate_recording",
+      "existing_track": "157_Janani"
+    },
+    {
+      "track": "T__Brinda.Meru_Samana",
+      "reason": "no_unique_work"
+    },
+    {
+      "track": "Semmangudi_Srinivasa_Iyer.Deva_DEva_Kalayamite",
+      "reason": "no_unique_work"
+    },
+    {
+      "track": "Nithyasree_Mahadevan.Meenakshi_Memudam",
+      "reason": "no_unique_work"
+    },
+    {
+      "track": "T__Brinda.Nee_Chittamu",
+      "reason": "no_unique_work"
+    },
+    {
+      "track": "K__V__Narayanaswami.Ini_Oru_Kanam",
+      "reason": "no_unique_work"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.Enneramum",
+      "reason": "no_unique_work"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.Kadaikann_paarvai",
+      "reason": "no_unique_work"
+    },
+    {
+      "track": "T__Brinda.Ninnusevinchina",
+      "reason": "no_unique_work"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.Paarengum",
+      "reason": "duplicate_recording",
+      "existing_track": "103_Paarengum"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.Kamakshi",
+      "reason": "duplicate_recording",
+      "existing_track": "40_Kamakshi"
+    },
+    {
+      "track": "Mahati.Kannallavo_Swami",
+      "reason": "duplicate_recording",
+      "existing_track": "88_Kannallavo_Swami"
+    },
+    {
+      "track": "T__M__Krishna.Tiruvadidarisanam-Tirupati",
+      "reason": "no_unique_work"
+    },
+    {
+      "track": "Tanjore_S__Kalyanaraman.Mamava_Karunaya",
+      "reason": "no_unique_work"
+    },
+    {
+      "track": "T__M__Krishna.Dakshinamurte",
+      "reason": "no_unique_work"
+    },
+    {
+      "track": "Abhishek_Raghuram.Muruganin_marupeyar",
+      "reason": "no_unique_work"
+    }
+  ],
+  "status": "candidate catalog; expanded-reference evaluation and rejection required; no deployment"
+}

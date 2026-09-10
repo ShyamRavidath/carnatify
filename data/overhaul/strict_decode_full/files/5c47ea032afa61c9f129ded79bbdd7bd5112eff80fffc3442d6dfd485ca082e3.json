@@ -1,0 +1,11 @@
+{
+  "track": "archive__Vasanta__Melakartha Chakkaram Ganamurti",
+  "audio": "data/concert_audio/Vasanta/Melakartha Chakkaram Ganamurti.mp3",
+  "audio_sha256": "5c47ea032afa61c9f129ded79bbdd7bd5112eff80fffc3442d6dfd485ca082e3",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 3.080676124896854
+}

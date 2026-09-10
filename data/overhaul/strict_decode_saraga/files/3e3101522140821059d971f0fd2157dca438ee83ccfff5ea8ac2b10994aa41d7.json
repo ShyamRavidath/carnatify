@@ -1,0 +1,11 @@
+{
+  "track": "57_Nannu_Brova_Neeku",
+  "audio": "saraga1.5_carnatic/Dr S Sundar at Arkay by S Sundar/Nannu Brova Neeku/Nannu Brova Neeku.mp3.mp3",
+  "audio_sha256": "3e3101522140821059d971f0fd2157dca438ee83ccfff5ea8ac2b10994aa41d7",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7260131249204278
+}

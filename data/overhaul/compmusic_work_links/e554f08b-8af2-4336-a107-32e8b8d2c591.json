@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/e554f08b-8af2-4336-a107-32e8b8d2c591",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:18:43.725471+00:00",
+  "recording": {
+    "length": 472000,
+    "relations": [
+      {
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "ended": false,
+        "end": null,
+        "type": "performance",
+        "target-credit": "",
+        "attribute-values": {},
+        "direction": "forward",
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ],
+        "source-credit": "",
+        "work": {
+          "language": null,
+          "type": null,
+          "languages": [],
+          "iswcs": [],
+          "title": "Vidalaguma",
+          "disambiguation": "",
+          "type-id": null,
+          "attributes": [],
+          "id": "5a75eb80-b4a4-44a2-9cbc-67ba37f6fdc8"
+        }
+      }
+    ],
+    "id": "e554f08b-8af2-4336-a107-32e8b8d2c591",
+    "first-release-date": "2009",
+    "video": false,
+    "disambiguation": "",
+    "title": "Vidalaguma"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Mōhanaṁ__bhuvanatraya",
+  "audio": "data/concert_audio/Mōhanaṁ/bhuvanatraya.mp3",
+  "audio_sha256": "a9e2be0f3d7e37f7afb831c62afa2d0ac78dc6d85a25a3082196d8cd4bb7e281",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.9556583329103887
+}

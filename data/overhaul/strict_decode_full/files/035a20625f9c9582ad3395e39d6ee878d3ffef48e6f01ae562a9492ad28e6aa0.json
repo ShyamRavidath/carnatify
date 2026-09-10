@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bilahari__nAdasudhArasam",
+  "audio": "data/concert_audio/Bilahari/nAdasudhArasam.mp3",
+  "audio_sha256": "035a20625f9c9582ad3395e39d6ee878d3ffef48e6f01ae562a9492ad28e6aa0",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.4367082500830293
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Rītigauḷa__rAgaratna",
+  "audio": "data/concert_audio/Rītigauḷa/rAgaratna.mp3",
+  "audio_sha256": "d71745cc83d1c2d32e339b36d2d9b050d25279712a7c9331c31e715a24d79815",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.3120429166592658
+}

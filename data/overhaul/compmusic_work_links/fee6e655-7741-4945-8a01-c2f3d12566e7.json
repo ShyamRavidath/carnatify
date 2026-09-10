@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/fee6e655-7741-4945-8a01-c2f3d12566e7",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:26:49.254811+00:00",
+  "recording": {
+    "first-release-date": "2008",
+    "id": "fee6e655-7741-4945-8a01-c2f3d12566e7",
+    "relations": [
+      {
+        "direction": "forward",
+        "type": "performance",
+        "attribute-values": {},
+        "target-credit": "",
+        "ended": false,
+        "end": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "work": {
+          "disambiguation": "",
+          "languages": [
+            "tel"
+          ],
+          "title": "Karuna Judavamma",
+          "iswcs": [],
+          "type": "Song",
+          "language": "tel",
+          "id": "b7ac1873-feb0-4d52-86e7-11b124f7d013",
+          "attributes": [],
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6"
+        },
+        "source-credit": "",
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work"
+      }
+    ],
+    "length": 2822000,
+    "title": "Karuna Judavamma",
+    "disambiguation": "",
+    "video": false
+  }
+}

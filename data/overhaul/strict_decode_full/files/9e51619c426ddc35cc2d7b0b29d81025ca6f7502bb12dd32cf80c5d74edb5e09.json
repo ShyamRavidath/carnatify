@@ -1,0 +1,11 @@
+{
+  "track": "archive__Māyāmāḷavagauḷa__mEru samAna",
+  "audio": "data/concert_audio/Māyāmāḷavagauḷa/mEru samAna.mp3",
+  "audio_sha256": "9e51619c426ddc35cc2d7b0b29d81025ca6f7502bb12dd32cf80c5d74edb5e09",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.9214790831319988
+}

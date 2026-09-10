@@ -1,0 +1,42 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/2e60e4ab-f247-4c52-b48a-4fa24f24fd8c",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:26:05.189523+00:00",
+  "recording": {
+    "first-release-date": "2011",
+    "id": "2e60e4ab-f247-4c52-b48a-4fa24f24fd8c",
+    "relations": [
+      {
+        "direction": "forward",
+        "type": "performance",
+        "attribute-values": {},
+        "target-credit": "",
+        "ended": false,
+        "end": null,
+        "attribute-ids": {},
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "work": {
+          "type-id": null,
+          "id": "b112e223-7f39-400e-a30a-4ac3c95f1837",
+          "attributes": [],
+          "language": "tel",
+          "type": null,
+          "languages": [
+            "tel"
+          ],
+          "iswcs": [],
+          "title": "Rama Namam Bhajare",
+          "disambiguation": ""
+        },
+        "source-credit": "",
+        "attributes": [],
+        "target-type": "work"
+      }
+    ],
+    "length": 568090,
+    "title": "Rama Namamu",
+    "disambiguation": "",
+    "video": false
+  }
+}

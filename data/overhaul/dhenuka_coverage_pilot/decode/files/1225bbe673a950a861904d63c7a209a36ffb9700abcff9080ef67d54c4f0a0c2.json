@@ -1,0 +1,11 @@
+{
+  "track": "coverage__Dhenuka__Teliyaleru_Rama_SKR",
+  "audio": "data/overhaul/dhenuka_coverage_pilot/candidate.mp3",
+  "audio_sha256": "1225bbe673a950a861904d63c7a209a36ffb9700abcff9080ef67d54c4f0a0c2",
+  "plan_sha256": "08a4276cbe35a7a6415b38faa9c7796fc471bc266ea908503d3040a81da76059",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.280721166636795
+}

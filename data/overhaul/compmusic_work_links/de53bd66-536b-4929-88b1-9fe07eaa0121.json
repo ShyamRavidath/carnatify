@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/de53bd66-536b-4929-88b1-9fe07eaa0121",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:16:44.045252+00:00",
+  "recording": {
+    "relations": [
+      {
+        "attributes": [
+          "live"
+        ],
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "ended": false,
+        "target-type": "work",
+        "source-credit": "",
+        "attribute-values": {},
+        "direction": "forward",
+        "type": "performance",
+        "end": null,
+        "work": {
+          "title": "Karuna Yela Kante",
+          "languages": [
+            "tel"
+          ],
+          "type-id": null,
+          "disambiguation": "",
+          "type": null,
+          "language": "tel",
+          "iswcs": [],
+          "id": "42c428ac-08f9-4cbd-a381-2a66c49ac2e6",
+          "attributes": []
+        },
+        "target-credit": ""
+      }
+    ],
+    "disambiguation": "",
+    "video": false,
+    "title": "Karuna Yela Kante",
+    "length": 1289000,
+    "id": "de53bd66-536b-4929-88b1-9fe07eaa0121",
+    "first-release-date": "2000"
+  }
+}

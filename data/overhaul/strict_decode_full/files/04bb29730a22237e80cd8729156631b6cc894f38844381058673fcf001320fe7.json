@@ -1,0 +1,11 @@
+{
+  "track": "archive__Maṇirangu__rAnidi",
+  "audio": "data/concert_audio/Maṇirangu/rAnidi.mp3",
+  "audio_sha256": "04bb29730a22237e80cd8729156631b6cc894f38844381058673fcf001320fe7",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5616842499002814
+}

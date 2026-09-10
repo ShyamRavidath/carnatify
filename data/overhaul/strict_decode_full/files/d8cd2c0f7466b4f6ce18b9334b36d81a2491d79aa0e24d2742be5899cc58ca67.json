@@ -1,0 +1,11 @@
+{
+  "track": "archive__Latāngi__piravA varam tArum",
+  "audio": "data/concert_audio/Latāngi/piravA varam tArum.mp3",
+  "audio_sha256": "d8cd2c0f7466b4f6ce18b9334b36d81a2491d79aa0e24d2742be5899cc58ca67",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2809242499060929
+}

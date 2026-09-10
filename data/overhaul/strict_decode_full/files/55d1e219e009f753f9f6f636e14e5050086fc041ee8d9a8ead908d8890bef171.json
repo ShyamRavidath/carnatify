@@ -1,0 +1,11 @@
+{
+  "track": "archive__Tōḍi__vazhi maraittirukkudu",
+  "audio": "data/concert_audio/Tōḍi/vazhi maraittirukkudu.mp3",
+  "audio_sha256": "55d1e219e009f753f9f6f636e14e5050086fc041ee8d9a8ead908d8890bef171",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.28678424982354045
+}

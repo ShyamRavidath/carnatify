@@ -1,0 +1,11 @@
+{
+  "track": "archive__Behāg__samayamidE rArA",
+  "audio": "data/concert_audio/Behāg/samayamidE rArA.mp3",
+  "audio_sha256": "d7223b4301168897cdfd521a7ac53c94a7c54a1bfa9f8ec201cabf95f28f1326",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "decoder_error",
+  "returncode": 183,
+  "stderr_bytes": 603,
+  "stderr_excerpt": "[mp3float @ 0xb5681ce00] Header missing\n[aist#0:0/mp3 @ 0xb57008300] [dec:mp3float @ 0xb57404280] Error submitting packet to decoder: Invalid data found when processing input\n[aist#0:0/mp3 @ 0xb57008300] [dec:mp3float @ 0xb57404280] Error processing packet in decoder: Invalid data found when processing input\n[aist#0:0/mp3 @ 0xb57008300] [dec:mp3float @ 0xb57404280] Task finished with error code: -1094995529 (Invalid data found when processing input)\n[aist#0:0/mp3 @ 0xb57008300] [dec:mp3float @ 0xb57404280] Terminating thread with return code -1094995529 (Invalid data found when processing input)\n",
+  "elapsed_s": 0.6488126250915229
+}

@@ -1,0 +1,11 @@
+{
+  "track": "101_Maname_Kanamum",
+  "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Maname Kanamum/Sanjay Subrahmanyan - Maname Kanamum.mp3",
+  "audio_sha256": "61939a4528e2f8838eaffbf270bfefcdd7cb4a36c9ac141c2dac2e9b9d7a9fc8",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.40863087493926287
+}

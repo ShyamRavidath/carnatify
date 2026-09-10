@@ -1,0 +1,11 @@
+{
+  "track": "archive__Hamsadhvāni__Gam Ganapate",
+  "audio": "data/concert_audio/Hamsadhvāni/Gam Ganapate.mp3",
+  "audio_sha256": "47b309089745e228ceaf7e2109cca7be58f042c94233cf240a5f98139f68f6d9",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6718157497234643
+}

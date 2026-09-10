@@ -1,0 +1,11 @@
+{
+  "track": "archive__Harikāmbhōji__vnatA suta",
+  "audio": "data/concert_audio/Harikāmbhōji/vnatA suta.mp3",
+  "audio_sha256": "cb2f99b4fc5a69fe682581ad9341ec601ae32346ad0a45e7e5fcf5a5cd73c240",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5053254580125213
+}

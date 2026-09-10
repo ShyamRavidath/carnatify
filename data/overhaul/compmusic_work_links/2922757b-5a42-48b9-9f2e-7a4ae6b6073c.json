@@ -1,0 +1,43 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/2922757b-5a42-48b9-9f2e-7a4ae6b6073c",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:24:52.046873+00:00",
+  "recording": {
+    "video": false,
+    "id": "2922757b-5a42-48b9-9f2e-7a4ae6b6073c",
+    "relations": [
+      {
+        "attribute-values": {},
+        "direction": "forward",
+        "begin": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work",
+        "ended": false,
+        "end": null,
+        "source-credit": "",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "work": {
+          "languages": [],
+          "iswcs": [],
+          "disambiguation": "",
+          "id": "0218061a-7c35-4620-8a42-ad6c123a1687",
+          "title": "Emi Neramu",
+          "type-id": null,
+          "language": null,
+          "attributes": [],
+          "type": null
+        },
+        "target-credit": "",
+        "type": "performance"
+      }
+    ],
+    "length": 1817000,
+    "disambiguation": "",
+    "title": "Emi Neramu"
+  }
+}

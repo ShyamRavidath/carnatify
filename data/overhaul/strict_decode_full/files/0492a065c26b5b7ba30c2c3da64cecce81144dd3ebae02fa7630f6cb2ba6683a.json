@@ -1,0 +1,11 @@
+{
+  "track": "archive__Aṭāna__Anupama Gunambuthi",
+  "audio": "data/concert_audio/Aṭāna/Anupama Gunambuthi.mp3",
+  "audio_sha256": "0492a065c26b5b7ba30c2c3da64cecce81144dd3ebae02fa7630f6cb2ba6683a",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.648493291810155
+}

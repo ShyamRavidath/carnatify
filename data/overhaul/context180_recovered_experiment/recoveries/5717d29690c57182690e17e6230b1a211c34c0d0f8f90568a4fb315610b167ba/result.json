@@ -1,0 +1,29 @@
+{
+  "plan_sha256": "fcdd16a1636f725e293786301c6eafcc02478f27f0aeeabcc32e283f85b63af2",
+  "windows": [
+    {
+      "track": "archive__Jōnpuri__tillAnA",
+      "start_s": 0.0,
+      "duration_s": 128.4992290249433,
+      "actual_duration_s": 128.49632653061224,
+      "tonic_hz": 173.94363403320312,
+      "voiced_s": 92.34866213151928,
+      "decoder": {
+        "decoder": "ffmpeg_strict_output_seek",
+        "stderr_bytes": 0,
+        "stderr_excerpt": "",
+        "start_s": 0.0,
+        "requested_duration_s": 128.4992290249433
+      },
+      "audio": {
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.7514174629742699,
+        "clipping_fraction": 0.0,
+        "rms": 0.08971438160718599
+      }
+    }
+  ],
+  "elapsed_s": 7.450420957989991,
+  "status": "separate decoder-recovery candidate; not merged into training"
+}

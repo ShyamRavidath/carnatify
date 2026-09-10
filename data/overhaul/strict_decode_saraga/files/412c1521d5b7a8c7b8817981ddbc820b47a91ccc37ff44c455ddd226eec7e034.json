@@ -1,0 +1,11 @@
+{
+  "track": "18_Parama_Purusham",
+  "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Parama Purusham/Ashwath Narayanan - Parama Purusham.mp3",
+  "audio_sha256": "412c1521d5b7a8c7b8817981ddbc820b47a91ccc37ff44c455ddd226eec7e034",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.614790499676019
+}

@@ -1,0 +1,11 @@
+{
+  "track": "236_Eppadi_Padinaro",
+  "audio": "saraga1.5_carnatic/KP Nandini at Arkay by KP Nandini/Eppadi Padinaro/Eppadi Padinaro.mp3.mp3",
+  "audio_sha256": "7c7f89839314e13d597d67157ce14f5f9a91438d23d83a001a420964d1b8d3c0",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5612152498215437
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Hamsadhvāni__sri raghukula",
+  "audio": "data/concert_audio/Hamsadhvāni/sri raghukula.mp3",
+  "audio_sha256": "a8d493d463c3ae5e963806575e231217180729d190fd2a2749b1e957ce6a2cf5",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.8046425841748714
+}

@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/a9bf3ac1-9110-458c-8a3a-b0b6d9bf3d03",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:02:32.600551+00:00",
+  "recording": {
+    "title": "Mamava Minakshi",
+    "length": 1384000,
+    "id": "a9bf3ac1-9110-458c-8a3a-b0b6d9bf3d03",
+    "video": false,
+    "relations": [
+      {
+        "work": {
+          "type-id": null,
+          "title": "Mamava Minakshi",
+          "language": null,
+          "type": null,
+          "id": "33f0a8b1-9118-4a84-808a-18656ce7b767",
+          "iswcs": [],
+          "disambiguation": "",
+          "attributes": [],
+          "languages": []
+        },
+        "attributes": [
+          "live"
+        ],
+        "direction": "forward",
+        "source-credit": "",
+        "attribute-values": {},
+        "end": null,
+        "target-credit": "",
+        "begin": null,
+        "type": "performance",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "ended": false,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "target-type": "work"
+      }
+    ],
+    "first-release-date": "2010",
+    "disambiguation": ""
+  }
+}

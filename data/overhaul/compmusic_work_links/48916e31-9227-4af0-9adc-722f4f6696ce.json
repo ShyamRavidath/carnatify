@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/48916e31-9227-4af0-9adc-722f4f6696ce",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:33:52.789708+00:00",
+  "recording": {
+    "first-release-date": "2006",
+    "disambiguation": "",
+    "title": "Sri Vaidyanatham",
+    "relations": [
+      {
+        "end": null,
+        "work": {
+          "disambiguation": "",
+          "title": "Sri Vaidyanatham",
+          "id": "7f8f7a88-34da-4b74-891b-9f09e769222c",
+          "type": null,
+          "languages": [],
+          "language": null,
+          "attributes": [],
+          "iswcs": [],
+          "type-id": null
+        },
+        "attributes": [
+          "live"
+        ],
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-values": {},
+        "direction": "forward",
+        "target-type": "work",
+        "type": "performance",
+        "begin": null,
+        "target-credit": "",
+        "source-credit": "",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "ended": false
+      }
+    ],
+    "id": "48916e31-9227-4af0-9adc-722f4f6696ce",
+    "video": false,
+    "length": 1126000
+  }
+}

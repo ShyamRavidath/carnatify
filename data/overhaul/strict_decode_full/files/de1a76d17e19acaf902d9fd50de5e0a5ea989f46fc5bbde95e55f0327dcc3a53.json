@@ -1,0 +1,11 @@
+{
+  "track": "archive__Suraṭi__Slokam PathikiHarathire Adi",
+  "audio": "data/concert_audio/Suraṭi/Slokam PathikiHarathire Adi.mp3",
+  "audio_sha256": "de1a76d17e19acaf902d9fd50de5e0a5ea989f46fc5bbde95e55f0327dcc3a53",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.0770825832150877
+}

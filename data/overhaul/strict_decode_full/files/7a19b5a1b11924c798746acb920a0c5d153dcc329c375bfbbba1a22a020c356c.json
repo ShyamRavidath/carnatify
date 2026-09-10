@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bilahari__Mandaradhara",
+  "audio": "data/concert_audio/Bilahari/Mandaradhara.mp3",
+  "audio_sha256": "7a19b5a1b11924c798746acb920a0c5d153dcc329c375bfbbba1a22a020c356c",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.7621218338608742
+}

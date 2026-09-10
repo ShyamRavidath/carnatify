@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ṣanmukhapriya__AandavanE",
+  "audio": "data/concert_audio/Ṣanmukhapriya/AandavanE.mp3",
+  "audio_sha256": "75dc4eee83a816f179e7750bb12b50a6bc8f2de5ee7561d86af7751e3d6c4a53",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.1880451668985188
+}

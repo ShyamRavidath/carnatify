@@ -1,0 +1,11 @@
+{
+  "track": "archive__Pūrvīkaḷyāṇi__Gangadhara",
+  "audio": "data/concert_audio/Pūrvīkaḷyāṇi/Gangadhara.mp3",
+  "audio_sha256": "c4460c3a07086ca4ff832bce6866adbd393fcbfe20c0158f64f0a3dbda1c5245",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 4.315169874578714
+}

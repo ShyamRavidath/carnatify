@@ -1,0 +1,11 @@
+{
+  "track": "archive__Aṭāna__bhajana sEya rAdA",
+  "audio": "data/concert_audio/Aṭāna/bhajana sEya rAdA.mp3",
+  "audio_sha256": "2aa19ca7d36d53adea2813b93697271ad5bad10f6e0fbe98b96bd688554e9ac4",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "decoder_error",
+  "returncode": 183,
+  "stderr_bytes": 603,
+  "stderr_excerpt": "[mp3float @ 0x7eec08e00] Header missing\n[aist#0:0/mp3 @ 0x7ef004300] [dec:mp3float @ 0x7ee81c280] Error submitting packet to decoder: Invalid data found when processing input\n[aist#0:0/mp3 @ 0x7ef004300] [dec:mp3float @ 0x7ee81c280] Error processing packet in decoder: Invalid data found when processing input\n[aist#0:0/mp3 @ 0x7ef004300] [dec:mp3float @ 0x7ee81c280] Task finished with error code: -1094995529 (Invalid data found when processing input)\n[aist#0:0/mp3 @ 0x7ef004300] [dec:mp3float @ 0x7ee81c280] Terminating thread with return code -1094995529 (Invalid data found when processing input)\n",
+  "elapsed_s": 1.8931668330915272
+}

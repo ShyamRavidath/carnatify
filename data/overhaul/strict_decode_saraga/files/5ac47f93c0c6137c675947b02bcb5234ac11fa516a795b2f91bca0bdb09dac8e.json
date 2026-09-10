@@ -1,0 +1,11 @@
+{
+  "track": "66_Kannanai_Paadu_Maname",
+  "audio": "saraga1.5_carnatic/Dr S Sundar at Arkay by S Sundar/Kannanai Paadu Maname/Kannanai Paadu Maname.mp3.mp3",
+  "audio_sha256": "5ac47f93c0c6137c675947b02bcb5234ac11fa516a795b2f91bca0bdb09dac8e",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7106570000760257
+}

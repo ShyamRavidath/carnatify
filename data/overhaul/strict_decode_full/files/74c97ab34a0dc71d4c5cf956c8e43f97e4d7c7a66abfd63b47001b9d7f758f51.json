@@ -1,0 +1,11 @@
+{
+  "track": "archive__Mōhanaṁ__varNam",
+  "audio": "data/concert_audio/Mōhanaṁ/varNam.mp3",
+  "audio_sha256": "74c97ab34a0dc71d4c5cf956c8e43f97e4d7c7a66abfd63b47001b9d7f758f51",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.9846652080304921
+}

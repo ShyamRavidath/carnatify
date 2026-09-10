@@ -1,0 +1,47 @@
+{
+  "record": "https://zenodo.org/records/15102483",
+  "license": {
+    "id": "cc-by-4.0"
+  },
+  "files": [
+    {
+      "id": "4d7678dc-8364-4377-aefb-af53944c9edf",
+      "key": "saraga audio.zip",
+      "size": 65704698184,
+      "checksum": "md5:bf0a36f7fb59098ec0d4d303b407ea73",
+      "links": {
+        "self": "https://zenodo.org/api/records/15102483/files/saraga%20audio.zip/content"
+      }
+    },
+    {
+      "id": "d5ee059a-e8fd-4db2-98ca-26402cac585b",
+      "key": "saraga gesture.zip",
+      "size": 20425287215,
+      "checksum": "md5:f58fe9e0c80760a0b31cb08b61624487",
+      "links": {
+        "self": "https://zenodo.org/api/records/15102483/files/saraga%20gesture.zip/content"
+      }
+    },
+    {
+      "id": "59e2679e-5f2a-444c-a975-8c24702954af",
+      "key": "saraga metadata.zip",
+      "size": 680066,
+      "checksum": "md5:4f3a8e919593aa2b71f7a0b81cc8cc00",
+      "links": {
+        "self": "https://zenodo.org/api/records/15102483/files/saraga%20metadata.zip/content"
+      }
+    },
+    {
+      "id": "d528e69b-5ba9-449a-bb14-c9ac3aad209c",
+      "key": "saraga visual.zip",
+      "size": 14845859129,
+      "checksum": "md5:e411c0917e522c6ba527a9cfc8ee7e11",
+      "links": {
+        "self": "https://zenodo.org/api/records/15102483/files/saraga%20visual.zip/content"
+      }
+    }
+  ],
+  "downloaded": "metadata only",
+  "metadata_sha256": "ccc6b35493ca0eb53998e424c877a74b0ea7fa6f37b9c752ef1e852417821809",
+  "attribution": "Shankar A, Plaja-Roglans G, Nuttall T, Rocamora M, Serra X. Saraga Audiovisual, ISMIR 2024."
+}

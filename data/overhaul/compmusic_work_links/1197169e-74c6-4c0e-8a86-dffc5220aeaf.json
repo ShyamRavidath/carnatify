@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/1197169e-74c6-4c0e-8a86-dffc5220aeaf",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:19:29.119091+00:00",
+  "recording": {
+    "length": 190000,
+    "disambiguation": "",
+    "id": "1197169e-74c6-4c0e-8a86-dffc5220aeaf",
+    "relations": [
+      {
+        "direction": "forward",
+        "begin": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "attribute-values": {},
+        "attributes": [
+          "live"
+        ],
+        "ended": false,
+        "end": null,
+        "source-credit": "",
+        "target-type": "work",
+        "type": "performance",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "target-credit": "",
+        "work": {
+          "type-id": null,
+          "title": "Valli Kanavan",
+          "type": null,
+          "attributes": [],
+          "language": null,
+          "iswcs": [],
+          "disambiguation": "",
+          "languages": [],
+          "id": "7f2c2fd8-7807-41b4-aee9-bf8ebb0f33f1"
+        }
+      }
+    ],
+    "video": false,
+    "title": "Valli Kanavan",
+    "first-release-date": "2001"
+  }
+}

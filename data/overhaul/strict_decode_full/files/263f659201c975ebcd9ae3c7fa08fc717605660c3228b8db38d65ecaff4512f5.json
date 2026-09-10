@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kānaḍa__Charumathi",
+  "audio": "data/concert_audio/Kānaḍa/Charumathi.mp3",
+  "audio_sha256": "263f659201c975ebcd9ae3c7fa08fc717605660c3228b8db38d65ecaff4512f5",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.1450578747317195
+}

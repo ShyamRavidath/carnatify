@@ -1,0 +1,29 @@
+{
+  "plan_sha256": "cd644c0e6c9d2073d7e72266b4f349de1aa5792da0566e8200e91838581e1612",
+  "windows": [
+    {
+      "track": "archive__Pūrṇacandrika__tillAnA",
+      "start_s": 0.0,
+      "duration_s": 107.02657596371883,
+      "actual_duration_s": 107.02367346938776,
+      "tonic_hz": 146.22604370117188,
+      "voiced_s": 66.01433106575963,
+      "decoder": {
+        "decoder": "ffmpeg_strict_output_seek",
+        "stderr_bytes": 0,
+        "stderr_excerpt": "",
+        "start_s": 0.0,
+        "requested_duration_s": 107.02657596371883
+      },
+      "audio": {
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9083897961187367,
+        "clipping_fraction": 0.0,
+        "rms": 0.1130102405115919
+      }
+    }
+  ],
+  "elapsed_s": 5.20397258317098,
+  "status": "separate decoder-recovery candidate; not merged into training"
+}

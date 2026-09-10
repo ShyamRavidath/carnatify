@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sāma__13 mAnasa sanchrarE",
+  "audio": "data/concert_audio/Sāma/13 mAnasa sanchrarE.mp3",
+  "audio_sha256": "59d19ddce6270073d30773e9456ced43570b1a9b16d4f86a8bd8ea4ca10ecc2f",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.29697174998000264
+}

@@ -1,0 +1,285 @@
+{
+  "policy": "quarantine entire connected groups; no relabeling",
+  "reasons": {
+    "item:CherthalaRanganathaSharmaAtArkay": [
+      {
+        "track": "archive__Bēgaḍa__Lokavana Chatura",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Bēgaḍa__Lokavana Chatura_r2",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Bēgaḍa__Lokavana Chatura_r3",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Bēgaḍa__Lokavana Chatura_r4",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Bēgaḍa__Nadopasana_r2",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Bēgaḍa__Nadopasana_r3",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Gauḷa__Dudukugala_r2",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Gauḷa__Dudukugala_r3",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Kedāraṁ__Rama Neepai_r2",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Kedāraṁ__Rama Neepai_r3",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Kēdāragauḷa__Saraguna Palimpa_r2",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Kēdāragauḷa__Tulasi Bilva_r2",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Maṇirangu__Mamava Pattabhi Rama",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Maṇirangu__Mamava Pattabhi Rama_r2",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Nīlāṁbari__Madhava Mamava",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Nīlāṁbari__Madhava Mamava_r3",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Pūrvīkaḷyāṇi__Gnanamosaga Rada",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Pūrṇacandrika__Telisi Rama",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Pūrṇacandrika__Telisi Rama_r2",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Rītigauḷa__Janani Ninnuvina_r2",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Sāranga__Neevada Negana",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Sāranga__Neevada Negana_r2",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Āhiri__Deenarakshaka",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Āhiri__Deenarakshaka_r3",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Śrīranjani__Bhuvini Dasudane_r2",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      },
+      {
+        "track": "archive__Śrīranjani__Bhuvini Dasudane_r4",
+        "reasons": [
+          "exact_evaluation_audio_overlap"
+        ]
+      }
+    ],
+    "item:DP-001": [
+      {
+        "track": "archive__Kāpi__vihara mAnasa",
+        "reasons": [
+          "assigned_source_mismatch"
+        ]
+      },
+      {
+        "track": "archive__Latāngi__aparAda mulannu",
+        "reasons": [
+          "assigned_source_mismatch"
+        ]
+      },
+      {
+        "track": "archive__Mukhāri__brahma kaDigina",
+        "reasons": [
+          "assigned_source_mismatch"
+        ]
+      },
+      {
+        "track": "archive__Śuddadhanyāsi__sri pAtasArati",
+        "reasons": [
+          "assigned_source_mismatch"
+        ]
+      }
+    ]
+  },
+  "removed_tracks": [
+    "archive__Aṭāna__Brihaspathe",
+    "archive__Aṭāna__Sri Maha Ganapathim",
+    "archive__Bilahari__Evari Ni Vedanu",
+    "archive__Bilahari__Mandaradhara",
+    "archive__Bēgaḍa__Lokavana Chatura",
+    "archive__Bēgaḍa__Lokavana Chatura_r2",
+    "archive__Bēgaḍa__Lokavana Chatura_r3",
+    "archive__Bēgaḍa__Lokavana Chatura_r4",
+    "archive__Bēgaḍa__Nadopasana_r2",
+    "archive__Bēgaḍa__Nadopasana_r3",
+    "archive__Bēgaḍa__Nadopasana_r4",
+    "archive__Dhanyāsi__Ramabhi Rama",
+    "archive__Dhanyāsi__Ramabhi Rama_r3",
+    "archive__Dhanyāsi__Ramabhi Rama_r4",
+    "archive__Dēvagāndhāri__Ksheera Sagara Sayana",
+    "archive__Dēvagāndhāri__Sarasija Nabha Sodhari",
+    "archive__Gauḷa__Dudukugala_r2",
+    "archive__Gauḷa__Dudukugala_r3",
+    "archive__Hamsadhvāni__Vande Anisham Aham",
+    "archive__Hamsadhvāni__Vande Anisham Aham_r2",
+    "archive__Haṁsānandi__Thullu Madha",
+    "archive__Hindōḷaṁ__padmanAbha pAhi",
+    "archive__Jōnpuri__hari nAmamE",
+    "archive__Kalyāṇi__Kailasapathe Mam",
+    "archive__Kalyāṇi__Sevinthuraa Ithani",
+    "archive__Kalyāṇi__Srimadhadhi Thyagaraja",
+    "archive__Kalyāṇi__Vanajakshi",
+    "archive__Karaharapriya__Pakkala Nilabadi",
+    "archive__Kedāraṁ__Ananda Natana Prakasam",
+    "archive__Kedāraṁ__Rama Neepai_r2",
+    "archive__Kedāraṁ__Rama Neepai_r3",
+    "archive__Kedāraṁ__iTu garuDani nee",
+    "archive__Kāmavardani__Siva Siva Siva",
+    "archive__Kāmavardani__Siva Siva Siva_r2",
+    "archive__Kānaḍa__Nera Nammithi",
+    "archive__Kāpi__03 vihara mAnasa",
+    "archive__Kāpi__Kalaye Mama Hridaye",
+    "archive__Kāpi__vihara mAnasa",
+    "archive__Kēdāragauḷa__Saraguna Palimpa_r2",
+    "archive__Kēdāragauḷa__Saraguna Palimpa_r3",
+    "archive__Kēdāragauḷa__Tulasi Bilva",
+    "archive__Kēdāragauḷa__Tulasi Bilva_r2",
+    "archive__Latāngi__02 aparAda mulannu",
+    "archive__Latāngi__aparAda mulannu",
+    "archive__Maṇirangu__Mamava Pattabhi Rama",
+    "archive__Maṇirangu__Mamava Pattabhi Rama_r2",
+    "archive__Mukhāri__05 brahma kaDigina",
+    "archive__Mukhāri__brahma kaDigina",
+    "archive__Māyāmāḷavagauḷa__Thulasi Dhalamulache",
+    "archive__Māyāmāḷavagauḷa__kalinarulaguni",
+    "archive__Māyāmāḷavagauḷa__kalinarulaku",
+    "archive__Nāṭa__Paripoorna Garudadhri",
+    "archive__Nāṭa__girijA ramaNa",
+    "archive__Nāṭakurinji__Muddhugare Yashoda",
+    "archive__Nīlāṁbari__Madhava Mamava",
+    "archive__Nīlāṁbari__Madhava Mamava_r2",
+    "archive__Nīlāṁbari__Madhava Mamava_r3",
+    "archive__Nīlāṁbari__Madhava Mamava_r4",
+    "archive__Nīlāṁbari__endagAni vAnagAni",
+    "archive__Pūrvīkaḷyāṇi__Gnanamosaga Rada",
+    "archive__Pūrvīkaḷyāṇi__marachitivEmO",
+    "archive__Pūrṇacandrika__Sri Hari Vallabhe",
+    "archive__Pūrṇacandrika__Telisi Rama",
+    "archive__Pūrṇacandrika__Telisi Rama_r2",
+    "archive__Rītigauḷa__Janani Ninnuvina_r2",
+    "archive__Rītigauḷa__Mama Hridaye",
+    "archive__Sāma__Cherthala Ranganatha Sharma",
+    "archive__Sāma__parAkElanayyA",
+    "archive__Sāma__tanakEda chaduvulu",
+    "archive__Sāranga__Inthamodi",
+    "archive__Sāranga__Neevada Negana",
+    "archive__Sāranga__Neevada Negana_r2",
+    "archive__Sāvēri__Sarasooda",
+    "archive__Sāvēri__talamEla kulamEla",
+    "archive__Tōḍi__Endhuku Dayaradura",
+    "archive__Vasanta__Seethamma_r2",
+    "archive__Ābhōgī__Evari Bodhana",
+    "archive__Āhiri__Deenarakshaka",
+    "archive__Āhiri__Deenarakshaka_r2",
+    "archive__Āhiri__Deenarakshaka_r3",
+    "archive__Āhiri__Deenarakshaka_r4",
+    "archive__Āhiri__nAnA dikkula",
+    "archive__Śrīranjani__Bhuvini Dasudane",
+    "archive__Śrīranjani__Bhuvini Dasudane_r2",
+    "archive__Śrīranjani__Bhuvini Dasudane_r3",
+    "archive__Śrīranjani__Bhuvini Dasudane_r4",
+    "archive__Śuddadhanyāsi__01 sri pArtasArati",
+    "archive__Śuddadhanyāsi__Raghavendra Guru",
+    "archive__Śuddadhanyāsi__Sri Parthasarathina",
+    "archive__Śuddadhanyāsi__sri pAtasArati",
+    "archive__Ṣanmukhapriya__Mahathmule Nee"
+  ],
+  "retained_tracks": 1262,
+  "removed_tracks_count": 91,
+  "limitation": "Exact bytes only; transformed copies, unknown artists and contour/audio joins remain unaudited."
+}

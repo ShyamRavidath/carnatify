@@ -1,0 +1,11 @@
+{
+  "track": "archive__Pūrvīkaḷyāṇi__12 Paraloka Sadaname",
+  "audio": "data/concert_audio/Pūrvīkaḷyāṇi/12 Paraloka Sadaname.mp3",
+  "audio_sha256": "c2ed0684351bec3810cf970fa0e76b1001cfa119cea52603965ffcbb08b1510b",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.0781329171732068
+}

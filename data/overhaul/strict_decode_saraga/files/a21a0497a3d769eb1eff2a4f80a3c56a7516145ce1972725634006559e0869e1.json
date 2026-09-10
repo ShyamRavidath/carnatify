@@ -1,0 +1,11 @@
+{
+  "track": "87_Pavamana_Suttudu_Pattu",
+  "audio": "saraga1.5_carnatic/Mahati at Arkay by Mahati/Pavamana Suttudu Pattu/Pavamana Suttudu Pattu.mp3.mp3",
+  "audio_sha256": "a21a0497a3d769eb1eff2a4f80a3c56a7516145ce1972725634006559e0869e1",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.23521741619333625
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Behāg__Orutti magaAi",
+  "audio": "data/concert_audio/Behāg/Orutti magaAi.mp3",
+  "audio_sha256": "011d70aa295a6fe35a3ec7e9980b01147a1fcad62d780229fdf5ecdd065f2b3c",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.33513033390045166
+}

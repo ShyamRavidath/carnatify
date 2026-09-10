@@ -1,0 +1,11 @@
+{
+  "track": "archive__Madhyamāvati__Alapana",
+  "audio": "data/concert_audio/Madhyamāvati/Alapana.mp3",
+  "audio_sha256": "524dbf9fc89f9527aa8f89d1a7e46b9e34e0e01e8bbe20379eeb803cbbd3e8d3",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.5377736249938607
+}

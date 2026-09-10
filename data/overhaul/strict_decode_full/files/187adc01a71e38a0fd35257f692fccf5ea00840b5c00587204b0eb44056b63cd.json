@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāpi__vA vA muruga",
+  "audio": "data/concert_audio/Kāpi/vA vA muruga.mp3",
+  "audio_sha256": "187adc01a71e38a0fd35257f692fccf5ea00840b5c00587204b0eb44056b63cd",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.28592837508767843
+}

@@ -1,0 +1,11 @@
+{
+  "track": "154_Innamum_Oru_thalam",
+  "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/Innamum Oru thalam/Sanjay Subrahmanyan - Innamum Oru thalam.mp3",
+  "audio_sha256": "fa647899b0d184baf8eaf0ae9c9d86f2c36b6c70f4c2d9eab902c369795f06c7",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5610716668888927
+}

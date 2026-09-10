@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāmavardani__vatandane",
+  "audio": "data/concert_audio/Kāmavardani/vatandane.mp3",
+  "audio_sha256": "b6d3769e5cd06edaf5656211b0909642b73fc92cb4cd80ce22b1a40a30633a79",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.24043674999848008
+}

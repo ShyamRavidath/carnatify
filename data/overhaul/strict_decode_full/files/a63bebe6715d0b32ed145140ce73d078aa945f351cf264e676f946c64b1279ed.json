@@ -1,0 +1,11 @@
+{
+  "track": "archive__Mōhanaṁ__RTP",
+  "audio": "data/concert_audio/Mōhanaṁ/RTP.mp3",
+  "audio_sha256": "a63bebe6715d0b32ed145140ce73d078aa945f351cf264e676f946c64b1279ed",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 5.715163209009916
+}

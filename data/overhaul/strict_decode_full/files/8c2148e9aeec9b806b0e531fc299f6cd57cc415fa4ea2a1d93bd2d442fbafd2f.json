@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kalyāṇi__vAsudEvayani",
+  "audio": "data/concert_audio/Kalyāṇi/vAsudEvayani.mp3",
+  "audio_sha256": "8c2148e9aeec9b806b0e531fc299f6cd57cc415fa4ea2a1d93bd2d442fbafd2f",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6518921670503914
+}

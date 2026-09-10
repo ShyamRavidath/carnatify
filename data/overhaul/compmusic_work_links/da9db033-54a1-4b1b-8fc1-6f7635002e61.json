@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/da9db033-54a1-4b1b-8fc1-6f7635002e61",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:14:21.705599+00:00",
+  "recording": {
+    "first-release-date": "2010",
+    "disambiguation": "",
+    "title": "Karpagambike",
+    "relations": [
+      {
+        "work": {
+          "title": "Karpagambike",
+          "disambiguation": "",
+          "type-id": null,
+          "language": null,
+          "attributes": [],
+          "iswcs": [],
+          "type": null,
+          "languages": [],
+          "id": "bbfcbd23-8270-460b-9b97-fdf29ffe66fd"
+        },
+        "end": null,
+        "attributes": [
+          "live"
+        ],
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-values": {},
+        "direction": "forward",
+        "target-type": "work",
+        "begin": null,
+        "type": "performance",
+        "source-credit": "",
+        "target-credit": "",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "ended": false
+      }
+    ],
+    "id": "da9db033-54a1-4b1b-8fc1-6f7635002e61",
+    "length": 620000,
+    "video": false
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Aṭāna__Sri Saraswati",
+  "audio": "data/concert_audio/Aṭāna/Sri Saraswati.mp3",
+  "audio_sha256": "c84763674bde45606aaa9267a2d12e0be5d4bee6d50fa587351008d23d8fc384",
+  "plan_sha256": "e0babfbb17ff59861b0f951c98fa857adcc486715904a4fa250f57daf00a6c12",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.0466913748532534
+}

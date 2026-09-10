@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ānandabhairavi__kamalAmbAm",
+  "audio": "data/concert_audio/Ānandabhairavi/kamalAmbAm.mp3",
+  "audio_sha256": "768c82ee5963ff9e3eced5e1538328b298f898e171b8f51f0a70b22d36a8ab68",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.4951239163056016
+}

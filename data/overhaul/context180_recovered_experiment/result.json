@@ -1,0 +1,6 @@
+{
+  "plan_sha256": "57d63ed66b3de23361b2fe07a7c931991c57895cf48a940fc2b3dc6c7a7b790a",
+  "elapsed_s": 5133.360969458241,
+  "status": "development experiment completed; no promotion",
+  "training": "data/overhaul/context180_recovered_experiment/training"
+}

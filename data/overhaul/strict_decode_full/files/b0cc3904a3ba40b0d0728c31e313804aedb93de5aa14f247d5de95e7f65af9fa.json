@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nāṭakurinji__Leela Nataka",
+  "audio": "data/concert_audio/Nāṭakurinji/Leela Nataka.mp3",
+  "audio_sha256": "b0cc3904a3ba40b0d0728c31e313804aedb93de5aa14f247d5de95e7f65af9fa",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.619394417386502
+}

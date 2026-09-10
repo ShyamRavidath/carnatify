@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/523a60bf-3060-4e07-9907-0435b76114be",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:37:57.695526+00:00",
+  "recording": {
+    "video": false,
+    "title": "Shambho Mahadeva",
+    "disambiguation": "",
+    "relations": [
+      {
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work",
+        "source-credit": "",
+        "work": {
+          "type": null,
+          "language": null,
+          "disambiguation": "",
+          "title": "Sambho Mahadeva",
+          "languages": [],
+          "iswcs": [],
+          "type-id": null,
+          "attributes": [],
+          "id": "43d08fe0-9256-4f50-835a-0aba6157b22b"
+        },
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "ended": false,
+        "end": null,
+        "type": "performance",
+        "attribute-values": {},
+        "target-credit": "",
+        "direction": "forward"
+      }
+    ],
+    "length": 1708000,
+    "first-release-date": "2006",
+    "id": "523a60bf-3060-4e07-9907-0435b76114be"
+  }
+}

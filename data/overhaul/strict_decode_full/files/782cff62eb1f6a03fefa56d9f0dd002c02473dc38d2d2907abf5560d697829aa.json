@@ -1,0 +1,11 @@
+{
+  "track": "archive__Vasanta__mA dayai",
+  "audio": "data/concert_audio/Vasanta/mA dayai.mp3",
+  "audio_sha256": "782cff62eb1f6a03fefa56d9f0dd002c02473dc38d2d2907abf5560d697829aa",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.45096108317375183
+}

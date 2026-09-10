@@ -1,0 +1,20 @@
+{
+  "inputs": {
+    "data/overhaul/dhenuka_coverage_pilot/result.json": "beef217201429026487b0dcd288411282e13077e81863d05d4e39dda1232e67f",
+    "data/overhaul/recording_fingerprints/result.json": "8a6df128f2394f95ec9c9321048ac6fd022649ff7f871c612f5880c804bc3a0d",
+    "data/overhaul/recording_fingerprints_field/result.json": "d1f95fbe93dd31879f638e7fc0aecae8a73f9dcb699639c453c9d077cc749ace",
+    "scripts/audit_dhenuka_coverage_pilot.py": "b4a27f0d42aa7c755e427abf32cf12a62df261a0179ec16c7342e55a54ba8770"
+  },
+  "library_sha256": "cd6276fc1dadd7e6d02ed0b63c392980fa7844cb3f6b03d82c01d9deb2f677fc",
+  "ffmpeg_sha256": "1332dc2de372bade9a8a63da0d6cdfab9de97fcefbae707bcc0b0506e1203327",
+  "screening_policy": {
+    "max_code_occurrences": 128,
+    "min_votes": 8,
+    "offsets_per_pair": 8,
+    "window_frames": 160,
+    "min_unique_codes": 32,
+    "max_bit_error": 0.1,
+    "action": "flag only; independent audio verification required"
+  },
+  "policy": "strict full-file decode; bounded 128-recording index batches; no model or label changes"
+}

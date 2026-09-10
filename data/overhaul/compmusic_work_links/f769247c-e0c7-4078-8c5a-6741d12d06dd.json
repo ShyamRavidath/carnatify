@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/f769247c-e0c7-4078-8c5a-6741d12d06dd",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:24:52.806801+00:00",
+  "recording": {
+    "length": 235000,
+    "relations": [
+      {
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "ended": false,
+        "end": null,
+        "type": "performance",
+        "target-credit": "",
+        "attribute-values": {},
+        "direction": "forward",
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ],
+        "source-credit": "",
+        "work": {
+          "language": null,
+          "type": null,
+          "disambiguation": "",
+          "languages": [],
+          "iswcs": [],
+          "title": "Amma Kripai Thandu",
+          "type-id": null,
+          "attributes": [],
+          "id": "20a25115-daad-4b02-b507-3f944691cc84"
+        }
+      }
+    ],
+    "id": "f769247c-e0c7-4078-8c5a-6741d12d06dd",
+    "first-release-date": "1999",
+    "video": false,
+    "disambiguation": "",
+    "title": "Amma Kripai Thandu"
+  }
+}

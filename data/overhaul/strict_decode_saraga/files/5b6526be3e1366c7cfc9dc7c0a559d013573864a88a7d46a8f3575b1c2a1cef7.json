@@ -1,0 +1,11 @@
+{
+  "track": "220_Nenindal_Agaadadu_undo",
+  "audio": "saraga1.5_carnatic/Srividya Janakiraman at Arkay by Srividya Janakiraman/Nenindal Agaadadu undo/Nenindal Agaadadu undo.mp3.mp3",
+  "audio_sha256": "5b6526be3e1366c7cfc9dc7c0a559d013573864a88a7d46a8f3575b1c2a1cef7",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4500170829705894
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Śankarābharaṇaṁ__swara rAga",
+  "audio": "data/concert_audio/Śankarābharaṇaṁ/swara rAga.mp3",
+  "audio_sha256": "21abd44121050b4c51c86ec7c276a84be0e890433e6469446ced9f48fe77062e",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.39841895876452327
+}

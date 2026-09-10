@@ -1,0 +1,11 @@
+{
+  "track": "29_Vitthala_Salaho_Swamy",
+  "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Vitthala Salaho Swamy/Vignesh Ishwar - Vitthala Salaho Swamy.mp3",
+  "audio_sha256": "d822c569910b744d4165c07ab6d1b1f6b7dca574f064a487aa42a994954ed961",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.506261124741286
+}

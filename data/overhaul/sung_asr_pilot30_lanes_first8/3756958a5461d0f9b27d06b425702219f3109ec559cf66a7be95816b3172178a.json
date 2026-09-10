@@ -1,0 +1,266 @@
+{
+  "plan_sha256": "a39d9c445383938cf13c7c73d750908a67a756036e9b4e9a27784fe81ce0f25a",
+  "query": {
+    "track": "47_Koti_Janmani",
+    "audio": "saraga1.5_carnatic/Akkarai Sisters at Arkay by Akkarai Sisters/Koti Janmani/Koti Janmani.mp3.mp3",
+    "audio_sha256": "10d03b57f877301572181e7e00d6effbd5a3ad11a3382ff08a3686e085792dc7",
+    "start_s": 248.34747165532877,
+    "duration_s": 30
+  },
+  "audio": {
+    "source_sr": 44100,
+    "channels": 2,
+    "downmix": "mean",
+    "downmix_power_ratio": 0.9663398898757625,
+    "clipping_fraction": 0.0,
+    "rms": 0.15750515161794124
+  },
+  "waveform_sha256": "fb6fec40f1fa322c19dfe52057179c9dd917eefdb0fd2a7b86f5527ee252ae01",
+  "transcription_s": 51.12447908287868,
+  "hypotheses": {
+    "auto": {
+      "text": "Oh The the the the the the the the the the the the the the the the the the the the the",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Oh",
+          "avg_logprob": -1.9050275802612304,
+          "no_speech_prob": 6.4281416598532815e-06,
+          "compression_ratio": 0.2
+        },
+        {
+          "start": 2.0,
+          "end": 2.98,
+          "text": " The",
+          "avg_logprob": -0.7241582430326021,
+          "no_speech_prob": 8.785296813584864e-06,
+          "compression_ratio": 5.533333333333333
+        },
+        {
+          "start": 2.98,
+          "end": 5.0,
+          "text": " the",
+          "avg_logprob": -0.7241582430326021,
+          "no_speech_prob": 8.785296813584864e-06,
+          "compression_ratio": 5.533333333333333
+        },
+        {
+          "start": 5.0,
+          "end": 9.0,
+          "text": " the",
+          "avg_logprob": -0.7241582430326021,
+          "no_speech_prob": 8.785296813584864e-06,
+          "compression_ratio": 5.533333333333333
+        },
+        {
+          "start": 9.0,
+          "end": 11.0,
+          "text": " the",
+          "avg_logprob": -0.7241582430326021,
+          "no_speech_prob": 8.785296813584864e-06,
+          "compression_ratio": 5.533333333333333
+        },
+        {
+          "start": 11.0,
+          "end": 13.0,
+          "text": " the",
+          "avg_logprob": -0.7241582430326021,
+          "no_speech_prob": 8.785296813584864e-06,
+          "compression_ratio": 5.533333333333333
+        },
+        {
+          "start": 13.0,
+          "end": 15.0,
+          "text": " the",
+          "avg_logprob": -0.7241582430326021,
+          "no_speech_prob": 8.785296813584864e-06,
+          "compression_ratio": 5.533333333333333
+        },
+        {
+          "start": 15.0,
+          "end": 16.0,
+          "text": " the",
+          "avg_logprob": -0.7241582430326021,
+          "no_speech_prob": 8.785296813584864e-06,
+          "compression_ratio": 5.533333333333333
+        },
+        {
+          "start": 16.0,
+          "end": 17.0,
+          "text": " the",
+          "avg_logprob": -0.7241582430326021,
+          "no_speech_prob": 8.785296813584864e-06,
+          "compression_ratio": 5.533333333333333
+        },
+        {
+          "start": 17.0,
+          "end": 18.0,
+          "text": " the",
+          "avg_logprob": -0.7241582430326021,
+          "no_speech_prob": 8.785296813584864e-06,
+          "compression_ratio": 5.533333333333333
+        },
+        {
+          "start": 18.0,
+          "end": 19.0,
+          "text": " the",
+          "avg_logprob": -0.7241582430326021,
+          "no_speech_prob": 8.785296813584864e-06,
+          "compression_ratio": 5.533333333333333
+        },
+        {
+          "start": 19.0,
+          "end": 20.0,
+          "text": " the",
+          "avg_logprob": -0.7241582430326021,
+          "no_speech_prob": 8.785296813584864e-06,
+          "compression_ratio": 5.533333333333333
+        },
+        {
+          "start": 20.0,
+          "end": 21.0,
+          "text": " the",
+          "avg_logprob": -0.7241582430326021,
+          "no_speech_prob": 8.785296813584864e-06,
+          "compression_ratio": 5.533333333333333
+        },
+        {
+          "start": 21.0,
+          "end": 22.0,
+          "text": " the",
+          "avg_logprob": -0.7241582430326021,
+          "no_speech_prob": 8.785296813584864e-06,
+          "compression_ratio": 5.533333333333333
+        },
+        {
+          "start": 22.0,
+          "end": 23.0,
+          "text": " the",
+          "avg_logprob": -0.7241582430326021,
+          "no_speech_prob": 8.785296813584864e-06,
+          "compression_ratio": 5.533333333333333
+        },
+        {
+          "start": 23.0,
+          "end": 24.0,
+          "text": " the",
+          "avg_logprob": -0.7241582430326021,
+          "no_speech_prob": 8.785296813584864e-06,
+          "compression_ratio": 5.533333333333333
+        },
+        {
+          "start": 24.0,
+          "end": 25.0,
+          "text": " the",
+          "avg_logprob": -0.7241582430326021,
+          "no_speech_prob": 8.785296813584864e-06,
+          "compression_ratio": 5.533333333333333
+        },
+        {
+          "start": 25.0,
+          "end": 26.0,
+          "text": " the",
+          "avg_logprob": -0.7241582430326021,
+          "no_speech_prob": 8.785296813584864e-06,
+          "compression_ratio": 5.533333333333333
+        },
+        {
+          "start": 26.0,
+          "end": 27.0,
+          "text": " the",
+          "avg_logprob": -0.7241582430326021,
+          "no_speech_prob": 8.785296813584864e-06,
+          "compression_ratio": 5.533333333333333
+        },
+        {
+          "start": 27.0,
+          "end": 28.0,
+          "text": " the",
+          "avg_logprob": -0.7241582430326021,
+          "no_speech_prob": 8.785296813584864e-06,
+          "compression_ratio": 5.533333333333333
+        },
+        {
+          "start": 28.0,
+          "end": 29.0,
+          "text": " the",
+          "avg_logprob": -0.7241582430326021,
+          "no_speech_prob": 8.785296813584864e-06,
+          "compression_ratio": 5.533333333333333
+        },
+        {
+          "start": 29.0,
+          "end": 30.0,
+          "text": " the",
+          "avg_logprob": -0.7241582430326021,
+          "no_speech_prob": 8.785296813584864e-06,
+          "compression_ratio": 5.533333333333333
+        }
+      ],
+      "language": "en",
+      "status": "unverified_hypothesis"
+    },
+    "ta": {
+      "text": "கேட்டாரிப்பர பத்தே உத்து ஓப்பது ஜனாலோசன் விஷயாகோமலாமதுர் பாம்பினினிரட கோடிஜன்மானி",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 13.0,
+          "text": " கேட்டாரிப்பர பத்தே உத்து",
+          "avg_logprob": -0.7819225947062175,
+          "no_speech_prob": 6.4281416598532815e-06,
+          "compression_ratio": 1.595959595959596
+        },
+        {
+          "start": 13.0,
+          "end": 22.0,
+          "text": " ஓப்பது ஜனாலோசன் விஷயாகோமலாமதுர்",
+          "avg_logprob": -0.7819225947062175,
+          "no_speech_prob": 6.4281416598532815e-06,
+          "compression_ratio": 1.595959595959596
+        },
+        {
+          "start": 22.0,
+          "end": 29.94,
+          "text": " பாம்பினினிரட கோடிஜன்மானி",
+          "avg_logprob": -0.6603478325737847,
+          "no_speech_prob": 4.07580458272605e-08,
+          "compression_ratio": 1.25
+        }
+      ],
+      "language": "ta",
+      "status": "unverified_hypothesis"
+    },
+    "te": {
+      "text": "కేతారి పరా పతే ఉతుంగా మోపవదు జనా లో చానా విషయా గోమళా మధురభా మినినిరా గోడి జనా",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 29.98,
+          "text": " కేతారి పరా పతే ఉతుంగా మోపవదు జనా లో చానా విషయా గోమళా మధురభా మినినిరా గోడి జనా",
+          "avg_logprob": -0.2479937586291083,
+          "no_speech_prob": 6.4281416598532815e-06,
+          "compression_ratio": 1.7672413793103448
+        }
+      ],
+      "language": "te",
+      "status": "unverified_hypothesis"
+    },
+    "hi": {
+      "text": "तुनिगा, खेतारिप्पर पत्ये उतिगा, लोप वदुजना लोचना विशया को मळा मधूर भामिनिरणा कोडि जमानि",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 29.98,
+          "text": " तुनिगा, खेतारिप्पर पत्ये उतिगा, लोप वदुजना लोचना विशया को मळा मधूर भामिनिरणा कोडि जमानि",
+          "avg_logprob": -0.3761425944207941,
+          "no_speech_prob": 6.4281416598532815e-06,
+          "compression_ratio": 1.75
+        }
+      ],
+      "language": "hi",
+      "status": "unverified_hypothesis"
+    }
+  }
+}

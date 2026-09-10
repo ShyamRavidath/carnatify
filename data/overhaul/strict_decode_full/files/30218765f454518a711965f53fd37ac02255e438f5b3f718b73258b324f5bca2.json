@@ -1,0 +1,11 @@
+{
+  "track": "archive__Maṇirangu__mAmava paTTAbhirAma",
+  "audio": "data/concert_audio/Maṇirangu/mAmava paTTAbhirAma.mp3",
+  "audio_sha256": "30218765f454518a711965f53fd37ac02255e438f5b3f718b73258b324f5bca2",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4007814577780664
+}

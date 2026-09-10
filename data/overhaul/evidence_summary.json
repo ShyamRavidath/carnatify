@@ -1,0 +1,110 @@
+{
+  "status": "repeated development validation; not final untouched test or SOTA evidence",
+  "baseline_sha256": "16905004423fcd295c17e5c908a5fd30977b4ef9d91fb3f6b2faecfdacbac83a",
+  "comparisons": {
+    "saraga_audio_results.json": {
+      "result_sha256": "986e04e364b2cc160087d97da9d1a24e5834ecdc02b4532292a6bfac92d0f1a0",
+      "external_summary": {
+        "n": 184,
+        "n_in_vocabulary": 108,
+        "n_answered": 184,
+        "correct": 67,
+        "top1_all": 0.3641304347826087,
+        "top1_in_vocabulary": 0.6203703703703703,
+        "top3_in_vocabulary": 0.75
+      },
+      "matched_vocabulary_paired_difference": {
+        "mean": 0.046296296296296294,
+        "ci95": [
+          -0.011764705882352941,
+          0.09401960784313722
+        ],
+        "n": 108,
+        "n_clusters": 17,
+        "bootstrap": 5000,
+        "candidate_correct": 67,
+        "baseline_correct": 62
+      }
+    },
+    "saraga_admitted_results.json": {
+      "result_sha256": "767d291f0f2f177ecf7e712bdf5761f7fae3350be6db57edabbe16a6a6cdd160",
+      "external_summary": {
+        "n": 184,
+        "n_in_vocabulary": 108,
+        "n_answered": 184,
+        "correct": 66,
+        "top1_all": 0.358695652173913,
+        "top1_in_vocabulary": 0.6111111111111112,
+        "top3_in_vocabulary": 0.7222222222222222
+      },
+      "matched_vocabulary_paired_difference": {
+        "mean": 0.037037037037037035,
+        "ci95": [
+          -0.04395604395604396,
+          0.09411977834612102
+        ],
+        "n": 108,
+        "n_clusters": 17,
+        "bootstrap": 5000,
+        "candidate_correct": 66,
+        "baseline_correct": 62
+      }
+    },
+    "saraga_compmusic_results.json": {
+      "result_sha256": "a1b19c0f4e735960accdea69af8ea8678a2a49be7890d577026f4be1b21ddb6d",
+      "external_summary": {
+        "n": 184,
+        "n_in_vocabulary": 90,
+        "n_answered": 184,
+        "correct": 55,
+        "top1_all": 0.29891304347826086,
+        "top1_in_vocabulary": 0.6111111111111112,
+        "top3_in_vocabulary": 0.7666666666666667,
+        "n_accepted": 156,
+        "coverage": 0.8478260869565217,
+        "accepted_precision": 0.33974358974358976,
+        "oov_false_acceptance": 0.7553191489361702
+      },
+      "matched_vocabulary_paired_difference": {
+        "mean": -0.023529411764705882,
+        "ci95": [
+          -0.1348441328039199,
+          0.12903225806451613
+        ],
+        "n": 85,
+        "n_clusters": 17,
+        "bootstrap": 5000,
+        "candidate_correct": 53,
+        "baseline_correct": 55
+      }
+    },
+    "saraga_combined_results.json": {
+      "result_sha256": "f8d90cb596ffd9c51d82b595cd197c33a5e0ac85ee5ecc9ef7b8d0b84421b6ef",
+      "external_summary": {
+        "n": 184,
+        "n_in_vocabulary": 113,
+        "n_answered": 184,
+        "correct": 74,
+        "top1_all": 0.40217391304347827,
+        "top1_in_vocabulary": 0.6548672566371682,
+        "top3_in_vocabulary": 0.7345132743362832,
+        "n_accepted": 90,
+        "coverage": 0.4891304347826087,
+        "accepted_precision": 0.5777777777777777,
+        "oov_false_acceptance": 0.30985915492957744
+      },
+      "matched_vocabulary_paired_difference": {
+        "mean": 0.08333333333333333,
+        "ci95": [
+          -0.009734836621776793,
+          0.1724137931034483
+        ],
+        "n": 108,
+        "n_clusters": 17,
+        "bootstrap": 5000,
+        "candidate_correct": 71,
+        "baseline_correct": 62
+      }
+    }
+  }
+}

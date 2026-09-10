@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nāṭa__mArgazhi tingaL",
+  "audio": "data/concert_audio/Nāṭa/mArgazhi tingaL.mp3",
+  "audio_sha256": "d0acec28c21bfff7eeee5c7f7a07472baa78feb6aa170c39aed58eeae86b7cbc",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7765264171175659
+}

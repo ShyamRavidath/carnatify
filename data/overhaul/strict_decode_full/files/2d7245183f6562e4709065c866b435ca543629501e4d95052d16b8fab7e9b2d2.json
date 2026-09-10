@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nāṭa__Maha Ganapthim",
+  "audio": "data/concert_audio/Nāṭa/Maha Ganapthim.mp3",
+  "audio_sha256": "2d7245183f6562e4709065c866b435ca543629501e4d95052d16b8fab7e9b2d2",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.2553353332914412
+}

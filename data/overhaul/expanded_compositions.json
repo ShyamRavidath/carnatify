@@ -1,0 +1,14 @@
+{
+  "version": "relative_24bin_halfsecond_oti_v1",
+  "catalog_sha256": "bb65aa3df182500456a18b05ffdeaa15b72ff4bb530fd9d3aa10c079c29afae2",
+  "corpus_sha256": "7ab2e7c3a91f89397e225c63b458f432aaf9ba00402c228126e9bbbd7a0fc056",
+  "n_tracks": 680,
+  "n_works": 561,
+  "n_weak_archive_references": 499,
+  "archive_inputs": {
+    "data/overhaul/broader/archive/manifest.json": "8a35daed03a79252f4f4147404565bfd969b62094e63bacb6ce38a6250007ea4",
+    "data/overhaul/broader/taxonomy_admission.json": "53094b589ad1cb50dd3a07208a26d813e885ebdf9de8ba8de77ed348600da94c"
+  },
+  "status": "candidate retrieval only; no production acceptance threshold",
+  "source": "Saraga distributed annotations; optional weak archival titles; retain original attribution/terms"
+}

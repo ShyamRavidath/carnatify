@@ -1,0 +1,11 @@
+{
+  "track": "archive__Madhyamāvati__pArtasArati",
+  "audio": "data/concert_audio/Madhyamāvati/pArtasArati.mp3",
+  "audio_sha256": "292f63efaf097c05bc3186957dea0521c25ca84feb126a49fc28335f2fa67344",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6063914159312844
+}

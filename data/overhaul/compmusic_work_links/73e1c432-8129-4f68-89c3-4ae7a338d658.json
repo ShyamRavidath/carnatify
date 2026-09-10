@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/73e1c432-8129-4f68-89c3-4ae7a338d658",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:47:59.310104+00:00",
+  "recording": {
+    "title": "Ekambranatham Bhajeham",
+    "length": 1672000,
+    "id": "73e1c432-8129-4f68-89c3-4ae7a338d658",
+    "video": false,
+    "relations": [
+      {
+        "ended": false,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "target-type": "work",
+        "type": "performance",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "target-credit": "",
+        "source-credit": "",
+        "attribute-values": {},
+        "end": null,
+        "work": {
+          "title": "Ekambranatham Bhajeham",
+          "type-id": null,
+          "language": null,
+          "id": "d151836d-d4c2-43e4-a407-afc956735a8b",
+          "type": null,
+          "languages": [],
+          "attributes": [],
+          "disambiguation": "",
+          "iswcs": []
+        },
+        "attributes": [
+          "live"
+        ],
+        "direction": "forward"
+      }
+    ],
+    "first-release-date": "2008",
+    "disambiguation": ""
+  }
+}

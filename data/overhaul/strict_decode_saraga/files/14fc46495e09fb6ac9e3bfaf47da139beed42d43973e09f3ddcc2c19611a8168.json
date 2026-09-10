@@ -1,0 +1,11 @@
+{
+  "track": "30_Pavamana_Suthudu_Mangalam",
+  "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Pavamana Suthudu Mangalam/Vignesh Ishwar - Pavamana Suthudu Mangalam.mp3",
+  "audio_sha256": "14fc46495e09fb6ac9e3bfaf47da139beed42d43973e09f3ddcc2c19611a8168",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.1886858339421451
+}

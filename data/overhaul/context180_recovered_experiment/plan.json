@@ -1,0 +1,16 @@
+{
+  "inputs": {
+    "/Users/shyamravidath/carnatify/data/overhaul/context180_strict_decode/plan.json": "cc4aad541aa15a2488ba0748f8daebb4db9a23b1b4420eeca950a17e4cbae042",
+    "/Users/shyamravidath/carnatify/data/overhaul/file_artist_strict_decode/folds.json": "7608e42687f5d9371ca29f2a4b729997298f05e7fd244941ce4f9b38e3cb6814",
+    "/Users/shyamravidath/carnatify/data/overhaul/repro_audio_identity/audio_identity.json": "bb0532a362ccb20770faf73afbf814ce4a8833d3204b6190a1435a8e2aa011ff",
+    "/Users/shyamravidath/carnatify/data/overhaul/repro_audio_identity/evaluation_corpus.json": "53622b4e2349873b61cf0af11be3a40ecb37d212145d2f1678064a0b8ce07b19",
+    "/Users/shyamravidath/carnatify/scripts/finish_context_experiment.py": "7e5ee6e9a6ff1b0e587d083e3d935ded691a21c976fc909fc693823d561e9c97",
+    "/Users/shyamravidath/carnatify/scripts/recover_context_decode_windows.py": "8ac40d330ffeabfe0bf74d1c7187a932cf906a8c8174404827ec244727dbba1b",
+    "/Users/shyamravidath/carnatify/scripts/merge_context_decode_recovery.py": "e1f09591d802ea233a519480c2bf1df51f397a61db3587664c366e24f3bca46a",
+    "/Users/shyamravidath/carnatify/scripts/raga_kernel_benchmark.py": "b4a8582e88ebb0a75f4b9017d0c49755bc3feea031db2a18ec843812d5329180",
+    "/Users/shyamravidath/carnatify/scripts/train_raga_svc.py": "6c60aa22f2cc54f90e6176dde1b567decf6a47ce0305d29ff2995e5fb0a56a0b",
+    "/Users/shyamravidath/carnatify/scripts/evaluate_annotated_raga.py": "6d79cf2b01fa0716a7aa7fab20c0fddf82262c14d8b98f30d6de452249b51410"
+  },
+  "parent_pid": 58717,
+  "policy": "wait for exact parent; frozen local candidate recovery, fixed-fold benchmark, fit, matched development evaluation; no promotion"
+}

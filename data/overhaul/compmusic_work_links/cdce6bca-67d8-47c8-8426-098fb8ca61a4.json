@@ -1,0 +1,14 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/cdce6bca-67d8-47c8-8426-098fb8ca61a4",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:11:09.973905+00:00",
+  "recording": {
+    "title": "Daritapu",
+    "length": 1041639,
+    "relations": [],
+    "id": "cdce6bca-67d8-47c8-8426-098fb8ca61a4",
+    "video": false,
+    "disambiguation": "",
+    "first-release-date": "2008"
+  }
+}

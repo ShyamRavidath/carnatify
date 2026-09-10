@@ -1,0 +1,11 @@
+{
+  "track": "91_Ragam_Tanam_Pallavi",
+  "audio": "saraga1.5_carnatic/Mahati at Arkay by Mahati/Ragam Tanam Pallavi/Ragam Tanam Pallavi.mp3.mp3",
+  "audio_sha256": "41714f14427bc2a11bb6d3c6aea9e49df4a0cec77d7b5c71f9d2cbbaab625953",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 8.482878874987364
+}

@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/0cc1dc29-05af-42eb-8b87-7d15d706d7a6",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:18:39.662584+00:00",
+  "recording": {
+    "disambiguation": "",
+    "length": 3628000,
+    "video": false,
+    "id": "0cc1dc29-05af-42eb-8b87-7d15d706d7a6",
+    "relations": [
+      {
+        "source-credit": "",
+        "end": null,
+        "ended": false,
+        "target-type": "work",
+        "type": "performance",
+        "work": {
+          "language": "tel",
+          "attributes": [],
+          "type": "Song",
+          "title": "Kaddanu variki",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "id": "f28c7bd6-53cf-4b84-b504-2dad473b65ec",
+          "iswcs": [],
+          "disambiguation": "",
+          "languages": [
+            "tel"
+          ]
+        },
+        "target-credit": "",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "direction": "forward",
+        "attribute-values": {},
+        "attributes": [
+          "live"
+        ]
+      }
+    ],
+    "title": "Kaddanu Variki",
+    "first-release-date": "2008"
+  }
+}

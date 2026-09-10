@@ -1,0 +1,11 @@
+{
+  "track": "archive__Hamsadhvāni__Jayamahishasura",
+  "audio": "data/concert_audio/Hamsadhvāni/Jayamahishasura.mp3",
+  "audio_sha256": "5aee87d04b134fb669b1122878c21a5c21224ac0aebb260c8a7b1485259c3c5b",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.9856978328898549
+}

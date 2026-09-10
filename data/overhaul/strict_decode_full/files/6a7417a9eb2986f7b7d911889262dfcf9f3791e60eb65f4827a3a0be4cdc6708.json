@@ -1,0 +1,11 @@
+{
+  "track": "archive__Madhyamāvati__4 Nadupai",
+  "audio": "data/concert_audio/Madhyamāvati/4 Nadupai.mp3",
+  "audio_sha256": "6a7417a9eb2986f7b7d911889262dfcf9f3791e60eb65f4827a3a0be4cdc6708",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6693840832449496
+}

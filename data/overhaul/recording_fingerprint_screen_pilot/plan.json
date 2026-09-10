@@ -1,0 +1,43 @@
+{
+  "corpus_sha256": "7ab2e7c3a91f89397e225c63b458f432aaf9ba00402c228126e9bbbd7a0fc056",
+  "audio_receipts_sha256": "986e04e364b2cc160087d97da9d1a24e5834ecdc02b4532292a6bfac92d0f1a0",
+  "library_sha256": "cd6276fc1dadd7e6d02ed0b63c392980fa7844cb3f6b03d82c01d9deb2f677fc",
+  "selection": "first four full-audio SHA256 values; centered 30 seconds",
+  "transforms": [
+    "identity",
+    "gain_0.35",
+    "mp3_64k",
+    "leading_silence_3.7s"
+  ],
+  "alignment": {
+    "max_shift": 50,
+    "min_frames": 160
+  },
+  "tracks": [
+    {
+      "track": "112_Rama_Rama_Guna_Seema",
+      "audio_sha256": "00861240ceb1ef403cc561c302fc0496212ab007b3fa848e8a0178cf69bdfe07"
+    },
+    {
+      "track": "19_Marubari",
+      "audio_sha256": "00c02c89014988ff9f2bb778b0efbeef6cb2b47e1a4b28cb7c0854ab261366a0"
+    },
+    {
+      "track": "17_Eranapai",
+      "audio_sha256": "02dd72fdcd3ac4eeba086bb365b311bceabed8c18da70db6816bf244bcdbdef0"
+    },
+    {
+      "track": "223_Ramachandraya_Mangalam",
+      "audio_sha256": "02e3104b83832dcafccac129d263de0ec6044423439f33f6ab301e355288937f"
+    }
+  ],
+  "screening_policy": {
+    "max_code_occurrences": 128,
+    "min_votes": 8,
+    "offsets_per_pair": 8,
+    "window_frames": 160,
+    "min_unique_codes": 32,
+    "max_bit_error": 0.1,
+    "action": "flag only; independent audio verification required"
+  }
+}

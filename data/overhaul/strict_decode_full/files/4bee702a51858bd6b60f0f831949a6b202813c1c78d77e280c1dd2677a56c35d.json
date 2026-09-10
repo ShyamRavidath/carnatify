@@ -1,0 +1,11 @@
+{
+  "track": "archive__Mukhāri__enRaikku Shiva krupai",
+  "audio": "data/concert_audio/Mukhāri/enRaikku Shiva krupai.mp3",
+  "audio_sha256": "4bee702a51858bd6b60f0f831949a6b202813c1c78d77e280c1dd2677a56c35d",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5130132082849741
+}

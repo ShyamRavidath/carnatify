@@ -1,0 +1,11 @@
+{
+  "track": "archive__Vasanta__VasundharaRajagopalan MaragathaLingam",
+  "audio": "data/concert_audio/Vasanta/VasundharaRajagopalan MaragathaLingam.mp3",
+  "audio_sha256": "93e55a370f67c96cc0053d726a4d8f4ac7a0aff6980001389ea376f30f8c54ac",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3960497919470072
+}

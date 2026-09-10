@@ -1,0 +1,11 @@
+{
+  "track": "archive__Varāḷi__mAmava meenAkshi",
+  "audio": "data/concert_audio/Varāḷi/mAmava meenAkshi.mp3",
+  "audio_sha256": "d1b6d0d01e79f3f915d3a0ed23bf0a2ea8a3f2163396692f7b5bacfc17ebc8be",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.935523958876729
+}

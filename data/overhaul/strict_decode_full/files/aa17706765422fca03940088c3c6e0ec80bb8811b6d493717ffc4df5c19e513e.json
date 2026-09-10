@@ -1,0 +1,11 @@
+{
+  "track": "archive__Behāg__4 RTP",
+  "audio": "data/concert_audio/Behāg/4 RTP.mp3",
+  "audio_sha256": "aa17706765422fca03940088c3c6e0ec80bb8811b6d493717ffc4df5c19e513e",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.775103083346039
+}

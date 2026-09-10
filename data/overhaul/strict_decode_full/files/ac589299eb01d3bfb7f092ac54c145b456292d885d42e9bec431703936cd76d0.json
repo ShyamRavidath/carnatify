@@ -1,0 +1,11 @@
+{
+  "track": "archive__Karaharapriya__prakkala nilapaDi",
+  "audio": "data/concert_audio/Karaharapriya/prakkala nilapaDi.mp3",
+  "audio_sha256": "ac589299eb01d3bfb7f092ac54c145b456292d885d42e9bec431703936cd76d0",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3949472908861935
+}

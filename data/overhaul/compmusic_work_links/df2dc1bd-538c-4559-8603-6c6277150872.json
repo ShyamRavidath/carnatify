@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/df2dc1bd-538c-4559-8603-6c6277150872",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:17:12.742210+00:00",
+  "recording": {
+    "disambiguation": "",
+    "length": 2076571,
+    "relations": [
+      {
+        "attributes": [
+          "live"
+        ],
+        "attribute-values": {},
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "direction": "forward",
+        "target-credit": "",
+        "work": {
+          "type-id": null,
+          "title": "Sreenivasa Thavacharanam",
+          "attributes": [],
+          "language": null,
+          "type": null,
+          "disambiguation": "",
+          "iswcs": [],
+          "languages": [],
+          "id": "abbdefed-4e50-42ac-8ebc-7a145283ce45"
+        },
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "type": "performance",
+        "target-type": "work",
+        "source-credit": "",
+        "end": null,
+        "ended": false
+      }
+    ],
+    "id": "df2dc1bd-538c-4559-8603-6c6277150872",
+    "video": false,
+    "title": "Sreenivasa Thavacharanam",
+    "first-release-date": "1987"
+  }
+}

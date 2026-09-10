@@ -1,0 +1,11 @@
+{
+  "track": "archive__Tōḍi__parAtpara raghuvara",
+  "audio": "data/concert_audio/Tōḍi/parAtpara raghuvara.mp3",
+  "audio_sha256": "4a20dae85353ed6b761b23e457d3ea5178dc8aa8e7706320d5b4525f7c5e62b4",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7083257082849741
+}

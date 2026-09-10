@@ -1,0 +1,40 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/e192bf26-c5eb-477a-9899-406732a7893c",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:17:33.281694+00:00",
+  "recording": {
+    "title": "Sundareshwaraya Namasthe",
+    "first-release-date": "2008-11",
+    "disambiguation": "",
+    "length": 1424000,
+    "id": "e192bf26-c5eb-477a-9899-406732a7893c",
+    "relations": [
+      {
+        "attributes": [],
+        "attribute-values": {},
+        "begin": null,
+        "direction": "forward",
+        "attribute-ids": {},
+        "work": {
+          "languages": [],
+          "disambiguation": "",
+          "iswcs": [],
+          "id": "6c24f0fe-6e2b-4a7c-a433-17d8265aa824",
+          "type-id": null,
+          "title": "Sundareshwaraya Namasthe",
+          "type": null,
+          "attributes": [],
+          "language": null
+        },
+        "target-credit": "",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "type": "performance",
+        "target-type": "work",
+        "end": null,
+        "ended": false,
+        "source-credit": ""
+      }
+    ],
+    "video": false
+  }
+}

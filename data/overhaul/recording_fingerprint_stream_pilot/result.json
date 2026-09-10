@@ -1,0 +1,264 @@
+{
+  "plan_sha256": "bafc540bd8d14a07f83b40ab7a80f8289a5258a54dddc8b0b7e4f06a2fb75d8b",
+  "rows": [
+    {
+      "track": "112_Rama_Rama_Guna_Seema",
+      "role": "evaluation",
+      "audio": "saraga1.5_carnatic/Cherthala Ranganatha Sharma at Arkay by Cherthala Ranganatha Sharma/Rama Rama Guna Seema/Rama Rama Guna Seema.mp3.mp3",
+      "sha256": "00861240ceb1ef403cc561c302fc0496212ab007b3fa848e8a0178cf69bdfe07",
+      "cache": "data/overhaul/recording_fingerprints/cache/00861240ceb1ef403cc561c302fc0496212ab007b3fa848e8a0178cf69bdfe07_cd6276fc1dadd7e6.npz",
+      "cache_sha256": "4175871ed1eebc7553684f8705e420d373a4f99bfc12c2afbf9b1bfd91a5f3c2",
+      "metadata": {
+        "policy": {
+          "version": "chromaprint_1.5.1_test2_native_mono_blocks30_v1",
+          "library_sha256": "cd6276fc1dadd7e6d02ed0b63c392980fa7844cb3f6b03d82c01d9deb2f677fc",
+          "block_s": 30,
+          "clipping": "clip normalized mono to [-1,1], count affected samples",
+          "downmix": "shared phase_safe_mono per native-rate block"
+        },
+        "stream": {
+          "version": "1.5.1",
+          "algorithm": 1,
+          "samples": 159134447,
+          "sr": 44100,
+          "item_duration_ms": 123
+        },
+        "diagnostics": {
+          "blocks": 121,
+          "clipped_samples": 0,
+          "strongest_channel_blocks": 0
+        },
+        "audio_sha256": "00861240ceb1ef403cc561c302fc0496212ab007b3fa848e8a0178cf69bdfe07",
+        "duration_s": 3608.4908616780044,
+        "unique_codes": 28703
+      }
+    },
+    {
+      "track": "19_Marubari",
+      "role": "evaluation",
+      "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Marubari/Ashwath Narayanan - Marubari.mp3",
+      "sha256": "00c02c89014988ff9f2bb778b0efbeef6cb2b47e1a4b28cb7c0854ab261366a0",
+      "cache": "data/overhaul/recording_fingerprints/cache/00c02c89014988ff9f2bb778b0efbeef6cb2b47e1a4b28cb7c0854ab261366a0_cd6276fc1dadd7e6.npz",
+      "cache_sha256": "1c5a81d38e02706d3e724cf601e0c6bfdf060350050c42848296c660f29444a1",
+      "metadata": {
+        "policy": {
+          "version": "chromaprint_1.5.1_test2_native_mono_blocks30_v1",
+          "library_sha256": "cd6276fc1dadd7e6d02ed0b63c392980fa7844cb3f6b03d82c01d9deb2f677fc",
+          "block_s": 30,
+          "clipping": "clip normalized mono to [-1,1], count affected samples",
+          "downmix": "shared phase_safe_mono per native-rate block"
+        },
+        "stream": {
+          "version": "1.5.1",
+          "algorithm": 1,
+          "samples": 11952623,
+          "sr": 44100,
+          "item_duration_ms": 123
+        },
+        "diagnostics": {
+          "blocks": 10,
+          "clipped_samples": 0,
+          "strongest_channel_blocks": 0
+        },
+        "audio_sha256": "00c02c89014988ff9f2bb778b0efbeef6cb2b47e1a4b28cb7c0854ab261366a0",
+        "duration_s": 271.03453514739226,
+        "unique_codes": 2152
+      }
+    },
+    {
+      "track": "archive__Rītigauḷa__cErarAvadEmi",
+      "role": "train",
+      "audio": "data/concert_audio/Rītigauḷa/cErarAvadEmi.mp3",
+      "sha256": "00d635a69617c6211bc1af39359d8d8debe6937577012c1df0d9054862faec9f",
+      "cache": "data/overhaul/recording_fingerprints/cache/00d635a69617c6211bc1af39359d8d8debe6937577012c1df0d9054862faec9f_cd6276fc1dadd7e6.npz",
+      "cache_sha256": "46700e0c7c6650736e2d21b4827b134e927e1cb2733b4ce6576be314962bbd43",
+      "metadata": {
+        "policy": {
+          "version": "chromaprint_1.5.1_test2_native_mono_blocks30_v1",
+          "library_sha256": "cd6276fc1dadd7e6d02ed0b63c392980fa7844cb3f6b03d82c01d9deb2f677fc",
+          "block_s": 30,
+          "clipping": "clip normalized mono to [-1,1], count affected samples",
+          "downmix": "shared phase_safe_mono per native-rate block"
+        },
+        "stream": {
+          "version": "1.5.1",
+          "algorithm": 1,
+          "samples": 40702940,
+          "sr": 44100,
+          "item_duration_ms": 123
+        },
+        "diagnostics": {
+          "blocks": 31,
+          "clipped_samples": 2,
+          "strongest_channel_blocks": 0
+        },
+        "audio_sha256": "00d635a69617c6211bc1af39359d8d8debe6937577012c1df0d9054862faec9f",
+        "duration_s": 922.9691609977324,
+        "unique_codes": 7317
+      }
+    },
+    {
+      "track": "archive__Behāg__Orutti magaAi",
+      "role": "train",
+      "audio": "data/concert_audio/Behāg/Orutti magaAi.mp3",
+      "sha256": "011d70aa295a6fe35a3ec7e9980b01147a1fcad62d780229fdf5ecdd065f2b3c",
+      "cache": "data/overhaul/recording_fingerprints/cache/011d70aa295a6fe35a3ec7e9980b01147a1fcad62d780229fdf5ecdd065f2b3c_cd6276fc1dadd7e6.npz",
+      "cache_sha256": "560a0796849941073a67ef95c315e44b224457d735a8b5c2e265921d76a521cf",
+      "metadata": {
+        "policy": {
+          "version": "chromaprint_1.5.1_test2_native_mono_blocks30_v1",
+          "library_sha256": "cd6276fc1dadd7e6d02ed0b63c392980fa7844cb3f6b03d82c01d9deb2f677fc",
+          "block_s": 30,
+          "clipping": "clip normalized mono to [-1,1], count affected samples",
+          "downmix": "shared phase_safe_mono per native-rate block"
+        },
+        "stream": {
+          "version": "1.5.1",
+          "algorithm": 1,
+          "samples": 7553043,
+          "sr": 44100,
+          "item_duration_ms": 123
+        },
+        "diagnostics": {
+          "blocks": 6,
+          "clipped_samples": 4,
+          "strongest_channel_blocks": 0
+        },
+        "audio_sha256": "011d70aa295a6fe35a3ec7e9980b01147a1fcad62d780229fdf5ecdd065f2b3c",
+        "duration_s": 171.27081632653062,
+        "unique_codes": 1352
+      }
+    },
+    {
+      "track": "archive__Sāma__annapoorNE",
+      "role": "train",
+      "audio": "data/concert_audio/Sāma/annapoorNE.mp3",
+      "sha256": "02625ff0f7aca1f864797caf824cabefb6ca5997301edb42a5c3a830fd167aed",
+      "cache": "data/overhaul/recording_fingerprints/cache/02625ff0f7aca1f864797caf824cabefb6ca5997301edb42a5c3a830fd167aed_cd6276fc1dadd7e6.npz",
+      "cache_sha256": "67192660245757044a0fb2148df46b11896ae0e07881da485a8a66baa89bd6c8",
+      "metadata": {
+        "policy": {
+          "version": "chromaprint_1.5.1_test2_native_mono_blocks30_v1",
+          "library_sha256": "cd6276fc1dadd7e6d02ed0b63c392980fa7844cb3f6b03d82c01d9deb2f677fc",
+          "block_s": 30,
+          "clipping": "clip normalized mono to [-1,1], count affected samples",
+          "downmix": "shared phase_safe_mono per native-rate block"
+        },
+        "stream": {
+          "version": "1.5.1",
+          "algorithm": 1,
+          "samples": 21901635,
+          "sr": 44100,
+          "item_duration_ms": 123
+        },
+        "diagnostics": {
+          "blocks": 17,
+          "clipped_samples": 2,
+          "strongest_channel_blocks": 0
+        },
+        "audio_sha256": "02625ff0f7aca1f864797caf824cabefb6ca5997301edb42a5c3a830fd167aed",
+        "duration_s": 496.6357142857143,
+        "unique_codes": 3972
+      }
+    },
+    {
+      "track": "17_Eranapai",
+      "role": "evaluation",
+      "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Eranapai/Ashwath Narayanan - Eranapai.mp3",
+      "sha256": "02dd72fdcd3ac4eeba086bb365b311bceabed8c18da70db6816bf244bcdbdef0",
+      "cache": "data/overhaul/recording_fingerprints/cache/02dd72fdcd3ac4eeba086bb365b311bceabed8c18da70db6816bf244bcdbdef0_cd6276fc1dadd7e6.npz",
+      "cache_sha256": "99e787ecb0b5d97251c0d6eca7281ce3bfe8c84e38accb7303df954b7b6de7f3",
+      "metadata": {
+        "policy": {
+          "version": "chromaprint_1.5.1_test2_native_mono_blocks30_v1",
+          "library_sha256": "cd6276fc1dadd7e6d02ed0b63c392980fa7844cb3f6b03d82c01d9deb2f677fc",
+          "block_s": 30,
+          "clipping": "clip normalized mono to [-1,1], count affected samples",
+          "downmix": "shared phase_safe_mono per native-rate block"
+        },
+        "stream": {
+          "version": "1.5.1",
+          "algorithm": 1,
+          "samples": 9162479,
+          "sr": 44100,
+          "item_duration_ms": 123
+        },
+        "diagnostics": {
+          "blocks": 7,
+          "clipped_samples": 0,
+          "strongest_channel_blocks": 0
+        },
+        "audio_sha256": "02dd72fdcd3ac4eeba086bb365b311bceabed8c18da70db6816bf244bcdbdef0",
+        "duration_s": 207.76596371882087,
+        "unique_codes": 1641
+      }
+    },
+    {
+      "track": "223_Ramachandraya_Mangalam",
+      "role": "evaluation",
+      "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Ramachandraya Mangalam/Rithvik Raja - Ramachandraya Mangalam.mp3",
+      "sha256": "02e3104b83832dcafccac129d263de0ec6044423439f33f6ab301e355288937f",
+      "cache": "data/overhaul/recording_fingerprints/cache/02e3104b83832dcafccac129d263de0ec6044423439f33f6ab301e355288937f_cd6276fc1dadd7e6.npz",
+      "cache_sha256": "19187f59b6940442af57ee1b5ff1a13bb58cbca51fc52b319eb84a74bd772356",
+      "metadata": {
+        "policy": {
+          "version": "chromaprint_1.5.1_test2_native_mono_blocks30_v1",
+          "library_sha256": "cd6276fc1dadd7e6d02ed0b63c392980fa7844cb3f6b03d82c01d9deb2f677fc",
+          "block_s": 30,
+          "clipping": "clip normalized mono to [-1,1], count affected samples",
+          "downmix": "shared phase_safe_mono per native-rate block"
+        },
+        "stream": {
+          "version": "1.5.1",
+          "algorithm": 1,
+          "samples": 4003584,
+          "sr": 44100,
+          "item_duration_ms": 123
+        },
+        "diagnostics": {
+          "blocks": 4,
+          "clipped_samples": 0,
+          "strongest_channel_blocks": 0
+        },
+        "audio_sha256": "02e3104b83832dcafccac129d263de0ec6044423439f33f6ab301e355288937f",
+        "duration_s": 90.78421768707483,
+        "unique_codes": 709
+      }
+    },
+    {
+      "track": "55_Enadhu_Manam_Kavalai",
+      "role": "evaluation",
+      "audio": "saraga1.5_carnatic/Dr S Sundar at Arkay by S Sundar/Enadhu Manam Kavalai/Enadhu Manam Kavalai.mp3.mp3",
+      "sha256": "032207cd757605b0469bafe7bcc291b512acb0b6e461a96abdde6605ebe90b06",
+      "cache": "data/overhaul/recording_fingerprints/cache/032207cd757605b0469bafe7bcc291b512acb0b6e461a96abdde6605ebe90b06_cd6276fc1dadd7e6.npz",
+      "cache_sha256": "c594d45d67f2c50646f14f7641223269a1c52594a3248662f697f7d337dfd3ce",
+      "metadata": {
+        "policy": {
+          "version": "chromaprint_1.5.1_test2_native_mono_blocks30_v1",
+          "library_sha256": "cd6276fc1dadd7e6d02ed0b63c392980fa7844cb3f6b03d82c01d9deb2f677fc",
+          "block_s": 30,
+          "clipping": "clip normalized mono to [-1,1], count affected samples",
+          "downmix": "shared phase_safe_mono per native-rate block"
+        },
+        "stream": {
+          "version": "1.5.1",
+          "algorithm": 1,
+          "samples": 17464943,
+          "sr": 44100,
+          "item_duration_ms": 123
+        },
+        "diagnostics": {
+          "blocks": 14,
+          "clipped_samples": 0,
+          "strongest_channel_blocks": 0
+        },
+        "audio_sha256": "032207cd757605b0469bafe7bcc291b512acb0b6e461a96abdde6605ebe90b06",
+        "duration_s": 396.03045351473924,
+        "unique_codes": 3150
+      }
+    }
+  ],
+  "completed": 8,
+  "expected": 8,
+  "elapsed_s": 12.195453041233122
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Gauḷa__01 pranamamyaham",
+  "audio": "data/concert_audio/Gauḷa/01 pranamamyaham.mp3",
+  "audio_sha256": "b9fb8d187b55e9625d196ebcc0f05bef5cf3c02c306b8f25ce636746ef424d3d",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6121914577670395
+}

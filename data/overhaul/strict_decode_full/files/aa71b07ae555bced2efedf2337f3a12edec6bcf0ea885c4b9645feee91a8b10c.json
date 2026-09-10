@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sāranga__NeeKelaDayaradu KhandaChapu",
+  "audio": "data/concert_audio/Sāranga/NeeKelaDayaradu KhandaChapu.mp3",
+  "audio_sha256": "aa71b07ae555bced2efedf2337f3a12edec6bcf0ea885c4b9645feee91a8b10c",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.078758541960269
+}

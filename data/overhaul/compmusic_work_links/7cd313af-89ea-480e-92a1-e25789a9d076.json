@@ -1,0 +1,40 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/7cd313af-89ea-480e-92a1-e25789a9d076",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:49:49.322823+00:00",
+  "recording": {
+    "relations": [
+      {
+        "attribute-ids": {},
+        "attributes": [],
+        "ended": false,
+        "end": null,
+        "target-credit": "",
+        "target-type": "work",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "type": "performance",
+        "source-credit": "",
+        "attribute-values": {},
+        "work": {
+          "disambiguation": "",
+          "title": "Ni Cittamu",
+          "language": null,
+          "type": null,
+          "id": "7bb63e8d-8c06-483d-9bfa-235d5b905884",
+          "attributes": [],
+          "type-id": null,
+          "languages": [],
+          "iswcs": []
+        },
+        "direction": "forward",
+        "begin": null
+      }
+    ],
+    "first-release-date": "2011",
+    "length": 844454,
+    "id": "7cd313af-89ea-480e-92a1-e25789a9d076",
+    "video": false,
+    "disambiguation": "",
+    "title": "Ni Cittamu"
+  }
+}

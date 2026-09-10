@@ -1,0 +1,11 @@
+{
+  "track": "archive__Dhanyāsi__Isa Beku",
+  "audio": "data/concert_audio/Dhanyāsi/Isa Beku.mp3",
+  "audio_sha256": "adaed683a99292114661fa2a08beeb2b203803a30b7168411252a8f4a8a804cc",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6812986247241497
+}

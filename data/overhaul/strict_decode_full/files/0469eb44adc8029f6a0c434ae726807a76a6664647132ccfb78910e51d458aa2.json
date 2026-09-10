@@ -1,0 +1,11 @@
+{
+  "track": "archive__Vakuḷābharaṇaṁ__bhajan",
+  "audio": "data/concert_audio/Vakuḷābharaṇaṁ/bhajan.mp3",
+  "audio_sha256": "0469eb44adc8029f6a0c434ae726807a76a6664647132ccfb78910e51d458aa2",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6661045420914888
+}

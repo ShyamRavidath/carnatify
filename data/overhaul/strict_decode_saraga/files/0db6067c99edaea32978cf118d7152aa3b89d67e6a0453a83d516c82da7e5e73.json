@@ -1,0 +1,11 @@
+{
+  "track": "218_Sarasuda_Ninne_Kori",
+  "audio": "saraga1.5_carnatic/Srividya Janakiraman at Arkay by Srividya Janakiraman/Sarasuda Ninne Kori/Sarasuda Ninne Kori.mp3.mp3",
+  "audio_sha256": "0db6067c99edaea32978cf118d7152aa3b89d67e6a0453a83d516c82da7e5e73",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6140264580026269
+}

@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/1634762f-a482-473c-935c-7883f16f26cb",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:20:36.627331+00:00",
+  "recording": {
+    "id": "1634762f-a482-473c-935c-7883f16f26cb",
+    "first-release-date": "2011",
+    "relations": [
+      {
+        "end": null,
+        "ended": false,
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "direction": "forward",
+        "attribute-values": {},
+        "target-credit": "",
+        "type": "performance",
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work",
+        "work": {
+          "type-id": null,
+          "attributes": [],
+          "id": "18c0cc01-e32d-443e-9583-187bb5b8b8ff",
+          "type": null,
+          "language": null,
+          "disambiguation": "",
+          "title": "Emanine",
+          "languages": [],
+          "iswcs": []
+        },
+        "source-credit": ""
+      }
+    ],
+    "length": 2722000,
+    "disambiguation": "",
+    "title": "Emanine",
+    "video": false
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ābhōgī__Evari Bodhana",
+  "audio": "data/concert_audio/Ābhōgī/Evari Bodhana.mp3",
+  "audio_sha256": "cdf78492f1d07498f60cfcff342041ff358303ad25407d690be8d84d8fea60bb",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7261570831760764
+}

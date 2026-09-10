@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/3e9f9dc3-7f64-4561-a2c1-80dd9fa66ebc",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:31:34.682008+00:00",
+  "recording": {
+    "first-release-date": "1999",
+    "title": "Vazhi Maraittirukkude",
+    "id": "3e9f9dc3-7f64-4561-a2c1-80dd9fa66ebc",
+    "relations": [
+      {
+        "end": null,
+        "ended": false,
+        "source-credit": "",
+        "target-type": "work",
+        "type": "performance",
+        "target-credit": "",
+        "work": {
+          "languages": [
+            "tam"
+          ],
+          "disambiguation": "Todi Version of the Krithi",
+          "iswcs": [],
+          "id": "8d62791c-e2bb-4e3d-a21c-4b30cb172e91",
+          "title": "Vazhi Maraittirukkude",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "language": "tam",
+          "attributes": [],
+          "type": "Song"
+        },
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "direction": "forward",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "attribute-values": {},
+        "attributes": [
+          "live"
+        ]
+      }
+    ],
+    "video": false,
+    "length": 445000,
+    "disambiguation": ""
+  }
+}

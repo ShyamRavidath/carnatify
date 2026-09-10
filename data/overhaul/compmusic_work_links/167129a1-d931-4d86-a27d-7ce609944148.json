@@ -1,0 +1,40 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/167129a1-d931-4d86-a27d-7ce609944148",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:20:40.370872+00:00",
+  "recording": {
+    "length": 404000,
+    "video": false,
+    "id": "167129a1-d931-4d86-a27d-7ce609944148",
+    "title": "Thyagaraja Palayasumam",
+    "disambiguation": "",
+    "relations": [
+      {
+        "target-credit": "",
+        "target-type": "work",
+        "type": "performance",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "direction": "forward",
+        "work": {
+          "languages": [],
+          "iswcs": [],
+          "disambiguation": "",
+          "title": "Tyagaraja Palayasumam",
+          "language": null,
+          "attributes": [],
+          "type": null,
+          "id": "57e762ca-375a-469a-a886-4baf37a754ea",
+          "type-id": null
+        },
+        "attribute-values": {},
+        "source-credit": "",
+        "attribute-ids": {},
+        "end": null,
+        "ended": false,
+        "attributes": []
+      }
+    ],
+    "first-release-date": "2008-11"
+  }
+}

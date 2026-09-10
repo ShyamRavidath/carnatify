@@ -1,0 +1,42 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/bdc67542-86ca-4d8c-9733-987ce8c6f3a2",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:07:40.054677+00:00",
+  "recording": {
+    "first-release-date": "2011",
+    "disambiguation": "",
+    "relations": [
+      {
+        "source-credit": "",
+        "target-credit": "",
+        "type": "performance",
+        "begin": null,
+        "target-type": "work",
+        "direction": "forward",
+        "attribute-values": {},
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "work": {
+          "disambiguation": "",
+          "title": "Eranapai",
+          "languages": [
+            "tel"
+          ],
+          "type": "Song",
+          "id": "2d9ff47b-a9d4-4944-9cd3-55934fd8685e",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "iswcs": [],
+          "attributes": [],
+          "language": "tel"
+        },
+        "attributes": [],
+        "end": null,
+        "ended": false,
+        "attribute-ids": {}
+      }
+    ],
+    "title": "Eranapai",
+    "id": "bdc67542-86ca-4d8c-9733-987ce8c6f3a2",
+    "length": 373028,
+    "video": false
+  }
+}

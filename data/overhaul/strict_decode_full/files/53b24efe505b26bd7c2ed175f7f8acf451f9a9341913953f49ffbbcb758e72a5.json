@@ -1,0 +1,11 @@
+{
+  "track": "archive__Vasanta__31 Seethamma Mayamma",
+  "audio": "data/concert_audio/Vasanta/31 Seethamma Mayamma.mp3",
+  "audio_sha256": "53b24efe505b26bd7c2ed175f7f8acf451f9a9341913953f49ffbbcb758e72a5",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6278517916798592
+}

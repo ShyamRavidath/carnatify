@@ -1,0 +1,11 @@
+{
+  "track": "archive__Jōnpuri__veLLai-tAmarai",
+  "audio": "data/concert_audio/Jōnpuri/veLLai-tAmarai.mp3",
+  "audio_sha256": "b4b5cf56c60158dc17da4c24ccfdd82da810a76ee13abdaf068efcf12410619c",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "decoder_error",
+  "returncode": 183,
+  "stderr_bytes": 603,
+  "stderr_excerpt": "[mp3float @ 0x978c24e00] Header missing\n[aist#0:0/mp3 @ 0x979008300] [dec:mp3float @ 0x979010280] Error submitting packet to decoder: Invalid data found when processing input\n[aist#0:0/mp3 @ 0x979008300] [dec:mp3float @ 0x979010280] Error processing packet in decoder: Invalid data found when processing input\n[aist#0:0/mp3 @ 0x979008300] [dec:mp3float @ 0x979010280] Task finished with error code: -1094995529 (Invalid data found when processing input)\n[aist#0:0/mp3 @ 0x979008300] [dec:mp3float @ 0x979010280] Terminating thread with return code -1094995529 (Invalid data found when processing input)\n",
+  "elapsed_s": 0.24566083401441574
+}

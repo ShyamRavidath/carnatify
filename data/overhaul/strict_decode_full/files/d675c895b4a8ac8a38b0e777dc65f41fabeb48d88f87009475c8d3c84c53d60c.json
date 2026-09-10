@@ -1,0 +1,11 @@
+{
+  "track": "archive__Śrīranjani__kANa vEndAmO",
+  "audio": "data/concert_audio/Śrīranjani/kANa vEndAmO.mp3",
+  "audio_sha256": "d675c895b4a8ac8a38b0e777dc65f41fabeb48d88f87009475c8d3c84c53d60c",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2958840411156416
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Dhanyāsi__srimad sundara Slokam Adi Shankara",
+  "audio": "data/concert_audio/Dhanyāsi/srimad sundara Slokam Adi Shankara.mp3",
+  "audio_sha256": "76b34dde51cbdafa4702749a4c8c6e1b31a732de7e9d9d8b1c52d4b92dc449c2",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.874126875307411
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sindhubhairavi__rAmanaittaruvAi",
+  "audio": "data/concert_audio/Sindhubhairavi/rAmanaittaruvAi.mp3",
+  "audio_sha256": "bb9a9ecf5e2c1788d2962e58b10e782193c749fb15ceb2d2ffb8f988e707857e",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5615430409088731
+}

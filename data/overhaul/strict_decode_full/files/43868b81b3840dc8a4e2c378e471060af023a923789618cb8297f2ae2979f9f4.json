@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāpi__jagadOdhAraNA",
+  "audio": "data/concert_audio/Kāpi/jagadOdhAraNA.mp3",
+  "audio_sha256": "43868b81b3840dc8a4e2c378e471060af023a923789618cb8297f2ae2979f9f4",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4546966250054538
+}

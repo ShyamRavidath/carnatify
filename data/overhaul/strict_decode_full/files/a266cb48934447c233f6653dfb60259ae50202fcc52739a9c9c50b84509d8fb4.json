@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bhairavi__varnam",
+  "audio": "data/concert_audio/Bhairavi/varnam.mp3",
+  "audio_sha256": "a266cb48934447c233f6653dfb60259ae50202fcc52739a9c9c50b84509d8fb4",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.2180697079747915
+}

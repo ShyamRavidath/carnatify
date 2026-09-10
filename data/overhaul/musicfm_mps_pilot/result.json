@@ -1,0 +1,32 @@
+{
+  "status": "frozen encoder MPS feasibility only; no identity or accuracy claim",
+  "plan_sha256": "208e2a72c21b5371d315814fd4267c72674ede86e7828e662358828455214bff",
+  "waveform_sha256": "da142c0e63b68715858ff80da6a2beff6ff018ee288eaaf53a15a2af6e3058ab",
+  "audio": {
+    "channels": 2,
+    "downmix": "mean",
+    "downmix_power_ratio": 0.9651915103503914,
+    "clipping_fraction": 0.0,
+    "rms": 0.09703141081300898,
+    "source_sr": 44100
+  },
+  "loading_s": 8.860396500211209,
+  "inference_s": 8.55029216594994,
+  "shape": [
+    250,
+    1024
+  ],
+  "pooled_shape": [
+    1024
+  ],
+  "pooled_l2": 14.694708824157715,
+  "frame_std": 1.0469480752944946,
+  "embedding_sha256": "4fa6b610c28e4caf65f66eac66ca24f1875fa25ac863a7cdd26bc15509d57fe6",
+  "torch_version": "2.5.1",
+  "runtime_versions": {
+    "torch": "2.5.1",
+    "torchaudio": "2.5.1",
+    "transformers": "4.44.2",
+    "einops": "0.8.2"
+  }
+}

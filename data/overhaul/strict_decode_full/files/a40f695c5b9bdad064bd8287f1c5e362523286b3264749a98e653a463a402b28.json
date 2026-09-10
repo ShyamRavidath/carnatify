@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sindhubhairavi__vaishanava janatO",
+  "audio": "data/concert_audio/Sindhubhairavi/vaishanava janatO.mp3",
+  "audio_sha256": "a40f695c5b9bdad064bd8287f1c5e362523286b3264749a98e653a463a402b28",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.23747991723939776
+}

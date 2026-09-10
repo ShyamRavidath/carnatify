@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/9066abf7-10c4-4b8b-8527-354ffe82e0c9",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:55:53.326250+00:00",
+  "recording": {
+    "first-release-date": "2010",
+    "id": "9066abf7-10c4-4b8b-8527-354ffe82e0c9",
+    "length": 250000,
+    "title": "Patta Padaada",
+    "relations": [
+      {
+        "direction": "forward",
+        "attribute-values": {},
+        "source-credit": "",
+        "target-credit": "",
+        "work": {
+          "iswcs": [],
+          "attributes": [],
+          "id": "c83ec0fe-53c8-4ed4-80e1-752ea2ce1003",
+          "languages": [],
+          "title": "Patta Padaada",
+          "language": null,
+          "type": null,
+          "disambiguation": "",
+          "type-id": null
+        },
+        "end": null,
+        "type": "performance",
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work",
+        "ended": false,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        }
+      }
+    ],
+    "video": false,
+    "disambiguation": ""
+  }
+}

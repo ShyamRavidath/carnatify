@@ -1,0 +1,39 @@
+{
+  "inputs": {
+    "/Users/shyamravidath/carnatify/data/overhaul/context180_strict_decode/plan.json": "cc4aad541aa15a2488ba0748f8daebb4db9a23b1b4420eeca950a17e4cbae042",
+    "/Users/shyamravidath/carnatify/data/overhaul/context180_strict_decode/tracks/2092cff06d84ec9dd276c9c04f5c7d115384a0996850f1f81bf3439edc6d12b9.npz": "10caabc89ee84d283e685c0e9fc431496f61d52d4713767a6596f31417863778",
+    "/Users/shyamravidath/carnatify/scripts/recover_context_decode_windows.py": "8ac40d330ffeabfe0bf74d1c7187a932cf906a8c8174404827ec244727dbba1b",
+    "/Users/shyamravidath/carnatify/src/carnatify/audio/ffmpeg_window.py": "459c4e97c8028899213213f2f01309ee1f274627e98298940e5358fea79d9951",
+    "/Users/shyamravidath/carnatify/src/carnatify/audio/utils.py": "1b5616ed80a98cbf51345212f1ce332f492cd5c5b90333419ada4d0bdcfc9bb1",
+    "/Users/shyamravidath/carnatify/src/carnatify/audio/melody_frontend.py": "4c14869f7a8c9828dc68b3ea4dccd6fad0ef07e59facccc2fd42a8873aba42cc",
+    "/Users/shyamravidath/carnatify/src/carnatify/audio/pitch_profiles.py": "90823f830109a8f7ffc0834606419a2fcd96f18516259b2ff11599491d6653ec",
+    "/Users/shyamravidath/carnatify/src/carnatify/ml/melody_features.py": "7d67f5c0cf037e14dfed0a6d28555802101110e87ad8e79b56e1d7aa96df55af"
+  },
+  "row": {
+    "track": "archive__Kamās__mODi jEsEvElrA",
+    "label": "Kamās",
+    "group": "artist:ramnadkrishnan",
+    "source": "rk-lgj-jamshedpur-1964",
+    "contour": "data/raga_v2_cache/melodia_full/archive__Kamās__mODi jEsEvElrA.npy",
+    "contour_sha256": "ad0954682a235a01c2722b7181236a050539489b00e3166ad48c5f8d7409cf2b",
+    "tonic": 145.38243103027344,
+    "hop_s": 0.0029024943310657597,
+    "audio": "data/concert_audio/Kamās/mODi jEsEvElrA.mp3",
+    "feature_cache_sha256": "46e608fa5541313c87a40abe803b993b49d47bd5a0b0d8545243b739652bc40f",
+    "corpus": "archive",
+    "artist": "Ramnad Krishnan",
+    "publisher_file_artists": [
+      "RamnadKrishnan"
+    ],
+    "audio_sha256": "85ecd08d604dd6b1196e67d5b2f23d56611aeecb7121ecdfcf56adcd9d297ee8"
+  },
+  "windows": [
+    {
+      "start_s": 0.0,
+      "duration_s": 158.3049433106576,
+      "reason": "libsndfile_window_decode_error",
+      "error": "Unspecified internal error."
+    }
+  ],
+  "policy": "strict FFmpeg native PCM; shared phase-safe downmix, resample, estimated tonic and melody; separate recovery contract"
+}

@@ -1,0 +1,11 @@
+{
+  "track": "178_Muruga_Muruga_Muruga",
+  "audio": "saraga1.5_carnatic/V Shankarnarayanan at Arkay by V Shankaranarayanan/Muruga Muruga Muruga/Muruga Muruga Muruga.mp3.mp3",
+  "audio_sha256": "ce66395be4b75cd2ddc8c7a71fdb62d49199df3164dc82ba3972c0f27446d0d8",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.4751178747974336
+}

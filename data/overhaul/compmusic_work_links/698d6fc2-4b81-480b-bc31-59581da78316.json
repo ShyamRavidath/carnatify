@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/698d6fc2-4b81-480b-bc31-59581da78316",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:44:07.422158+00:00",
+  "recording": {
+    "first-release-date": "2011",
+    "id": "698d6fc2-4b81-480b-bc31-59581da78316",
+    "length": 556000,
+    "title": "Karu Baru",
+    "disambiguation": "",
+    "video": false,
+    "relations": [
+      {
+        "ended": false,
+        "target-type": "work",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "attributes": [
+          "live"
+        ],
+        "work": {
+          "type": null,
+          "disambiguation": "",
+          "language": null,
+          "type-id": null,
+          "title": "Karu Baru",
+          "languages": [],
+          "attributes": [],
+          "id": "cc09186b-6947-4237-bd1a-da862d925e24",
+          "iswcs": []
+        },
+        "target-credit": "",
+        "type": "performance",
+        "end": null,
+        "direction": "forward",
+        "source-credit": "",
+        "attribute-values": {}
+      }
+    ]
+  }
+}

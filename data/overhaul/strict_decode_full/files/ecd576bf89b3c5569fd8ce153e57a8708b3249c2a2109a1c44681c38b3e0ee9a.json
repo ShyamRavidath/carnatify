@@ -1,0 +1,11 @@
+{
+  "track": "archive__Yadukula kāṁbōji__05 Hecharika",
+  "audio": "data/concert_audio/Yadukula kāṁbōji/05 Hecharika.mp3",
+  "audio_sha256": "ecd576bf89b3c5569fd8ce153e57a8708b3249c2a2109a1c44681c38b3e0ee9a",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 3.1690909173339605
+}

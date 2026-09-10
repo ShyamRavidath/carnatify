@@ -1,0 +1,11 @@
+{
+  "track": "archive__Rītigauḷa__jO jO rAma",
+  "audio": "data/concert_audio/Rītigauḷa/jO jO rAma.mp3",
+  "audio_sha256": "bb330f2350130441663011dfd74bfea28113966d42d929827e586b93a1db7271",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3427615840919316
+}

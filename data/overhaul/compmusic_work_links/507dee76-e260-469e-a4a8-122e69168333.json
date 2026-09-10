@@ -1,0 +1,43 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/507dee76-e260-469e-a4a8-122e69168333",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:37:21.514579+00:00",
+  "recording": {
+    "video": false,
+    "title": "Shankaracharyam",
+    "disambiguation": "",
+    "length": 1840000,
+    "relations": [
+      {
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ],
+        "work": {
+          "id": "9c27e253-a2c6-4ad7-86e2-baeb9fab18a7",
+          "attributes": [],
+          "type-id": null,
+          "languages": [],
+          "iswcs": [],
+          "title": "Shankaracharyam",
+          "disambiguation": "",
+          "language": null,
+          "type": null
+        },
+        "source-credit": "",
+        "ended": false,
+        "end": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "direction": "forward",
+        "type": "performance",
+        "target-credit": "",
+        "attribute-values": {}
+      }
+    ],
+    "id": "507dee76-e260-469e-a4a8-122e69168333"
+  }
+}

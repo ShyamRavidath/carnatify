@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bhairavi__Olaga Sulabhavo",
+  "audio": "data/concert_audio/Bhairavi/Olaga Sulabhavo.mp3",
+  "audio_sha256": "d8ea3b4dd5eac031b69a86320f5320179224532daafd256bfc20123e767822d5",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 4.225430958904326
+}

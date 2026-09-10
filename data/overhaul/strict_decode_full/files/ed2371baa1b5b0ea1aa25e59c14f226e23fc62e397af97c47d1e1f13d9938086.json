@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bṛndāvana sāranga__srirangapuravihara",
+  "audio": "data/concert_audio/Bṛndāvana sāranga/srirangapuravihara.mp3",
+  "audio_sha256": "ed2371baa1b5b0ea1aa25e59c14f226e23fc62e397af97c47d1e1f13d9938086",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5603229589760303
+}

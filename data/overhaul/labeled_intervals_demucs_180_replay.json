@@ -1,0 +1,663 @@
+{
+  "status": "existing-label oracle-boundary field diagnostic; not fresh or artist-independence proof",
+  "query_policy": "longest explicit interval per primary item; centered fixed-duration query",
+  "label_manifest_sha256": "33e1edd5cb80ef6e26f0f1d06203e87a9b87b1b955c856a16a307ef894833892",
+  "query_frontend": "mixed_tonic_query_melodia_v1",
+  "model_sha256": {
+    "data/overhaul/combined/raga_ridge.joblib": "8c28ee71b493a628b254d0ea4a032a742121f372ec0c8d9cd6d2c94fa2c894e5",
+    "data/overhaul/broader/raga.joblib": "59544dd8dd7854952584bf848042f6c33cc41c00f71aae554c4e35d10915352e",
+    "data/overhaul/raga_forest800.joblib": "c01e3213b7640667259bee6c8cd77c3d9873685e0d97a254f63accc810746063"
+  },
+  "profile": "default",
+  "window_s": 180,
+  "rows": [
+    {
+      "item_id": "c1_1",
+      "concert": "long_concert_1",
+      "truth": "Śankarābharaṇaṁ",
+      "start_s": 288.5,
+      "duration_s": 180,
+      "metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "22216d830a8423890b6f2db63073304f2ec1d304aa03c048eae75d763f26d7c1",
+          "start_s": 288.5,
+          "duration_s": 180.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 138.8064422607422,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.8337111517029628,
+          "clipping_fraction": 0.0,
+          "rms": 0.08870181457381898
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 180.0
+      },
+      "predictions": {
+        "data/overhaul/combined/raga_ridge.joblib": {
+          "correct": false,
+          "answered": true,
+          "top3": [
+            "Dēvagāndhāri",
+            "Kalyāṇi",
+            "Śankarābharaṇaṁ"
+          ],
+          "in_vocabulary": true,
+          "confidence": 0.16485593195444484
+        },
+        "data/overhaul/broader/raga.joblib": {
+          "correct": false,
+          "answered": true,
+          "top3": [
+            "Dēvagāndhāri",
+            "Kalyāṇi",
+            "Śankarābharaṇaṁ"
+          ],
+          "in_vocabulary": true,
+          "confidence": 0.08941047409050472
+        },
+        "data/overhaul/raga_forest800.joblib": {
+          "correct": false,
+          "answered": true,
+          "top3": [
+            "Bilahari",
+            "Bēgaḍa",
+            "Sāma"
+          ],
+          "in_vocabulary": true,
+          "confidence": 0.10825
+        }
+      },
+      "separation": {
+        "contract": {
+          "query": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "22216d830a8423890b6f2db63073304f2ec1d304aa03c048eae75d763f26d7c1",
+            "start_s": 288.5,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "version": "htdemucs_955717e8_mono_duplicate_shifts0_melodia_v1",
+          "checkpoint_sha256": "8726e21a993978c7ba086d3872e7608d7d5bfca646ca4aca459ffda844faa8b4",
+          "shifts": 0,
+          "overlap": 0.25,
+          "device": "cpu",
+          "demucs_version": "4.0.1",
+          "torch_version": "2.5.1",
+          "hop_s": 0.0029024943310657597,
+          "tonic_policy": "retain independently estimated original-mix tonic"
+        },
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.8337111517029628,
+          "clipping_fraction": 0.0,
+          "rms": 0.08870181457381898
+        },
+        "vocal_sha256": "4d6d45906d10443eef2ab09634cebff44630db1196acc63f3d7bebfb31a1fd42",
+        "vocal_rms": 0.05050757899880409,
+        "mix_rms": 0.08870181441307068
+      }
+    },
+    {
+      "item_id": "c2_1",
+      "concert": "long_concert_2",
+      "truth": "Tōḍi",
+      "start_s": 127.0,
+      "duration_s": 180,
+      "metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "0a1325fa5b4a4f77787207142b790dc0945b52261b2d3d4370d665f813cc42bc",
+          "start_s": 127.0,
+          "duration_s": 180.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 139.6118927001953,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.6465217253080209,
+          "clipping_fraction": 0.0,
+          "rms": 0.0866864093729058
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 180.0
+      },
+      "predictions": {
+        "data/overhaul/combined/raga_ridge.joblib": {
+          "correct": true,
+          "answered": true,
+          "top3": [
+            "Tōḍi",
+            "Sāvēri",
+            "Dhanyāsi"
+          ],
+          "in_vocabulary": true,
+          "confidence": 0.43726337983343516
+        },
+        "data/overhaul/broader/raga.joblib": {
+          "correct": true,
+          "answered": true,
+          "top3": [
+            "Tōḍi",
+            "Dhanyāsi",
+            "Amṛtavarṣiṇi"
+          ],
+          "in_vocabulary": true,
+          "confidence": 0.13764655055262262
+        },
+        "data/overhaul/raga_forest800.joblib": {
+          "correct": true,
+          "answered": true,
+          "top3": [
+            "Tōḍi",
+            "Varāḷi",
+            "Sāvēri"
+          ],
+          "in_vocabulary": true,
+          "confidence": 0.18375
+        }
+      },
+      "separation": {
+        "contract": {
+          "query": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "0a1325fa5b4a4f77787207142b790dc0945b52261b2d3d4370d665f813cc42bc",
+            "start_s": 127.0,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "version": "htdemucs_955717e8_mono_duplicate_shifts0_melodia_v1",
+          "checkpoint_sha256": "8726e21a993978c7ba086d3872e7608d7d5bfca646ca4aca459ffda844faa8b4",
+          "shifts": 0,
+          "overlap": 0.25,
+          "device": "cpu",
+          "demucs_version": "4.0.1",
+          "torch_version": "2.5.1",
+          "hop_s": 0.0029024943310657597,
+          "tonic_policy": "retain independently estimated original-mix tonic"
+        },
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.6465217253080209,
+          "clipping_fraction": 0.0,
+          "rms": 0.0866864093729058
+        },
+        "vocal_sha256": "89d6831699a77511597a5ca664314e988db2521b2376da1ffe1516e2d84841ee",
+        "vocal_rms": 0.05724065378308296,
+        "mix_rms": 0.08668641000986099
+      }
+    },
+    {
+      "item_id": "c2_2",
+      "concert": "long_concert_2",
+      "truth": "Hindōḷaṁ",
+      "start_s": 1226.0,
+      "duration_s": 180,
+      "metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "0a1325fa5b4a4f77787207142b790dc0945b52261b2d3d4370d665f813cc42bc",
+          "start_s": 1226.0,
+          "duration_s": 180.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 139.6118927001953,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.6189622523283066,
+          "clipping_fraction": 0.0,
+          "rms": 0.07984510047828573
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 180.0
+      },
+      "predictions": {
+        "data/overhaul/combined/raga_ridge.joblib": {
+          "correct": true,
+          "answered": true,
+          "top3": [
+            "Hindōḷaṁ",
+            "Nāṭakurinji",
+            "Jōnpuri"
+          ],
+          "in_vocabulary": true,
+          "confidence": 0.9835083992165328
+        },
+        "data/overhaul/broader/raga.joblib": {
+          "correct": true,
+          "answered": true,
+          "top3": [
+            "Hindōḷaṁ",
+            "Nāṭakurinji",
+            "Jōnpuri"
+          ],
+          "in_vocabulary": true,
+          "confidence": 0.8220973794588319
+        },
+        "data/overhaul/raga_forest800.joblib": {
+          "correct": true,
+          "answered": true,
+          "top3": [
+            "Hindōḷaṁ",
+            "Vasanta",
+            "Jōnpuri"
+          ],
+          "in_vocabulary": true,
+          "confidence": 0.46749999999999997
+        }
+      },
+      "separation": {
+        "contract": {
+          "query": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "0a1325fa5b4a4f77787207142b790dc0945b52261b2d3d4370d665f813cc42bc",
+            "start_s": 1226.0,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "version": "htdemucs_955717e8_mono_duplicate_shifts0_melodia_v1",
+          "checkpoint_sha256": "8726e21a993978c7ba086d3872e7608d7d5bfca646ca4aca459ffda844faa8b4",
+          "shifts": 0,
+          "overlap": 0.25,
+          "device": "cpu",
+          "demucs_version": "4.0.1",
+          "torch_version": "2.5.1",
+          "hop_s": 0.0029024943310657597,
+          "tonic_policy": "retain independently estimated original-mix tonic"
+        },
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.6189622523283066,
+          "clipping_fraction": 0.0,
+          "rms": 0.07984510047828573
+        },
+        "vocal_sha256": "0b2c6a9b0d9ca36be0c14723cdc30054a551e31080c7953af7c803e71c3b05ac",
+        "vocal_rms": 0.050715815275907516,
+        "mix_rms": 0.07984510064125061
+      }
+    },
+    {
+      "item_id": "c2_3",
+      "concert": "long_concert_2",
+      "truth": "Dhēnukā",
+      "start_s": 1763.4924999999998,
+      "duration_s": 180,
+      "metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "0a1325fa5b4a4f77787207142b790dc0945b52261b2d3d4370d665f813cc42bc",
+          "start_s": 1763.4924999999998,
+          "duration_s": 180.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 139.6118927001953,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.6352099653024292,
+          "clipping_fraction": 0.0,
+          "rms": 0.08717665126111601
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 180.0
+      },
+      "predictions": {
+        "data/overhaul/combined/raga_ridge.joblib": {
+          "correct": false,
+          "answered": true,
+          "top3": [
+            "Māyāmāḷavagauḷa",
+            "Varāḷi",
+            "Sindhubhairavi"
+          ],
+          "in_vocabulary": false,
+          "confidence": 0.16064285779134987
+        },
+        "data/overhaul/broader/raga.joblib": {
+          "correct": false,
+          "answered": true,
+          "top3": [
+            "Māyāmāḷavagauḷa",
+            "Sindhubhairavi",
+            "Varāḷi"
+          ],
+          "in_vocabulary": false,
+          "confidence": 0.0925770284939068
+        },
+        "data/overhaul/raga_forest800.joblib": {
+          "correct": false,
+          "answered": true,
+          "top3": [
+            "Sāvēri",
+            "Tōḍi",
+            "Kāmavardani"
+          ],
+          "in_vocabulary": false,
+          "confidence": 0.17275000000000001
+        }
+      },
+      "separation": {
+        "contract": {
+          "query": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "0a1325fa5b4a4f77787207142b790dc0945b52261b2d3d4370d665f813cc42bc",
+            "start_s": 1763.4924999999998,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "version": "htdemucs_955717e8_mono_duplicate_shifts0_melodia_v1",
+          "checkpoint_sha256": "8726e21a993978c7ba086d3872e7608d7d5bfca646ca4aca459ffda844faa8b4",
+          "shifts": 0,
+          "overlap": 0.25,
+          "device": "cpu",
+          "demucs_version": "4.0.1",
+          "torch_version": "2.5.1",
+          "hop_s": 0.0029024943310657597,
+          "tonic_policy": "retain independently estimated original-mix tonic"
+        },
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.6352099653024292,
+          "clipping_fraction": 0.0,
+          "rms": 0.08717665126111601
+        },
+        "vocal_sha256": "2ad073288e9887b4ccbfe5bfa1a6a270caac5e8f6dc8fd0d310416ad297b0c0a",
+        "vocal_rms": 0.057386018335819244,
+        "mix_rms": 0.08717665076255798
+      }
+    },
+    {
+      "item_id": "c3_1",
+      "concert": "long_concert_3",
+      "truth": "Ānandabhairavi",
+      "start_s": 169.0,
+      "duration_s": 180,
+      "metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "544dffd4a31840e36485d38597235e2086e8feede64bbe1b4f5db86b1d4258a1",
+          "start_s": 169.0,
+          "duration_s": 180.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 110.12802124023438,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.5887281285249903,
+          "clipping_fraction": 0.0,
+          "rms": 0.08481995314529937
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 180.0
+      },
+      "predictions": {
+        "data/overhaul/combined/raga_ridge.joblib": {
+          "correct": true,
+          "answered": true,
+          "top3": [
+            "Ānandabhairavi",
+            "Kāpi",
+            "Śrī"
+          ],
+          "in_vocabulary": true,
+          "confidence": 0.23617857540124768
+        },
+        "data/overhaul/broader/raga.joblib": {
+          "correct": true,
+          "answered": true,
+          "top3": [
+            "Ānandabhairavi",
+            "Śrī",
+            "Kāpi"
+          ],
+          "in_vocabulary": true,
+          "confidence": 0.11464377004072025
+        },
+        "data/overhaul/raga_forest800.joblib": {
+          "correct": true,
+          "answered": true,
+          "top3": [
+            "Ānandabhairavi",
+            "Nāṭa",
+            "Puṇṇāgavarāḷi"
+          ],
+          "in_vocabulary": true,
+          "confidence": 0.1275
+        }
+      },
+      "separation": {
+        "contract": {
+          "query": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "544dffd4a31840e36485d38597235e2086e8feede64bbe1b4f5db86b1d4258a1",
+            "start_s": 169.0,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "version": "htdemucs_955717e8_mono_duplicate_shifts0_melodia_v1",
+          "checkpoint_sha256": "8726e21a993978c7ba086d3872e7608d7d5bfca646ca4aca459ffda844faa8b4",
+          "shifts": 0,
+          "overlap": 0.25,
+          "device": "cpu",
+          "demucs_version": "4.0.1",
+          "torch_version": "2.5.1",
+          "hop_s": 0.0029024943310657597,
+          "tonic_policy": "retain independently estimated original-mix tonic"
+        },
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.5887281285249903,
+          "clipping_fraction": 0.0,
+          "rms": 0.08481995314529937
+        },
+        "vocal_sha256": "b92dd8c625ea8f49471bd539d030a59bdc968e659e999d965a86f3ac8f6e0f54",
+        "vocal_rms": 0.06832745671272278,
+        "mix_rms": 0.08481995761394501
+      }
+    },
+    {
+      "item_id": "c3_2",
+      "concert": "long_concert_3",
+      "truth": "Varāḷi",
+      "start_s": 1467.5,
+      "duration_s": 180,
+      "metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "544dffd4a31840e36485d38597235e2086e8feede64bbe1b4f5db86b1d4258a1",
+          "start_s": 1467.5,
+          "duration_s": 180.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 110.76707458496094,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.5535051349211532,
+          "clipping_fraction": 0.0,
+          "rms": 0.0809753257941619
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 180.0
+      },
+      "predictions": {
+        "data/overhaul/combined/raga_ridge.joblib": {
+          "correct": true,
+          "answered": true,
+          "top3": [
+            "Varāḷi",
+            "Sindhubhairavi",
+            "Aṭāna"
+          ],
+          "in_vocabulary": true,
+          "confidence": 0.847876100565907
+        },
+        "data/overhaul/broader/raga.joblib": {
+          "correct": true,
+          "answered": true,
+          "top3": [
+            "Varāḷi",
+            "Sindhubhairavi",
+            "Aṭāna"
+          ],
+          "in_vocabulary": true,
+          "confidence": 0.5555892629251743
+        },
+        "data/overhaul/raga_forest800.joblib": {
+          "correct": true,
+          "answered": true,
+          "top3": [
+            "Varāḷi",
+            "Ṣanmukhapriya",
+            "Tōḍi"
+          ],
+          "in_vocabulary": true,
+          "confidence": 0.17250000000000001
+        }
+      },
+      "separation": {
+        "contract": {
+          "query": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "544dffd4a31840e36485d38597235e2086e8feede64bbe1b4f5db86b1d4258a1",
+            "start_s": 1467.5,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "version": "htdemucs_955717e8_mono_duplicate_shifts0_melodia_v1",
+          "checkpoint_sha256": "8726e21a993978c7ba086d3872e7608d7d5bfca646ca4aca459ffda844faa8b4",
+          "shifts": 0,
+          "overlap": 0.25,
+          "device": "cpu",
+          "demucs_version": "4.0.1",
+          "torch_version": "2.5.1",
+          "hop_s": 0.0029024943310657597,
+          "tonic_policy": "retain independently estimated original-mix tonic"
+        },
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.5535051349211532,
+          "clipping_fraction": 0.0,
+          "rms": 0.0809753257941619
+        },
+        "vocal_sha256": "20ec0e1a6e24eac07f34a13c250930b501caa0cda378c7885b12e38cb20e80a1",
+        "vocal_rms": 0.05173799395561218,
+        "mix_rms": 0.08097532391548157
+      }
+    }
+  ],
+  "summary": {
+    "data/overhaul/combined/raga_ridge.joblib": {
+      "n": 6,
+      "correct": 4,
+      "n_in_vocabulary": 5
+    },
+    "data/overhaul/broader/raga.joblib": {
+      "n": 6,
+      "correct": 4,
+      "n_in_vocabulary": 5
+    },
+    "data/overhaul/raga_forest800.joblib": {
+      "n": 6,
+      "correct": 4,
+      "n_in_vocabulary": 5
+    }
+  },
+  "pitch_frontend": "demucs"
+}

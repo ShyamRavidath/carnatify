@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kamās__ihaparam tarum",
+  "audio": "data/concert_audio/Kamās/ihaparam tarum.mp3",
+  "audio_sha256": "2c07826b3b6816f73eea8aee070c7b6139867f634fe3ac3c9af2887599930c8a",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.9268398336134851
+}

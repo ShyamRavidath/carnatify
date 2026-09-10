@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/68bcad2f-b0b3-485f-ad5f-7edf9d783551",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:43:28.812753+00:00",
+  "recording": {
+    "disambiguation": "",
+    "title": "Seshachala Nayakam",
+    "video": false,
+    "id": "68bcad2f-b0b3-485f-ad5f-7edf9d783551",
+    "first-release-date": "2009",
+    "relations": [
+      {
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "end": null,
+        "ended": false,
+        "target-credit": "",
+        "attribute-values": {},
+        "type": "performance",
+        "direction": "forward",
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ],
+        "source-credit": "",
+        "work": {
+          "attributes": [],
+          "id": "4682fa3a-fe51-49f0-9798-f9b3f900b4f8",
+          "type-id": null,
+          "title": "Seshachalanayakam",
+          "languages": [],
+          "iswcs": [],
+          "disambiguation": "",
+          "type": null,
+          "language": null
+        }
+      }
+    ],
+    "length": 1641000
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Cakravākaṁ__varNam",
+  "audio": "data/concert_audio/Cakravākaṁ/varNam.mp3",
+  "audio_sha256": "f5fb83969d4e88a2cf429a47b37de46bf41535122be05289a9fe1d48cea5adc3",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4028207082301378
+}

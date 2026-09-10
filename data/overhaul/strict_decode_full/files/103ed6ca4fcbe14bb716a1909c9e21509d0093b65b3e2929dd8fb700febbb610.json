@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ānandabhairavi__neelAmbhOruha tulya nEtra yugaLAm SlOkam",
+  "audio": "data/concert_audio/Ānandabhairavi/neelAmbhOruha tulya nEtra yugaLAm SlOkam.mp3",
+  "audio_sha256": "103ed6ca4fcbe14bb716a1909c9e21509d0093b65b3e2929dd8fb700febbb610",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.24282087525352836
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Māyāmāḷavagauḷa__vidulaku mrokkeda",
+  "audio": "data/concert_audio/Māyāmāḷavagauḷa/vidulaku mrokkeda.mp3",
+  "audio_sha256": "c9f0ae51469ac3ec4698c935961b4e7c0a26ef7433c99b73e08d3bd345a4c8da",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.2139027500525117
+}

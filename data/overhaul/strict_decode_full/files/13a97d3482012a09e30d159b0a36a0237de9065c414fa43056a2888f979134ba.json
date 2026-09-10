@@ -1,0 +1,11 @@
+{
+  "track": "archive__Hindōḷaṁ__Oru Murai",
+  "audio": "data/concert_audio/Hindōḷaṁ/Oru Murai.mp3",
+  "audio_sha256": "13a97d3482012a09e30d159b0a36a0237de9065c414fa43056a2888f979134ba",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7900237501598895
+}

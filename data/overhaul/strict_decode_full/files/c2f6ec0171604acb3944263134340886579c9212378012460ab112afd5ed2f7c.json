@@ -1,0 +1,11 @@
+{
+  "track": "archive__Pūrṇacandrika__TNR niravati sukadA",
+  "audio": "data/concert_audio/Pūrṇacandrika/TNR niravati sukadA.mp3",
+  "audio_sha256": "c2f6ec0171604acb3944263134340886579c9212378012460ab112afd5ed2f7c",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.35891454108059406
+}

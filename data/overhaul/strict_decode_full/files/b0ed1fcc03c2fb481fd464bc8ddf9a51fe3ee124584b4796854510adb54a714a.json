@@ -1,0 +1,11 @@
+{
+  "track": "archive__Gauḷa__tyAgarAja pAlayashu",
+  "audio": "data/concert_audio/Gauḷa/tyAgarAja pAlayashu.mp3",
+  "audio_sha256": "b0ed1fcc03c2fb481fd464bc8ddf9a51fe3ee124584b4796854510adb54a714a",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5604601660743356
+}

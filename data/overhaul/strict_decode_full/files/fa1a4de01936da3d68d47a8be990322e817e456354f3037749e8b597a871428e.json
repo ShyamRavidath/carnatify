@@ -1,0 +1,11 @@
+{
+  "track": "archive__Śrīranjani__sogasugA",
+  "audio": "data/concert_audio/Śrīranjani/sogasugA.mp3",
+  "audio_sha256": "fa1a4de01936da3d68d47a8be990322e817e456354f3037749e8b597a871428e",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7887927922420204
+}

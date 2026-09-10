@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāmavardani__Sri Sathyanarayanam",
+  "audio": "data/concert_audio/Kāmavardani/Sri Sathyanarayanam.mp3",
+  "audio_sha256": "b2c85a93a1c0e7e6dc5ef5c4984996e8898257111a9f763be961e1c61605646f",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7628523749299347
+}

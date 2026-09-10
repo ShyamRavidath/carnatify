@@ -1,0 +1,11 @@
+{
+  "track": "archive__Gauḷa__sri mahA gaNapati",
+  "audio": "data/concert_audio/Gauḷa/sri mahA gaNapati.mp3",
+  "audio_sha256": "ebe1b7f42903d1e8fc1dc6b936a0b15af3deee84fafab4bfb50c059fdf26d9c5",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.1297834580764174
+}

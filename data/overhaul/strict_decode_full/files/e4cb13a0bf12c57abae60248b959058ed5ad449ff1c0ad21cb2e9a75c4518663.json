@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kedāraṁ__Ananda Natana Prakasam",
+  "audio": "data/concert_audio/Kedāraṁ/Ananda Natana Prakasam.mp3",
+  "audio_sha256": "e4cb13a0bf12c57abae60248b959058ed5ad449ff1c0ad21cb2e9a75c4518663",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8884183331392705
+}

@@ -1,0 +1,43 @@
+{
+  "plan_sha256": "5a583f91b605504a2a0253c877138662a6a91dc0ee37b2bd6b3167a5c101611c",
+  "query": {
+    "track": "47_Koti_Janmani",
+    "audio": "saraga1.5_carnatic/Akkarai Sisters at Arkay by Akkarai Sisters/Koti Janmani/Koti Janmani.mp3.mp3",
+    "audio_sha256": "10d03b57f877301572181e7e00d6effbd5a3ad11a3382ff08a3686e085792dc7",
+    "start_s": 258.3474716553288,
+    "duration_s": 10
+  },
+  "audio": {
+    "source_sr": 44100,
+    "channels": 2,
+    "downmix": "mean",
+    "downmix_power_ratio": 0.9465555733075285,
+    "clipping_fraction": 0.0,
+    "rms": 0.15022986464344396
+  },
+  "waveform_sha256": "276cd3c6bae05b44381a8df4b0f698326d5b9f9adfd5718890e6b79da7fabf45",
+  "hypothesis": {
+    "text": "Oh Oh",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Oh",
+        "avg_logprob": -1.2566231318882533,
+        "no_speech_prob": 4.979647361125217e-09,
+        "compression_ratio": 0.38461538461538464
+      },
+      {
+        "start": 6.0,
+        "end": 8.0,
+        "text": " Oh",
+        "avg_logprob": -1.2566231318882533,
+        "no_speech_prob": 4.979647361125217e-09,
+        "compression_ratio": 0.38461538461538464
+      }
+    ],
+    "language": "en",
+    "status": "unverified_hypothesis"
+  },
+  "transcription_s": 13.213548209052533
+}

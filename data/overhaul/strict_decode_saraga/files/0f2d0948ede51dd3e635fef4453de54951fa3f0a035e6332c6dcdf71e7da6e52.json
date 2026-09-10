@@ -1,0 +1,11 @@
+{
+  "track": "105_Karuvutranaal_Mudalaaga",
+  "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Karuvutranaal Mudalaaga/Sanjay Subrahmanyan - Karuvutranaal Mudalaaga.mp3",
+  "audio_sha256": "0f2d0948ede51dd3e635fef4453de54951fa3f0a035e6332c6dcdf71e7da6e52",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8761416249908507
+}

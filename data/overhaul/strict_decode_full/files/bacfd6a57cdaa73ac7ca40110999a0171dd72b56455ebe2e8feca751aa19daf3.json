@@ -1,0 +1,11 @@
+{
+  "track": "archive__Cakravākaṁ__tiruppugazh",
+  "audio": "data/concert_audio/Cakravākaṁ/tiruppugazh.mp3",
+  "audio_sha256": "bacfd6a57cdaa73ac7ca40110999a0171dd72b56455ebe2e8feca751aa19daf3",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3413571249693632
+}

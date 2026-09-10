@@ -1,0 +1,11 @@
+{
+  "track": "archive__Rītigauḷa__varnam",
+  "audio": "data/concert_audio/Rītigauḷa/varnam.mp3",
+  "audio_sha256": "233410b2f57cb74d9e4dd35be7236c2da2f355ebe5996da4273d40f85e12d062",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4068419998511672
+}

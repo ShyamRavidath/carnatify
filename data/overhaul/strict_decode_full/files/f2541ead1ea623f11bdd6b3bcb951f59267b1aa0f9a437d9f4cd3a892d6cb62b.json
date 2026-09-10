@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sindhubhairavi__harihara ninnanu",
+  "audio": "data/concert_audio/Sindhubhairavi/harihara ninnanu.mp3",
+  "audio_sha256": "f2541ead1ea623f11bdd6b3bcb951f59267b1aa0f9a437d9f4cd3a892d6cb62b",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.40622783405706286
+}

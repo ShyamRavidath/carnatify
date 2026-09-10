@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bēgaḍa__Innamum",
+  "audio": "data/concert_audio/Bēgaḍa/Innamum.mp3",
+  "audio_sha256": "852b362b4dd23f5e2ecfbaac3472123e7262b43b83bef0808533e912c919e59f",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7836483749561012
+}

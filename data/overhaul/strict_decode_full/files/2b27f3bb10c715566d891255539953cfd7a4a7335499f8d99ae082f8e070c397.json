@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sahānā__Alapana",
+  "audio": "data/concert_audio/Sahānā/Alapana.mp3",
+  "audio_sha256": "2b27f3bb10c715566d891255539953cfd7a4a7335499f8d99ae082f8e070c397",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8828409998677671
+}

@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/d25f460b-3e95-406c-bb65-8c1969e2c49c",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:12:25.879984+00:00",
+  "recording": {
+    "video": false,
+    "disambiguation": "",
+    "title": "Kanden Kaliten",
+    "length": 184000,
+    "relations": [
+      {
+        "work": {
+          "type-id": null,
+          "attributes": [],
+          "id": "5dc478c7-38f4-4633-bdb8-f6e2639b6961",
+          "language": null,
+          "type": null,
+          "languages": [],
+          "iswcs": [],
+          "title": "Kanden Kaliten",
+          "disambiguation": ""
+        },
+        "source-credit": "",
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ],
+        "direction": "forward",
+        "target-credit": "",
+        "attribute-values": {},
+        "type": "performance",
+        "end": null,
+        "ended": false,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        }
+      }
+    ],
+    "id": "d25f460b-3e95-406c-bb65-8c1969e2c49c",
+    "first-release-date": "2008"
+  }
+}

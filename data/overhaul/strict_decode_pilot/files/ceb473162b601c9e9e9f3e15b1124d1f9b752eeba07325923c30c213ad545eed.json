@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sindhubhairavi__kumAradanDapANi",
+  "audio": "data/concert_audio/Sindhubhairavi/kumAradanDapANi.mp3",
+  "audio_sha256": "ceb473162b601c9e9e9f3e15b1124d1f9b752eeba07325923c30c213ad545eed",
+  "plan_sha256": "e0babfbb17ff59861b0f951c98fa857adcc486715904a4fa250f57daf00a6c12",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.45333687495440245
+}

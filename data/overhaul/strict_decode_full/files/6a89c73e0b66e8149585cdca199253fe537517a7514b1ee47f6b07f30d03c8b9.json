@@ -1,0 +1,11 @@
+{
+  "track": "archive__Aṭāna__Ayya Saranam",
+  "audio": "data/concert_audio/Aṭāna/Ayya Saranam.mp3",
+  "audio_sha256": "6a89c73e0b66e8149585cdca199253fe537517a7514b1ee47f6b07f30d03c8b9",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7839218331500888
+}

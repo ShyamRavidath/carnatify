@@ -1,0 +1,11 @@
+{
+  "track": "archive__Dvijāvanti__jab jab murali",
+  "audio": "data/concert_audio/Dvijāvanti/jab jab murali.mp3",
+  "audio_sha256": "d1a4886f114ae27c09136e12094da1fb3a82330ac338f889a1e8f0149dfc1c84",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5492175417020917
+}

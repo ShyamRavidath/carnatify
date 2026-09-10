@@ -1,0 +1,11 @@
+{
+  "track": "215_Nee_Sari_evvaramma",
+  "audio": "saraga1.5_carnatic/Srividya Janakiraman at Arkay by Srividya Janakiraman/Nee Sari evvaramma/Nee Sari evvaramma.mp3.mp3",
+  "audio_sha256": "809635f4203d9ab68f6d9d4c2a35617f08738c27413af89e7c74d6ffc2e2502a",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 6.489391083829105
+}

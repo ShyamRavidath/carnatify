@@ -1,0 +1,11 @@
+{
+  "track": "archive__Hamsadhvāni__namAmi",
+  "audio": "data/concert_audio/Hamsadhvāni/namAmi.mp3",
+  "audio_sha256": "6f96f0991df892fa937c04e36ab1da629bb0067237ddd7c54bdc225feac62410",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.0349548747763038
+}

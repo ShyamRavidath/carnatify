@@ -1,0 +1,38 @@
+{
+  "inputs": {
+    "data/overhaul/tonic_marginalization/result.json": "1f8410268c4fcfb468b8243fb5b56fc6eb0d55d89a8690b2115b914c48048d62",
+    "data/overhaul/file_tag_guarded/evaluation.json": "b3e2a24da88809ee9ceafe5686974c7ca0cc1347cd9110fd2fc74680811a3c26",
+    "data/overhaul/repro_audio_identity/evaluation_corpus.json": "53622b4e2349873b61cf0af11be3a40ecb37d212145d2f1678064a0b8ce07b19",
+    "scripts/summarize_overhaul.py": "2294db0a30a07c96b2f89cc9004ee660d6dc087622857e236699747f81beb842",
+    "scripts/benchmark_musicfm_raga.py": "024607ac116e2583182f71e74fec6acfafa341bf013eca9b28fe12394e8b5f0f"
+  },
+  "all_queries": {
+    "mean": 0.010869565217391304,
+    "ci95": [
+      -0.008032938204430625,
+      0.037037037037037035
+    ],
+    "n": 184,
+    "n_clusters": 17,
+    "bootstrap": 5000
+  },
+  "known_queries": {
+    "mean": 0.014388489208633094,
+    "ci95": [
+      -0.010416666666666666,
+      0.05
+    ],
+    "n": 139,
+    "n_clusters": 17,
+    "bootstrap": 5000
+  },
+  "wins": [
+    "137_Telisi_Rama",
+    "21_Sadabalarupapi_Shlokam",
+    "64_Jaya_Jaya_Padmanabhanujese"
+  ],
+  "losses": [
+    "34_Teerthakarayinile"
+  ],
+  "limitation": "Repeated development queries; connected artist/source/audio cluster bootstrap; not fresh test or production gate"
+}

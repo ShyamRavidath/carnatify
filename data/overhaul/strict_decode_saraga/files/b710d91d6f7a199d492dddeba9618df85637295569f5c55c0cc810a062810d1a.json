@@ -1,0 +1,11 @@
+{
+  "track": "171_Arul_Seya_Vendum_Ayya",
+  "audio": "saraga1.5_carnatic/Kuldeep Pai at Arkay by Kuldeep Pai/Arul Seya Vendum Ayya/Arul Seya Vendum Ayya.mp3.mp3",
+  "audio_sha256": "b710d91d6f7a199d492dddeba9618df85637295569f5c55c0cc810a062810d1a",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.866413875017315
+}

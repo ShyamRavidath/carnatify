@@ -1,0 +1,73 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/4bed9a94-ebd7-4c2f-a6de-a630c5bfff1d",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:35:17.438994+00:00",
+  "recording": {
+    "first-release-date": "2005",
+    "id": "4bed9a94-ebd7-4c2f-a6de-a630c5bfff1d",
+    "length": 556000,
+    "relations": [
+      {
+        "direction": "forward",
+        "target-credit": "",
+        "attribute-values": {},
+        "type": "performance",
+        "end": null,
+        "ended": false,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "work": {
+          "type": null,
+          "language": null,
+          "disambiguation": "",
+          "title": "Balakrishnan-padamalar",
+          "languages": [],
+          "iswcs": [],
+          "type-id": null,
+          "attributes": [],
+          "id": "096a3e3c-307e-4dea-81a9-6c03da90b1c3"
+        },
+        "source-credit": "",
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ]
+      },
+      {
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work",
+        "work": {
+          "disambiguation": "",
+          "languages": [],
+          "iswcs": [],
+          "title": "Kundram Endi",
+          "language": null,
+          "type": null,
+          "attributes": [],
+          "id": "0976ce9a-cdc0-4d57-a87b-e63d2d6a41ba",
+          "type-id": null
+        },
+        "source-credit": "",
+        "ended": false,
+        "end": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "direction": "forward",
+        "type": "performance",
+        "attribute-values": {},
+        "target-credit": ""
+      }
+    ],
+    "title": "Kundram Endi - Balakrishnan Pada Malar",
+    "disambiguation": "",
+    "video": false
+  }
+}

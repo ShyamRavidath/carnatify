@@ -1,0 +1,11 @@
+{
+  "version": "relative_24bin_halfsecond_oti_v1",
+  "catalog_sha256": "a5d3b48eec4aacf72dc0f3d5e44cab4a934ecdad98c9d935eadd698575cf9f67",
+  "corpus_sha256": "53622b4e2349873b61cf0af11be3a40ecb37d212145d2f1678064a0b8ce07b19",
+  "n_tracks": 181,
+  "n_works": 165,
+  "n_weak_archive_references": 0,
+  "archive_inputs": {},
+  "status": "candidate retrieval only; no production acceptance threshold",
+  "source": "Saraga distributed annotations; optional weak archival titles; retain original attribution/terms"
+}

@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/9c8810e5-178a-46df-a619-a89a547c53dd",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:59:42.766380+00:00",
+  "recording": {
+    "disambiguation": "",
+    "first-release-date": "2006",
+    "title": "Ambarame Tannire",
+    "relations": [
+      {
+        "ended": false,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "source-credit": "",
+        "target-credit": "",
+        "target-type": "work",
+        "direction": "forward",
+        "type": "performance",
+        "begin": null,
+        "end": null,
+        "work": {
+          "language": null,
+          "attributes": [],
+          "iswcs": [],
+          "type-id": null,
+          "id": "a62b5aa3-5f4b-483d-87bd-2abc6a13cef4",
+          "type": null,
+          "languages": [],
+          "title": "Ambarametanneere",
+          "disambiguation": ""
+        },
+        "attributes": [
+          "live"
+        ],
+        "attribute-values": {},
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0"
+      }
+    ],
+    "id": "9c8810e5-178a-46df-a619-a89a547c53dd",
+    "video": false,
+    "length": 1574000
+  }
+}

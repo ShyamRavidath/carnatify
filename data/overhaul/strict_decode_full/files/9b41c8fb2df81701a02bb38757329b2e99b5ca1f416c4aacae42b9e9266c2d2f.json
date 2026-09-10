@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kamās__tEruvadu eppo nenjE",
+  "audio": "data/concert_audio/Kamās/tEruvadu eppo nenjE.mp3",
+  "audio_sha256": "9b41c8fb2df81701a02bb38757329b2e99b5ca1f416c4aacae42b9e9266c2d2f",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.49820049991831183
+}

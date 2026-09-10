@@ -1,0 +1,11 @@
+{
+  "track": "archive__Mukhāri__05 brahma kaDigina",
+  "audio": "data/concert_audio/Mukhāri/05 brahma kaDigina.mp3",
+  "audio_sha256": "95cf8a7f6fcc5421b4bfcff2e28cdbfbb170942bac241862ec2d3e843640d9f0",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.4707691250368953
+}

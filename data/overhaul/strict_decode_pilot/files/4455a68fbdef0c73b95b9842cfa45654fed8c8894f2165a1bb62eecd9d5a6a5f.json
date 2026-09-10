@@ -1,0 +1,11 @@
+{
+  "track": "archive__Haṁsānandi__smaravAram",
+  "audio": "data/concert_audio/Haṁsānandi/smaravAram.mp3",
+  "audio_sha256": "4455a68fbdef0c73b95b9842cfa45654fed8c8894f2165a1bb62eecd9d5a6a5f",
+  "plan_sha256": "e0babfbb17ff59861b0f951c98fa857adcc486715904a4fa250f57daf00a6c12",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.49664120795205235
+}

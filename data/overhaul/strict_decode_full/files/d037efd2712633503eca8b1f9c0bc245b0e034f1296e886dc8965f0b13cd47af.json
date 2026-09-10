@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kalyāṇi__vELai arindE solluvAr",
+  "audio": "data/concert_audio/Kalyāṇi/vELai arindE solluvAr.mp3",
+  "audio_sha256": "d037efd2712633503eca8b1f9c0bc245b0e034f1296e886dc8965f0b13cd47af",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5003168326802552
+}

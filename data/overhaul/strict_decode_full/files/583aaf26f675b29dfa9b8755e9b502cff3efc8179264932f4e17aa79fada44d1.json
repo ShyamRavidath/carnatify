@@ -1,0 +1,11 @@
+{
+  "track": "archive__Dvijāvanti__chEta sri bAlakrishNam",
+  "audio": "data/concert_audio/Dvijāvanti/chEta sri bAlakrishNam.mp3",
+  "audio_sha256": "583aaf26f675b29dfa9b8755e9b502cff3efc8179264932f4e17aa79fada44d1",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.8386008753441274
+}

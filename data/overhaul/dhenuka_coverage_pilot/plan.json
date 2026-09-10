@@ -1,0 +1,27 @@
+{
+  "identifier": "01.VarnamNatakurinji",
+  "file": {
+    "name": "03. Teliyaleru Rama - Denuka - Thyagayya.mp3",
+    "source": "original",
+    "format": "VBR MP3",
+    "length": "926.52",
+    "height": "0",
+    "width": "0",
+    "mtime": "1375902357",
+    "size": "4632616",
+    "md5": "31594d5f03a8b6143db97cee855b8205",
+    "crc32": "eb9bab31",
+    "sha1": "58e77238f759fbcecfb4fb38717ece5c9e89228b",
+    "title": "03. Teliyaleru Rama - Denuka - Thyagayya",
+    "artist": "SKR/MSA/YVR_091082",
+    "external-identifier": "urn:acoustid:unknown"
+  },
+  "url": "https://archive.org/download/01.VarnamNatakurinji/03.%20Teliyaleru%20Rama%20-%20Denuka%20-%20Thyagayya.mp3",
+  "metadata_sha256": "04bda87296ed61002fa49a5b8ebf4c1c05dc3a702c581d6ba00932bac44506c3",
+  "canonical_raga_candidate": "Dhenuka",
+  "work_raga_corroboration": "https://www.karnatik.com/c31447.shtml",
+  "label_evidence": "publisher Denuka token plus independent Teliyaleru Rama work/raga catalog; acoustic identity not verified",
+  "purpose": "missing-vocabulary coverage candidate; requires decode, copy and group checks before any admission",
+  "max_download_bytes": 8388608,
+  "script_sha256": "163019b1b58969721b381a2e0f2db087a1c4be3971e44a30653bebde51690e4c"
+}

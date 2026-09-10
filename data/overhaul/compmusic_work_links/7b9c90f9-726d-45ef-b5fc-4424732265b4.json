@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/7b9c90f9-726d-45ef-b5fc-4424732265b4",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:49:20.511393+00:00",
+  "recording": {
+    "relations": [
+      {
+        "target-type": "work",
+        "target-credit": "",
+        "attribute-values": {},
+        "work": {
+          "iswcs": [],
+          "languages": [
+            "tel"
+          ],
+          "type": "Song",
+          "id": "19d7d202-6282-4463-9bbb-976a8d97f819",
+          "attributes": [],
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "title": "Dinamani Vamsha",
+          "language": "tel",
+          "disambiguation": ""
+        },
+        "source-credit": "",
+        "begin": null,
+        "direction": "forward",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "type": "performance",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "ended": false,
+        "end": null,
+        "attributes": [
+          "live"
+        ]
+      }
+    ],
+    "first-release-date": "2005",
+    "id": "7b9c90f9-726d-45ef-b5fc-4424732265b4",
+    "video": false,
+    "length": 837000,
+    "disambiguation": "",
+    "title": "Dinamani Vamsha"
+  }
+}

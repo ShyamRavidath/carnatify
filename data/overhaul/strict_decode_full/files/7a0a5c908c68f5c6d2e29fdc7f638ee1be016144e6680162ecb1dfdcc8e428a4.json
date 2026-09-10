@@ -1,0 +1,11 @@
+{
+  "track": "archive__Jaganmōhini__sObillu",
+  "audio": "data/concert_audio/Jaganmōhini/sObillu.mp3",
+  "audio_sha256": "7a0a5c908c68f5c6d2e29fdc7f638ee1be016144e6680162ecb1dfdcc8e428a4",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6132347919046879
+}

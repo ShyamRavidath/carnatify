@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/7fe952a8-6aa2-4002-89ff-659cb59bb1b5",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:50:45.888480+00:00",
+  "recording": {
+    "relations": [
+      {
+        "end": null,
+        "type": "performance",
+        "target-credit": "",
+        "work": {
+          "attributes": [],
+          "id": "0bc6563d-245b-44a0-b611-a23b74367db5",
+          "iswcs": [],
+          "language": null,
+          "disambiguation": "",
+          "type": null,
+          "type-id": null,
+          "title": "Budhamashrayami",
+          "languages": []
+        },
+        "attribute-values": {},
+        "source-credit": "",
+        "direction": "forward",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "target-type": "work",
+        "ended": false,
+        "attributes": [
+          "live"
+        ]
+      }
+    ],
+    "video": false,
+    "disambiguation": "",
+    "title": "Budhamashrayami",
+    "length": 654000,
+    "id": "7fe952a8-6aa2-4002-89ff-659cb59bb1b5",
+    "first-release-date": "2011"
+  }
+}

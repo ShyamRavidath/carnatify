@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sencuruṭṭi__veera sudandiram",
+  "audio": "data/concert_audio/Sencuruṭṭi/veera sudandiram.mp3",
+  "audio_sha256": "d38cc1b25dc010d2d1528cf348f706d06c3f02f7c9073565d6bf9b7a2b41ac77",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.28789291670545936
+}

@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/d554c4c1-b126-425a-9edd-ece4a02641f8",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:12:48.595555+00:00",
+  "recording": {
+    "title": "Endaromahanubhavulu",
+    "disambiguation": "",
+    "video": false,
+    "first-release-date": "1969",
+    "id": "d554c4c1-b126-425a-9edd-ece4a02641f8",
+    "length": 744294,
+    "relations": [
+      {
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "ended": false,
+        "end": null,
+        "type": "performance",
+        "attribute-values": {},
+        "target-credit": "",
+        "direction": "forward",
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work",
+        "source-credit": "",
+        "work": {
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "attributes": [],
+          "id": "bf2d3e31-8458-451e-a374-d4d769f7d7c0",
+          "language": "tel",
+          "type": "Song",
+          "disambiguation": "",
+          "title": "Endaro Mahanubhavulu",
+          "languages": [
+            "tel"
+          ],
+          "iswcs": []
+        }
+      }
+    ]
+  }
+}

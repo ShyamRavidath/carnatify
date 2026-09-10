@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/5c342c56-c07a-4905-89cc-bd5d1151d20a",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:41:18.765245+00:00",
+  "recording": {
+    "length": 1287000,
+    "title": "Dewarkaratanujam",
+    "disambiguation": "",
+    "first-release-date": "2005",
+    "relations": [
+      {
+        "begin": null,
+        "type": "performance",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "ended": false,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "target-type": "work",
+        "work": {
+          "attributes": [],
+          "disambiguation": "",
+          "iswcs": [],
+          "languages": [
+            "san"
+          ],
+          "type": "Song",
+          "id": "0bb21864-fbbe-4406-8017-c74f48e01682",
+          "language": "san",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "title": "Divakara Tanujam"
+        },
+        "attributes": [
+          "live"
+        ],
+        "direction": "forward",
+        "source-credit": "",
+        "attribute-values": {},
+        "end": null,
+        "target-credit": ""
+      }
+    ],
+    "id": "5c342c56-c07a-4905-89cc-bd5d1151d20a",
+    "video": false
+  }
+}

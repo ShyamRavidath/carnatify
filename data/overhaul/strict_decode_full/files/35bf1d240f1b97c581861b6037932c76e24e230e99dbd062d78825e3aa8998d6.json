@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāpi__Janaki Ramana",
+  "audio": "data/concert_audio/Kāpi/Janaki Ramana.mp3",
+  "audio_sha256": "35bf1d240f1b97c581861b6037932c76e24e230e99dbd062d78825e3aa8998d6",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6527563752606511
+}

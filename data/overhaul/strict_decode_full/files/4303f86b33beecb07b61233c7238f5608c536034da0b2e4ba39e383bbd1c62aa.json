@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nāṭakurinji__Muddhugare Yashoda",
+  "audio": "data/concert_audio/Nāṭakurinji/Muddhugare Yashoda.mp3",
+  "audio_sha256": "4303f86b33beecb07b61233c7238f5608c536034da0b2e4ba39e383bbd1c62aa",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8191765001975
+}

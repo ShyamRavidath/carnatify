@@ -1,0 +1,11 @@
+{
+  "track": "231_Emani_Migula",
+  "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Emani Migula/Rithvik Raja - Emani Migula.mp3",
+  "audio_sha256": "f915314582f96e431a5dabffa49b0868764990fa070fabab63d9b61aaaf9b25f",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.4944508746266365
+}

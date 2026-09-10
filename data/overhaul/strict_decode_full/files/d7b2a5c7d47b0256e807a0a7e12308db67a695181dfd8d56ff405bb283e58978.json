@@ -1,0 +1,11 @@
+{
+  "track": "archive__Śankarābharaṇaṁ__swara rAgasudhArasa",
+  "audio": "data/concert_audio/Śankarābharaṇaṁ/swara rAgasudhArasa.mp3",
+  "audio_sha256": "d7b2a5c7d47b0256e807a0a7e12308db67a695181dfd8d56ff405bb283e58978",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.6719949580729008
+}

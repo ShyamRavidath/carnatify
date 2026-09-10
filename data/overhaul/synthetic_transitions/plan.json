@@ -1,0 +1,67 @@
+{
+  "status": "synthetic transition development stress test, not natural-concert validation",
+  "policy": "three distinct in-vocabulary ragas; track-SHA order; centered 90s; 10s silence; no score-based selection",
+  "corpus_sha256": "5db2931c9fe087570d9339e5a19f44f80d728ff8f149e0fa5faf513cf1d1744d",
+  "model_sha256": "59544dd8dd7854952584bf848042f6c33cc41c00f71aae554c4e35d10915352e",
+  "sample_rate": 44100,
+  "queries": [
+    {
+      "track": "180_Ninne_Bhajana",
+      "audio": "saraga1.5_carnatic/V Shankarnarayanan at Arkay by V Shankaranarayanan/Ninne Bhajana/Ninne Bhajana.mp3.mp3",
+      "audio_sha256": "1c5434fcc2804ab78600ed0af508a5f3197b058992bfeaeec5f80177c43d84c3",
+      "raga": "Nāṭa",
+      "start_s": 279.63073696145125,
+      "duration_s": 90.0
+    },
+    {
+      "track": "47_Koti_Janmani",
+      "audio": "saraga1.5_carnatic/Akkarai Sisters at Arkay by Akkarai Sisters/Koti Janmani/Koti Janmani.mp3.mp3",
+      "audio_sha256": "10d03b57f877301572181e7e00d6effbd5a3ad11a3382ff08a3686e085792dc7",
+      "raga": "Rītigauḷa",
+      "start_s": 218.34747165532877,
+      "duration_s": 90.0
+    },
+    {
+      "track": "243_Kamalamba_Samrakshatu",
+      "audio": "saraga1.5_carnatic/Chaitra Sairam at Arkay by Chaitra Sairam/Kamalamba Samrakshatu/Chaitra Sairam - Kamalamba Samrakshatu.mp3",
+      "audio_sha256": "1908f6b9e00c867564b11df6a4c87a502f185d05fcaf60085442ceef27c8144a",
+      "raga": "Ānandabhairavi",
+      "start_s": 286.42257369614515,
+      "duration_s": 90.0
+    }
+  ],
+  "truth": [
+    {
+      "start_s": 0.0,
+      "end_s": 90.0,
+      "kind": "music",
+      "raga": "Nāṭa",
+      "track": "180_Ninne_Bhajana"
+    },
+    {
+      "start_s": 90.0,
+      "end_s": 100.0,
+      "kind": "silence"
+    },
+    {
+      "start_s": 100.0,
+      "end_s": 190.0,
+      "kind": "music",
+      "raga": "Rītigauḷa",
+      "track": "47_Koti_Janmani"
+    },
+    {
+      "start_s": 190.0,
+      "end_s": 200.0,
+      "kind": "silence"
+    },
+    {
+      "start_s": 200.0,
+      "end_s": 290.0,
+      "kind": "music",
+      "raga": "Ānandabhairavi",
+      "track": "243_Kamalamba_Samrakshatu"
+    }
+  ],
+  "duration_s": 290.0
+}

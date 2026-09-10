@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nāṭa__saraseeruhasanapriyE",
+  "audio": "data/concert_audio/Nāṭa/saraseeruhasanapriyE.mp3",
+  "audio_sha256": "489ff12c0ba4dbc62245c934b7390682ddfbc2faf75308079dd3144f07c8f21e",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5554750827141106
+}

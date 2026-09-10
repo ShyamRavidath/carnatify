@@ -1,0 +1,11 @@
+{
+  "track": "archive__Madhyamāvati__venkaTEsha ninnu",
+  "audio": "data/concert_audio/Madhyamāvati/venkaTEsha ninnu.mp3",
+  "audio_sha256": "b4a89aec3fa1726a822e35b18b66561e7c4e48df38b4b4779e27e54f4f31ad84",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7992067919112742
+}

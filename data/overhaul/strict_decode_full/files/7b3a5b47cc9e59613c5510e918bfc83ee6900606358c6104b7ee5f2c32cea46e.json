@@ -1,0 +1,11 @@
+{
+  "track": "archive__Śankarābharaṇaṁ__Unidentified",
+  "audio": "data/concert_audio/Śankarābharaṇaṁ/Unidentified.mp3",
+  "audio_sha256": "7b3a5b47cc9e59613c5510e918bfc83ee6900606358c6104b7ee5f2c32cea46e",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.272013499867171
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Saurāṣtraṁ__sri gaNapati_r2",
+  "audio": "data/concert_audio/Saurāṣtraṁ/sri gaNapati_r2.mp3",
+  "audio_sha256": "13b06d85f567a9fd9950da2c4e9be26148e51b1330f3b75ab1c10d008ae5ddd4",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4535917919129133
+}

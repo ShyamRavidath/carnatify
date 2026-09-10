@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/3c3e6280-30d0-4ed9-ab95-f06def0f7110",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:30:27.440311+00:00",
+  "recording": {
+    "disambiguation": "",
+    "first-release-date": "1993",
+    "relations": [
+      {
+        "type": "performance",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "ended": false,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "target-type": "work",
+        "work": {
+          "title": "Dinamani Vamsha",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "language": "tel",
+          "id": "19d7d202-6282-4463-9bbb-976a8d97f819",
+          "type": "Song",
+          "languages": [
+            "tel"
+          ],
+          "iswcs": [],
+          "disambiguation": "",
+          "attributes": []
+        },
+        "attributes": [
+          "live"
+        ],
+        "direction": "forward",
+        "target-credit": "",
+        "source-credit": "",
+        "attribute-values": {},
+        "end": null
+      }
+    ],
+    "video": false,
+    "id": "3c3e6280-30d0-4ed9-ab95-f06def0f7110",
+    "length": 473300,
+    "title": "Dinamanivamsa"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "track": "110_Ragam_Thanam_Pallavi_-_Shanmukhapriya",
+  "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Ragam Thanam Pallavi - Shanmukhapriya/Sanjay Subrahmanyan - Ragam Thanam Pallavi - Shanmukhapriya.mp3",
+  "audio_sha256": "3c16696a0b1f3e3a69f6ab1c9dc3f8330ad0f0a011573bfee05bb6ea8828ee40",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 6.091425917111337
+}

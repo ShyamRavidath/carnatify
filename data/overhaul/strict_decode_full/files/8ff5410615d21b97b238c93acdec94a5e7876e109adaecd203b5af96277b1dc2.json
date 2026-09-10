@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nāṭa__Sree Maha Ganapathe Raag",
+  "audio": "data/concert_audio/Nāṭa/Sree Maha Ganapathe Raag.mp3",
+  "audio_sha256": "8ff5410615d21b97b238c93acdec94a5e7876e109adaecd203b5af96277b1dc2",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.2695900830440223
+}

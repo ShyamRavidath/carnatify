@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/f3ab2db7-3d30-432a-88d0-a21db4286468",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:23:05.068835+00:00",
+  "recording": {
+    "disambiguation": "",
+    "first-release-date": "2009",
+    "title": "Tirupati Venkataramana",
+    "relations": [
+      {
+        "ended": false,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "target-credit": "",
+        "source-credit": "",
+        "direction": "forward",
+        "target-type": "work",
+        "type": "performance",
+        "begin": null,
+        "work": {
+          "language": null,
+          "attributes": [],
+          "iswcs": [],
+          "type-id": null,
+          "id": "28c93206-412e-4783-9823-d6aacdf37c8c",
+          "type": null,
+          "languages": [],
+          "title": "Tirupati Venkataramana",
+          "disambiguation": ""
+        },
+        "end": null,
+        "attributes": [
+          "live"
+        ],
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-values": {}
+      }
+    ],
+    "id": "f3ab2db7-3d30-432a-88d0-a21db4286468",
+    "length": 267000,
+    "video": false
+  }
+}

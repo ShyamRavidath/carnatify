@@ -1,0 +1,45 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/39dcbd24-412a-4b2d-b287-cfa5166fc8cc",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:29:36.936645+00:00",
+  "recording": {
+    "id": "39dcbd24-412a-4b2d-b287-cfa5166fc8cc",
+    "length": 666000,
+    "relations": [
+      {
+        "work": {
+          "language": "tel",
+          "type": "Song",
+          "languages": [
+            "tel"
+          ],
+          "iswcs": [],
+          "title": "Amba Kamakshi",
+          "disambiguation": "Yadukula Kamboji Svarajati",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "id": "950facdd-94f1-4ed0-8050-ce7883150c99",
+          "attributes": []
+        },
+        "source-credit": "",
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work",
+        "direction": "forward",
+        "attribute-values": {},
+        "target-credit": "",
+        "type": "performance",
+        "end": null,
+        "ended": false,
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        }
+      }
+    ],
+    "disambiguation": "",
+    "title": "Amba Kamakshi Padayugame",
+    "video": false
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "status": "partial oracle-boundary evaluation; not automatic segmentation performance",
+  "n_primary_items": 6,
+  "n_measured": 6,
+  "n_missing": 0,
+  "n_in_vocabulary": 5,
+  "vocabulary_coverage": 0.8333333333333334,
+  "top1_all_measured": 0.3333333333333333,
+  "top1_in_vocabulary": 0.4,
+  "precision_answered": 0.3333333333333333,
+  "rows": [
+    {
+      "item_id": "c1_1",
+      "concert": "long_concert_1",
+      "truth": "Śankarābharaṇaṁ",
+      "in_vocabulary": true,
+      "measured": true,
+      "answered": true,
+      "top3": [
+        "Bēgaḍa",
+        "Kāṁbhōji",
+        "Śankarābharaṇaṁ"
+      ],
+      "correct": false,
+      "top3_correct": true,
+      "n_windows": 1
+    },
+    {
+      "item_id": "c2_1",
+      "concert": "long_concert_2",
+      "truth": "Tōḍi",
+      "in_vocabulary": true,
+      "measured": true,
+      "answered": true,
+      "top3": [
+        "Sāvēri",
+        "Hamsadhvāni",
+        "Bhairavi"
+      ],
+      "correct": false,
+      "top3_correct": false,
+      "n_windows": 1
+    },
+    {
+      "item_id": "c2_2",
+      "concert": "long_concert_2",
+      "truth": "Hindōḷaṁ",
+      "in_vocabulary": true,
+      "measured": true,
+      "answered": true,
+      "top3": [
+        "Hindōḷaṁ",
+        "Rītigauḷa",
+        "Sencuruṭṭi"
+      ],
+      "correct": true,
+      "top3_correct": true,
+      "n_windows": 1
+    },
+    {
+      "item_id": "c2_3",
+      "concert": "long_concert_2",
+      "truth": "Dhēnukā",
+      "in_vocabulary": false,
+      "measured": true,
+      "answered": true,
+      "top3": [
+        "Sindhubhairavi",
+        "Puṇṇāgavarāḷi",
+        "Latāngi"
+      ],
+      "correct": false,
+      "top3_correct": false,
+      "n_windows": 1
+    },
+    {
+      "item_id": "c3_1",
+      "concert": "long_concert_3",
+      "truth": "Ānandabhairavi",
+      "in_vocabulary": true,
+      "measured": true,
+      "answered": true,
+      "top3": [
+        "Karaharapriya",
+        "Sahānā",
+        "Kāṁbhōji"
+      ],
+      "correct": false,
+      "top3_correct": false,
+      "n_windows": 1
+    },
+    {
+      "item_id": "c3_2",
+      "concert": "long_concert_3",
+      "truth": "Varāḷi",
+      "in_vocabulary": true,
+      "measured": true,
+      "answered": true,
+      "top3": [
+        "Varāḷi",
+        "Ṣanmukhapriya",
+        "Kāmavardani"
+      ],
+      "correct": true,
+      "top3_correct": true,
+      "n_windows": 1
+    }
+  ],
+  "rejected_windows": [],
+  "label_manifest_sha256": "33e1edd5cb80ef6e26f0f1d06203e87a9b87b1b955c856a16a307ef894833892",
+  "model_sha256": "198078325c815ad6343fa39ba68eef77bea6fb50bf8196214fded1412a9f1acc"
+}

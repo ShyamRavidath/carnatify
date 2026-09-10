@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/09bd5b5f-1b57-4269-aa76-e3bb87471743",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:18:08.645107+00:00",
+  "recording": {
+    "title": "Kamakshi",
+    "length": 1595000,
+    "relations": [
+      {
+        "work": {
+          "attributes": [],
+          "disambiguation": "Varali Krithi of Shyama Shastri",
+          "iswcs": [],
+          "languages": [
+            "tel"
+          ],
+          "type": "Song",
+          "id": "e2ea167b-9bcf-4cf0-846d-90b6982bc6b8",
+          "language": "tel",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "title": "Kamakshi Bangaru"
+        },
+        "attributes": [
+          "live"
+        ],
+        "direction": "forward",
+        "target-credit": "",
+        "source-credit": "",
+        "attribute-values": {},
+        "end": null,
+        "type": "performance",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "ended": false,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "target-type": "work"
+      }
+    ],
+    "id": "09bd5b5f-1b57-4269-aa76-e3bb87471743",
+    "video": false,
+    "disambiguation": "",
+    "first-release-date": "2005"
+  }
+}

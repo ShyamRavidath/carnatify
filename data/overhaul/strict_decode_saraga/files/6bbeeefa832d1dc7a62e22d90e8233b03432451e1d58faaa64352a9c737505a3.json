@@ -1,0 +1,11 @@
+{
+  "track": "13_Thillana_Purnachandrika",
+  "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Thillana Purnachandrika/Ashwath Narayanan - Thillana Purnachandrika.mp3",
+  "audio_sha256": "6bbeeefa832d1dc7a62e22d90e8233b03432451e1d58faaa64352a9c737505a3",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2998820408247411
+}

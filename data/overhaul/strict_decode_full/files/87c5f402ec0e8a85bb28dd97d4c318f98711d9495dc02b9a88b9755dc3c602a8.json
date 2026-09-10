@@ -1,0 +1,11 @@
+{
+  "track": "archive__Janaranjani__06 sarasa sAmadAna",
+  "audio": "data/concert_audio/Janaranjani/06 sarasa sAmadAna.mp3",
+  "audio_sha256": "87c5f402ec0e8a85bb28dd97d4c318f98711d9495dc02b9a88b9755dc3c602a8",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.0885430839844048
+}

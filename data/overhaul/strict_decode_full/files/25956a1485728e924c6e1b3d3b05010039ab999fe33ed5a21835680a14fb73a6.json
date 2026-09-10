@@ -1,0 +1,11 @@
+{
+  "track": "archive__Aṭāna__anupama gunAmbudi",
+  "audio": "data/concert_audio/Aṭāna/anupama gunAmbudi.mp3",
+  "audio_sha256": "25956a1485728e924c6e1b3d3b05010039ab999fe33ed5a21835680a14fb73a6",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4923307918943465
+}

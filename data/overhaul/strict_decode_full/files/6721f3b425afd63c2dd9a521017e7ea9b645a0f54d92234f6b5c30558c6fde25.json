@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kamās__jAvaLi",
+  "audio": "data/concert_audio/Kamās/jAvaLi.mp3",
+  "audio_sha256": "6721f3b425afd63c2dd9a521017e7ea9b645a0f54d92234f6b5c30558c6fde25",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3503753338009119
+}

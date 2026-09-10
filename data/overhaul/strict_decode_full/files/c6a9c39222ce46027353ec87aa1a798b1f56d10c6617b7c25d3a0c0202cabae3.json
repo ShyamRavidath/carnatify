@@ -1,0 +1,11 @@
+{
+  "track": "archive__Janaranjani__08 Sarasasamadana",
+  "audio": "data/concert_audio/Janaranjani/08 Sarasasamadana.mp3",
+  "audio_sha256": "c6a9c39222ce46027353ec87aa1a798b1f56d10c6617b7c25d3a0c0202cabae3",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3387305000796914
+}

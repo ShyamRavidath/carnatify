@@ -1,0 +1,7 @@
+{
+  "manifest_sha256": "0536209db3caebed591f7b93c41fbe1eada69cb91a09cbbb93bab4f33e893637",
+  "provenance_sha256": "28796bab13a8b82a4e45cdfca464cf4fd66bc223b2630ccda806557a993b6415",
+  "plan_sha256": "8ec802c905f594156af88bd2cfe4b8c1a1e759c124ec1924de516f95f7bf72c1",
+  "known_artist_overlap": [],
+  "status": "Post-score provenance audit, not a new frozen test; unresolved unknown artists remain a limitation"
+}

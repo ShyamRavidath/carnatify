@@ -1,0 +1,11 @@
+{
+  "track": "107_Eranapai",
+  "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Eranapai/Sanjay Subrahmanyan - Eranapai.mp3",
+  "audio_sha256": "9f1f694b96f1f580bb66f7fdbe95a0eb439b0c415fb3f196c805e3ecf3c99ccc",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.766230707988143
+}

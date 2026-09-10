@@ -1,0 +1,11 @@
+{
+  "track": "archive__Vasanta__KVN harihara putram",
+  "audio": "data/concert_audio/Vasanta/KVN harihara putram.mp3",
+  "audio_sha256": "bb9f2bfa9e41731051c6938dcd43dd853fa063c030740074081d645860cb2947",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4472757917828858
+}

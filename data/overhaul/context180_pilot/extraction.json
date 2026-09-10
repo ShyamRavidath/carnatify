@@ -1,0 +1,1868 @@
+{
+  "plan_sha256": "d7c302719e1977be9cc49b27f42c813b40f550b1d62b283a9e9e8c50c876539d",
+  "tracks": 24,
+  "windows": 72,
+  "rows": [
+    {
+      "track": "archive__Mukhāri__enRaikku Shiva krupai",
+      "windows": [
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "4bee702a51858bd6b60f0f831949a6b202813c1c78d77e280c1dd2677a56c35d",
+            "start_s": 5.163537414965987,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 156.7394256591797,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.9999999999993261,
+            "clipping_fraction": 0.0,
+            "rms": 0.09179914754096999,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "4bee702a51858bd6b60f0f831949a6b202813c1c78d77e280c1dd2677a56c35d",
+            "start_s": 12.910294784580499,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 156.7394256591797,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.9999999999994128,
+            "clipping_fraction": 0.0,
+            "rms": 0.09079048559946873,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "4bee702a51858bd6b60f0f831949a6b202813c1c78d77e280c1dd2677a56c35d",
+            "start_s": 20.65705215419501,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 156.7394256591797,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.9999999999994066,
+            "clipping_fraction": 0.0,
+            "rms": 0.09084396316989182,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 164.57571804104373
+    },
+    {
+      "track": "archive__Bēgaḍa__karuNAkara",
+      "windows": [
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "7af02fbe9dde5a4e866a7f2508b788d0ec894249f13d54dbadf38db87f5afc47",
+            "start_s": 68.25505668934241,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 142.05638122558594,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.9999999999992132,
+            "clipping_fraction": 0.0,
+            "rms": 0.11986775424435918,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "7af02fbe9dde5a4e866a7f2508b788d0ec894249f13d54dbadf38db87f5afc47",
+            "start_s": 170.637641723356,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 142.05638122558594,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.9999999999992601,
+            "clipping_fraction": 0.0,
+            "rms": 0.0948763775088201,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "7af02fbe9dde5a4e866a7f2508b788d0ec894249f13d54dbadf38db87f5afc47",
+            "start_s": 273.02022675736964,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 142.05638122558594,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.9999999999992785,
+            "clipping_fraction": 0.0,
+            "rms": 0.09485954760846207,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 155.7044012909755
+    },
+    {
+      "track": "archive__Puṇṇāgavarāḷi__rAgi tandeerA",
+      "windows": [
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "f447f02b0365bcb662ec8aef376b687ad144120675a04d7e97a68c0dc5506383",
+            "start_s": 82.45986394557823,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 197.55587768554688,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.8289204351964841,
+            "clipping_fraction": 0.0,
+            "rms": 0.07768851815650146,
+            "source_sr": 11025
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "f447f02b0365bcb662ec8aef376b687ad144120675a04d7e97a68c0dc5506383",
+            "start_s": 206.15256235827664,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 197.55587768554688,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.8007207380908579,
+            "clipping_fraction": 0.0,
+            "rms": 0.07553020131961642,
+            "source_sr": 11025
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "f447f02b0365bcb662ec8aef376b687ad144120675a04d7e97a68c0dc5506383",
+            "start_s": 329.842358276644,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 147.92799377441406,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.7306973133343951,
+            "clipping_fraction": 0.0,
+            "rms": 0.06456043858837218,
+            "source_sr": 11025
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 166.16855750000104
+    },
+    {
+      "track": "compmusic__Nithyasree_Mahadevan.Guruguhaya_Bhakanugrahaya",
+      "windows": [
+        {
+          "frontend": "distributed reference pitch, not raw-audio inference",
+          "start_s": 29.688592000075005,
+          "duration_s": 179.99820000045474,
+          "tonic_hz": 217.473084
+        },
+        {
+          "frontend": "distributed reference pitch, not raw-audio inference",
+          "start_s": 74.22592440018752,
+          "duration_s": 179.99820000045474,
+          "tonic_hz": 217.473084
+        },
+        {
+          "frontend": "distributed reference pitch, not raw-audio inference",
+          "start_s": 118.76325680030004,
+          "duration_s": 179.99820000045474,
+          "tonic_hz": 217.473084
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 0.13402491668239236
+    },
+    {
+      "track": "archive__Maṇirangu__Yar Enna Sonnalum",
+      "windows": [
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "6fa79a1ad5a820efadc6bfbae64b5b39bf2384e9d341fd72095593e009f31ed9",
+            "start_s": 38.00235827664399,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 105.14666748046875,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.6270521637562056,
+            "clipping_fraction": 0.0,
+            "rms": 0.12940064151023156,
+            "source_sr": 48000
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "6fa79a1ad5a820efadc6bfbae64b5b39bf2384e9d341fd72095593e009f31ed9",
+            "start_s": 95.00444444444445,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 105.14666748046875,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.6390691240985669,
+            "clipping_fraction": 0.0,
+            "rms": 0.12727163935394342,
+            "source_sr": 48000
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "6fa79a1ad5a820efadc6bfbae64b5b39bf2384e9d341fd72095593e009f31ed9",
+            "start_s": 152.00943310657595,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 105.14666748046875,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.6362235766268024,
+            "clipping_fraction": 0.0,
+            "rms": 0.13035722749823944,
+            "source_sr": 48000
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 164.9175263340585
+    },
+    {
+      "track": "archive__Hindōḷaṁ__mA ramaNan",
+      "windows": [
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "9ff73d23e3402aaa0d765b36f61e915408ff2b1c48564399d0549232dfb8206e",
+            "start_s": 128.3889342403628,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 144.54368591308594,
+          "audio": {
+            "channels": 1,
+            "downmix": "mean",
+            "downmix_power_ratio": 1.0,
+            "clipping_fraction": 0.0,
+            "rms": 0.17963065180761156,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "9ff73d23e3402aaa0d765b36f61e915408ff2b1c48564399d0549232dfb8206e",
+            "start_s": 320.97233560090706,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 193.03622436523438,
+          "audio": {
+            "channels": 1,
+            "downmix": "mean",
+            "downmix_power_ratio": 1.0,
+            "clipping_fraction": 0.0,
+            "rms": 0.14788267793555623,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "9ff73d23e3402aaa0d765b36f61e915408ff2b1c48564399d0549232dfb8206e",
+            "start_s": 513.5557369614512,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 144.54368591308594,
+          "audio": {
+            "channels": 1,
+            "downmix": "mean",
+            "downmix_power_ratio": 1.0,
+            "clipping_fraction": 2.519526329050139e-07,
+            "rms": 0.19503430184090043,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 34.35774045903236
+    },
+    {
+      "track": "archive__Puṇṇāgavarāḷi__tavatAsOham",
+      "windows": [
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "ddfd646d94fe375f279c88f109f7e72961db0c6fe09ca6f2c8ba83121e5a61c6",
+            "start_s": 25.904761904761905,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 136.4178466796875,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.732606391446386,
+            "clipping_fraction": 0.0,
+            "rms": 0.08675418818992599,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "ddfd646d94fe375f279c88f109f7e72961db0c6fe09ca6f2c8ba83121e5a61c6",
+            "start_s": 64.76335600907029,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 136.4178466796875,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.7320408406603317,
+            "clipping_fraction": 0.0,
+            "rms": 0.08955341125972222,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "ddfd646d94fe375f279c88f109f7e72961db0c6fe09ca6f2c8ba83121e5a61c6",
+            "start_s": 103.62195011337869,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 136.4178466796875,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.7291866303338735,
+            "clipping_fraction": 0.0,
+            "rms": 0.08892928994920074,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 39.4004136249423
+    },
+    {
+      "track": "archive__Ṣanmukhapriya__vaddanE vAru lEru",
+      "windows": [
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "af2f39e6620c61d84cbe1d0e6b6867421ec039d091ebc2cda126373f80bd829b",
+            "start_s": 231.09659863945578,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 157.64892578125,
+          "audio": {
+            "channels": 1,
+            "downmix": "mean",
+            "downmix_power_ratio": 1.0,
+            "clipping_fraction": 0.0,
+            "rms": 0.10445582471884375,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "af2f39e6620c61d84cbe1d0e6b6867421ec039d091ebc2cda126373f80bd829b",
+            "start_s": 577.7414965986395,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 157.64892578125,
+          "audio": {
+            "channels": 1,
+            "downmix": "mean",
+            "downmix_power_ratio": 1.0,
+            "clipping_fraction": 0.0,
+            "rms": 0.10322335509956324,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "af2f39e6620c61d84cbe1d0e6b6867421ec039d091ebc2cda126373f80bd829b",
+            "start_s": 924.3892970521542,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 158.56373596191406,
+          "audio": {
+            "channels": 1,
+            "downmix": "mean",
+            "downmix_power_ratio": 1.0,
+            "clipping_fraction": 0.0,
+            "rms": 0.10717549250339811,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 45.34316945821047
+    },
+    {
+      "track": "archive__Janaranjani__06 sarasa sAmadAna",
+      "windows": [
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "87c5f402ec0e8a85bb28dd97d4c318f98711d9495dc02b9a88b9755dc3c602a8",
+            "start_s": 119.260589569161,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 148.78634643554688,
+          "audio": {
+            "channels": 1,
+            "downmix": "mean",
+            "downmix_power_ratio": 1.0,
+            "clipping_fraction": 0.0,
+            "rms": 0.1451027071467326,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "87c5f402ec0e8a85bb28dd97d4c318f98711d9495dc02b9a88b9755dc3c602a8",
+            "start_s": 298.15292517006804,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 148.78634643554688,
+          "audio": {
+            "channels": 1,
+            "downmix": "mean",
+            "downmix_power_ratio": 1.0,
+            "clipping_fraction": 0.0,
+            "rms": 0.15169255106442953,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "87c5f402ec0e8a85bb28dd97d4c318f98711d9495dc02b9a88b9755dc3c602a8",
+            "start_s": 477.04526077097506,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 147.92799377441406,
+          "audio": {
+            "channels": 1,
+            "downmix": "mean",
+            "downmix_power_ratio": 1.0,
+            "clipping_fraction": 0.0,
+            "rms": 0.19872618516323964,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 34.74509037518874
+    },
+    {
+      "track": "archive__Behāg__gayatrigirish irakkamvaramal",
+      "windows": [
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "09c7fea71885b65988a2c56842c5a965f1d184b49ae6173bbb95de6b202b7df3",
+            "start_s": 30.522630385487528,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 206.91517639160156,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.4225663662929471,
+            "clipping_fraction": 0.00012137818090199042,
+            "rms": 0.1903469305574896,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "09c7fea71885b65988a2c56842c5a965f1d184b49ae6173bbb95de6b202b7df3",
+            "start_s": 76.3094784580499,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 206.91517639160156,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.4465408913338506,
+            "clipping_fraction": 0.00012767699672461578,
+            "rms": 0.19635758907514772,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "09c7fea71885b65988a2c56842c5a965f1d184b49ae6173bbb95de6b202b7df3",
+            "start_s": 122.09632653061225,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 310.2328796386719,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.4475419420034445,
+            "clipping_fraction": 9.303350970017637e-05,
+            "rms": 0.1944469175036337,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 48.30278241727501
+    },
+    {
+      "track": "archive__Mōhanaṁ__maravA varam",
+      "windows": [
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "90408b3f9c5bdca4d4cb2ed7511d40548b0829b2e700950e7439d6e2d2640042",
+            "start_s": 38.20263038548753,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 169.96417236328125,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.8109684245669058,
+            "clipping_fraction": 0.0,
+            "rms": 0.1599488965049984,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "90408b3f9c5bdca4d4cb2ed7511d40548b0829b2e700950e7439d6e2d2640042",
+            "start_s": 95.50947845804988,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 169.96417236328125,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.8100156682077304,
+            "clipping_fraction": 0.0,
+            "rms": 0.16269346444462035,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "90408b3f9c5bdca4d4cb2ed7511d40548b0829b2e700950e7439d6e2d2640042",
+            "start_s": 152.81632653061226,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 169.96417236328125,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.8077501490609735,
+            "clipping_fraction": 3.1494079113126734e-07,
+            "rms": 0.15614931145019026,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 37.18025220790878
+    },
+    {
+      "track": "compmusic__Amritha_Murali.Brindavana_Dolagaaduva",
+      "windows": [
+        {
+          "frontend": "distributed reference pitch, not raw-audio inference",
+          "start_s": 48.27507280012196,
+          "duration_s": 179.99820000045474,
+          "tonic_hz": 195.997718
+        },
+        {
+          "frontend": "distributed reference pitch, not raw-audio inference",
+          "start_s": 120.69212640030491,
+          "duration_s": 179.99820000045474,
+          "tonic_hz": 195.997718
+        },
+        {
+          "frontend": "distributed reference pitch, not raw-audio inference",
+          "start_s": 193.10918000048787,
+          "duration_s": 179.99820000045474,
+          "tonic_hz": 195.997718
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 0.09364204201847315
+    },
+    {
+      "track": "archive__Janaranjani__08 Sarasasamadana",
+      "windows": [
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "c6a9c39222ce46027353ec87aa1a798b1f56d10c6617b7c25d3a0c0202cabae3",
+            "start_s": 18.05061224489796,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 138.00563049316406,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.7485093442104503,
+            "clipping_fraction": 0.0,
+            "rms": 0.18823905967428514,
+            "source_sr": 32000
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "c6a9c39222ce46027353ec87aa1a798b1f56d10c6617b7c25d3a0c0202cabae3",
+            "start_s": 45.12798185941043,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 138.00563049316406,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.7529237078093152,
+            "clipping_fraction": 0.0,
+            "rms": 0.20083475310888946,
+            "source_sr": 32000
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "c6a9c39222ce46027353ec87aa1a798b1f56d10c6617b7c25d3a0c0202cabae3",
+            "start_s": 72.2053514739229,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 138.00563049316406,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.7520616884205328,
+            "clipping_fraction": 0.0,
+            "rms": 0.20702340942008726,
+            "source_sr": 32000
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 35.012603542301804
+    },
+    {
+      "track": "archive__Kāmavardani__Sami Ninne",
+      "windows": [
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "9f43e8f3fa990b7f13ea8d56502d42441db9c69957930a86b18dc570c882c940",
+            "start_s": 39.36943310657596,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 142.05638122558594,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.6709113486216843,
+            "clipping_fraction": 0.0,
+            "rms": 0.08235064282538007,
+            "source_sr": 48000
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "9f43e8f3fa990b7f13ea8d56502d42441db9c69957930a86b18dc570c882c940",
+            "start_s": 98.4235827664399,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 142.8806915283203,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.7076019537907793,
+            "clipping_fraction": 0.0,
+            "rms": 0.08427100803265465,
+            "source_sr": 48000
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "9f43e8f3fa990b7f13ea8d56502d42441db9c69957930a86b18dc570c882c940",
+            "start_s": 157.4806349206349,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 142.8806915283203,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.6826036566492926,
+            "clipping_fraction": 0.0,
+            "rms": 0.08097405426603442,
+            "source_sr": 48000
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 34.83490329096094
+    },
+    {
+      "track": "archive__Nāṭa__swAminata paripAlayAsumAm",
+      "windows": [
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "a83192f6c55ca66b1c4a9ffe17fdc652353960bd0a71c35301cf9cc5554bdfc1",
+            "start_s": 67.77324263038548,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 135.63082885742188,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.6880030734365105,
+            "clipping_fraction": 0.0,
+            "rms": 0.06976633639692703,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "a83192f6c55ca66b1c4a9ffe17fdc652353960bd0a71c35301cf9cc5554bdfc1",
+            "start_s": 169.4360090702948,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 135.63082885742188,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.7015702116433327,
+            "clipping_fraction": 0.0,
+            "rms": 0.07159511780237995,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "a83192f6c55ca66b1c4a9ffe17fdc652353960bd0a71c35301cf9cc5554bdfc1",
+            "start_s": 271.09877551020406,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 135.63082885742188,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.7004335437355153,
+            "clipping_fraction": 0.0,
+            "rms": 0.07204175402441765,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 38.500274625141174
+    },
+    {
+      "track": "compmusic__Gayathri_Venkataraghavan.Sariyevaramma",
+      "windows": [
+        {
+          "frontend": "distributed reference pitch, not raw-audio inference",
+          "start_s": 316.7034996008001,
+          "duration_s": 179.99820000045474,
+          "tonic_hz": 208.855267
+        },
+        {
+          "frontend": "distributed reference pitch, not raw-audio inference",
+          "start_s": 791.7609712020003,
+          "duration_s": 179.99820000045474,
+          "tonic_hz": 208.855267
+        },
+        {
+          "frontend": "distributed reference pitch, not raw-audio inference",
+          "start_s": 1266.8139984032005,
+          "duration_s": 179.99820000045474,
+          "tonic_hz": 208.855267
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 0.17016916628926992
+    },
+    {
+      "track": "archive__Sindhubhairavi__kumAradanDapANi",
+      "windows": [
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "ceb473162b601c9e9e9f3e15b1124d1f9b752eeba07325923c30c213ad545eed",
+            "start_s": 16.99700680272109,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 173.94363403320312,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.8103421100524055,
+            "clipping_fraction": 0.0,
+            "rms": 0.06156965093972854,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "ceb473162b601c9e9e9f3e15b1124d1f9b752eeba07325923c30c213ad545eed",
+            "start_s": 42.49251700680272,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 173.94363403320312,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.7655847117668768,
+            "clipping_fraction": 0.0,
+            "rms": 0.06595353915826696,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "ceb473162b601c9e9e9f3e15b1124d1f9b752eeba07325923c30c213ad545eed",
+            "start_s": 67.99092970521542,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 173.94363403320312,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.7602959026066706,
+            "clipping_fraction": 0.0,
+            "rms": 0.07133318191151863,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 43.40116958273575
+    },
+    {
+      "track": "archive__Amṛtavarṣiṇi__Alapana",
+      "windows": [
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "093567c25ca3945f3854f53818631a3750f7d4e996ee48d87cbee09e3350cef1",
+            "start_s": 158.85351473922904,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 125.0775375366211,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.9999999999990473,
+            "clipping_fraction": 0.0,
+            "rms": 0.22658603251589696,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "093567c25ca3945f3854f53818631a3750f7d4e996ee48d87cbee09e3350cef1",
+            "start_s": 397.1308843537415,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 131.0031280517578,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.999999999999211,
+            "clipping_fraction": 0.0,
+            "rms": 0.22430600466484643,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "093567c25ca3945f3854f53818631a3750f7d4e996ee48d87cbee09e3350cef1",
+            "start_s": 635.411156462585,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 131.0031280517578,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.9999999999991933,
+            "clipping_fraction": 0.0,
+            "rms": 0.05225933772952958,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 35.859785167034715
+    },
+    {
+      "track": "archive__Rītigauḷa__janani ninnuvinA",
+      "windows": [
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "9388de77db7b799e55123afc2114732a41ee8073aa6ee7cec4d2114a175e18f5",
+            "start_s": 81.23210884353742,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 134.8483428955078,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.9555050183889673,
+            "clipping_fraction": 8.18846056941295e-07,
+            "rms": 0.14985040429919194,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "9388de77db7b799e55123afc2114732a41ee8073aa6ee7cec4d2114a175e18f5",
+            "start_s": 203.08172335600906,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 134.8483428955078,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.9643388001422559,
+            "clipping_fraction": 0.0,
+            "rms": 0.13186939418226248,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "9388de77db7b799e55123afc2114732a41ee8073aa6ee7cec4d2114a175e18f5",
+            "start_s": 324.93133786848074,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 134.8483428955078,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.9700390090833532,
+            "clipping_fraction": 0.0,
+            "rms": 0.1381159307141333,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 38.76525254175067
+    },
+    {
+      "track": "archive__Rītigauḷa__varnam",
+      "windows": [
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "233410b2f57cb74d9e4dd35be7236c2da2f355ebe5996da4273d40f85e12d062",
+            "start_s": 40.91646258503401,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 170.9503936767578,
+          "audio": {
+            "channels": 1,
+            "downmix": "mean",
+            "downmix_power_ratio": 1.0,
+            "clipping_fraction": 0.0,
+            "rms": 0.22594176431381405,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "233410b2f57cb74d9e4dd35be7236c2da2f355ebe5996da4273d40f85e12d062",
+            "start_s": 102.2897052154195,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 128.7488250732422,
+          "audio": {
+            "channels": 1,
+            "downmix": "mean",
+            "downmix_power_ratio": 1.0,
+            "clipping_fraction": 0.0,
+            "rms": 0.2311527187494285,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "233410b2f57cb74d9e4dd35be7236c2da2f355ebe5996da4273d40f85e12d062",
+            "start_s": 163.66294784580498,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 172.94012451171875,
+          "audio": {
+            "channels": 1,
+            "downmix": "mean",
+            "downmix_power_ratio": 1.0,
+            "clipping_fraction": 0.0,
+            "rms": 0.22807467008661747,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 32.25319195818156
+    },
+    {
+      "track": "archive__Ābhōgī__sabhApatikku",
+      "windows": [
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "cb600aa550e88235869f527cbed15288f951113f5415d075a97ca99be2148da6",
+            "start_s": 267.830566893424,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 99.81144714355469,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.8726756308567962,
+            "clipping_fraction": 0.0,
+            "rms": 0.10970181577111299,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "cb600aa550e88235869f527cbed15288f951113f5415d075a97ca99be2148da6",
+            "start_s": 669.57641723356,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 148.78634643554688,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.9189829663686928,
+            "clipping_fraction": 0.0,
+            "rms": 0.12920136294589266,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "cb600aa550e88235869f527cbed15288f951113f5415d075a97ca99be2148da6",
+            "start_s": 1071.322267573696,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 148.78634643554688,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.9815283999606864,
+            "clipping_fraction": 0.0,
+            "rms": 0.12453252598998978,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 34.35160799976438
+    },
+    {
+      "track": "archive__Dhanyāsi__06 BalakrishnanPadhaMalar",
+      "windows": [
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "1238205b8a936db47783a8efdbeb4648d3a30b340fc5802455f1333f4f5ad0f1",
+            "start_s": 34.80380952380953,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 128.0060577392578,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.4601470702644379,
+            "clipping_fraction": 0.0,
+            "rms": 0.06365845415700751,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "1238205b8a936db47783a8efdbeb4648d3a30b340fc5802455f1333f4f5ad0f1",
+            "start_s": 87.00517006802721,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 128.0060577392578,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.4719659796832985,
+            "clipping_fraction": 0.0,
+            "rms": 0.06723802196368649,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "1238205b8a936db47783a8efdbeb4648d3a30b340fc5802455f1333f4f5ad0f1",
+            "start_s": 139.20943310657597,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 128.0060577392578,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.47140412055426645,
+            "clipping_fraction": 0.0,
+            "rms": 0.06896925701037895,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 35.82016491703689
+    },
+    {
+      "track": "archive__Rītigauḷa__Janani Raag",
+      "windows": [
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "5063568b2d60411d7863b9d2c4a34300c74e1cc12626759fb0ad6fbe38e2955f",
+            "start_s": 82.3873015873016,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 132.5278778076172,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.7002244666492909,
+            "clipping_fraction": 0.0,
+            "rms": 0.11629129635814683,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "5063568b2d60411d7863b9d2c4a34300c74e1cc12626759fb0ad6fbe38e2955f",
+            "start_s": 205.96680272108844,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 132.5278778076172,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.712927617090909,
+            "clipping_fraction": 0.0,
+            "rms": 0.12073574121385837,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "5063568b2d60411d7863b9d2c4a34300c74e1cc12626759fb0ad6fbe38e2955f",
+            "start_s": 329.5492063492064,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 132.5278778076172,
+          "audio": {
+            "channels": 2,
+            "downmix": "mean",
+            "downmix_power_ratio": 0.7095195696527581,
+            "clipping_fraction": 0.0,
+            "rms": 0.11722965371679811,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 36.19449504185468
+    },
+    {
+      "track": "archive__Latāngi__marivEre dikkevvaru",
+      "windows": [
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "133909df3efcc06e5ad1bde945b5529eb8e35ff96f0959c6cb8aee06e6e91fd5",
+            "start_s": 203.53160997732428,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 151.39151000976562,
+          "audio": {
+            "channels": 1,
+            "downmix": "mean",
+            "downmix_power_ratio": 1.0,
+            "clipping_fraction": 0.0,
+            "rms": 0.14889704318761754,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "133909df3efcc06e5ad1bde945b5529eb8e35ff96f0959c6cb8aee06e6e91fd5",
+            "start_s": 508.8304761904762,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 152.2699737548828,
+          "audio": {
+            "channels": 1,
+            "downmix": "mean",
+            "downmix_power_ratio": 1.0,
+            "clipping_fraction": 0.0,
+            "rms": 0.171257395701429,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        },
+        {
+          "contract": {
+            "version": "mixed_tonic_query_melodia_v1",
+            "audio_sha256": "133909df3efcc06e5ad1bde945b5529eb8e35ff96f0959c6cb8aee06e6e91fd5",
+            "start_s": 814.1322448979593,
+            "duration_s": 180.0,
+            "melodia_parameters": {
+              "sampleRate": 44100,
+              "frameSize": 2048,
+              "hopSize": 128
+            },
+            "profile": "default",
+            "hpss_parameters": null
+          },
+          "tonic_hz": 154.04226684570312,
+          "audio": {
+            "channels": 1,
+            "downmix": "mean",
+            "downmix_power_ratio": 1.0,
+            "clipping_fraction": 0.0,
+            "rms": 0.16215682124340966,
+            "source_sr": 44100
+          },
+          "extraction_failure": null,
+          "actual_duration_s": 180.0
+        }
+      ],
+      "rejected": [],
+      "elapsed_s": 31.946841832716018
+    }
+  ],
+  "elapsed_s": 340.400182290934
+}

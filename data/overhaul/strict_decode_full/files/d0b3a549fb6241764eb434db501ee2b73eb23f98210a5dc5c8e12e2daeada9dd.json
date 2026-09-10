@@ -1,0 +1,11 @@
+{
+  "track": "archive__Śankarābharaṇaṁ__tookkiya tiruvaDi",
+  "audio": "data/concert_audio/Śankarābharaṇaṁ/tookkiya tiruvaDi.mp3",
+  "audio_sha256": "d0b3a549fb6241764eb434db501ee2b73eb23f98210a5dc5c8e12e2daeada9dd",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.45434362487867475
+}

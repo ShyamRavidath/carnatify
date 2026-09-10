@@ -1,0 +1,11 @@
+{
+  "track": "35_Thillana_Dhanashri",
+  "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Thillana Dhanashri/Sanjay Subrahmanyan - Thillana Dhanashri.mp3",
+  "audio_sha256": "ee60c03ec3c2ba5e7fe9932f5bf9b75ef79db5e9a9ec3b2214026e1e4fef065f",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4975019171833992
+}

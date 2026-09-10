@@ -1,0 +1,11 @@
+{
+  "track": "archive__Jōnpuri__pArukuLLE nalla nADu",
+  "audio": "data/concert_audio/Jōnpuri/pArukuLLE nalla nADu.mp3",
+  "audio_sha256": "42ef84b1d3dc2ae92b51a7fcc7f1a9c5dd767816dfaded31eb1e7e82612f55d1",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2957781245931983
+}

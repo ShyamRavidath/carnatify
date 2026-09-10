@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāṁbhōji__naDamADi tirinda",
+  "audio": "data/concert_audio/Kāṁbhōji/naDamADi tirinda.mp3",
+  "audio_sha256": "1575ef54840a35dbc3472d39b314ef0566907e434a749fa66427055dfe1d26e8",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2839866247959435
+}

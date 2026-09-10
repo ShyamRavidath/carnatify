@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sāma__annapoorNE",
+  "audio": "data/concert_audio/Sāma/annapoorNE.mp3",
+  "audio_sha256": "02625ff0f7aca1f864797caf824cabefb6ca5997301edb42a5c3a830fd167aed",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5639719590544701
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ṣanmukhapriya__mari vErE dikkevarayya",
+  "audio": "data/concert_audio/Ṣanmukhapriya/mari vErE dikkevarayya.mp3",
+  "audio_sha256": "3e80daee5a1235d156ce47031c45ab144a19b48781b6f409567e4fd33a7b6fb3",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.8474373752251267
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sencuruṭṭi__marubAri",
+  "audio": "data/concert_audio/Sencuruṭṭi/marubAri.mp3",
+  "audio_sha256": "6db7ebb466fac327d58f0b18e461b91b5eeb1e1814b1ea5f82cc04b7fdba716e",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.46277624974027276
+}

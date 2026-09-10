@@ -1,0 +1,48 @@
+{
+  "plan_sha256": "25046e50b5e2b4f61fa0003f38db1ba7714b39a359e81d864dbf83f93d0f746f",
+  "rows": [
+    {
+      "track": "saraga_av__46ba10ab2bf700deea8f8dca",
+      "audio": "data/overhaul/saraga_av/remaining_artists/audio/saraga_av__46ba10ab2bf700deea8f8dca.wav",
+      "audio_sha256": "7e24193cc9167b2b2e8f0d04b2962fb6e927c3a9d37361d4e0e694d26a9bfc2a"
+    },
+    {
+      "track": "saraga_av__18ea33cc9ad5cdd47a4fb9f4",
+      "audio": "data/overhaul/saraga_av/remaining_artists/audio/saraga_av__18ea33cc9ad5cdd47a4fb9f4.wav",
+      "audio_sha256": "ffb7528a111186547f592c2f40f33bda2aebb24074a2488a368d890411bc593f"
+    },
+    {
+      "track": "saraga_av__2b103b7e40d62596f21a248d",
+      "audio": "data/overhaul/saraga_av/remaining_artists/audio/saraga_av__2b103b7e40d62596f21a248d.wav",
+      "audio_sha256": "e53fc0c3f3574522a818e713d277fdcc13f778c985385c7e551c596336f71950"
+    },
+    {
+      "track": "saraga_av__01f87da150dfb5f48b8a941a",
+      "audio": "data/overhaul/saraga_av/remaining_artists/audio/saraga_av__01f87da150dfb5f48b8a941a.wav",
+      "audio_sha256": "412a1abfad2c3ac914c7a9194485c94061f7a162677bff18aed671d98a48714f"
+    },
+    {
+      "track": "saraga_av__21938f444c00e75c007d22f6",
+      "audio": "data/overhaul/saraga_av/remaining_artists/audio/saraga_av__21938f444c00e75c007d22f6.wav",
+      "audio_sha256": "5db55ed45c80982c8e548648d2eee33398b778e8a86b1d443bb19f67ef1c7298"
+    },
+    {
+      "track": "saraga_av__3442c97e8b32ed617c68b23f",
+      "audio": "data/overhaul/saraga_av/remaining_artists/audio/saraga_av__3442c97e8b32ed617c68b23f.wav",
+      "audio_sha256": "ec37f847907028ae79f9fef1da5960ef352692fc33e80ff49bb208c3271734f8"
+    },
+    {
+      "track": "saraga_av__067cbf4525d14c4cdbaf635b",
+      "audio": "data/overhaul/saraga_av/remaining_artists/audio/saraga_av__067cbf4525d14c4cdbaf635b.wav",
+      "audio_sha256": "0d39b2e4b001e7428082b328966b302d2c12f574e9397e2eab6d6d2cb3355147"
+    },
+    {
+      "track": "saraga_av__655e50c4f64078d09e25f483",
+      "audio": "data/overhaul/saraga_av/remaining_artists/audio/saraga_av__655e50c4f64078d09e25f483.wav",
+      "audio_sha256": "a7b98bfaa034766f8ca47fbce44da1dfa6042150d2bb2bcce8402d8f7c187f1d"
+    }
+  ],
+  "downloaded_bytes": 226492416,
+  "elapsed_s": 443.924914999865,
+  "persistent_range_cache_hits": 3
+}

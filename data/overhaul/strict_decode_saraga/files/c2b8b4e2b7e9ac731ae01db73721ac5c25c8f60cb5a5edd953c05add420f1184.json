@@ -1,0 +1,11 @@
+{
+  "track": "42_Payum_Oli_Nee_Yenakku",
+  "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Payum Oli Nee Yenakku/Sanjay Subrahmanyan - Payum Oli Nee Yenakku.mp3",
+  "audio_sha256": "c2b8b4e2b7e9ac731ae01db73721ac5c25c8f60cb5a5edd953c05add420f1184",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6665617092512548
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ānandabhairavi__sAmagAnapriyE",
+  "audio": "data/concert_audio/Ānandabhairavi/sAmagAnapriyE.mp3",
+  "audio_sha256": "b90298c7d127507689feb934c347be53096a03d2d915f9268fa0f9ed2784f916",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4572199578396976
+}

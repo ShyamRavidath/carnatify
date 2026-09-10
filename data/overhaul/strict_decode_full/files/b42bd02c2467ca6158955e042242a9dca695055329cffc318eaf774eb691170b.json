@@ -1,0 +1,11 @@
+{
+  "track": "archive__Mukhāri__brahma kaDigina pAdamu",
+  "audio": "data/concert_audio/Mukhāri/brahma kaDigina pAdamu.mp3",
+  "audio_sha256": "b42bd02c2467ca6158955e042242a9dca695055329cffc318eaf774eb691170b",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.114795250352472
+}

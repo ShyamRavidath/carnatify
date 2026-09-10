@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ābhōgī__49 Manasu Nilpa",
+  "audio": "data/concert_audio/Ābhōgī/49 Manasu Nilpa.mp3",
+  "audio_sha256": "96cb24a1307d4110180043f3f1aa39eb0afa77810b358aa37062e0e1a2b1a531",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.0341180418618023
+}

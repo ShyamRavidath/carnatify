@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāmavardani__vADEra daivamu",
+  "audio": "data/concert_audio/Kāmavardani/vADEra daivamu.mp3",
+  "audio_sha256": "84eae646fcd48e3691bbeb2456baead386ee505899a9c77aedb44f0dee55ee17",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2871702089905739
+}

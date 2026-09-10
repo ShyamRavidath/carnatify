@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/2ea6cabb-a422-4c1b-8f0b-752cbe68a5d4",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:26:27.112881+00:00",
+  "recording": {
+    "video": false,
+    "title": "Talli Ninnu Nera",
+    "disambiguation": "",
+    "relations": [
+      {
+        "type": "performance",
+        "target-credit": "",
+        "attribute-values": {},
+        "direction": "forward",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "ended": false,
+        "end": null,
+        "source-credit": "",
+        "work": {
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "attributes": [],
+          "id": "7b689b0e-bbf0-4559-93a7-48e77913cdc0",
+          "type": "Song",
+          "language": null,
+          "title": "Talli Ninnu Nera",
+          "languages": [],
+          "iswcs": [],
+          "disambiguation": ""
+        },
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ]
+      }
+    ],
+    "length": 3417000,
+    "first-release-date": "2010",
+    "id": "2ea6cabb-a422-4c1b-8f0b-752cbe68a5d4"
+  }
+}

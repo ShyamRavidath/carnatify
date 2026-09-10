@@ -1,0 +1,11 @@
+{
+  "track": "archive__Tōḍi__VOL MSG AIR oct 20004 RTP",
+  "audio": "data/concert_audio/Tōḍi/VOL MSG AIR oct 20004 RTP.mp3",
+  "audio_sha256": "8ae35facef6dadfec68efc167c71d96dc62f254d6ba3bea0f9b0a0fef1c1815e",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 4.796339957974851
+}

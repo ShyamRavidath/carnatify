@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nādanāmakriya__azhagellAm tirumurugan",
+  "audio": "data/concert_audio/Nādanāmakriya/azhagellAm tirumurugan.mp3",
+  "audio_sha256": "ab1bb8bf27ec6c5283035bae329ad16b16b2a85d6cd5da80d3e280fdde5dd76a",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.29063154198229313
+}

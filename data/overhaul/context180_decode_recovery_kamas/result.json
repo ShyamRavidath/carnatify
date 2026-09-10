@@ -1,0 +1,29 @@
+{
+  "plan_sha256": "eebac628020141bd49e494be8dae7083ff899e1fd36a9f2337c90cd2d5cd19fa",
+  "windows": [
+    {
+      "track": "archive__Kamās__mODi jEsEvElrA",
+      "start_s": 0.0,
+      "duration_s": 158.3049433106576,
+      "actual_duration_s": 158.30204081632652,
+      "tonic_hz": 145.38243103027344,
+      "voiced_s": 98.98086167800454,
+      "decoder": {
+        "decoder": "ffmpeg_strict_output_seek",
+        "stderr_bytes": 0,
+        "stderr_excerpt": "",
+        "start_s": 0.0,
+        "requested_duration_s": 158.3049433106576
+      },
+      "audio": {
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.8864867130026074,
+        "clipping_fraction": 0.0,
+        "rms": 0.08103855607474487
+      }
+    }
+  ],
+  "elapsed_s": 93.24047612491995,
+  "status": "separate decoder-recovery candidate; not merged into training"
+}

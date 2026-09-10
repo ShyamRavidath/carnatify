@@ -1,0 +1,11 @@
+{
+  "track": "archive__Dvijāvanti__13 Karana",
+  "audio": "data/concert_audio/Dvijāvanti/13 Karana.mp3",
+  "audio_sha256": "4c43e531a80d9b848efe87dd1f4c5072df47be0efc3ade04bfff7a3e808bb477",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.397537125274539
+}

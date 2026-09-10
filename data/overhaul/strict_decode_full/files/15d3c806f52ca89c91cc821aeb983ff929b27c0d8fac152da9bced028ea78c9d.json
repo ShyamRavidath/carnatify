@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kalyāṇi__birAna brOva itE",
+  "audio": "data/concert_audio/Kalyāṇi/birAna brOva itE.mp3",
+  "audio_sha256": "15d3c806f52ca89c91cc821aeb983ff929b27c0d8fac152da9bced028ea78c9d",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.6059059998951852
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kamās__kommarO vAniki",
+  "audio": "data/concert_audio/Kamās/kommarO vAniki.mp3",
+  "audio_sha256": "881b591d317f22b94de91bc8da1fed2d512edd860039f3f1928e2cc4409f4249",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2394755412824452
+}

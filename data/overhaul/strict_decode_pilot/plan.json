@@ -1,0 +1,133 @@
+{
+  "inputs": {
+    "data/overhaul/training_context_diagnostic/plan.json": "57f99ebcf6315bcae893fe9b8c78a2eec3c087f97dd5159cd9ec403ee3bc6841",
+    "data/overhaul/all_archive_audio_identity_refreshed.json": "48d57ced26642cbd196b3fab0bababf0a6482dd1c31cc7fdf6adee13ad8c0a9a",
+    "scripts/audit_strict_audio_decode.py": "c54558b94b101874fa8c67d0bb4133db0166e8ee2fd9047f51799e274168af85"
+  },
+  "ffmpeg": "/opt/homebrew/bin/ffmpeg",
+  "ffmpeg_sha256": "1332dc2de372bade9a8a63da0d6cdfab9de97fcefbae707bcc0b0506e1203327",
+  "rows": [
+    {
+      "track": "archive__Mukhāri__enRaikku Shiva krupai",
+      "audio": "data/concert_audio/Mukhāri/enRaikku Shiva krupai.mp3",
+      "audio_sha256": "4bee702a51858bd6b60f0f831949a6b202813c1c78d77e280c1dd2677a56c35d"
+    },
+    {
+      "track": "archive__Bēgaḍa__karuNAkara",
+      "audio": "data/concert_audio/Bēgaḍa/karuNAkara.mp3",
+      "audio_sha256": "7af02fbe9dde5a4e866a7f2508b788d0ec894249f13d54dbadf38db87f5afc47"
+    },
+    {
+      "track": "archive__Maṇirangu__Yar Enna Sonnalum",
+      "audio": "data/concert_audio/Maṇirangu/Yar Enna Sonnalum.mp3",
+      "audio_sha256": "6fa79a1ad5a820efadc6bfbae64b5b39bf2384e9d341fd72095593e009f31ed9"
+    },
+    {
+      "track": "archive__Hindōḷaṁ__mA ramaNan",
+      "audio": "data/concert_audio/Hindōḷaṁ/mA ramaNan.mp3",
+      "audio_sha256": "9ff73d23e3402aaa0d765b36f61e915408ff2b1c48564399d0549232dfb8206e"
+    },
+    {
+      "track": "archive__Puṇṇāgavarāḷi__tavatAsOham",
+      "audio": "data/concert_audio/Puṇṇāgavarāḷi/tavatAsOham.mp3",
+      "audio_sha256": "ddfd646d94fe375f279c88f109f7e72961db0c6fe09ca6f2c8ba83121e5a61c6"
+    },
+    {
+      "track": "archive__Ṣanmukhapriya__vaddanE vAru lEru",
+      "audio": "data/concert_audio/Ṣanmukhapriya/vaddanE vAru lEru.mp3",
+      "audio_sha256": "af2f39e6620c61d84cbe1d0e6b6867421ec039d091ebc2cda126373f80bd829b"
+    },
+    {
+      "track": "archive__Behāg__gayatrigirish irakkamvaramal",
+      "audio": "data/concert_audio/Behāg/gayatrigirish irakkamvaramal.mp3",
+      "audio_sha256": "09c7fea71885b65988a2c56842c5a965f1d184b49ae6173bbb95de6b202b7df3"
+    },
+    {
+      "track": "archive__Mōhanaṁ__maravA varam",
+      "audio": "data/concert_audio/Mōhanaṁ/maravA varam.mp3",
+      "audio_sha256": "90408b3f9c5bdca4d4cb2ed7511d40548b0829b2e700950e7439d6e2d2640042"
+    },
+    {
+      "track": "archive__Nāṭa__swAminata paripAlayAsumAm",
+      "audio": "data/concert_audio/Nāṭa/swAminata paripAlayAsumAm.mp3",
+      "audio_sha256": "a83192f6c55ca66b1c4a9ffe17fdc652353960bd0a71c35301cf9cc5554bdfc1"
+    },
+    {
+      "track": "archive__Sindhubhairavi__kumAradanDapANi",
+      "audio": "data/concert_audio/Sindhubhairavi/kumAradanDapANi.mp3",
+      "audio_sha256": "ceb473162b601c9e9e9f3e15b1124d1f9b752eeba07325923c30c213ad545eed"
+    },
+    {
+      "track": "archive__Rītigauḷa__janani ninnuvinA",
+      "audio": "data/concert_audio/Rītigauḷa/janani ninnuvinA.mp3",
+      "audio_sha256": "9388de77db7b799e55123afc2114732a41ee8073aa6ee7cec4d2114a175e18f5"
+    },
+    {
+      "track": "archive__Rītigauḷa__varnam",
+      "audio": "data/concert_audio/Rītigauḷa/varnam.mp3",
+      "audio_sha256": "233410b2f57cb74d9e4dd35be7236c2da2f355ebe5996da4273d40f85e12d062"
+    },
+    {
+      "track": "archive__Ābhōgī__sabhApatikku",
+      "audio": "data/concert_audio/Ābhōgī/sabhApatikku.mp3",
+      "audio_sha256": "cb600aa550e88235869f527cbed15288f951113f5415d075a97ca99be2148da6"
+    },
+    {
+      "track": "archive__Dhanyāsi__06 BalakrishnanPadhaMalar",
+      "audio": "data/concert_audio/Dhanyāsi/06 BalakrishnanPadhaMalar.mp3",
+      "audio_sha256": "1238205b8a936db47783a8efdbeb4648d3a30b340fc5802455f1333f4f5ad0f1"
+    },
+    {
+      "track": "archive__Rītigauḷa__Janani Raag",
+      "audio": "data/concert_audio/Rītigauḷa/Janani Raag.mp3",
+      "audio_sha256": "5063568b2d60411d7863b9d2c4a34300c74e1cc12626759fb0ad6fbe38e2955f"
+    },
+    {
+      "track": "archive__Latāngi__marivEre dikkevvaru",
+      "audio": "data/concert_audio/Latāngi/marivEre dikkevvaru.mp3",
+      "audio_sha256": "133909df3efcc06e5ad1bde945b5529eb8e35ff96f0959c6cb8aee06e6e91fd5"
+    },
+    {
+      "track": "archive__Haṁsānandi__smaravAram",
+      "audio": "data/concert_audio/Haṁsānandi/smaravAram.mp3",
+      "audio_sha256": "4455a68fbdef0c73b95b9842cfa45654fed8c8894f2165a1bb62eecd9d5a6a5f"
+    },
+    {
+      "track": "archive__Aṭāna__Sri Saraswati",
+      "audio": "data/concert_audio/Aṭāna/Sri Saraswati.mp3",
+      "audio_sha256": "c84763674bde45606aaa9267a2d12e0be5d4bee6d50fa587351008d23d8fc384"
+    },
+    {
+      "track": "archive__Suraṭi__geetArthamu sangeetAnandamu",
+      "audio": "data/concert_audio/Suraṭi/geetArthamu sangeetAnandamu.mp3",
+      "audio_sha256": "823629b13a1ed8accb972b0349bacaaed6cdb117e48554ae142cc4c0bfe05dd2"
+    },
+    {
+      "track": "archive__Mōhanaṁ__kAdambari",
+      "audio": "data/concert_audio/Mōhanaṁ/kAdambari.mp3",
+      "audio_sha256": "9b546b7c94cf12d4eb4456a59d9d770ab5f04fc339e6df634104b041f1621ae1"
+    },
+    {
+      "track": "archive__Behāg__kanDu dhanyanA",
+      "audio": "data/concert_audio/Behāg/kanDu dhanyanA.mp3",
+      "audio_sha256": "ff5098fd0a1f64ef6109775a36ed41960889e7ecc6bb5a18226133b6ecc65380"
+    },
+    {
+      "track": "archive__Varāḷi__Eti Janma",
+      "audio": "data/concert_audio/Varāḷi/Eti Janma.mp3",
+      "audio_sha256": "1583e7d7a7d124ab13dae05ba08d7ac52ea178786bca0d1de047644a8834193a"
+    },
+    {
+      "track": "archive__Suraṭi__kamalanayana",
+      "audio": "data/concert_audio/Suraṭi/kamalanayana.mp3",
+      "audio_sha256": "166275118754f277483e9b4b9abcd9706f58b1d041700a9ff8d331917871e1b3"
+    },
+    {
+      "track": "archive__Kamās__B Marulu Konnadhira",
+      "audio": "data/concert_audio/Kamās/B Marulu Konnadhira.mp3",
+      "audio_sha256": "7d7aef9d702f6759687f0a3ef599a94d9992992b42adeb7182c403332fa2ba87"
+    }
+  ],
+  "timeout_s": 300,
+  "policy": "full first audio stream; FFmpeg -xerror; null sink; one decoder thread; no raw writes"
+}

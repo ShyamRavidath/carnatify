@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sencuruṭṭi__Ayar kula chiruvan",
+  "audio": "data/concert_audio/Sencuruṭṭi/Ayar kula chiruvan.mp3",
+  "audio_sha256": "b3ccf3a04c0d8569f727644d9a24bca5f77854f8d08d0c04b5cb42acdd94995b",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2425022921524942
+}

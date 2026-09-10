@@ -1,0 +1,79 @@
+{
+  "status": "single-concert development diagnostic; not independent or identity accuracy",
+  "label_intervals_sha256": "33e1edd5cb80ef6e26f0f1d06203e87a9b87b1b955c856a16a307ef894833892",
+  "audio_sha256": "22216d830a8423890b6f2db63073304f2ec1d304aa03c048eae75d763f26d7c1",
+  "rows": [
+    {
+      "report": "data/overhaul/long_concert_1_context180.json",
+      "report_sha256": "2c7ec87ff69c595b926a4544d70a9676b9bb0c687eb441c188216809e471af2e",
+      "labeled_duration_s": 1501.0,
+      "confusion_duration_s": {
+        "music": {
+          "music": 801.0,
+          "percussion": 15.0,
+          "other": 0.0,
+          "uncovered": 0.0
+        },
+        "percussion": {
+          "music": 150.0,
+          "percussion": 535.0,
+          "other": 0.0,
+          "uncovered": 0.0
+        }
+      },
+      "accuracy": 0.8900732844770153,
+      "recall": {
+        "music": 0.9816176470588235,
+        "percussion": 0.781021897810219
+      }
+    },
+    {
+      "report": "data/overhaul/long_concert_1_pitch_activity.json",
+      "report_sha256": "e56236eb88cd32b2f1324191ebf497e7d15e9c900dc14cc44e2c5b1e9eb6d63b",
+      "labeled_duration_s": 1501.0,
+      "confusion_duration_s": {
+        "music": {
+          "music": 786.0,
+          "percussion": 30.0,
+          "other": 0.0,
+          "uncovered": 0.0
+        },
+        "percussion": {
+          "music": 5.0,
+          "percussion": 680.0,
+          "other": 0.0,
+          "uncovered": 0.0
+        }
+      },
+      "accuracy": 0.9766822118587608,
+      "recall": {
+        "music": 0.9632352941176471,
+        "percussion": 0.9927007299270073
+      }
+    },
+    {
+      "report": "data/overhaul/long_concert_1_pitch_activity_soft.json",
+      "report_sha256": "bb59e1634ca31f40ba3c20c6c19bad930d7367f5f7153b49b35c3969607c8a14",
+      "labeled_duration_s": 1501.0,
+      "confusion_duration_s": {
+        "music": {
+          "music": 816.0,
+          "percussion": 0.0,
+          "other": 0.0,
+          "uncovered": 0.0
+        },
+        "percussion": {
+          "music": 5.0,
+          "percussion": 680.0,
+          "other": 0.0,
+          "uncovered": 0.0
+        }
+      },
+      "accuracy": 0.9966688874083944,
+      "recall": {
+        "music": 1.0,
+        "percussion": 0.9927007299270073
+      }
+    }
+  ]
+}

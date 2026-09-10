@@ -1,0 +1,11 @@
+{
+  "track": "archive__Puṇṇāgavarāḷi__Neela Vaanam Thanil",
+  "audio": "data/concert_audio/Puṇṇāgavarāḷi/Neela Vaanam Thanil.mp3",
+  "audio_sha256": "f4ed82903a7cb3b1853b3d9945b26239a51f0b41b238a4f9c1077eaf4acb860b",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8839396247640252
+}

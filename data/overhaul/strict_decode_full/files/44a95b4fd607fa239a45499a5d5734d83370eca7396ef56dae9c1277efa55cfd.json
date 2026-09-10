@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kamās__Sanjay SantanaGopalaKrishnam",
+  "audio": "data/concert_audio/Kamās/Sanjay SantanaGopalaKrishnam.mp3",
+  "audio_sha256": "44a95b4fd607fa239a45499a5d5734d83370eca7396ef56dae9c1277efa55cfd",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.9904221249744296
+}

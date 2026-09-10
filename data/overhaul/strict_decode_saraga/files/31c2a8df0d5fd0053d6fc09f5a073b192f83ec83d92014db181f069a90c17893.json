@@ -1,0 +1,11 @@
+{
+  "track": "226_Karunimpa_Idi",
+  "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Karunimpa Idi/Rithvik Raja - Karunimpa Idi.mp3",
+  "audio_sha256": "31c2a8df0d5fd0053d6fc09f5a073b192f83ec83d92014db181f069a90c17893",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.608608250040561
+}

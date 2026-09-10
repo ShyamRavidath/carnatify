@@ -1,0 +1,11 @@
+{
+  "track": "archive__Hamsadhvāni__Vathapi Gana",
+  "audio": "data/concert_audio/Hamsadhvāni/Vathapi Gana.mp3",
+  "audio_sha256": "ebfc8962ad3f1503cf64512df5c3c529751ed689f76446be1fefd4a126df37a2",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.9738613329827785
+}

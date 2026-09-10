@@ -1,0 +1,11 @@
+{
+  "track": "archive__Āhiri__paNimatimukhi bAlE",
+  "audio": "data/concert_audio/Āhiri/paNimatimukhi bAlE.mp3",
+  "audio_sha256": "d832262740c6c28957c1b78896705a5cabce4f4675343b176be08097d14a98f8",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6736411661840975
+}

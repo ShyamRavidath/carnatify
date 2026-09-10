@@ -1,0 +1,11 @@
+{
+  "track": "archive__Maṇirangu__Yar Enna Sonnalum",
+  "audio": "data/concert_audio/Maṇirangu/Yar Enna Sonnalum.mp3",
+  "audio_sha256": "6fa79a1ad5a820efadc6bfbae64b5b39bf2384e9d341fd72095593e009f31ed9",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8753970423713326
+}

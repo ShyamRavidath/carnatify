@@ -1,0 +1,11 @@
+{
+  "track": "archive__Behāg__kanDu dhanyanA",
+  "audio": "data/concert_audio/Behāg/kanDu dhanyanA.mp3",
+  "audio_sha256": "ff5098fd0a1f64ef6109775a36ed41960889e7ecc6bb5a18226133b6ecc65380",
+  "plan_sha256": "e0babfbb17ff59861b0f951c98fa857adcc486715904a4fa250f57daf00a6c12",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.44875770807266235
+}

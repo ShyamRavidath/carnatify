@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/d9542546-7944-42f2-9c26-4d648cc25d80",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:14:14.521943+00:00",
+  "recording": {
+    "title": "O Jagadamba",
+    "relations": [
+      {
+        "target-credit": "",
+        "source-credit": "",
+        "type": "performance",
+        "begin": null,
+        "target-type": "work",
+        "direction": "forward",
+        "attribute-values": {},
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "work": {
+          "iswcs": [],
+          "attributes": [],
+          "language": null,
+          "type-id": null,
+          "id": "3197ee5c-a61c-49c6-9d86-cfd0a685e798",
+          "languages": [],
+          "type": null,
+          "title": "O Jagadamba",
+          "disambiguation": ""
+        },
+        "end": null,
+        "attributes": [
+          "live"
+        ],
+        "ended": false,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        }
+      }
+    ],
+    "disambiguation": "",
+    "first-release-date": "2011",
+    "video": false,
+    "length": 1217000,
+    "id": "d9542546-7944-42f2-9c26-4d648cc25d80"
+  }
+}

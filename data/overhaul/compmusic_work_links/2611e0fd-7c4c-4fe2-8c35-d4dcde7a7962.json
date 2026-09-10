@@ -1,0 +1,71 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/2611e0fd-7c4c-4fe2-8c35-d4dcde7a7962",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:23:35.214915+00:00",
+  "recording": {
+    "first-release-date": "2011",
+    "relations": [
+      {
+        "target-type": "work",
+        "target-credit": "",
+        "work": {
+          "iswcs": [],
+          "languages": [],
+          "id": "0b02bf96-f0ed-4e53-b321-f7ebee25db7b",
+          "type": "Song",
+          "attributes": [],
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "language": null,
+          "title": "02 Deva Deva Kalayamite",
+          "disambiguation": ""
+        },
+        "attribute-values": {},
+        "source-credit": "",
+        "direction": "forward",
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "type": "performance",
+        "attribute-ids": {},
+        "end": null,
+        "ended": false,
+        "attributes": []
+      },
+      {
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "end": null,
+        "ended": false,
+        "attributes": [
+          "live"
+        ],
+        "target-credit": "",
+        "target-type": "work",
+        "type": "performance",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "direction": "forward",
+        "work": {
+          "languages": [
+            "san"
+          ],
+          "iswcs": [],
+          "disambiguation": "",
+          "language": "san",
+          "title": "Deva Deva Kalayamite",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "attributes": [],
+          "id": "6d8e7741-292e-45f3-9aa4-58fce39c54b4",
+          "type": "Song"
+        },
+        "attribute-values": {},
+        "source-credit": ""
+      }
+    ],
+    "title": "Deva Deva Kalayamite",
+    "disambiguation": "",
+    "length": 774017,
+    "id": "2611e0fd-7c4c-4fe2-8c35-d4dcde7a7962",
+    "video": false
+  }
+}

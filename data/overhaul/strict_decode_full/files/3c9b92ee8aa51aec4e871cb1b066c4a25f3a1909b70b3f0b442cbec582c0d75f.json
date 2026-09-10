@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nāṭa__D K Jayaraman Pancharathana Krithis Jagadanandakaraka",
+  "audio": "data/concert_audio/Nāṭa/D K Jayaraman Pancharathana Krithis Jagadanandakaraka.mp3",
+  "audio_sha256": "3c9b92ee8aa51aec4e871cb1b066c4a25f3a1909b70b3f0b442cbec582c0d75f",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "decoder_error",
+  "returncode": 183,
+  "stderr_bytes": 652,
+  "stderr_excerpt": "[mp3float @ 0xc38828e00] invalid new backstep -1\n[mp3float @ 0xc38828e00] Header missing\n[aist#0:0/mp3 @ 0xc39404300] [dec:mp3float @ 0xc39004280] Error submitting packet to decoder: Invalid data found when processing input\n[aist#0:0/mp3 @ 0xc39404300] [dec:mp3float @ 0xc39004280] Error processing packet in decoder: Invalid data found when processing input\n[aist#0:0/mp3 @ 0xc39404300] [dec:mp3float @ 0xc39004280] Task finished with error code: -1094995529 (Invalid data found when processing input)\n[aist#0:0/mp3 @ 0xc39404300] [dec:mp3float @ 0xc39004280] Terminating thread with return code -1094995529 (Invalid data found when processing input)\n",
+  "elapsed_s": 0.6727153332903981
+}

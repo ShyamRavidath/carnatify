@@ -1,0 +1,11 @@
+{
+  "track": "archive__Māyāmāḷavagauḷa__Tulasi Dalamulache",
+  "audio": "data/concert_audio/Māyāmāḷavagauḷa/Tulasi Dalamulache.mp3",
+  "audio_sha256": "100f288a40fb8db55a38bd4946972e2862d0d1deec95dde625c12d534b73f1d1",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.2518420829437673
+}

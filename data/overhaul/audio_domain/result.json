@@ -1,0 +1,1670 @@
+{
+  "protocol": "fixed base plus annotated-tonic mixed-audio training; artist-held-out estimated-tonic inference",
+  "status": "domain adaptation development CV; not a new independent test",
+  "corpus_sha256": "5db2931c9fe087570d9339e5a19f44f80d728ff8f149e0fa5faf513cf1d1744d",
+  "base_feature_sha256": "b1b90b515956ef856a1a20b84d48e0aa8acbada9f3b7ea45ffbc9c2504736a1c",
+  "baseline_sha256": "f8d90cb596ffd9c51d82b595cd197c33a5e0ac85ee5ecc9ef7b8d0b84421b6ef",
+  "n": 184,
+  "n_known": 113,
+  "correct": 73,
+  "known_top1": 0.6460176991150443,
+  "baseline_correct": 74,
+  "rows": [
+    {
+      "track": "100_Pavamaana_Suthudu_Pattu",
+      "raga": "Saurāṣtraṁ",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Pūrvīkaḷyāṇi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "101_Maname_Kanamum",
+      "raga": "Karṇāṭaka dēvagāndhāri",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Ṣanmukhapriya",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "102_Ennadu_Jootuno",
+      "raga": "Kalāvati",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Janaranjani",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "103_Paarengum",
+      "raga": "Kalyāṇi",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Kalyāṇi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "104_Saravanabhava_Enum",
+      "raga": "Ṣanmukhapriya",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Ṣanmukhapriya",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "105_Karuvutranaal_Mudalaaga",
+      "raga": "Rāgamālika",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Behāg",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "106_Aru_marundu",
+      "raga": "Kāṁbhōji",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Kāṁbhōji",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "107_Eranapai",
+      "raga": "Tōḍi",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Tōḍi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "108_Pullum_Silambena_Kan",
+      "raga": "Śankarābharaṇaṁ",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Bēgaḍa",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "109_Sri_Raghuvara_Sugunaalaya",
+      "raga": "Bhairavi",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Bhairavi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "110_Ragam_Thanam_Pallavi_-_Shanmukhapriya",
+      "raga": "Ṣanmukhapriya",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Ṣanmukhapriya",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "111_Sarasadalanayana",
+      "raga": "Kamās",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Kamās",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "112_Rama_Rama_Guna_Seema",
+      "raga": "Simhēndra madhyamaṁ",
+      "group": "cherthalaranganathasharma",
+      "fold": 1,
+      "prediction": "Latāngi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "113_Prathi_Vaaram_Vaaram",
+      "raga": "Pāḍi",
+      "group": "cherthalaranganathasharma",
+      "fold": 1,
+      "prediction": "Kāpi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "115_Idhu_Thaano_Thillai_Sthalam",
+      "raga": "Behāg",
+      "group": "cherthalaranganathasharma",
+      "fold": 1,
+      "prediction": "Behāg",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "116_Bhuvini_Dasudane",
+      "raga": "Śrīranjani",
+      "group": "cherthalaranganathasharma",
+      "fold": 1,
+      "prediction": "Śrīranjani",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "117_Karuna_Nidhi_Illalo",
+      "raga": "Tōḍi",
+      "group": "cherthalaranganathasharma",
+      "fold": 1,
+      "prediction": "Dhanyāsi",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "118_Tulasi_Bilva",
+      "raga": "Kēdāragauḷa",
+      "group": "cherthalaranganathasharma",
+      "fold": 1,
+      "prediction": "Sāma",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "119_Shlokam_-_Shivah_Shaktyayukto",
+      "raga": "Madhyamāvati",
+      "group": "cherthalaranganathasharma",
+      "fold": 1,
+      "prediction": "Sāma",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "120_Velum_Mayilume",
+      "raga": "Sucaritra",
+      "group": "cherthalaranganathasharma",
+      "fold": 1,
+      "prediction": "Bhairavi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "130_Ghandhamu_Poyyaruga",
+      "raga": "Puṇṇāgavarāḷi",
+      "group": "modhumudisudhakar",
+      "fold": 4,
+      "prediction": "Puṇṇāgavarāḷi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "131_Koluvaiyunnade",
+      "raga": "Dēvagāndhāri",
+      "group": "modhumudisudhakar",
+      "fold": 4,
+      "prediction": "Kalyāṇi",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "133_Paramatmudu",
+      "raga": "Vāgadīśvari",
+      "group": "modhumudisudhakar",
+      "fold": 4,
+      "prediction": "Sahānā",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "135_Paraloka_Bhaya",
+      "raga": "Mandāri",
+      "group": "modhumudisudhakar",
+      "fold": 4,
+      "prediction": "Pūrvīkaḷyāṇi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "136_Dudukugala",
+      "raga": "Gauḷa",
+      "group": "modhumudisudhakar",
+      "fold": 4,
+      "prediction": "Gauḷa",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "137_Telisi_Rama",
+      "raga": "Pūrṇacandrika",
+      "group": "modhumudisudhakar",
+      "fold": 4,
+      "prediction": "Pūrṇacandrika",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "138_Eramuni",
+      "raga": "Vakuḷābharaṇaṁ",
+      "group": "modhumudisudhakar",
+      "fold": 4,
+      "prediction": "Māyāmāḷavagauḷa",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "139_Mangalam_Avanisutanatha",
+      "raga": "Nādanāmakriya",
+      "group": "modhumudisudhakar",
+      "fold": 4,
+      "prediction": "Varāḷi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "13_Thillana_Purnachandrika",
+      "raga": "Pūrṇacandrika",
+      "group": "ashwathnarayanan",
+      "fold": 4,
+      "prediction": "Nāṭa",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "141_Rama_Namam_Bhajare",
+      "raga": "Madhyamāvati",
+      "group": "modhumudisudhakar",
+      "fold": 4,
+      "prediction": "Madhyamāvati",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "142_Shobillu_Saptasvara",
+      "raga": "Jaganmōhini",
+      "group": "modhumudisudhakar",
+      "fold": 4,
+      "prediction": "Jaganmōhini",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "143_Sundari_Nee_Divya",
+      "raga": "Kalyāṇi",
+      "group": "modhumudisudhakar",
+      "fold": 4,
+      "prediction": "Vasanta",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "14_Angakaram",
+      "raga": "Suraṭi",
+      "group": "ashwathnarayanan",
+      "fold": 4,
+      "prediction": "Suraṭi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "152_Vanajakshi_-_Varnam",
+      "raga": "Kalyāṇi",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Śrī",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "154_Innamum_Oru_thalam",
+      "raga": "Behāg",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Ṣanmukhapriya",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "155_Nadopasana",
+      "raga": "Bēgaḍa",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Bēgaḍa",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "156_Ganta_mani_aadudhu",
+      "raga": "Kānaḍa",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Kānaḍa",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "157_Janani",
+      "raga": "Rītigauḷa",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Rītigauḷa",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "158_Oorilen_Kaani_Illai",
+      "raga": "Behāg",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Kamās",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "159_Ramakrishnaru_Manaegae",
+      "raga": "Tillāng",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Varāḷi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "15_Samajavarada",
+      "raga": "Śudda sāvēri",
+      "group": "ashwathnarayanan",
+      "fold": 4,
+      "prediction": "Suraṭi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "160_Uppum_karpuramum",
+      "raga": "Kānaḍa",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Behāg",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "161_Chalamelara_Saketha_Rama",
+      "raga": "Mārgahindōḷaṁ",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Tōḍi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "162_Kalilo_Hari_Smrana",
+      "raga": "Kāpi",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Kāpi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "163_Ninnaiye_rathi",
+      "raga": "Bāgēśrī",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Kamās",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "164_Mangalam",
+      "raga": "Saurāṣtraṁ",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Cakravākaṁ",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "165_Deenarakshaka",
+      "raga": "Āhiri",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Tōḍi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "166_O_Rangashayee",
+      "raga": "Kāṁbhōji",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Bēgaḍa",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "167_Sama_geeta_priyan",
+      "raga": "Gauḷa",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Gauḷa",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "168_Karupuram_Naarumo",
+      "raga": "Kamās",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Kalyāṇi",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "169_Va_vela_va",
+      "raga": "Tanarūpi",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Kāpi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "16_Evarura",
+      "raga": "Mōhanaṁ",
+      "group": "ashwathnarayanan",
+      "fold": 4,
+      "prediction": "Mōhanaṁ",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "171_Arul_Seya_Vendum_Ayya",
+      "raga": "Rasikapriya",
+      "group": "kuldeeppai",
+      "fold": 4,
+      "prediction": "Harikāmbhōji",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "172_Kaalaharanamelara",
+      "raga": "Śuddadhanyāsi",
+      "group": "kuldeeppai",
+      "fold": 4,
+      "prediction": "Aṭāna",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "174_Brochevarevarura",
+      "raga": "Kamās",
+      "group": "kuldeeppai",
+      "fold": 4,
+      "prediction": "Kamās",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "175_Thappi_Bratikipova",
+      "raga": "Tōḍi",
+      "group": "kuldeeppai",
+      "fold": 4,
+      "prediction": "Tōḍi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "176_Krishna_Nee_Begane_Baaro",
+      "raga": "Yamuna kalyāṇi",
+      "group": "kuldeeppai",
+      "fold": 4,
+      "prediction": "Sāma",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "177_Kari_Kalabha_Mukham",
+      "raga": "Sāvēri",
+      "group": "kuldeeppai",
+      "fold": 4,
+      "prediction": "Sāvēri",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "178_Muruga_Muruga_Muruga",
+      "raga": "Rāgamālika",
+      "group": "vshankaranarayanan",
+      "fold": 4,
+      "prediction": "Behāg",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "179_Chenduril_Nindradum_Kanda",
+      "raga": "Mānḍu",
+      "group": "vshankaranarayanan",
+      "fold": 4,
+      "prediction": "Sahānā",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "17_Eranapai",
+      "raga": "Tōḍi",
+      "group": "ashwathnarayanan",
+      "fold": 4,
+      "prediction": "Tōḍi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "180_Ninne_Bhajana",
+      "raga": "Nāṭa",
+      "group": "vshankaranarayanan",
+      "fold": 4,
+      "prediction": "Nāṭa",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "181_Nera_Nammiti",
+      "raga": "Kānaḍa",
+      "group": "vshankaranarayanan",
+      "fold": 4,
+      "prediction": "Kānaḍa",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "182_Dinamani_Vamsa",
+      "raga": "Harikāmbhōji",
+      "group": "vshankaranarayanan",
+      "fold": 4,
+      "prediction": "Bēgaḍa",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "183_Chakkani_Raja",
+      "raga": "Karaharapriya",
+      "group": "vshankaranarayanan",
+      "fold": 4,
+      "prediction": "Aṭāna",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "184_Ardhanareeshwaram",
+      "raga": "Kumudakriyā",
+      "group": "vshankaranarayanan",
+      "fold": 4,
+      "prediction": "Haṁsānandi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "185_Pavamana_Suthudu_Pattu",
+      "raga": "Saurāṣtraṁ",
+      "group": "vshankaranarayanan",
+      "fold": 4,
+      "prediction": "Suraṭi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "186_Shloka",
+      "raga": "Mōhanaṁ",
+      "group": "vshankaranarayanan",
+      "fold": 4,
+      "prediction": "Mōhanaṁ",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "187_Aaniraimekkani",
+      "raga": "Rāgamālika",
+      "group": "sumithravasudev",
+      "fold": 2,
+      "prediction": "Sahānā",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "188_Vanajaksha_Ninne_Kori",
+      "raga": "Rītigauḷa",
+      "group": "sumithravasudev",
+      "fold": 2,
+      "prediction": "Rītigauḷa",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "189_Karuninchutakidi",
+      "raga": "Sindhumandāri",
+      "group": "sumithravasudev",
+      "fold": 2,
+      "prediction": "Bēgaḍa",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "18_Parama_Purusham",
+      "raga": "Lalita pancamaṁ",
+      "group": "ashwathnarayanan",
+      "fold": 4,
+      "prediction": "Māyāmāḷavagauḷa",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "190_Va_Va_Brindavana",
+      "raga": "Sindhubhairavi",
+      "group": "sumithravasudev",
+      "fold": 2,
+      "prediction": "Sindhubhairavi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "191_Mati_Matiki",
+      "raga": "Mōhanaṁ",
+      "group": "sumithravasudev",
+      "fold": 2,
+      "prediction": "Mōhanaṁ",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "192_Sri_Guru_Na_Palitosmi",
+      "raga": "Pāḍi",
+      "group": "sumithravasudev",
+      "fold": 2,
+      "prediction": "Gauḷa",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "193_Thoomani_Madatthu",
+      "raga": "Hamīr kaḷyaṇi",
+      "group": "sumithravasudev",
+      "fold": 2,
+      "prediction": "Dēvagāndhāri",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "194_Ramabhi_Rama_Manasu",
+      "raga": "Dhanyāsi",
+      "group": "sumithravasudev",
+      "fold": 2,
+      "prediction": "Dhanyāsi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "195_Mangalam_Kosalendraya",
+      "raga": "Suraṭi",
+      "group": "sumithravasudev",
+      "fold": 2,
+      "prediction": "Suraṭi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "196_Sri_Vidhya_Rajagopala",
+      "raga": "Jaganmōhini",
+      "group": "sumithravasudev",
+      "fold": 2,
+      "prediction": "Ṣanmukhapriya",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "19_Marubari",
+      "raga": "Kamās",
+      "group": "ashwathnarayanan",
+      "fold": 4,
+      "prediction": "Kamās",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "20_Aparadhamula",
+      "raga": "Latāngi",
+      "group": "ashwathnarayanan",
+      "fold": 4,
+      "prediction": "Latāngi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "214_Parvathi_Ninu_Ne_Nera_Nammithi",
+      "raga": "Kalgaḍa",
+      "group": "srividyajanakiraman",
+      "fold": 3,
+      "prediction": "Cakravākaṁ",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "215_Nee_Sari_evvaramma",
+      "raga": "Bhairavi",
+      "group": "srividyajanakiraman",
+      "fold": 3,
+      "prediction": "Tōḍi",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "216_Jaya_Jaya_Janaki_Kantha",
+      "raga": "Nāṭa",
+      "group": "srividyajanakiraman",
+      "fold": 3,
+      "prediction": "Nāṭa",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "217_Santhamu_leka_Sowkyamu_ledu",
+      "raga": "Sāma",
+      "group": "srividyajanakiraman",
+      "fold": 3,
+      "prediction": "Dēvagāndhāri",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "218_Sarasuda_Ninne_Kori",
+      "raga": "Sāvēri",
+      "group": "srividyajanakiraman",
+      "fold": 3,
+      "prediction": "Sāvēri",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "219_Gnanamosaga_Rada",
+      "raga": "Gamakakriyā",
+      "group": "srividyajanakiraman",
+      "fold": 3,
+      "prediction": "Pūrvīkaḷyāṇi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "21_Sadabalarupapi_Shlokam",
+      "raga": "Hamsadhvāni",
+      "group": "ashwathnarayanan",
+      "fold": 4,
+      "prediction": "Sencuruṭṭi",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "220_Nenindal_Agaadadu_undo",
+      "raga": "Jōnpuri",
+      "group": "srividyajanakiraman",
+      "fold": 3,
+      "prediction": "Jōnpuri",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "221_Sri_Dundurge_Siva_Samsaare",
+      "raga": "Śrīranjani",
+      "group": "srividyajanakiraman",
+      "fold": 3,
+      "prediction": "Suraṭi",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "222_Madhava_Mamava",
+      "raga": "Nīlāṁbari",
+      "group": "rithvikraja",
+      "fold": 3,
+      "prediction": "Nāṭakurinji",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "223_Ramachandraya_Mangalam",
+      "raga": "Navrōj",
+      "group": "rithvikraja",
+      "fold": 3,
+      "prediction": "Kalyāṇi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "224_Sapasyat_Kausalya",
+      "raga": "Jōnpuri",
+      "group": "rithvikraja",
+      "fold": 3,
+      "prediction": "Jōnpuri",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "225_Seetapati_Namanasuna",
+      "raga": "Kamās",
+      "group": "rithvikraja",
+      "fold": 3,
+      "prediction": "Kamās",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "226_Karunimpa_Idi",
+      "raga": "Sahānā",
+      "group": "rithvikraja",
+      "fold": 3,
+      "prediction": "Sahānā",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "227_Endaro_Mahanubhavulu",
+      "raga": "Śrī",
+      "group": "rithvikraja",
+      "fold": 3,
+      "prediction": "Madhyamāvati",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "228_Bhogeendra_Shayinam",
+      "raga": "Kuntalavarāḷi",
+      "group": "rithvikraja",
+      "fold": 3,
+      "prediction": "Pūrṇacandrika",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "229_Thillana_Senchurutti",
+      "raga": "Sencuruṭṭi",
+      "group": "rithvikraja",
+      "fold": 3,
+      "prediction": "Sencuruṭṭi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "22_Hiranmayeem_Lakshmeem",
+      "raga": "Lalita",
+      "group": "vigneshishwar",
+      "fold": 2,
+      "prediction": "Māyāmāḷavagauḷa",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "230_Chintayama_Kanda",
+      "raga": "Bhairavi",
+      "group": "rithvikraja",
+      "fold": 3,
+      "prediction": "Bhairavi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "231_Emani_Migula",
+      "raga": "Tōḍi",
+      "group": "rithvikraja",
+      "fold": 3,
+      "prediction": "Ṣanmukhapriya",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "232_Saraguna_Palimpa",
+      "raga": "Kēdāragauḷa",
+      "group": "rithvikraja",
+      "fold": 3,
+      "prediction": "Ānandabhairavi",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "233_Nadatanum_Anisham",
+      "raga": "Cittaranjani",
+      "group": "kpnandini",
+      "fold": 2,
+      "prediction": "Pūrṇacandrika",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "234_Seethamma",
+      "raga": "Vasanta",
+      "group": "kpnandini",
+      "fold": 2,
+      "prediction": "Vasanta",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "235_Janakipathe_Jaya_Karunya_Jaladhe",
+      "raga": "Karaharapriya",
+      "group": "kpnandini",
+      "fold": 2,
+      "prediction": "Karaharapriya",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "236_Eppadi_Padinaro",
+      "raga": "Karṇāṭaka dēvagāndhāri",
+      "group": "kpnandini",
+      "fold": 2,
+      "prediction": "Suraṭi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "237_Manasaramathi",
+      "raga": "Sārāmati",
+      "group": "kpnandini",
+      "fold": 2,
+      "prediction": "Sindhubhairavi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "239_Bhavamulona",
+      "raga": "Śuddadhanyāsi",
+      "group": "kpnandini",
+      "fold": 2,
+      "prediction": "Suraṭi",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "23_Niraimadi_Mugam_Thiruppugazh",
+      "raga": "Haṁsānandi",
+      "group": "vigneshishwar",
+      "fold": 2,
+      "prediction": "Haṁsānandi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "240_Ardhanarishwaram",
+      "raga": "Kumudakriyā",
+      "group": "kpnandini",
+      "fold": 2,
+      "prediction": "Kāmavardani",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "241_Shri_Subramanyaya_Namaste",
+      "raga": "Kāṁbhōji",
+      "group": "chaitrasairam",
+      "fold": 1,
+      "prediction": "Nāṭa",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "242_Mamava_Pattabhi_Rama",
+      "raga": "Maṇirangu",
+      "group": "chaitrasairam",
+      "fold": 1,
+      "prediction": "Janaranjani",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "243_Kamalamba_Samrakshatu",
+      "raga": "Ānandabhairavi",
+      "group": "chaitrasairam",
+      "fold": 1,
+      "prediction": "Ānandabhairavi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "244_Govardhana_Girisham",
+      "raga": "Hindōḷaṁ",
+      "group": "chaitrasairam",
+      "fold": 1,
+      "prediction": "Hindōḷaṁ",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "246_Anandaamrutakarshini",
+      "raga": "Amṛtavarṣiṇi",
+      "group": "chaitrasairam",
+      "fold": 1,
+      "prediction": "Kalyāṇi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "247_Rakta_Ganapatim",
+      "raga": "Mōhanaṁ",
+      "group": "chaitrasairam",
+      "fold": 1,
+      "prediction": "Mōhanaṁ",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "24_Evvari_Bodhana",
+      "raga": "Ābhōgi",
+      "group": "vigneshishwar",
+      "fold": 2,
+      "prediction": "Śrīranjani",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "25_Sanchara_Dhadhara",
+      "raga": "Rāgamālika",
+      "group": "vigneshishwar",
+      "fold": 2,
+      "prediction": "Behāg",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "26_Lokavana_Chatura",
+      "raga": "Bēgaḍa",
+      "group": "vigneshishwar",
+      "fold": 2,
+      "prediction": "Bēgaḍa",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "27_Idhuthaano_Thillai_Sthalam",
+      "raga": "Behāg",
+      "group": "vigneshishwar",
+      "fold": 2,
+      "prediction": "Behāg",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "28_Amba_Kamakshi",
+      "raga": "Bhairavi",
+      "group": "vigneshishwar",
+      "fold": 2,
+      "prediction": "Dhanyāsi",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "29_Vitthala_Salaho_Swamy",
+      "raga": "Dēś",
+      "group": "vigneshishwar",
+      "fold": 2,
+      "prediction": "Kēdāragauḷa",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "30_Pavamana_Suthudu_Mangalam",
+      "raga": "Saurāṣtraṁ",
+      "group": "vigneshishwar",
+      "fold": 2,
+      "prediction": "Pūrvīkaḷyāṇi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "31_Karuna_Ela_Gante",
+      "raga": "Varāḷi",
+      "group": "vigneshishwar",
+      "fold": 2,
+      "prediction": "Varāḷi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "32_Gopanandana",
+      "raga": "Bhūṣāvaḷi",
+      "group": "vigneshishwar",
+      "fold": 2,
+      "prediction": "Suraṭi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "33_Entara_Nitana",
+      "raga": "Harikāmbhōji",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Harikāmbhōji",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "34_Teerthakarayinile",
+      "raga": "Kamās",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Kamās",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "35_Thillana_Dhanashri",
+      "raga": "Dhanaśrī",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Kāpi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "36_Ozhukkam_Uyirinum",
+      "raga": "Kuntalavarāḷi",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Kalyāṇi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "37_Undan_Paada_Pankayam",
+      "raga": "Śankarābharaṇaṁ",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Śankarābharaṇaṁ",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "38_Raagam_Thaanam_Pallavi",
+      "raga": "Kāpi",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Kāpi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "39_Pavamana_Suthudu",
+      "raga": "Saurāṣtraṁ",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Pūrvīkaḷyāṇi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "40_Kamakshi",
+      "raga": "Bhairavi",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Bhairavi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "41_Soundararajam",
+      "raga": "Bṛndāvana sāranga",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Bṛndāvana sāranga",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "42_Payum_Oli_Nee_Yenakku",
+      "raga": "Kamās",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Sindhubhairavi",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "43_Shatre_Vilagi_Irum",
+      "raga": "Pūrvīkaḷyāṇi",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Pūrvīkaḷyāṇi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "44_Maname_Ramanai_Paada",
+      "raga": "Sindhubhairavi",
+      "group": "sanjaysubrahmanyan",
+      "fold": 0,
+      "prediction": "Sindhubhairavi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "45_Apparama_Bhakti",
+      "raga": "Kāmavardani/Pantuvarāḷi",
+      "group": "akkaraisisters",
+      "fold": 3,
+      "prediction": "Kāmavardani",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "46_Manadirkkugandhadu",
+      "raga": "Sindhubhairavi",
+      "group": "akkaraisisters",
+      "fold": 3,
+      "prediction": "Sindhubhairavi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "47_Koti_Janmani",
+      "raga": "Rītigauḷa",
+      "group": "akkaraisisters",
+      "fold": 3,
+      "prediction": "Rītigauḷa",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "48_Brova_Barama",
+      "raga": "Bahudāri",
+      "group": "akkaraisisters",
+      "fold": 3,
+      "prediction": "Bēgaḍa",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "49_Shankari_Shankuru",
+      "raga": "Sāvēri",
+      "group": "akkaraisisters",
+      "fold": 3,
+      "prediction": "Latāngi",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "50_Karunimpa_Idi",
+      "raga": "Sahānā",
+      "group": "akkaraisisters",
+      "fold": 3,
+      "prediction": "Sahānā",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "51_Pavamana_Suthudu_Mangalam",
+      "raga": "Saurāṣtraṁ",
+      "group": "akkaraisisters",
+      "fold": 3,
+      "prediction": "Aṭāna",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "52_Geeta_Nayakan",
+      "raga": "Rāgamālika",
+      "group": "akkaraisisters",
+      "fold": 3,
+      "prediction": "Bēgaḍa",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "53_Siddhi_Vinayakam",
+      "raga": "Ṣanmukhapriya",
+      "group": "akkaraisisters",
+      "fold": 3,
+      "prediction": "Ṣanmukhapriya",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "54_Thillana_Pahadi",
+      "raga": "Pahāḍi",
+      "group": "akkaraisisters",
+      "fold": 3,
+      "prediction": "Sāma",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "55_Enadhu_Manam_Kavalai",
+      "raga": "Harikāmbhōji",
+      "group": "ssundar",
+      "fold": 1,
+      "prediction": "Harikāmbhōji",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "56_Purahara_Nandana",
+      "raga": "Hamīr kaḷyaṇi",
+      "group": "ssundar",
+      "fold": 1,
+      "prediction": "Behāg",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "57_Nannu_Brova_Neeku",
+      "raga": "Ābhōgi",
+      "group": "ssundar",
+      "fold": 1,
+      "prediction": "Madhyamāvati",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "58_Nera_Nammiti",
+      "raga": "Rāgamālika",
+      "group": "ssundar",
+      "fold": 1,
+      "prediction": "Jōnpuri",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "59_Parvathi_Ninnu_Neranammiti",
+      "raga": "Kalgaḍa",
+      "group": "ssundar",
+      "fold": 1,
+      "prediction": "Vasanta",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "60_Geetha_Vaadya_Natana",
+      "raga": "Nāṭakapriya",
+      "group": "ssundar",
+      "fold": 1,
+      "prediction": "Cakravākaṁ",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "61_Sudhaamayee",
+      "raga": "Amṛtavarṣiṇi",
+      "group": "ssundar",
+      "fold": 1,
+      "prediction": "Nīlāṁbari",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "63_Vanajaksha_Ninne_Nammiti",
+      "raga": "Behāg",
+      "group": "ssundar",
+      "fold": 1,
+      "prediction": "Behāg",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "64_Jaya_Jaya_Padmanabhanujese",
+      "raga": "Maṇirangu",
+      "group": "ssundar",
+      "fold": 1,
+      "prediction": "Madhyamāvati",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "65_Devadi_Devanukku_Jaya_Mangalam",
+      "raga": "Suraṭi",
+      "group": "ssundar",
+      "fold": 1,
+      "prediction": "Suraṭi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "66_Kannanai_Paadu_Maname",
+      "raga": "Kalyāṇi",
+      "group": "ssundar",
+      "fold": 1,
+      "prediction": "Kamās",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "67_Paahi_Maam_Sri",
+      "raga": "Janaranjani",
+      "group": "ssundar",
+      "fold": 1,
+      "prediction": "Pūrṇacandrika",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "68_Eppadi_Manam_Thunindhadho",
+      "raga": "Hussēnī",
+      "group": "ssundar",
+      "fold": 1,
+      "prediction": "Hussēnī",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "69_Munnu_Ravana",
+      "raga": "Tōḍi",
+      "group": "vasundararajagopal",
+      "fold": 2,
+      "prediction": "Vasanta",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "71_Pranamamyaham_Sri_Prananatham",
+      "raga": "Ranjani",
+      "group": "vasundararajagopal",
+      "fold": 2,
+      "prediction": "Ābhōgi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "72_Ni_Ninaindhal_Aagadhadhu",
+      "raga": "Jōnpuri",
+      "group": "vasundararajagopal",
+      "fold": 2,
+      "prediction": "Sindhubhairavi",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "73_Chandrashekharam_Sada_Bhajeham",
+      "raga": "Mārgahindōḷaṁ",
+      "group": "vasundararajagopal",
+      "fold": 2,
+      "prediction": "Kāpi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "74_Sri_Jalandara",
+      "raga": "Gaṁbhīra nāṭa",
+      "group": "vasundararajagopal",
+      "fold": 2,
+      "prediction": "Dhanyāsi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "75_Amba_Nilambari",
+      "raga": "Nīlāṁbari",
+      "group": "vasundararajagopal",
+      "fold": 2,
+      "prediction": "Yadukula kāṁbōji",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "76_Ninnuvina_Marigalada",
+      "raga": "Rītigauḷa",
+      "group": "vasundararajagopal",
+      "fold": 2,
+      "prediction": "Kamās",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "77_Avani_Sutha",
+      "raga": "Nādanāmakriya",
+      "group": "vasundararajagopal",
+      "fold": 2,
+      "prediction": "Varāḷi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "78_Rama_Neepai",
+      "raga": "Kedāraṁ",
+      "group": "kanakadurgavenkatesh",
+      "fold": 3,
+      "prediction": "Nāṭakurinji",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "79_Etulabrotuva",
+      "raga": "Cakravākaṁ",
+      "group": "kanakadurgavenkatesh",
+      "fold": 3,
+      "prediction": "Cakravākaṁ",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "80_Lokavana_Chatura",
+      "raga": "Bēgaḍa",
+      "group": "kanakadurgavenkatesh",
+      "fold": 3,
+      "prediction": "Bēgaḍa",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "81_Enthavedukonthu_Raghava",
+      "raga": "Sarasvatī manōhari",
+      "group": "kanakadurgavenkatesh",
+      "fold": 3,
+      "prediction": "Sahānā",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "82_Koluvamaregatha",
+      "raga": "Tōḍi",
+      "group": "kanakadurgavenkatesh",
+      "fold": 3,
+      "prediction": "Tōḍi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "83_Neevada_Negana",
+      "raga": "Sāranga",
+      "group": "kanakadurgavenkatesh",
+      "fold": 3,
+      "prediction": "Kānaḍa",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "84_Vara_Leela_Gana_Lola",
+      "raga": "Śankarābharaṇaṁ",
+      "group": "kanakadurgavenkatesh",
+      "fold": 3,
+      "prediction": "Sencuruṭṭi",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "85_Chinnanchiru_Kiliye",
+      "raga": "Rāgamālika",
+      "group": "mahati",
+      "fold": 1,
+      "prediction": "Behāg",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "87_Pavamana_Suttudu_Pattu",
+      "raga": "Saurāṣtraṁ",
+      "group": "mahati",
+      "fold": 1,
+      "prediction": "Suraṭi",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "88_Kannallavo_Swami",
+      "raga": "Suraṭi",
+      "group": "mahati",
+      "fold": 1,
+      "prediction": "Suraṭi",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "89_Padavini",
+      "raga": "Sālaga bhairavi",
+      "group": "mahati",
+      "fold": 1,
+      "prediction": "Pūrṇacandrika",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "90_Vandu_Ketpaar_Illayo",
+      "raga": "Rāgamālika",
+      "group": "mahati",
+      "fold": 1,
+      "prediction": "Hindōḷaṁ",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "91_Ragam_Tanam_Pallavi",
+      "raga": "Ṣanmukhapriya",
+      "group": "mahati",
+      "fold": 1,
+      "prediction": "Ṣanmukhapriya",
+      "correct": true,
+      "in_vocabulary": true
+    },
+    {
+      "track": "92_Tillana",
+      "raga": "Dvijāvanti",
+      "group": "mahati",
+      "fold": 1,
+      "prediction": "Vasanta",
+      "correct": false,
+      "in_vocabulary": true
+    },
+    {
+      "track": "93_Sharanagatha_Vatsale",
+      "raga": "Kathanakutūhalaṁ",
+      "group": "mahati",
+      "fold": 1,
+      "prediction": "Kānaḍa",
+      "correct": false,
+      "in_vocabulary": false
+    },
+    {
+      "track": "94_Hiranmayeem",
+      "raga": "Lalita",
+      "group": "mahati",
+      "fold": 1,
+      "prediction": "Māyāmāḷavagauḷa",
+      "correct": false,
+      "in_vocabulary": false
+    }
+  ]
+}

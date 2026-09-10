@@ -1,0 +1,198 @@
+{
+  "plan_sha256": "79090d3859e6ff54702e1dba5371e8878b21dd67e67dcc14375fb002cf9438f3",
+  "rows": [
+    {
+      "track": "112_Rama_Rama_Guna_Seema",
+      "unique_codes": 219,
+      "audio": {
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9453217195462659,
+        "clipping_fraction": 0.0,
+        "rms": 0.09128227048164442,
+        "source_sr": 44100
+      },
+      "transforms": {
+        "identity": {
+          "bit_error": 0.0,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        },
+        "gain_0_35": {
+          "bit_error": 0.0001414027149321267,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        },
+        "leading_silence_3_7s": {
+          "bit_error": 0.01795814479638009,
+          "shift_frames": 30,
+          "overlap_frames": 221
+        },
+        "mp3_64k": {
+          "bit_error": 0.0055147058823529415,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        }
+      }
+    },
+    {
+      "track": "19_Marubari",
+      "unique_codes": 219,
+      "audio": {
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9967753816057366,
+        "clipping_fraction": 0.0,
+        "rms": 0.05637752933164966,
+        "source_sr": 44100
+      },
+      "transforms": {
+        "identity": {
+          "bit_error": 0.0,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        },
+        "gain_0_35": {
+          "bit_error": 0.0001414027149321267,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        },
+        "leading_silence_3_7s": {
+          "bit_error": 0.02135180995475113,
+          "shift_frames": 30,
+          "overlap_frames": 221
+        },
+        "mp3_64k": {
+          "bit_error": 0.0029694570135746605,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        }
+      }
+    },
+    {
+      "track": "17_Eranapai",
+      "unique_codes": 217,
+      "audio": {
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9887554162435777,
+        "clipping_fraction": 0.0,
+        "rms": 0.040686066405793524,
+        "source_sr": 44100
+      },
+      "transforms": {
+        "identity": {
+          "bit_error": 0.0,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        },
+        "gain_0_35": {
+          "bit_error": 0.0,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        },
+        "leading_silence_3_7s": {
+          "bit_error": 0.017109728506787332,
+          "shift_frames": 30,
+          "overlap_frames": 221
+        },
+        "mp3_64k": {
+          "bit_error": 0.004524886877828055,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        }
+      }
+    },
+    {
+      "track": "223_Ramachandraya_Mangalam",
+      "unique_codes": 220,
+      "audio": {
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9447738562424537,
+        "clipping_fraction": 0.0,
+        "rms": 0.022187110231426468,
+        "source_sr": 44100
+      },
+      "transforms": {
+        "identity": {
+          "bit_error": 0.0,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        },
+        "gain_0_35": {
+          "bit_error": 0.0,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        },
+        "leading_silence_3_7s": {
+          "bit_error": 0.02050339366515837,
+          "shift_frames": 30,
+          "overlap_frames": 221
+        },
+        "mp3_64k": {
+          "bit_error": 0.006221719457013574,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        }
+      }
+    }
+  ],
+  "different_recording_pairs": [
+    {
+      "a": "19_Marubari",
+      "b": "112_Rama_Rama_Guna_Seema",
+      "alignment": {
+        "bit_error": 0.43649193548387094,
+        "shift_frames": 35,
+        "overlap_frames": 186
+      }
+    },
+    {
+      "a": "17_Eranapai",
+      "b": "112_Rama_Rama_Guna_Seema",
+      "alignment": {
+        "bit_error": 0.4332600502512563,
+        "shift_frames": -22,
+        "overlap_frames": 199
+      }
+    },
+    {
+      "a": "17_Eranapai",
+      "b": "19_Marubari",
+      "alignment": {
+        "bit_error": 0.44955357142857144,
+        "shift_frames": -11,
+        "overlap_frames": 210
+      }
+    },
+    {
+      "a": "223_Ramachandraya_Mangalam",
+      "b": "112_Rama_Rama_Guna_Seema",
+      "alignment": {
+        "bit_error": 0.50375,
+        "shift_frames": 46,
+        "overlap_frames": 175
+      }
+    },
+    {
+      "a": "223_Ramachandraya_Mangalam",
+      "b": "19_Marubari",
+      "alignment": {
+        "bit_error": 0.47554347826086957,
+        "shift_frames": -37,
+        "overlap_frames": 184
+      }
+    },
+    {
+      "a": "223_Ramachandraya_Mangalam",
+      "b": "17_Eranapai",
+      "alignment": {
+        "bit_error": 0.4636418269230769,
+        "shift_frames": 13,
+        "overlap_frames": 208
+      }
+    }
+  ],
+  "limitation": "Small robustness pilot; not a validated corpus-wide duplicate threshold"
+}

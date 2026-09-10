@@ -1,0 +1,11 @@
+{
+  "track": "archive__Mōhanaṁ__evarurA",
+  "audio": "data/concert_audio/Mōhanaṁ/evarurA.mp3",
+  "audio_sha256": "2663c1a47494813516b5d4eed8159e4ae1d625b255e968ac27b41c2f5ba626c3",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.4806239157915115
+}

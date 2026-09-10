@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/4bdce886-d7f1-4076-b2c8-ee94096be9e5",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:35:13.834823+00:00",
+  "recording": {
+    "relations": [
+      {
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "end": null,
+        "ended": false,
+        "target-credit": "",
+        "attribute-values": {},
+        "type": "performance",
+        "direction": "forward",
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ],
+        "source-credit": "",
+        "work": {
+          "type": null,
+          "language": null,
+          "disambiguation": "",
+          "languages": [],
+          "title": "Satatam Tavaka",
+          "iswcs": [],
+          "type-id": null,
+          "attributes": [],
+          "id": "7cb042be-95be-4568-93be-a8064fcce649"
+        }
+      }
+    ],
+    "length": 4023000,
+    "first-release-date": "2011",
+    "id": "4bdce886-d7f1-4076-b2c8-ee94096be9e5",
+    "video": false,
+    "title": "Satatam Tavaka",
+    "disambiguation": ""
+  }
+}

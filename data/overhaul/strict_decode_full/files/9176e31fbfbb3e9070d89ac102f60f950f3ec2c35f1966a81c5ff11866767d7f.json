@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kedāraṁ__rAmA neepai",
+  "audio": "data/concert_audio/Kedāraṁ/rAmA neepai.mp3",
+  "audio_sha256": "9176e31fbfbb3e9070d89ac102f60f950f3ec2c35f1966a81c5ff11866767d7f",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.6204738751985133
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Haṁsānandi__30 72 Melakartha Chakkaram Dhirasankarabaranam",
+  "audio": "data/concert_audio/Haṁsānandi/30 72 Melakartha Chakkaram Dhirasankarabaranam.mp3",
+  "audio_sha256": "5bc04e3682e5edeae1fce70ad315313654e097a0545b5ad0160afe474bf65105",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 4.964863749686629
+}

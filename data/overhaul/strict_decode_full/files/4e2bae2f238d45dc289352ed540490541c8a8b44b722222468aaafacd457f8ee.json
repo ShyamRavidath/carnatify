@@ -1,0 +1,11 @@
+{
+  "track": "archive__Tōḍi__kOTi nAdulu",
+  "audio": "data/concert_audio/Tōḍi/kOTi nAdulu.mp3",
+  "audio_sha256": "4e2bae2f238d45dc289352ed540490541c8a8b44b722222468aaafacd457f8ee",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.23554154206067324
+}

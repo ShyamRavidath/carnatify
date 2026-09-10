@@ -1,0 +1,11 @@
+{
+  "track": "archive__Śankarābharaṇaṁ__vallagAtana seetA",
+  "audio": "data/concert_audio/Śankarābharaṇaṁ/vallagAtana seetA.mp3",
+  "audio_sha256": "8be06cd26ba1619f82d92778330b2f027257fdba3773c6d3b4fe7c8d4e200f1a",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2431199997663498
+}

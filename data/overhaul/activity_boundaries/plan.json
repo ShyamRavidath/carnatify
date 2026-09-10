@@ -1,0 +1,1839 @@
+{
+  "training_plan_sha256": "774ab000eb4b12d29a2efd0a4570bb57d60df09a2fdf26e546ee58fffbd33dae",
+  "policy": "60s context margins; 10s queries; threshold .5; switch penalty 6; leave artist out",
+  "rows": [
+    {
+      "track": "16_Evarura",
+      "artist": "ashwathnarayanan",
+      "tani": {
+        "start_s": 1885.413877551,
+        "end_s": 2111.947755102,
+        "kind": "tani_avartanam"
+      },
+      "queries": [
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 1820
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 1830
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 1840
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 1850
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 1860
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 1870
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 1880
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 1890
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 1900
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 1910
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 1920
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 1930
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 1940
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 1950
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 1960
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 1970
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 1980
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 1990
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 2000
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 2010
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 2020
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 2030
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 2040
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 2050
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 2060
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 2070
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 2080
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 2090
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 2100
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 2110
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 2120
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 2130
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 2140
+        },
+        {
+          "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+          "audio_sha256": "bea69dcffac8809a35af1b7bb13f1ffb57b956e42651f04774c1756420bb083d",
+          "start_s": 2150
+        }
+      ],
+      "truth": [
+        {
+          "start_s": 1820,
+          "end_s": 1885.274557823,
+          "truth": "music"
+        },
+        {
+          "start_s": 1885.413877551,
+          "end_s": 2111.947755102,
+          "truth": "percussion"
+        },
+        {
+          "start_s": 2112.087074829,
+          "end_s": 2160,
+          "truth": "music"
+        }
+      ]
+    },
+    {
+      "track": "28_Amba_Kamakshi",
+      "artist": "vigneshishwar",
+      "tani": {
+        "start_s": 3369.679818594,
+        "end_s": 3844.9574603170004,
+        "kind": "tani_avartanam"
+      },
+      "queries": [
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3300
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3310
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3320
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3330
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3340
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3350
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3360
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3370
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3380
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3390
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3400
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3410
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3420
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3430
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3440
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3450
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3460
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3470
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3480
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3490
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3500
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3510
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3520
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3530
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3540
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3550
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3560
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3570
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3580
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3590
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3600
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3610
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3620
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3630
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3640
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3650
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3660
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3670
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3680
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3690
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3700
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3710
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3720
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3730
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3740
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3750
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3760
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3770
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3780
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3790
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3800
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3810
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3820
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3830
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3840
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3850
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3860
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3870
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3880
+        },
+        {
+          "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+          "audio_sha256": "45109108f363807fc9611b746941251a0cc8d7a60f3514bbabac8a71b3ece29f",
+          "start_s": 3890
+        }
+      ],
+      "truth": [
+        {
+          "start_s": 3300,
+          "end_s": 3369.494058956,
+          "truth": "music"
+        },
+        {
+          "start_s": 3369.679818594,
+          "end_s": 3844.9574603170004,
+          "truth": "percussion"
+        },
+        {
+          "start_s": 3845.027120181,
+          "end_s": 3900,
+          "truth": "music"
+        }
+      ]
+    },
+    {
+      "track": "38_Raagam_Thaanam_Pallavi",
+      "artist": "sanjaysubrahmanyan",
+      "tani": {
+        "start_s": 2708.995918367,
+        "end_s": 2982.824489795,
+        "kind": "tani_avartanam"
+      },
+      "queries": [
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2640
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2650
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2660
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2670
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2680
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2690
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2700
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2710
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2720
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2730
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2740
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2750
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2760
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2770
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2780
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2790
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2800
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2810
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2820
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2830
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2840
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2850
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2860
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2870
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2880
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2890
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2900
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2910
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2920
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2930
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2940
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2950
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2960
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2970
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2980
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+          "audio_sha256": "809516cc4592a2b967ed9da7a868b998a02d0fc948efb61a1349351d1238704f",
+          "start_s": 2990
+        }
+      ],
+      "truth": [
+        {
+          "start_s": 2640,
+          "end_s": 2708.8326530599998,
+          "truth": "music"
+        },
+        {
+          "start_s": 2708.995918367,
+          "end_s": 2982.824489795,
+          "truth": "percussion"
+        }
+      ]
+    },
+    {
+      "track": "111_Sarasadalanayana",
+      "artist": "sanjaysubrahmanyan",
+      "tani": {
+        "start_s": 1963.049795918,
+        "end_s": 2740.186848072,
+        "kind": "tani_avartanam"
+      },
+      "queries": [
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 1900
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 1910
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 1920
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 1930
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 1940
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 1950
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 1960
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 1970
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 1980
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 1990
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2000
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2010
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2020
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2030
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2040
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2050
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2060
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2070
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2080
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2090
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2100
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2110
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2120
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2130
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2140
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2150
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2160
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2170
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2180
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2190
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2200
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2210
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2220
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2230
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2240
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2250
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2260
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2270
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2280
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2290
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2300
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2310
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2320
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2330
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2340
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2350
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2360
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2370
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2380
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2390
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2400
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2410
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2420
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2430
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2440
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2450
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2460
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2470
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2480
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2490
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2500
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2510
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2520
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2530
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2540
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2550
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2560
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2570
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2580
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2590
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2600
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2610
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2620
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2630
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2640
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2650
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2660
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2670
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2680
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2690
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2700
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2710
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2720
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2730
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2740
+        },
+        {
+          "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+          "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+          "start_s": 2750
+        }
+      ],
+      "truth": [
+        {
+          "start_s": 1900,
+          "end_s": 1962.7479365069998,
+          "truth": "music"
+        },
+        {
+          "start_s": 1963.049795918,
+          "end_s": 2740.186848072,
+          "truth": "percussion"
+        }
+      ]
+    },
+    {
+      "track": "166_O_Rangashayee",
+      "artist": "sanjaysubrahmanyan",
+      "tani": {
+        "start_s": 3302.432653061,
+        "end_s": 3773.3387755090002,
+        "kind": "tani_avartana"
+      },
+      "queries": [
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3240
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3250
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3260
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3270
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3280
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3290
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3300
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3310
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3320
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3330
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3340
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3350
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3360
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3370
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3380
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3390
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3400
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3410
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3420
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3430
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3440
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3450
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3460
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3470
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3480
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3490
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3500
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3510
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3520
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3530
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3540
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3550
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3560
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3570
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3580
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3590
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3600
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3610
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3620
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3630
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3640
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3650
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3660
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3670
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3680
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3690
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3700
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3710
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3720
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3730
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3740
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3750
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3760
+        },
+        {
+          "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/O Rangashayee/Sanjay Subrahmanyan - O Rangashayee.mp3",
+          "audio_sha256": "be0632024a04e88bf526e2695601f8b15467e7b27ab2cff5bf67651181c9db52",
+          "start_s": 3770
+        }
+      ],
+      "truth": [
+        {
+          "start_s": 3240,
+          "end_s": 3301.322448978,
+          "truth": "music"
+        },
+        {
+          "start_s": 3302.432653061,
+          "end_s": 3773.3387755090002,
+          "truth": "percussion"
+        }
+      ]
+    },
+    {
+      "track": "232_Saraguna_Palimpa",
+      "artist": "rithvikraja",
+      "tani": {
+        "start_s": 1695.232653061,
+        "end_s": 2235.408163265,
+        "kind": "tani_avartana"
+      },
+      "queries": [
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1630
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1640
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1650
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1660
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1670
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1680
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1690
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1700
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1710
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1720
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1730
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1740
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1750
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1760
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1770
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1780
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1790
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1800
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1810
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1820
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1830
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1840
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1850
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1860
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1870
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1880
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1890
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1900
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1910
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1920
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1930
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1940
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1950
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1960
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1970
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1980
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 1990
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2000
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2010
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2020
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2030
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2040
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2050
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2060
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2070
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2080
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2090
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2100
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2110
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2120
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2130
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2140
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2150
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2160
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2170
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2180
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2190
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2200
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2210
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2220
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2230
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2240
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2250
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2260
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2270
+        },
+        {
+          "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Saraguna Palimpa/Rithvik Raja - Saraguna Palimpa.mp3",
+          "audio_sha256": "af9a6bc5fd9cafa61e3dfedc08a250cb749641d3ae0dc25521156f93cad56e65",
+          "start_s": 2280
+        }
+      ],
+      "truth": [
+        {
+          "start_s": 1630,
+          "end_s": 1694.8244897949999,
+          "truth": "music"
+        },
+        {
+          "start_s": 1695.232653061,
+          "end_s": 2235.408163265,
+          "truth": "percussion"
+        },
+        {
+          "start_s": 2235.502040816,
+          "end_s": 2290,
+          "truth": "music"
+        }
+      ]
+    }
+  ]
+}

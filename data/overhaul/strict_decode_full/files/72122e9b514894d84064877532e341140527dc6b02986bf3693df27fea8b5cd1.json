@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāṁbhōji__RTP",
+  "audio": "data/concert_audio/Kāṁbhōji/RTP.mp3",
+  "audio_sha256": "72122e9b514894d84064877532e341140527dc6b02986bf3693df27fea8b5cd1",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5055757076479495
+}

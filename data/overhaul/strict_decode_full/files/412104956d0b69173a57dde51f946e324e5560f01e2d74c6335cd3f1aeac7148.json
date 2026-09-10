@@ -1,0 +1,11 @@
+{
+  "track": "archive__Janaranjani__viDajAladura",
+  "audio": "data/concert_audio/Janaranjani/viDajAladura.mp3",
+  "audio_sha256": "412104956d0b69173a57dde51f946e324e5560f01e2d74c6335cd3f1aeac7148",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.710700957570225
+}

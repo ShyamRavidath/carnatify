@@ -1,0 +1,11 @@
+{
+  "track": "archive__Pūrvīkaḷyāṇi__03 ninnuvinAga",
+  "audio": "data/concert_audio/Pūrvīkaḷyāṇi/03 ninnuvinAga.mp3",
+  "audio_sha256": "8881af5b7a90daff1f7aa75f820193d73b13addb49ed5c963fe5ff4cb1c60206",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 4.048270375002176
+}

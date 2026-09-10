@@ -1,0 +1,11 @@
+{
+  "track": "archive__Rītigauḷa__7 MDR nannu viDaci",
+  "audio": "data/concert_audio/Rītigauḷa/7 MDR nannu viDaci.mp3",
+  "audio_sha256": "8a4b2395676e4c4afa729fc3d565336654c037d50b175aed9c4a4a4e4171597a",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6137745841406286
+}

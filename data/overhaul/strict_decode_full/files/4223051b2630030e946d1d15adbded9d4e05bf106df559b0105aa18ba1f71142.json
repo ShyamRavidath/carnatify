@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sahānā__vandanamu",
+  "audio": "data/concert_audio/Sahānā/vandanamu.mp3",
+  "audio_sha256": "4223051b2630030e946d1d15adbded9d4e05bf106df559b0105aa18ba1f71142",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3464674591086805
+}

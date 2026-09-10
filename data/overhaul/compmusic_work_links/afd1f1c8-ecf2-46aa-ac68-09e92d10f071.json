@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/afd1f1c8-ecf2-46aa-ac68-09e92d10f071",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:04:02.362417+00:00",
+  "recording": {
+    "relations": [
+      {
+        "target-type": "work",
+        "ended": false,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "type": "performance",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "target-credit": "",
+        "attribute-values": {},
+        "end": null,
+        "source-credit": "",
+        "direction": "forward",
+        "work": {
+          "title": "Seshachalanayakam",
+          "type-id": null,
+          "language": null,
+          "id": "4682fa3a-fe51-49f0-9798-f9b3f900b4f8",
+          "type": null,
+          "languages": [],
+          "attributes": [],
+          "disambiguation": "",
+          "iswcs": []
+        },
+        "attributes": [
+          "live"
+        ]
+      }
+    ],
+    "id": "afd1f1c8-ecf2-46aa-ac68-09e92d10f071",
+    "video": false,
+    "disambiguation": "",
+    "first-release-date": "2006",
+    "title": "Seshachalanayakam",
+    "length": 1547000
+  }
+}

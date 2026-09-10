@@ -1,0 +1,11 @@
+{
+  "track": "archive__Cakravākaṁ__vinarAdhana manavi vinata",
+  "audio": "data/concert_audio/Cakravākaṁ/vinarAdhana manavi vinata.mp3",
+  "audio_sha256": "ac76ab87bdb07fde05e517b696878411c024f4ed874035ca839093a5633200b1",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.3836519159376621
+}

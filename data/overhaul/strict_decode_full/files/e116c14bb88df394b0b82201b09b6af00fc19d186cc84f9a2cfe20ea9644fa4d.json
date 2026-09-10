@@ -1,0 +1,11 @@
+{
+  "track": "archive__Mukhāri__OSThyagarajan EnrikkuShivaKrupaiVarumo",
+  "audio": "data/concert_audio/Mukhāri/OSThyagarajan EnrikkuShivaKrupaiVarumo.mp3",
+  "audio_sha256": "e116c14bb88df394b0b82201b09b6af00fc19d186cc84f9a2cfe20ea9644fa4d",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.3111742082983255
+}

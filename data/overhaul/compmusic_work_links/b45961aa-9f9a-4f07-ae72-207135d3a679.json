@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/b45961aa-9f9a-4f07-ae72-207135d3a679",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:04:31.537014+00:00",
+  "recording": {
+    "id": "b45961aa-9f9a-4f07-ae72-207135d3a679",
+    "video": false,
+    "relations": [
+      {
+        "work": {
+          "language": null,
+          "type-id": null,
+          "title": "Sri Raja Rajeswari",
+          "iswcs": [],
+          "disambiguation": "",
+          "attributes": [],
+          "languages": [],
+          "type": null,
+          "id": "02164e5a-0c76-4662-ba07-f8c75b7b93e5"
+        },
+        "attributes": [
+          "live"
+        ],
+        "direction": "forward",
+        "target-credit": "",
+        "source-credit": "",
+        "attribute-values": {},
+        "end": null,
+        "type": "performance",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "ended": false,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "target-type": "work"
+      }
+    ],
+    "first-release-date": "2001",
+    "disambiguation": "",
+    "title": "Sri Raja Rajeswari",
+    "length": 352000
+  }
+}

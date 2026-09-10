@@ -1,0 +1,42 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/5fa0bcfd-c71e-4d6f-940e-0cef6fbc2a32",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:41:34.660215+00:00",
+  "recording": {
+    "relations": [
+      {
+        "attribute-ids": {},
+        "attributes": [],
+        "ended": false,
+        "end": null,
+        "target-credit": "",
+        "target-type": "work",
+        "type": "performance",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "direction": "forward",
+        "begin": null,
+        "source-credit": "",
+        "attribute-values": {},
+        "work": {
+          "disambiguation": "",
+          "title": "Koti Janmani",
+          "language": "tel",
+          "type-id": null,
+          "attributes": [],
+          "type": null,
+          "id": "f31205be-934d-4fa8-8a4c-1346d93a47e6",
+          "languages": [
+            "tel"
+          ],
+          "iswcs": []
+        }
+      }
+    ],
+    "first-release-date": "2015-06-22",
+    "video": false,
+    "id": "5fa0bcfd-c71e-4d6f-940e-0cef6fbc2a32",
+    "length": 526706,
+    "disambiguation": "",
+    "title": "Koti Janmani"
+  }
+}

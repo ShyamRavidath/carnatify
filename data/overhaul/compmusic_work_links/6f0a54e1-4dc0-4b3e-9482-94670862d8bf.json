@@ -1,0 +1,43 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/6f0a54e1-4dc0-4b3e-9482-94670862d8bf",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:45:56.007362+00:00",
+  "recording": {
+    "disambiguation": "",
+    "title": "Tiruvadicharanam",
+    "relations": [
+      {
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "ended": false,
+        "type": "performance",
+        "begin": null,
+        "direction": "forward",
+        "target-type": "work",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-values": {},
+        "work": {
+          "type-id": null,
+          "iswcs": [],
+          "attributes": [],
+          "language": null,
+          "languages": [],
+          "type": null,
+          "id": "04875852-7ea2-4eeb-8b9c-94fce1bd0746",
+          "title": "Tiruvadicharanam",
+          "disambiguation": ""
+        },
+        "end": null,
+        "attributes": [
+          "live"
+        ],
+        "target-credit": "",
+        "source-credit": ""
+      }
+    ],
+    "id": "6f0a54e1-4dc0-4b3e-9482-94670862d8bf",
+    "length": 1794000,
+    "video": false
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Puṇṇāgavarāḷi__tavatAsOham",
+  "audio": "data/concert_audio/Puṇṇāgavarāḷi/tavatAsOham.mp3",
+  "audio_sha256": "ddfd646d94fe375f279c88f109f7e72961db0c6fe09ca6f2c8ba83121e5a61c6",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8775784997269511
+}

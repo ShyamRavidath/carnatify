@@ -1,0 +1,15 @@
+{
+  "mean": 0.07339449541284404,
+  "ci95": [
+    0.0,
+    0.15454779756326145
+  ],
+  "n": 109,
+  "n_clusters": 17,
+  "bootstrap": 5000,
+  "candidate_correct": 82,
+  "baseline_correct": 74,
+  "candidate_sha256": "468907df5ea8ca8f238d60fc9e91e9aa0aadf661f3a3b780a5d3f69dce1c4dc8",
+  "baseline_sha256": "747b82947d0e0fd93e9671e20dbd1542052744b28ab691dab3ed96a5dd10b201",
+  "status": "Development three-minute context; metadata-normalized cohort, not original one-minute task"
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ṣanmukhapriya__Melakartha Chakkaram Kantamani",
+  "audio": "data/concert_audio/Ṣanmukhapriya/Melakartha Chakkaram Kantamani.mp3",
+  "audio_sha256": "c7cad069d1b8930c613bcb280c82df8a752f0a887c32b39eea185fe8a76c0922",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.7337442501448095
+}

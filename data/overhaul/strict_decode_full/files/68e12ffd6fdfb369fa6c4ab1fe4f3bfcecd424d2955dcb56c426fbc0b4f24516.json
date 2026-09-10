@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kalyāṇi__RTP",
+  "audio": "data/concert_audio/Kalyāṇi/RTP.mp3",
+  "audio_sha256": "68e12ffd6fdfb369fa6c4ab1fe4f3bfcecd424d2955dcb56c426fbc0b4f24516",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.9284767922945321
+}

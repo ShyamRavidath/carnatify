@@ -1,0 +1,8 @@
+{
+  "identity_sha256": "12ce666ff2e1868838add5dfb5c88772789b27e9df345e8c954a409f65351002",
+  "identifiers": [
+    "NeeveRakshavarnamKadanakuthoohalam"
+  ],
+  "endpoint": "https://archive.org/metadata/",
+  "purpose": "public file checksums only"
+}

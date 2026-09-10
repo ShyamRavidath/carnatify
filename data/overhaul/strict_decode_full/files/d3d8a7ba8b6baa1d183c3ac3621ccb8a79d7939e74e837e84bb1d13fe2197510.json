@@ -1,0 +1,11 @@
+{
+  "track": "archive__Madhyamāvati__bAgyAdha lakshmi",
+  "audio": "data/concert_audio/Madhyamāvati/bAgyAdha lakshmi.mp3",
+  "audio_sha256": "d3d8a7ba8b6baa1d183c3ac3621ccb8a79d7939e74e837e84bb1d13fe2197510",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.39379245787858963
+}

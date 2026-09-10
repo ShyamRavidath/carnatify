@@ -1,0 +1,11 @@
+{
+  "track": "archive__Cakravākaṁ__eesanE inDa Ezhai",
+  "audio": "data/concert_audio/Cakravākaṁ/eesanE inDa Ezhai.mp3",
+  "audio_sha256": "c0a8b9c6181b030bc145b67a13b55fefc2855e48da24178e53ae069ede255bbe",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.7511584158055484
+}

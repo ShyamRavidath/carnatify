@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ṣanmukhapriya__02 siddhi vinAyakam",
+  "audio": "data/concert_audio/Ṣanmukhapriya/02 siddhi vinAyakam.mp3",
+  "audio_sha256": "b921ffd6f4f352267f7e5ca8688e148af1a3a4090479499bd8c08cf37c794239",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.0749849160201848
+}

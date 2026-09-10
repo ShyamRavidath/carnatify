@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kēdāragauḷa__Alapana",
+  "audio": "data/concert_audio/Kēdāragauḷa/Alapana.mp3",
+  "audio_sha256": "b8d3cf1c5b46ca72c37fcac58db82b98d2feab1f840b62c6940079d89f9e451d",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.6818304159678519
+}

@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/3427f4b7-20e5-4abd-8171-bac216f2c213",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:28:20.705624+00:00",
+  "recording": {
+    "disambiguation": "",
+    "length": 2760000,
+    "video": false,
+    "relations": [
+      {
+        "attribute-values": {},
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "direction": "forward",
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work",
+        "source-credit": "",
+        "end": null,
+        "ended": false,
+        "work": {
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "title": "Ninnu vinaga mari dikkevarunnaru",
+          "type": "Song",
+          "attributes": [],
+          "language": "tel",
+          "disambiguation": "Purvikalyani krithi of Shyama Shastri",
+          "languages": [
+            "tel"
+          ],
+          "iswcs": [],
+          "id": "a2c69abe-88fe-42e5-821c-e6011a80a018"
+        },
+        "target-credit": "",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "type": "performance"
+      }
+    ],
+    "id": "3427f4b7-20e5-4abd-8171-bac216f2c213",
+    "title": "Ninni Vinaga",
+    "first-release-date": "2006"
+  }
+}

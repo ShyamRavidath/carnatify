@@ -1,0 +1,11 @@
+{
+  "track": "36_Ozhukkam_Uyirinum",
+  "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Ozhukkam Uyirinum/Sanjay Subrahmanyan - Ozhukkam Uyirinum.mp3",
+  "audio_sha256": "6172176d310decfda2d00508420de83093bedea07ac9966df58e49f3cf8f19be",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6017140839248896
+}

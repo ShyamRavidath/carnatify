@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāṁbhōji__unnaipOl",
+  "audio": "data/concert_audio/Kāṁbhōji/unnaipOl.mp3",
+  "audio_sha256": "55f44f8c7eebd5b0734a182499aa28fc571b5a9f50c336cab0d8f26b145647f4",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.50324383424595
+}

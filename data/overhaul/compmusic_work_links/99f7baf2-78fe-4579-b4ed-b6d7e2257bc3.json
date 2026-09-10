@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/99f7baf2-78fe-4579-b4ed-b6d7e2257bc3",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:58:56.212314+00:00",
+  "recording": {
+    "title": "Kanakasabhapati",
+    "relations": [
+      {
+        "source-credit": "",
+        "target-credit": "",
+        "direction": "forward",
+        "target-type": "work",
+        "begin": null,
+        "type": "performance",
+        "work": {
+          "type-id": null,
+          "iswcs": [],
+          "attributes": [],
+          "language": null,
+          "languages": [],
+          "type": null,
+          "id": "30c0ece9-ee4a-4445-ae9b-b291dc4404e8",
+          "title": "Kanakasabhapati",
+          "disambiguation": ""
+        },
+        "attributes": [
+          "live"
+        ],
+        "end": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-values": {},
+        "ended": false,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        }
+      }
+    ],
+    "disambiguation": "",
+    "first-release-date": "2002",
+    "video": false,
+    "length": 245000,
+    "id": "99f7baf2-78fe-4579-b4ed-b6d7e2257bc3"
+  }
+}

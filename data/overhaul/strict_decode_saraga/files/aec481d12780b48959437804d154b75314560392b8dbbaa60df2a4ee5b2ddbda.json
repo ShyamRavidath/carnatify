@@ -1,0 +1,11 @@
+{
+  "track": "194_Ramabhi_Rama_Manasu",
+  "audio": "saraga1.5_carnatic/Sumithra Vasudev at Arkay by Sumithra Vasudev/Ramabhi Rama Manasu/Ramabhi Rama Manasu.mp3.mp3",
+  "audio_sha256": "aec481d12780b48959437804d154b75314560392b8dbbaa60df2a4ee5b2ddbda",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 3.5970355407334864
+}

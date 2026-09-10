@@ -1,0 +1,11 @@
+{
+  "track": "archive__Vasanta__seethamma",
+  "audio": "data/concert_audio/Vasanta/seethamma.mp3",
+  "audio_sha256": "f8f5d4ea269f65239dfbfd37d49fd98c14a966974a87f7c9c6898194e7cfc3ce",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.18340625008568168
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kamās__Apadooruku",
+  "audio": "data/concert_audio/Kamās/Apadooruku.mp3",
+  "audio_sha256": "ee8511be0c0405a312e6be6a55c590f4656f3f5f6a67278dfaf9868cbd2ff5a3",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.9326724158599973
+}

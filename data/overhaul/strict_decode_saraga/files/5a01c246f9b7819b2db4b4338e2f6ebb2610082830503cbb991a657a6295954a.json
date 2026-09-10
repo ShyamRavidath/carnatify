@@ -1,0 +1,11 @@
+{
+  "track": "94_Hiranmayeem",
+  "audio": "saraga1.5_carnatic/Mahati at Arkay by Mahati/Hiranmayeem/Hiranmayeem.mp3.mp3",
+  "audio_sha256": "5a01c246f9b7819b2db4b4338e2f6ebb2610082830503cbb991a657a6295954a",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.96043345797807
+}

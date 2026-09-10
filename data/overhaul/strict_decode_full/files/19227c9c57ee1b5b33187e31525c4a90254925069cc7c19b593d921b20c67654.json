@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sahānā__giripai nelakona rAmuni",
+  "audio": "data/concert_audio/Sahānā/giripai nelakona rAmuni.mp3",
+  "audio_sha256": "19227c9c57ee1b5b33187e31525c4a90254925069cc7c19b593d921b20c67654",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.2410228326916695
+}

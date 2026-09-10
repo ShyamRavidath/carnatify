@@ -1,0 +1,11 @@
+{
+  "track": "235_Janakipathe_Jaya_Karunya_Jaladhe",
+  "audio": "saraga1.5_carnatic/KP Nandini at Arkay by KP Nandini/Janakipathe Jaya Karunya Jaladhe/Janakipathe Jaya Karunya Jaladhe.mp3.mp3",
+  "audio_sha256": "5a91e26230c4d2f5cf0c5c4d047a87428f741b6add342a0a6c1070c9c1d17505",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 4.6809937078505754
+}

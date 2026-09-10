@@ -1,0 +1,11 @@
+{
+  "track": "archive__Harikāmbhōji__paniyinum",
+  "audio": "data/concert_audio/Harikāmbhōji/paniyinum.mp3",
+  "audio_sha256": "d668224a4f32dda8b7151d2f14cef65770e20a361057e8e892f454dbfd544d60",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2462393338792026
+}

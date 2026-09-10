@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sāma__Tanake",
+  "audio": "data/concert_audio/Sāma/Tanake.mp3",
+  "audio_sha256": "737d284871fef30e8ed29ed2f26310e5106570f2925796fd507cad14c845d624",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5067705409601331
+}

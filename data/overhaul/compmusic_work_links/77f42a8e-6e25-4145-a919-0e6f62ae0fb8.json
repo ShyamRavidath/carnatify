@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/77f42a8e-6e25-4145-a919-0e6f62ae0fb8",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:48:52.240133+00:00",
+  "recording": {
+    "relations": [
+      {
+        "ended": false,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "target-type": "work",
+        "type": "performance",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "target-credit": "",
+        "source-credit": "",
+        "attribute-values": {},
+        "end": null,
+        "work": {
+          "type": "Song",
+          "id": "8a844954-e0fe-4e27-9465-9fea7e0c7c27",
+          "disambiguation": "",
+          "attributes": [],
+          "iswcs": [],
+          "languages": [
+            "tel"
+          ],
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "title": "Eti Janmam Idi",
+          "language": "tel"
+        },
+        "attributes": [
+          "live"
+        ],
+        "direction": "forward"
+      }
+    ],
+    "video": false,
+    "id": "77f42a8e-6e25-4145-a919-0e6f62ae0fb8",
+    "disambiguation": "",
+    "first-release-date": "2007",
+    "title": "Eti Janmam",
+    "length": 907000
+  }
+}

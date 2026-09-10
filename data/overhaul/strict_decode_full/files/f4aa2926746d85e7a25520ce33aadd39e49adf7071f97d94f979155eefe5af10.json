@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ābhōgī__sri mahA gaNapatE",
+  "audio": "data/concert_audio/Ābhōgī/sri mahA gaNapatE.mp3",
+  "audio_sha256": "f4aa2926746d85e7a25520ce33aadd39e49adf7071f97d94f979155eefe5af10",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.7012475416995585
+}

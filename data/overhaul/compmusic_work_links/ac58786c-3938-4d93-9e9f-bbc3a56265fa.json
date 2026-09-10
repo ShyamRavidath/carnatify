@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/ac58786c-3938-4d93-9e9f-bbc3a56265fa",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:02:40.015525+00:00",
+  "recording": {
+    "first-release-date": "2014-05-11",
+    "id": "ac58786c-3938-4d93-9e9f-bbc3a56265fa",
+    "relations": [
+      {
+        "source-credit": "",
+        "work": {
+          "attributes": [],
+          "id": "a8dc76bb-92b8-4244-b1b5-6502b45d7607",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "languages": [
+            "san"
+          ],
+          "title": "Shlokam - Shivah Shaktyayukto",
+          "iswcs": [],
+          "disambiguation": "Saundarya Lahari Shloka",
+          "language": "san",
+          "type": "Song"
+        },
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work",
+        "attribute-values": {},
+        "target-credit": "",
+        "type": "performance",
+        "direction": "forward",
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "end": null,
+        "ended": false
+      }
+    ],
+    "length": 92000,
+    "title": "Shlokam - Shivah Shaktyayukto",
+    "disambiguation": "",
+    "video": false
+  }
+}

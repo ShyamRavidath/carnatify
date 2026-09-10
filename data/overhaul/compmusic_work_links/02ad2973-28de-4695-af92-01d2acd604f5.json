@@ -1,0 +1,43 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/02ad2973-28de-4695-af92-01d2acd604f5",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:13:14.055972+00:00",
+  "recording": {
+    "id": "02ad2973-28de-4695-af92-01d2acd604f5",
+    "relations": [
+      {
+        "source-credit": "",
+        "work": {
+          "id": "dd9ffae1-123c-436a-b91d-0b275e4198f7",
+          "attributes": [],
+          "type-id": null,
+          "disambiguation": "",
+          "iswcs": [],
+          "languages": [],
+          "title": "Sri Kamakoti Peethasthite",
+          "type": null,
+          "language": null
+        },
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ],
+        "type": "performance",
+        "target-credit": "",
+        "attribute-values": {},
+        "direction": "forward",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "ended": false,
+        "end": null
+      }
+    ],
+    "length": 1244000,
+    "title": "Sri Kamakoti Peethasthite",
+    "disambiguation": "",
+    "video": false
+  }
+}

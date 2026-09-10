@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/8e07413a-9b7d-4be2-a2ae-0ca1ce28c6a1",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:54:18.159280+00:00",
+  "recording": {
+    "first-release-date": "2008",
+    "title": "Tyagarajamahadhwajaroha",
+    "video": false,
+    "relations": [
+      {
+        "target-type": "work",
+        "end": null,
+        "ended": false,
+        "source-credit": "",
+        "work": {
+          "languages": [],
+          "disambiguation": "",
+          "iswcs": [],
+          "id": "806ad247-7d11-43e2-8d8e-af800f0acd31",
+          "type-id": null,
+          "title": "Tyagarajamahadhwajaroha",
+          "language": null,
+          "attributes": [],
+          "type": null
+        },
+        "target-credit": "",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "type": "performance",
+        "attribute-values": {},
+        "begin": null,
+        "direction": "forward",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "attributes": [
+          "live"
+        ]
+      }
+    ],
+    "id": "8e07413a-9b7d-4be2-a2ae-0ca1ce28c6a1",
+    "disambiguation": "",
+    "length": 643000
+  }
+}

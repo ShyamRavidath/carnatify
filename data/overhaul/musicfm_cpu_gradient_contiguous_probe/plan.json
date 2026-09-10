@@ -1,0 +1,23 @@
+{
+  "waveform_sha256": "fc9b0a5cb39403a870088026bc70b714acccce0c0398d0a0f98d68bec3af3711",
+  "audio": "synthetic 10s; no real recording",
+  "artifacts": {
+    "pretrained_msd.pt": "218b483a0256ddef736267425fabb166fd97008983696bb9270def464b47bded",
+    "config.json": "7a63cb5706c9a37483f1973a3c226d54eb504ce15cf62cb52637019540c8a75d",
+    "msd_stats.json": "c36c61ab10ca4d2e7fdfefc3fcc15205316bec276a06a47baa3641a62c546f22",
+    "musicfm/modules/features.py": "aa8e99711f4a4eab522ff89fe86fc27e281e373ed0ae416743736da229f171da",
+    "musicfm/modules/conv.py": "585705a6450db374e8c411034e846491f7f48d4ed0516fbf8d3b84855ef0d7d1"
+  },
+  "layer": 7,
+  "trainable_encoder_block": 6,
+  "head_classes": 5,
+  "synthetic_target": 0,
+  "steps": 3,
+  "optimizer": "SGD",
+  "head_lr": 0.01,
+  "block_lr": 0.0001,
+  "device": "cpu",
+  "save_weights": false,
+  "convolution_output_gradient": "contiguous",
+  "parameter_check": "max_change_across_all_block_parameters"
+}

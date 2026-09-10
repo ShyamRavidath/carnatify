@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sindhubhairavi__viruttam  viswEswara",
+  "audio": "data/concert_audio/Sindhubhairavi/viruttam  viswEswara.mp3",
+  "audio_sha256": "2ad7c6263f6c470566c035b437f65669891d73e04f88d2a3f181bfbc65b41191",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6161432079970837
+}

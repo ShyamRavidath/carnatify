@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kedāraṁ__G 2437-B JM 2373 bhananevaye",
+  "audio": "data/concert_audio/Kedāraṁ/G 2437-B JM 2373 bhananevaye.mp3",
+  "audio_sha256": "ad5453798682263b7bbab247e1d48a5984541d0f0ed1a23f5334d2c21706f641",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4365541245788336
+}

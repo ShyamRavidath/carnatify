@@ -1,0 +1,11 @@
+{
+  "track": "archive__Hamsadhvāni__Vande Anisham Aham",
+  "audio": "data/concert_audio/Hamsadhvāni/Vande Anisham Aham.mp3",
+  "audio_sha256": "2a6686b169e122dce15ccdcc947c1e46f81c1dffdd07e8ee3a76611a4df54bb2",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6628028750419617
+}

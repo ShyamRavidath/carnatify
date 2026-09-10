@@ -1,0 +1,14 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/378ab482-9d87-47b7-9471-5f5c65923339",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:29:18.774630+00:00",
+  "recording": {
+    "title": "Emanine",
+    "length": 857971,
+    "relations": [],
+    "id": "378ab482-9d87-47b7-9471-5f5c65923339",
+    "video": false,
+    "disambiguation": "",
+    "first-release-date": "2009"
+  }
+}

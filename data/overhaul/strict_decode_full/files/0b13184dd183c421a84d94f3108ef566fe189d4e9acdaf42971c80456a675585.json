@@ -1,0 +1,11 @@
+{
+  "track": "archive__Dhanyāsi__rAmAbhi rAma_r2",
+  "audio": "data/concert_audio/Dhanyāsi/rAmAbhi rAma_r2.mp3",
+  "audio_sha256": "0b13184dd183c421a84d94f3108ef566fe189d4e9acdaf42971c80456a675585",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.2747257500886917
+}

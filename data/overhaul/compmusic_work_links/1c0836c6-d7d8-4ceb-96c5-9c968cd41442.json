@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/1c0836c6-d7d8-4ceb-96c5-9c968cd41442",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:21:52.474984+00:00",
+  "recording": {
+    "disambiguation": "",
+    "first-release-date": "1993",
+    "title": "Ka vaa vaa",
+    "relations": [
+      {
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "ended": false,
+        "target-type": "work",
+        "direction": "forward",
+        "type": "performance",
+        "begin": null,
+        "work": {
+          "title": "Ka vaa vaa",
+          "disambiguation": "",
+          "type-id": null,
+          "attributes": [],
+          "iswcs": [],
+          "language": null,
+          "languages": [],
+          "type": null,
+          "id": "8da926f8-72f9-4501-9e88-68070e19835e"
+        },
+        "end": null,
+        "attributes": [
+          "live"
+        ],
+        "attribute-values": {},
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "target-credit": "",
+        "source-credit": ""
+      }
+    ],
+    "id": "1c0836c6-d7d8-4ceb-96c5-9c968cd41442",
+    "length": 695136,
+    "video": false
+  }
+}

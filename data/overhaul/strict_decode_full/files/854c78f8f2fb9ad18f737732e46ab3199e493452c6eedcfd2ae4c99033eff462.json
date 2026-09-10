@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nīlāṁbari__srungara lahari",
+  "audio": "data/concert_audio/Nīlāṁbari/srungara lahari.mp3",
+  "audio_sha256": "854c78f8f2fb9ad18f737732e46ab3199e493452c6eedcfd2ae4c99033eff462",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3378537502139807
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kānaḍa__Nera Nammithi",
+  "audio": "data/concert_audio/Kānaḍa/Nera Nammithi.mp3",
+  "audio_sha256": "4abc8e4c985b09457ab2aef432b02d640f66ed46901045a78ec3bff01ae81f42",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7148388749919832
+}

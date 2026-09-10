@@ -1,0 +1,11 @@
+{
+  "track": "archive__Latāngi__02 aparAda mulannu",
+  "audio": "data/concert_audio/Latāngi/02 aparAda mulannu.mp3",
+  "audio_sha256": "97c49158719b066e5e9b92fcb7bf1e34c43e7cb8c97f4802799ab346e2860d5b",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.9348247502930462
+}

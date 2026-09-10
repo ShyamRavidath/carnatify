@@ -1,0 +1,82 @@
+{
+  "plan_sha256": "a39d9c445383938cf13c7c73d750908a67a756036e9b4e9a27784fe81ce0f25a",
+  "query": {
+    "track": "94_Hiranmayeem",
+    "audio": "saraga1.5_carnatic/Mahati at Arkay by Mahati/Hiranmayeem/Hiranmayeem.mp3.mp3",
+    "audio_sha256": "5a01c246f9b7819b2db4b4338e2f6ebb2610082830503cbb991a657a6295954a",
+    "start_s": 732.1874716553287,
+    "duration_s": 30
+  },
+  "audio": {
+    "source_sr": 44100,
+    "channels": 2,
+    "downmix": "mean",
+    "downmix_power_ratio": 0.6344722329495576,
+    "clipping_fraction": 0.0,
+    "rms": 0.0851117724213719
+  },
+  "waveform_sha256": "63794569ca0b5dd2efdca9c6808e427c7fde7c83e025161558540aae66cc4926",
+  "transcription_s": 42.144200833979994,
+  "hypotheses": {
+    "auto": {
+      "text": ". . .",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 29.98,
+          "text": " . . .",
+          "avg_logprob": -0.9501868089040121,
+          "no_speech_prob": 9.4559686469875e-11,
+          "compression_ratio": 0.38461538461538464
+        }
+      ],
+      "language": "en",
+      "status": "unverified_hypothesis"
+    },
+    "ta": {
+      "text": "நான் வார்க்கிறேன்",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 29.98,
+          "text": " நான் வார்க்கிறேன்",
+          "avg_logprob": -1.09150515104595,
+          "no_speech_prob": 9.4559686469875e-11,
+          "compression_ratio": 1.065217391304348
+        }
+      ],
+      "language": "ta",
+      "status": "unverified_hypothesis"
+    },
+    "te": {
+      "text": "కాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాా",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 30.0,
+          "text": " కాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాా",
+          "avg_logprob": -0.19002809312608507,
+          "no_speech_prob": 9.4559686469875e-11,
+          "compression_ratio": 18.5
+        }
+      ],
+      "language": "te",
+      "status": "unverified_hypothesis"
+    },
+    "hi": {
+      "text": "कर दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो द",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 30.0,
+          "text": " कर दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो द",
+          "avg_logprob": -0.38056121826171874,
+          "no_speech_prob": 9.4559686469875e-11,
+          "compression_ratio": 20.03846153846154
+        }
+      ],
+      "language": "hi",
+      "status": "unverified_hypothesis"
+    }
+  }
+}

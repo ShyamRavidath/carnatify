@@ -1,0 +1,11 @@
+{
+  "track": "217_Santhamu_leka_Sowkyamu_ledu",
+  "audio": "saraga1.5_carnatic/Srividya Janakiraman at Arkay by Srividya Janakiraman/Santhamu leka Sowkyamu ledu/Santhamu leka Sowkyamu ledu.mp3.mp3",
+  "audio_sha256": "78bb112ffc58bcb5033f45732eb25cf40ef36a5a1ffb85b1857f0abe28590fd2",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6140874591656029
+}

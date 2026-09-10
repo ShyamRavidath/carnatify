@@ -1,0 +1,11 @@
+{
+  "track": "archive__Hussēnī__11 vanitaru",
+  "audio": "data/concert_audio/Hussēnī/11 vanitaru.mp3",
+  "audio_sha256": "2e0e8b65ec4ffcfb0dad97926936a27ae3fd9242d7e67f2331553a26c2597a1d",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4591243746690452
+}

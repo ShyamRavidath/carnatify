@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nāṭa__Karimukha Varadha",
+  "audio": "data/concert_audio/Nāṭa/Karimukha Varadha.mp3",
+  "audio_sha256": "f319366f2af9099d73eaa6cf87e5acb04236e3401cb03dfa0e354bb756e35fcc",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.9385817917063832
+}

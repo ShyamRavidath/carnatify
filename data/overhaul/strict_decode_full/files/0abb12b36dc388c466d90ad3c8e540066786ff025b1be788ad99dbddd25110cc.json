@@ -1,0 +1,11 @@
+{
+  "track": "archive__Dēvagāndhāri__Ksheera Sagara Sayana",
+  "audio": "data/concert_audio/Dēvagāndhāri/Ksheera Sagara Sayana.mp3",
+  "audio_sha256": "0abb12b36dc388c466d90ad3c8e540066786ff025b1be788ad99dbddd25110cc",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.5908506251871586
+}

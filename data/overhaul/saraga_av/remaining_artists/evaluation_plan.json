@@ -1,0 +1,1274 @@
+{
+  "schema": 1,
+  "role": "fresh_known_raga_test",
+  "rows": [
+    {
+      "track": "saraga_av__46ba10ab2bf700deea8f8dca",
+      "source_mbid": "25432a61-6880-4458-a091-78fe673fbafb",
+      "artist": "Archana Murali",
+      "group": "artist:archanamurali",
+      "title": "Ee Vasudha",
+      "raga_raw": "Sahana",
+      "raga": "Sahānā",
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Archana Murali/Ee Vasudha/Ee_Vasudha.json",
+      "metadata_sha256": "683e0007f20ac4debffdd4052fc7d9fd585317a352fd71cbc6b3e29346c1606f",
+      "archive_member": {
+        "path": "saraga audio/Archana Murali/Ee Vasudha/Ee Vasudha.wav",
+        "size": 139779244,
+        "compressed_size": 116436793,
+        "crc32": 433920976
+      },
+      "selection_key": "46ba10ab2bf700deea8f8dca9eb97751b86c3ed6f84702736c0d0576deae2d23"
+    },
+    {
+      "track": "saraga_av__18ea33cc9ad5cdd47a4fb9f4",
+      "source_mbid": "31965c4e-9a02-4411-a023-ebde798e61ee",
+      "artist": "Hari Krishan",
+      "group": "artist:harikrishan",
+      "title": "Raga Ratnamalikache",
+      "raga_raw": "Reethigowla",
+      "raga": "Rītigauḷa",
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Hari Krishan/Raga Ratnamalikache/Raga_Ratnamalikache.json",
+      "metadata_sha256": "dd825b63d1028d038f6b0e63b9cf95b1b680261f383569db8e2af41bfa218ba6",
+      "archive_member": {
+        "path": "saraga audio/Hari Kishan/Raga Ratnamalikache/Raga Ratnamalikache.wav",
+        "size": 65571244,
+        "compressed_size": 53992168,
+        "crc32": 1205585598
+      },
+      "selection_key": "18ea33cc9ad5cdd47a4fb9f4bbd023b52ef9766dd0eee97074804545e71e7b51"
+    },
+    {
+      "track": "saraga_av__2b103b7e40d62596f21a248d",
+      "source_mbid": "454d0fcd-98fb-4284-8190-9140c1c47d53",
+      "artist": "Kruthi Bhat",
+      "group": "artist:kruthibhat",
+      "title": "Arunachala Natham",
+      "raga_raw": "Saranga",
+      "raga": "Sāranga",
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Kruthi Bhat/Arunachala Natham/Arunachala_Natham.json",
+      "metadata_sha256": "788b66b71d9c2dd6c3626abcc9732807117f6671a5319e9a1f397a490448b7c0",
+      "archive_member": {
+        "path": "saraga audio/Kruthi Bhat/Arunachala Natham/Arunachala Natham.wav",
+        "size": 42867244,
+        "compressed_size": 37241834,
+        "crc32": 4117311390
+      },
+      "selection_key": "2b103b7e40d62596f21a248da20bb957091a31f882b3559ade91247e678dbc80"
+    },
+    {
+      "track": "saraga_av__01f87da150dfb5f48b8a941a",
+      "source_mbid": "eb3002b7-1f48-417e-a14f-d813a5862fec",
+      "artist": "Shraddha Ganesh",
+      "group": "artist:shraddhaganesh",
+      "title": "Sangeetha Gnanamu",
+      "raga_raw": "Dhanyasi",
+      "raga": "Dhanyāsi",
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Shraddha Ganesh/Sangeetha Gnanamu/Sangeetha_Gnanamu.json",
+      "metadata_sha256": "3d593bc45b88d98620c573274b50b05540f79cdcb8cd7d7bf8fdbd6707d09627",
+      "archive_member": {
+        "path": "saraga audio/Shradda Ganesh/Sangeetha Gnanamu/Sangeetha Gnanamu.wav",
+        "size": 31872044,
+        "compressed_size": 27391210,
+        "crc32": 1732542653
+      },
+      "selection_key": "01f87da150dfb5f48b8a941aea895717df91519fe08584ebeb9576d532c0d4f6"
+    },
+    {
+      "track": "saraga_av__21938f444c00e75c007d22f6",
+      "source_mbid": "4f130bab-14d7-45c7-ae12-9b45b4042e9b",
+      "artist": "Shruthi Bhat",
+      "group": "artist:shruthibhat",
+      "title": "Tamasa miga",
+      "raga_raw": "Abhogi",
+      "raga": "Ābhōgi",
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Shruthi Bhat/Tamasa miga/Tamasa_miga.json",
+      "metadata_sha256": "60d3ed8de8e48969a80835d21421b6db3a126764e74a9ff05a724ae7016661d0",
+      "archive_member": {
+        "path": "saraga audio/Shruthi Bhat/Tamasa Miga/Tamasa Miga.wav",
+        "size": 42761644,
+        "compressed_size": 34762413,
+        "crc32": 1797082964
+      },
+      "selection_key": "21938f444c00e75c007d22f663240b5c5479ffb04f028bf00499741e6c5dff22"
+    },
+    {
+      "track": "saraga_av__3442c97e8b32ed617c68b23f",
+      "source_mbid": "44d3bbe8-3cc2-43a0-ab3e-8cbf2527024f",
+      "artist": "Srividya Vadanamali",
+      "group": "artist:srividyavadanamali",
+      "title": "Thillana",
+      "raga_raw": "Kapi",
+      "raga": "Kāpi",
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Srividya Vadanamali/Thillana/Thillana.json",
+      "metadata_sha256": "3041921c901eb851b7d35b335f10abc40dc6c29d018cad05ff460b85486bcb02",
+      "archive_member": {
+        "path": "saraga audio/Srividya Vadnamali/Thillana/Thillana.wav",
+        "size": 34848044,
+        "compressed_size": 27948009,
+        "crc32": 4189428764
+      },
+      "selection_key": "3442c97e8b32ed617c68b23f633af45db10cd348a309da2dc92dc748cd707316"
+    },
+    {
+      "track": "saraga_av__067cbf4525d14c4cdbaf635b",
+      "source_mbid": "26eb7b0e-8cae-41d4-bfb4-cd1ef997a1d8",
+      "artist": "Vishruthi girish",
+      "group": "artist:vishruthigirish",
+      "title": "Nadupai palikeru",
+      "raga_raw": "Madhyamavati",
+      "raga": "Madhyamāvati",
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vishruthi girish/Nadupai palikeru/Nadupai_palikeru.json",
+      "metadata_sha256": "eb61589ca80b08c54a73062cc333a8be9d90c97dce69d8b2fb479b2523d1aae1",
+      "archive_member": {
+        "path": "saraga audio/Vishruthi Girish/Nadupai palikeru/Nadupai palikeru.wav",
+        "size": 57507244,
+        "compressed_size": 50762627,
+        "crc32": 4083865965
+      },
+      "selection_key": "067cbf4525d14c4cdbaf635b8028176c569c7b50329a36affdc77b816f06fd30"
+    },
+    {
+      "track": "saraga_av__655e50c4f64078d09e25f483",
+      "source_mbid": "32771a0f-3291-4526-85a0-745c88d9c9cd",
+      "artist": "Vivek Mozhikkulam",
+      "group": "artist:vivekmozhikkulam",
+      "title": "Sarasuda",
+      "raga_raw": "Saveri",
+      "raga": "Sāvēri",
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vivek Mozhikkulam/Sarasuda/Sarasuda.json",
+      "metadata_sha256": "335283316191526834e362ade7624dac050e1849ef004e71ee5fda4bcc5af705",
+      "archive_member": {
+        "path": "saraga audio/Vivek Mozhikulam/Sarasuda/Sarasuda.wav",
+        "size": 31075844,
+        "compressed_size": 27087282,
+        "crc32": 246649636
+      },
+      "selection_key": "655e50c4f64078d09e25f483393c1347f00d09260ccfbdd3f83b9159cd92d1bd"
+    }
+  ],
+  "excluded": [
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Abhiram Bode/Devi Pavane/Devi_Pavane.json",
+      "raga_raw": "Saveri",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Abhiram Bode/Entha Bhagyamu/Entha_Bhagyamu.json",
+      "raga_raw": "Saranga",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Abhiram Bode/Kalaye/Kalaye.json",
+      "raga_raw": "Kedaragaula",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Abhiram Bode/Lekanna ninnu/Lekanna_ninnu.json",
+      "raga_raw": "Asaveri",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Abhiram Bode/Nadatina/Nadatina.json",
+      "raga_raw": "Janaranjani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Abhishek Ravishankar/Brindavanam Idhuvo/Brindavanam_Idhuvo.json",
+      "raga_raw": "Hindolam",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Abhishek Ravishankar/Kamakshi Varlakshmi/Kamakshi_Varlakshmi.json",
+      "raga_raw": "Bilahari",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Abhishek Ravishankar/Manasa Etulo/Manasa_Etulo.json",
+      "raga_raw": "Malayamarutham",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Abhishek Ravishankar/Palaya Sada/Palaya_Sada.json",
+      "raga_raw": "Nalinakanti",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Abhishek Ravishankar/Sami Ninne/Sami_Ninne.json",
+      "raga_raw": "Shri Raga",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Abhishek Ravishankar/Tapakane Vachuna/Tapakane_Vachuna.json",
+      "raga_raw": "Shuddha Bangala",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Aditi Prahlad/Ananda Natana Prakasham/Ananda_Natana_Prakasham.json",
+      "raga_raw": "Kedaram",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Aditi Prahlad/Jalajasha Ninne/Jalajasha_Ninne.json",
+      "raga_raw": "Hamsadhwani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Aditi Prahlad/Kangali/Kangali.json",
+      "raga_raw": "Thodi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Aditi Prahlad/Nannu Brova/Nannu_Brova.json",
+      "raga_raw": "Abhogi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Aditi Prahlad/Parama Pavana Rama/Parama_Pavana_Rama.json",
+      "raga_raw": "Poorvi Kalyani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Aditi Prahlad/Phanipati Shayi/Phanipati_Shayi.json",
+      "raga_raw": "Jhankaradhwani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Adityanarayanan/Chittam Irangadhe/Chittam_Irangadhe.json",
+      "raga_raw": "Sahana",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Adityanarayanan/Koluvamaragada/Koluvamaragada.json",
+      "raga_raw": "Thodi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Adityanarayanan/Modi Jese velara/Modi_Jese_velara.json",
+      "raga_raw": "Khamas",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Adityanarayanan/Sarasaksha Palaya/Sarasaksha_Palaya.json",
+      "raga_raw": "Pantuvarali",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Amyea Karthikeyan/Intha Sowkya/Intha_Sowkya.json",
+      "raga_raw": "Kapi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Amyea Karthikeyan/Iyal Isaiyil/Iyal_Isaiyil.json",
+      "raga_raw": "Huseni",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Amyea Karthikeyan/Jalajakshi/Jalajakshi.json",
+      "raga_raw": "Hamsadhwani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Amyea Karthikeyan/Saraguna Palimpa/Saraguna_Palimpa.json",
+      "raga_raw": "Kedaragaula",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Amyea Karthikeyan/Yochana Kamala/Yochana_Kamala.json",
+      "raga_raw": "Darbar",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Amyea Karthikeyan/iniyagilum ninai/iniyagilum_ninai.json",
+      "raga_raw": "Poorvikalyani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Anjana Thirumalai/Amboruha Padame/Amboruha_Padame.json",
+      "raga_raw": "Ranjani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Anjana Thirumalai/Durusuga Kripa/Durusuga_Kripa.json",
+      "raga_raw": "Saveri",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Anjana Thirumalai/Jaya Jaya/Jaya_Jaya.json",
+      "raga_raw": "Nattai",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Anjana Thirumalai/Marivere Dikkevaru/Marivere_Dikkevaru.json",
+      "raga_raw": "Latangi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Anjana Thirumalai/Nirajakshi Kamakshi/Nirajakshi_Kamakshi.json",
+      "raga_raw": "Hindolam",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Anjana Thirumalai/Pullum Silambine/Pullum_Silambine.json",
+      "raga_raw": "Shankarabharanam",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Anjana Thirumalai/Sujana Jeevana/Sujana_Jeevana.json",
+      "raga_raw": "Khamas",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Anjana Thirumalai/Thillana/Thillana.json",
+      "raga_raw": "Revati",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Archana Murali/Enthani Vina/Enthani_Vina.json",
+      "raga_raw": "Urmika",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Archana Murali/Sanchalam Theertharul/Sanchalam_Theertharul.json",
+      "raga_raw": "Hamir Kalyani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Archana Murali/Thillana/Thillana.json",
+      "raga_raw": "Madhuvanti",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Ashok Subramanyam/Arunachala Ramana/Arunachala_Ramana.json",
+      "raga_raw": "Brindavani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Ashok Subramanyam/Emouma Vinavi/Emouma_Vinavi.json",
+      "raga_raw": "Surutti",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Ashok Subramanyam/Eru Malai/Eru_Malai.json",
+      "raga_raw": "Kaanada",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Ashok Subramanyam/Mamava Meenakshi/Mamava_Meenakshi.json",
+      "raga_raw": "Varali",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Ashok Subramanyam/Muddu Momu/Muddu_Momu.json",
+      "raga_raw": "Suryakantam",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Ashok Subramanyam/Peiyaval Kaan/Peiyaval_Kaan.json",
+      "raga_raw": "Revati",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Ashok Subramanyam/Raa raa/Raa_raa.json",
+      "raga_raw": "Kharaharapriya",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Ashok Subramanyam/Shakti Ganapathim/Shakti_Ganapathim.json",
+      "raga_raw": "Nattai",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Ashok Subramanyam/Sharavana Bhava/Sharavana_Bhava.json",
+      "raga_raw": "Kannada",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Ashok Subramanyam/Vanajaksha Ninne/Vanajaksha_Ninne.json",
+      "raga_raw": "Kalyani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Ashwin Srikant/Idhudhano Thillai Sthalam/Idhudhano_Thillai_Sthalam.json",
+      "raga_raw": "Behag",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Ashwin Srikant/Nekkurugi/Nekkurugi.json",
+      "raga_raw": "Abhogi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Ashwin Srikant/Ninne Nammitinayya/Ninne_Nammitinayya.json",
+      "raga_raw": "Simmhendramadhyamam",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Ashwin Srikant/Notru Suvargam/Notru_Suvargam.json",
+      "raga_raw": "Thodi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Ashwin Srikant/Okabari Judaga/Okabari_Judaga.json",
+      "raga_raw": "Kalavati",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Bhargavi Chandrashekar/Anjaneya Raghurama/Anjaneya_Raghurama.json",
+      "raga_raw": "Saveri",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Bhargavi Chandrashekar/Challare Rmachandru/Challare_Rmachandru.json",
+      "raga_raw": "Ahiri",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Bhargavi Chandrashekar/Muladhara Kshetra/Muladhara_Kshetra.json",
+      "raga_raw": "Maya Malava Gowla",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Bhargavi Chandrashekar/Navaragamalika Varnam/Navaragamalika_Varnam.json",
+      "raga_raw": "Valachi Vaachi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Bhargavi Chandrashekar/Sri Kantimatim/Sri_Kantimatim.json",
+      "raga_raw": "Hemavati",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Bhargavi Chandrashekar/Thillai Ambalathanai/Thillai_Ambalathanai.json",
+      "raga_raw": "Surutti",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Bhargavi Chandrashekar/Thillana/Thillana.json",
+      "raga_raw": "Yamuna Kalyani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Bhargavi Chandrashekar/Vara Narada/Vara_Narada.json",
+      "raga_raw": "Vijayasri",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Brindha Manickavasakan/Bhavanuta/Bhavanuta.json",
+      "raga_raw": "Mohanam",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Brindha Manickavasakan/Muripemu/Muripemu.json",
+      "raga_raw": "Mukhari",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Brindha Manickavasakan/Ranganayakam/Ranganayakam.json",
+      "raga_raw": "Nayaki",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Brindha Manickavasakan/Satre Vilagi/Satre_Vilagi.json",
+      "raga_raw": "Poorvikalyani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Brindha Manickavasakan/Valapu Thala/Valapu_Thala.json",
+      "raga_raw": "Atana",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Chandana Bala/Lambodharaya Namaste/Lambodharaya_Namaste.json",
+      "raga_raw": "Varali",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Chandana Bala/Marakoti Lavanya/Marakoti_Lavanya.json",
+      "raga_raw": "Arabhi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Chandana Bala/Mari vere dikkevaru/Mari_vere_dikkevaru.json",
+      "raga_raw": "Latangi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Chandana Bala/Sogasu Chuda/Sogasu_Chuda.json",
+      "raga_raw": "Kannada Gowla",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Chandana Bala/Swara Raga Sudha/Swara_Raga_Sudha.json",
+      "raga_raw": "Shankarabharnam",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Chandana Bala/Vanajakshi Ninne/Vanajakshi_Ninne.json",
+      "raga_raw": "Reethigowla",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Chandana Bala/Viruttam and Neenyako ninna/Viruttam_and_Neenyako_ninna.json",
+      "raga_raw": "Desh",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Hamzini/Chandra Chooda/Chandra_Chooda.json",
+      "raga_raw": "Darbari Kanada)",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Hamzini/Giri Raja Suta/Giri_Raja_Suta.json",
+      "raga_raw": "Bangala",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Hamzini/Kalanidathanugadhe/Kalanidathanugadhe.json",
+      "raga_raw": "Bilahari",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Hamzini/Kanindharul Purindhal/Kanindharul_Purindhal.json",
+      "raga_raw": "Kalyani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Hamzini/Paradevata/Paradevata.json",
+      "raga_raw": "Dhanyasi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Hamzini/Tamasinchu/Tamasinchu.json",
+      "raga_raw": "Asaveri",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Hamzini/Thillana/Thillana.json",
+      "raga_raw": "Purvi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Hari Krishan/Govardhana Giridhara/Govardhana_Giridhara.json",
+      "raga_raw": "Darbari Kanada",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Kruthi Bhat/Aada Hodalle/Aada_Hodalle.json",
+      "raga_raw": "Ragamalika",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Kruthi Bhat/Amba Vani/Amba_Vani.json",
+      "raga_raw": "Keeravani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Kruthi Bhat/Aparadhamula/Aparadhamula.json",
+      "raga_raw": "Rasali",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Kruthi Bhat/Ragam Thanam Pallavi/Ragam_Thanam_Pallavi.json",
+      "raga_raw": "Hamsavinodhini",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Kruthi Bhat/Thillana/Thillana.json",
+      "raga_raw": "Poorvi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Manickam Yogeswaran/Karanam Ketu Vaadi/Karanam_Ketu_Vaadi.json",
+      "raga_raw": "Poorvikalyani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Manickam Yogeswaran/Kula Bhirudunu/Kula_Bhirudunu.json",
+      "raga_raw": "Deva Manohari",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Manickam Yogeswaran/Samayamidhe/Samayamidhe.json",
+      "raga_raw": "Ahiri",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Manickam Yogeswaran/Saravana Bhavana Samayamidhi/Saravana_Bhavana_Samayamidhi.json",
+      "raga_raw": "Pashupatipriya",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Manickam Yogeswaran/Shri Lamboradharaya Namaste/Shri_Lamboradharaya_Namaste.json",
+      "raga_raw": "Varali",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Manickam Yogeswaran/Sivanai Ninaindhidu/Sivanai_Ninaindhidu.json",
+      "raga_raw": "Karnataka Devagandhari",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Manickam Yogeswaran/Thamadam En Swami/Thamadam_En_Swami.json",
+      "raga_raw": "Adi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Manickam Yogeswaran/Thillana/Thillana.json",
+      "raga_raw": "Behag",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Mukund Bharadwaj/Cetah Shri Balakrishnam/Cetah_Shri_Balakrishnam.json",
+      "raga_raw": "Dwijavanti",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Mukund Bharadwaj/Devi Pavane/Devi_Pavane.json",
+      "raga_raw": "Saveri",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Mukund Bharadwaj/Ka Vaa Vaa/Ka_Vaa_Vaa.json",
+      "raga_raw": "Varali",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Mukund Bharadwaj/Thillana/Thillana.json",
+      "raga_raw": "Purvi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Mukund Bharadwaj/Valachi Vachi/Valachi_Vachi.json",
+      "raga_raw": "Navaragamalika",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Niranjan Dindodi/Angikkenadapadi/Angikkenadapadi.json",
+      "raga_raw": "Behag",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Niranjan Dindodi/Mayamma/Mayamma.json",
+      "raga_raw": "Ahiri",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Niranjan Dindodi/Nada Tanumanisham/Nada_Tanumanisham.json",
+      "raga_raw": "Chitta Ranjani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Niranjan Dindodi/Narasimha Aagacha/Narasimha_Aagacha.json",
+      "raga_raw": "Mohanam",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Niranjan Dindodi/Paripurna Kama/Paripurna_Kama.json",
+      "raga_raw": "Poorvikalyani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Niranjan Dindodi/Venkata Ramanane/Venkata_Ramanane.json",
+      "raga_raw": "Shankarabharanam",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Pranathi Ganapuram/Chalamelara/Chalamelara.json",
+      "raga_raw": "Marga Hindolam",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Pranathi Ganapuram/Chalamu Seya/Chalamu Seya.json",
+      "raga_raw": "Nattakurinji ",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Pranathi Ganapuram/Devi Nee/Devi Nee.json",
+      "raga_raw": "Kambhoji",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Pranathi Ganapuram/Mamaya Karunaya/Mamaya_Karunaya.json",
+      "raga_raw": "Shanmukhapriya",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Pranathi Ganapuram/Narayanathe Namo Namo/Narayanathe Namo Namo.json",
+      "raga_raw": "Behag",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Pranathi Ganapuram/Vallabha Nayakasya/Vallabha_Nayakasya.json",
+      "raga_raw": "Begada",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Prithvi Harish/Alasara Parithapam/Alasara_Parithapam.json",
+      "raga_raw": "Suruti",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Prithvi Harish/Karpaga Manohara/Karpaga_Manohara.json",
+      "raga_raw": "Malayamarutham",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Prithvi Harish/Kasi Visalakshim/Kasi_Visalakshim.json",
+      "raga_raw": "Poorvi Kalyani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Prithvi Harish/Mokshamu Galada/Mokshamu_Galada.json",
+      "raga_raw": "Saramathi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Prithvi Harish/Seethapati/Seethapati.json",
+      "raga_raw": "Shankarabharanam",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Prithvi Harish/Shantamu Lekha/Shantamu_Lekha.json",
+      "raga_raw": "Sama",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Raghav Krishna/Gananayakam/Gananayakam.json",
+      "raga_raw": "Rudrapriya",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Raghav Krishna/Karunai Deivame/Karunai_Deivame.json",
+      "raga_raw": "Sindhubhairavi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Raghav Krishna/Nava Loka Nayike/Nava_Loka_Nayike.json",
+      "raga_raw": "Ragamalika",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Raghav Krishna/Rama Nee Samana/Rama_Nee_Samana.json",
+      "raga_raw": "Kharaharapriya",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Raghav Krishna/Rama Rama Gunaseema/Rama_Rama_Gunaseema.json",
+      "raga_raw": "Simhendramadhyamam",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Raghav Krishna/Sakala Graha Bala/Sakala_Graha_Bala.json",
+      "raga_raw": "Atana",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Raghav Krishna/Santatam Banda/Santatam_Banda.json",
+      "raga_raw": "Hindolam",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Raghav Krishna/Siva Siva Ena/Siva_Siva_Ena.json",
+      "raga_raw": "Pantuvarali",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Ramya Kiranmayi/Mari Vere/Mari Vere.json",
+      "raga_raw": "Shanmukhapriya",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Ramya Kiranmayi/Nanda Nandana/Nanda_Nandana.json",
+      "raga_raw": "Desh",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Ramya Kiranmayi/Nee Irangayenil/Nee_Irangayenil.json",
+      "raga_raw": "Atana",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Ramya Kiranmayi/Neevera Kula/Neevera_Kula.json",
+      "raga_raw": "Begada",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Ramya Kiranmayi/Parama Purusha/Parama_Purusha.json",
+      "raga_raw": "Vasanta",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Ramya Kiranmayi/Shri Gurunapalitosmi/Shri_Gurunapalitosmi.json",
+      "raga_raw": "Padi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/S Pavani/Evarani/Evarani.json",
+      "raga_raw": "Devamrutavarshini",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/S Pavani/Garuda Gamana/Garuda_Gamana.json",
+      "raga_raw": "Hindolam",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/S Pavani/Jaya Jaya/Jaya_Jaya.json",
+      "raga_raw": "Nattai",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/S Pavani/Kurai Ondrum Illai/Kurai_Ondrum_Illai.json",
+      "raga_raw": "Ragamalika",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/S Pavani/Parandhamavati Jayati/Parandhamavati_Jayati.json",
+      "raga_raw": "Dharmavati",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/S Pavani/Parvati Ninnu ne/Parvati_Ninnu_ne.json",
+      "raga_raw": "Kalgada",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/S Pavani/Sharanagatha Raksha/Sharanagatha_Raksha.json",
+      "raga_raw": "Yamuna Kalyani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/S Pavani/Sri VIshwanatham Bhaje/Sri_VIshwanatham_Bhaje.json",
+      "raga_raw": "Bhairavi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sahana/Amba Nilambari/Amba_Nilambari.json",
+      "raga_raw": "Nilambari",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sahana/Kaa Vaa Vaa/Kaa_Vaa_Vaa.json",
+      "raga_raw": "Varali",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sahana/Naneke Badavanu/Naneke_Badavanu.json",
+      "raga_raw": "Behag",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sahana/Pakkala Nilabadi/Pakkala_Nilabadi.json",
+      "raga_raw": "Kharaharapriya",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sahana/Ramachandram Bhavayami/Ramachandram_Bhavayami.json",
+      "raga_raw": "Vasanta",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sahana/Vanga Kadal/Vanga_Kadal.json",
+      "raga_raw": "Surutti",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sampadgodu Vighnaraja/Ardharekhe Idhalli/Ardharekhe_Idhalli.json",
+      "raga_raw": "Behag",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sampadgodu Vighnaraja/Endhuku Nirdhaya/Endhuku_Nirdhaya.json",
+      "raga_raw": "Harikambhoji",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sampadgodu Vighnaraja/Hiranmayeem Lakshmim/Hiranmayeem_Lakshmim.json",
+      "raga_raw": "Lalita",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sampadgodu Vighnaraja/Karuna Ela Gante/Karuna_Ela_Gante.json",
+      "raga_raw": "Varali",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sampadgodu Vighnaraja/Ninnada Nele/Ninnada_Nele.json",
+      "raga_raw": "Kannada",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sampadgodu Vighnaraja/Yeradiru Yeradiru/Yeradiru_Yeradiru.json",
+      "raga_raw": "Bowli",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sandhya Ramaswamy/Aadi Kondar/Aadi_Kondar.json",
+      "raga_raw": "Mayamalavagowla",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sandhya Ramaswamy/Chaliye Kunjan/Chaliye_Kunjan.json",
+      "raga_raw": "Brindavana Saranga",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sandhya Ramaswamy/Gati Neeye/Gati_Neeye.json",
+      "raga_raw": "Thodi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sandhya Ramaswamy/Kandrin Kuralai/Kandrin_Kuralai.json",
+      "raga_raw": "Mukhari",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sandhya Ramaswamy/Korina Vara/Korina_Vara.json",
+      "raga_raw": "Ramapriya",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sandhya Ramaswamy/Mahaganapathim Bhajeham/Mahaganapathim_Bhajeham.json",
+      "raga_raw": "Atana",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sanjay Swaminathan/Ayye Metthakadinam/Ayye_Metthakadinam.json",
+      "raga_raw": "Ragamalika",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sanjay Swaminathan/Ganapate Mahamate/Ganapate_Mahamate.json",
+      "raga_raw": "Kalyani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sanjay Swaminathan/Nannu Brova/Nannu_Brova.json",
+      "raga_raw": "Lalitha",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sanjay Swaminathan/Rama Niyeda/Rama_Niyeda.json",
+      "raga_raw": "Kharaharapriya",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Sanjay Swaminathan/Vachamagocharame/Vachamagocharame.json",
+      "raga_raw": "Kaikavashi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Shraddha Ganesh/Ninaikadha Neramillai/Ninaikadha_Neramillai.json",
+      "raga_raw": "Rageshri",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Shraddha Ganesh/Vidajaladura/Vidajaladura.json",
+      "raga_raw": "Janarajani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Shruthi Bhat/Moogu Sannadhu/Moogu_Sannadhu.json",
+      "raga_raw": "Pahadi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Shruthi Bhat/Nanda Balam/Nanda_Balam.json",
+      "raga_raw": "Bhujangini",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Shruthi Bhat/Raksha Pettare/Raksha_Pettare.json",
+      "raga_raw": "Bhairavi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Srividya Vadanamali/Entha Modi/Entha_Modi.json",
+      "raga_raw": "Saraga",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Srividya Vadanamali/Ganaamudha panam/Ganaamudha_panam.json",
+      "raga_raw": "Jyotiswaroopini",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Srividya Vadanamali/Parama Prusham/Parama_Prusham.json",
+      "raga_raw": "Lalitapanchama",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Srividya Vadanamali/Raju Vedale/Raju_Vedale.json",
+      "raga_raw": "Thodi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Surya Prakash/Guruvayurappa/Guruvayurappa.json",
+      "raga_raw": "Chakravakam",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Surya Prakash/Jootamu Rare/Jootamu_Rare.json",
+      "raga_raw": "Arabhi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Surya Prakash/Krishna Nanda Mukunda/Krishna_Nanda_Mukunda.json",
+      "raga_raw": "Gaulipantu",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Surya Prakash/Manavyalakinchara/Manavyalakinchara.json",
+      "raga_raw": "Nalinakanti",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Surya Prakash/Shri Parthasarathy/Shri_Parthasarathy.json",
+      "raga_raw": "Shuddha Dhanyasi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Surya Prakash/Sri Satyanarayanam/Sri_Satyanarayanam.json",
+      "raga_raw": "Shubapantuvarali",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Surya Prakash/Thillana/Thillana.json",
+      "raga_raw": "Hamsanandi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Swarathmika/Aparadhamula Norva/Aparadhamula_Norva.json",
+      "raga_raw": "Rasali",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Swarathmika/Lambodharam Avalambe/Lambodharam_Avalambe.json",
+      "raga_raw": "Kambhoji",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Swarathmika/Meenakshi Memudam/Meenakshi_Memudam.json",
+      "raga_raw": "Poovi Kalyani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Swarathmika/Muruganin Marupeyar/Muruganin_Marupeyar.json",
+      "raga_raw": "Behag",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Swarathmika/Samagana Lole/Samagana_Lole.json",
+      "raga_raw": "Hindolam",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Swarathmika/Sivakama Sundari/Sivakama_Sundari.json",
+      "raga_raw": "Jaganmohini",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vaibhav Ramu/Akshaya Linga Vibho/Akshaya_Linga_Vibho.json",
+      "raga_raw": "Shankarabharanam",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vaibhav Ramu/Nirada Sama/Nirada_Sama.json",
+      "raga_raw": "Jayantasri",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vaibhav Ramu/Omkara Rupa/Omkara_Rupa.json",
+      "raga_raw": "Vasanta",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vaibhav Ramu/Santana Gopalam/Santana_Gopalam.json",
+      "raga_raw": "Khamas",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vaibhav Ramu/Sivakama Sundari/Sivakama_Sundari.json",
+      "raga_raw": "Mukhari",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vaibhav Ramu/Venkata Ramanan/Venkata_Ramanan.json",
+      "raga_raw": "Savitri",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vidya Kalyanaraman/Aparadhumula/Aparadhumula.json",
+      "raga_raw": "Latangi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vidya Kalyanaraman/Irakkam Varamal/Irakkam_Varamal.json",
+      "raga_raw": "Behag",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vidya Kalyanaraman/Om Nama Shivaya/Om_Nama_Shivaya.json",
+      "raga_raw": "Hindolam",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vidya Kalyanaraman/Pakkala Nilabadi/Pakkala_Nilabadi.json",
+      "raga_raw": "Kharaharapriya",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vidya Kalyanaraman/Pavamana Suthu/Pavamana_Suthu.json",
+      "raga_raw": "Sowrashtam",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vidya Kalyanaraman/Sami Ninne/Sami_Ninne.json",
+      "raga_raw": "Sri raga",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vidya Kalyanaraman/Thillana/Thillana.json",
+      "raga_raw": "Dhanashree",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vidya Kalyanaraman/Vara Narada/Vara_Narada.json",
+      "raga_raw": "Vijayasri",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vishruthi girish/Amboruha Padame/Amboruha_Padame.json",
+      "raga_raw": "Ranjani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vishruthi girish/Ennalu urake/Ennalu_urake.json",
+      "raga_raw": "Shubapantuvarali",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vishruthi girish/Kalai Thooki/Kalai_Thooki.json",
+      "raga_raw": "Yadukulakambhoji",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vishruthi girish/Satatam Tavaka/Satatam_Tavaka.json",
+      "raga_raw": "Kharaharapriya",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vivek Mozhikkulam/Kannan Endradhume/Kannan_Endradhume.json",
+      "raga_raw": "Ragamalika",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vivek Mozhikkulam/Karthikeya Gangeya/Karthikeya_Gangeya.json",
+      "raga_raw": "Thodi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vivek Mozhikkulam/Nenaruchinanu/Nenaruchinanu.json",
+      "raga_raw": "Malavi",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vivek Mozhikkulam/Sammodam Chintayami/Sammodam_Chintayami.json",
+      "raga_raw": "Udhayaravichandrika",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Vivek Mozhikkulam/Sri Ramam/Sri_Ramam.json",
+      "raga_raw": "Narayana Gowla",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Yoga Keerthana/Andavan Dharisanam/Andavan_Dharisanam.json",
+      "raga_raw": "Jonpuri",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Yoga Keerthana/Margazhi Thingal/Margazhi_Thingal.json",
+      "raga_raw": "Hamsadhwani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Yoga Keerthana/Nannu Brova/Nannu_Brova.json",
+      "raga_raw": "Kalyani",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Yoga Keerthana/Nee Daya Galgute/Nee_Daya_Galgute.json",
+      "raga_raw": "Reetigowla",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Yoga Keerthana/Soundararajam/Soundararajam.json",
+      "raga_raw": "Brindavana Saranga",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Yoga Keerthana/Tamasincha/Tamasincha.json",
+      "raga_raw": "Asaveri",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    },
+    {
+      "metadata": "data/overhaul/saraga_av/metadata/saraga metadata/Yoga Keerthana/Triloka Mata/Triloka_Mata.json",
+      "raga_raw": "Paras",
+      "reason": "artist_overlap_or_unresolved_label_or_missing_or_large_audio"
+    }
+  ],
+  "requires_new_manual_labels": false,
+  "compressed_bytes": 375622336,
+  "license": "CC-BY-4.0",
+  "model_sha256": "59544dd8dd7854952584bf848042f6c33cc41c00f71aae554c4e35d10915352e",
+  "resolver_sha256": "70b5dd6ac0a3e87576586727ae3f3c2a2041aaa2f4e373c8299e43db40f0cf97",
+  "archive_artist_join_evidence": {
+    "Srividya Vadanamali": {
+      "archive_artist": "Srividya Vadnamali",
+      "exact_shared_titles": [
+        "enthamodi",
+        "ganaamudhapanam",
+        "paramaprusham",
+        "rajuvedale"
+      ]
+    },
+    "Vivek Mozhikkulam": {
+      "archive_artist": "Vivek Mozhikulam",
+      "exact_shared_titles": [
+        "kannanendradhume",
+        "karthikeyagangeya",
+        "nenaruchinanu",
+        "sammodamchintayami",
+        "sarasuda",
+        "sriramam",
+        "varanamukha"
+      ]
+    },
+    "Hari Krishan": {
+      "archive_artist": "Hari Kishan",
+      "exact_shared_titles": [
+        "etijanmamidhi",
+        "govardhanagiridhara",
+        "ragaratnamalikache"
+      ]
+    },
+    "Shraddha Ganesh": {
+      "archive_artist": "Shradda Ganesh",
+      "exact_shared_titles": [
+        "irakkamvaramal",
+        "mamavathusaraswati",
+        "meenakshimemudam",
+        "ninaikadhaneramillai",
+        "sangeethagnanamu",
+        "vandedevadeva",
+        "vidajaladura"
+      ]
+    }
+  },
+  "prior_artist_plan_sha256": "8ec802c905f594156af88bd2cfe4b8c1a1e759c124ec1924de516f95f7bf72c1",
+  "maximum_member_compressed_bytes": 250000000,
+  "selection": "one SHA256-ranked eligible track per artist; no audio or predictions consulted",
+  "limitations": "Known vocabulary and size-limited cohort; unknown historical artist provenance remains unresolved."
+}

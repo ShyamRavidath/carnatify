@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/ea8bdd2b-0817-4619-8418-a38d9aebc60a",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:22:06.097180+00:00",
+  "recording": {
+    "disambiguation": "",
+    "title": "Anrivvulagam",
+    "video": false,
+    "id": "ea8bdd2b-0817-4619-8418-a38d9aebc60a",
+    "first-release-date": "2009",
+    "length": 208000,
+    "relations": [
+      {
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "ended": false,
+        "end": null,
+        "type": "performance",
+        "attribute-values": {},
+        "target-credit": "",
+        "direction": "forward",
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work",
+        "source-credit": "",
+        "work": {
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "id": "1374786e-8363-4de7-b722-e41b9499a38f",
+          "attributes": [],
+          "language": "tam",
+          "type": "Song",
+          "languages": [
+            "tam"
+          ],
+          "title": "Anrivvulagam",
+          "iswcs": [],
+          "disambiguation": "Thiruppavai"
+        }
+      }
+    ]
+  }
+}

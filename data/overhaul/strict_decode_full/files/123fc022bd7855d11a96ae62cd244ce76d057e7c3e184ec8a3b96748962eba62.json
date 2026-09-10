@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sāma__SantamulEka",
+  "audio": "data/concert_audio/Sāma/SantamulEka.mp3",
+  "audio_sha256": "123fc022bd7855d11a96ae62cd244ce76d057e7c3e184ec8a3b96748962eba62",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7816343330778182
+}

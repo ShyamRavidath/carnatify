@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nāṭa__Varna Kambodhi",
+  "audio": "data/concert_audio/Nāṭa/Varna Kambodhi.mp3",
+  "audio_sha256": "c0dfee41bac676e95f31d29c16fa80700921b3c99a98e7147cd12ebc49dbe85c",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.3327265419065952
+}

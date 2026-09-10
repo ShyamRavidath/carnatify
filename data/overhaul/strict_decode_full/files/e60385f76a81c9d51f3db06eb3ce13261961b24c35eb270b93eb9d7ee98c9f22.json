@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bilahari__kanugoNTini",
+  "audio": "data/concert_audio/Bilahari/kanugoNTini.mp3",
+  "audio_sha256": "e60385f76a81c9d51f3db06eb3ce13261961b24c35eb270b93eb9d7ee98c9f22",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.6162139158695936
+}

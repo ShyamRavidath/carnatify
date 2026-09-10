@@ -1,0 +1,42 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/e8027bb2-7550-4da5-afed-e40e353d497b",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:20:13.893409+00:00",
+  "recording": {
+    "length": 600000,
+    "disambiguation": "",
+    "relations": [
+      {
+        "target-type": "work",
+        "end": null,
+        "ended": false,
+        "source-credit": "",
+        "work": {
+          "disambiguation": "",
+          "languages": [
+            "san"
+          ],
+          "iswcs": [],
+          "id": "d4d0961c-b5cb-4294-ae13-22605b9a26fe",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "title": "Jaya Jaya Janaki Kantha",
+          "language": "san",
+          "attributes": [],
+          "type": "Song"
+        },
+        "target-credit": "",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "type": "performance",
+        "attribute-values": {},
+        "begin": null,
+        "direction": "forward",
+        "attribute-ids": {},
+        "attributes": []
+      }
+    ],
+    "id": "e8027bb2-7550-4da5-afed-e40e353d497b",
+    "video": false,
+    "title": "Jaya Jaya Janaki Kantha",
+    "first-release-date": "2015-06-21"
+  }
+}

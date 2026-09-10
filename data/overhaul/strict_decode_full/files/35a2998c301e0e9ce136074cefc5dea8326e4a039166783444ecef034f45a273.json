@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāmavardani__shambO mahAdEva",
+  "audio": "data/concert_audio/Kāmavardani/shambO mahAdEva.mp3",
+  "audio_sha256": "35a2998c301e0e9ce136074cefc5dea8326e4a039166783444ecef034f45a273",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3317554579116404
+}

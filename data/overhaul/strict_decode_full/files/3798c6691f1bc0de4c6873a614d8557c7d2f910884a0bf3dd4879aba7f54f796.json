@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bhairavi__raksha beTTarE",
+  "audio": "data/concert_audio/Bhairavi/raksha beTTarE.mp3",
+  "audio_sha256": "3798c6691f1bc0de4c6873a614d8557c7d2f910884a0bf3dd4879aba7f54f796",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.5937860421836376
+}

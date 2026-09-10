@@ -1,0 +1,9 @@
+{
+  "version": "relative_24bin_halfsecond_oti_v1",
+  "catalog_sha256": "7ffc5d778871bbeb2630cf1b3d0018f45e97cf8765c825fb32b2b443c4971759",
+  "corpus_sha256": "7ab2e7c3a91f89397e225c63b458f432aaf9ba00402c228126e9bbbd7a0fc056",
+  "n_tracks": 181,
+  "n_works": 165,
+  "status": "candidate retrieval only; no production acceptance threshold",
+  "source": "Saraga distributed pitch and tonic; retain original dataset attribution/terms"
+}

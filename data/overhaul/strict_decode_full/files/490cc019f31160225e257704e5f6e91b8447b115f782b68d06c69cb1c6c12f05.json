@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāṁbhōji__mAjAnaki",
+  "audio": "data/concert_audio/Kāṁbhōji/mAjAnaki.mp3",
+  "audio_sha256": "490cc019f31160225e257704e5f6e91b8447b115f782b68d06c69cb1c6c12f05",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.08764462498948
+}

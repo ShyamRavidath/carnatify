@@ -1,0 +1,122 @@
+{
+  "plan_sha256": "a39d9c445383938cf13c7c73d750908a67a756036e9b4e9a27784fe81ce0f25a",
+  "query": {
+    "track": "133_Paramatmudu",
+    "audio": "saraga1.5_carnatic/Modhumudi Sudhakar at Arkay by Modhumudi Sudhakar/Paramatmudu/Paramatmudu.mp3.mp3",
+    "audio_sha256": "97689fa1bf0f44b6b2843dc72d8711d5f9b895edd27dfa84d3f83d3f9bbcbc4f",
+    "start_s": 431.3874716553288,
+    "duration_s": 30
+  },
+  "audio": {
+    "source_sr": 44100,
+    "channels": 2,
+    "downmix": "mean",
+    "downmix_power_ratio": 0.9797168184438313,
+    "clipping_fraction": 0.0,
+    "rms": 0.1726365071515947
+  },
+  "waveform_sha256": "68af1ea2255273665ae223506724629cdf94c2217d03c979ce985d263a84f4e2",
+  "transcription_s": 59.833427582867444,
+  "hypotheses": {
+    "auto": {
+      "text": "मूच्छ तबाग तेलू सुकोरे परमात मूडू वेलिगे मुझे तरह",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 25.0,
+          "text": " मूच्छ तबाग तेलू सुकोरे परमात मूडू वेलिगे",
+          "avg_logprob": -0.27992955693658794,
+          "no_speech_prob": 2.2599218937102705e-05,
+          "compression_ratio": 1.2705882352941176
+        },
+        {
+          "start": 25.0,
+          "end": 30.0,
+          "text": " मुझे तरह",
+          "avg_logprob": -0.44336583064152646,
+          "no_speech_prob": 9.227326813743275e-08,
+          "compression_ratio": 0.6666666666666666
+        }
+      ],
+      "language": "hi",
+      "status": "unverified_hypothesis"
+    },
+    "ta": {
+      "text": "मूच्छ तबाग तेलू सुकोरे परमात मूडू वेलिगे موسیقی",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 12.0,
+          "text": " मूच्छ तबाग तेलू सुकोरे",
+          "avg_logprob": -0.3208398645574396,
+          "no_speech_prob": 2.2599218937102705e-05,
+          "compression_ratio": 1.2705882352941176
+        },
+        {
+          "start": 12.0,
+          "end": 25.0,
+          "text": " परमात मूडू वेलिगे",
+          "avg_logprob": -0.3208398645574396,
+          "no_speech_prob": 2.2599218937102705e-05,
+          "compression_ratio": 1.2705882352941176
+        },
+        {
+          "start": 25.0,
+          "end": 29.0,
+          "text": " موسیقی",
+          "avg_logprob": -0.600744903087616,
+          "no_speech_prob": 9.227326813743275e-08,
+          "compression_ratio": 0.5714285714285714
+        }
+      ],
+      "language": "ta",
+      "status": "unverified_hypothesis"
+    },
+    "te": {
+      "text": "మూచటబాగతేలు సుకోరే పరమాత్ముడు వేలిగే మూచేటగి",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 24.240000000000002,
+          "text": " మూచటబాగతేలు సుకోరే పరమాత్ముడు వేలిగే",
+          "avg_logprob": -0.29271762435500687,
+          "no_speech_prob": 2.2599218937102705e-05,
+          "compression_ratio": 1.2289156626506024
+        },
+        {
+          "start": 24.24,
+          "end": 29.979999999999997,
+          "text": " మూచేటగి",
+          "avg_logprob": -0.4545169406467014,
+          "no_speech_prob": 6.871054836210533e-08,
+          "compression_ratio": 0.65625
+        }
+      ],
+      "language": "te",
+      "status": "unverified_hypothesis"
+    },
+    "hi": {
+      "text": "मूच्छ तबाग तेलू सुकोरे परमात मूडू वेलिगे मुझे तरह",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 25.0,
+          "text": " मूच्छ तबाग तेलू सुकोरे परमात मूडू वेलिगे",
+          "avg_logprob": -0.27992955693658794,
+          "no_speech_prob": 2.2599218937102705e-05,
+          "compression_ratio": 1.2705882352941176
+        },
+        {
+          "start": 25.0,
+          "end": 30.0,
+          "text": " मुझे तरह",
+          "avg_logprob": -0.44336583064152646,
+          "no_speech_prob": 9.227326813743275e-08,
+          "compression_ratio": 0.6666666666666666
+        }
+      ],
+      "language": "hi",
+      "status": "unverified_hypothesis"
+    }
+  }
+}

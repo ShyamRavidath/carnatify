@@ -1,0 +1,11 @@
+{
+  "track": "135_Paraloka_Bhaya",
+  "audio": "saraga1.5_carnatic/Modhumudi Sudhakar at Arkay by Modhumudi Sudhakar/Paraloka Bhaya/Paraloka Bhaya.mp3.mp3",
+  "audio_sha256": "48fe238aa4b0679d257c173f601556921018dc325f79ca62402cf7f3d297dbeb",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.948067625053227
+}

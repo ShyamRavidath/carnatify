@@ -1,0 +1,11 @@
+{
+  "track": "archive__Vasanta__71 Kanta Joodumi",
+  "audio": "data/concert_audio/Vasanta/71 Kanta Joodumi.mp3",
+  "audio_sha256": "c93b765ed3dd680c5f999af7112b775a22e1db4735b35134c196f9e329100e7b",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4421979170292616
+}

@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/1e3e10ad-93ed-439e-85b6-de67cd362d05",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:22:18.421344+00:00",
+  "recording": {
+    "length": 452000,
+    "video": false,
+    "id": "1e3e10ad-93ed-439e-85b6-de67cd362d05",
+    "relations": [
+      {
+        "target-type": "work",
+        "direction": "forward",
+        "begin": null,
+        "type": "performance",
+        "work": {
+          "disambiguation": "",
+          "title": "Vidulaku Mrokkeda",
+          "type": null,
+          "languages": [],
+          "id": "c53cc516-3ec3-485f-ba2a-139d5a7fe710",
+          "type-id": null,
+          "language": null,
+          "iswcs": [],
+          "attributes": []
+        },
+        "end": null,
+        "attributes": [
+          "live"
+        ],
+        "attribute-values": {},
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "target-credit": "",
+        "source-credit": "",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "ended": false
+      }
+    ],
+    "title": "Vidulaku Mrokkeda",
+    "disambiguation": "",
+    "first-release-date": "2000"
+  }
+}

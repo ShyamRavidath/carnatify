@@ -1,0 +1,26 @@
+{
+  "plan_sha256": "08a4276cbe35a7a6415b38faa9c7796fc471bc266ea908503d3040a81da76059",
+  "decode": {
+    "track": "coverage__Dhenuka__Teliyaleru_Rama_SKR",
+    "audio": "data/overhaul/dhenuka_coverage_pilot/candidate.mp3",
+    "audio_sha256": "1225bbe673a950a861904d63c7a209a36ffb9700abcff9080ef67d54c4f0a0c2",
+    "plan_sha256": "08a4276cbe35a7a6415b38faa9c7796fc471bc266ea908503d3040a81da76059",
+    "status": "clean",
+    "returncode": 0,
+    "stderr_bytes": 0,
+    "stderr_excerpt": "",
+    "elapsed_s": 2.280721166636795
+  },
+  "n_compared": 1069,
+  "flags": [],
+  "fingerprint_sha256": "b3b289879feb82827ec1e313709fcdc4eb27fbaffe7889e849c7bf1747845e72",
+  "fingerprint_metadata": {
+    "version": "1.5.1",
+    "algorithm": 1,
+    "samples": 29622528,
+    "sr": 32000,
+    "item_duration_ms": 123
+  },
+  "status": "screened coverage candidate; no admission, performer-independence or raga accuracy claim",
+  "limitation": "Zero flags cannot prove absence of all transformations, alternate microphones or artist overlap"
+}

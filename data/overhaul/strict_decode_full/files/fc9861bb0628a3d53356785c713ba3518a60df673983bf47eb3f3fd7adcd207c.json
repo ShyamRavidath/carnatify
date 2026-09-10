@@ -1,0 +1,11 @@
+{
+  "track": "archive__Śankarābharaṇaṁ__eDutA nilichitE",
+  "audio": "data/concert_audio/Śankarābharaṇaṁ/eDutA nilichitE.mp3",
+  "audio_sha256": "fc9861bb0628a3d53356785c713ba3518a60df673983bf47eb3f3fd7adcd207c",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 7.127695041242987
+}

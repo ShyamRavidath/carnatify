@@ -1,0 +1,11 @@
+{
+  "track": "archive__Jōnpuri__14 sApasya",
+  "audio": "data/concert_audio/Jōnpuri/14 sApasya.mp3",
+  "audio_sha256": "50a32d0b22f60a5032863065207d9c0356f399eff0d8bac4496ec4e0e41defcd",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8744457913562655
+}

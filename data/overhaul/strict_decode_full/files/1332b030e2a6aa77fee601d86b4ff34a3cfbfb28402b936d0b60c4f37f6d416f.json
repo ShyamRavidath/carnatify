@@ -1,0 +1,11 @@
+{
+  "track": "archive__Vasanta__1256722 Music NCBS varnam",
+  "audio": "data/concert_audio/Vasanta/1256722 Music NCBS varnam.mp3",
+  "audio_sha256": "1332b030e2a6aa77fee601d86b4ff34a3cfbfb28402b936d0b60c4f37f6d416f",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7145109581761062
+}

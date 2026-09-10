@@ -1,0 +1,35 @@
+{
+  "plan_sha256": "5a583f91b605504a2a0253c877138662a6a91dc0ee37b2bd6b3167a5c101611c",
+  "query": {
+    "track": "133_Paramatmudu",
+    "audio": "saraga1.5_carnatic/Modhumudi Sudhakar at Arkay by Modhumudi Sudhakar/Paramatmudu/Paramatmudu.mp3.mp3",
+    "audio_sha256": "97689fa1bf0f44b6b2843dc72d8711d5f9b895edd27dfa84d3f83d3f9bbcbc4f",
+    "start_s": 441.3874716553288,
+    "duration_s": 10
+  },
+  "audio": {
+    "source_sr": 44100,
+    "channels": 2,
+    "downmix": "mean",
+    "downmix_power_ratio": 0.9776566212390643,
+    "clipping_fraction": 0.0,
+    "rms": 0.1710880367320091
+  },
+  "waveform_sha256": "84c2d29ee0eb1786275c275cf8fbd8f0a7f4545f3b41481d1b3a87ce7b75ca1b",
+  "hypothesis": {
+    "text": "Oh",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Oh",
+        "avg_logprob": -0.9290674328804016,
+        "no_speech_prob": 1.6487616605331823e-08,
+        "compression_ratio": 0.2
+      }
+    ],
+    "language": "en",
+    "status": "unverified_hypothesis"
+  },
+  "transcription_s": 12.98069979203865
+}

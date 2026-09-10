@@ -1,0 +1,11 @@
+{
+  "track": "archive__Karaharapriya__murugA",
+  "audio": "data/concert_audio/Karaharapriya/murugA.mp3",
+  "audio_sha256": "8c5da6afb8c3ac803d3ab93337b0dc2fe58d59b65a134c200cc422d5b87cefe7",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6842729169875383
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bēgaḍa__nAdOpAsana",
+  "audio": "data/concert_audio/Bēgaḍa/nAdOpAsana.mp3",
+  "audio_sha256": "13f3e24976b8dc487aaddfa27edd8fff2ecc35948135081c08b620fb254563dc",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.761740167159587
+}

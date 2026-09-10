@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/5bdb990d-550a-494c-a750-0dbcc1c00a77",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:40:53.270080+00:00",
+  "recording": {
+    "id": "5bdb990d-550a-494c-a750-0dbcc1c00a77",
+    "first-release-date": "2008",
+    "relations": [
+      {
+        "source-credit": "",
+        "work": {
+          "language": "san",
+          "type": "Song",
+          "disambiguation": "",
+          "title": "Deva Deva Jagadeeshwara",
+          "languages": [
+            "san"
+          ],
+          "iswcs": [],
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "id": "bd9e3783-dd09-47d2-a8a9-200e5f935bdf",
+          "attributes": []
+        },
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work",
+        "attribute-values": {},
+        "target-credit": "",
+        "type": "performance",
+        "direction": "forward",
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "end": null,
+        "ended": false
+      }
+    ],
+    "length": 1812000,
+    "disambiguation": "",
+    "title": "Deva Deva Jagadeesha",
+    "video": false
+  }
+}

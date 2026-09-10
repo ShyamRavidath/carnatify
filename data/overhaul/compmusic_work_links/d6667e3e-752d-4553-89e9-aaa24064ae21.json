@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/d6667e3e-752d-4553-89e9-aaa24064ae21",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:12:52.451044+00:00",
+  "recording": {
+    "disambiguation": "",
+    "first-release-date": "2008",
+    "title": "Emi Jesite Nemi",
+    "relations": [
+      {
+        "ended": false,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "target-credit": "",
+        "source-credit": "",
+        "type": "performance",
+        "begin": null,
+        "direction": "forward",
+        "target-type": "work",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-values": {},
+        "attributes": [
+          "live"
+        ],
+        "work": {
+          "type": "Song",
+          "languages": [
+            "tel"
+          ],
+          "id": "a0b3496e-c161-45cf-b6e7-08e5652d9184",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "language": "tel",
+          "iswcs": [],
+          "attributes": [],
+          "disambiguation": "",
+          "title": "Emi Jesite"
+        },
+        "end": null
+      }
+    ],
+    "id": "d6667e3e-752d-4553-89e9-aaa24064ae21",
+    "video": false,
+    "length": 2914000
+  }
+}

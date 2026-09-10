@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/3f0ea455-7e47-48c6-942a-9dd60d36e04b",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:31:38.539361+00:00",
+  "recording": {
+    "video": false,
+    "id": "3f0ea455-7e47-48c6-942a-9dd60d36e04b",
+    "relations": [
+      {
+        "target-type": "work",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "ended": false,
+        "begin": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "type": "performance",
+        "end": null,
+        "attribute-values": {},
+        "source-credit": "",
+        "target-credit": "",
+        "direction": "forward",
+        "attributes": [
+          "live"
+        ],
+        "work": {
+          "language": "kan",
+          "title": "Jagadoddharana",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "languages": [
+            "kan"
+          ],
+          "attributes": [],
+          "disambiguation": "",
+          "iswcs": [],
+          "id": "6e4826a4-29ca-48f2-b442-5949dce5888b",
+          "type": "Song"
+        }
+      }
+    ],
+    "first-release-date": "2010",
+    "disambiguation": "",
+    "title": "Jagadodharana",
+    "length": 696000
+  }
+}

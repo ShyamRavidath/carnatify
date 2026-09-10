@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nīlāṁbari__shrungAra lahari",
+  "audio": "data/concert_audio/Nīlāṁbari/shrungAra lahari.mp3",
+  "audio_sha256": "bc5e0ead135719cba26cce2bff17ffc6aa686e1691af94b9c49bd71a01589231",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.265209207776934
+}

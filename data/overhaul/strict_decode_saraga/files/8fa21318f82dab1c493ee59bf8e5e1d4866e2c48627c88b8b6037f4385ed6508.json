@@ -1,0 +1,11 @@
+{
+  "track": "192_Sri_Guru_Na_Palitosmi",
+  "audio": "saraga1.5_carnatic/Sumithra Vasudev at Arkay by Sumithra Vasudev/Sri Guru Na Palitosmi/Sri Guru Na Palitosmi.mp3.mp3",
+  "audio_sha256": "8fa21318f82dab1c493ee59bf8e5e1d4866e2c48627c88b8b6037f4385ed6508",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8671878748573363
+}

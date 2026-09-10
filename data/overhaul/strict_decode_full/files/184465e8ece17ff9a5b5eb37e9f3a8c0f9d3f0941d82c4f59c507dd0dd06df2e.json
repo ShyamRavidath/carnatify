@@ -1,0 +1,11 @@
+{
+  "track": "archive__Pūrvīkaḷyāṇi__paralOka sAdanamE",
+  "audio": "data/concert_audio/Pūrvīkaḷyāṇi/paralOka sAdanamE.mp3",
+  "audio_sha256": "184465e8ece17ff9a5b5eb37e9f3a8c0f9d3f0941d82c4f59c507dd0dd06df2e",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 3.187810832634568
+}

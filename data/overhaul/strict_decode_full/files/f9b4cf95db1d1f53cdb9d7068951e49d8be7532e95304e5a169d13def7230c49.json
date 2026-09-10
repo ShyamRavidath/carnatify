@@ -1,0 +1,11 @@
+{
+  "track": "archive__Śankarābharaṇaṁ__Emi nera",
+  "audio": "data/concert_audio/Śankarābharaṇaṁ/Emi nera.mp3",
+  "audio_sha256": "f9b4cf95db1d1f53cdb9d7068951e49d8be7532e95304e5a169d13def7230c49",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.18188387481495738
+}

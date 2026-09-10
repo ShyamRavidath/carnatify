@@ -1,0 +1,688 @@
+{
+  "plan_sha256": "25046e50b5e2b4f61fa0003f38db1ba7714b39a359e81d864dbf83f93d0f746f",
+  "original_protocol_sha256": "254365916ed763e29dc64b3bd0ed47cf08d1c3517f44bcf8463f9dbabcf737c5",
+  "protocol": {
+    "plan_sha256": "25046e50b5e2b4f61fa0003f38db1ba7714b39a359e81d864dbf83f93d0f746f",
+    "models": {
+      "combined": {
+        "path": "data/overhaul/combined/raga_ridge.joblib",
+        "sha256": "8c28ee71b493a628b254d0ea4a032a742121f372ec0c8d9cd6d2c94fa2c894e5"
+      },
+      "forest800": {
+        "path": "data/overhaul/raga_forest800.joblib",
+        "sha256": "c01e3213b7640667259bee6c8cd77c3d9873685e0d97a254f63accc810746063"
+      },
+      "multiscale": {
+        "path": "data/overhaul/multiscale/raga.joblib",
+        "sha256": "322002bcd93d858d931faf70ec86b7ccc2b5a93c953ff3cef662dd6a4c5f1e88"
+      },
+      "broader": {
+        "path": "data/overhaul/broader/raga.joblib",
+        "sha256": "59544dd8dd7854952584bf848042f6c33cc41c00f71aae554c4e35d10915352e"
+      }
+    },
+    "query": "deterministic center 180 seconds with estimated tonic only",
+    "window_s": 180,
+    "metrics": "top1 all; paired common-vocabulary top1; top3; empirical threshold precision",
+    "status": "frozen before inspecting any fresh audio predictions"
+  },
+  "rows": [
+    {
+      "track": "saraga_av__46ba10ab2bf700deea8f8dca",
+      "artist": "Archana Murali",
+      "truth": "Sahānā",
+      "metadata": {
+        "audio_sha256": "7e24193cc9167b2b2e8f0d04b2962fb6e927c3a9d37361d4e0e694d26a9bfc2a",
+        "start_s": 638.0166666666667,
+        "end_s": 818.0166666666667,
+        "tonic_estimated": 103.93694305419922,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.0,
+          "rms": 0.06755662930328885
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default",
+        "hpss_parameters": null
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Sahānā",
+            "Kānaḍa",
+            "Sāma"
+          ],
+          "confidence": 0.5835860287645847
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Sāma",
+            "Kānaḍa",
+            "Bēgaḍa"
+          ],
+          "confidence": 0.1325
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Sahānā",
+            "Kānaḍa",
+            "Rītigauḷa"
+          ],
+          "confidence": 0.7047835327463884
+        },
+        "broader": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Sahānā",
+            "Kānaḍa",
+            "Dēvagāndhāri"
+          ],
+          "confidence": 0.25141786858076415
+        }
+      }
+    },
+    {
+      "track": "saraga_av__18ea33cc9ad5cdd47a4fb9f4",
+      "artist": "Hari Krishan",
+      "truth": "Rītigauḷa",
+      "metadata": {
+        "audio_sha256": "ffb7528a111186547f592c2f40f33bda2aebb24074a2488a368d890411bc593f",
+        "start_s": 251.51666666666665,
+        "end_s": 431.51666666666665,
+        "tonic_estimated": 124.35594177246094,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.0,
+          "rms": 0.0380359740288587
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default",
+        "hpss_parameters": null
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Rītigauḷa",
+            "Karaharapriya",
+            "Suraṭi"
+          ],
+          "confidence": 0.9373374656158412
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Rītigauḷa",
+            "Karaharapriya",
+            "Kānaḍa"
+          ],
+          "confidence": 0.24475
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Rītigauḷa",
+            "Karaharapriya",
+            "Jōnpuri"
+          ],
+          "confidence": 0.9607675539250854
+        },
+        "broader": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Rītigauḷa",
+            "Karaharapriya",
+            "Suraṭi"
+          ],
+          "confidence": 0.7321296566670746
+        }
+      }
+    },
+    {
+      "track": "saraga_av__2b103b7e40d62596f21a248d",
+      "artist": "Kruthi Bhat",
+      "truth": "Sāranga",
+      "metadata": {
+        "audio_sha256": "e53fc0c3f3574522a818e713d277fdcc13f778c985385c7e551c596336f71950",
+        "start_s": 133.26666666666668,
+        "end_s": 313.26666666666665,
+        "tonic_estimated": 196.41615295410156,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 4.976851851851852e-06,
+          "rms": 0.06852240001838834
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default",
+        "hpss_parameters": null
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": false,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Ānandabhairavi",
+            "Aṭāna",
+            "Hussēnī"
+          ],
+          "confidence": 0.12663859395067428
+        },
+        "forest800": {
+          "in_vocabulary": false,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Ānandabhairavi",
+            "Madhyamāvati",
+            "Bhairavi"
+          ],
+          "confidence": 0.07024999999999999
+        },
+        "multiscale": {
+          "in_vocabulary": false,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Ānandabhairavi",
+            "Aṭāna",
+            "Kalyāṇi"
+          ],
+          "confidence": 0.14033436857293025
+        },
+        "broader": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Ānandabhairavi",
+            "Sāranga",
+            "Aṭāna"
+          ],
+          "confidence": 0.06712182273067682
+        }
+      }
+    },
+    {
+      "track": "saraga_av__01f87da150dfb5f48b8a941a",
+      "artist": "Shraddha Ganesh",
+      "truth": "Dhanyāsi",
+      "metadata": {
+        "audio_sha256": "412a1abfad2c3ac914c7a9194485c94061f7a162677bff18aed671d98a48714f",
+        "start_s": 76.0,
+        "end_s": 256.0,
+        "tonic_estimated": 208.1158447265625,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.0,
+          "rms": 0.07063557038444651
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default",
+        "hpss_parameters": null
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Dhanyāsi",
+            "Tōḍi",
+            "Suraṭi"
+          ],
+          "confidence": 0.930502965420009
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Dhanyāsi",
+            "Tōḍi",
+            "Madhyamāvati"
+          ],
+          "confidence": 0.1925
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Dhanyāsi",
+            "Tōḍi",
+            "Suraṭi"
+          ],
+          "confidence": 0.9171718271915195
+        },
+        "broader": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Dhanyāsi",
+            "Tōḍi",
+            "Āhiri"
+          ],
+          "confidence": 0.5913665887542305
+        }
+      }
+    },
+    {
+      "track": "saraga_av__21938f444c00e75c007d22f6",
+      "artist": "Shruthi Bhat",
+      "truth": "Ābhōgi",
+      "metadata": {
+        "audio_sha256": "5db55ed45c80982c8e548648d2eee33398b778e8a86b1d443bb19f67ef1c7298",
+        "start_s": 132.71666666666667,
+        "end_s": 312.7166666666667,
+        "tonic_estimated": 134.8483428955078,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.0,
+          "rms": 0.042250510170439
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default",
+        "hpss_parameters": null
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Puṇṇāgavarāḷi",
+            "Harikāmbhōji"
+          ],
+          "confidence": 0.18424612752348948
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Harikāmbhōji",
+            "Puṇṇāgavarāḷi",
+            "Bēgaḍa"
+          ],
+          "confidence": 0.15575
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Harikāmbhōji",
+            "Kamās"
+          ],
+          "confidence": 0.15171958587941528
+        },
+        "broader": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Puṇṇāgavarāḷi",
+            "Mōhanaṁ",
+            "Harikāmbhōji"
+          ],
+          "confidence": 0.08852225634726996
+        }
+      }
+    },
+    {
+      "track": "saraga_av__3442c97e8b32ed617c68b23f",
+      "artist": "Srividya Vadanamali",
+      "truth": "Kāpi",
+      "metadata": {
+        "audio_sha256": "ec37f847907028ae79f9fef1da5960ef352692fc33e80ff49bb208c3271734f8",
+        "start_s": 91.5,
+        "end_s": 271.5,
+        "tonic_estimated": 103.93694305419922,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.0,
+          "rms": 0.03643813183495173
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default",
+        "hpss_parameters": null
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Kāpi",
+            "Dvijāvanti",
+            "Ānandabhairavi"
+          ],
+          "confidence": 0.9183716202102521
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Kāpi",
+            "Suraṭi",
+            "Śuddadhanyāsi"
+          ],
+          "confidence": 0.1525
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Kāpi",
+            "Dvijāvanti",
+            "Kānaḍa"
+          ],
+          "confidence": 0.9591599660033251
+        },
+        "broader": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Kāpi",
+            "Dvijāvanti",
+            "Kānaḍa"
+          ],
+          "confidence": 0.6306577422735554
+        }
+      }
+    },
+    {
+      "track": "saraga_av__067cbf4525d14c4cdbaf635b",
+      "artist": "Vishruthi girish",
+      "truth": "Madhyamāvati",
+      "metadata": {
+        "audio_sha256": "0d39b2e4b001e7428082b328966b302d2c12f574e9397e2eab6d6d2cb3355147",
+        "start_s": 209.51666666666665,
+        "end_s": 389.51666666666665,
+        "tonic_estimated": 208.1158447265625,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.0,
+          "rms": 0.0729991223456179
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default",
+        "hpss_parameters": null
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Madhyamāvati",
+            "Suraṭi",
+            "Rītigauḷa"
+          ],
+          "confidence": 0.5056836559956531
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Madhyamāvati",
+            "Suraṭi",
+            "Kānaḍa"
+          ],
+          "confidence": 0.14525
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Madhyamāvati",
+            "Suraṭi",
+            "Ānandabhairavi"
+          ],
+          "confidence": 0.35905522531297135
+        },
+        "broader": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Madhyamāvati",
+            "Suraṭi",
+            "Rītigauḷa"
+          ],
+          "confidence": 0.21744640584606578
+        }
+      }
+    },
+    {
+      "track": "saraga_av__655e50c4f64078d09e25f483",
+      "artist": "Vivek Mozhikkulam",
+      "truth": "Sāvēri",
+      "metadata": {
+        "audio_sha256": "a7b98bfaa034766f8ca47fbce44da1dfa6042150d2bb2bcce8402d8f7c187f1d",
+        "start_s": 86.16666666666666,
+        "end_s": 266.16666666666663,
+        "tonic_estimated": 138.8064422607422,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.0,
+          "rms": 0.07440522048046161
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default",
+        "hpss_parameters": null
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Sāvēri",
+            "Kāmavardani",
+            "Māyāmāḷavagauḷa"
+          ],
+          "confidence": 0.9190383533966112
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Sāvēri",
+            "Kāmavardani",
+            "Māyāmāḷavagauḷa"
+          ],
+          "confidence": 0.35674999999999996
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Sāvēri",
+            "Kāmavardani",
+            "Māyāmāḷavagauḷa"
+          ],
+          "confidence": 0.9172651107911146
+        },
+        "broader": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Sāvēri",
+            "Kāmavardani",
+            "Māyāmāḷavagauḷa"
+          ],
+          "confidence": 0.5681934822401816
+        }
+      }
+    }
+  ],
+  "summary": {
+    "combined": {
+      "n": 8,
+      "correct": 6,
+      "top1": 0.75,
+      "top3": 0.75,
+      "in_vocabulary": 7,
+      "accepted": 6,
+      "accepted_precision": 1.0
+    },
+    "forest800": {
+      "n": 8,
+      "correct": 5,
+      "top1": 0.625,
+      "top3": 0.625,
+      "in_vocabulary": 7,
+      "accepted": 0,
+      "accepted_precision": null
+    },
+    "multiscale": {
+      "n": 8,
+      "correct": 6,
+      "top1": 0.75,
+      "top3": 0.75,
+      "in_vocabulary": 7,
+      "accepted": 5,
+      "accepted_precision": 1.0
+    },
+    "broader": {
+      "n": 8,
+      "correct": 6,
+      "top1": 0.75,
+      "top3": 0.875,
+      "in_vocabulary": 8,
+      "accepted": 5,
+      "accepted_precision": 1.0
+    }
+  },
+  "window_s": 180,
+  "status": "fresh known-raga test; not natural-prevalence, open-set or SOTA evidence",
+  "common_vocabulary": {
+    "n": 7,
+    "correct": {
+      "combined": 6,
+      "forest800": 5,
+      "multiscale": 6,
+      "broader": 6
+    }
+  }
+}

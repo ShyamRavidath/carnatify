@@ -1,0 +1,11 @@
+{
+  "track": "archive__Puṇṇāgavarāḷi__rAgi tandeerA",
+  "audio": "data/concert_audio/Puṇṇāgavarāḷi/rAgi tandeerA.mp3",
+  "audio_sha256": "f447f02b0365bcb662ec8aef376b687ad144120675a04d7e97a68c0dc5506383",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4569839588366449
+}

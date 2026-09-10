@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kuntalavarāḷi__tillAna",
+  "audio": "data/concert_audio/Kuntalavarāḷi/tillAna.mp3",
+  "audio_sha256": "dd4a5866df529564b0a5d60511ea8051bcb95cb09b36f4a217e6f74b176db03e",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3394522089511156
+}

@@ -1,0 +1,40 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/d17fc49c-5c9a-4dd2-9e1e-334078473e63",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:12:07.942982+00:00",
+  "recording": {
+    "video": false,
+    "title": "Muruga Muruga",
+    "disambiguation": "",
+    "relations": [
+      {
+        "work": {
+          "type-id": null,
+          "id": "7d7cb85b-c030-41b5-8de5-53538e5df78b",
+          "attributes": [],
+          "language": null,
+          "type": null,
+          "disambiguation": "",
+          "iswcs": [],
+          "languages": [],
+          "title": "Muruga Muruga"
+        },
+        "source-credit": "",
+        "target-type": "work",
+        "attributes": [],
+        "direction": "forward",
+        "type": "performance",
+        "target-credit": "",
+        "attribute-values": {},
+        "ended": false,
+        "end": null,
+        "attribute-ids": {},
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null
+      }
+    ],
+    "length": 517000,
+    "first-release-date": "1997",
+    "id": "d17fc49c-5c9a-4dd2-9e1e-334078473e63"
+  }
+}

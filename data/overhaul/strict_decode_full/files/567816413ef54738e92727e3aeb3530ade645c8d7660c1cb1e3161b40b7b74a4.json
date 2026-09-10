@@ -1,0 +1,11 @@
+{
+  "track": "archive__Śankarābharaṇaṁ__pOgAtiralO rangayya",
+  "audio": "data/concert_audio/Śankarābharaṇaṁ/pOgAtiralO rangayya.mp3",
+  "audio_sha256": "567816413ef54738e92727e3aeb3530ade645c8d7660c1cb1e3161b40b7b74a4",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2433852911926806
+}

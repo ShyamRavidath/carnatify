@@ -1,0 +1,11 @@
+{
+  "track": "183_Chakkani_Raja",
+  "audio": "saraga1.5_carnatic/V Shankarnarayanan at Arkay by V Shankaranarayanan/Chakkani Raja/Chakkani Raja.mp3.mp3",
+  "audio_sha256": "4b39c9243afca2cb4fcaeeedd3ca48a4db9b8103fc6705d50a9a90eb57af0e67",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 5.803169375285506
+}

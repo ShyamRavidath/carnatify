@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/65d5ec15-3c8c-46c4-9e00-0b487be089cd",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:42:32.186010+00:00",
+  "recording": {
+    "first-release-date": "2001",
+    "id": "65d5ec15-3c8c-46c4-9e00-0b487be089cd",
+    "relations": [
+      {
+        "type": "performance",
+        "target-credit": "",
+        "attribute-values": {},
+        "direction": "forward",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "ended": false,
+        "end": null,
+        "source-credit": "",
+        "work": {
+          "id": "65fda164-29e4-4248-9185-57b1acf96696",
+          "attributes": [],
+          "type-id": null,
+          "disambiguation": "",
+          "title": "Pahi Krishna",
+          "languages": [],
+          "iswcs": [],
+          "language": null,
+          "type": null
+        },
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ]
+      }
+    ],
+    "length": 282000,
+    "title": "Pahi Krishna",
+    "disambiguation": "",
+    "video": false
+  }
+}

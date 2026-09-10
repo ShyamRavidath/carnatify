@@ -1,0 +1,11 @@
+{
+  "track": "228_Bhogeendra_Shayinam",
+  "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Bhogeendra Shayinam/Rithvik Raja - Bhogeendra Shayinam.mp3",
+  "audio_sha256": "92e7dcf32276d835f8a93d3cdfc8971f7d36552f21d29dd592c9ad08b3909f52",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5511782080866396
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sāvēri__sri rAmachandranukku",
+  "audio": "data/concert_audio/Sāvēri/sri rAmachandranukku.mp3",
+  "audio_sha256": "f6cecc265299ade4869d1dc9c548bc0b72b1f087a36bde37f12d4ffc3e23c04d",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8283779583871365
+}

@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/cc4c7571-344b-4cc9-917e-16c8392954b5",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:11:02.289144+00:00",
+  "recording": {
+    "video": false,
+    "length": 2931000,
+    "id": "cc4c7571-344b-4cc9-917e-16c8392954b5",
+    "relations": [
+      {
+        "ended": false,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "target-credit": "",
+        "source-credit": "",
+        "direction": "forward",
+        "target-type": "work",
+        "begin": null,
+        "type": "performance",
+        "attributes": [
+          "live"
+        ],
+        "work": {
+          "id": "03dc2e33-8ac3-442a-8e77-f46e36e6e241",
+          "type": null,
+          "languages": [],
+          "language": null,
+          "attributes": [],
+          "iswcs": [],
+          "type-id": null,
+          "disambiguation": "",
+          "title": "Sankaracharyam"
+        },
+        "end": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-values": {}
+      }
+    ],
+    "title": "Sankaracharyam",
+    "first-release-date": "2011",
+    "disambiguation": ""
+  }
+}

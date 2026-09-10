@@ -1,0 +1,11 @@
+{
+  "track": "188_Vanajaksha_Ninne_Kori",
+  "audio": "saraga1.5_carnatic/Sumithra Vasudev at Arkay by Sumithra Vasudev/Vanajaksha Ninne Kori/Vanajaksha Ninne Kori.mp3.mp3",
+  "audio_sha256": "187899627d819b859619a002360f625c879a19504d24c7eb49263a2ad00d82f8",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.9271517917513847
+}

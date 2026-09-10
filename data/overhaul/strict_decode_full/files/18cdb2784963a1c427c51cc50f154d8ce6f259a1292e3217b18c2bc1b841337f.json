@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāpi__Kalaye Mama Hridaye",
+  "audio": "data/concert_audio/Kāpi/Kalaye Mama Hridaye.mp3",
+  "audio_sha256": "18cdb2784963a1c427c51cc50f154d8ce6f259a1292e3217b18c2bc1b841337f",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.45253700017929077
+}

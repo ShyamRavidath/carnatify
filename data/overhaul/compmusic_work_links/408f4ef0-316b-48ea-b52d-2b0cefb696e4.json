@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/408f4ef0-316b-48ea-b52d-2b0cefb696e4",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:31:54.394082+00:00",
+  "recording": {
+    "disambiguation": "",
+    "title": "O Jagadamba",
+    "video": false,
+    "id": "408f4ef0-316b-48ea-b52d-2b0cefb696e4",
+    "length": 446000,
+    "first-release-date": "2005",
+    "relations": [
+      {
+        "begin": null,
+        "direction": "forward",
+        "source-credit": "",
+        "attribute-values": {},
+        "work": {
+          "iswcs": [],
+          "languages": [],
+          "type-id": null,
+          "type": null,
+          "id": "3197ee5c-a61c-49c6-9d86-cfd0a685e798",
+          "attributes": [],
+          "disambiguation": "",
+          "language": null,
+          "title": "O Jagadamba"
+        },
+        "type": "performance",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "target-type": "work",
+        "target-credit": "",
+        "attributes": [
+          "live"
+        ],
+        "ended": false,
+        "end": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        }
+      }
+    ]
+  }
+}

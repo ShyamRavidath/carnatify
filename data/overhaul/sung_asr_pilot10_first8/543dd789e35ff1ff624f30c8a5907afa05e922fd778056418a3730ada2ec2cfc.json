@@ -1,0 +1,43 @@
+{
+  "plan_sha256": "5a583f91b605504a2a0253c877138662a6a91dc0ee37b2bd6b3167a5c101611c",
+  "query": {
+    "track": "180_Ninne_Bhajana",
+    "audio": "saraga1.5_carnatic/V Shankarnarayanan at Arkay by V Shankaranarayanan/Ninne Bhajana/Ninne Bhajana.mp3.mp3",
+    "audio_sha256": "1c5434fcc2804ab78600ed0af508a5f3197b058992bfeaeec5f80177c43d84c3",
+    "start_s": 319.63073696145125,
+    "duration_s": 10
+  },
+  "audio": {
+    "source_sr": 44100,
+    "channels": 2,
+    "downmix": "mean",
+    "downmix_power_ratio": 0.9651915103503914,
+    "clipping_fraction": 0.0,
+    "rms": 0.09703141081300898
+  },
+  "waveform_sha256": "de985f25dfc28ea810a97811db7e6eecee2653eb79e8742d9b4ea6ec6e939d09",
+  "hypothesis": {
+    "text": "Say Pamaga",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Say",
+        "avg_logprob": -1.527288794517517,
+        "no_speech_prob": 1.3390681452563058e-08,
+        "compression_ratio": 0.5555555555555556
+      },
+      {
+        "start": 8.0,
+        "end": 10.0,
+        "text": " Pamaga",
+        "avg_logprob": -1.527288794517517,
+        "no_speech_prob": 1.3390681452563058e-08,
+        "compression_ratio": 0.5555555555555556
+      }
+    ],
+    "language": "en",
+    "status": "unverified_hypothesis"
+  },
+  "transcription_s": 13.515152957756072
+}

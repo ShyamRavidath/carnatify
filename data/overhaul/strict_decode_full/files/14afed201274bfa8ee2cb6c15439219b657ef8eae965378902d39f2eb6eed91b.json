@@ -1,0 +1,11 @@
+{
+  "track": "archive__Śankarābharaṇaṁ__nAnA yOgimuneendra Slokam Adi Shankara",
+  "audio": "data/concert_audio/Śankarābharaṇaṁ/nAnA yOgimuneendra Slokam Adi Shankara.mp3",
+  "audio_sha256": "14afed201274bfa8ee2cb6c15439219b657ef8eae965378902d39f2eb6eed91b",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.822907124646008
+}

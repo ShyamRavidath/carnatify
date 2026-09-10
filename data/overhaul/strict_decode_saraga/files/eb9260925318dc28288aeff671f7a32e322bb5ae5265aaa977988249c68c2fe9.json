@@ -1,0 +1,11 @@
+{
+  "track": "143_Sundari_Nee_Divya",
+  "audio": "saraga1.5_carnatic/Modhumudi Sudhakar at Arkay by Modhumudi Sudhakar/Sundari Nee Divya/Sundari Nee Divya.mp3.mp3",
+  "audio_sha256": "eb9260925318dc28288aeff671f7a32e322bb5ae5265aaa977988249c68c2fe9",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.7749552922323346
+}

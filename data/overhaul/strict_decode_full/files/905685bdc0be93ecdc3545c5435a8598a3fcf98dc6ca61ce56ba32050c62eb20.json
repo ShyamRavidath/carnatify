@@ -1,0 +1,11 @@
+{
+  "track": "archive__Śrīranjani__kAna vEnDumO",
+  "audio": "data/concert_audio/Śrīranjani/kAna vEnDumO.mp3",
+  "audio_sha256": "905685bdc0be93ecdc3545c5435a8598a3fcf98dc6ca61ce56ba32050c62eb20",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.49762962479144335
+}

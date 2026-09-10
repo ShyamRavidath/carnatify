@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ānandabhairavi__Rama Ninnu Nera",
+  "audio": "data/concert_audio/Ānandabhairavi/Rama Ninnu Nera.mp3",
+  "audio_sha256": "b74e1d0dd50fd92faa4d2f7e201eb6972f6273ed7e3633af27db5b9808060658",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.3645820003002882
+}

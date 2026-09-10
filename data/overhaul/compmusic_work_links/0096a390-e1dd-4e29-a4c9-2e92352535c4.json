@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/0096a390-e1dd-4e29-a4c9-2e92352535c4",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:11:35.036322+00:00",
+  "recording": {
+    "first-release-date": "1977",
+    "id": "0096a390-e1dd-4e29-a4c9-2e92352535c4",
+    "length": 368011,
+    "title": "Jagadoddharan",
+    "video": false,
+    "disambiguation": "",
+    "relations": [
+      {
+        "end": null,
+        "type": "performance",
+        "target-credit": "",
+        "work": {
+          "id": "6e4826a4-29ca-48f2-b442-5949dce5888b",
+          "attributes": [],
+          "iswcs": [],
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "language": "kan",
+          "type": "Song",
+          "disambiguation": "",
+          "title": "Jagadoddharana",
+          "languages": [
+            "kan"
+          ]
+        },
+        "attribute-values": {},
+        "source-credit": "",
+        "direction": "forward",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "target-type": "work",
+        "ended": false,
+        "attributes": [
+          "live"
+        ]
+      }
+    ]
+  }
+}

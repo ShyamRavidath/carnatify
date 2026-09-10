@@ -1,0 +1,42 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/9bac6a08-158e-42eb-8a9b-4ad5b90a6e1a",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:59:26.178350+00:00",
+  "recording": {
+    "relations": [
+      {
+        "direction": "forward",
+        "attribute-values": {},
+        "source-credit": "",
+        "target-credit": "",
+        "work": {
+          "type": "Song",
+          "disambiguation": "",
+          "language": "san",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "languages": [
+            "san"
+          ],
+          "title": "Kari Kalabha Mukham",
+          "attributes": [],
+          "id": "9e924961-a089-437c-b975-38675a5b0d07",
+          "iswcs": []
+        },
+        "end": null,
+        "type": "performance",
+        "attributes": [],
+        "target-type": "work",
+        "ended": false,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-ids": {},
+        "begin": null
+      }
+    ],
+    "disambiguation": "",
+    "video": false,
+    "title": "Kari Kalabha Mukham",
+    "length": 493217,
+    "id": "9bac6a08-158e-42eb-8a9b-4ad5b90a6e1a",
+    "first-release-date": "2015-06-22"
+  }
+}

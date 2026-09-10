@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nādanāmakriya__G C-8-13782 13163o",
+  "audio": "data/concert_audio/Nādanāmakriya/G C-8-13782 13163o.mp3",
+  "audio_sha256": "55d4131803c756b84eeb83b4343396c4f883338230e47768bbe748d00bc9267b",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3966644578613341
+}

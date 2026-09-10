@@ -1,0 +1,68 @@
+{
+  "inputs": {
+    "/Users/shyamravidath/carnatify/data/overhaul/file_artist_grouped/manifest.json": "f32b313d9f69038bce4aa691c50e70491a3f962d7c57d54f167b6abf6b00ffd4",
+    "/Users/shyamravidath/carnatify/data/overhaul/file_artist_grouped/features.npz": "63e896036f912d9d2679c5f21acd0853bdccf4b708322c51c5e535889fe1312d",
+    "/Users/shyamravidath/carnatify/data/overhaul/repro_audio_identity/audio_identity.json": "bb0532a362ccb20770faf73afbf814ce4a8833d3204b6190a1435a8e2aa011ff",
+    "/Users/shyamravidath/carnatify/data/overhaul/strict_decode_full/result.json": "090b5f77d1abad2ca0ee7025b1e83d972bff39d7045a433d79e6898e74bf0a66",
+    "/Users/shyamravidath/carnatify/scripts/filter_strict_decode_features.py": "c2f061ac2f37886af5092a8ce880d3616d61fb2cb76cb696d5cedfc3f6c00109",
+    "/Users/shyamravidath/carnatify/scripts/extract_context_training.py": "6da74bf98a62468e4a93c4b5b8ba0931ff913c6637efc674ca7e2c4e670d0f5e"
+  },
+  "policy": "only strict-clean archival audio; retain reference-pitch CompMusic",
+  "excluded": [
+    {
+      "track": "archive__Aṭāna__bhajana sEya rAdA",
+      "audio": "data/concert_audio/Aṭāna/bhajana sEya rAdA.mp3",
+      "audio_sha256": "2aa19ca7d36d53adea2813b93697271ad5bad10f6e0fbe98b96bd688554e9ac4",
+      "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+      "status": "decoder_error",
+      "returncode": 183,
+      "stderr_bytes": 603,
+      "stderr_excerpt": "[mp3float @ 0x7eec08e00] Header missing\n[aist#0:0/mp3 @ 0x7ef004300] [dec:mp3float @ 0x7ee81c280] Error submitting packet to decoder: Invalid data found when processing input\n[aist#0:0/mp3 @ 0x7ef004300] [dec:mp3float @ 0x7ee81c280] Error processing packet in decoder: Invalid data found when processing input\n[aist#0:0/mp3 @ 0x7ef004300] [dec:mp3float @ 0x7ee81c280] Task finished with error code: -1094995529 (Invalid data found when processing input)\n[aist#0:0/mp3 @ 0x7ef004300] [dec:mp3float @ 0x7ee81c280] Terminating thread with return code -1094995529 (Invalid data found when processing input)\n",
+      "elapsed_s": 1.8931668330915272
+    },
+    {
+      "track": "archive__Behāg__samayamidE rArA",
+      "audio": "data/concert_audio/Behāg/samayamidE rArA.mp3",
+      "audio_sha256": "d7223b4301168897cdfd521a7ac53c94a7c54a1bfa9f8ec201cabf95f28f1326",
+      "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+      "status": "decoder_error",
+      "returncode": 183,
+      "stderr_bytes": 603,
+      "stderr_excerpt": "[mp3float @ 0xb5681ce00] Header missing\n[aist#0:0/mp3 @ 0xb57008300] [dec:mp3float @ 0xb57404280] Error submitting packet to decoder: Invalid data found when processing input\n[aist#0:0/mp3 @ 0xb57008300] [dec:mp3float @ 0xb57404280] Error processing packet in decoder: Invalid data found when processing input\n[aist#0:0/mp3 @ 0xb57008300] [dec:mp3float @ 0xb57404280] Task finished with error code: -1094995529 (Invalid data found when processing input)\n[aist#0:0/mp3 @ 0xb57008300] [dec:mp3float @ 0xb57404280] Terminating thread with return code -1094995529 (Invalid data found when processing input)\n",
+      "elapsed_s": 0.6488126250915229
+    },
+    {
+      "track": "archive__Jōnpuri__veLLai-tAmarai",
+      "audio": "data/concert_audio/Jōnpuri/veLLai-tAmarai.mp3",
+      "audio_sha256": "b4b5cf56c60158dc17da4c24ccfdd82da810a76ee13abdaf068efcf12410619c",
+      "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+      "status": "decoder_error",
+      "returncode": 183,
+      "stderr_bytes": 603,
+      "stderr_excerpt": "[mp3float @ 0x978c24e00] Header missing\n[aist#0:0/mp3 @ 0x979008300] [dec:mp3float @ 0x979010280] Error submitting packet to decoder: Invalid data found when processing input\n[aist#0:0/mp3 @ 0x979008300] [dec:mp3float @ 0x979010280] Error processing packet in decoder: Invalid data found when processing input\n[aist#0:0/mp3 @ 0x979008300] [dec:mp3float @ 0x979010280] Task finished with error code: -1094995529 (Invalid data found when processing input)\n[aist#0:0/mp3 @ 0x979008300] [dec:mp3float @ 0x979010280] Terminating thread with return code -1094995529 (Invalid data found when processing input)\n",
+      "elapsed_s": 0.24566083401441574
+    },
+    {
+      "track": "archive__Kānaḍa__4SUKHI EVARO",
+      "audio": "data/concert_audio/Kānaḍa/4SUKHI EVARO.mp3",
+      "audio_sha256": "cfe91cc0805fa2105b4146b11197179c4d96efd3dd046bd8e6e4a3913036e197",
+      "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+      "status": "decoder_error",
+      "returncode": 183,
+      "stderr_bytes": 603,
+      "stderr_excerpt": "[mp3float @ 0xa60c44e00] Header missing\n[aist#0:0/mp3 @ 0xa61008300] [dec:mp3float @ 0xa6100c280] Error submitting packet to decoder: Invalid data found when processing input\n[aist#0:0/mp3 @ 0xa61008300] [dec:mp3float @ 0xa6100c280] Error processing packet in decoder: Invalid data found when processing input\n[aist#0:0/mp3 @ 0xa61008300] [dec:mp3float @ 0xa6100c280] Task finished with error code: -1094995529 (Invalid data found when processing input)\n[aist#0:0/mp3 @ 0xa61008300] [dec:mp3float @ 0xa6100c280] Terminating thread with return code -1094995529 (Invalid data found when processing input)\n",
+      "elapsed_s": 2.0046695829369128
+    },
+    {
+      "track": "archive__Nāṭa__D K Jayaraman Pancharathana Krithis Jagadanandakaraka",
+      "audio": "data/concert_audio/Nāṭa/D K Jayaraman Pancharathana Krithis Jagadanandakaraka.mp3",
+      "audio_sha256": "3c9b92ee8aa51aec4e871cb1b066c4a25f3a1909b70b3f0b442cbec582c0d75f",
+      "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+      "status": "decoder_error",
+      "returncode": 183,
+      "stderr_bytes": 652,
+      "stderr_excerpt": "[mp3float @ 0xc38828e00] invalid new backstep -1\n[mp3float @ 0xc38828e00] Header missing\n[aist#0:0/mp3 @ 0xc39404300] [dec:mp3float @ 0xc39004280] Error submitting packet to decoder: Invalid data found when processing input\n[aist#0:0/mp3 @ 0xc39404300] [dec:mp3float @ 0xc39004280] Error processing packet in decoder: Invalid data found when processing input\n[aist#0:0/mp3 @ 0xc39404300] [dec:mp3float @ 0xc39004280] Task finished with error code: -1094995529 (Invalid data found when processing input)\n[aist#0:0/mp3 @ 0xc39404300] [dec:mp3float @ 0xc39004280] Terminating thread with return code -1094995529 (Invalid data found when processing input)\n",
+      "elapsed_s": 0.6727153332903981
+    }
+  ]
+}

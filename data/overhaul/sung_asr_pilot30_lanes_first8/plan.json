@@ -1,0 +1,87 @@
+{
+  "corpus_sha256": "5db2931c9fe087570d9339e5a19f44f80d728ff8f149e0fa5faf513cf1d1744d",
+  "source_sha256": "986e04e364b2cc160087d97da9d1a24e5834ecdc02b4532292a6bfac92d0f1a0",
+  "version": "whisper_turbo_cpu_greedy_unprompted_v1",
+  "checkpoint_sha256": "aff26ae408abcba5fbf8813c21e62b0941638c5f6eebfb145be0c9839262a19a",
+  "decode": {
+    "language": null,
+    "task": "transcribe",
+    "temperature": 0.0,
+    "beam_size": 1,
+    "fp16": false,
+    "condition_on_previous_text": false,
+    "initial_prompt": null,
+    "verbose": null,
+    "compression_ratio_threshold": 2.4,
+    "logprob_threshold": -1.0,
+    "no_speech_threshold": 0.6
+  },
+  "window_s": 30,
+  "whisper_version": "20250625",
+  "torch_version": "2.5.1",
+  "selection": "fixed track-hash-sorted prefix; no truth-based selection",
+  "queries": [
+    {
+      "track": "180_Ninne_Bhajana",
+      "audio": "saraga1.5_carnatic/V Shankarnarayanan at Arkay by V Shankaranarayanan/Ninne Bhajana/Ninne Bhajana.mp3.mp3",
+      "audio_sha256": "1c5434fcc2804ab78600ed0af508a5f3197b058992bfeaeec5f80177c43d84c3",
+      "start_s": 309.63073696145125,
+      "duration_s": 30
+    },
+    {
+      "track": "133_Paramatmudu",
+      "audio": "saraga1.5_carnatic/Modhumudi Sudhakar at Arkay by Modhumudi Sudhakar/Paramatmudu/Paramatmudu.mp3.mp3",
+      "audio_sha256": "97689fa1bf0f44b6b2843dc72d8711d5f9b895edd27dfa84d3f83d3f9bbcbc4f",
+      "start_s": 431.3874716553288,
+      "duration_s": 30
+    },
+    {
+      "track": "47_Koti_Janmani",
+      "audio": "saraga1.5_carnatic/Akkarai Sisters at Arkay by Akkarai Sisters/Koti Janmani/Koti Janmani.mp3.mp3",
+      "audio_sha256": "10d03b57f877301572181e7e00d6effbd5a3ad11a3382ff08a3686e085792dc7",
+      "start_s": 248.34747165532877,
+      "duration_s": 30
+    },
+    {
+      "track": "243_Kamalamba_Samrakshatu",
+      "audio": "saraga1.5_carnatic/Chaitra Sairam at Arkay by Chaitra Sairam/Kamalamba Samrakshatu/Chaitra Sairam - Kamalamba Samrakshatu.mp3",
+      "audio_sha256": "1908f6b9e00c867564b11df6a4c87a502f185d05fcaf60085442ceef27c8144a",
+      "start_s": 316.42257369614515,
+      "duration_s": 30
+    },
+    {
+      "track": "40_Kamakshi",
+      "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Kamakshi/Sanjay Subrahmanyan - Kamakshi.mp3",
+      "audio_sha256": "247213aff363dae0be9549dec3306b126aa08d49671d195b6ab0b58aa8285104",
+      "start_s": 596.9575510204081,
+      "duration_s": 30
+    },
+    {
+      "track": "237_Manasaramathi",
+      "audio": "saraga1.5_carnatic/KP Nandini at Arkay by KP Nandini/Manasaramathi/Manasaramathi.mp3.mp3",
+      "audio_sha256": "31fd6bce5d2f628b78231dacc6451a92bb7764eb78cd878a7bd8168adf73c595",
+      "start_s": 705.5556349206349,
+      "duration_s": 30
+    },
+    {
+      "track": "154_Innamum_Oru_thalam",
+      "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/Innamum Oru thalam/Sanjay Subrahmanyan - Innamum Oru thalam.mp3",
+      "audio_sha256": "fa647899b0d184baf8eaf0ae9c9d86f2c36b6c70f4c2d9eab902c369795f06c7",
+      "start_s": 136.44,
+      "duration_s": 30
+    },
+    {
+      "track": "94_Hiranmayeem",
+      "audio": "saraga1.5_carnatic/Mahati at Arkay by Mahati/Hiranmayeem/Hiranmayeem.mp3.mp3",
+      "audio_sha256": "5a01c246f9b7819b2db4b4338e2f6ebb2610082830503cbb991a657a6295954a",
+      "start_s": 732.1874716553287,
+      "duration_s": 30
+    }
+  ],
+  "language_lanes": [
+    "auto",
+    "ta",
+    "te",
+    "hi"
+  ]
+}

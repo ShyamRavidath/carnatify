@@ -1,0 +1,11 @@
+{
+  "track": "archive__Harikāmbhōji__vanDADum sOlai",
+  "audio": "data/concert_audio/Harikāmbhōji/vanDADum sOlai.mp3",
+  "audio_sha256": "6940389eec1a995065354365911f34aeaf66e21b3477c85bb186209f48ff3dda",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7942507918924093
+}

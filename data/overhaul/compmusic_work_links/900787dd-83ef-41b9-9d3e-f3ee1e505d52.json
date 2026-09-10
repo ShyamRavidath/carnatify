@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/900787dd-83ef-41b9-9d3e-f3ee1e505d52",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:55:20.678447+00:00",
+  "recording": {
+    "disambiguation": "",
+    "first-release-date": "2006",
+    "title": "Varuvaro Varam Taruvaro",
+    "relations": [
+      {
+        "ended": false,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "source-credit": "",
+        "target-credit": "",
+        "work": {
+          "language": null,
+          "iswcs": [],
+          "attributes": [],
+          "type-id": null,
+          "id": "473f552c-fb36-4f3f-8cbe-1c945d6426f9",
+          "type": null,
+          "languages": [],
+          "title": "Varuvaro Varam Taruvaro",
+          "disambiguation": ""
+        },
+        "attributes": [
+          "live"
+        ],
+        "end": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-values": {},
+        "direction": "forward",
+        "target-type": "work",
+        "type": "performance",
+        "begin": null
+      }
+    ],
+    "id": "900787dd-83ef-41b9-9d3e-f3ee1e505d52",
+    "video": false,
+    "length": 298000
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Dhanyāsi__Ramabhi Rama",
+  "audio": "data/concert_audio/Dhanyāsi/Ramabhi Rama.mp3",
+  "audio_sha256": "21b274360bdd4301dabad9c18f1edfd60d754b414688ac2a8f33b6c1c83c8ee4",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.6399764171801507
+}

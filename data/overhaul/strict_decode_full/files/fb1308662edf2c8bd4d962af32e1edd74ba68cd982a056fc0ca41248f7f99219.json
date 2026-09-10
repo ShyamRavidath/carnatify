@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bēgaḍa__sankari nee",
+  "audio": "data/concert_audio/Bēgaḍa/sankari nee.mp3",
+  "audio_sha256": "fb1308662edf2c8bd4d962af32e1edd74ba68cd982a056fc0ca41248f7f99219",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.2912307498045266
+}

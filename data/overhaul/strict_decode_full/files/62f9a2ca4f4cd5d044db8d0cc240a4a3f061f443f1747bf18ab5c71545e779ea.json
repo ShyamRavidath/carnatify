@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāṁbhōji__naDamADi",
+  "audio": "data/concert_audio/Kāṁbhōji/naDamADi.mp3",
+  "audio_sha256": "62f9a2ca4f4cd5d044db8d0cc240a4a3f061f443f1747bf18ab5c71545e779ea",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4937807908281684
+}

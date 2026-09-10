@@ -1,0 +1,11 @@
+{
+  "track": "archive__Harikāmbhōji__04 Dinamani vamsa",
+  "audio": "data/concert_audio/Harikāmbhōji/04 Dinamani vamsa.mp3",
+  "audio_sha256": "f0618f3689e4b3da4b3642d0042fa9a0f55ae7a089916b58f0415c5320c0f5f3",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.240461708046496
+}

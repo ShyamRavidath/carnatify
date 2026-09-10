@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ānandabhairavi__O jagagamba",
+  "audio": "data/concert_audio/Ānandabhairavi/O jagagamba.mp3",
+  "audio_sha256": "d8f0889536d18d4f36acf9db22595eebce061e9e99a3c49f80220c8bcba8bbe7",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7719992497004569
+}

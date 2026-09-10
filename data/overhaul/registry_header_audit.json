@@ -1,0 +1,119 @@
+{
+  "source_sha256": "88e9b70005d8cce0497e12a24178e650377ad1effb237fe43bcaf9c25bab68fb",
+  "n_source": 8688,
+  "n_rejected": 14,
+  "rows": [
+    {
+      "id": "comp00000",
+      "title": "8th Cross, V V Mohalla, Mysore",
+      "ragas": [
+        "Sept 13, 1997"
+      ],
+      "reason": "unsupported_event_header_with_calendar_year_raga"
+    },
+    {
+      "id": "comp00154",
+      "title": "AIR Chennai",
+      "ragas": [
+        "9-9-2002"
+      ],
+      "reason": "unsupported_event_header_with_calendar_year_raga"
+    },
+    {
+      "id": "comp00155",
+      "title": "AIR National Program",
+      "ragas": [
+        "1982"
+      ],
+      "reason": "unsupported_event_header_with_calendar_year_raga"
+    },
+    {
+      "id": "comp00639",
+      "title": "At MIT, Boston",
+      "ragas": [
+        "1993"
+      ],
+      "reason": "unsupported_event_header_with_calendar_year_raga"
+    },
+    {
+      "id": "comp00929",
+      "title": "Bidaram, Mysore",
+      "ragas": [
+        "1999"
+      ],
+      "reason": "unsupported_event_header_with_calendar_year_raga"
+    },
+    {
+      "id": "comp00949",
+      "title": "Boston (low recording levels)",
+      "ragas": [
+        "14 April, 1991"
+      ],
+      "reason": "unsupported_event_header_with_calendar_year_raga"
+    },
+    {
+      "id": "comp01204",
+      "title": "Concerts with Akella Mallikarjuna Sarma and Kamalakara Rao",
+      "ragas": [
+        "US/Canada tour 1980"
+      ],
+      "reason": "unsupported_event_header_with_calendar_year_raga"
+    },
+    {
+      "id": "comp03319",
+      "title": "Kapali Koil",
+      "ragas": [
+        "1989"
+      ],
+      "reason": "unsupported_event_header_with_calendar_year_raga"
+    },
+    {
+      "id": "comp03347",
+      "title": "Karnataka Sangeeta Sabha, Delhi",
+      "ragas": [
+        "Oct 19, 1985"
+      ],
+      "reason": "unsupported_event_header_with_calendar_year_raga"
+    },
+    {
+      "id": "comp03614",
+      "title": "Krishna Gana Sabha",
+      "ragas": [
+        "1975"
+      ],
+      "reason": "unsupported_event_header_with_calendar_year_raga"
+    },
+    {
+      "id": "comp04505",
+      "title": "Mysore",
+      "ragas": [
+        "Sept 26, 1998"
+      ],
+      "reason": "unsupported_event_header_with_calendar_year_raga"
+    },
+    {
+      "id": "comp04513",
+      "title": "Nada Brahma Sabha, Mysore",
+      "ragas": [
+        "July 27, 1991"
+      ],
+      "reason": "unsupported_event_header_with_calendar_year_raga"
+    },
+    {
+      "id": "comp07724",
+      "title": "Tiruchi Sankaran",
+      "ragas": [
+        "Krishna Gana Sabha 1972"
+      ],
+      "reason": "unsupported_event_header_with_calendar_year_raga"
+    },
+    {
+      "id": "comp08399",
+      "title": "Wedding concert",
+      "ragas": [
+        "1973"
+      ],
+      "reason": "unsupported_event_header_with_calendar_year_raga"
+    }
+  ]
+}

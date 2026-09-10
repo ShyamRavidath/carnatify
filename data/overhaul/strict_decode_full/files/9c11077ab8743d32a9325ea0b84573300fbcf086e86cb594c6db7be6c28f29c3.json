@@ -1,0 +1,11 @@
+{
+  "track": "archive__Jōnpuri__eppO varuvArO",
+  "audio": "data/concert_audio/Jōnpuri/eppO varuvArO.mp3",
+  "audio_sha256": "9c11077ab8743d32a9325ea0b84573300fbcf086e86cb594c6db7be6c28f29c3",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.44698470924049616
+}

@@ -1,0 +1,43 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/b981ddfa-9899-4740-8190-21eb7b15548b",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:05:10.982615+00:00",
+  "recording": {
+    "length": 1141000,
+    "id": "b981ddfa-9899-4740-8190-21eb7b15548b",
+    "video": false,
+    "title": "Sri Chamundeshwari",
+    "disambiguation": "",
+    "relations": [
+      {
+        "target-type": "work",
+        "target-credit": "",
+        "source-credit": "",
+        "attribute-values": {},
+        "work": {
+          "type": null,
+          "id": "5630befe-dc08-482f-80cf-0f6b6f9fd815",
+          "attributes": [],
+          "type-id": null,
+          "title": "Sri Chamundeswari",
+          "disambiguation": "",
+          "language": null,
+          "iswcs": [],
+          "languages": []
+        },
+        "begin": null,
+        "direction": "forward",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "type": "performance",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "attributes": [
+          "live"
+        ],
+        "end": null,
+        "ended": false
+      }
+    ]
+  }
+}

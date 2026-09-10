@@ -1,0 +1,11 @@
+{
+  "track": "archive__Cakravākaṁ__eTulA brOtuv teliya",
+  "audio": "data/concert_audio/Cakravākaṁ/eTulA brOtuv teliya.mp3",
+  "audio_sha256": "cb05a5ddd4efd5845434163f835ef90e908a81518308829cfed6cbeccaa011a2",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.1741606667637825
+}

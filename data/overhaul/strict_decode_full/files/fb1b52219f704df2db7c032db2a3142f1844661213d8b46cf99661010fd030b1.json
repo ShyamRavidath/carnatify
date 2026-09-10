@@ -1,0 +1,11 @@
+{
+  "track": "archive__Mōhanaṁ__viDudalai viDudalai",
+  "audio": "data/concert_audio/Mōhanaṁ/viDudalai viDudalai.mp3",
+  "audio_sha256": "fb1b52219f704df2db7c032db2a3142f1844661213d8b46cf99661010fd030b1",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2904823338612914
+}

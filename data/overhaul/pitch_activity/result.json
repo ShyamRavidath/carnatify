@@ -1,0 +1,1155 @@
+{
+  "status": "tiny artist-held-out development activity diagnostic; not production validated",
+  "version": "pitch_activity_elapsed_v1",
+  "source_sha256": "6a49a8b8cde2ad03e2ed3112b78dec732472bb63eb5eeb70231649fffe199413",
+  "n": 16,
+  "correct": 9,
+  "n_percussion": 4,
+  "percussion_recall": 0.25,
+  "melody_recall": 0.6666666666666666,
+  "threshold": 0.5,
+  "rows": [
+    {
+      "track": "16_Evarura",
+      "truth": "percussion",
+      "artist": "ashwathnarayanan",
+      "percussion_probability": 0.6994483470916748
+    },
+    {
+      "track": "28_Amba_Kamakshi",
+      "truth": "percussion",
+      "artist": "vigneshishwar",
+      "percussion_probability": 0.29669931530952454
+    },
+    {
+      "track": "38_Raagam_Thaanam_Pallavi",
+      "truth": "percussion",
+      "artist": "sanjaysubrahmanyan",
+      "percussion_probability": 0.4764111340045929
+    },
+    {
+      "track": "111_Sarasadalanayana",
+      "truth": "percussion",
+      "artist": "sanjaysubrahmanyan",
+      "percussion_probability": 0.49309608340263367
+    },
+    {
+      "track": "222_Madhava_Mamava",
+      "truth": "melodic_music",
+      "artist": "rithvikraja",
+      "percussion_probability": 0.5330885648727417
+    },
+    {
+      "track": "17_Eranapai",
+      "truth": "melodic_music",
+      "artist": "ashwathnarayanan",
+      "percussion_probability": 0.7580075263977051
+    },
+    {
+      "track": "165_Deenarakshaka",
+      "truth": "melodic_music",
+      "artist": "sanjaysubrahmanyan",
+      "percussion_probability": 0.13869796693325043
+    },
+    {
+      "track": "18_Parama_Purusham",
+      "truth": "melodic_music",
+      "artist": "ashwathnarayanan",
+      "percussion_probability": 0.5203819274902344
+    },
+    {
+      "track": "159_Ramakrishnaru_Manaegae",
+      "truth": "melodic_music",
+      "artist": "sanjaysubrahmanyan",
+      "percussion_probability": 0.16437454521656036
+    },
+    {
+      "track": "26_Lokavana_Chatura",
+      "truth": "melodic_music",
+      "artist": "vigneshishwar",
+      "percussion_probability": 0.1712653636932373
+    },
+    {
+      "track": "25_Sanchara_Dhadhara",
+      "truth": "melodic_music",
+      "artist": "vigneshishwar",
+      "percussion_probability": 0.31037741899490356
+    },
+    {
+      "track": "14_Angakaram",
+      "truth": "melodic_music",
+      "artist": "ashwathnarayanan",
+      "percussion_probability": 0.23448607325553894
+    },
+    {
+      "track": "16_Evarura",
+      "truth": "melodic_music",
+      "artist": "ashwathnarayanan",
+      "percussion_probability": 0.45713499188423157
+    },
+    {
+      "track": "231_Emani_Migula",
+      "truth": "melodic_music",
+      "artist": "rithvikraja",
+      "percussion_probability": 0.8349733352661133
+    },
+    {
+      "track": "156_Ganta_mani_aadudhu",
+      "truth": "melodic_music",
+      "artist": "sanjaysubrahmanyan",
+      "percussion_probability": 0.036877188831567764
+    },
+    {
+      "track": "27_Idhuthaano_Thillai_Sthalam",
+      "truth": "melodic_music",
+      "artist": "vigneshishwar",
+      "percussion_probability": 0.19888938963413239
+    }
+  ],
+  "field_rows": [
+    {
+      "start_s": 10.0,
+      "end_s": 20.0,
+      "truth": 0,
+      "percussion_probability": 0.22758138179779053,
+      "correct": true
+    },
+    {
+      "start_s": 20.0,
+      "end_s": 30.0,
+      "truth": 0,
+      "percussion_probability": 0.3651242256164551,
+      "correct": true
+    },
+    {
+      "start_s": 30.0,
+      "end_s": 40.0,
+      "truth": 0,
+      "percussion_probability": 0.383680522441864,
+      "correct": true
+    },
+    {
+      "start_s": 40.0,
+      "end_s": 50.0,
+      "truth": 0,
+      "percussion_probability": 0.4545358419418335,
+      "correct": true
+    },
+    {
+      "start_s": 50.0,
+      "end_s": 60.0,
+      "truth": 0,
+      "percussion_probability": 0.4379153847694397,
+      "correct": true
+    },
+    {
+      "start_s": 60.0,
+      "end_s": 70.0,
+      "truth": 0,
+      "percussion_probability": 0.523049533367157,
+      "correct": false
+    },
+    {
+      "start_s": 70.0,
+      "end_s": 80.0,
+      "truth": 0,
+      "percussion_probability": 0.38407784700393677,
+      "correct": true
+    },
+    {
+      "start_s": 80.0,
+      "end_s": 90.0,
+      "truth": 0,
+      "percussion_probability": 0.28475990891456604,
+      "correct": true
+    },
+    {
+      "start_s": 90.0,
+      "end_s": 100.0,
+      "truth": 0,
+      "percussion_probability": 0.45128440856933594,
+      "correct": true
+    },
+    {
+      "start_s": 100.0,
+      "end_s": 110.0,
+      "truth": 0,
+      "percussion_probability": 0.4270932078361511,
+      "correct": true
+    },
+    {
+      "start_s": 110.0,
+      "end_s": 120.0,
+      "truth": 0,
+      "percussion_probability": 0.25619083642959595,
+      "correct": true
+    },
+    {
+      "start_s": 120.0,
+      "end_s": 130.0,
+      "truth": 0,
+      "percussion_probability": 0.21122780442237854,
+      "correct": true
+    },
+    {
+      "start_s": 130.0,
+      "end_s": 140.0,
+      "truth": 0,
+      "percussion_probability": 0.3225647211074829,
+      "correct": true
+    },
+    {
+      "start_s": 140.0,
+      "end_s": 150.0,
+      "truth": 0,
+      "percussion_probability": 0.27601760625839233,
+      "correct": true
+    },
+    {
+      "start_s": 150.0,
+      "end_s": 160.0,
+      "truth": 0,
+      "percussion_probability": 0.4088038206100464,
+      "correct": true
+    },
+    {
+      "start_s": 160.0,
+      "end_s": 170.0,
+      "truth": 0,
+      "percussion_probability": 0.5229108929634094,
+      "correct": false
+    },
+    {
+      "start_s": 170.0,
+      "end_s": 180.0,
+      "truth": 0,
+      "percussion_probability": 0.5150533318519592,
+      "correct": false
+    },
+    {
+      "start_s": 180.0,
+      "end_s": 190.0,
+      "truth": 0,
+      "percussion_probability": 0.2785877287387848,
+      "correct": true
+    },
+    {
+      "start_s": 190.0,
+      "end_s": 200.0,
+      "truth": 0,
+      "percussion_probability": 0.2793818414211273,
+      "correct": true
+    },
+    {
+      "start_s": 200.0,
+      "end_s": 210.0,
+      "truth": 0,
+      "percussion_probability": 0.2519959807395935,
+      "correct": true
+    },
+    {
+      "start_s": 210.0,
+      "end_s": 220.0,
+      "truth": 0,
+      "percussion_probability": 0.3551872968673706,
+      "correct": true
+    },
+    {
+      "start_s": 220.0,
+      "end_s": 230.0,
+      "truth": 0,
+      "percussion_probability": 0.4531029164791107,
+      "correct": true
+    },
+    {
+      "start_s": 230.0,
+      "end_s": 240.0,
+      "truth": 0,
+      "percussion_probability": 0.2933397591114044,
+      "correct": true
+    },
+    {
+      "start_s": 240.0,
+      "end_s": 250.0,
+      "truth": 0,
+      "percussion_probability": 0.5028002858161926,
+      "correct": false
+    },
+    {
+      "start_s": 250.0,
+      "end_s": 260.0,
+      "truth": 0,
+      "percussion_probability": 0.48622316122055054,
+      "correct": true
+    },
+    {
+      "start_s": 260.0,
+      "end_s": 270.0,
+      "truth": 0,
+      "percussion_probability": 0.19539250433444977,
+      "correct": true
+    },
+    {
+      "start_s": 270.0,
+      "end_s": 280.0,
+      "truth": 0,
+      "percussion_probability": 0.33966755867004395,
+      "correct": true
+    },
+    {
+      "start_s": 280.0,
+      "end_s": 290.0,
+      "truth": 0,
+      "percussion_probability": 0.39877504110336304,
+      "correct": true
+    },
+    {
+      "start_s": 290.0,
+      "end_s": 300.0,
+      "truth": 0,
+      "percussion_probability": 0.3275989294052124,
+      "correct": true
+    },
+    {
+      "start_s": 300.0,
+      "end_s": 310.0,
+      "truth": 0,
+      "percussion_probability": 0.3482254147529602,
+      "correct": true
+    },
+    {
+      "start_s": 310.0,
+      "end_s": 320.0,
+      "truth": 0,
+      "percussion_probability": 0.3077189326286316,
+      "correct": true
+    },
+    {
+      "start_s": 320.0,
+      "end_s": 330.0,
+      "truth": 0,
+      "percussion_probability": 0.3783920407295227,
+      "correct": true
+    },
+    {
+      "start_s": 330.0,
+      "end_s": 340.0,
+      "truth": 0,
+      "percussion_probability": 0.24387899041175842,
+      "correct": true
+    },
+    {
+      "start_s": 340.0,
+      "end_s": 350.0,
+      "truth": 0,
+      "percussion_probability": 0.19902363419532776,
+      "correct": true
+    },
+    {
+      "start_s": 350.0,
+      "end_s": 360.0,
+      "truth": 0,
+      "percussion_probability": 0.18233202397823334,
+      "correct": true
+    },
+    {
+      "start_s": 360.0,
+      "end_s": 370.0,
+      "truth": 0,
+      "percussion_probability": 0.2132662981748581,
+      "correct": true
+    },
+    {
+      "start_s": 370.0,
+      "end_s": 380.0,
+      "truth": 0,
+      "percussion_probability": 0.33412402868270874,
+      "correct": true
+    },
+    {
+      "start_s": 380.0,
+      "end_s": 390.0,
+      "truth": 0,
+      "percussion_probability": 0.30130887031555176,
+      "correct": true
+    },
+    {
+      "start_s": 390.0,
+      "end_s": 400.0,
+      "truth": 0,
+      "percussion_probability": 0.5190967321395874,
+      "correct": false
+    },
+    {
+      "start_s": 400.0,
+      "end_s": 410.0,
+      "truth": 0,
+      "percussion_probability": 0.2346152514219284,
+      "correct": true
+    },
+    {
+      "start_s": 410.0,
+      "end_s": 420.0,
+      "truth": 0,
+      "percussion_probability": 0.3174211084842682,
+      "correct": true
+    },
+    {
+      "start_s": 420.0,
+      "end_s": 430.0,
+      "truth": 0,
+      "percussion_probability": 0.2373022437095642,
+      "correct": true
+    },
+    {
+      "start_s": 430.0,
+      "end_s": 440.0,
+      "truth": 0,
+      "percussion_probability": 0.4718534052371979,
+      "correct": true
+    },
+    {
+      "start_s": 440.0,
+      "end_s": 450.0,
+      "truth": 0,
+      "percussion_probability": 0.44036245346069336,
+      "correct": true
+    },
+    {
+      "start_s": 450.0,
+      "end_s": 460.0,
+      "truth": 0,
+      "percussion_probability": 0.3685559034347534,
+      "correct": true
+    },
+    {
+      "start_s": 460.0,
+      "end_s": 470.0,
+      "truth": 0,
+      "percussion_probability": 0.4560876190662384,
+      "correct": true
+    },
+    {
+      "start_s": 470.0,
+      "end_s": 480.0,
+      "truth": 0,
+      "percussion_probability": 0.2968929409980774,
+      "correct": true
+    },
+    {
+      "start_s": 480.0,
+      "end_s": 490.0,
+      "truth": 0,
+      "percussion_probability": 0.42969071865081787,
+      "correct": true
+    },
+    {
+      "start_s": 490.0,
+      "end_s": 500.0,
+      "truth": 0,
+      "percussion_probability": 0.4169119894504547,
+      "correct": true
+    },
+    {
+      "start_s": 500.0,
+      "end_s": 510.0,
+      "truth": 0,
+      "percussion_probability": 0.5245141386985779,
+      "correct": false
+    },
+    {
+      "start_s": 510.0,
+      "end_s": 520.0,
+      "truth": 0,
+      "percussion_probability": 0.49594616889953613,
+      "correct": true
+    },
+    {
+      "start_s": 520.0,
+      "end_s": 530.0,
+      "truth": 0,
+      "percussion_probability": 0.2124810516834259,
+      "correct": true
+    },
+    {
+      "start_s": 530.0,
+      "end_s": 540.0,
+      "truth": 0,
+      "percussion_probability": 0.33362260460853577,
+      "correct": true
+    },
+    {
+      "start_s": 540.0,
+      "end_s": 550.0,
+      "truth": 0,
+      "percussion_probability": 0.3025079667568207,
+      "correct": true
+    },
+    {
+      "start_s": 550.0,
+      "end_s": 560.0,
+      "truth": 0,
+      "percussion_probability": 0.20065858960151672,
+      "correct": true
+    },
+    {
+      "start_s": 560.0,
+      "end_s": 570.0,
+      "truth": 0,
+      "percussion_probability": 0.3937477171421051,
+      "correct": true
+    },
+    {
+      "start_s": 570.0,
+      "end_s": 580.0,
+      "truth": 0,
+      "percussion_probability": 0.27273887395858765,
+      "correct": true
+    },
+    {
+      "start_s": 580.0,
+      "end_s": 590.0,
+      "truth": 0,
+      "percussion_probability": 0.5212598443031311,
+      "correct": false
+    },
+    {
+      "start_s": 590.0,
+      "end_s": 600.0,
+      "truth": 0,
+      "percussion_probability": 0.27622121572494507,
+      "correct": true
+    },
+    {
+      "start_s": 600.0,
+      "end_s": 610.0,
+      "truth": 0,
+      "percussion_probability": 0.49282366037368774,
+      "correct": true
+    },
+    {
+      "start_s": 610.0,
+      "end_s": 620.0,
+      "truth": 0,
+      "percussion_probability": 0.32263582944869995,
+      "correct": true
+    },
+    {
+      "start_s": 620.0,
+      "end_s": 630.0,
+      "truth": 0,
+      "percussion_probability": 0.34160804748535156,
+      "correct": true
+    },
+    {
+      "start_s": 630.0,
+      "end_s": 640.0,
+      "truth": 0,
+      "percussion_probability": 0.5351495742797852,
+      "correct": false
+    },
+    {
+      "start_s": 640.0,
+      "end_s": 650.0,
+      "truth": 0,
+      "percussion_probability": 0.39931315183639526,
+      "correct": true
+    },
+    {
+      "start_s": 650.0,
+      "end_s": 660.0,
+      "truth": 0,
+      "percussion_probability": 0.44813472032546997,
+      "correct": true
+    },
+    {
+      "start_s": 660.0,
+      "end_s": 670.0,
+      "truth": 0,
+      "percussion_probability": 0.4333316683769226,
+      "correct": true
+    },
+    {
+      "start_s": 670.0,
+      "end_s": 680.0,
+      "truth": 0,
+      "percussion_probability": 0.46010416746139526,
+      "correct": true
+    },
+    {
+      "start_s": 680.0,
+      "end_s": 690.0,
+      "truth": 0,
+      "percussion_probability": 0.36306193470954895,
+      "correct": true
+    },
+    {
+      "start_s": 690.0,
+      "end_s": 700.0,
+      "truth": 0,
+      "percussion_probability": 0.4906460642814636,
+      "correct": true
+    },
+    {
+      "start_s": 700.0,
+      "end_s": 710.0,
+      "truth": 0,
+      "percussion_probability": 0.5658951997756958,
+      "correct": false
+    },
+    {
+      "start_s": 710.0,
+      "end_s": 720.0,
+      "truth": 0,
+      "percussion_probability": 0.45259571075439453,
+      "correct": true
+    },
+    {
+      "start_s": 720.0,
+      "end_s": 730.0,
+      "truth": 0,
+      "percussion_probability": 0.34798353910446167,
+      "correct": true
+    },
+    {
+      "start_s": 730.0,
+      "end_s": 740.0,
+      "truth": 0,
+      "percussion_probability": 0.2641181945800781,
+      "correct": true
+    },
+    {
+      "start_s": 740.0,
+      "end_s": 750.0,
+      "truth": 0,
+      "percussion_probability": 0.37337616086006165,
+      "correct": true
+    },
+    {
+      "start_s": 760.0,
+      "end_s": 770.0,
+      "truth": 1,
+      "percussion_probability": 0.6906037926673889,
+      "correct": true
+    },
+    {
+      "start_s": 770.0,
+      "end_s": 780.0,
+      "truth": 1,
+      "percussion_probability": 0.6454177498817444,
+      "correct": true
+    },
+    {
+      "start_s": 780.0,
+      "end_s": 790.0,
+      "truth": 1,
+      "percussion_probability": 0.5123079419136047,
+      "correct": true
+    },
+    {
+      "start_s": 790.0,
+      "end_s": 800.0,
+      "truth": 1,
+      "percussion_probability": 0.7106369733810425,
+      "correct": true
+    },
+    {
+      "start_s": 800.0,
+      "end_s": 810.0,
+      "truth": 1,
+      "percussion_probability": 0.6592617034912109,
+      "correct": true
+    },
+    {
+      "start_s": 810.0,
+      "end_s": 820.0,
+      "truth": 1,
+      "percussion_probability": 0.6690258979797363,
+      "correct": true
+    },
+    {
+      "start_s": 820.0,
+      "end_s": 830.0,
+      "truth": 1,
+      "percussion_probability": 0.6816797256469727,
+      "correct": true
+    },
+    {
+      "start_s": 830.0,
+      "end_s": 840.0,
+      "truth": 1,
+      "percussion_probability": 0.6900977492332458,
+      "correct": true
+    },
+    {
+      "start_s": 840.0,
+      "end_s": 850.0,
+      "truth": 1,
+      "percussion_probability": 0.6727309823036194,
+      "correct": true
+    },
+    {
+      "start_s": 850.0,
+      "end_s": 860.0,
+      "truth": 1,
+      "percussion_probability": 0.6623403429985046,
+      "correct": true
+    },
+    {
+      "start_s": 860.0,
+      "end_s": 870.0,
+      "truth": 1,
+      "percussion_probability": 0.6032583713531494,
+      "correct": true
+    },
+    {
+      "start_s": 870.0,
+      "end_s": 880.0,
+      "truth": 1,
+      "percussion_probability": 0.6938050985336304,
+      "correct": true
+    },
+    {
+      "start_s": 880.0,
+      "end_s": 890.0,
+      "truth": 1,
+      "percussion_probability": 0.6056230068206787,
+      "correct": true
+    },
+    {
+      "start_s": 890.0,
+      "end_s": 900.0,
+      "truth": 1,
+      "percussion_probability": 0.6889604330062866,
+      "correct": true
+    },
+    {
+      "start_s": 900.0,
+      "end_s": 910.0,
+      "truth": 1,
+      "percussion_probability": 0.6681669354438782,
+      "correct": true
+    },
+    {
+      "start_s": 910.0,
+      "end_s": 920.0,
+      "truth": 1,
+      "percussion_probability": 0.6012263298034668,
+      "correct": true
+    },
+    {
+      "start_s": 920.0,
+      "end_s": 930.0,
+      "truth": 1,
+      "percussion_probability": 0.6989784240722656,
+      "correct": true
+    },
+    {
+      "start_s": 930.0,
+      "end_s": 940.0,
+      "truth": 1,
+      "percussion_probability": 0.6712602972984314,
+      "correct": true
+    },
+    {
+      "start_s": 940.0,
+      "end_s": 950.0,
+      "truth": 1,
+      "percussion_probability": 0.592396080493927,
+      "correct": true
+    },
+    {
+      "start_s": 950.0,
+      "end_s": 960.0,
+      "truth": 1,
+      "percussion_probability": 0.5692459344863892,
+      "correct": true
+    },
+    {
+      "start_s": 960.0,
+      "end_s": 970.0,
+      "truth": 1,
+      "percussion_probability": 0.6983156800270081,
+      "correct": true
+    },
+    {
+      "start_s": 970.0,
+      "end_s": 980.0,
+      "truth": 1,
+      "percussion_probability": 0.6710996031761169,
+      "correct": true
+    },
+    {
+      "start_s": 980.0,
+      "end_s": 990.0,
+      "truth": 1,
+      "percussion_probability": 0.5584173202514648,
+      "correct": true
+    },
+    {
+      "start_s": 990.0,
+      "end_s": 1000.0,
+      "truth": 1,
+      "percussion_probability": 0.6547811031341553,
+      "correct": true
+    },
+    {
+      "start_s": 1000.0,
+      "end_s": 1010.0,
+      "truth": 1,
+      "percussion_probability": 0.6940022706985474,
+      "correct": true
+    },
+    {
+      "start_s": 1010.0,
+      "end_s": 1020.0,
+      "truth": 1,
+      "percussion_probability": 0.6671393513679504,
+      "correct": true
+    },
+    {
+      "start_s": 1020.0,
+      "end_s": 1030.0,
+      "truth": 1,
+      "percussion_probability": 0.575637936592102,
+      "correct": true
+    },
+    {
+      "start_s": 1030.0,
+      "end_s": 1040.0,
+      "truth": 1,
+      "percussion_probability": 0.6129226088523865,
+      "correct": true
+    },
+    {
+      "start_s": 1040.0,
+      "end_s": 1050.0,
+      "truth": 1,
+      "percussion_probability": 0.63981032371521,
+      "correct": true
+    },
+    {
+      "start_s": 1050.0,
+      "end_s": 1060.0,
+      "truth": 1,
+      "percussion_probability": 0.6449588537216187,
+      "correct": true
+    },
+    {
+      "start_s": 1060.0,
+      "end_s": 1070.0,
+      "truth": 1,
+      "percussion_probability": 0.5480524301528931,
+      "correct": true
+    },
+    {
+      "start_s": 1070.0,
+      "end_s": 1080.0,
+      "truth": 1,
+      "percussion_probability": 0.6576740741729736,
+      "correct": true
+    },
+    {
+      "start_s": 1080.0,
+      "end_s": 1090.0,
+      "truth": 1,
+      "percussion_probability": 0.6740065813064575,
+      "correct": true
+    },
+    {
+      "start_s": 1090.0,
+      "end_s": 1100.0,
+      "truth": 1,
+      "percussion_probability": 0.7050162553787231,
+      "correct": true
+    },
+    {
+      "start_s": 1100.0,
+      "end_s": 1110.0,
+      "truth": 1,
+      "percussion_probability": 0.6935210824012756,
+      "correct": true
+    },
+    {
+      "start_s": 1110.0,
+      "end_s": 1120.0,
+      "truth": 1,
+      "percussion_probability": 0.7055237293243408,
+      "correct": true
+    },
+    {
+      "start_s": 1120.0,
+      "end_s": 1130.0,
+      "truth": 1,
+      "percussion_probability": 0.4946155250072479,
+      "correct": false
+    },
+    {
+      "start_s": 1130.0,
+      "end_s": 1140.0,
+      "truth": 1,
+      "percussion_probability": 0.5799623727798462,
+      "correct": true
+    },
+    {
+      "start_s": 1140.0,
+      "end_s": 1150.0,
+      "truth": 1,
+      "percussion_probability": 0.6050330400466919,
+      "correct": true
+    },
+    {
+      "start_s": 1150.0,
+      "end_s": 1160.0,
+      "truth": 1,
+      "percussion_probability": 0.6503856778144836,
+      "correct": true
+    },
+    {
+      "start_s": 1160.0,
+      "end_s": 1170.0,
+      "truth": 1,
+      "percussion_probability": 0.682433545589447,
+      "correct": true
+    },
+    {
+      "start_s": 1170.0,
+      "end_s": 1180.0,
+      "truth": 1,
+      "percussion_probability": 0.6352558135986328,
+      "correct": true
+    },
+    {
+      "start_s": 1180.0,
+      "end_s": 1190.0,
+      "truth": 1,
+      "percussion_probability": 0.669501781463623,
+      "correct": true
+    },
+    {
+      "start_s": 1190.0,
+      "end_s": 1200.0,
+      "truth": 1,
+      "percussion_probability": 0.4528471827507019,
+      "correct": false
+    },
+    {
+      "start_s": 1200.0,
+      "end_s": 1210.0,
+      "truth": 1,
+      "percussion_probability": 0.7191240787506104,
+      "correct": true
+    },
+    {
+      "start_s": 1210.0,
+      "end_s": 1220.0,
+      "truth": 1,
+      "percussion_probability": 0.7121142745018005,
+      "correct": true
+    },
+    {
+      "start_s": 1220.0,
+      "end_s": 1230.0,
+      "truth": 1,
+      "percussion_probability": 0.6748496294021606,
+      "correct": true
+    },
+    {
+      "start_s": 1230.0,
+      "end_s": 1240.0,
+      "truth": 1,
+      "percussion_probability": 0.7001836895942688,
+      "correct": true
+    },
+    {
+      "start_s": 1240.0,
+      "end_s": 1250.0,
+      "truth": 1,
+      "percussion_probability": 0.6741178631782532,
+      "correct": true
+    },
+    {
+      "start_s": 1250.0,
+      "end_s": 1260.0,
+      "truth": 1,
+      "percussion_probability": 0.7139393091201782,
+      "correct": true
+    },
+    {
+      "start_s": 1260.0,
+      "end_s": 1270.0,
+      "truth": 1,
+      "percussion_probability": 0.6620244383811951,
+      "correct": true
+    },
+    {
+      "start_s": 1270.0,
+      "end_s": 1280.0,
+      "truth": 1,
+      "percussion_probability": 0.6836239099502563,
+      "correct": true
+    },
+    {
+      "start_s": 1280.0,
+      "end_s": 1290.0,
+      "truth": 1,
+      "percussion_probability": 0.7103050351142883,
+      "correct": true
+    },
+    {
+      "start_s": 1290.0,
+      "end_s": 1300.0,
+      "truth": 1,
+      "percussion_probability": 0.6974242329597473,
+      "correct": true
+    },
+    {
+      "start_s": 1300.0,
+      "end_s": 1310.0,
+      "truth": 1,
+      "percussion_probability": 0.6620375514030457,
+      "correct": true
+    },
+    {
+      "start_s": 1310.0,
+      "end_s": 1320.0,
+      "truth": 1,
+      "percussion_probability": 0.4647896885871887,
+      "correct": false
+    },
+    {
+      "start_s": 1320.0,
+      "end_s": 1330.0,
+      "truth": 1,
+      "percussion_probability": 0.5787269473075867,
+      "correct": true
+    },
+    {
+      "start_s": 1330.0,
+      "end_s": 1340.0,
+      "truth": 1,
+      "percussion_probability": 0.5316413044929504,
+      "correct": true
+    },
+    {
+      "start_s": 1340.0,
+      "end_s": 1350.0,
+      "truth": 1,
+      "percussion_probability": 0.5790764093399048,
+      "correct": true
+    },
+    {
+      "start_s": 1350.0,
+      "end_s": 1360.0,
+      "truth": 1,
+      "percussion_probability": 0.6709437370300293,
+      "correct": true
+    },
+    {
+      "start_s": 1360.0,
+      "end_s": 1370.0,
+      "truth": 1,
+      "percussion_probability": 0.5483882427215576,
+      "correct": true
+    },
+    {
+      "start_s": 1370.0,
+      "end_s": 1380.0,
+      "truth": 1,
+      "percussion_probability": 0.49678510427474976,
+      "correct": false
+    },
+    {
+      "start_s": 1380.0,
+      "end_s": 1390.0,
+      "truth": 1,
+      "percussion_probability": 0.6202579140663147,
+      "correct": true
+    },
+    {
+      "start_s": 1390.0,
+      "end_s": 1400.0,
+      "truth": 1,
+      "percussion_probability": 0.7066925168037415,
+      "correct": true
+    },
+    {
+      "start_s": 1400.0,
+      "end_s": 1410.0,
+      "truth": 1,
+      "percussion_probability": 0.5432697534561157,
+      "correct": true
+    },
+    {
+      "start_s": 1410.0,
+      "end_s": 1420.0,
+      "truth": 1,
+      "percussion_probability": 0.7250344753265381,
+      "correct": true
+    },
+    {
+      "start_s": 1420.0,
+      "end_s": 1430.0,
+      "truth": 1,
+      "percussion_probability": 0.7090049982070923,
+      "correct": true
+    },
+    {
+      "start_s": 1430.0,
+      "end_s": 1440.0,
+      "truth": 1,
+      "percussion_probability": 0.6827186942100525,
+      "correct": true
+    },
+    {
+      "start_s": 1440.0,
+      "end_s": 1450.0,
+      "truth": 0,
+      "percussion_probability": 0.4163593053817749,
+      "correct": true
+    },
+    {
+      "start_s": 1450.0,
+      "end_s": 1460.0,
+      "truth": 0,
+      "percussion_probability": 0.33902060985565186,
+      "correct": true
+    },
+    {
+      "start_s": 1460.0,
+      "end_s": 1470.0,
+      "truth": 0,
+      "percussion_probability": 0.3244689106941223,
+      "correct": true
+    },
+    {
+      "start_s": 1470.0,
+      "end_s": 1480.0,
+      "truth": 0,
+      "percussion_probability": 0.3945257365703583,
+      "correct": true
+    },
+    {
+      "start_s": 1480.0,
+      "end_s": 1490.0,
+      "truth": 0,
+      "percussion_probability": 0.32743924856185913,
+      "correct": true
+    },
+    {
+      "start_s": 1490.0,
+      "end_s": 1500.0,
+      "truth": 0,
+      "percussion_probability": 0.3462677299976349,
+      "correct": true
+    }
+  ],
+  "field": {
+    "status": "existing-label field diagnostic; artist identity not verified",
+    "n": 148,
+    "correct": 135,
+    "percussion_recall": 0.9411764705882353,
+    "melody_recall": 0.8875
+  },
+  "elapsed_s": 0.5725393337197602
+}

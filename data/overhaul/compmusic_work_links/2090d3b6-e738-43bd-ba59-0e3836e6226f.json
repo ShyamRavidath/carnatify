@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/2090d3b6-e738-43bd-ba59-0e3836e6226f",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:23:03.349520+00:00",
+  "recording": {
+    "relations": [
+      {
+        "attributes": [
+          "live"
+        ],
+        "begin": null,
+        "direction": "forward",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "attribute-values": {},
+        "type": "performance",
+        "target-credit": "",
+        "work": {
+          "iswcs": [],
+          "disambiguation": "",
+          "languages": [],
+          "id": "f93cd8f9-ffaf-4418-9f2e-4377420c9e43",
+          "type-id": null,
+          "title": "Oraru Mugane",
+          "type": null,
+          "attributes": [],
+          "language": null
+        },
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "end": null,
+        "ended": false,
+        "source-credit": "",
+        "target-type": "work"
+      }
+    ],
+    "id": "2090d3b6-e738-43bd-ba59-0e3836e6226f",
+    "video": false,
+    "length": 409000,
+    "disambiguation": "",
+    "first-release-date": "2009",
+    "title": "Oraru Mugane"
+  }
+}

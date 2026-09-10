@@ -1,0 +1,51 @@
+{
+  "plan_sha256": "5a583f91b605504a2a0253c877138662a6a91dc0ee37b2bd6b3167a5c101611c",
+  "query": {
+    "track": "40_Kamakshi",
+    "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Kamakshi/Sanjay Subrahmanyan - Kamakshi.mp3",
+    "audio_sha256": "247213aff363dae0be9549dec3306b126aa08d49671d195b6ab0b58aa8285104",
+    "start_s": 606.9575510204081,
+    "duration_s": 10
+  },
+  "audio": {
+    "source_sr": 44100,
+    "channels": 2,
+    "downmix": "mean",
+    "downmix_power_ratio": 0.6974176889203473,
+    "clipping_fraction": 0.0,
+    "rms": 0.043213915738464254
+  },
+  "waveform_sha256": "bd5fad59af7f50fcb438a29ad430f7cd9730323ce371fb60844615c536d009a0",
+  "hypothesis": {
+    "text": "What a woman can't dig up Mama, Mama can't dig up Mama can't dig up",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 4.88,
+        "text": " What a woman can't dig up",
+        "avg_logprob": -1.0347318649291992,
+        "no_speech_prob": 7.168515225863814e-10,
+        "compression_ratio": 1.5227272727272727
+      },
+      {
+        "start": 4.88,
+        "end": 8.6,
+        "text": " Mama, Mama can't dig up",
+        "avg_logprob": -1.0347318649291992,
+        "no_speech_prob": 7.168515225863814e-10,
+        "compression_ratio": 1.5227272727272727
+      },
+      {
+        "start": 8.6,
+        "end": 10.0,
+        "text": " Mama can't dig up",
+        "avg_logprob": -1.0347318649291992,
+        "no_speech_prob": 7.168515225863814e-10,
+        "compression_ratio": 1.5227272727272727
+      }
+    ],
+    "language": "en",
+    "status": "unverified_hypothesis"
+  },
+  "transcription_s": 14.727399750147015
+}

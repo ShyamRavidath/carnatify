@@ -1,0 +1,11 @@
+{
+  "track": "archive__Rītigauḷa__Sanjay NannuVidachiKadalakuraa",
+  "audio": "data/concert_audio/Rītigauḷa/Sanjay NannuVidachiKadalakuraa.mp3",
+  "audio_sha256": "a2346ef30fa06a46fdf4863f2af8dcf631d6d5e8c869031f042883df15e8f931",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.1638807500712574
+}

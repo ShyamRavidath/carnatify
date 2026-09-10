@@ -1,0 +1,11 @@
+{
+  "track": "archive__Mōhanaṁ__05Nagalingam",
+  "audio": "data/concert_audio/Mōhanaṁ/05Nagalingam.mp3",
+  "audio_sha256": "219a4efa37a7256ca5f920f0773649015d4d30a2193170804228ac4a65312a14",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6749552078545094
+}

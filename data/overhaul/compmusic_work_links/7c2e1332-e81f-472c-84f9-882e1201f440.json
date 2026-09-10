@@ -1,0 +1,14 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/7c2e1332-e81f-472c-84f9-882e1201f440",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:49:45.677105+00:00",
+  "recording": {
+    "length": 1174987,
+    "video": false,
+    "id": "7c2e1332-e81f-472c-84f9-882e1201f440",
+    "title": "Vandanamu",
+    "relations": [],
+    "disambiguation": "",
+    "first-release-date": "2010"
+  }
+}

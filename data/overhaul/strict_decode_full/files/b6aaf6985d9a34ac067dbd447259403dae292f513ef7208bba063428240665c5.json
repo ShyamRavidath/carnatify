@@ -1,0 +1,11 @@
+{
+  "track": "archive__Dhanyāsi__4 Alathur Brothers dhyAnamE",
+  "audio": "data/concert_audio/Dhanyāsi/4 Alathur Brothers dhyAnamE.mp3",
+  "audio_sha256": "b6aaf6985d9a34ac067dbd447259403dae292f513ef7208bba063428240665c5",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6572371670044959
+}

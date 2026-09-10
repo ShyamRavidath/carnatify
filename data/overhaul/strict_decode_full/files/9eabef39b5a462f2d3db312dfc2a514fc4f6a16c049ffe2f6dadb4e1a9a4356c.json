@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kalyāṇi__himAdrsutE",
+  "audio": "data/concert_audio/Kalyāṇi/himAdrsutE.mp3",
+  "audio_sha256": "9eabef39b5a462f2d3db312dfc2a514fc4f6a16c049ffe2f6dadb4e1a9a4356c",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 5.381775374989957
+}

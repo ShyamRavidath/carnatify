@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/6b8184f2-c45d-4065-9269-3e9a73fc2fdc",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:44:35.376477+00:00",
+  "recording": {
+    "video": false,
+    "disambiguation": "",
+    "title": "Karu Baru",
+    "relations": [
+      {
+        "work": {
+          "iswcs": [],
+          "languages": [],
+          "title": "Karu Baru",
+          "disambiguation": "",
+          "language": null,
+          "type": null,
+          "id": "cc09186b-6947-4237-bd1a-da862d925e24",
+          "attributes": [],
+          "type-id": null
+        },
+        "source-credit": "",
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ],
+        "direction": "forward",
+        "target-credit": "",
+        "attribute-values": {},
+        "type": "performance",
+        "end": null,
+        "ended": false,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        }
+      }
+    ],
+    "length": 1024000,
+    "id": "6b8184f2-c45d-4065-9269-3e9a73fc2fdc",
+    "first-release-date": "2008"
+  }
+}

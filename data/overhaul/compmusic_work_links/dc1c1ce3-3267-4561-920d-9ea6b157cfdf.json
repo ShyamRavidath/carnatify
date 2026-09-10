@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/dc1c1ce3-3267-4561-920d-9ea6b157cfdf",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:14:46.800797+00:00",
+  "recording": {
+    "first-release-date": "2010",
+    "disambiguation": "",
+    "id": "dc1c1ce3-3267-4561-920d-9ea6b157cfdf",
+    "video": false,
+    "relations": [
+      {
+        "target-credit": "",
+        "source-credit": "",
+        "attribute-values": {},
+        "end": null,
+        "work": {
+          "type": null,
+          "id": "7c712cac-4980-4c78-a5d8-c367e97396c1",
+          "iswcs": [],
+          "disambiguation": "",
+          "attributes": [],
+          "languages": [],
+          "type-id": null,
+          "title": "Mamavasada Varade",
+          "language": null
+        },
+        "attributes": [
+          "live"
+        ],
+        "direction": "forward",
+        "ended": false,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "target-type": "work",
+        "type": "performance",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null
+      }
+    ],
+    "length": 957000,
+    "title": "Mamavasada Varade"
+  }
+}

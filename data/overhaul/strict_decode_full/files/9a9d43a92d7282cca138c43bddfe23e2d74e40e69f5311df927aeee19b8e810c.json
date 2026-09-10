@@ -1,0 +1,11 @@
+{
+  "track": "archive__Hindōḷaṁ__Alapana",
+  "audio": "data/concert_audio/Hindōḷaṁ/Alapana.mp3",
+  "audio_sha256": "9a9d43a92d7282cca138c43bddfe23e2d74e40e69f5311df927aeee19b8e810c",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.2694428749382496
+}

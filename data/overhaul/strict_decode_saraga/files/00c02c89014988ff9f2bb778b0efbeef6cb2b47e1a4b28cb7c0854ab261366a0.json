@@ -1,0 +1,11 @@
+{
+  "track": "19_Marubari",
+  "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Marubari/Ashwath Narayanan - Marubari.mp3",
+  "audio_sha256": "00c02c89014988ff9f2bb778b0efbeef6cb2b47e1a4b28cb7c0854ab261366a0",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5498822079971433
+}

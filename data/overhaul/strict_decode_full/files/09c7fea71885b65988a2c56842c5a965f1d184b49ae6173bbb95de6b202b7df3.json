@@ -1,0 +1,11 @@
+{
+  "track": "archive__Behāg__gayatrigirish irakkamvaramal",
+  "audio": "data/concert_audio/Behāg/gayatrigirish irakkamvaramal.mp3",
+  "audio_sha256": "09c7fea71885b65988a2c56842c5a965f1d184b49ae6173bbb95de6b202b7df3",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5672903340309858
+}

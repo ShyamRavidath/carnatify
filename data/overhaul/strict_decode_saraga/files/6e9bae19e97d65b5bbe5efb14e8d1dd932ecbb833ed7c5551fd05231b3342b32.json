@@ -1,0 +1,11 @@
+{
+  "track": "59_Parvathi_Ninnu_Neranammiti",
+  "audio": "saraga1.5_carnatic/Dr S Sundar at Arkay by S Sundar/Parvathi Ninnu Neranammiti/Parvathi Ninnu Neranammiti.mp3.mp3",
+  "audio_sha256": "6e9bae19e97d65b5bbe5efb14e8d1dd932ecbb833ed7c5551fd05231b3342b32",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5585624580271542
+}

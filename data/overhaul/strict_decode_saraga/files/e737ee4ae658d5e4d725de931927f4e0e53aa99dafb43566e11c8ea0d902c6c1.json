@@ -1,0 +1,11 @@
+{
+  "track": "176_Krishna_Nee_Begane_Baaro",
+  "audio": "saraga1.5_carnatic/Kuldeep Pai at Arkay by Kuldeep Pai/Krishna Nee Begane Baaro/Krishna Nee Begane Baaro.mp3.mp3",
+  "audio_sha256": "e737ee4ae658d5e4d725de931927f4e0e53aa99dafb43566e11c8ea0d902c6c1",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8253572080284357
+}

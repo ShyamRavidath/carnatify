@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kānaḍa__07 sri mAtrubhootam",
+  "audio": "data/concert_audio/Kānaḍa/07 sri mAtrubhootam.mp3",
+  "audio_sha256": "d797ab4399414cb4fda6b65e8bb247ca9c6d91a50106179faf9e7c94e382fe91",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8178128749132156
+}

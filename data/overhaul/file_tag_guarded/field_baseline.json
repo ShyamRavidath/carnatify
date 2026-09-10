@@ -1,0 +1,297 @@
+{
+  "status": "existing-label oracle-boundary field diagnostic; not fresh or artist-independence proof",
+  "query_policy": "longest explicit interval per primary item; centered fixed-duration query",
+  "label_manifest_sha256": "33e1edd5cb80ef6e26f0f1d06203e87a9b87b1b955c856a16a307ef894833892",
+  "query_frontend": "mixed_tonic_query_melodia_v1",
+  "model_sha256": {
+    "data/overhaul/file_tag_guarded/raga.joblib": "2f7b88927602c62e4625ddc9efe1dc984f9856385ea5ab09fd763b0920534bee"
+  },
+  "profile": "default",
+  "window_s": 180,
+  "rows": [
+    {
+      "item_id": "c1_1",
+      "concert": "long_concert_1",
+      "truth": "Śankarābharaṇaṁ",
+      "start_s": 288.5,
+      "duration_s": 180,
+      "metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "22216d830a8423890b6f2db63073304f2ec1d304aa03c048eae75d763f26d7c1",
+          "start_s": 288.5,
+          "duration_s": 180.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 138.8064422607422,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.8337111517029628,
+          "clipping_fraction": 0.0,
+          "rms": 0.08870181457381898
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 180.0
+      },
+      "predictions": {
+        "data/overhaul/file_tag_guarded/raga.joblib": {
+          "correct": false,
+          "answered": true,
+          "top3": [
+            "Dēvagāndhāri",
+            "Kalyāṇi",
+            "Behāg"
+          ],
+          "in_vocabulary": true,
+          "confidence": 0.06160959088815006
+        }
+      }
+    },
+    {
+      "item_id": "c2_1",
+      "concert": "long_concert_2",
+      "truth": "Tōḍi",
+      "start_s": 127.0,
+      "duration_s": 180,
+      "metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "0a1325fa5b4a4f77787207142b790dc0945b52261b2d3d4370d665f813cc42bc",
+          "start_s": 127.0,
+          "duration_s": 180.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 139.6118927001953,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.6465217253080209,
+          "clipping_fraction": 0.0,
+          "rms": 0.0866864093729058
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 180.0
+      },
+      "predictions": {
+        "data/overhaul/file_tag_guarded/raga.joblib": {
+          "correct": false,
+          "answered": true,
+          "top3": [
+            "Amṛtavarṣiṇi",
+            "Māyāmāḷavagauḷa",
+            "Dhanyāsi"
+          ],
+          "in_vocabulary": true,
+          "confidence": 0.06309352746442304
+        }
+      }
+    },
+    {
+      "item_id": "c2_2",
+      "concert": "long_concert_2",
+      "truth": "Hindōḷaṁ",
+      "start_s": 1226.0,
+      "duration_s": 180,
+      "metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "0a1325fa5b4a4f77787207142b790dc0945b52261b2d3d4370d665f813cc42bc",
+          "start_s": 1226.0,
+          "duration_s": 180.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 139.6118927001953,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.6189622523283066,
+          "clipping_fraction": 0.0,
+          "rms": 0.07984510047828573
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 180.0
+      },
+      "predictions": {
+        "data/overhaul/file_tag_guarded/raga.joblib": {
+          "correct": true,
+          "answered": true,
+          "top3": [
+            "Hindōḷaṁ",
+            "Nāṭa",
+            "Karaharapriya"
+          ],
+          "in_vocabulary": true,
+          "confidence": 0.29769925359140514
+        }
+      }
+    },
+    {
+      "item_id": "c2_3",
+      "concert": "long_concert_2",
+      "truth": "Dhēnukā",
+      "start_s": 1763.4924999999998,
+      "duration_s": 180,
+      "metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "0a1325fa5b4a4f77787207142b790dc0945b52261b2d3d4370d665f813cc42bc",
+          "start_s": 1763.4924999999998,
+          "duration_s": 180.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 139.6118927001953,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.6352099653024292,
+          "clipping_fraction": 0.0,
+          "rms": 0.08717665126111601
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 180.0
+      },
+      "predictions": {
+        "data/overhaul/file_tag_guarded/raga.joblib": {
+          "correct": false,
+          "answered": true,
+          "top3": [
+            "Māyāmāḷavagauḷa",
+            "Nāṭa",
+            "Sindhubhairavi"
+          ],
+          "in_vocabulary": false,
+          "confidence": 0.16185178589954383
+        }
+      }
+    },
+    {
+      "item_id": "c3_1",
+      "concert": "long_concert_3",
+      "truth": "Ānandabhairavi",
+      "start_s": 169.0,
+      "duration_s": 180,
+      "metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "544dffd4a31840e36485d38597235e2086e8feede64bbe1b4f5db86b1d4258a1",
+          "start_s": 169.0,
+          "duration_s": 180.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 110.12802124023438,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.5887281285249903,
+          "clipping_fraction": 0.0,
+          "rms": 0.08481995314529937
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 180.0
+      },
+      "predictions": {
+        "data/overhaul/file_tag_guarded/raga.joblib": {
+          "correct": true,
+          "answered": true,
+          "top3": [
+            "Ānandabhairavi",
+            "Śrī",
+            "Nāṭa"
+          ],
+          "in_vocabulary": true,
+          "confidence": 0.08803480281420538
+        }
+      }
+    },
+    {
+      "item_id": "c3_2",
+      "concert": "long_concert_3",
+      "truth": "Varāḷi",
+      "start_s": 1467.5,
+      "duration_s": 180,
+      "metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "544dffd4a31840e36485d38597235e2086e8feede64bbe1b4f5db86b1d4258a1",
+          "start_s": 1467.5,
+          "duration_s": 180.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 110.76707458496094,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.5535051349211532,
+          "clipping_fraction": 0.0,
+          "rms": 0.0809753257941619
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 180.0
+      },
+      "predictions": {
+        "data/overhaul/file_tag_guarded/raga.joblib": {
+          "correct": true,
+          "answered": true,
+          "top3": [
+            "Varāḷi",
+            "Kāmavardani",
+            "Bṛndāvana sāranga"
+          ],
+          "in_vocabulary": true,
+          "confidence": 0.4329576085266525
+        }
+      }
+    }
+  ],
+  "summary": {
+    "data/overhaul/file_tag_guarded/raga.joblib": {
+      "n": 6,
+      "correct": 3,
+      "n_in_vocabulary": 5
+    }
+  },
+  "pitch_frontend": "melodia"
+}

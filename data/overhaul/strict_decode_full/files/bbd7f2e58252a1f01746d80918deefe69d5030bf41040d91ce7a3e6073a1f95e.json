@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sāvēri__Sri Rajagopalam",
+  "audio": "data/concert_audio/Sāvēri/Sri Rajagopalam.mp3",
+  "audio_sha256": "bbd7f2e58252a1f01746d80918deefe69d5030bf41040d91ce7a3e6073a1f95e",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.279158249963075
+}

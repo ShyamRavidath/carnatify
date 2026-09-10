@@ -1,0 +1,11 @@
+{
+  "track": "archive__Saurāṣtraṁ__SuryaMoorthae",
+  "audio": "data/concert_audio/Saurāṣtraṁ/SuryaMoorthae.mp3",
+  "audio_sha256": "a1d744b280f39082321c80d49c89b7f9d16d909ccdeddf7bfdc782bfa375497a",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8283794578164816
+}

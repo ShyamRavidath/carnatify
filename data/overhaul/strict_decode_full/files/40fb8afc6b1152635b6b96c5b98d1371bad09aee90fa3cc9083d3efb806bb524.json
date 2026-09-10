@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāpi__Jagadhodharana",
+  "audio": "data/concert_audio/Kāpi/Jagadhodharana.mp3",
+  "audio_sha256": "40fb8afc6b1152635b6b96c5b98d1371bad09aee90fa3cc9083d3efb806bb524",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6089905421249568
+}

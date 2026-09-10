@@ -1,0 +1,11 @@
+{
+  "track": "archive__Behāg__1224833 aswinsainarain",
+  "audio": "data/concert_audio/Behāg/1224833 aswinsainarain.mp3",
+  "audio_sha256": "3776dc79feb289bf3f45b38a14481c93669ee374abdd537090e8a978ab9c872e",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7698052078485489
+}

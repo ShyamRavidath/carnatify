@@ -1,0 +1,11 @@
+{
+  "track": "archive__Hindōḷaṁ__gOvardana giridhAra",
+  "audio": "data/concert_audio/Hindōḷaṁ/gOvardana giridhAra.mp3",
+  "audio_sha256": "18648798b9fac908a9bea78c34d5a8c742e0fdda72e7912f88cfa33c2da307e5",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.9073059158399701
+}

@@ -1,0 +1,284 @@
+{
+  "status": "closed metadata-title-vocabulary development pilot; not WER, fresh test, or validated identity",
+  "asr_report_sha256": "3f75d1cbab3090664a8d2e9caefaa305b6ae7822bd5bc96e5120432eaaec8906",
+  "plan_sha256": "a39d9c445383938cf13c7c73d750908a67a756036e9b4e9a27784fe81ce0f25a",
+  "catalog_sha256": "4857e4879d666e62071f08210627b71c245e61178870d23fb8db47351bab1a26",
+  "policy": "fixed diagnostic screen; transliterated char 3-5gram TFIDF; max across fixed lanes and work aliases",
+  "n_queries": 8,
+  "n_in_text_vocabulary": 8,
+  "n_top1": 2,
+  "n_top5": 3,
+  "n_with_usable_text": 6,
+  "rows": [
+    {
+      "track": "180_Ninne_Bhajana",
+      "work_id": "50677926-ba65-4c72-b991-4328691ad0d2",
+      "in_text_vocabulary": true,
+      "usable_lanes": [
+        "hi"
+      ],
+      "rank": 1,
+      "top5": [
+        {
+          "work_id": "50677926-ba65-4c72-b991-4328691ad0d2",
+          "title": "Ninne Bhajana",
+          "score": 0.5427550479073024,
+          "lane": "hi"
+        },
+        {
+          "work_id": "afdd858c-6f2d-406e-a55b-ddab2948dbc0",
+          "title": "Rama Ninne",
+          "score": 0.30075296690220915,
+          "lane": "hi"
+        },
+        {
+          "work_id": "da2f1dd3-50e2-423f-9e35-4942bdae8b38",
+          "title": "Vanajaksha Ninne Nammiti",
+          "score": 0.25725217368976283,
+          "lane": "hi"
+        },
+        {
+          "work_id": "23b82416-2fa4-4c40-87d7-1436cf92ddf7",
+          "title": "Sami Ninne Kori",
+          "score": 0.2556922366865232,
+          "lane": "hi"
+        },
+        {
+          "work_id": "c2c9c8be-d3fd-4b8d-8213-5df654ddc849",
+          "title": "Ninne Namminanu",
+          "score": 0.24886797171818417,
+          "lane": "hi"
+        }
+      ]
+    },
+    {
+      "track": "133_Paramatmudu",
+      "work_id": "e75fefae-7bd5-4d74-aa53-35e6bd48e102",
+      "in_text_vocabulary": true,
+      "usable_lanes": [
+        "auto",
+        "ta",
+        "te",
+        "hi"
+      ],
+      "rank": 1,
+      "top5": [
+        {
+          "work_id": "e75fefae-7bd5-4d74-aa53-35e6bd48e102",
+          "title": "Paramatmudu",
+          "score": 0.59908847709106,
+          "lane": "te"
+        },
+        {
+          "work_id": "cd46d874-385a-4300-9d22-e566c13c74e3",
+          "title": "Maryada Teliyakane",
+          "score": 0.16387991656151754,
+          "lane": "ta"
+        },
+        {
+          "work_id": "ffc6991b-4101-4546-8c87-d4f93bd5505b",
+          "title": "Manasaramathi",
+          "score": 0.1602891669657398,
+          "lane": "ta"
+        },
+        {
+          "work_id": "3852c12b-e092-4f4b-8656-4b82cbd7414a",
+          "title": "Dwaitamu Sukhama",
+          "score": 0.14000223144454102,
+          "lane": "ta"
+        },
+        {
+          "work_id": "a4de650a-1146-47dd-9bcb-3d3ad4ab449a",
+          "title": "Paramapavana Rama",
+          "score": 0.12370123069668362,
+          "lane": "ta"
+        }
+      ]
+    },
+    {
+      "track": "47_Koti_Janmani",
+      "work_id": "f31205be-934d-4fa8-8a4c-1346d93a47e6",
+      "in_text_vocabulary": true,
+      "usable_lanes": [
+        "ta",
+        "te",
+        "hi"
+      ],
+      "rank": 14,
+      "top5": [
+        {
+          "work_id": "620ddb29-d292-44f9-b386-05a38664a2f0",
+          "title": "Vara Leela Gana Lola",
+          "score": 0.2247861074554684,
+          "lane": "hi"
+        },
+        {
+          "work_id": "b040cae5-9879-4288-9df5-e06870dc01f1",
+          "title": "Minalocana",
+          "score": 0.1871231820691061,
+          "lane": "hi"
+        },
+        {
+          "work_id": "66140377-a276-4938-b4f5-6040b89ff85a",
+          "title": "Sri Parvati",
+          "score": 0.15046109123949958,
+          "lane": "te"
+        },
+        {
+          "work_id": "52f098fe-12c2-4882-89d9-6f3e78b3abd5",
+          "title": "Sri Kamalambikayam",
+          "score": 0.1394116957113679,
+          "lane": "ta"
+        },
+        {
+          "work_id": "3b5de4fb-17e5-479c-9c47-252bd0350fd7",
+          "title": "Ennadu Jootuno",
+          "score": 0.1392211479378126,
+          "lane": "ta"
+        }
+      ]
+    },
+    {
+      "track": "243_Kamalamba_Samrakshatu",
+      "work_id": "bf3629ff-4142-428b-bca1-93964ac06f08",
+      "in_text_vocabulary": true,
+      "usable_lanes": [
+        "auto",
+        "hi"
+      ],
+      "rank": 40,
+      "top5": [
+        {
+          "work_id": "8ec7231f-6267-4432-b0dc-b862d639b5bf",
+          "title": "Saketha Nagara Nadha",
+          "score": 0.3281110151849122,
+          "lane": "hi"
+        },
+        {
+          "work_id": "eee08b71-0779-468f-a8e7-d372e6ebaba5",
+          "title": "Himachala Tanaya",
+          "score": 0.20372864975127813,
+          "lane": "auto"
+        },
+        {
+          "work_id": "9d72b7ba-3f59-4db1-b6ba-e1205f802cee",
+          "title": "Raagam Thaanam Pallavi",
+          "score": 0.18957822897472132,
+          "lane": "auto"
+        },
+        {
+          "work_id": "d72e0073-f65a-48eb-84e6-6110b638af69",
+          "title": "Ragam Tanam Pallavi",
+          "score": 0.18957822897472132,
+          "lane": "auto"
+        },
+        {
+          "work_id": "0bb21864-fbbe-4406-8017-c74f48e01682",
+          "title": "Divakara Tanujam",
+          "score": 0.18952981712403227,
+          "lane": "auto"
+        }
+      ]
+    },
+    {
+      "track": "40_Kamakshi",
+      "work_id": "a566c7d3-ecaa-41c1-8a38-f9e5e123dbeb",
+      "in_text_vocabulary": true,
+      "usable_lanes": [
+        "auto"
+      ],
+      "rank": null,
+      "top5": [
+        {
+          "work_id": "eee08b71-0779-468f-a8e7-d372e6ebaba5",
+          "title": "Himachala Tanaya",
+          "score": 0.20372864975127813,
+          "lane": "auto"
+        },
+        {
+          "work_id": "9d72b7ba-3f59-4db1-b6ba-e1205f802cee",
+          "title": "Raagam Thaanam Pallavi",
+          "score": 0.18957822897472132,
+          "lane": "auto"
+        },
+        {
+          "work_id": "d72e0073-f65a-48eb-84e6-6110b638af69",
+          "title": "Ragam Tanam Pallavi",
+          "score": 0.18957822897472132,
+          "lane": "auto"
+        },
+        {
+          "work_id": "0bb21864-fbbe-4406-8017-c74f48e01682",
+          "title": "Divakara Tanujam",
+          "score": 0.18952981712403227,
+          "lane": "auto"
+        },
+        {
+          "work_id": "20a25115-daad-4b02-b507-3f944691cc84",
+          "title": "Amma Kripai Thandu",
+          "score": 0.18044730497638697,
+          "lane": "auto"
+        }
+      ]
+    },
+    {
+      "track": "237_Manasaramathi",
+      "work_id": "ffc6991b-4101-4546-8c87-d4f93bd5505b",
+      "in_text_vocabulary": true,
+      "usable_lanes": [],
+      "rank": null,
+      "top5": []
+    },
+    {
+      "track": "154_Innamum_Oru_thalam",
+      "work_id": "2d62bebf-3952-4dfc-9d27-ddceacbd8eb7",
+      "in_text_vocabulary": true,
+      "usable_lanes": [
+        "auto",
+        "ta",
+        "hi"
+      ],
+      "rank": 2,
+      "top5": [
+        {
+          "work_id": "d348d629-4756-413e-bdc8-68a506d4c4cb",
+          "title": "Paamalai",
+          "score": 0.3286643740835553,
+          "lane": "auto"
+        },
+        {
+          "work_id": "2d62bebf-3952-4dfc-9d27-ddceacbd8eb7",
+          "title": "Innamum Oru thalam",
+          "score": 0.26624945845996706,
+          "lane": "auto"
+        },
+        {
+          "work_id": "01ab77b9-bf6f-4b37-a5af-7efe52726541",
+          "title": "Sri Jalandara",
+          "score": 0.2620839096725802,
+          "lane": "hi"
+        },
+        {
+          "work_id": "8927d020-9b43-447c-964e-970ca702bc21",
+          "title": "Janakipathe Jaya Karunya Jaladhe",
+          "score": 0.2454871918157161,
+          "lane": "hi"
+        },
+        {
+          "work_id": "d6cb71ce-109c-42b5-910f-e0bd42d8e681",
+          "title": "Tulasi Dalamulache",
+          "score": 0.17697849874388463,
+          "lane": "auto"
+        }
+      ]
+    },
+    {
+      "track": "94_Hiranmayeem",
+      "work_id": "24ad75f0-b63e-4473-b337-08afc16508a9",
+      "in_text_vocabulary": true,
+      "usable_lanes": [],
+      "rank": null,
+      "top5": []
+    }
+  ]
+}

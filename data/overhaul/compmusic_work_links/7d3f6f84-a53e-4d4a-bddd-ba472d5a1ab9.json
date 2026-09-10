@@ -1,0 +1,42 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/7d3f6f84-a53e-4d4a-bddd-ba472d5a1ab9",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:49:52.976149+00:00",
+  "recording": {
+    "video": false,
+    "title": "Ramabhi Rama Manasu",
+    "disambiguation": "",
+    "relations": [
+      {
+        "work": {
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "id": "ac50f016-2c6a-4f00-8c96-df1ba616fbd7",
+          "attributes": [],
+          "type": "Song",
+          "language": "tel",
+          "disambiguation": "Dhanyasi Krithi of Thyagaraja",
+          "iswcs": [],
+          "languages": [
+            "tel"
+          ],
+          "title": "Ramabhirama Manasu"
+        },
+        "source-credit": "",
+        "attributes": [],
+        "target-type": "work",
+        "direction": "forward",
+        "attribute-values": {},
+        "target-credit": "",
+        "type": "performance",
+        "end": null,
+        "ended": false,
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-ids": {}
+      }
+    ],
+    "length": 2092773,
+    "first-release-date": "2015-06-22",
+    "id": "7d3f6f84-a53e-4d4a-bddd-ba472d5a1ab9"
+  }
+}

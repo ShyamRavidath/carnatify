@@ -1,0 +1,56 @@
+{
+  "windows": 3410,
+  "rejected": [
+    [
+      "archive__Bhairavi__Olaga Sulabhavo",
+      234203,
+      "less_than_10s_voiced"
+    ],
+    [
+      "archive__Bhairavi__RTP",
+      918546,
+      "less_than_10s_voiced"
+    ],
+    [
+      "archive__Bhairavi__olaga sulabavo",
+      405340,
+      "less_than_10s_voiced"
+    ],
+    [
+      "archive__Bhairavi__tanayuni brOva",
+      952598,
+      "less_than_10s_voiced"
+    ],
+    [
+      "archive__Jaganmōhini__Mahathi PKF Sunaada Vinodini Ragam",
+      438794,
+      "less_than_10s_voiced"
+    ],
+    [
+      "archive__Kāmavardani__Paripahi Mam",
+      337638,
+      "less_than_10s_voiced"
+    ],
+    [
+      "archive__Vasanta__kanTajutumi",
+      191156,
+      "less_than_10s_voiced"
+    ],
+    [
+      "archive__Śankarābharaṇaṁ__eduTa nilicitE",
+      1133728,
+      "less_than_10s_voiced"
+    ],
+    [
+      "archive__Ṣanmukhapriya__Mahatmule",
+      367512,
+      "less_than_10s_voiced"
+    ],
+    [
+      "archive__Ṣanmukhapriya__parama purusha nirupamAna",
+      230862,
+      "less_than_10s_voiced"
+    ]
+  ],
+  "version": "melody_v1_elapsed_contiguous"
+}

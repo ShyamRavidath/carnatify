@@ -1,0 +1,11 @@
+{
+  "track": "archive__Latāngi__marivEre dikkevvaru",
+  "audio": "data/concert_audio/Latāngi/marivEre dikkevvaru.mp3",
+  "audio_sha256": "133909df3efcc06e5ad1bde945b5529eb8e35ff96f0959c6cb8aee06e6e91fd5",
+  "plan_sha256": "e0babfbb17ff59861b0f951c98fa857adcc486715904a4fa250f57daf00a6c12",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.3895292920060456
+}

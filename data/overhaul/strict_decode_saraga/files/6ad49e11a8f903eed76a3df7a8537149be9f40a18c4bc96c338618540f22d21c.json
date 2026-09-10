@@ -1,0 +1,11 @@
+{
+  "track": "119_Shlokam_-_Shivah_Shaktyayukto",
+  "audio": "saraga1.5_carnatic/Cherthala Ranganatha Sharma at Arkay by Cherthala Ranganatha Sharma/Shlokam - Shivah Shaktyayukto/Shlokam - Shivah Shaktyayukto.mp3.mp3",
+  "audio_sha256": "6ad49e11a8f903eed76a3df7a8537149be9f40a18c4bc96c338618540f22d21c",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2328712078742683
+}

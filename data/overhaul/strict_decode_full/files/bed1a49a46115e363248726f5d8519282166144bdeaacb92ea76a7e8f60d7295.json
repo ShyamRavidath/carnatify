@@ -1,0 +1,11 @@
+{
+  "track": "archive__Pūrvīkaḷyāṇi__RTP Kaanakkidaikkumo Sabhesan Darisanam Kandaal Kalitheerume",
+  "audio": "data/concert_audio/Pūrvīkaḷyāṇi/RTP Kaanakkidaikkumo Sabhesan Darisanam Kandaal Kalitheerume.mp3",
+  "audio_sha256": "bed1a49a46115e363248726f5d8519282166144bdeaacb92ea76a7e8f60d7295",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 6.278703666757792
+}

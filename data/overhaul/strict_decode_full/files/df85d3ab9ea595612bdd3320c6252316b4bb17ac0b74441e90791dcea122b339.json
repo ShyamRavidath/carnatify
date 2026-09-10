@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bilahari__02Lalgudi",
+  "audio": "data/concert_audio/Bilahari/02Lalgudi.mp3",
+  "audio_sha256": "df85d3ab9ea595612bdd3320c6252316b4bb17ac0b74441e90791dcea122b339",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 3.8061879579909146
+}

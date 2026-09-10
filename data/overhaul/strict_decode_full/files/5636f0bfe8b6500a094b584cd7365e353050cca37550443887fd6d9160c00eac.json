@@ -1,0 +1,11 @@
+{
+  "track": "archive__Śankarābharaṇaṁ__akshayalingavibhO",
+  "audio": "data/concert_audio/Śankarābharaṇaṁ/akshayalingavibhO.mp3",
+  "audio_sha256": "5636f0bfe8b6500a094b584cd7365e353050cca37550443887fd6d9160c00eac",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 4.23402779083699
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāmavardani__Kadaikannal",
+  "audio": "data/concert_audio/Kāmavardani/Kadaikannal.mp3",
+  "audio_sha256": "eefd60e9483e940e89da02a2cb6f1788a58bf9ee63d6802545d51a2760cfbb88",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3399610831402242
+}

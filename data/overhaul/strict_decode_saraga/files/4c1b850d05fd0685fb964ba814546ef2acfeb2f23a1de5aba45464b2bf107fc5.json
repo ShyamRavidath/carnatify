@@ -1,0 +1,11 @@
+{
+  "track": "139_Mangalam_Avanisutanatha",
+  "audio": "saraga1.5_carnatic/Modhumudi Sudhakar at Arkay by Modhumudi Sudhakar/Mangalam Avanisutanatha/Mangalam Avanisutanatha.mp3.mp3",
+  "audio_sha256": "4c1b850d05fd0685fb964ba814546ef2acfeb2f23a1de5aba45464b2bf107fc5",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.28696687519550323
+}

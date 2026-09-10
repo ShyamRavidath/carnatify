@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sencuruṭṭi__kATTil vaLarvEDuva peNNE",
+  "audio": "data/concert_audio/Sencuruṭṭi/kATTil vaLarvEDuva peNNE.mp3",
+  "audio_sha256": "6ae9436d558aeeb6090a713add6de7067867ba0cb2023efc4a4266a5ff189a7c",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3471506671048701
+}

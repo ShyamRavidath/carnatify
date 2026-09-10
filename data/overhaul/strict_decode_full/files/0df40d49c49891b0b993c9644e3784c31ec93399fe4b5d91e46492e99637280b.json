@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nāṭa__praNatOshmi dEvam",
+  "audio": "data/concert_audio/Nāṭa/praNatOshmi dEvam.mp3",
+  "audio_sha256": "0df40d49c49891b0b993c9644e3784c31ec93399fe4b5d91e46492e99637280b",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.2853171662427485
+}

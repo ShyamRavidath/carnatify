@@ -1,0 +1,11 @@
+{
+  "track": "archive__Hamsadhvāni__aruL purivAy",
+  "audio": "data/concert_audio/Hamsadhvāni/aruL purivAy.mp3",
+  "audio_sha256": "cbe1d9f829dc4251c6d2810396405e72e6f60ef26590205310e03a378f4574a3",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3960116249509156
+}

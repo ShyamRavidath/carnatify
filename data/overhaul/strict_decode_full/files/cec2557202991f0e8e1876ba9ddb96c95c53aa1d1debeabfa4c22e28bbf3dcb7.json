@@ -1,0 +1,11 @@
+{
+  "track": "archive__Harikāmbhōji__Nenendu Vedagudura",
+  "audio": "data/concert_audio/Harikāmbhōji/Nenendu Vedagudura.mp3",
+  "audio_sha256": "cec2557202991f0e8e1876ba9ddb96c95c53aa1d1debeabfa4c22e28bbf3dcb7",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.284486792050302
+}

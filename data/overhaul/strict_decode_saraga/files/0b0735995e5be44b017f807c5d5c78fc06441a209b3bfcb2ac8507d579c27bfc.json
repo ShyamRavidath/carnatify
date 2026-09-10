@@ -1,0 +1,11 @@
+{
+  "track": "34_Teerthakarayinile",
+  "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Teerthakarayinile/Sanjay Subrahmanyan - Teerthakarayinile.mp3",
+  "audio_sha256": "0b0735995e5be44b017f807c5d5c78fc06441a209b3bfcb2ac8507d579c27bfc",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.28407600009813905
+}

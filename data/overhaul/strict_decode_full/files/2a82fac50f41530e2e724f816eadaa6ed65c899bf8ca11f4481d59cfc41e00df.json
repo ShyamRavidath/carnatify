@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāṁbhōji__mari mari ninnE",
+  "audio": "data/concert_audio/Kāṁbhōji/mari mari ninnE.mp3",
+  "audio_sha256": "2a82fac50f41530e2e724f816eadaa6ed65c899bf8ca11f4481d59cfc41e00df",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 3.0514463749714196
+}

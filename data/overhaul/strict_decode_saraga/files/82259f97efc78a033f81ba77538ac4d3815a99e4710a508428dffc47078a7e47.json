@@ -1,0 +1,11 @@
+{
+  "track": "241_Shri_Subramanyaya_Namaste",
+  "audio": "saraga1.5_carnatic/Chaitra Sairam at Arkay by Chaitra Sairam/Shri Subramanyaya Namaste/Chaitra Sairam - Shri Subramanyaya Namaste.mp3",
+  "audio_sha256": "82259f97efc78a033f81ba77538ac4d3815a99e4710a508428dffc47078a7e47",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 4.549608708824962
+}

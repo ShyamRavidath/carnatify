@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bēgaḍa__innum parAmukam",
+  "audio": "data/concert_audio/Bēgaḍa/innum parAmukam.mp3",
+  "audio_sha256": "c9e11697413bd8252b686918a576c67380851ed7554d1c3bd248f34d67d04ce9",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4060504171065986
+}

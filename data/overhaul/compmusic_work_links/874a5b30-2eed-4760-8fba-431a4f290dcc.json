@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/874a5b30-2eed-4760-8fba-431a4f290dcc",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:53:05.249443+00:00",
+  "recording": {
+    "video": false,
+    "disambiguation": "",
+    "title": "Velan Varuvaradi",
+    "length": 627000,
+    "relations": [
+      {
+        "type": "performance",
+        "attribute-values": {},
+        "target-credit": "",
+        "direction": "forward",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "ended": false,
+        "end": null,
+        "source-credit": "",
+        "work": {
+          "type-id": null,
+          "id": "869097a5-d18c-4ce4-b67b-6b6842f40d39",
+          "attributes": [],
+          "language": null,
+          "type": null,
+          "languages": [],
+          "title": "Velan Varuvaradi",
+          "iswcs": [],
+          "disambiguation": ""
+        },
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work"
+      }
+    ],
+    "id": "874a5b30-2eed-4760-8fba-431a4f290dcc",
+    "first-release-date": "2000"
+  }
+}

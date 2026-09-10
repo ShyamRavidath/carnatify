@@ -1,0 +1,320 @@
+{
+  "plan_sha256": "5a583f91b605504a2a0253c877138662a6a91dc0ee37b2bd6b3167a5c101611c",
+  "rows": [
+    {
+      "plan_sha256": "5a583f91b605504a2a0253c877138662a6a91dc0ee37b2bd6b3167a5c101611c",
+      "query": {
+        "track": "180_Ninne_Bhajana",
+        "audio": "saraga1.5_carnatic/V Shankarnarayanan at Arkay by V Shankaranarayanan/Ninne Bhajana/Ninne Bhajana.mp3.mp3",
+        "audio_sha256": "1c5434fcc2804ab78600ed0af508a5f3197b058992bfeaeec5f80177c43d84c3",
+        "start_s": 319.63073696145125,
+        "duration_s": 10
+      },
+      "audio": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9651915103503914,
+        "clipping_fraction": 0.0,
+        "rms": 0.09703141081300898
+      },
+      "waveform_sha256": "de985f25dfc28ea810a97811db7e6eecee2653eb79e8742d9b4ea6ec6e939d09",
+      "hypothesis": {
+        "text": "Say Pamaga",
+        "segments": [
+          {
+            "start": 0.0,
+            "end": 2.0,
+            "text": " Say",
+            "avg_logprob": -1.527288794517517,
+            "no_speech_prob": 1.3390681452563058e-08,
+            "compression_ratio": 0.5555555555555556
+          },
+          {
+            "start": 8.0,
+            "end": 10.0,
+            "text": " Pamaga",
+            "avg_logprob": -1.527288794517517,
+            "no_speech_prob": 1.3390681452563058e-08,
+            "compression_ratio": 0.5555555555555556
+          }
+        ],
+        "language": "en",
+        "status": "unverified_hypothesis"
+      },
+      "transcription_s": 13.515152957756072
+    },
+    {
+      "plan_sha256": "5a583f91b605504a2a0253c877138662a6a91dc0ee37b2bd6b3167a5c101611c",
+      "query": {
+        "track": "133_Paramatmudu",
+        "audio": "saraga1.5_carnatic/Modhumudi Sudhakar at Arkay by Modhumudi Sudhakar/Paramatmudu/Paramatmudu.mp3.mp3",
+        "audio_sha256": "97689fa1bf0f44b6b2843dc72d8711d5f9b895edd27dfa84d3f83d3f9bbcbc4f",
+        "start_s": 441.3874716553288,
+        "duration_s": 10
+      },
+      "audio": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9776566212390643,
+        "clipping_fraction": 0.0,
+        "rms": 0.1710880367320091
+      },
+      "waveform_sha256": "84c2d29ee0eb1786275c275cf8fbd8f0a7f4545f3b41481d1b3a87ce7b75ca1b",
+      "hypothesis": {
+        "text": "Oh",
+        "segments": [
+          {
+            "start": 0.0,
+            "end": 2.0,
+            "text": " Oh",
+            "avg_logprob": -0.9290674328804016,
+            "no_speech_prob": 1.6487616605331823e-08,
+            "compression_ratio": 0.2
+          }
+        ],
+        "language": "en",
+        "status": "unverified_hypothesis"
+      },
+      "transcription_s": 12.98069979203865
+    },
+    {
+      "plan_sha256": "5a583f91b605504a2a0253c877138662a6a91dc0ee37b2bd6b3167a5c101611c",
+      "query": {
+        "track": "47_Koti_Janmani",
+        "audio": "saraga1.5_carnatic/Akkarai Sisters at Arkay by Akkarai Sisters/Koti Janmani/Koti Janmani.mp3.mp3",
+        "audio_sha256": "10d03b57f877301572181e7e00d6effbd5a3ad11a3382ff08a3686e085792dc7",
+        "start_s": 258.3474716553288,
+        "duration_s": 10
+      },
+      "audio": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9465555733075285,
+        "clipping_fraction": 0.0,
+        "rms": 0.15022986464344396
+      },
+      "waveform_sha256": "276cd3c6bae05b44381a8df4b0f698326d5b9f9adfd5718890e6b79da7fabf45",
+      "hypothesis": {
+        "text": "Oh Oh",
+        "segments": [
+          {
+            "start": 0.0,
+            "end": 2.0,
+            "text": " Oh",
+            "avg_logprob": -1.2566231318882533,
+            "no_speech_prob": 4.979647361125217e-09,
+            "compression_ratio": 0.38461538461538464
+          },
+          {
+            "start": 6.0,
+            "end": 8.0,
+            "text": " Oh",
+            "avg_logprob": -1.2566231318882533,
+            "no_speech_prob": 4.979647361125217e-09,
+            "compression_ratio": 0.38461538461538464
+          }
+        ],
+        "language": "en",
+        "status": "unverified_hypothesis"
+      },
+      "transcription_s": 13.213548209052533
+    },
+    {
+      "plan_sha256": "5a583f91b605504a2a0253c877138662a6a91dc0ee37b2bd6b3167a5c101611c",
+      "query": {
+        "track": "243_Kamalamba_Samrakshatu",
+        "audio": "saraga1.5_carnatic/Chaitra Sairam at Arkay by Chaitra Sairam/Kamalamba Samrakshatu/Chaitra Sairam - Kamalamba Samrakshatu.mp3",
+        "audio_sha256": "1908f6b9e00c867564b11df6a4c87a502f185d05fcaf60085442ceef27c8144a",
+        "start_s": 326.42257369614515,
+        "duration_s": 10
+      },
+      "audio": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9822898014350899,
+        "clipping_fraction": 0.0,
+        "rms": 0.04336082482619132
+      },
+      "waveform_sha256": "6abc04d82e64f719d03e9cb983cdc674b4af414715700270dfd167808751cb08",
+      "hypothesis": {
+        "text": "I am the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the",
+        "segments": [
+          {
+            "start": 0.0,
+            "end": 10.0,
+            "text": " I am the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the",
+            "avg_logprob": -0.15000530666775175,
+            "no_speech_prob": 5.246423739890815e-09,
+            "compression_ratio": 22.76923076923077
+          }
+        ],
+        "language": "en",
+        "status": "unverified_hypothesis"
+      },
+      "transcription_s": 17.9447214580141
+    },
+    {
+      "plan_sha256": "5a583f91b605504a2a0253c877138662a6a91dc0ee37b2bd6b3167a5c101611c",
+      "query": {
+        "track": "40_Kamakshi",
+        "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Kamakshi/Sanjay Subrahmanyan - Kamakshi.mp3",
+        "audio_sha256": "247213aff363dae0be9549dec3306b126aa08d49671d195b6ab0b58aa8285104",
+        "start_s": 606.9575510204081,
+        "duration_s": 10
+      },
+      "audio": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.6974176889203473,
+        "clipping_fraction": 0.0,
+        "rms": 0.043213915738464254
+      },
+      "waveform_sha256": "bd5fad59af7f50fcb438a29ad430f7cd9730323ce371fb60844615c536d009a0",
+      "hypothesis": {
+        "text": "What a woman can't dig up Mama, Mama can't dig up Mama can't dig up",
+        "segments": [
+          {
+            "start": 0.0,
+            "end": 4.88,
+            "text": " What a woman can't dig up",
+            "avg_logprob": -1.0347318649291992,
+            "no_speech_prob": 7.168515225863814e-10,
+            "compression_ratio": 1.5227272727272727
+          },
+          {
+            "start": 4.88,
+            "end": 8.6,
+            "text": " Mama, Mama can't dig up",
+            "avg_logprob": -1.0347318649291992,
+            "no_speech_prob": 7.168515225863814e-10,
+            "compression_ratio": 1.5227272727272727
+          },
+          {
+            "start": 8.6,
+            "end": 10.0,
+            "text": " Mama can't dig up",
+            "avg_logprob": -1.0347318649291992,
+            "no_speech_prob": 7.168515225863814e-10,
+            "compression_ratio": 1.5227272727272727
+          }
+        ],
+        "language": "en",
+        "status": "unverified_hypothesis"
+      },
+      "transcription_s": 14.727399750147015
+    },
+    {
+      "plan_sha256": "5a583f91b605504a2a0253c877138662a6a91dc0ee37b2bd6b3167a5c101611c",
+      "query": {
+        "track": "237_Manasaramathi",
+        "audio": "saraga1.5_carnatic/KP Nandini at Arkay by KP Nandini/Manasaramathi/Manasaramathi.mp3.mp3",
+        "audio_sha256": "31fd6bce5d2f628b78231dacc6451a92bb7764eb78cd878a7bd8168adf73c595",
+        "start_s": 715.5556349206349,
+        "duration_s": 10
+      },
+      "audio": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.5699938053244074,
+        "clipping_fraction": 0.0,
+        "rms": 0.04560785949354153
+      },
+      "waveform_sha256": "8eab54bf8578564c4567e5d52bce939675b49d0500194d381f0bb36ebc876f4f",
+      "hypothesis": {
+        "text": "¶¶",
+        "segments": [
+          {
+            "start": 0.0,
+            "end": 10.0,
+            "text": " ¶¶",
+            "avg_logprob": -0.3948029450007847,
+            "no_speech_prob": 8.431242509709946e-11,
+            "compression_ratio": 0.3333333333333333
+          }
+        ],
+        "language": "en",
+        "status": "unverified_hypothesis"
+      },
+      "transcription_s": 13.541848875116557
+    },
+    {
+      "plan_sha256": "5a583f91b605504a2a0253c877138662a6a91dc0ee37b2bd6b3167a5c101611c",
+      "query": {
+        "track": "154_Innamum_Oru_thalam",
+        "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/Innamum Oru thalam/Sanjay Subrahmanyan - Innamum Oru thalam.mp3",
+        "audio_sha256": "fa647899b0d184baf8eaf0ae9c9d86f2c36b6c70f4c2d9eab902c369795f06c7",
+        "start_s": 146.44,
+        "duration_s": 10
+      },
+      "audio": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.7538002492688758,
+        "clipping_fraction": 0.0,
+        "rms": 0.08789657615174663
+      },
+      "waveform_sha256": "b00557d28efd512579af359bf1109b5aff340a256e6befcabe8fccf57d219ac5",
+      "hypothesis": {
+        "text": "I'm sorry.",
+        "segments": [
+          {
+            "start": 0.0,
+            "end": 10.0,
+            "text": " I'm sorry.",
+            "avg_logprob": -1.8608229500906808,
+            "no_speech_prob": 4.067902903415188e-09,
+            "compression_ratio": 0.5555555555555556
+          }
+        ],
+        "language": "en",
+        "status": "unverified_hypothesis"
+      },
+      "transcription_s": 13.81903195893392
+    },
+    {
+      "plan_sha256": "5a583f91b605504a2a0253c877138662a6a91dc0ee37b2bd6b3167a5c101611c",
+      "query": {
+        "track": "94_Hiranmayeem",
+        "audio": "saraga1.5_carnatic/Mahati at Arkay by Mahati/Hiranmayeem/Hiranmayeem.mp3.mp3",
+        "audio_sha256": "5a01c246f9b7819b2db4b4338e2f6ebb2610082830503cbb991a657a6295954a",
+        "start_s": 742.1874716553287,
+        "duration_s": 10
+      },
+      "audio": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.6322555860683013,
+        "clipping_fraction": 0.0,
+        "rms": 0.11109752951537048
+      },
+      "waveform_sha256": "ab289695630a96d392f44fb085eb32d8df9a220bd46c3a1e6db2ad4e004b3479",
+      "hypothesis": {
+        "text": ".",
+        "segments": [
+          {
+            "start": 0.0,
+            "end": 10.0,
+            "text": " .",
+            "avg_logprob": -0.9216188788414001,
+            "no_speech_prob": 8.773737986134122e-11,
+            "compression_ratio": 0.1111111111111111
+          }
+        ],
+        "language": "en",
+        "status": "unverified_hypothesis"
+      },
+      "transcription_s": 14.386605250183493
+    }
+  ],
+  "complete": true,
+  "elapsed_s": 122.53002241719514,
+  "status": "unverified ASR pilot; no word-accuracy or identity claim"
+}

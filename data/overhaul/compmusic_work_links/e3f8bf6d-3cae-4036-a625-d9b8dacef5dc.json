@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/e3f8bf6d-3cae-4036-a625-d9b8dacef5dc",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:18:16.096993+00:00",
+  "recording": {
+    "id": "e3f8bf6d-3cae-4036-a625-d9b8dacef5dc",
+    "first-release-date": "2005",
+    "relations": [
+      {
+        "ended": false,
+        "end": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "direction": "forward",
+        "type": "performance",
+        "target-credit": "",
+        "attribute-values": {},
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ],
+        "work": {
+          "type-id": null,
+          "id": "967d20f5-1d84-4c8e-b637-10571140e51b",
+          "attributes": [],
+          "language": null,
+          "type": null,
+          "disambiguation": "",
+          "languages": [],
+          "iswcs": [],
+          "title": "Enduku Nirdaya"
+        },
+        "source-credit": ""
+      }
+    ],
+    "length": 2292000,
+    "disambiguation": "",
+    "title": "Enduku Nirdaya",
+    "video": false
+  }
+}

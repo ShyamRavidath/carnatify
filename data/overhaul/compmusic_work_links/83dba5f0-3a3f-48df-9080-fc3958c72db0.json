@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/83dba5f0-3a3f-48df-9080-fc3958c72db0",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:51:42.949660+00:00",
+  "recording": {
+    "title": "Mamava sada",
+    "length": 1463000,
+    "relations": [
+      {
+        "target-type": "work",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "ended": false,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "type": "performance",
+        "begin": null,
+        "target-credit": "",
+        "end": null,
+        "attribute-values": {},
+        "source-credit": "",
+        "direction": "forward",
+        "attributes": [
+          "live"
+        ],
+        "work": {
+          "disambiguation": "Svati Tirunal krithi in Nataikurinji",
+          "attributes": [],
+          "iswcs": [],
+          "languages": [
+            "san"
+          ],
+          "type": "Song",
+          "id": "c6478eda-af24-479a-a2b5-e523824ecab5",
+          "language": "san",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "title": "Mamava sada varade"
+        }
+      }
+    ],
+    "video": false,
+    "id": "83dba5f0-3a3f-48df-9080-fc3958c72db0",
+    "disambiguation": "",
+    "first-release-date": "2011"
+  }
+}

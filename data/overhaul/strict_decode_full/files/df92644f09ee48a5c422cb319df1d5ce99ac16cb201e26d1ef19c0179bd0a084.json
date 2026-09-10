@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bilahari__paridAna miccidE",
+  "audio": "data/concert_audio/Bilahari/paridAna miccidE.mp3",
+  "audio_sha256": "df92644f09ee48a5c422cb319df1d5ce99ac16cb201e26d1ef19c0179bd0a084",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 6.566967582795769
+}

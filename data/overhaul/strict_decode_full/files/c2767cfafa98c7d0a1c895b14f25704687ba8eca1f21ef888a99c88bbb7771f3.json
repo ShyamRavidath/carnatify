@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kamās__jayati jayati",
+  "audio": "data/concert_audio/Kamās/jayati jayati.mp3",
+  "audio_sha256": "c2767cfafa98c7d0a1c895b14f25704687ba8eca1f21ef888a99c88bbb7771f3",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3984925001859665
+}

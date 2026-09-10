@@ -1,0 +1,60 @@
+{
+  "plan_sha256": "b92cd68264f7cc17b41fd231ddb378ac7f352b4c1dee5163ab14bbb850b081aa",
+  "file": "long_concert_3.mp3",
+  "audio_sha256": "544dffd4a31840e36485d38597235e2086e8feede64bbe1b4f5db86b1d4258a1",
+  "duration_s": 5495.768526077098,
+  "n_windows": 550,
+  "n_silent": 11,
+  "silent_intervals": [
+    {
+      "start_s": 2220.0,
+      "end_s": 2230.0
+    },
+    {
+      "start_s": 2230.0,
+      "end_s": 2240.0
+    },
+    {
+      "start_s": 2240.0,
+      "end_s": 2250.0
+    },
+    {
+      "start_s": 2250.0,
+      "end_s": 2260.0
+    },
+    {
+      "start_s": 2260.0,
+      "end_s": 2270.0
+    },
+    {
+      "start_s": 2270.0,
+      "end_s": 2280.0
+    },
+    {
+      "start_s": 2280.0,
+      "end_s": 2290.0
+    },
+    {
+      "start_s": 2290.0,
+      "end_s": 2300.0
+    },
+    {
+      "start_s": 2300.0,
+      "end_s": 2310.0
+    },
+    {
+      "start_s": 2310.0,
+      "end_s": 2320.0
+    },
+    {
+      "start_s": 2320.0,
+      "end_s": 2330.0
+    }
+  ],
+  "interior_rms_percentiles": {
+    "min": 0.0,
+    "p1": 0.0,
+    "p5": 0.04808054607913146,
+    "p50": 0.07750437630262019
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sāma__Unidentified",
+  "audio": "data/concert_audio/Sāma/Unidentified.mp3",
+  "audio_sha256": "1b3677a12471efcd2a7112b9813c0e4e17c864b2cf10c045fdd8b38f860cbba7",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7288639168255031
+}

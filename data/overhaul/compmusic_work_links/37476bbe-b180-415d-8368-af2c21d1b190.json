@@ -1,0 +1,14 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/37476bbe-b180-415d-8368-af2c21d1b190",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:29:15.112365+00:00",
+  "recording": {
+    "id": "37476bbe-b180-415d-8368-af2c21d1b190",
+    "length": 1561067,
+    "video": false,
+    "disambiguation": "",
+    "first-release-date": "2011",
+    "relations": [],
+    "title": "Buddhi Raadu"
+  }
+}

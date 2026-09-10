@@ -1,0 +1,18 @@
+{
+  "policy": "quarantine entire connected groups; no relabeling",
+  "reasons": {},
+  "removed_tracks": [],
+  "retained_tracks": 1248,
+  "removed_tracks_count": 0,
+  "duplicate_rows": [],
+  "invalid_supervision_tracks": [
+    "archive__Bhairavi__Veena Dhanammal ottupetra Ananda",
+    "archive__Cakravākaṁ__Melakartha Chakkaram Mayamalavagaula",
+    "archive__Dhanyāsi__namasivAya",
+    "archive__Nāṭa__NeraNammithiVarnam Kanada",
+    "archive__Nāṭa__Sanjay NeraNammithi Kanada",
+    "archive__Nāṭa__varNam"
+  ],
+  "duplicate_policy": "lexically first track per exact audio",
+  "limitation": "Exact bytes only; transformed copies, unknown artists and contour/audio joins remain unaudited."
+}

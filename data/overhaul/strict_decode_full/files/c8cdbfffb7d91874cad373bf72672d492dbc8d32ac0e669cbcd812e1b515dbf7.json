@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kamās__nArimaNi",
+  "audio": "data/concert_audio/Kamās/nArimaNi.mp3",
+  "audio_sha256": "c8cdbfffb7d91874cad373bf72672d492dbc8d32ac0e669cbcd812e1b515dbf7",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4458230840973556
+}

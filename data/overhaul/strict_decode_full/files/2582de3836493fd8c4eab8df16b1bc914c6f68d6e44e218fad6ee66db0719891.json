@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kānaḍa__jagadabi rAma",
+  "audio": "data/concert_audio/Kānaḍa/jagadabi rAma.mp3",
+  "audio_sha256": "2582de3836493fd8c4eab8df16b1bc914c6f68d6e44e218fad6ee66db0719891",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.23235424980521202
+}

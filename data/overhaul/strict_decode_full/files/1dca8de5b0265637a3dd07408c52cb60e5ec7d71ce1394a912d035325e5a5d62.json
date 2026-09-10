@@ -1,0 +1,11 @@
+{
+  "track": "archive__Māyāmāḷavagauḷa__dEva dEva kalyAmitE",
+  "audio": "data/concert_audio/Māyāmāḷavagauḷa/dEva dEva kalyAmitE.mp3",
+  "audio_sha256": "1dca8de5b0265637a3dd07408c52cb60e5ec7d71ce1394a912d035325e5a5d62",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.651889916975051
+}

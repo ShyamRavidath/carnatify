@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/ddd49417-2283-4ef4-b16e-3e2547530840",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:15:23.054911+00:00",
+  "recording": {
+    "relations": [
+      {
+        "source-credit": "",
+        "work": {
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "attributes": [],
+          "id": "26507f39-1596-41be-91b8-5e444ae210f7",
+          "type": "Song",
+          "language": "tam",
+          "iswcs": [],
+          "languages": [
+            "tam"
+          ],
+          "title": "Karpuram Naarumo",
+          "disambiguation": ""
+        },
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work",
+        "type": "performance",
+        "attribute-values": {},
+        "target-credit": "",
+        "direction": "forward",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "ended": false,
+        "end": null
+      }
+    ],
+    "length": 618000,
+    "id": "ddd49417-2283-4ef4-b16e-3e2547530840",
+    "first-release-date": "2010",
+    "video": false,
+    "disambiguation": "",
+    "title": "Tiru Kanden - Karpuram Narumo"
+  }
+}

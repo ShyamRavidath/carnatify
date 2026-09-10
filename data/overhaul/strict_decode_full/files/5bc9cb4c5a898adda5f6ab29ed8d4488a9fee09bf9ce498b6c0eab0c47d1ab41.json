@@ -1,0 +1,11 @@
+{
+  "track": "archive__Varāḷi__kA vAvA kandA vAvA",
+  "audio": "data/concert_audio/Varāḷi/kA vAvA kandA vAvA.mp3",
+  "audio_sha256": "5bc9cb4c5a898adda5f6ab29ed8d4488a9fee09bf9ce498b6c0eab0c47d1ab41",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.2110127499327064
+}

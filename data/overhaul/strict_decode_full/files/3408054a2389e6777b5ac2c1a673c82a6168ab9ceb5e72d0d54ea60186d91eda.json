@@ -1,0 +1,11 @@
+{
+  "track": "archive__Vasanta__kaNTa jUDumi okapAri",
+  "audio": "data/concert_audio/Vasanta/kaNTa jUDumi okapAri.mp3",
+  "audio_sha256": "3408054a2389e6777b5ac2c1a673c82a6168ab9ceb5e72d0d54ea60186d91eda",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.1033704169094563
+}

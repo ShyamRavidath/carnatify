@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/09695a4a-ae57-4b99-9baf-cb473dfd7e74",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:18:00.986119+00:00",
+  "recording": {
+    "id": "09695a4a-ae57-4b99-9baf-cb473dfd7e74",
+    "first-release-date": "2010",
+    "relations": [
+      {
+        "direction": "forward",
+        "type": "performance",
+        "target-credit": "",
+        "attribute-values": {},
+        "ended": false,
+        "end": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "work": {
+          "type-id": null,
+          "attributes": [],
+          "id": "41b9a6ab-6f8d-4b14-81cb-c895c2707506",
+          "type": null,
+          "language": null,
+          "disambiguation": "",
+          "title": "Marubalka",
+          "languages": [],
+          "iswcs": []
+        },
+        "source-credit": "",
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ]
+      }
+    ],
+    "length": 775000,
+    "disambiguation": "",
+    "title": "Marubalka",
+    "video": false
+  }
+}

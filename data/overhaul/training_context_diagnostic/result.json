@@ -1,0 +1,932 @@
+{
+  "plan_sha256": "57f99ebcf6315bcae893fe9b8c78a2eec3c087f97dd5159cd9ec403ee3bc6841",
+  "rows": [
+    {
+      "track": "archive__Mukhāri__enRaikku Shiva krupai",
+      "label": "Mukhāri",
+      "group": "item:78RPM-Ariyakudi-Ramanuja-Iyengar",
+      "start_s": 72.91065759637188,
+      "legacy_tonic_hz": 156.7394256591797,
+      "query_tonic_hz": 156.7394256591797,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "4bee702a51858bd6b60f0f831949a6b202813c1c78d77e280c1dd2677a56c35d",
+          "start_s": 72.91065759637188,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 156.7394256591797,
+        "audio": {
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.9999999999995504,
+          "clipping_fraction": 0.0,
+          "rms": 0.08301537670086356,
+          "source_sr": 44100
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 0.0,
+      "jointly_voiced_frames": 15702,
+      "pitch_class_agreement_50c": 1.0,
+      "feature_cosine": 0.999888110971913
+    },
+    {
+      "track": "archive__Bēgaḍa__karuNAkara",
+      "label": "Bēgaḍa",
+      "group": "item:089-tns",
+      "start_s": 230.6380045351474,
+      "legacy_tonic_hz": 142.05638122558594,
+      "query_tonic_hz": 142.05638122558594,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "7af02fbe9dde5a4e866a7f2508b788d0ec894249f13d54dbadf38db87f5afc47",
+          "start_s": 230.6380045351474,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 142.05638122558594,
+        "audio": {
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.9999999999995093,
+          "clipping_fraction": 0.0,
+          "rms": 0.09338387636024667,
+          "source_sr": 44100
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 0.0,
+      "jointly_voiced_frames": 10006,
+      "pitch_class_agreement_50c": 0.9975014991005396,
+      "feature_cosine": 0.9935049616728421
+    },
+    {
+      "track": "archive__Maṇirangu__Yar Enna Sonnalum",
+      "label": "Maṇirangu",
+      "group": "item:gayathri-girish-vocal-2",
+      "start_s": 155.00480725623584,
+      "legacy_tonic_hz": 105.14666748046875,
+      "query_tonic_hz": 105.14666748046875,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "6fa79a1ad5a820efadc6bfbae64b5b39bf2384e9d341fd72095593e009f31ed9",
+          "start_s": 155.00480725623584,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 105.14666748046875,
+        "audio": {
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.6328328021630992,
+          "clipping_fraction": 0.0,
+          "rms": 0.12178257942598,
+          "source_sr": 48000
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 0.0,
+      "jointly_voiced_frames": 14800,
+      "pitch_class_agreement_50c": 0.9979729729729729,
+      "feature_cosine": 0.9988753398856237
+    },
+    {
+      "track": "archive__Hindōḷaṁ__mA ramaNan",
+      "label": "Hindōḷaṁ",
+      "group": "item:05-k-ana-kank-odi-kambh-oji",
+      "start_s": 380.97269841269843,
+      "legacy_tonic_hz": 144.54368591308594,
+      "query_tonic_hz": 191.9225616455078,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "9ff73d23e3402aaa0d765b36f61e915408ff2b1c48564399d0549232dfb8206e",
+          "start_s": 380.97269841269843,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 191.9225616455078,
+        "audio": {
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.0,
+          "rms": 0.13806045951454365,
+          "source_sr": 44100
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 490.8224758132915,
+      "jointly_voiced_frames": 12195,
+      "pitch_class_agreement_50c": 1.0,
+      "feature_cosine": 0.4859706547971571
+    },
+    {
+      "track": "archive__Puṇṇāgavarāḷi__tavatAsOham",
+      "label": "Puṇṇāgavarāḷi",
+      "group": "item:20-tsk",
+      "start_s": 124.76371882086168,
+      "legacy_tonic_hz": 182.1842803955078,
+      "query_tonic_hz": 136.4178466796875,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "ddfd646d94fe375f279c88f109f7e72961db0c6fe09ca6f2c8ba83121e5a61c6",
+          "start_s": 124.76371882086168,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 136.4178466796875,
+        "audio": {
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.7214240245603893,
+          "clipping_fraction": 0.0,
+          "rms": 0.09154069048264082,
+          "source_sr": 44100
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 500.83930506486996,
+      "jointly_voiced_frames": 13768,
+      "pitch_class_agreement_50c": 1.0,
+      "feature_cosine": 0.6053299660767452
+    },
+    {
+      "track": "archive__Ṣanmukhapriya__vaddanE vAru lEru",
+      "label": "Ṣanmukhapriya",
+      "group": "item:37-ess",
+      "start_s": 637.7418594104308,
+      "legacy_tonic_hz": 157.64892578125,
+      "query_tonic_hz": 118.04603576660156,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "af2f39e6620c61d84cbe1d0e6b6867421ec039d091ebc2cda126373f80bd829b",
+          "start_s": 637.7418594104308,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 118.04603576660156,
+        "audio": {
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.0,
+          "rms": 0.10108433028632934,
+          "source_sr": 44100
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 500.83889506153764,
+      "jointly_voiced_frames": 13703,
+      "pitch_class_agreement_50c": 0.9983215354301977,
+      "feature_cosine": 0.48463738866907513
+    },
+    {
+      "track": "archive__Behāg__gayatrigirish irakkamvaramal",
+      "label": "Behāg",
+      "group": "item:28thJune2009_GayatriGirish_Part1",
+      "start_s": 136.3098412698413,
+      "legacy_tonic_hz": 206.91517639160156,
+      "query_tonic_hz": 206.91517639160156,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "09c7fea71885b65988a2c56842c5a965f1d184b49ae6173bbb95de6b202b7df3",
+          "start_s": 136.3098412698413,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 206.91517639160156,
+        "audio": {
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.4243803955412477,
+          "clipping_fraction": 0.00010506424792139078,
+          "rms": 0.1870396092640912,
+          "source_sr": 44100
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 0.0,
+      "jointly_voiced_frames": 11792,
+      "pitch_class_agreement_50c": 0.9465739484396201,
+      "feature_cosine": 0.9927806691094825
+    },
+    {
+      "track": "archive__Mōhanaṁ__maravA varam",
+      "label": "Mōhanaṁ",
+      "group": "item:Bidaram-Krishnappa",
+      "start_s": 155.50984126984127,
+      "legacy_tonic_hz": 169.96417236328125,
+      "query_tonic_hz": 169.96417236328125,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "90408b3f9c5bdca4d4cb2ed7511d40548b0829b2e700950e7439d6e2d2640042",
+          "start_s": 155.50984126984127,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 169.96417236328125,
+        "audio": {
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.8110495996605341,
+          "clipping_fraction": 0.0,
+          "rms": 0.1605637383767135,
+          "source_sr": 44100
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 0.0,
+      "jointly_voiced_frames": 14483,
+      "pitch_class_agreement_50c": 0.9996547676586343,
+      "feature_cosine": 0.9995148392416814
+    },
+    {
+      "track": "archive__Nāṭa__swAminata paripAlayAsumAm",
+      "label": "Nāṭa",
+      "group": "item:20-tsk",
+      "start_s": 229.43637188208618,
+      "legacy_tonic_hz": 135.63082885742188,
+      "query_tonic_hz": 135.63082885742188,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "a83192f6c55ca66b1c4a9ffe17fdc652353960bd0a71c35301cf9cc5554bdfc1",
+          "start_s": 229.43637188208618,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 135.63082885742188,
+        "audio": {
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.6904755248349213,
+          "clipping_fraction": 0.0,
+          "rms": 0.07219019898958995,
+          "source_sr": 44100
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 0.0,
+      "jointly_voiced_frames": 12455,
+      "pitch_class_agreement_50c": 0.9857888398233641,
+      "feature_cosine": 0.9962346587068802
+    },
+    {
+      "track": "archive__Sindhubhairavi__kumAradanDapANi",
+      "label": "Sindhubhairavi",
+      "group": "item:tnk-vr-thk-hmv",
+      "start_s": 102.4928798185941,
+      "legacy_tonic_hz": 173.94363403320312,
+      "query_tonic_hz": 173.94363403320312,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "ceb473162b601c9e9e9f3e15b1124d1f9b752eeba07325923c30c213ad545eed",
+          "start_s": 102.4928798185941,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 173.94363403320312,
+        "audio": {
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.8540801190280022,
+          "clipping_fraction": 0.0,
+          "rms": 0.05563356267930577,
+          "source_sr": 44100
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 0.0,
+      "jointly_voiced_frames": 14204,
+      "pitch_class_agreement_50c": 0.9999295972965362,
+      "feature_cosine": 0.9960773979763546
+    },
+    {
+      "track": "archive__Rītigauḷa__janani ninnuvinA",
+      "label": "Rītigauḷa",
+      "group": "item:316-tns",
+      "start_s": 263.08208616780047,
+      "legacy_tonic_hz": 135.63082885742188,
+      "query_tonic_hz": 134.8483428955078,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "9388de77db7b799e55123afc2114732a41ee8073aa6ee7cec4d2114a175e18f5",
+          "start_s": 263.08208616780047,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 134.8483428955078,
+        "audio": {
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.9476972533923275,
+          "clipping_fraction": 0.0,
+          "rms": 0.12927906076964968,
+          "source_sr": 44100
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 10.01681653040373,
+      "jointly_voiced_frames": 13897,
+      "pitch_class_agreement_50c": 0.9962581852198317,
+      "feature_cosine": 0.9805838857748264
+    },
+    {
+      "track": "archive__Rītigauḷa__varnam",
+      "label": "Rītigauḷa",
+      "group": "item:Bidaram-Krishnappa",
+      "start_s": 162.29006802721088,
+      "legacy_tonic_hz": 128.0060577392578,
+      "query_tonic_hz": 171.9423828125,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "233410b2f57cb74d9e4dd35be7236c2da2f355ebe5996da4273d40f85e12d062",
+          "start_s": 162.29006802721088,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 171.9423828125,
+        "audio": {
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.0,
+          "rms": 0.2228838363208167,
+          "source_sr": 44100
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 510.8557427925323,
+      "jointly_voiced_frames": 15332,
+      "pitch_class_agreement_50c": 0.999934776937125,
+      "feature_cosine": 0.7672681326700515
+    },
+    {
+      "track": "archive__Ābhōgī__sabhApatikku",
+      "label": "Ābhōgi",
+      "group": "item:05-k-ana-kank-odi-kambh-oji",
+      "start_s": 729.5767800453515,
+      "legacy_tonic_hz": 99.81144714355469,
+      "query_tonic_hz": 224.37342834472656,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "cb600aa550e88235869f527cbed15288f951113f5415d075a97ca99be2148da6",
+          "start_s": 729.5767800453515,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 224.37342834472656,
+        "audio": {
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.9164123423466124,
+          "clipping_fraction": 0.0,
+          "rms": 0.14450802545769406,
+          "source_sr": 44100
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 202.34957267499044,
+      "jointly_voiced_frames": 10841,
+      "pitch_class_agreement_50c": 0.9858869108015865,
+      "feature_cosine": 0.380127002795887
+    },
+    {
+      "track": "archive__Dhanyāsi__06 BalakrishnanPadhaMalar",
+      "label": "Dhanyāsi",
+      "group": "item:KVN_MC_UKS_fullConcert",
+      "start_s": 147.0055328798186,
+      "legacy_tonic_hz": 128.0060577392578,
+      "query_tonic_hz": 128.0060577392578,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "1238205b8a936db47783a8efdbeb4648d3a30b340fc5802455f1333f4f5ad0f1",
+          "start_s": 147.0055328798186,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 128.0060577392578,
+        "audio": {
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.45360599943628505,
+          "clipping_fraction": 0.0,
+          "rms": 0.0676635129139948,
+          "source_sr": 44100
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 0.0,
+      "jointly_voiced_frames": 8937,
+      "pitch_class_agreement_50c": 0.9904889784043862,
+      "feature_cosine": 0.9906050581864262
+    },
+    {
+      "track": "archive__Rītigauḷa__Janani Raag",
+      "label": "Rītigauḷa",
+      "group": "item:MANDOLIN",
+      "start_s": 265.96716553287985,
+      "legacy_tonic_hz": 132.5278778076172,
+      "query_tonic_hz": 132.5278778076172,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "5063568b2d60411d7863b9d2c4a34300c74e1cc12626759fb0ad6fbe38e2955f",
+          "start_s": 265.96716553287985,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 132.5278778076172,
+        "audio": {
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.6848890703373806,
+          "clipping_fraction": 0.0,
+          "rms": 0.10092718893039145,
+          "source_sr": 44100
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 0.0,
+      "jointly_voiced_frames": 15200,
+      "pitch_class_agreement_50c": 0.9998026315789473,
+      "feature_cosine": 0.9992549572111972
+    },
+    {
+      "track": "archive__Latāngi__marivEre dikkevvaru",
+      "label": "Latāngi",
+      "group": "item:36-ess",
+      "start_s": 568.8308390022676,
+      "legacy_tonic_hz": 151.39151000976562,
+      "query_tonic_hz": 152.2699737548828,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "133909df3efcc06e5ad1bde945b5529eb8e35ff96f0959c6cb8aee06e6e91fd5",
+          "start_s": 568.8308390022676,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 152.2699737548828,
+        "audio": {
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.0,
+          "rms": 0.17583650207770415,
+          "source_sr": 44100
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 10.016618308855755,
+      "jointly_voiced_frames": 12796,
+      "pitch_class_agreement_50c": 0.9967177242888403,
+      "feature_cosine": 0.9582215781072597
+    },
+    {
+      "track": "archive__Haṁsānandi__smaravAram",
+      "label": "Haṁsānandi",
+      "group": "item:20-tsk",
+      "start_s": 107.91473922902495,
+      "legacy_tonic_hz": 136.4178466796875,
+      "query_tonic_hz": 136.4178466796875,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "4455a68fbdef0c73b95b9842cfa45654fed8c8894f2165a1bb62eecd9d5a6a5f",
+          "start_s": 107.91473922902495,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 136.4178466796875,
+        "audio": {
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.7197048778901153,
+          "clipping_fraction": 0.0,
+          "rms": 0.08574414531529792,
+          "source_sr": 44100
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 0.0,
+      "jointly_voiced_frames": 16106,
+      "pitch_class_agreement_50c": 1.0,
+      "feature_cosine": 0.9982213106043952
+    },
+    {
+      "track": "archive__Aṭāna__Sri Saraswati",
+      "label": "Aṭāna",
+      "group": "item:416RKS",
+      "start_s": 270.5792290249433,
+      "legacy_tonic_hz": 142.8806915283203,
+      "query_tonic_hz": 143.70980834960938,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "c84763674bde45606aaa9267a2d12e0be5d4bee6d50fa587351008d23d8fc384",
+          "start_s": 270.5792290249433,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 143.70980834960938,
+        "audio": {
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.2059560136784442,
+          "clipping_fraction": 0.0,
+          "rms": 0.1310935060165169,
+          "source_sr": 44100
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 10.017075073261594,
+      "jointly_voiced_frames": 12474,
+      "pitch_class_agreement_50c": 0.9635241301907969,
+      "feature_cosine": 0.9770760490438689
+    },
+    {
+      "track": "archive__Suraṭi__geetArthamu sangeetAnandamu",
+      "label": "Suraṭi",
+      "group": "artist:kvnarayanaswami",
+      "start_s": 145.94902494331066,
+      "legacy_tonic_hz": 128.0060577392578,
+      "query_tonic_hz": 128.0060577392578,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "823629b13a1ed8accb972b0349bacaaed6cdb117e48554ae142cc4c0bfe05dd2",
+          "start_s": 145.94902494331066,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 128.0060577392578,
+        "audio": {
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.781404770196299,
+          "clipping_fraction": 0.0,
+          "rms": 0.08091624195217323,
+          "source_sr": 44100
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 0.0,
+      "jointly_voiced_frames": 14851,
+      "pitch_class_agreement_50c": 1.0,
+      "feature_cosine": 0.9968887904277909
+    },
+    {
+      "track": "archive__Mōhanaṁ__kAdambari",
+      "label": "Mōhanaṁ",
+      "group": "item:01VarnamPantuvarali",
+      "start_s": 868.4321088435374,
+      "legacy_tonic_hz": 121.51092529296875,
+      "query_tonic_hz": 120.8099136352539,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "9b546b7c94cf12d4eb4456a59d9d770ab5f04fc339e6df634104b041f1621ae1",
+          "start_s": 868.4321088435374,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 120.8099136352539,
+        "audio": {
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.9999999999994724,
+          "clipping_fraction": 0.0,
+          "rms": 0.12795718045937848,
+          "source_sr": 44100
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 10.01662623453683,
+      "jointly_voiced_frames": 14897,
+      "pitch_class_agreement_50c": 0.9917433040209438,
+      "feature_cosine": 0.9749284815257464
+    },
+    {
+      "track": "archive__Behāg__kanDu dhanyanA",
+      "label": "Behāg",
+      "group": "artist:kvnarayanaswami",
+      "start_s": 84.4974149659864,
+      "legacy_tonic_hz": 118.04603576660156,
+      "query_tonic_hz": 118.04603576660156,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "ff5098fd0a1f64ef6109775a36ed41960889e7ecc6bb5a18226133b6ecc65380",
+          "start_s": 84.4974149659864,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 118.04603576660156,
+        "audio": {
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.3139367061991787,
+          "clipping_fraction": 0.0,
+          "rms": 0.06667487847957661,
+          "source_sr": 44100
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 0.0,
+      "jointly_voiced_frames": 15451,
+      "pitch_class_agreement_50c": 0.9965698013073587,
+      "feature_cosine": 0.9983577658948343
+    },
+    {
+      "track": "archive__Varāḷi__Eti Janma",
+      "label": "Varāḷi",
+      "group": "item:416RKS",
+      "start_s": 112.44843537414967,
+      "legacy_tonic_hz": 138.8064422607422,
+      "query_tonic_hz": 138.8064422607422,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "1583e7d7a7d124ab13dae05ba08d7ac52ea178786bca0d1de047644a8834193a",
+          "start_s": 112.44843537414967,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 138.8064422607422,
+        "audio": {
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.8811182234329696,
+          "clipping_fraction": 0.16780102040816328,
+          "rms": 0.7050709499528055,
+          "source_sr": 44100
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 0.0,
+      "jointly_voiced_frames": 16699,
+      "pitch_class_agreement_50c": 0.9917360320977304,
+      "feature_cosine": 0.9979826597047768
+    },
+    {
+      "track": "archive__Suraṭi__kamalanayana",
+      "label": "Suraṭi",
+      "group": "item:01VarnamPantuvarali",
+      "start_s": 148.39292517006803,
+      "legacy_tonic_hz": 123.63849639892578,
+      "query_tonic_hz": 185.3741912841797,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "166275118754f277483e9b4b9abcd9706f58b1d041700a9ff8d331917871e1b3",
+          "start_s": 148.39292517006803,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 185.3741912841797,
+        "audio": {
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.9999999999994877,
+          "clipping_fraction": 0.0,
+          "rms": 0.1267188183540193,
+          "source_sr": 44100
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 498.8251387661926,
+      "jointly_voiced_frames": 14309,
+      "pitch_class_agreement_50c": 0.9993710252288769,
+      "feature_cosine": 0.8920769357898013
+    },
+    {
+      "track": "archive__Kamās__B Marulu Konnadhira",
+      "label": "Kamās",
+      "group": "item:a-neethu-mahima-hamsadwani",
+      "start_s": 64.05804988662132,
+      "legacy_tonic_hz": 198.70225524902344,
+      "query_tonic_hz": 199.85525512695312,
+      "query_metadata": {
+        "contract": {
+          "version": "mixed_tonic_query_melodia_v1",
+          "audio_sha256": "7d7aef9d702f6759687f0a3ef599a94d9992992b42adeb7182c403332fa2ba87",
+          "start_s": 64.05804988662132,
+          "duration_s": 60.0,
+          "melodia_parameters": {
+            "sampleRate": 44100,
+            "frameSize": 2048,
+            "hopSize": 128
+          },
+          "profile": "default",
+          "hpss_parameters": null
+        },
+        "tonic_hz": 199.85525512695312,
+        "audio": {
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.9999999999995054,
+          "clipping_fraction": 0.0,
+          "rms": 0.10639128771261433,
+          "source_sr": 48000
+        },
+        "extraction_failure": null,
+        "actual_duration_s": 60.0
+      },
+      "tonic_pitch_class_difference_cents": 10.016713592542715,
+      "jointly_voiced_frames": 15815,
+      "pitch_class_agreement_50c": 0.9546632943408156,
+      "feature_cosine": 0.9744515844503172
+    }
+  ],
+  "summary": {
+    "tonic_pitch_class_difference_cents": {
+      "n": 24,
+      "median": 0.0
+    },
+    "pitch_class_agreement_50c": {
+      "n": 24,
+      "median": 0.9977372360367562
+    },
+    "feature_cosine": {
+      "n": 24,
+      "median": 0.9916928636479543
+    }
+  },
+  "limitation": "Training-only context mismatch diagnostic; neither frontend is independent ground truth"
+}

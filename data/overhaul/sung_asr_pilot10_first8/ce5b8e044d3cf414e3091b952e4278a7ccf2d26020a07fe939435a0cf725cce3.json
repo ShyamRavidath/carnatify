@@ -1,0 +1,35 @@
+{
+  "plan_sha256": "5a583f91b605504a2a0253c877138662a6a91dc0ee37b2bd6b3167a5c101611c",
+  "query": {
+    "track": "154_Innamum_Oru_thalam",
+    "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/Innamum Oru thalam/Sanjay Subrahmanyan - Innamum Oru thalam.mp3",
+    "audio_sha256": "fa647899b0d184baf8eaf0ae9c9d86f2c36b6c70f4c2d9eab902c369795f06c7",
+    "start_s": 146.44,
+    "duration_s": 10
+  },
+  "audio": {
+    "source_sr": 44100,
+    "channels": 2,
+    "downmix": "mean",
+    "downmix_power_ratio": 0.7538002492688758,
+    "clipping_fraction": 0.0,
+    "rms": 0.08789657615174663
+  },
+  "waveform_sha256": "b00557d28efd512579af359bf1109b5aff340a256e6befcabe8fccf57d219ac5",
+  "hypothesis": {
+    "text": "I'm sorry.",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 10.0,
+        "text": " I'm sorry.",
+        "avg_logprob": -1.8608229500906808,
+        "no_speech_prob": 4.067902903415188e-09,
+        "compression_ratio": 0.5555555555555556
+      }
+    ],
+    "language": "en",
+    "status": "unverified_hypothesis"
+  },
+  "transcription_s": 13.81903195893392
+}

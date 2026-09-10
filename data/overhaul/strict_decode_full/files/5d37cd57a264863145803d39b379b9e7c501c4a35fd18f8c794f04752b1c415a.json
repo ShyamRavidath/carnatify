@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāmavardani__appa rAma bhakti",
+  "audio": "data/concert_audio/Kāmavardani/appa rAma bhakti.mp3",
+  "audio_sha256": "5d37cd57a264863145803d39b379b9e7c501c4a35fd18f8c794f04752b1c415a",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5620574168860912
+}

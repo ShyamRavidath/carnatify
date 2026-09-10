@@ -1,0 +1,45 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/7e8015eb-ca83-464d-aec6-ee0f50ab1186",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:50:00.318001+00:00",
+  "recording": {
+    "length": 958268,
+    "relations": [
+      {
+        "direction": "forward",
+        "attribute-values": {},
+        "target-credit": "",
+        "type": "performance",
+        "end": null,
+        "ended": false,
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "work": {
+          "language": "tel",
+          "type": "Song",
+          "disambiguation": "Varali Krithi by Thyagaraja",
+          "languages": [
+            "tel"
+          ],
+          "iswcs": [],
+          "title": "Maragathamani Varna",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "id": "d3a89351-5445-4a39-b4e5-7de171835a0a",
+          "attributes": []
+        },
+        "source-credit": "",
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work"
+      }
+    ],
+    "id": "7e8015eb-ca83-464d-aec6-ee0f50ab1186",
+    "video": false,
+    "title": "Maragathamani",
+    "disambiguation": ""
+  }
+}

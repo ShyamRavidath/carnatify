@@ -1,0 +1,414 @@
+{
+  "plan_sha256": "9b9989919bf41def200f25d26b2e698c5dc4bf846ddaad91b89709c7a2759f14",
+  "rows": [
+    {
+      "track": "112_Rama_Rama_Guna_Seema",
+      "unique_codes": 219,
+      "audio": {
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9453217195462659,
+        "clipping_fraction": 0.0,
+        "rms": 0.09128227048164442,
+        "source_sr": 44100
+      },
+      "transforms": {
+        "identity": {
+          "bit_error": 0.0,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        },
+        "gain_0_35": {
+          "bit_error": 0.0001414027149321267,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        },
+        "leading_silence_3_7s": {
+          "bit_error": 0.01795814479638009,
+          "shift_frames": 30,
+          "overlap_frames": 221
+        },
+        "mp3_64k": {
+          "bit_error": 0.0055147058823529415,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        }
+      },
+      "screening_flags": {
+        "identity": [
+          {
+            "query_index": 0,
+            "bit_error": 0.0,
+            "query_frame": 0,
+            "reference_frame": 0,
+            "landmark_votes": 221,
+            "offset_frames": 0,
+            "window_frames": 160
+          }
+        ],
+        "gain_0_35": [
+          {
+            "query_index": 0,
+            "bit_error": 0.0001953125,
+            "query_frame": 0,
+            "reference_frame": 0,
+            "landmark_votes": 220,
+            "offset_frames": 0,
+            "window_frames": 160
+          }
+        ],
+        "leading_silence_3_7s": [
+          {
+            "query_index": 0,
+            "bit_error": 0.016796875,
+            "query_frame": 38,
+            "reference_frame": 68,
+            "landmark_votes": 120,
+            "offset_frames": 30,
+            "window_frames": 160
+          }
+        ],
+        "mp3_64k": [
+          {
+            "query_index": 0,
+            "bit_error": 0.0044921875,
+            "query_frame": 38,
+            "reference_frame": 38,
+            "landmark_votes": 186,
+            "offset_frames": 0,
+            "window_frames": 160
+          }
+        ]
+      }
+    },
+    {
+      "track": "19_Marubari",
+      "unique_codes": 219,
+      "audio": {
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9967753816057366,
+        "clipping_fraction": 0.0,
+        "rms": 0.05637752933164966,
+        "source_sr": 44100
+      },
+      "transforms": {
+        "identity": {
+          "bit_error": 0.0,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        },
+        "gain_0_35": {
+          "bit_error": 0.0001414027149321267,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        },
+        "leading_silence_3_7s": {
+          "bit_error": 0.02135180995475113,
+          "shift_frames": 30,
+          "overlap_frames": 221
+        },
+        "mp3_64k": {
+          "bit_error": 0.0029694570135746605,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        }
+      },
+      "screening_flags": {
+        "identity": [
+          {
+            "query_index": 0,
+            "bit_error": 0.0,
+            "query_frame": 0,
+            "reference_frame": 0,
+            "landmark_votes": 221,
+            "offset_frames": 0,
+            "window_frames": 160
+          }
+        ],
+        "gain_0_35": [
+          {
+            "query_index": 0,
+            "bit_error": 0.0,
+            "query_frame": 0,
+            "reference_frame": 0,
+            "landmark_votes": 220,
+            "offset_frames": 0,
+            "window_frames": 160
+          }
+        ],
+        "leading_silence_3_7s": [
+          {
+            "query_index": 0,
+            "bit_error": 0.0197265625,
+            "query_frame": 61,
+            "reference_frame": 91,
+            "landmark_votes": 102,
+            "offset_frames": 30,
+            "window_frames": 160
+          }
+        ],
+        "mp3_64k": [
+          {
+            "query_index": 0,
+            "bit_error": 0.0025390625,
+            "query_frame": 18,
+            "reference_frame": 18,
+            "landmark_votes": 200,
+            "offset_frames": 0,
+            "window_frames": 160
+          }
+        ]
+      }
+    },
+    {
+      "track": "17_Eranapai",
+      "unique_codes": 217,
+      "audio": {
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9887554162435777,
+        "clipping_fraction": 0.0,
+        "rms": 0.040686066405793524,
+        "source_sr": 44100
+      },
+      "transforms": {
+        "identity": {
+          "bit_error": 0.0,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        },
+        "gain_0_35": {
+          "bit_error": 0.0,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        },
+        "leading_silence_3_7s": {
+          "bit_error": 0.017109728506787332,
+          "shift_frames": 30,
+          "overlap_frames": 221
+        },
+        "mp3_64k": {
+          "bit_error": 0.004524886877828055,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        }
+      },
+      "screening_flags": {
+        "identity": [
+          {
+            "query_index": 0,
+            "bit_error": 0.0,
+            "query_frame": 0,
+            "reference_frame": 0,
+            "landmark_votes": 221,
+            "offset_frames": 0,
+            "window_frames": 160
+          }
+        ],
+        "gain_0_35": [
+          {
+            "query_index": 0,
+            "bit_error": 0.0,
+            "query_frame": 0,
+            "reference_frame": 0,
+            "landmark_votes": 221,
+            "offset_frames": 0,
+            "window_frames": 160
+          }
+        ],
+        "leading_silence_3_7s": [
+          {
+            "query_index": 0,
+            "bit_error": 0.0166015625,
+            "query_frame": 2,
+            "reference_frame": 32,
+            "landmark_votes": 126,
+            "offset_frames": 30,
+            "window_frames": 160
+          }
+        ],
+        "mp3_64k": [
+          {
+            "query_index": 0,
+            "bit_error": 0.004296875,
+            "query_frame": 54,
+            "reference_frame": 54,
+            "landmark_votes": 190,
+            "offset_frames": 0,
+            "window_frames": 160
+          }
+        ]
+      }
+    },
+    {
+      "track": "223_Ramachandraya_Mangalam",
+      "unique_codes": 220,
+      "audio": {
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9447738562424537,
+        "clipping_fraction": 0.0,
+        "rms": 0.022187110231426468,
+        "source_sr": 44100
+      },
+      "transforms": {
+        "identity": {
+          "bit_error": 0.0,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        },
+        "gain_0_35": {
+          "bit_error": 0.0,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        },
+        "leading_silence_3_7s": {
+          "bit_error": 0.02050339366515837,
+          "shift_frames": 30,
+          "overlap_frames": 221
+        },
+        "mp3_64k": {
+          "bit_error": 0.006221719457013574,
+          "shift_frames": 0,
+          "overlap_frames": 221
+        }
+      },
+      "screening_flags": {
+        "identity": [
+          {
+            "query_index": 0,
+            "bit_error": 0.0,
+            "query_frame": 0,
+            "reference_frame": 0,
+            "landmark_votes": 221,
+            "offset_frames": 0,
+            "window_frames": 160
+          }
+        ],
+        "gain_0_35": [
+          {
+            "query_index": 0,
+            "bit_error": 0.0,
+            "query_frame": 0,
+            "reference_frame": 0,
+            "landmark_votes": 221,
+            "offset_frames": 0,
+            "window_frames": 160
+          }
+        ],
+        "leading_silence_3_7s": [
+          {
+            "query_index": 0,
+            "bit_error": 0.0185546875,
+            "query_frame": 49,
+            "reference_frame": 79,
+            "landmark_votes": 110,
+            "offset_frames": 30,
+            "window_frames": 160
+          }
+        ],
+        "mp3_64k": [
+          {
+            "query_index": 0,
+            "bit_error": 0.0056640625,
+            "query_frame": 0,
+            "reference_frame": 0,
+            "landmark_votes": 181,
+            "offset_frames": 0,
+            "window_frames": 160
+          }
+        ]
+      }
+    }
+  ],
+  "different_recording_pairs": [
+    {
+      "a": "19_Marubari",
+      "b": "112_Rama_Rama_Guna_Seema",
+      "alignment": {
+        "bit_error": 0.43649193548387094,
+        "shift_frames": 35,
+        "overlap_frames": 186
+      }
+    },
+    {
+      "a": "17_Eranapai",
+      "b": "112_Rama_Rama_Guna_Seema",
+      "alignment": {
+        "bit_error": 0.4332600502512563,
+        "shift_frames": -22,
+        "overlap_frames": 199
+      }
+    },
+    {
+      "a": "17_Eranapai",
+      "b": "19_Marubari",
+      "alignment": {
+        "bit_error": 0.44955357142857144,
+        "shift_frames": -11,
+        "overlap_frames": 210
+      }
+    },
+    {
+      "a": "223_Ramachandraya_Mangalam",
+      "b": "112_Rama_Rama_Guna_Seema",
+      "alignment": {
+        "bit_error": 0.50375,
+        "shift_frames": 46,
+        "overlap_frames": 175
+      }
+    },
+    {
+      "a": "223_Ramachandraya_Mangalam",
+      "b": "19_Marubari",
+      "alignment": {
+        "bit_error": 0.47554347826086957,
+        "shift_frames": -37,
+        "overlap_frames": 184
+      }
+    },
+    {
+      "a": "223_Ramachandraya_Mangalam",
+      "b": "17_Eranapai",
+      "alignment": {
+        "bit_error": 0.4636418269230769,
+        "shift_frames": 13,
+        "overlap_frames": 208
+      }
+    }
+  ],
+  "limitation": "Small robustness pilot; not a validated corpus-wide duplicate threshold",
+  "different_recording_screening_flags": [
+    {
+      "a": "19_Marubari",
+      "b": "112_Rama_Rama_Guna_Seema",
+      "flags": []
+    },
+    {
+      "a": "17_Eranapai",
+      "b": "112_Rama_Rama_Guna_Seema",
+      "flags": []
+    },
+    {
+      "a": "17_Eranapai",
+      "b": "19_Marubari",
+      "flags": []
+    },
+    {
+      "a": "223_Ramachandraya_Mangalam",
+      "b": "112_Rama_Rama_Guna_Seema",
+      "flags": []
+    },
+    {
+      "a": "223_Ramachandraya_Mangalam",
+      "b": "19_Marubari",
+      "flags": []
+    },
+    {
+      "a": "223_Ramachandraya_Mangalam",
+      "b": "17_Eranapai",
+      "flags": []
+    }
+  ]
+}

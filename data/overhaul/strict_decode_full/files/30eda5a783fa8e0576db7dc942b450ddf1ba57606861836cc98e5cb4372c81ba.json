@@ -1,0 +1,11 @@
+{
+  "track": "archive__Varāḷi__RTP",
+  "audio": "data/concert_audio/Varāḷi/RTP.mp3",
+  "audio_sha256": "30eda5a783fa8e0576db7dc942b450ddf1ba57606861836cc98e5cb4372c81ba",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.5301467911340296
+}

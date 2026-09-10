@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ānandabhairavi__mukthAhAra Slokam Adi Shankara",
+  "audio": "data/concert_audio/Ānandabhairavi/mukthAhAra Slokam Adi Shankara.mp3",
+  "audio_sha256": "492fd8fff8ce15c645b25fb7802776c75f629d96c766be7fd965fb4261f93a3b",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5703906249254942
+}

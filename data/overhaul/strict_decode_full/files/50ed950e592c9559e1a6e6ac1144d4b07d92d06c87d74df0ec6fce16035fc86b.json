@@ -1,0 +1,11 @@
+{
+  "track": "archive__Pūrvīkaḷyāṇi__inda parAmukam",
+  "audio": "data/concert_audio/Pūrvīkaḷyāṇi/inda parAmukam.mp3",
+  "audio_sha256": "50ed950e592c9559e1a6e6ac1144d4b07d92d06c87d74df0ec6fce16035fc86b",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 4.573878958821297
+}

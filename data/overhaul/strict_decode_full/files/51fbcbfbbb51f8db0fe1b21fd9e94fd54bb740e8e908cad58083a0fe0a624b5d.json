@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bhairavi__Arukku ponnambalam",
+  "audio": "data/concert_audio/Bhairavi/Arukku ponnambalam.mp3",
+  "audio_sha256": "51fbcbfbbb51f8db0fe1b21fd9e94fd54bb740e8e908cad58083a0fe0a624b5d",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8363664168864489
+}

@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/1b522203-3dc5-4348-8bdb-3a7f3ac2a485",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:21:48.673539+00:00",
+  "recording": {
+    "disambiguation": "",
+    "first-release-date": "2009",
+    "title": "Emani Vegintune",
+    "relations": [
+      {
+        "ended": false,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "source-credit": "",
+        "target-credit": "",
+        "type": "performance",
+        "begin": null,
+        "target-type": "work",
+        "direction": "forward",
+        "attribute-values": {},
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "work": {
+          "title": "Emani Vegintune",
+          "disambiguation": "",
+          "iswcs": [],
+          "attributes": [],
+          "language": null,
+          "type-id": null,
+          "id": "9cfa6013-7e81-4098-a116-4d643bc3c4c2",
+          "languages": [],
+          "type": null
+        },
+        "attributes": [
+          "live"
+        ],
+        "end": null
+      }
+    ],
+    "id": "1b522203-3dc5-4348-8bdb-3a7f3ac2a485",
+    "video": false,
+    "length": 310000
+  }
+}

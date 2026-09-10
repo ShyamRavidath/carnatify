@@ -1,0 +1,11 @@
+{
+  "track": "archive__Hamsadhvāni__vAtApi",
+  "audio": "data/concert_audio/Hamsadhvāni/vAtApi.mp3",
+  "audio_sha256": "5a85400f102a3ddd96f512124ee036bf29601ca66cfbc6e35c46d07c829e9306",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2883872087113559
+}

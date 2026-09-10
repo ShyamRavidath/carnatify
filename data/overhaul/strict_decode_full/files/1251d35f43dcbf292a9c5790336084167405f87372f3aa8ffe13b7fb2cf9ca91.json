@@ -1,0 +1,11 @@
+{
+  "track": "archive__Haṁsānandi__pAvanaguru",
+  "audio": "data/concert_audio/Haṁsānandi/pAvanaguru.mp3",
+  "audio_sha256": "1251d35f43dcbf292a9c5790336084167405f87372f3aa8ffe13b7fb2cf9ca91",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.6297582923434675
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Śuddadhanyāsi__Raghavendra Guru",
+  "audio": "data/concert_audio/Śuddadhanyāsi/Raghavendra Guru.mp3",
+  "audio_sha256": "4e328cc8cdaea5d819ddaedf114723afb960ce365e5d4d42c6e88080df828c40",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7292027501389384
+}

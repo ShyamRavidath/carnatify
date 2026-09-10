@@ -1,0 +1,43 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/25a4995d-43f1-49bd-8c54-a0011e4d8094",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:23:27.854492+00:00",
+  "recording": {
+    "disambiguation": "",
+    "title": "Naamakusumamula",
+    "video": false,
+    "id": "25a4995d-43f1-49bd-8c54-a0011e4d8094",
+    "relations": [
+      {
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ],
+        "source-credit": "",
+        "work": {
+          "title": "Naamakusumamula",
+          "languages": [],
+          "iswcs": [],
+          "disambiguation": "",
+          "language": null,
+          "type": null,
+          "attributes": [],
+          "id": "3f6f0667-157a-4f76-b21c-8998047da017",
+          "type-id": null
+        },
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": "1964",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "end": "1964",
+        "ended": true,
+        "target-credit": "",
+        "attribute-values": {},
+        "type": "performance",
+        "direction": "forward"
+      }
+    ],
+    "length": 574846
+  }
+}

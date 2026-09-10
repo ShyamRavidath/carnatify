@@ -1,0 +1,11 @@
+{
+  "track": "archive__Mōhanaṁ__nannupAlimpa",
+  "audio": "data/concert_audio/Mōhanaṁ/nannupAlimpa.mp3",
+  "audio_sha256": "61c173dd9f5a63172840100ed1b954b1451ad5273f642400225b5fb064dbef9d",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.78738133283332
+}

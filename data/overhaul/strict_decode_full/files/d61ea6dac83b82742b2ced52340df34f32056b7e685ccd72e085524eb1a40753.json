@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ṣanmukhapriya__Mahathmule Nee",
+  "audio": "data/concert_audio/Ṣanmukhapriya/Mahathmule Nee.mp3",
+  "audio_sha256": "d61ea6dac83b82742b2ced52340df34f32056b7e685ccd72e085524eb1a40753",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.9832707080058753
+}

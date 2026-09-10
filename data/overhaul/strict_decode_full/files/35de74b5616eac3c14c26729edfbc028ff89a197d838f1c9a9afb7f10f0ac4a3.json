@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sāvēri__amba parAsakti",
+  "audio": "data/concert_audio/Sāvēri/amba parAsakti.mp3",
+  "audio_sha256": "35de74b5616eac3c14c26729edfbc028ff89a197d838f1c9a9afb7f10f0ac4a3",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5623205001465976
+}

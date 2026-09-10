@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ṣanmukhapriya__GayatriGirish SiddhiVinayakam",
+  "audio": "data/concert_audio/Ṣanmukhapriya/GayatriGirish SiddhiVinayakam.mp3",
+  "audio_sha256": "b4e6e4199aa1bbb38d8dd80bc5a568900a80319a383c8219d15510c4a045a174",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.0549754998646677
+}

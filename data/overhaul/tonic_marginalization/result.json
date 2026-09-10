@@ -1,0 +1,3509 @@
+{
+  "plan_sha256": "6943d1bcdc74941d7abf5f03f83973103c6eaa6e751f18dcb26be656a1619b66",
+  "rows": [
+    {
+      "track": "100_Pavamaana_Suthudu_Pattu",
+      "raga": "Saurāṣtraṁ",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.92799377441406,
+        197.46018163750463,
+        221.64155994037426
+      ],
+      "top3": [
+        "Saurāṣtraṁ",
+        "Pūrvīkaḷyāṇi",
+        "Aṭāna"
+      ],
+      "mixture_max_probability": 0.14440801332375494
+    },
+    {
+      "track": "101_Maname_Kanamum",
+      "raga": "Karṇāṭaka dēvagāndhāri",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        147.92799377441406,
+        197.46018163750463,
+        221.64155994037426
+      ],
+      "top3": [
+        "Kāpi",
+        "Hindōḷaṁ",
+        "Śuddadhanyāsi"
+      ],
+      "mixture_max_probability": 0.04527555834175986
+    },
+    {
+      "track": "102_Ennadu_Jootuno",
+      "raga": "Kalāvati",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        147.92799377441406,
+        197.46018163750463,
+        221.64155994037426
+      ],
+      "top3": [
+        "Pūrvīkaḷyāṇi",
+        "Dhanyāsi",
+        "Sāvēri"
+      ],
+      "mixture_max_probability": 0.04355949462691964
+    },
+    {
+      "track": "103_Paarengum",
+      "raga": "Kalyāṇi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.92799377441406,
+        197.46018163750463,
+        221.64155994037426
+      ],
+      "top3": [
+        "Kalyāṇi",
+        "Hamsadhvāni",
+        "Śrī"
+      ],
+      "mixture_max_probability": 0.18770594781073813
+    },
+    {
+      "track": "104_Saravanabhava_Enum",
+      "raga": "Ṣanmukhapriya",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.92799377441406,
+        197.46018163750463,
+        221.64155994037426
+      ],
+      "top3": [
+        "Ṣanmukhapriya",
+        "Cittaranjani",
+        "Jōnpuri"
+      ],
+      "mixture_max_probability": 0.5464530780329719
+    },
+    {
+      "track": "105_Karuvutranaal_Mudalaaga",
+      "raga": "Rāgamālika",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        147.92799377441406,
+        197.46018163750463,
+        221.64155994037426
+      ],
+      "top3": [
+        "Behāg",
+        "Sindhubhairavi",
+        "Kāpi"
+      ],
+      "mixture_max_probability": 0.19087214385607676
+    },
+    {
+      "track": "106_Aru_marundu",
+      "raga": "Kāṁbhōji",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.92799377441406,
+        197.46018163750463,
+        221.64155994037426
+      ],
+      "top3": [
+        "Kāṁbhōji",
+        "Kamās",
+        "Harikāmbhōji"
+      ],
+      "mixture_max_probability": 0.07715407458861245
+    },
+    {
+      "track": "107_Eranapai",
+      "raga": "Tōḍi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.92799377441406,
+        197.46018163750463,
+        221.64155994037426
+      ],
+      "top3": [
+        "Tōḍi",
+        "Bhairavi",
+        "Hindōḷaṁ"
+      ],
+      "mixture_max_probability": 0.1723526762345545
+    },
+    {
+      "track": "108_Pullum_Silambena_Kan",
+      "raga": "Śankarābharaṇaṁ",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.92799377441406,
+        197.46018163750463,
+        221.64155994037426
+      ],
+      "top3": [
+        "Bēgaḍa",
+        "Śankarābharaṇaṁ",
+        "Nāṭakurinji"
+      ],
+      "mixture_max_probability": 0.0635942041940524
+    },
+    {
+      "track": "109_Sri_Raghuvara_Sugunaalaya",
+      "raga": "Bhairavi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.92799377441406,
+        197.46018163750463,
+        221.64155994037426
+      ],
+      "top3": [
+        "Bhairavi",
+        "Mukhāri",
+        "Tōḍi"
+      ],
+      "mixture_max_probability": 0.14068006328344185
+    },
+    {
+      "track": "110_Ragam_Thanam_Pallavi_-_Shanmukhapriya",
+      "raga": "Ṣanmukhapriya",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.07455444335938,
+        196.3209768052966,
+        220.36284575097014
+      ],
+      "top3": [
+        "Ṣanmukhapriya",
+        "Karaharapriya",
+        "Sindhubhairavi"
+      ],
+      "mixture_max_probability": 0.6490787882496453
+    },
+    {
+      "track": "111_Sarasadalanayana",
+      "raga": "Kamās",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.92799377441406,
+        197.46018163750463,
+        221.64155994037426
+      ],
+      "top3": [
+        "Kamās",
+        "Behāg",
+        "Rītigauḷa"
+      ],
+      "mixture_max_probability": 0.6076066895116093
+    },
+    {
+      "track": "112_Rama_Rama_Guna_Seema",
+      "raga": "Simhēndra madhyamaṁ",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        135.63082885742188,
+        181.04543581300192,
+        203.21663071972523
+      ],
+      "top3": [
+        "Varāḷi",
+        "Latāngi",
+        "Ṣanmukhapriya"
+      ],
+      "mixture_max_probability": 0.09813458711881769
+    },
+    {
+      "track": "113_Prathi_Vaaram_Vaaram",
+      "raga": "Pāḍi",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        136.4178466796875,
+        182.09597856810416,
+        204.3958250924539
+      ],
+      "top3": [
+        "Cittaranjani",
+        "Sahānā",
+        "Kānaḍa"
+      ],
+      "mixture_max_probability": 0.036215848270086774
+    },
+    {
+      "track": "115_Idhu_Thaano_Thillai_Sthalam",
+      "raga": "Behāg",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        135.63082885742188,
+        181.04543581300192,
+        203.21663071972523
+      ],
+      "top3": [
+        "Behāg",
+        "Kalyāṇi",
+        "Bilahari"
+      ],
+      "mixture_max_probability": 0.3273918311891197
+    },
+    {
+      "track": "116_Bhuvini_Dasudane",
+      "raga": "Śrīranjani",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        134.8483428955078,
+        180.00094236571044,
+        202.04422646543273
+      ],
+      "top3": [
+        "Śrīranjani",
+        "Rītigauḷa",
+        "Ābhōgi"
+      ],
+      "mixture_max_probability": 0.3933032480600994
+    },
+    {
+      "track": "117_Karuna_Nidhi_Illalo",
+      "raga": "Tōḍi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        135.63082885742188,
+        181.04543581300192,
+        203.21663071972523
+      ],
+      "top3": [
+        "Tōḍi",
+        "Dhanyāsi",
+        "Bhairavi"
+      ],
+      "mixture_max_probability": 0.11391528867584971
+    },
+    {
+      "track": "118_Tulasi_Bilva",
+      "raga": "Kēdāragauḷa",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        135.63082885742188,
+        181.04543581300192,
+        203.21663071972523
+      ],
+      "top3": [
+        "Kēdāragauḷa",
+        "Yadukula kāṁbōji",
+        "Dvijāvanti"
+      ],
+      "mixture_max_probability": 0.17336900774867958
+    },
+    {
+      "track": "119_Shlokam_-_Shivah_Shaktyayukto",
+      "raga": "Madhyamāvati",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        135.63082885742188,
+        181.04543581300192,
+        203.21663071972523
+      ],
+      "top3": [
+        "Suraṭi",
+        "Madhyamāvati",
+        "Aṭāna"
+      ],
+      "mixture_max_probability": 0.12010262787002496
+    },
+    {
+      "track": "120_Velum_Mayilume",
+      "raga": "Sucaritra",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        135.63082885742188,
+        181.04543581300192,
+        203.21663071972523
+      ],
+      "top3": [
+        "Mōhanaṁ",
+        "Bhairavi",
+        "Harikāmbhōji"
+      ],
+      "mixture_max_probability": 0.11115826434127399
+    },
+    {
+      "track": "130_Ghandhamu_Poyyaruga",
+      "raga": "Puṇṇāgavarāḷi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        173.94363403320312,
+        232.1868950866867,
+        260.6209778495958
+      ],
+      "top3": [
+        "Puṇṇāgavarāḷi",
+        "Bhairavi",
+        "Śankarābharaṇaṁ"
+      ],
+      "mixture_max_probability": 0.2711118284982242
+    },
+    {
+      "track": "131_Koluvaiyunnade",
+      "raga": "Dēvagāndhāri",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        131.0031280517578,
+        174.86819634442674,
+        196.28291385293085
+      ],
+      "top3": [
+        "Kalyāṇi",
+        "Sāma",
+        "Kāṁbhōji"
+      ],
+      "mixture_max_probability": 0.04008284390009971
+    },
+    {
+      "track": "133_Paramatmudu",
+      "raga": "Vāgadīśvari",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        131.0031280517578,
+        174.86819634442674,
+        196.28291385293085
+      ],
+      "top3": [
+        "Sahānā",
+        "Sencuruṭṭi",
+        "Yadukula kāṁbōji"
+      ],
+      "mixture_max_probability": 0.12044215351720162
+    },
+    {
+      "track": "135_Paraloka_Bhaya",
+      "raga": "Mandāri",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        130.24732971191406,
+        173.85932659868774,
+        195.1504958516513
+      ],
+      "top3": [
+        "Kāmavardani",
+        "Pūrvīkaḷyāṇi",
+        "Gauḷa"
+      ],
+      "mixture_max_probability": 0.303627226145809
+    },
+    {
+      "track": "136_Dudukugala",
+      "raga": "Gauḷa",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        131.0031280517578,
+        174.86819634442674,
+        196.28291385293085
+      ],
+      "top3": [
+        "Gauḷa",
+        "Saurāṣtraṁ",
+        "Vasanta"
+      ],
+      "mixture_max_probability": 0.14285924051785936
+    },
+    {
+      "track": "137_Telisi_Rama",
+      "raga": "Pūrṇacandrika",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        196.41615295410156,
+        262.1841089658921,
+        294.2917119840231
+      ],
+      "top3": [
+        "Pūrṇacandrika",
+        "Kuntalavarāḷi",
+        "Sencuruṭṭi"
+      ],
+      "mixture_max_probability": 0.054976635055214385
+    },
+    {
+      "track": "138_Eramuni",
+      "raga": "Vakuḷābharaṇaṁ",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        131.0031280517578,
+        174.86819634442674,
+        196.28291385293085
+      ],
+      "top3": [
+        "Saurāṣtraṁ",
+        "Māyāmāḷavagauḷa",
+        "Tōḍi"
+      ],
+      "mixture_max_probability": 0.038897014959948406
+    },
+    {
+      "track": "139_Mangalam_Avanisutanatha",
+      "raga": "Nādanāmakriya",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        173.94363403320312,
+        232.1868950866867,
+        260.6209778495958
+      ],
+      "top3": [
+        "Nādanāmakriya",
+        "Māyāmāḷavagauḷa",
+        "Sencuruṭṭi"
+      ],
+      "mixture_max_probability": 0.16096121238371536
+    },
+    {
+      "track": "13_Thillana_Purnachandrika",
+      "raga": "Pūrṇacandrika",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        138.8064422607422,
+        185.2843711451904,
+        207.9746747553445
+      ],
+      "top3": [
+        "Nāṭa",
+        "Pūrṇacandrika",
+        "Latāngi"
+      ],
+      "mixture_max_probability": 0.03761376580337646
+    },
+    {
+      "track": "141_Rama_Namam_Bhajare",
+      "raga": "Madhyamāvati",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        131.0031280517578,
+        174.86819634442674,
+        196.28291385293085
+      ],
+      "top3": [
+        "Madhyamāvati",
+        "Janaranjani",
+        "Kāpi"
+      ],
+      "mixture_max_probability": 0.09507971616831856
+    },
+    {
+      "track": "142_Shobillu_Saptasvara",
+      "raga": "Jaganmōhini",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        131.0031280517578,
+        174.86819634442674,
+        196.28291385293085
+      ],
+      "top3": [
+        "Jaganmōhini",
+        "Nāṭa",
+        "Hamsadhvāni"
+      ],
+      "mixture_max_probability": 0.06296395017149906
+    },
+    {
+      "track": "143_Sundari_Nee_Divya",
+      "raga": "Kalyāṇi",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        196.41615295410156,
+        262.1841089658921,
+        294.2917119840231
+      ],
+      "top3": [
+        "Behāg",
+        "Kalyāṇi",
+        "Sahānā"
+      ],
+      "mixture_max_probability": 0.05856672008290758
+    },
+    {
+      "track": "14_Angakaram",
+      "raga": "Suraṭi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        138.8064422607422,
+        185.2843711451904,
+        207.9746747553445
+      ],
+      "top3": [
+        "Suraṭi",
+        "Dēvagāndhāri",
+        "Rītigauḷa"
+      ],
+      "mixture_max_probability": 0.49183024458075614
+    },
+    {
+      "track": "152_Vanajakshi_-_Varnam",
+      "raga": "Kalyāṇi",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        146.22604370117188,
+        195.18835084993333,
+        219.09151610114472
+      ],
+      "top3": [
+        "Behāg",
+        "Kalyāṇi",
+        "Kāṁbhōji"
+      ],
+      "mixture_max_probability": 0.07845401194233405
+    },
+    {
+      "track": "154_Innamum_Oru_thalam",
+      "raga": "Behāg",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        146.22604370117188,
+        195.18835084993333,
+        219.09151610114472
+      ],
+      "top3": [
+        "Behāg",
+        "Kalyāṇi",
+        "Nāṭakurinji"
+      ],
+      "mixture_max_probability": 0.6083010501898426
+    },
+    {
+      "track": "155_Nadopasana",
+      "raga": "Bēgaḍa",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        146.22604370117188,
+        195.18835084993333,
+        219.09151610114472
+      ],
+      "top3": [
+        "Bēgaḍa",
+        "Kamās",
+        "Behāg"
+      ],
+      "mixture_max_probability": 0.19022660719543275
+    },
+    {
+      "track": "156_Ganta_mani_aadudhu",
+      "raga": "Kānaḍa",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        145.38243103027344,
+        194.06226303533526,
+        217.82752526619475
+      ],
+      "top3": [
+        "Kānaḍa",
+        "Bēgaḍa",
+        "Dēvagāndhāri"
+      ],
+      "mixture_max_probability": 0.36328639170690574
+    },
+    {
+      "track": "157_Janani",
+      "raga": "Rītigauḷa",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        195.28297424316406,
+        260.67149686063567,
+        292.59386230205945
+      ],
+      "top3": [
+        "Suraṭi",
+        "Rītigauḷa",
+        "Nīlāṁbari"
+      ],
+      "mixture_max_probability": 0.20161061696341795
+    },
+    {
+      "track": "158_Oorilen_Kaani_Illai",
+      "raga": "Behāg",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        145.38243103027344,
+        194.06226303533526,
+        217.82752526619475
+      ],
+      "top3": [
+        "Kamās",
+        "Behāg",
+        "Harikāmbhōji"
+      ],
+      "mixture_max_probability": 0.491679483089269
+    },
+    {
+      "track": "159_Ramakrishnaru_Manaegae",
+      "raga": "Tillāng",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        194.15634155273438,
+        259.16762264443935,
+        290.905820568948
+      ],
+      "top3": [
+        "Bṛndāvana sāranga",
+        "Gauḷa",
+        "Hamsadhvāni"
+      ],
+      "mixture_max_probability": 0.3677336524280036
+    },
+    {
+      "track": "15_Samajavarada",
+      "raga": "Śudda sāvēri",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        138.8064422607422,
+        185.2843711451904,
+        207.9746747553445
+      ],
+      "top3": [
+        "Madhyamāvati",
+        "Śuddadhanyāsi",
+        "Bhairavi"
+      ],
+      "mixture_max_probability": 0.03775712379890552
+    },
+    {
+      "track": "160_Uppum_karpuramum",
+      "raga": "Kānaḍa",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        145.38243103027344,
+        194.06226303533526,
+        217.82752526619475
+      ],
+      "top3": [
+        "Behāg",
+        "Nāṭakurinji",
+        "Kamās"
+      ],
+      "mixture_max_probability": 0.7474628022271776
+    },
+    {
+      "track": "161_Chalamelara_Saketha_Rama",
+      "raga": "Mārgahindōḷaṁ",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        146.22604370117188,
+        195.18835084993333,
+        219.09151610114472
+      ],
+      "top3": [
+        "Sindhubhairavi",
+        "Tōḍi",
+        "Kānaḍa"
+      ],
+      "mixture_max_probability": 0.11268015567255898
+    },
+    {
+      "track": "162_Kalilo_Hari_Smrana",
+      "raga": "Kāpi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        145.38243103027344,
+        194.06226303533526,
+        217.82752526619475
+      ],
+      "top3": [
+        "Kāpi",
+        "Bṛndāvana sāranga",
+        "Vakuḷābharaṇaṁ"
+      ],
+      "mixture_max_probability": 0.6165015845663124
+    },
+    {
+      "track": "163_Ninnaiye_rathi",
+      "raga": "Bāgēśrī",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        194.15634155273438,
+        259.16762264443935,
+        290.905820568948
+      ],
+      "top3": [
+        "Kamās",
+        "Behāg",
+        "Kānaḍa"
+      ],
+      "mixture_max_probability": 0.13576630053974453
+    },
+    {
+      "track": "164_Mangalam",
+      "raga": "Saurāṣtraṁ",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        145.38243103027344,
+        194.06226303533526,
+        217.82752526619475
+      ],
+      "top3": [
+        "Saurāṣtraṁ",
+        "Rītigauḷa",
+        "Suraṭi"
+      ],
+      "mixture_max_probability": 0.5374758446971726
+    },
+    {
+      "track": "165_Deenarakshaka",
+      "raga": "Āhiri",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        145.38243103027344,
+        194.06226303533526,
+        217.82752526619475
+      ],
+      "top3": [
+        "Āhiri",
+        "Tōḍi",
+        "Rītigauḷa"
+      ],
+      "mixture_max_probability": 0.22287635903804212
+    },
+    {
+      "track": "166_O_Rangashayee",
+      "raga": "Kāṁbhōji",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        146.22604370117188,
+        195.18835084993333,
+        219.09151610114472
+      ],
+      "top3": [
+        "Bēgaḍa",
+        "Kāṁbhōji",
+        "Nāṭakurinji"
+      ],
+      "mixture_max_probability": 0.09108201014948633
+    },
+    {
+      "track": "167_Sama_geeta_priyan",
+      "raga": "Gauḷa",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        145.38243103027344,
+        194.06226303533526,
+        217.82752526619475
+      ],
+      "top3": [
+        "Gauḷa",
+        "Nāṭa",
+        "Māyāmāḷavagauḷa"
+      ],
+      "mixture_max_probability": 0.3397606939773287
+    },
+    {
+      "track": "168_Karupuram_Naarumo",
+      "raga": "Kamās",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        146.22604370117188,
+        195.18835084993333,
+        219.09151610114472
+      ],
+      "top3": [
+        "Kamās",
+        "Behāg",
+        "Nāṭakurinji"
+      ],
+      "mixture_max_probability": 0.11885998400786832
+    },
+    {
+      "track": "169_Va_vela_va",
+      "raga": "Tanarūpi",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        145.38243103027344,
+        194.06226303533526,
+        217.82752526619475
+      ],
+      "top3": [
+        "Suraṭi",
+        "Mukhāri",
+        "Kāpi"
+      ],
+      "mixture_max_probability": 0.054501923142324875
+    },
+    {
+      "track": "16_Evarura",
+      "raga": "Mōhanaṁ",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        138.8064422607422,
+        185.2843711451904,
+        207.9746747553445
+      ],
+      "top3": [
+        "Mōhanaṁ",
+        "Kāṁbhōji",
+        "Dēvagāndhāri"
+      ],
+      "mixture_max_probability": 0.1039224559481673
+    },
+    {
+      "track": "171_Arul_Seya_Vendum_Ayya",
+      "raga": "Rasikapriya",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        147.07455444335938,
+        196.3209768052966,
+        220.36284575097014
+      ],
+      "top3": [
+        "Kāpi",
+        "Hindōḷaṁ",
+        "Śuddadhanyāsi"
+      ],
+      "mixture_max_probability": 0.0702722367349029
+    },
+    {
+      "track": "172_Kaalaharanamelara",
+      "raga": "Śuddadhanyāsi",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        146.22604370117188,
+        195.18835084993333,
+        219.09151610114472
+      ],
+      "top3": [
+        "Aṭāna",
+        "Sencuruṭṭi",
+        "Karaharapriya"
+      ],
+      "mixture_max_probability": 0.039602946438681584
+    },
+    {
+      "track": "174_Brochevarevarura",
+      "raga": "Kamās",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        146.22604370117188,
+        195.18835084993333,
+        219.09151610114472
+      ],
+      "top3": [
+        "Kamās",
+        "Kāṁbhōji",
+        "Harikāmbhōji"
+      ],
+      "mixture_max_probability": 0.26640257594992023
+    },
+    {
+      "track": "175_Thappi_Bratikipova",
+      "raga": "Tōḍi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        146.22604370117188,
+        195.18835084993333,
+        219.09151610114472
+      ],
+      "top3": [
+        "Tōḍi",
+        "Dhanyāsi",
+        "Sāvēri"
+      ],
+      "mixture_max_probability": 0.16434989569767633
+    },
+    {
+      "track": "176_Krishna_Nee_Begane_Baaro",
+      "raga": "Yamuna kalyāṇi",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        147.07455444335938,
+        196.3209768052966,
+        220.36284575097014
+      ],
+      "top3": [
+        "Bilahari",
+        "Mānḍu",
+        "Karaharapriya"
+      ],
+      "mixture_max_probability": 0.057359923795449165
+    },
+    {
+      "track": "177_Kari_Kalabha_Mukham",
+      "raga": "Sāvēri",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        146.22604370117188,
+        195.18835084993333,
+        219.09151610114472
+      ],
+      "top3": [
+        "Sāvēri",
+        "Ṣanmukhapriya",
+        "Saurāṣtraṁ"
+      ],
+      "mixture_max_probability": 0.6964492984505374
+    },
+    {
+      "track": "178_Muruga_Muruga_Muruga",
+      "raga": "Rāgamālika",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        138.8064422607422,
+        185.2843711451904,
+        207.9746747553445
+      ],
+      "top3": [
+        "Behāg",
+        "Kānaḍa",
+        "Suraṭi"
+      ],
+      "mixture_max_probability": 0.06887814740863649
+    },
+    {
+      "track": "179_Chenduril_Nindradum_Kanda",
+      "raga": "Mānḍu",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        138.8064422607422,
+        185.2843711451904,
+        207.9746747553445
+      ],
+      "top3": [
+        "Mānḍu",
+        "Behāg",
+        "Bilahari"
+      ],
+      "mixture_max_probability": 0.04313091958977869
+    },
+    {
+      "track": "17_Eranapai",
+      "raga": "Tōḍi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        138.8064422607422,
+        185.2843711451904,
+        207.9746747553445
+      ],
+      "top3": [
+        "Tōḍi",
+        "Dhanyāsi",
+        "Hindōḷaṁ"
+      ],
+      "mixture_max_probability": 0.11667429731693144
+    },
+    {
+      "track": "180_Ninne_Bhajana",
+      "raga": "Nāṭa",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        138.8064422607422,
+        185.2843711451904,
+        207.9746747553445
+      ],
+      "top3": [
+        "Nāṭa",
+        "Hamsadhvāni",
+        "Hindōḷaṁ"
+      ],
+      "mixture_max_probability": 0.19758715966119939
+    },
+    {
+      "track": "181_Nera_Nammiti",
+      "raga": "Kānaḍa",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        138.8064422607422,
+        185.2843711451904,
+        207.9746747553445
+      ],
+      "top3": [
+        "Kānaḍa",
+        "Bhairavi",
+        "Mōhanaṁ"
+      ],
+      "mixture_max_probability": 0.08409218242300079
+    },
+    {
+      "track": "182_Dinamani_Vamsa",
+      "raga": "Harikāmbhōji",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        138.8064422607422,
+        185.2843711451904,
+        207.9746747553445
+      ],
+      "top3": [
+        "Harikāmbhōji",
+        "Bilahari",
+        "Mōhanaṁ"
+      ],
+      "mixture_max_probability": 0.046197505863328235
+    },
+    {
+      "track": "183_Chakkani_Raja",
+      "raga": "Karaharapriya",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        138.8064422607422,
+        185.2843711451904,
+        207.9746747553445
+      ],
+      "top3": [
+        "Karaharapriya",
+        "Aṭāna",
+        "Bhairavi"
+      ],
+      "mixture_max_probability": 0.08447867139572734
+    },
+    {
+      "track": "184_Ardhanareeshwaram",
+      "raga": "Kumudakriyā",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        138.8064422607422,
+        185.2843711451904,
+        207.9746747553445
+      ],
+      "top3": [
+        "Haṁsānandi",
+        "Kāmavardani",
+        "Vasanta"
+      ],
+      "mixture_max_probability": 0.14017857151982105
+    },
+    {
+      "track": "185_Pavamana_Suthudu_Pattu",
+      "raga": "Saurāṣtraṁ",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        139.6118927001953,
+        186.3595184923312,
+        209.18148684885054
+      ],
+      "top3": [
+        "Suraṭi",
+        "Rītigauḷa",
+        "Aṭāna"
+      ],
+      "mixture_max_probability": 0.0389714523234833
+    },
+    {
+      "track": "186_Shloka",
+      "raga": "Mōhanaṁ",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        138.8064422607422,
+        185.2843711451904,
+        207.9746747553445
+      ],
+      "top3": [
+        "Mōhanaṁ",
+        "Yadukula kāṁbōji",
+        "Mānḍu"
+      ],
+      "mixture_max_probability": 0.1313565479162285
+    },
+    {
+      "track": "187_Aaniraimekkani",
+      "raga": "Rāgamālika",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        191.9225616455078,
+        256.18588419882906,
+        287.5589323257655
+      ],
+      "top3": [
+        "Sahānā",
+        "Sindhubhairavi",
+        "Bhairavi"
+      ],
+      "mixture_max_probability": 0.05720901660107616
+    },
+    {
+      "track": "188_Vanajaksha_Ninne_Kori",
+      "raga": "Rītigauḷa",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        190.81532287597656,
+        254.70789776117658,
+        285.8999486415846
+      ],
+      "top3": [
+        "Rītigauḷa",
+        "Kānaḍa",
+        "Ānandabhairavi"
+      ],
+      "mixture_max_probability": 0.6983238528283597
+    },
+    {
+      "track": "189_Karuninchutakidi",
+      "raga": "Sindhumandāri",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        190.81532287597656,
+        254.70789776117658,
+        285.8999486415846
+      ],
+      "top3": [
+        "Bēgaḍa",
+        "Bilahari",
+        "Kānaḍa"
+      ],
+      "mixture_max_probability": 0.10134936242502073
+    },
+    {
+      "track": "18_Parama_Purusham",
+      "raga": "Lalita pancamaṁ",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        138.8064422607422,
+        185.2843711451904,
+        207.9746747553445
+      ],
+      "top3": [
+        "Lalita",
+        "Māyāmāḷavagauḷa",
+        "Sāvēri"
+      ],
+      "mixture_max_probability": 0.1436181032840099
+    },
+    {
+      "track": "190_Va_Va_Brindavana",
+      "raga": "Sindhubhairavi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        190.81532287597656,
+        254.70789776117658,
+        285.8999486415846
+      ],
+      "top3": [
+        "Sindhubhairavi",
+        "Jōnpuri",
+        "Tōḍi"
+      ],
+      "mixture_max_probability": 0.5419312572954518
+    },
+    {
+      "track": "191_Mati_Matiki",
+      "raga": "Mōhanaṁ",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        191.9225616455078,
+        256.18588419882906,
+        287.5589323257655
+      ],
+      "top3": [
+        "Mōhanaṁ",
+        "Bēgaḍa",
+        "Kāṁbhōji"
+      ],
+      "mixture_max_probability": 0.13116456980993832
+    },
+    {
+      "track": "192_Sri_Guru_Na_Palitosmi",
+      "raga": "Pāḍi",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        191.9225616455078,
+        256.18588419882906,
+        287.5589323257655
+      ],
+      "top3": [
+        "Gauḷa",
+        "Māyāmāḷavagauḷa",
+        "Sāvēri"
+      ],
+      "mixture_max_probability": 0.23444467692519538
+    },
+    {
+      "track": "193_Thoomani_Madatthu",
+      "raga": "Hamīr kaḷyaṇi",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        191.9225616455078,
+        256.18588419882906,
+        287.5589323257655
+      ],
+      "top3": [
+        "Dēvagāndhāri",
+        "Saurāṣtraṁ",
+        "Aṭāna"
+      ],
+      "mixture_max_probability": 0.06550074907206029
+    },
+    {
+      "track": "194_Ramabhi_Rama_Manasu",
+      "raga": "Dhanyāsi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        190.81532287597656,
+        254.70789776117658,
+        285.8999486415846
+      ],
+      "top3": [
+        "Dhanyāsi",
+        "Nādanāmakriya",
+        "Gauḷa"
+      ],
+      "mixture_max_probability": 0.4822487867811552
+    },
+    {
+      "track": "195_Mangalam_Kosalendraya",
+      "raga": "Suraṭi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        191.9225616455078,
+        256.18588419882906,
+        287.5589323257655
+      ],
+      "top3": [
+        "Suraṭi",
+        "Rītigauḷa",
+        "Śrīranjani"
+      ],
+      "mixture_max_probability": 0.7025259158831044
+    },
+    {
+      "track": "196_Sri_Vidhya_Rajagopala",
+      "raga": "Jaganmōhini",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        190.81532287597656,
+        254.70789776117658,
+        285.8999486415846
+      ],
+      "top3": [
+        "Varāḷi",
+        "Ṣanmukhapriya",
+        "Kāmavardani"
+      ],
+      "mixture_max_probability": 0.16070832300044163
+    },
+    {
+      "track": "19_Marubari",
+      "raga": "Kamās",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        138.00563049316406,
+        184.21541568213877,
+        206.77481281673607
+      ],
+      "top3": [
+        "Kamās",
+        "Behāg",
+        "Śrīranjani"
+      ],
+      "mixture_max_probability": 0.4731004864711584
+    },
+    {
+      "track": "20_Aparadhamula",
+      "raga": "Latāngi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        138.8064422607422,
+        185.2843711451904,
+        207.9746747553445
+      ],
+      "top3": [
+        "Latāngi",
+        "Kalyāṇi",
+        "Hamsadhvāni"
+      ],
+      "mixture_max_probability": 0.3291019310912099
+    },
+    {
+      "track": "214_Parvathi_Ninu_Ne_Nera_Nammithi",
+      "raga": "Kalgaḍa",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        181.13319396972656,
+        241.78380622390236,
+        271.39314638211795
+      ],
+      "top3": [
+        "Kāmavardani",
+        "Cakravākaṁ",
+        "Pūrvīkaḷyāṇi"
+      ],
+      "mixture_max_probability": 0.06520432428465864
+    },
+    {
+      "track": "215_Nee_Sari_evvaramma",
+      "raga": "Bhairavi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        181.13319396972656,
+        241.78380622390236,
+        271.39314638211795
+      ],
+      "top3": [
+        "Bhairavi",
+        "Mukhāri",
+        "Tōḍi"
+      ],
+      "mixture_max_probability": 0.1989287200279176
+    },
+    {
+      "track": "216_Jaya_Jaya_Janaki_Kantha",
+      "raga": "Nāṭa",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        180.08822631835938,
+        240.38894175653897,
+        269.8274639549673
+      ],
+      "top3": [
+        "Nāṭa",
+        "Aṭāna",
+        "Madhyamāvati"
+      ],
+      "mixture_max_probability": 0.6956023715640783
+    },
+    {
+      "track": "217_Santhamu_leka_Sowkyamu_ledu",
+      "raga": "Sāma",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        181.13319396972656,
+        241.78380622390236,
+        271.39314638211795
+      ],
+      "top3": [
+        "Sāma",
+        "Yadukula kāṁbōji",
+        "Dēvagāndhāri"
+      ],
+      "mixture_max_probability": 0.13349548460455748
+    },
+    {
+      "track": "218_Sarasuda_Ninne_Kori",
+      "raga": "Sāvēri",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        180.08822631835938,
+        240.38894175653897,
+        269.8274639549673
+      ],
+      "top3": [
+        "Sāvēri",
+        "Kāmavardani",
+        "Latāngi"
+      ],
+      "mixture_max_probability": 0.2641874466316336
+    },
+    {
+      "track": "219_Gnanamosaga_Rada",
+      "raga": "Gamakakriyā",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        181.13319396972656,
+        241.78380622390236,
+        271.39314638211795
+      ],
+      "top3": [
+        "Pūrvīkaḷyāṇi",
+        "Ābhōgi",
+        "Latāngi"
+      ],
+      "mixture_max_probability": 0.7705776057838798
+    },
+    {
+      "track": "21_Sadabalarupapi_Shlokam",
+      "raga": "Hamsadhvāni",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        103.93694305419922,
+        138.73917390934645,
+        155.72945732703533
+      ],
+      "top3": [
+        "Hamsadhvāni",
+        "Sencuruṭṭi",
+        "Sāma"
+      ],
+      "mixture_max_probability": 0.07532340801204601
+    },
+    {
+      "track": "220_Nenindal_Agaadadu_undo",
+      "raga": "Jōnpuri",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        181.13319396972656,
+        241.78380622390236,
+        271.39314638211795
+      ],
+      "top3": [
+        "Aṭāna",
+        "Dēvagāndhāri",
+        "Jōnpuri"
+      ],
+      "mixture_max_probability": 0.03200127312634899
+    },
+    {
+      "track": "221_Sri_Dundurge_Siva_Samsaare",
+      "raga": "Śrīranjani",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        179.0492401123047,
+        239.00206156076425,
+        268.2707435696583
+      ],
+      "top3": [
+        "Śrīranjani",
+        "Karaharapriya",
+        "Bēgaḍa"
+      ],
+      "mixture_max_probability": 0.4559881692245281
+    },
+    {
+      "track": "222_Madhava_Mamava",
+      "raga": "Nīlāṁbari",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        131.0031280517578,
+        174.86819634442674,
+        196.28291385293085
+      ],
+      "top3": [
+        "Nīlāṁbari",
+        "Behāg",
+        "Nāṭakurinji"
+      ],
+      "mixture_max_probability": 0.07273862679963565
+    },
+    {
+      "track": "223_Ramachandraya_Mangalam",
+      "raga": "Navrōj",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        174.95298767089844,
+        233.53422054923388,
+        262.13329954802595
+      ],
+      "top3": [
+        "Nāṭakurinji",
+        "Bilahari",
+        "Kāṁbhōji"
+      ],
+      "mixture_max_probability": 0.10409354800392481
+    },
+    {
+      "track": "224_Sapasyat_Kausalya",
+      "raga": "Jōnpuri",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        131.0031280517578,
+        174.86819634442674,
+        196.28291385293085
+      ],
+      "top3": [
+        "Jōnpuri",
+        "Ṣanmukhapriya",
+        "Sindhubhairavi"
+      ],
+      "mixture_max_probability": 0.1332445446895137
+    },
+    {
+      "track": "225_Seetapati_Namanasuna",
+      "raga": "Kamās",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        131.0031280517578,
+        174.86819634442674,
+        196.28291385293085
+      ],
+      "top3": [
+        "Kamās",
+        "Harikāmbhōji",
+        "Kāṁbhōji"
+      ],
+      "mixture_max_probability": 0.1747559311921832
+    },
+    {
+      "track": "226_Karunimpa_Idi",
+      "raga": "Sahānā",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        130.24732971191406,
+        173.85932659868774,
+        195.1504958516513
+      ],
+      "top3": [
+        "Sahānā",
+        "Kānaḍa",
+        "Bēgaḍa"
+      ],
+      "mixture_max_probability": 0.1400773549592924
+    },
+    {
+      "track": "227_Endaro_Mahanubhavulu",
+      "raga": "Śrī",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        131.0031280517578,
+        174.86819634442674,
+        196.28291385293085
+      ],
+      "top3": [
+        "Madhyamāvati",
+        "Śrī",
+        "Bṛndāvana sāranga"
+      ],
+      "mixture_max_probability": 0.0789963053650813
+    },
+    {
+      "track": "228_Bhogeendra_Shayinam",
+      "raga": "Kuntalavarāḷi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        131.0031280517578,
+        174.86819634442674,
+        196.28291385293085
+      ],
+      "top3": [
+        "Kuntalavarāḷi",
+        "Sencuruṭṭi",
+        "Śrīranjani"
+      ],
+      "mixture_max_probability": 0.18357962931076463
+    },
+    {
+      "track": "229_Thillana_Senchurutti",
+      "raga": "Sencuruṭṭi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        131.0031280517578,
+        174.86819634442674,
+        196.28291385293085
+      ],
+      "top3": [
+        "Sencuruṭṭi",
+        "Kamās",
+        "Karaharapriya"
+      ],
+      "mixture_max_probability": 0.13267507470504059
+    },
+    {
+      "track": "22_Hiranmayeem_Lakshmeem",
+      "raga": "Lalita",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.92799377441406,
+        197.46018163750463,
+        221.64155994037426
+      ],
+      "top3": [
+        "Lalita",
+        "Māyāmāḷavagauḷa",
+        "Vasanta"
+      ],
+      "mixture_max_probability": 0.21489213795197046
+    },
+    {
+      "track": "230_Chintayama_Kanda",
+      "raga": "Bhairavi",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        196.41615295410156,
+        262.1841089658921,
+        294.2917119840231
+      ],
+      "top3": [
+        "Dhanyāsi",
+        "Māyāmāḷavagauḷa",
+        "Saurāṣtraṁ"
+      ],
+      "mixture_max_probability": 0.09549709035177426
+    },
+    {
+      "track": "231_Emani_Migula",
+      "raga": "Tōḍi",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        173.94363403320312,
+        232.1868950866867,
+        260.6209778495958
+      ],
+      "top3": [
+        "Bhairavi",
+        "Sindhubhairavi",
+        "Tōḍi"
+      ],
+      "mixture_max_probability": 0.18929929074517224
+    },
+    {
+      "track": "232_Saraguna_Palimpa",
+      "raga": "Kēdāragauḷa",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        131.0031280517578,
+        174.86819634442674,
+        196.28291385293085
+      ],
+      "top3": [
+        "Kēdāragauḷa",
+        "Sāma",
+        "Kalyāṇi"
+      ],
+      "mixture_max_probability": 0.21794519455841171
+    },
+    {
+      "track": "233_Nadatanum_Anisham",
+      "raga": "Cittaranjani",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        197.55587768554688,
+        263.70545896020855,
+        295.999369614839
+      ],
+      "top3": [
+        "Cittaranjani",
+        "Hussēnī",
+        "Kānaḍa"
+      ],
+      "mixture_max_probability": 0.2999467791655116
+    },
+    {
+      "track": "234_Seethamma",
+      "raga": "Vasanta",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        197.55587768554688,
+        263.70545896020855,
+        295.999369614839
+      ],
+      "top3": [
+        "Vasanta",
+        "Hindōḷaṁ",
+        "Suraṭi"
+      ],
+      "mixture_max_probability": 0.4981226570435664
+    },
+    {
+      "track": "235_Janakipathe_Jaya_Karunya_Jaladhe",
+      "raga": "Karaharapriya",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        197.55587768554688,
+        263.70545896020855,
+        295.999369614839
+      ],
+      "top3": [
+        "Cittaranjani",
+        "Kānaḍa",
+        "Karaharapriya"
+      ],
+      "mixture_max_probability": 0.058580794648218464
+    },
+    {
+      "track": "236_Eppadi_Padinaro",
+      "raga": "Karṇāṭaka dēvagāndhāri",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        197.55587768554688,
+        263.70545896020855,
+        295.999369614839
+      ],
+      "top3": [
+        "Suraṭi",
+        "Rītigauḷa",
+        "Sindhubhairavi"
+      ],
+      "mixture_max_probability": 0.07411664999314829
+    },
+    {
+      "track": "237_Manasaramathi",
+      "raga": "Sārāmati",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        197.55587768554688,
+        263.70545896020855,
+        295.999369614839
+      ],
+      "top3": [
+        "Sindhubhairavi",
+        "Hindōḷaṁ",
+        "Karaharapriya"
+      ],
+      "mixture_max_probability": 0.3338570887967504
+    },
+    {
+      "track": "239_Bhavamulona",
+      "raga": "Śuddadhanyāsi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        197.55587768554688,
+        263.70545896020855,
+        295.999369614839
+      ],
+      "top3": [
+        "Śuddadhanyāsi",
+        "Hindōḷaṁ",
+        "Suraṭi"
+      ],
+      "mixture_max_probability": 0.07599923742705691
+    },
+    {
+      "track": "23_Niraimadi_Mugam_Thiruppugazh",
+      "raga": "Haṁsānandi",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.92799377441406,
+        197.46018163750463,
+        221.64155994037426
+      ],
+      "top3": [
+        "Pūrvīkaḷyāṇi",
+        "Haṁsānandi",
+        "Kuntalavarāḷi"
+      ],
+      "mixture_max_probability": 0.24915402772797154
+    },
+    {
+      "track": "240_Ardhanarishwaram",
+      "raga": "Kumudakriyā",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        197.55587768554688,
+        263.70545896020855,
+        295.999369614839
+      ],
+      "top3": [
+        "Kāmavardani",
+        "Pūrvīkaḷyāṇi",
+        "Lalita"
+      ],
+      "mixture_max_probability": 0.2215593446383194
+    },
+    {
+      "track": "241_Shri_Subramanyaya_Namaste",
+      "raga": "Kāṁbhōji",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        196.41615295410156,
+        262.1841089658921,
+        294.2917119840231
+      ],
+      "top3": [
+        "Bēgaḍa",
+        "Kāṁbhōji",
+        "Mōhanaṁ"
+      ],
+      "mixture_max_probability": 0.060502880413755546
+    },
+    {
+      "track": "242_Mamava_Pattabhi_Rama",
+      "raga": "Maṇirangu",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        131.0031280517578,
+        174.86819634442674,
+        196.28291385293085
+      ],
+      "top3": [
+        "Maṇirangu",
+        "Śrī",
+        "Hamsadhvāni"
+      ],
+      "mixture_max_probability": 0.07688279745262898
+    },
+    {
+      "track": "243_Kamalamba_Samrakshatu",
+      "raga": "Ānandabhairavi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        197.55587768554688,
+        263.70545896020855,
+        295.999369614839
+      ],
+      "top3": [
+        "Ānandabhairavi",
+        "Janaranjani",
+        "Dvijāvanti"
+      ],
+      "mixture_max_probability": 0.11536378401846703
+    },
+    {
+      "track": "244_Govardhana_Girisham",
+      "raga": "Hindōḷaṁ",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        131.0031280517578,
+        174.86819634442674,
+        196.28291385293085
+      ],
+      "top3": [
+        "Hindōḷaṁ",
+        "Śuddadhanyāsi",
+        "Kāpi"
+      ],
+      "mixture_max_probability": 0.1486328161500844
+    },
+    {
+      "track": "246_Anandaamrutakarshini",
+      "raga": "Amṛtavarṣiṇi",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        197.55587768554688,
+        263.70545896020855,
+        295.999369614839
+      ],
+      "top3": [
+        "Kalyāṇi",
+        "Behāg",
+        "Hamsadhvāni"
+      ],
+      "mixture_max_probability": 0.06296880241507764
+    },
+    {
+      "track": "247_Rakta_Ganapatim",
+      "raga": "Mōhanaṁ",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        197.55587768554688,
+        263.70545896020855,
+        295.999369614839
+      ],
+      "top3": [
+        "Mōhanaṁ",
+        "Bilahari",
+        "Harikāmbhōji"
+      ],
+      "mixture_max_probability": 0.09513489148268738
+    },
+    {
+      "track": "24_Evvari_Bodhana",
+      "raga": "Ābhōgi",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.92799377441406,
+        197.46018163750463,
+        221.64155994037426
+      ],
+      "top3": [
+        "Śrīranjani",
+        "Bēgaḍa",
+        "Ābhōgi"
+      ],
+      "mixture_max_probability": 0.32854013704320156
+    },
+    {
+      "track": "25_Sanchara_Dhadhara",
+      "raga": "Rāgamālika",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        196.41615295410156,
+        262.1841089658921,
+        294.2917119840231
+      ],
+      "top3": [
+        "Behāg",
+        "Kalyāṇi",
+        "Latāngi"
+      ],
+      "mixture_max_probability": 0.0776067425142091
+    },
+    {
+      "track": "26_Lokavana_Chatura",
+      "raga": "Bēgaḍa",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.92799377441406,
+        197.46018163750463,
+        221.64155994037426
+      ],
+      "top3": [
+        "Bēgaḍa",
+        "Dēvagāndhāri",
+        "Harikāmbhōji"
+      ],
+      "mixture_max_probability": 0.18723403616163692
+    },
+    {
+      "track": "27_Idhuthaano_Thillai_Sthalam",
+      "raga": "Behāg",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.07455444335938,
+        196.3209768052966,
+        220.36284575097014
+      ],
+      "top3": [
+        "Behāg",
+        "Kamās",
+        "Kalyāṇi"
+      ],
+      "mixture_max_probability": 0.7144108506085046
+    },
+    {
+      "track": "28_Amba_Kamakshi",
+      "raga": "Bhairavi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.07455444335938,
+        196.3209768052966,
+        220.36284575097014
+      ],
+      "top3": [
+        "Bhairavi",
+        "Ānandabhairavi",
+        "Śrī"
+      ],
+      "mixture_max_probability": 0.10280517538590206
+    },
+    {
+      "track": "29_Vitthala_Salaho_Swamy",
+      "raga": "Dēś",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        147.07455444335938,
+        196.3209768052966,
+        220.36284575097014
+      ],
+      "top3": [
+        "Kāpi",
+        "Behāg",
+        "Kēdāragauḷa"
+      ],
+      "mixture_max_probability": 0.08788308141818663
+    },
+    {
+      "track": "30_Pavamana_Suthudu_Mangalam",
+      "raga": "Saurāṣtraṁ",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.92799377441406,
+        197.46018163750463,
+        221.64155994037426
+      ],
+      "top3": [
+        "Saurāṣtraṁ",
+        "Pūrvīkaḷyāṇi",
+        "Aṭāna"
+      ],
+      "mixture_max_probability": 0.20031496825057923
+    },
+    {
+      "track": "31_Karuna_Ela_Gante",
+      "raga": "Varāḷi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.92799377441406,
+        197.46018163750463,
+        221.64155994037426
+      ],
+      "top3": [
+        "Varāḷi",
+        "Bhairavi",
+        "Māyāmāḷavagauḷa"
+      ],
+      "mixture_max_probability": 0.67368874210279
+    },
+    {
+      "track": "32_Gopanandana",
+      "raga": "Bhūṣāvaḷi",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        221.79197692871094,
+        296.0567701396041,
+        332.3124886267573
+      ],
+      "top3": [
+        "Rītigauḷa",
+        "Nāṭa",
+        "Śuddadhanyāsi"
+      ],
+      "mixture_max_probability": 0.05070807346202602
+    },
+    {
+      "track": "33_Entara_Nitana",
+      "raga": "Harikāmbhōji",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.07455444335938,
+        196.3209768052966,
+        220.36284575097014
+      ],
+      "top3": [
+        "Harikāmbhōji",
+        "Nāṭakurinji",
+        "Kamās"
+      ],
+      "mixture_max_probability": 0.1939049841762254
+    },
+    {
+      "track": "34_Teerthakarayinile",
+      "raga": "Kamās",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.07455444335938,
+        196.3209768052966,
+        220.36284575097014
+      ],
+      "top3": [
+        "Behāg",
+        "Kamās",
+        "Kāpi"
+      ],
+      "mixture_max_probability": 0.11815674163799046
+    },
+    {
+      "track": "35_Thillana_Dhanashri",
+      "raga": "Dhanaśrī",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        147.07455444335938,
+        196.3209768052966,
+        220.36284575097014
+      ],
+      "top3": [
+        "Hindōḷaṁ",
+        "Kāpi",
+        "Sāvēri"
+      ],
+      "mixture_max_probability": 0.07189874633396605
+    },
+    {
+      "track": "36_Ozhukkam_Uyirinum",
+      "raga": "Kuntalavarāḷi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.07455444335938,
+        196.3209768052966,
+        220.36284575097014
+      ],
+      "top3": [
+        "Kuntalavarāḷi",
+        "Śrīranjani",
+        "Śankarābharaṇaṁ"
+      ],
+      "mixture_max_probability": 0.6852916902518817
+    },
+    {
+      "track": "37_Undan_Paada_Pankayam",
+      "raga": "Śankarābharaṇaṁ",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.07455444335938,
+        196.3209768052966,
+        220.36284575097014
+      ],
+      "top3": [
+        "Śankarābharaṇaṁ",
+        "Bēgaḍa",
+        "Nīlāṁbari"
+      ],
+      "mixture_max_probability": 0.10516170832626551
+    },
+    {
+      "track": "38_Raagam_Thaanam_Pallavi",
+      "raga": "Kāpi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.07455444335938,
+        196.3209768052966,
+        220.36284575097014
+      ],
+      "top3": [
+        "Kāpi",
+        "Bṛndāvana sāranga",
+        "Jōnpuri"
+      ],
+      "mixture_max_probability": 0.536704490932575
+    },
+    {
+      "track": "39_Pavamana_Suthudu",
+      "raga": "Saurāṣtraṁ",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.92799377441406,
+        197.46018163750463,
+        221.64155994037426
+      ],
+      "top3": [
+        "Saurāṣtraṁ",
+        "Rītigauḷa",
+        "Kānaḍa"
+      ],
+      "mixture_max_probability": 0.5452025610435026
+    },
+    {
+      "track": "40_Kamakshi",
+      "raga": "Bhairavi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.07455444335938,
+        196.3209768052966,
+        220.36284575097014
+      ],
+      "top3": [
+        "Bhairavi",
+        "Ānandabhairavi",
+        "Mukhāri"
+      ],
+      "mixture_max_probability": 0.10347285330993428
+    },
+    {
+      "track": "41_Soundararajam",
+      "raga": "Bṛndāvana sāranga",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.07455444335938,
+        196.3209768052966,
+        220.36284575097014
+      ],
+      "top3": [
+        "Bṛndāvana sāranga",
+        "Madhyamāvati",
+        "Kānaḍa"
+      ],
+      "mixture_max_probability": 0.10704013782296914
+    },
+    {
+      "track": "42_Payum_Oli_Nee_Yenakku",
+      "raga": "Kamās",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.07455444335938,
+        196.3209768052966,
+        220.36284575097014
+      ],
+      "top3": [
+        "Kamās",
+        "Behāg",
+        "Kāpi"
+      ],
+      "mixture_max_probability": 0.2732453700094697
+    },
+    {
+      "track": "43_Shatre_Vilagi_Irum",
+      "raga": "Pūrvīkaḷyāṇi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.07455444335938,
+        196.3209768052966,
+        220.36284575097014
+      ],
+      "top3": [
+        "Pūrvīkaḷyāṇi",
+        "Kāmavardani",
+        "Sāvēri"
+      ],
+      "mixture_max_probability": 0.4656339741818784
+    },
+    {
+      "track": "44_Maname_Ramanai_Paada",
+      "raga": "Sindhubhairavi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        147.07455444335938,
+        196.3209768052966,
+        220.36284575097014
+      ],
+      "top3": [
+        "Sindhubhairavi",
+        "Hindōḷaṁ",
+        "Kāpi"
+      ],
+      "mixture_max_probability": 0.6593489309528342
+    },
+    {
+      "track": "45_Apparama_Bhakti",
+      "raga": "Kāmavardani",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        196.41615295410156,
+        262.1841089658921,
+        294.2917119840231
+      ],
+      "top3": [
+        "Kāmavardani",
+        "Latāngi",
+        "Vasanta"
+      ],
+      "mixture_max_probability": 0.25190919326388866
+    },
+    {
+      "track": "46_Manadirkkugandhadu",
+      "raga": "Sindhubhairavi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        196.41615295410156,
+        262.1841089658921,
+        294.2917119840231
+      ],
+      "top3": [
+        "Sindhubhairavi",
+        "Bhairavi",
+        "Tōḍi"
+      ],
+      "mixture_max_probability": 0.3348666107356556
+    },
+    {
+      "track": "47_Koti_Janmani",
+      "raga": "Rītigauḷa",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        130.24732971191406,
+        173.85932659868774,
+        195.1504958516513
+      ],
+      "top3": [
+        "Suraṭi",
+        "Rītigauḷa",
+        "Kamās"
+      ],
+      "mixture_max_probability": 0.10151925455363414
+    },
+    {
+      "track": "48_Brova_Barama",
+      "raga": "Bahudāri",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        131.0031280517578,
+        174.86819634442674,
+        196.28291385293085
+      ],
+      "top3": [
+        "Kāṁbhōji",
+        "Kalyāṇi",
+        "Śankarābharaṇaṁ"
+      ],
+      "mixture_max_probability": 0.05093972725919132
+    },
+    {
+      "track": "49_Shankari_Shankuru",
+      "raga": "Sāvēri",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        131.0031280517578,
+        174.86819634442674,
+        196.28291385293085
+      ],
+      "top3": [
+        "Sāvēri",
+        "Varāḷi",
+        "Latāngi"
+      ],
+      "mixture_max_probability": 0.12483085552080986
+    },
+    {
+      "track": "50_Karunimpa_Idi",
+      "raga": "Sahānā",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        196.41615295410156,
+        262.1841089658921,
+        294.2917119840231
+      ],
+      "top3": [
+        "Sahānā",
+        "Kānaḍa",
+        "Dēvagāndhāri"
+      ],
+      "mixture_max_probability": 0.23741476275914705
+    },
+    {
+      "track": "51_Pavamana_Suthudu_Mangalam",
+      "raga": "Saurāṣtraṁ",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        196.41615295410156,
+        262.1841089658921,
+        294.2917119840231
+      ],
+      "top3": [
+        "Dēvagāndhāri",
+        "Saurāṣtraṁ",
+        "Aṭāna"
+      ],
+      "mixture_max_probability": 0.06474690078041029
+    },
+    {
+      "track": "52_Geeta_Nayakan",
+      "raga": "Rāgamālika",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        196.41615295410156,
+        262.1841089658921,
+        294.2917119840231
+      ],
+      "top3": [
+        "Sahānā",
+        "Behāg",
+        "Kāpi"
+      ],
+      "mixture_max_probability": 0.04818045206394688
+    },
+    {
+      "track": "53_Siddhi_Vinayakam",
+      "raga": "Ṣanmukhapriya",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        196.41615295410156,
+        262.1841089658921,
+        294.2917119840231
+      ],
+      "top3": [
+        "Ṣanmukhapriya",
+        "Maṇirangu",
+        "Varāḷi"
+      ],
+      "mixture_max_probability": 0.15542984892048048
+    },
+    {
+      "track": "54_Thillana_Pahadi",
+      "raga": "Pahāḍi",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        131.0031280517578,
+        174.86819634442674,
+        196.28291385293085
+      ],
+      "top3": [
+        "Sāma",
+        "Kāṁbhōji",
+        "Dvijāvanti"
+      ],
+      "mixture_max_probability": 0.06658861948321627
+    },
+    {
+      "track": "55_Enadhu_Manam_Kavalai",
+      "raga": "Harikāmbhōji",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        113.36051177978516,
+        151.31812901276888,
+        169.84885703801453
+      ],
+      "top3": [
+        "Bēgaḍa",
+        "Kāṁbhōji",
+        "Mōhanaṁ"
+      ],
+      "mixture_max_probability": 0.04897562094847949
+    },
+    {
+      "track": "56_Purahara_Nandana",
+      "raga": "Hamīr kaḷyaṇi",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        170.9503936767578,
+        228.19139856579338,
+        256.13618464074096
+      ],
+      "top3": [
+        "Suraṭi",
+        "Kamās",
+        "Rītigauḷa"
+      ],
+      "mixture_max_probability": 0.041944112994843116
+    },
+    {
+      "track": "57_Nannu_Brova_Neeku",
+      "raga": "Ābhōgi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        113.36051177978516,
+        151.31812901276888,
+        169.84885703801453
+      ],
+      "top3": [
+        "Ābhōgi",
+        "Śrī",
+        "Śrīranjani"
+      ],
+      "mixture_max_probability": 0.12330808136287229
+    },
+    {
+      "track": "58_Nera_Nammiti",
+      "raga": "Rāgamālika",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        113.36051177978516,
+        151.31812901276888,
+        169.84885703801453
+      ],
+      "top3": [
+        "Haṁsānandi",
+        "Sindhubhairavi",
+        "Kāpi"
+      ],
+      "mixture_max_probability": 0.03341877222049407
+    },
+    {
+      "track": "59_Parvathi_Ninnu_Neranammiti",
+      "raga": "Kalgaḍa",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        169.96417236328125,
+        226.87495105153292,
+        254.65852226739239
+      ],
+      "top3": [
+        "Vasanta",
+        "Lalita",
+        "Śrīranjani"
+      ],
+      "mixture_max_probability": 0.09104818809754495
+    },
+    {
+      "track": "60_Geetha_Vaadya_Natana",
+      "raga": "Nāṭakapriya",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        228.30203247070312,
+        304.7466517299158,
+        342.06655091618444
+      ],
+      "top3": [
+        "Cakravākaṁ",
+        "Aṭāna",
+        "Saurāṣtraṁ"
+      ],
+      "mixture_max_probability": 0.15190024421279077
+    },
+    {
+      "track": "61_Sudhaamayee",
+      "raga": "Amṛtavarṣiṇi",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        170.9503936767578,
+        228.19139856579338,
+        256.13618464074096
+      ],
+      "top3": [
+        "Vasanta",
+        "Hamsadhvāni",
+        "Puṇṇāgavarāḷi"
+      ],
+      "mixture_max_probability": 0.171775513823813
+    },
+    {
+      "track": "63_Vanajaksha_Ninne_Nammiti",
+      "raga": "Behāg",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        113.36051177978516,
+        151.31812901276888,
+        169.84885703801453
+      ],
+      "top3": [
+        "Behāg",
+        "Śankarābharaṇaṁ",
+        "Kalyāṇi"
+      ],
+      "mixture_max_probability": 0.10364190032033631
+    },
+    {
+      "track": "64_Jaya_Jaya_Padmanabhanujese",
+      "raga": "Maṇirangu",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        113.36051177978516,
+        151.31812901276888,
+        169.84885703801453
+      ],
+      "top3": [
+        "Maṇirangu",
+        "Madhyamāvati",
+        "Śrī"
+      ],
+      "mixture_max_probability": 0.09062629092685891
+    },
+    {
+      "track": "65_Devadi_Devanukku_Jaya_Mangalam",
+      "raga": "Suraṭi",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        169.96417236328125,
+        226.87495105153292,
+        254.65852226739239
+      ],
+      "top3": [
+        "Rītigauḷa",
+        "Suraṭi",
+        "Sindhubhairavi"
+      ],
+      "mixture_max_probability": 0.10202416182833103
+    },
+    {
+      "track": "66_Kannanai_Paadu_Maname",
+      "raga": "Kalyāṇi",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        113.36051177978516,
+        151.31812901276888,
+        169.84885703801453
+      ],
+      "top3": [
+        "Kāpi",
+        "Mānḍu",
+        "Kāṁbhōji"
+      ],
+      "mixture_max_probability": 0.03764640491437617
+    },
+    {
+      "track": "67_Paahi_Maam_Sri",
+      "raga": "Janaranjani",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        113.36051177978516,
+        151.31812901276888,
+        169.84885703801453
+      ],
+      "top3": [
+        "Janaranjani",
+        "Bēgaḍa",
+        "Pūrṇacandrika"
+      ],
+      "mixture_max_probability": 0.048095121063908716
+    },
+    {
+      "track": "68_Eppadi_Manam_Thunindhadho",
+      "raga": "Hussēnī",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        113.36051177978516,
+        151.31812901276888,
+        169.84885703801453
+      ],
+      "top3": [
+        "Hussēnī",
+        "Karaharapriya",
+        "Mukhāri"
+      ],
+      "mixture_max_probability": 0.0674967629166134
+    },
+    {
+      "track": "69_Munnu_Ravana",
+      "raga": "Tōḍi",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        169.96417236328125,
+        226.87495105153292,
+        254.65852226739239
+      ],
+      "top3": [
+        "Vasanta",
+        "Suraṭi",
+        "Haṁsānandi"
+      ],
+      "mixture_max_probability": 0.2193991605881194
+    },
+    {
+      "track": "71_Pranamamyaham_Sri_Prananatham",
+      "raga": "Ranjani",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        256.31005859375,
+        342.1328812355942,
+        384.0311746656925
+      ],
+      "top3": [
+        "Nīlāṁbari",
+        "Ābhōgi",
+        "Tōḍi"
+      ],
+      "mixture_max_probability": 0.0979311367992407
+    },
+    {
+      "track": "72_Ni_Ninaindhal_Aagadhadhu",
+      "raga": "Jōnpuri",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        169.96417236328125,
+        226.87495105153292,
+        254.65852226739239
+      ],
+      "top3": [
+        "Kānaḍa",
+        "Sindhubhairavi",
+        "Jōnpuri"
+      ],
+      "mixture_max_probability": 0.2097431653159743
+    },
+    {
+      "track": "73_Chandrashekharam_Sada_Bhajeham",
+      "raga": "Mārgahindōḷaṁ",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        253.36117553710938,
+        338.19659460630356,
+        379.61284231304614
+      ],
+      "top3": [
+        "Tōḍi",
+        "Rītigauḷa",
+        "Sencuruṭṭi"
+      ],
+      "mixture_max_probability": 0.1432161464941263
+    },
+    {
+      "track": "74_Sri_Jalandara",
+      "raga": "Gaṁbhīra nāṭa",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        169.96417236328125,
+        226.87495105153292,
+        254.65852226739239
+      ],
+      "top3": [
+        "Nāṭa",
+        "Jaganmōhini",
+        "Nīlāṁbari"
+      ],
+      "mixture_max_probability": 0.08302219738212951
+    },
+    {
+      "track": "75_Amba_Nilambari",
+      "raga": "Nīlāṁbari",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        170.9503936767578,
+        228.19139856579338,
+        256.13618464074096
+      ],
+      "top3": [
+        "Nīlāṁbari",
+        "Nāṭakurinji",
+        "Behāg"
+      ],
+      "mixture_max_probability": 0.19868341268129225
+    },
+    {
+      "track": "76_Ninnuvina_Marigalada",
+      "raga": "Rītigauḷa",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        170.9503936767578,
+        228.19139856579338,
+        256.13618464074096
+      ],
+      "top3": [
+        "Rītigauḷa",
+        "Kamās",
+        "Suraṭi"
+      ],
+      "mixture_max_probability": 0.7696137253737343
+    },
+    {
+      "track": "77_Avani_Sutha",
+      "raga": "Nādanāmakriya",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        114.01831817626953,
+        152.1961952071242,
+        170.8344530170818
+      ],
+      "top3": [
+        "Nādanāmakriya",
+        "Puṇṇāgavarāḷi",
+        "Sencuruṭṭi"
+      ],
+      "mixture_max_probability": 0.34059574995642794
+    },
+    {
+      "track": "78_Rama_Neepai",
+      "raga": "Kedāraṁ",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        181.13319396972656,
+        241.78380622390236,
+        271.39314638211795
+      ],
+      "top3": [
+        "Hamsadhvāni",
+        "Nāṭa",
+        "Kedāraṁ"
+      ],
+      "mixture_max_probability": 0.07015140703171854
+    },
+    {
+      "track": "79_Etulabrotuva",
+      "raga": "Cakravākaṁ",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        180.08822631835938,
+        240.38894175653897,
+        269.8274639549673
+      ],
+      "top3": [
+        "Saurāṣtraṁ",
+        "Rītigauḷa",
+        "Cakravākaṁ"
+      ],
+      "mixture_max_probability": 0.13734286682992017
+    },
+    {
+      "track": "80_Lokavana_Chatura",
+      "raga": "Bēgaḍa",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        181.13319396972656,
+        241.78380622390236,
+        271.39314638211795
+      ],
+      "top3": [
+        "Bēgaḍa",
+        "Bilahari",
+        "Kalyāṇi"
+      ],
+      "mixture_max_probability": 0.24001912678110346
+    },
+    {
+      "track": "81_Enthavedukonthu_Raghava",
+      "raga": "Sarasvatī manōhari",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        181.13319396972656,
+        241.78380622390236,
+        271.39314638211795
+      ],
+      "top3": [
+        "Sencuruṭṭi",
+        "Sāma",
+        "Yadukula kāṁbōji"
+      ],
+      "mixture_max_probability": 0.11561706110988218
+    },
+    {
+      "track": "82_Koluvamaregatha",
+      "raga": "Tōḍi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        181.13319396972656,
+        241.78380622390236,
+        271.39314638211795
+      ],
+      "top3": [
+        "Tōḍi",
+        "Sindhubhairavi",
+        "Āhiri"
+      ],
+      "mixture_max_probability": 0.4114032998557464
+    },
+    {
+      "track": "83_Neevada_Negana",
+      "raga": "Sāranga",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        180.08822631835938,
+        240.38894175653897,
+        269.8274639549673
+      ],
+      "top3": [
+        "Sāranga",
+        "Kalyāṇi",
+        "Aṭāna"
+      ],
+      "mixture_max_probability": 0.05848499180955959
+    },
+    {
+      "track": "84_Vara_Leela_Gana_Lola",
+      "raga": "Śankarābharaṇaṁ",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        120.11293029785156,
+        160.33152636271967,
+        179.96605348966656
+      ],
+      "top3": [
+        "Dvijāvanti",
+        "Cittaranjani",
+        "Kāpi"
+      ],
+      "mixture_max_probability": 0.07190466078727684
+    },
+    {
+      "track": "85_Chinnanchiru_Kiliye",
+      "raga": "Rāgamālika",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        127.2675552368164,
+        169.8818048728888,
+        190.685878668116
+      ],
+      "top3": [
+        "Behāg",
+        "Kalyāṇi",
+        "Kāpi"
+      ],
+      "mixture_max_probability": 0.06135537466034087
+    },
+    {
+      "track": "87_Pavamana_Suttudu_Pattu",
+      "raga": "Saurāṣtraṁ",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        190.81532287597656,
+        254.70789776117658,
+        285.8999486415846
+      ],
+      "top3": [
+        "Dēvagāndhāri",
+        "Saurāṣtraṁ",
+        "Rītigauḷa"
+      ],
+      "mixture_max_probability": 0.041514113080418635
+    },
+    {
+      "track": "88_Kannallavo_Swami",
+      "raga": "Suraṭi",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        190.81532287597656,
+        254.70789776117658,
+        285.8999486415846
+      ],
+      "top3": [
+        "Suraṭi",
+        "Dēvagāndhāri",
+        "Karaharapriya"
+      ],
+      "mixture_max_probability": 0.3337543238280312
+    },
+    {
+      "track": "89_Padavini",
+      "raga": "Sālaga bhairavi",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        190.81532287597656,
+        254.70789776117658,
+        285.8999486415846
+      ],
+      "top3": [
+        "Śuddadhanyāsi",
+        "Kānaḍa",
+        "Sāma"
+      ],
+      "mixture_max_probability": 0.03297768377918069
+    },
+    {
+      "track": "90_Vandu_Ketpaar_Illayo",
+      "raga": "Rāgamālika",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        190.81532287597656,
+        254.70789776117658,
+        285.8999486415846
+      ],
+      "top3": [
+        "Hindōḷaṁ",
+        "Sindhubhairavi",
+        "Dēvagāndhāri"
+      ],
+      "mixture_max_probability": 0.10773146045041995
+    },
+    {
+      "track": "91_Ragam_Tanam_Pallavi",
+      "raga": "Ṣanmukhapriya",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        190.81532287597656,
+        254.70789776117658,
+        285.8999486415846
+      ],
+      "top3": [
+        "Ṣanmukhapriya",
+        "Sindhubhairavi",
+        "Karaharapriya"
+      ],
+      "mixture_max_probability": 0.16084481043300006
+    },
+    {
+      "track": "92_Tillana",
+      "raga": "Dvijāvanti",
+      "in_vocabulary": true,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        127.2675552368164,
+        169.8818048728888,
+        190.685878668116
+      ],
+      "top3": [
+        "Kamās",
+        "Behāg",
+        "Sahānā"
+      ],
+      "mixture_max_probability": 0.08737529599240454
+    },
+    {
+      "track": "93_Sharanagatha_Vatsale",
+      "raga": "Kathanakutūhalaṁ",
+      "in_vocabulary": false,
+      "baseline_correct": false,
+      "mixture_correct": false,
+      "mixture_top3_correct": false,
+      "tonic_candidates_hz": [
+        190.81532287597656,
+        254.70789776117658,
+        285.8999486415846
+      ],
+      "top3": [
+        "Kānaḍa",
+        "Suraṭi",
+        "Bēgaḍa"
+      ],
+      "mixture_max_probability": 0.05464621243821118
+    },
+    {
+      "track": "94_Hiranmayeem",
+      "raga": "Lalita",
+      "in_vocabulary": true,
+      "baseline_correct": true,
+      "mixture_correct": true,
+      "mixture_top3_correct": true,
+      "tonic_candidates_hz": [
+        190.81532287597656,
+        254.70789776117658,
+        285.8999486415846
+      ],
+      "top3": [
+        "Lalita",
+        "Vasanta",
+        "Māyāmāḷavagauḷa"
+      ],
+      "mixture_max_probability": 0.28917684834648333
+    }
+  ],
+  "summary": {
+    "n": 184,
+    "n_known": 139,
+    "baseline_correct": 98,
+    "mixture_correct": 100,
+    "mixture_top3_known": 123
+  },
+  "status": "inspected development ablation; no production rejection gate or independent accuracy claim"
+}

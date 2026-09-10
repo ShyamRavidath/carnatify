@@ -1,0 +1,11 @@
+{
+  "track": "archive__Karaharapriya__appan avataritta",
+  "audio": "data/concert_audio/Karaharapriya/appan avataritta.mp3",
+  "audio_sha256": "686ce6f8a5f0d7ecf117f08d1e619665236af7b2e24ec977133fef2c61fd783b",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.6870640418492258
+}

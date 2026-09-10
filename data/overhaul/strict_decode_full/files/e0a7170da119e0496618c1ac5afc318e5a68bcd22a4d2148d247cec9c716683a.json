@@ -1,0 +1,11 @@
+{
+  "track": "archive__Jōnpuri__Tukkada  Mangalam",
+  "audio": "data/concert_audio/Jōnpuri/Tukkada  Mangalam.mp3",
+  "audio_sha256": "e0a7170da119e0496618c1ac5afc318e5a68bcd22a4d2148d247cec9c716683a",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6834552912041545
+}

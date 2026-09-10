@@ -1,0 +1,28 @@
+{
+  "inputs": {
+    "data/overhaul/recording_fingerprints/result.json": "8a6df128f2394f95ec9c9321048ac6fd022649ff7f871c612f5880c804bc3a0d",
+    "data/overhaul/recording_fingerprints/overlap.json": "7574632ff3280e2ccb08bf0b4d0dcdc6e749edb4cd85c093dd03b44cd9ac4ef3"
+  },
+  "ffmpeg_sha256": "1332dc2de372bade9a8a63da0d6cdfab9de97fcefbae707bcc0b0506e1203327",
+  "method": "Complete first audio stream decoded as 44100Hz stereo PCM16LE; clean decoder output required",
+  "rows": [
+    {
+      "bit_error": 0.0,
+      "query_frame": 0,
+      "reference_frame": 0,
+      "landmark_votes": 6076,
+      "offset_frames": 0,
+      "window_frames": 160,
+      "query": "53_Siddhi_Vinayakam",
+      "reference": "archive__Ṣanmukhapriya__Siddhi Vinayakam_r2",
+      "query_audio_sha256": "938db15dc389755d97e16021b35dd1590a4484cc9bffbd106f475043497d27ec",
+      "reference_audio_sha256": "841bd2f689b17ffb030f540c86436c213dfbfc205a83c3b60f21103df79e7ed6",
+      "status": "confirmed_same_decoded_pcm",
+      "decoded_pcm_sha256": {
+        "query": "75bd6691e445b5a1d2bbccdfbf54f17dca7b73c75bd58197239fe5a6cc7bf3aa",
+        "reference": "75bd6691e445b5a1d2bbccdfbf54f17dca7b73c75bd58197239fe5a6cc7bf3aa"
+      }
+    }
+  ],
+  "limitation": "Different PCM hashes do not disprove a performance copy; positive equality confirms decoded audio identity"
+}

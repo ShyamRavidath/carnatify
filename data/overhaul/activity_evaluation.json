@@ -1,0 +1,946 @@
+{
+  "corpus_sha256": "5db2931c9fe087570d9339e5a19f44f80d728ff8f149e0fa5faf513cf1d1744d",
+  "model_sha256": "ae0c1e2ad4e1381d851fa9bf298ba13ebc9c5a914cdee2dbe427a6583869924d",
+  "protocol": "all annotated tani >=12s plus 12 hash-selected distinct melodic tracks; center 10s",
+  "rows": [
+    {
+      "track": "16_Evarura",
+      "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+      "section": "tani_avartanam",
+      "start_s": 1993.6808163265,
+      "truth": "percussion",
+      "prediction": {
+        "state": "music",
+        "music": 0.7061112523078918,
+        "speech": 0.0055219801142811775,
+        "applause": 0.0008590900688432157,
+        "percussion": 0.5902553200721741,
+        "melodic": 0.015449910424649715,
+        "top_events": [
+          {
+            "event": "Music",
+            "score": 0.7061112523078918
+          },
+          {
+            "event": "Percussion",
+            "score": 0.5902553200721741
+          },
+          {
+            "event": "Tabla",
+            "score": 0.5505490899085999
+          },
+          {
+            "event": "Drum",
+            "score": 0.34108230471611023
+          },
+          {
+            "event": "Musical instrument",
+            "score": 0.3211694359779358
+          },
+          {
+            "event": "Carnatic music",
+            "score": 0.23005086183547974
+          },
+          {
+            "event": "Classical music",
+            "score": 0.11609215289354324
+          },
+          {
+            "event": "Wood block",
+            "score": 0.0925280973315239
+          }
+        ]
+      },
+      "correct": false,
+      "audio_diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.8404809056726346,
+        "clipping_fraction": 0.0,
+        "rms": 0.02039835437859686
+      }
+    },
+    {
+      "track": "28_Amba_Kamakshi",
+      "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Amba Kamakshi/Vignesh Ishwar - Amba Kamakshi.mp3",
+      "section": "tani_avartanam",
+      "start_s": 3602.3186394555005,
+      "truth": "percussion",
+      "prediction": {
+        "state": "music",
+        "music": 0.7738159894943237,
+        "speech": 0.15703095495700836,
+        "applause": 0.00013853398559149355,
+        "percussion": 0.5995312929153442,
+        "melodic": 0.19758374989032745,
+        "top_events": [
+          {
+            "event": "Music",
+            "score": 0.7738159894943237
+          },
+          {
+            "event": "Carnatic music",
+            "score": 0.6111398935317993
+          },
+          {
+            "event": "Tabla",
+            "score": 0.5995312929153442
+          },
+          {
+            "event": "Musical instrument",
+            "score": 0.48794370889663696
+          },
+          {
+            "event": "Percussion",
+            "score": 0.3813067376613617
+          },
+          {
+            "event": "Classical music",
+            "score": 0.33080655336380005
+          },
+          {
+            "event": "Drum",
+            "score": 0.27684831619262695
+          },
+          {
+            "event": "Sitar",
+            "score": 0.19758374989032745
+          }
+        ]
+      },
+      "correct": false,
+      "audio_diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9755975493495808,
+        "clipping_fraction": 0.0,
+        "rms": 0.024464816481137734
+      }
+    },
+    {
+      "track": "38_Raagam_Thaanam_Pallavi",
+      "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Raagam Thaanam Pallavi/Sanjay Subrahmanyan - Raagam Thaanam Pallavi.mp3",
+      "section": "tani_avartanam",
+      "start_s": 2840.910204081,
+      "truth": "percussion",
+      "prediction": {
+        "state": "music",
+        "music": 0.7268253564834595,
+        "speech": 0.0045867301523685455,
+        "applause": 0.0001464256929466501,
+        "percussion": 0.4842197895050049,
+        "melodic": 0.01623155176639557,
+        "top_events": [
+          {
+            "event": "Music",
+            "score": 0.7268253564834595
+          },
+          {
+            "event": "Percussion",
+            "score": 0.4842197895050049
+          },
+          {
+            "event": "Drum",
+            "score": 0.3933678865432739
+          },
+          {
+            "event": "Musical instrument",
+            "score": 0.2482486218214035
+          },
+          {
+            "event": "Tabla",
+            "score": 0.23638205230236053
+          },
+          {
+            "event": "Carnatic music",
+            "score": 0.18504886329174042
+          },
+          {
+            "event": "Wood block",
+            "score": 0.09684129059314728
+          },
+          {
+            "event": "Drum kit",
+            "score": 0.05149730667471886
+          }
+        ]
+      },
+      "correct": false,
+      "audio_diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.642672257365078,
+        "clipping_fraction": 2.1541950113378685e-05,
+        "rms": 0.06265791605125158
+      }
+    },
+    {
+      "track": "111_Sarasadalanayana",
+      "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+      "section": "tani_avartanam",
+      "start_s": 2346.618321995,
+      "truth": "percussion",
+      "prediction": {
+        "state": "music",
+        "music": 0.856320321559906,
+        "speech": 0.005860599689185619,
+        "applause": 0.0003135515726171434,
+        "percussion": 0.46375489234924316,
+        "melodic": 0.10799640417098999,
+        "top_events": [
+          {
+            "event": "Music",
+            "score": 0.856320321559906
+          },
+          {
+            "event": "Carnatic music",
+            "score": 0.5443637371063232
+          },
+          {
+            "event": "Tabla",
+            "score": 0.46375489234924316
+          },
+          {
+            "event": "Musical instrument",
+            "score": 0.35636118054389954
+          },
+          {
+            "event": "Percussion",
+            "score": 0.34376591444015503
+          },
+          {
+            "event": "Classical music",
+            "score": 0.20446458458900452
+          },
+          {
+            "event": "Drum",
+            "score": 0.18859055638313293
+          },
+          {
+            "event": "Sitar",
+            "score": 0.10799640417098999
+          }
+        ]
+      },
+      "correct": false,
+      "audio_diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.49779728561941944,
+        "clipping_fraction": 0.0,
+        "rms": 0.022638848433639464
+      }
+    },
+    {
+      "track": "222_Madhava_Mamava",
+      "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Madhava Mamava/Rithvik Raja - Madhava Mamava.mp3",
+      "section": "pallavi",
+      "start_s": 39.563265305,
+      "truth": "melodic_music",
+      "prediction": {
+        "state": "music",
+        "music": 0.7121456265449524,
+        "speech": 0.01961996778845787,
+        "applause": 6.702004611724988e-05,
+        "percussion": 0.26901111006736755,
+        "melodic": 0.29292935132980347,
+        "top_events": [
+          {
+            "event": "Carnatic music",
+            "score": 0.8341357707977295
+          },
+          {
+            "event": "Music",
+            "score": 0.7121456265449524
+          },
+          {
+            "event": "Classical music",
+            "score": 0.42948418855667114
+          },
+          {
+            "event": "Musical instrument",
+            "score": 0.3250903785228729
+          },
+          {
+            "event": "Singing",
+            "score": 0.29292935132980347
+          },
+          {
+            "event": "Tabla",
+            "score": 0.26901111006736755
+          },
+          {
+            "event": "Music of Asia",
+            "score": 0.25067663192749023
+          },
+          {
+            "event": "Drum",
+            "score": 0.1053147092461586
+          }
+        ]
+      },
+      "correct": true,
+      "audio_diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9695174126848354,
+        "clipping_fraction": 0.0,
+        "rms": 0.01985797939811352
+      }
+    },
+    {
+      "track": "17_Eranapai",
+      "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Eranapai/Ashwath Narayanan - Eranapai.mp3",
+      "section": "pallavi",
+      "start_s": 32.959183672500004,
+      "truth": "melodic_music",
+      "prediction": {
+        "state": "music",
+        "music": 0.8548399209976196,
+        "speech": 0.006691028364002705,
+        "applause": 0.00011548519978532568,
+        "percussion": 0.019087733700871468,
+        "melodic": 0.13603058457374573,
+        "top_events": [
+          {
+            "event": "Carnatic music",
+            "score": 0.9174871444702148
+          },
+          {
+            "event": "Music",
+            "score": 0.8548399209976196
+          },
+          {
+            "event": "Classical music",
+            "score": 0.5261308550834656
+          },
+          {
+            "event": "Musical instrument",
+            "score": 0.22898775339126587
+          },
+          {
+            "event": "Singing",
+            "score": 0.13603058457374573
+          },
+          {
+            "event": "Folk music",
+            "score": 0.05170423164963722
+          },
+          {
+            "event": "Music of Asia",
+            "score": 0.04576748609542847
+          },
+          {
+            "event": "Middle Eastern music",
+            "score": 0.04057646542787552
+          }
+        ]
+      },
+      "correct": true,
+      "audio_diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9949592291945872,
+        "clipping_fraction": 0.0,
+        "rms": 0.051028094745991875
+      }
+    },
+    {
+      "track": "165_Deenarakshaka",
+      "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/Deenarakshaka/Sanjay Subrahmanyan - Deenarakshaka.mp3",
+      "section": "violin_alap",
+      "start_s": 440.1319727885,
+      "truth": "melodic_music",
+      "prediction": {
+        "state": "music",
+        "music": 0.9322763085365295,
+        "speech": 0.009148232638835907,
+        "applause": 4.181026451988146e-05,
+        "percussion": 0.005968102719634771,
+        "melodic": 0.5202676653862,
+        "top_events": [
+          {
+            "event": "Music",
+            "score": 0.9322763085365295
+          },
+          {
+            "event": "Carnatic music",
+            "score": 0.7745604515075684
+          },
+          {
+            "event": "Musical instrument",
+            "score": 0.6306055784225464
+          },
+          {
+            "event": "Sitar",
+            "score": 0.5202676653862
+          },
+          {
+            "event": "Classical music",
+            "score": 0.4027073085308075
+          },
+          {
+            "event": "Bowed string instrument",
+            "score": 0.26647523045539856
+          },
+          {
+            "event": "Violin, fiddle",
+            "score": 0.12051716446876526
+          },
+          {
+            "event": "Plucked string instrument",
+            "score": 0.07207019627094269
+          }
+        ]
+      },
+      "correct": true,
+      "audio_diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.4014533758910824,
+        "clipping_fraction": 0.0,
+        "rms": 0.01881387178751978
+      }
+    },
+    {
+      "track": "18_Parama_Purusham",
+      "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Parama Purusham/Ashwath Narayanan - Parama Purusham.mp3",
+      "section": "pallavi",
+      "start_s": 29.516462584500005,
+      "truth": "melodic_music",
+      "prediction": {
+        "state": "music",
+        "music": 0.7560883164405823,
+        "speech": 0.02726762369275093,
+        "applause": 0.00012006661563646048,
+        "percussion": 0.15862713754177094,
+        "melodic": 0.24953211843967438,
+        "top_events": [
+          {
+            "event": "Carnatic music",
+            "score": 0.9303783774375916
+          },
+          {
+            "event": "Music",
+            "score": 0.7560883164405823
+          },
+          {
+            "event": "Classical music",
+            "score": 0.40589550137519836
+          },
+          {
+            "event": "Singing",
+            "score": 0.24953211843967438
+          },
+          {
+            "event": "Musical instrument",
+            "score": 0.1949949413537979
+          },
+          {
+            "event": "Tabla",
+            "score": 0.15862713754177094
+          },
+          {
+            "event": "Music of Asia",
+            "score": 0.10702025145292282
+          },
+          {
+            "event": "Percussion",
+            "score": 0.08644556254148483
+          }
+        ]
+      },
+      "correct": true,
+      "audio_diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9944394616007224,
+        "clipping_fraction": 0.0,
+        "rms": 0.04649650385550363
+      }
+    },
+    {
+      "track": "159_Ramakrishnaru_Manaegae",
+      "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/Ramakrishnaru Manaegae/Sanjay Subrahmanyan - Ramakrishnaru Manaegae.mp3",
+      "section": "vocal_alap",
+      "start_s": 26.828571428000004,
+      "truth": "melodic_music",
+      "prediction": {
+        "state": "music",
+        "music": 0.9076520204544067,
+        "speech": 0.006042746361345053,
+        "applause": 7.226997695397586e-05,
+        "percussion": 0.009816679172217846,
+        "melodic": 0.4195646643638611,
+        "top_events": [
+          {
+            "event": "Carnatic music",
+            "score": 0.918368935585022
+          },
+          {
+            "event": "Music",
+            "score": 0.9076520204544067
+          },
+          {
+            "event": "Singing",
+            "score": 0.4195646643638611
+          },
+          {
+            "event": "Classical music",
+            "score": 0.3156506419181824
+          },
+          {
+            "event": "Musical instrument",
+            "score": 0.24237020313739777
+          },
+          {
+            "event": "Music of Asia",
+            "score": 0.18689529597759247
+          },
+          {
+            "event": "Sitar",
+            "score": 0.1733558475971222
+          },
+          {
+            "event": "Middle Eastern music",
+            "score": 0.031279802322387695
+          }
+        ]
+      },
+      "correct": true,
+      "audio_diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.8999328261780744,
+        "clipping_fraction": 0.0,
+        "rms": 0.04031766635614255
+      }
+    },
+    {
+      "track": "26_Lokavana_Chatura",
+      "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Lokavana Chatura/Vignesh Ishwar - Lokavana Chatura.mp3",
+      "section": "violin_alap",
+      "start_s": 547.4956009059999,
+      "truth": "melodic_music",
+      "prediction": {
+        "state": "music",
+        "music": 0.862296998500824,
+        "speech": 0.006301184184849262,
+        "applause": 8.34454913274385e-05,
+        "percussion": 0.008941512554883957,
+        "melodic": 0.2133340686559677,
+        "top_events": [
+          {
+            "event": "Carnatic music",
+            "score": 0.8980423212051392
+          },
+          {
+            "event": "Music",
+            "score": 0.862296998500824
+          },
+          {
+            "event": "Musical instrument",
+            "score": 0.5623144507408142
+          },
+          {
+            "event": "Classical music",
+            "score": 0.40927666425704956
+          },
+          {
+            "event": "Sitar",
+            "score": 0.2133340686559677
+          },
+          {
+            "event": "Bowed string instrument",
+            "score": 0.174085333943367
+          },
+          {
+            "event": "Violin, fiddle",
+            "score": 0.13756489753723145
+          },
+          {
+            "event": "Music of Asia",
+            "score": 0.0470556877553463
+          }
+        ]
+      },
+      "correct": true,
+      "audio_diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9736404997303661,
+        "clipping_fraction": 0.0,
+        "rms": 0.026494864859379387
+      }
+    },
+    {
+      "track": "25_Sanchara_Dhadhara",
+      "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Sanchara Dhadhara/Vignesh Ishwar - Sanchara Dhadhara.mp3",
+      "section": "pallavi",
+      "start_s": 36.195918366,
+      "truth": "melodic_music",
+      "prediction": {
+        "state": "music",
+        "music": 0.75412517786026,
+        "speech": 0.011162593960762024,
+        "applause": 0.0002086800232063979,
+        "percussion": 0.28730183839797974,
+        "melodic": 0.3151214122772217,
+        "top_events": [
+          {
+            "event": "Carnatic music",
+            "score": 0.8239386677742004
+          },
+          {
+            "event": "Music",
+            "score": 0.75412517786026
+          },
+          {
+            "event": "Classical music",
+            "score": 0.4724122881889343
+          },
+          {
+            "event": "Singing",
+            "score": 0.3151214122772217
+          },
+          {
+            "event": "Tabla",
+            "score": 0.28730183839797974
+          },
+          {
+            "event": "Musical instrument",
+            "score": 0.2590666115283966
+          },
+          {
+            "event": "Music of Asia",
+            "score": 0.19512255489826202
+          },
+          {
+            "event": "Percussion",
+            "score": 0.16502080857753754
+          }
+        ]
+      },
+      "correct": true,
+      "audio_diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9754577580122826,
+        "clipping_fraction": 0.0,
+        "rms": 0.11002465901341253
+      }
+    },
+    {
+      "track": "14_Angakaram",
+      "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Angakaram/Ashwath Narayanan - Angakaram.mp3",
+      "section": "vocal_alap",
+      "start_s": 4.6653061215000005,
+      "truth": "melodic_music",
+      "prediction": {
+        "state": "music",
+        "music": 0.8269700407981873,
+        "speech": 0.006227345205843449,
+        "applause": 5.8016201364807785e-05,
+        "percussion": 0.0108322249725461,
+        "melodic": 0.10600902885198593,
+        "top_events": [
+          {
+            "event": "Carnatic music",
+            "score": 0.9038877487182617
+          },
+          {
+            "event": "Music",
+            "score": 0.8269700407981873
+          },
+          {
+            "event": "Classical music",
+            "score": 0.18445970118045807
+          },
+          {
+            "event": "Musical instrument",
+            "score": 0.11564937233924866
+          },
+          {
+            "event": "Singing",
+            "score": 0.10600902885198593
+          },
+          {
+            "event": "Sitar",
+            "score": 0.09153922647237778
+          },
+          {
+            "event": "Mantra",
+            "score": 0.07498443126678467
+          },
+          {
+            "event": "Music of Asia",
+            "score": 0.047230932861566544
+          }
+        ]
+      },
+      "correct": true,
+      "audio_diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9916737448804078,
+        "clipping_fraction": 0.0,
+        "rms": 0.027483058190796064
+      }
+    },
+    {
+      "track": "16_Evarura",
+      "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Evarura/Ashwath Narayanan - Evarura.mp3",
+      "section": "vocal_alap",
+      "start_s": 291.347029478,
+      "truth": "melodic_music",
+      "prediction": {
+        "state": "music",
+        "music": 0.8909115195274353,
+        "speech": 0.003786229295656085,
+        "applause": 0.0001780295860953629,
+        "percussion": 0.00993913970887661,
+        "melodic": 0.10160530358552933,
+        "top_events": [
+          {
+            "event": "Carnatic music",
+            "score": 0.9250215888023376
+          },
+          {
+            "event": "Music",
+            "score": 0.8909115195274353
+          },
+          {
+            "event": "Classical music",
+            "score": 0.4067472219467163
+          },
+          {
+            "event": "Musical instrument",
+            "score": 0.3806179463863373
+          },
+          {
+            "event": "Singing",
+            "score": 0.10160530358552933
+          },
+          {
+            "event": "Music of Asia",
+            "score": 0.06417699158191681
+          },
+          {
+            "event": "Middle Eastern music",
+            "score": 0.046667423099279404
+          },
+          {
+            "event": "Bowed string instrument",
+            "score": 0.045187026262283325
+          }
+        ]
+      },
+      "correct": true,
+      "audio_diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.987542833469662,
+        "clipping_fraction": 0.0,
+        "rms": 0.032642970515539015
+      }
+    },
+    {
+      "track": "231_Emani_Migula",
+      "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Emani Migula/Rithvik Raja - Emani Migula.mp3",
+      "section": "vocal_alap",
+      "start_s": 208.22448979550003,
+      "truth": "melodic_music",
+      "prediction": {
+        "state": "music",
+        "music": 0.8782304525375366,
+        "speech": 0.0837230309844017,
+        "applause": 6.044717156328261e-05,
+        "percussion": 0.028490280732512474,
+        "melodic": 0.34520718455314636,
+        "top_events": [
+          {
+            "event": "Music",
+            "score": 0.8782304525375366
+          },
+          {
+            "event": "Carnatic music",
+            "score": 0.8535750508308411
+          },
+          {
+            "event": "Musical instrument",
+            "score": 0.3493066430091858
+          },
+          {
+            "event": "Singing",
+            "score": 0.34520718455314636
+          },
+          {
+            "event": "Classical music",
+            "score": 0.2904602885246277
+          },
+          {
+            "event": "Sitar",
+            "score": 0.2301584929227829
+          },
+          {
+            "event": "Music of Asia",
+            "score": 0.13638123869895935
+          },
+          {
+            "event": "Bowed string instrument",
+            "score": 0.0882495567202568
+          }
+        ]
+      },
+      "correct": true,
+      "audio_diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.959996956124468,
+        "clipping_fraction": 0.0,
+        "rms": 0.008408400307090003
+      }
+    },
+    {
+      "track": "156_Ganta_mani_aadudhu",
+      "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/Ganta mani aadudhu/Sanjay Subrahmanyan - Ganta mani aadudhu.mp3",
+      "section": "vocal_alap",
+      "start_s": 8.5061224485,
+      "truth": "melodic_music",
+      "prediction": {
+        "state": "music",
+        "music": 0.8963909149169922,
+        "speech": 0.005213278811424971,
+        "applause": 7.863103382987902e-05,
+        "percussion": 0.007267444860190153,
+        "melodic": 0.39383643865585327,
+        "top_events": [
+          {
+            "event": "Carnatic music",
+            "score": 0.9292608499526978
+          },
+          {
+            "event": "Music",
+            "score": 0.8963909149169922
+          },
+          {
+            "event": "Singing",
+            "score": 0.39383643865585327
+          },
+          {
+            "event": "Classical music",
+            "score": 0.2805083096027374
+          },
+          {
+            "event": "Musical instrument",
+            "score": 0.25266677141189575
+          },
+          {
+            "event": "Sitar",
+            "score": 0.22518154978752136
+          },
+          {
+            "event": "Music of Asia",
+            "score": 0.12278378754854202
+          },
+          {
+            "event": "Bowed string instrument",
+            "score": 0.03677942231297493
+          }
+        ]
+      },
+      "correct": true,
+      "audio_diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.8618292118409603,
+        "clipping_fraction": 0.0,
+        "rms": 0.030931818493161616
+      }
+    },
+    {
+      "track": "27_Idhuthaano_Thillai_Sthalam",
+      "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Idhuthaano Thillai Sthalam/Vignesh Ishwar - Idhuthaano Thillai Sthalam.mp3",
+      "section": "pallavi",
+      "start_s": 129.362267573,
+      "truth": "melodic_music",
+      "prediction": {
+        "state": "music",
+        "music": 0.7816144227981567,
+        "speech": 0.029862910509109497,
+        "applause": 7.20187381375581e-05,
+        "percussion": 0.11159422993659973,
+        "melodic": 0.38859009742736816,
+        "top_events": [
+          {
+            "event": "Carnatic music",
+            "score": 0.8374510407447815
+          },
+          {
+            "event": "Music",
+            "score": 0.7816144227981567
+          },
+          {
+            "event": "Classical music",
+            "score": 0.4117378294467926
+          },
+          {
+            "event": "Singing",
+            "score": 0.38859009742736816
+          },
+          {
+            "event": "Musical instrument",
+            "score": 0.31281739473342896
+          },
+          {
+            "event": "Music of Asia",
+            "score": 0.18664656579494476
+          },
+          {
+            "event": "Tabla",
+            "score": 0.11159422993659973
+          },
+          {
+            "event": "Sitar",
+            "score": 0.07837022840976715
+          }
+        ]
+      },
+      "correct": true,
+      "audio_diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9754635222561691,
+        "clipping_fraction": 0.0,
+        "rms": 0.07068122683757357
+      }
+    }
+  ],
+  "summary": {
+    "percussion": {
+      "n": 4,
+      "correct": 0
+    },
+    "melodic_music": {
+      "n": 12,
+      "correct": 12
+    }
+  },
+  "elapsed_s": 14.441669499967247
+}

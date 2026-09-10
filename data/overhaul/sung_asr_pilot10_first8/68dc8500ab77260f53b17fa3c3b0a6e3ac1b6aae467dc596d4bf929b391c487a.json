@@ -1,0 +1,35 @@
+{
+  "plan_sha256": "5a583f91b605504a2a0253c877138662a6a91dc0ee37b2bd6b3167a5c101611c",
+  "query": {
+    "track": "243_Kamalamba_Samrakshatu",
+    "audio": "saraga1.5_carnatic/Chaitra Sairam at Arkay by Chaitra Sairam/Kamalamba Samrakshatu/Chaitra Sairam - Kamalamba Samrakshatu.mp3",
+    "audio_sha256": "1908f6b9e00c867564b11df6a4c87a502f185d05fcaf60085442ceef27c8144a",
+    "start_s": 326.42257369614515,
+    "duration_s": 10
+  },
+  "audio": {
+    "source_sr": 44100,
+    "channels": 2,
+    "downmix": "mean",
+    "downmix_power_ratio": 0.9822898014350899,
+    "clipping_fraction": 0.0,
+    "rms": 0.04336082482619132
+  },
+  "waveform_sha256": "6abc04d82e64f719d03e9cb983cdc674b4af414715700270dfd167808751cb08",
+  "hypothesis": {
+    "text": "I am the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 10.0,
+        "text": " I am the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the only one who is the",
+        "avg_logprob": -0.15000530666775175,
+        "no_speech_prob": 5.246423739890815e-09,
+        "compression_ratio": 22.76923076923077
+      }
+    ],
+    "language": "en",
+    "status": "unverified_hypothesis"
+  },
+  "transcription_s": 17.9447214580141
+}

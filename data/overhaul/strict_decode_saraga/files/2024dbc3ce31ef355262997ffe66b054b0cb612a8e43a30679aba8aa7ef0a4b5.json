@@ -1,0 +1,11 @@
+{
+  "track": "52_Geeta_Nayakan",
+  "audio": "saraga1.5_carnatic/Akkarai Sisters at Arkay by Akkarai Sisters/Geeta Nayakan/Geeta Nayakan.mp3.mp3",
+  "audio_sha256": "2024dbc3ce31ef355262997ffe66b054b0cb612a8e43a30679aba8aa7ef0a4b5",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.723593208938837
+}

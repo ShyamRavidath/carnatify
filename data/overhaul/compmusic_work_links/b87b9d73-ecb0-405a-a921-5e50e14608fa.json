@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/b87b9d73-ecb0-405a-a921-5e50e14608fa",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:04:50.581590+00:00",
+  "recording": {
+    "relations": [
+      {
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "ended": false,
+        "attribute-values": {},
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "work": {
+          "title": "Shantamuleka",
+          "disambiguation": "",
+          "type-id": null,
+          "language": null,
+          "iswcs": [],
+          "attributes": [],
+          "type": null,
+          "languages": [],
+          "id": "550ac592-d01f-4264-86dd-01f8b0b2ec30"
+        },
+        "end": null,
+        "attributes": [
+          "live"
+        ],
+        "begin": null,
+        "type": "performance",
+        "target-type": "work",
+        "direction": "forward",
+        "target-credit": "",
+        "source-credit": ""
+      }
+    ],
+    "title": "Shantamuleka",
+    "disambiguation": "",
+    "first-release-date": "2008",
+    "video": false,
+    "length": 429000,
+    "id": "b87b9d73-ecb0-405a-a921-5e50e14608fa"
+  }
+}

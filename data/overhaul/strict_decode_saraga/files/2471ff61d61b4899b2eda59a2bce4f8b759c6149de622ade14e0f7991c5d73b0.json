@@ -1,0 +1,11 @@
+{
+  "track": "164_Mangalam",
+  "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/Mangalam/Sanjay Subrahmanyan - Mangalam.mp3",
+  "audio_sha256": "2471ff61d61b4899b2eda59a2bce4f8b759c6149de622ade14e0f7991c5d73b0",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.18344654235988855
+}

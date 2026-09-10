@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/18f47952-597e-425d-b048-9c5e2490e589",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:21:30.412683+00:00",
+  "recording": {
+    "title": "Sri Balasubramanya",
+    "disambiguation": "",
+    "video": false,
+    "first-release-date": "2010",
+    "id": "18f47952-597e-425d-b048-9c5e2490e589",
+    "length": 1951000,
+    "relations": [
+      {
+        "direction": "forward",
+        "attribute-values": {},
+        "target-credit": "",
+        "type": "performance",
+        "end": null,
+        "ended": false,
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "work": {
+          "language": null,
+          "type": null,
+          "disambiguation": "",
+          "languages": [],
+          "title": "Sri Balasubramanya",
+          "iswcs": [],
+          "type-id": null,
+          "id": "8e57c1c0-e8df-47bb-a6e1-89558feaf411",
+          "attributes": []
+        },
+        "source-credit": "",
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work"
+      }
+    ]
+  }
+}

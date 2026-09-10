@@ -1,0 +1,9 @@
+{
+  "identifier": "78rpm-mkt",
+  "url": "https://archive.org/metadata/78rpm-mkt",
+  "status": "ok",
+  "raw_file": "fbfdb964fb8a6396d881f114dc884268558d48cfd2416692b4868b5f5c0436ae.raw.json",
+  "raw_sha256": "89dd50254334549535dd2bf986e3108b9c0dbf64218852bc1ecfb142af0faf51",
+  "files": 301,
+  "attempt": 1
+}

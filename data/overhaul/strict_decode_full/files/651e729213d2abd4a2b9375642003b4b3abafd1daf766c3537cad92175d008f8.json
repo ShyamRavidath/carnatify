@@ -1,0 +1,11 @@
+{
+  "track": "archive__Varāḷi__Ne Pogada",
+  "audio": "data/concert_audio/Varāḷi/Ne Pogada.mp3",
+  "audio_sha256": "651e729213d2abd4a2b9375642003b4b3abafd1daf766c3537cad92175d008f8",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8235942497849464
+}

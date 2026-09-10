@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kānaḍa__04 suki evvarO",
+  "audio": "data/concert_audio/Kānaḍa/04 suki evvarO.mp3",
+  "audio_sha256": "68d5bff4b234a2270bfb7b3f081fa05e3dd094452a2c46a0644fe4c6cef598a5",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.7770363329909742
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sāvēri__Nagumomuganalae",
+  "audio": "data/concert_audio/Sāvēri/Nagumomuganalae.mp3",
+  "audio_sha256": "858dff6d706f9b2b59b425f6a803b2d2b6cb03b4d0427508c2e7dd03be6c6a95",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.501096833962947
+}

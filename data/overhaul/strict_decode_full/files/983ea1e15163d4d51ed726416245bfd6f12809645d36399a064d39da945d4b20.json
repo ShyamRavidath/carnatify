@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nādanāmakriya__ninaipadepEdu nenEe",
+  "audio": "data/concert_audio/Nādanāmakriya/ninaipadepEdu nenEe.mp3",
+  "audio_sha256": "983ea1e15163d4d51ed726416245bfd6f12809645d36399a064d39da945d4b20",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2824600418098271
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sindhubhairavi__Hare Venkata",
+  "audio": "data/concert_audio/Sindhubhairavi/Hare Venkata.mp3",
+  "audio_sha256": "7dc99e5cf15a89b1417392214d03ec72415b13387174208cd2075abe3dfc5a00",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6226905421353877
+}

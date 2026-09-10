@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/4555a5d2-138f-4846-8528-7ecf62b2ebc3",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:32:31.386935+00:00",
+  "recording": {
+    "relations": [
+      {
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "ended": false,
+        "type": "performance",
+        "begin": null,
+        "direction": "forward",
+        "target-type": "work",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-values": {},
+        "work": {
+          "type": null,
+          "languages": [],
+          "id": "20edc01f-8ce5-430a-a523-d15fd768d9da",
+          "type-id": null,
+          "language": null,
+          "attributes": [],
+          "iswcs": [],
+          "disambiguation": "",
+          "title": "Matadabaradeno"
+        },
+        "attributes": [
+          "live"
+        ],
+        "end": null,
+        "source-credit": "",
+        "target-credit": ""
+      }
+    ],
+    "title": "Matadabaradeno",
+    "disambiguation": "",
+    "first-release-date": "2002",
+    "video": false,
+    "length": 339000,
+    "id": "4555a5d2-138f-4846-8528-7ecf62b2ebc3"
+  }
+}

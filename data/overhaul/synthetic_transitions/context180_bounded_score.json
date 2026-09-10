@@ -1,0 +1,120 @@
+{
+  "status": "synthetic transition development stress test, not natural-concert validation",
+  "plan_sha256": "f62ec57b6227d500e3414062e9430e9f266d749e4668c159af4ace14a4f07695",
+  "report_sha256": "b1295912fc986cfa606ac91aa50524d326afdbdfc4a5f5cd72952dd87d5eac0d",
+  "context_s": 180,
+  "context_policy": "event_tags_only",
+  "timeline": {
+    "musical_s": 270.0,
+    "candidate_correct_s": 180.0,
+    "candidate_accuracy": 0.6666666666666666,
+    "candidate_coverage_s": 270.0,
+    "asserted_identity_s": 0.0
+  },
+  "n_windows": 9,
+  "n_pure": 2,
+  "n_pure_correct": 2,
+  "pure_accuracy": 1.0,
+  "n_mixed": 7,
+  "rows": [
+    {
+      "start_s": 0.0,
+      "end_s": 180.0,
+      "pure_single_item": false,
+      "musical_items": 2,
+      "dominant_fraction": 0.5,
+      "candidate": "Harikāmbhōji",
+      "dominant_raga": "Nāṭa",
+      "correct": null,
+      "status": "candidate"
+    },
+    {
+      "start_s": 30.0,
+      "end_s": 210.0,
+      "pure_single_item": false,
+      "musical_items": 3,
+      "dominant_fraction": 0.5,
+      "candidate": "Rītigauḷa",
+      "dominant_raga": "Rītigauḷa",
+      "correct": null,
+      "status": "candidate"
+    },
+    {
+      "start_s": 60.0,
+      "end_s": 240.0,
+      "pure_single_item": false,
+      "musical_items": 3,
+      "dominant_fraction": 0.5,
+      "candidate": "Rītigauḷa",
+      "dominant_raga": "Rītigauḷa",
+      "correct": null,
+      "status": "candidate"
+    },
+    {
+      "start_s": 90.0,
+      "end_s": 270.0,
+      "pure_single_item": false,
+      "musical_items": 2,
+      "dominant_fraction": 0.5,
+      "candidate": "Rītigauḷa",
+      "dominant_raga": "Rītigauḷa",
+      "correct": null,
+      "status": "candidate"
+    },
+    {
+      "start_s": 120.0,
+      "end_s": 290.0,
+      "pure_single_item": false,
+      "musical_items": 2,
+      "dominant_fraction": 0.5294117647058824,
+      "candidate": "Aṭāna",
+      "dominant_raga": "Ānandabhairavi",
+      "correct": null,
+      "status": "candidate"
+    },
+    {
+      "start_s": 150.0,
+      "end_s": 290.0,
+      "pure_single_item": false,
+      "musical_items": 2,
+      "dominant_fraction": 0.6428571428571429,
+      "candidate": "Ānandabhairavi",
+      "dominant_raga": "Ānandabhairavi",
+      "correct": null,
+      "status": "candidate"
+    },
+    {
+      "start_s": 180.0,
+      "end_s": 290.0,
+      "pure_single_item": false,
+      "musical_items": 2,
+      "dominant_fraction": 0.8181818181818182,
+      "candidate": "Ānandabhairavi",
+      "dominant_raga": "Ānandabhairavi",
+      "correct": null,
+      "status": "candidate"
+    },
+    {
+      "start_s": 210.0,
+      "end_s": 290.0,
+      "pure_single_item": true,
+      "musical_items": 1,
+      "dominant_fraction": 1.0,
+      "candidate": "Ānandabhairavi",
+      "dominant_raga": "Ānandabhairavi",
+      "correct": true,
+      "status": "candidate"
+    },
+    {
+      "start_s": 240.0,
+      "end_s": 290.0,
+      "pure_single_item": true,
+      "musical_items": 1,
+      "dominant_fraction": 1.0,
+      "candidate": "Ānandabhairavi",
+      "dominant_raga": "Ānandabhairavi",
+      "correct": true,
+      "status": "candidate"
+    }
+  ]
+}

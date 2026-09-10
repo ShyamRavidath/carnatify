@@ -1,0 +1,11 @@
+{
+  "track": "archive__Vakuḷābharaṇaṁ__nee mahima koniyADa tharama",
+  "audio": "data/concert_audio/Vakuḷābharaṇaṁ/nee mahima koniyADa tharama.mp3",
+  "audio_sha256": "7766f3cca28538161c802f302246dfb97164c352071a38a983b24761f5fed417",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2907578330487013
+}

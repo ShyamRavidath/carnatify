@@ -1,0 +1,11 @@
+{
+  "track": "archive__Amṛtavarṣiṇi__Alapana",
+  "audio": "data/concert_audio/Amṛtavarṣiṇi/Alapana.mp3",
+  "audio_sha256": "093567c25ca3945f3854f53818631a3750f7d4e996ee48d87cbee09e3350cef1",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.6836155829951167
+}

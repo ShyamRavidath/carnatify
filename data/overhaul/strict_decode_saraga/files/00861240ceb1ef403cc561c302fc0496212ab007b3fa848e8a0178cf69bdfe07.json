@@ -1,0 +1,11 @@
+{
+  "track": "112_Rama_Rama_Guna_Seema",
+  "audio": "saraga1.5_carnatic/Cherthala Ranganatha Sharma at Arkay by Cherthala Ranganatha Sharma/Rama Rama Guna Seema/Rama Rama Guna Seema.mp3.mp3",
+  "audio_sha256": "00861240ceb1ef403cc561c302fc0496212ab007b3fa848e8a0178cf69bdfe07",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 6.371084833052009
+}

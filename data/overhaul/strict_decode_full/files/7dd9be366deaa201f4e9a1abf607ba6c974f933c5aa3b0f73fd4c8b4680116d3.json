@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāmavardani__ab tO prakaT bhayi",
+  "audio": "data/concert_audio/Kāmavardani/ab tO prakaT bhayi.mp3",
+  "audio_sha256": "7dd9be366deaa201f4e9a1abf607ba6c974f933c5aa3b0f73fd4c8b4680116d3",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7599369161762297
+}

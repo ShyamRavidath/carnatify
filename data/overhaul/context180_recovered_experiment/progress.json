@@ -1,0 +1,19 @@
+{
+  "stage": "evaluate_annotated_raga.py",
+  "command": [
+    "/Users/shyamravidath/carnatify/venv_train/bin/python",
+    "/Users/shyamravidath/carnatify/scripts/evaluate_annotated_raga.py",
+    "--model",
+    "data/overhaul/context180_recovered_experiment/training/raga.joblib",
+    "--corpus",
+    "data/overhaul/repro_audio_identity/evaluation_corpus.json",
+    "--name",
+    "context180_recovered",
+    "--window-s",
+    "180",
+    "--skip-baseline",
+    "--out",
+    "data/overhaul/context180_recovered_experiment/training/evaluation180.json"
+  ],
+  "elapsed_s": 5117.203773125075
+}

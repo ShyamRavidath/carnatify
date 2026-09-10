@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāmavardani__Sami Ninne",
+  "audio": "data/concert_audio/Kāmavardani/Sami Ninne.mp3",
+  "audio_sha256": "9f43e8f3fa990b7f13ea8d56502d42441db9c69957930a86b18dc570c882c940",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7617833749391139
+}

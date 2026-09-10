@@ -1,0 +1,11 @@
+{
+  "track": "archive__Suraṭi__kamalanayana",
+  "audio": "data/concert_audio/Suraṭi/kamalanayana.mp3",
+  "audio_sha256": "166275118754f277483e9b4b9abcd9706f58b1d041700a9ff8d331917871e1b3",
+  "plan_sha256": "e0babfbb17ff59861b0f951c98fa857adcc486715904a4fa250f57daf00a6c12",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6126025416888297
+}

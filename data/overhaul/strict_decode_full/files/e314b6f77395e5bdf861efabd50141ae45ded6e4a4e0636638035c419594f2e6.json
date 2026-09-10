@@ -1,0 +1,11 @@
+{
+  "track": "archive__Dhanyāsi__Paruvam Parka",
+  "audio": "data/concert_audio/Dhanyāsi/Paruvam Parka.mp3",
+  "audio_sha256": "e314b6f77395e5bdf861efabd50141ae45ded6e4a4e0636638035c419594f2e6",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.40073416708037257
+}

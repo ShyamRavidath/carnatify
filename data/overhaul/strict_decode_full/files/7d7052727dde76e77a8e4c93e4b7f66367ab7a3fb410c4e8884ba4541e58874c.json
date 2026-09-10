@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sāvēri__talamEla kulamEla",
+  "audio": "data/concert_audio/Sāvēri/talamEla kulamEla.mp3",
+  "audio_sha256": "7d7052727dde76e77a8e4c93e4b7f66367ab7a3fb410c4e8884ba4541e58874c",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8905766662210226
+}

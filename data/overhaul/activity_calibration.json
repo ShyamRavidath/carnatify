@@ -1,0 +1,38 @@
+{
+  "model_sha256": "ae0c1e2ad4e1381d851fa9bf298ba13ebc9c5a914cdee2dbe427a6583869924d",
+  "training_report_sha256": "6a49a8b8cde2ad03e2ed3112b78dec732472bb63eb5eeb70231649fffe199413",
+  "ratio_threshold": 0.6154223015794342,
+  "min_percussion_score": 0.35,
+  "definition": "percussion / (percussion + melodic)",
+  "n": 16,
+  "n_percussion": 4,
+  "leave_artist_out": {
+    "n_groups": 4,
+    "correct": 16,
+    "percussion_correct": 4,
+    "melodic_correct": 12,
+    "folds": [
+      {
+        "group": "ashwathnarayanan",
+        "threshold": 0.6154223015794342,
+        "n": 5
+      },
+      {
+        "group": "rithvikraja",
+        "threshold": 0.6145183536316803,
+        "n": 2
+      },
+      {
+        "group": "sanjaysubrahmanyan",
+        "threshold": 0.6154223015794342,
+        "n": 5
+      },
+      {
+        "group": "vigneshishwar",
+        "threshold": 0.6449155707683544,
+        "n": 4
+      }
+    ]
+  },
+  "status": "small existing-section development calibration; no production guarantee"
+}

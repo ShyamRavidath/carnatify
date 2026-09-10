@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sencuruṭṭi__Nadha Vindhu Kaladhi",
+  "audio": "data/concert_audio/Sencuruṭṭi/Nadha Vindhu Kaladhi.mp3",
+  "audio_sha256": "b4a096eb12160d2aa78d5c1cfa7eaf5caa2a778fcfb610442b93ef27f82cf510",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4487989158369601
+}

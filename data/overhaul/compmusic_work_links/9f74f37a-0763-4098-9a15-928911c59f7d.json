@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/9f74f37a-0763-4098-9a15-928911c59f7d",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:00:34.736557+00:00",
+  "recording": {
+    "title": "Kaamajanaka",
+    "first-release-date": "2010",
+    "length": 1062000,
+    "disambiguation": "",
+    "video": false,
+    "relations": [
+      {
+        "attributes": [
+          "live"
+        ],
+        "attribute-values": {},
+        "begin": null,
+        "direction": "forward",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "work": {
+          "language": null,
+          "attributes": [],
+          "type": null,
+          "title": "Kaamajanaka",
+          "type-id": null,
+          "id": "b5332572-7280-4fae-8d62-198e9c61813a",
+          "disambiguation": "",
+          "languages": [],
+          "iswcs": []
+        },
+        "target-credit": "",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "type": "performance",
+        "target-type": "work",
+        "end": null,
+        "ended": false,
+        "source-credit": ""
+      }
+    ],
+    "id": "9f74f37a-0763-4098-9a15-928911c59f7d"
+  }
+}

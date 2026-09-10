@@ -1,0 +1,11 @@
+{
+  "track": "archive__Varāḷi__ETi janmamidi",
+  "audio": "data/concert_audio/Varāḷi/ETi janmamidi.mp3",
+  "audio_sha256": "baf9ed68047205ebb605270ceb02fd3c5c4ebdd31fd3428c8f718c366ae32162",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.29508645785972476
+}

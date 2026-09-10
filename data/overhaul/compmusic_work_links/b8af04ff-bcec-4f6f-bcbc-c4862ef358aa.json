@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/b8af04ff-bcec-4f6f-bcbc-c4862ef358aa",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:04:54.234388+00:00",
+  "recording": {
+    "length": 945000,
+    "relations": [
+      {
+        "work": {
+          "id": "819e99d6-5f1d-44eb-89b0-6cdaa14729ba",
+          "attributes": [],
+          "type-id": null,
+          "disambiguation": "",
+          "iswcs": [],
+          "languages": [],
+          "title": "Duru Suga Kripa",
+          "language": null,
+          "type": null
+        },
+        "source-credit": "",
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ],
+        "direction": "forward",
+        "type": "performance",
+        "target-credit": "",
+        "attribute-values": {},
+        "ended": false,
+        "end": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null
+      }
+    ],
+    "first-release-date": "2000",
+    "id": "b8af04ff-bcec-4f6f-bcbc-c4862ef358aa",
+    "video": false,
+    "title": "Duru Suga Kripa",
+    "disambiguation": ""
+  }
+}

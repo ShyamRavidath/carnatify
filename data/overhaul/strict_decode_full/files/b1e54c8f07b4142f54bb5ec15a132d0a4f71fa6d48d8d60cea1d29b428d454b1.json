@@ -1,0 +1,11 @@
+{
+  "track": "archive__Saurāṣtraṁ__nArAyanNenba",
+  "audio": "data/concert_audio/Saurāṣtraṁ/nArAyanNenba.mp3",
+  "audio_sha256": "b1e54c8f07b4142f54bb5ec15a132d0a4f71fa6d48d8d60cea1d29b428d454b1",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.49759854190051556
+}

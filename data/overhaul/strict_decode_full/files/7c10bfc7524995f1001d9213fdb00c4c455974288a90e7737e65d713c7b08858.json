@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāṁbhōji__kANa kankODi",
+  "audio": "data/concert_audio/Kāṁbhōji/kANa kankODi.mp3",
+  "audio_sha256": "7c10bfc7524995f1001d9213fdb00c4c455974288a90e7737e65d713c7b08858",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.867912500165403
+}

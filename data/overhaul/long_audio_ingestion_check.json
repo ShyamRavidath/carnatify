@@ -1,0 +1,504 @@
+{
+  "status": "bounded decoding integrity and latency; not classification accuracy",
+  "n_recordings": 11,
+  "n_windows": 33,
+  "elapsed_s": 5.242992875166237,
+  "peak_process_rss_mb": 76.0,
+  "rows": [
+    {
+      "file": "long_concert_1.mp3",
+      "start_s": 0,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.026226666755974293,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.8162584863870833,
+        "clipping_fraction": 0.0,
+        "rms": 0.0931400729945578
+      }
+    },
+    {
+      "file": "long_concert_1.mp3",
+      "start_s": 797.8763718820861,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.07584662502631545,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.8630305542821946,
+        "clipping_fraction": 0.0,
+        "rms": 0.08965339749673673
+      }
+    },
+    {
+      "file": "long_concert_1.mp3",
+      "start_s": 1595.7527437641722,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.14379758294671774,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.8323160085045492,
+        "clipping_fraction": 0.0,
+        "rms": 0.0910114711057304
+      }
+    },
+    {
+      "file": "long_concert_2.mp3",
+      "start_s": 0,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.0247355829924345,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.5576222537937554,
+        "clipping_fraction": 0.0,
+        "rms": 0.043023575215098496
+      }
+    },
+    {
+      "file": "long_concert_2.mp3",
+      "start_s": 970.9927437641724,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.08509287470951676,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.6154820772733276,
+        "clipping_fraction": 0.0,
+        "rms": 0.08674137233889068
+      }
+    },
+    {
+      "file": "long_concert_2.mp3",
+      "start_s": 1941.9854875283447,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.14541491633281112,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.6869315459656383,
+        "clipping_fraction": 0.0,
+        "rms": 0.08856240263121902
+      }
+    },
+    {
+      "file": "long_concert_3.mp3",
+      "start_s": 0,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.02326925005763769,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.3840480264411157,
+        "clipping_fraction": 0.0,
+        "rms": 0.0690769491842629
+      }
+    },
+    {
+      "file": "long_concert_3.mp3",
+      "start_s": 2742.884263038549,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.20414820918813348,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.46235452931562987,
+        "clipping_fraction": 0.0,
+        "rms": 0.06673378767962401
+      }
+    },
+    {
+      "file": "long_concert_3.mp3",
+      "start_s": 5485.768526077098,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.37204858288168907,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.7050012829754855,
+        "clipping_fraction": 0.0,
+        "rms": 0.03849253804181803
+      }
+    },
+    {
+      "file": "long_concert_4.mp3",
+      "start_s": 0,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.02406670805066824,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.8362205471387015,
+        "clipping_fraction": 0.0,
+        "rms": 0.09308942078233462
+      }
+    },
+    {
+      "file": "long_concert_4.mp3",
+      "start_s": 1322.4964172335601,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.12285908311605453,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.7920405310215772,
+        "clipping_fraction": 0.0,
+        "rms": 0.1130702193600601
+      }
+    },
+    {
+      "file": "long_concert_4.mp3",
+      "start_s": 2644.9928344671202,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.18814508384093642,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.7990331089412164,
+        "clipping_fraction": 0.0,
+        "rms": 0.07644647155835343
+      }
+    },
+    {
+      "file": "long_concert_5.mp3",
+      "start_s": 0,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.026471707969903946,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.25843215612707954,
+        "clipping_fraction": 0.0,
+        "rms": 0.059764728475462034
+      }
+    },
+    {
+      "file": "long_concert_5.mp3",
+      "start_s": 3410.1212698412696,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.2356323334388435,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.35357731191892466,
+        "clipping_fraction": 0.0,
+        "rms": 0.05989561700962391
+      }
+    },
+    {
+      "file": "long_concert_5.mp3",
+      "start_s": 6820.242539682539,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.43940670788288116,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.6019610569205307,
+        "clipping_fraction": 0.0,
+        "rms": 0.08310932006568533
+      }
+    },
+    {
+      "file": "long_concert_6.mp3",
+      "start_s": 0,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.021302042063325644,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9999993091038443,
+        "clipping_fraction": 0.0,
+        "rms": 0.06401315544043137
+      }
+    },
+    {
+      "file": "long_concert_6.mp3",
+      "start_s": 2021.324172335601,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.19254479138180614,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9999650397660907,
+        "clipping_fraction": 0.0,
+        "rms": 0.15856942401537688
+      }
+    },
+    {
+      "file": "long_concert_6.mp3",
+      "start_s": 4042.648344671202,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.2731635421514511,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9999993763002825,
+        "clipping_fraction": 0.0,
+        "rms": 0.0842509033213186
+      }
+    },
+    {
+      "file": "long_concert_7.mp3",
+      "start_s": 0,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.02428141701966524,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.712664837760808,
+        "clipping_fraction": 0.0,
+        "rms": 0.03428428028649304
+      }
+    },
+    {
+      "file": "long_concert_7.mp3",
+      "start_s": 1338.6342857142856,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.10795504180714488,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.759699573156944,
+        "clipping_fraction": 0.0,
+        "rms": 0.12417722234616807
+      }
+    },
+    {
+      "file": "long_concert_7.mp3",
+      "start_s": 2677.2685714285712,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.29665462486445904,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.453053636477511,
+        "clipping_fraction": 0.0,
+        "rms": 0.04631086202865758
+      }
+    },
+    {
+      "file": "long_concert_8.mp3",
+      "start_s": 0,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.024153416976332664,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.6086251985396833,
+        "clipping_fraction": 0.0,
+        "rms": 0.12137345325200492
+      }
+    },
+    {
+      "file": "long_concert_8.mp3",
+      "start_s": 1035.161088435374,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.08844254212453961,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.621113407250141,
+        "clipping_fraction": 0.0,
+        "rms": 0.12071487862269369
+      }
+    },
+    {
+      "file": "long_concert_8.mp3",
+      "start_s": 2070.322176870748,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.1568242502398789,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.5613696909186724,
+        "clipping_fraction": 0.0,
+        "rms": 0.09676716846344444
+      }
+    },
+    {
+      "file": "long_concert_9.mp3",
+      "start_s": 0,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.021927334368228912,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9999999999998809,
+        "clipping_fraction": 0.0,
+        "rms": 0.04989294292126307
+      }
+    },
+    {
+      "file": "long_concert_9.mp3",
+      "start_s": 1108.1086734693877,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.09147741692140698,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9999999999998612,
+        "clipping_fraction": 0.0,
+        "rms": 0.07581481898377615
+      }
+    },
+    {
+      "file": "long_concert_9.mp3",
+      "start_s": 2216.2173469387753,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.17088933289051056,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9999999999998638,
+        "clipping_fraction": 0.0,
+        "rms": 0.06052451099817577
+      }
+    },
+    {
+      "file": "long_concert_10.mp3",
+      "start_s": 0,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.0226284172385931,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.8534572153020183,
+        "clipping_fraction": 0.0,
+        "rms": 0.1572991883501104
+      }
+    },
+    {
+      "file": "long_concert_10.mp3",
+      "start_s": 940.9229024943311,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.08517233328893781,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.8991978472628299,
+        "clipping_fraction": 0.0,
+        "rms": 0.16044075646032205
+      }
+    },
+    {
+      "file": "long_concert_10.mp3",
+      "start_s": 1881.8458049886622,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.14433291601017118,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.6897710973229854,
+        "clipping_fraction": 0.0,
+        "rms": 0.004504106943968824
+      }
+    },
+    {
+      "file": "long_concert_11.mp3",
+      "start_s": 0,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.023364291060715914,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.7843089475764149,
+        "clipping_fraction": 0.0,
+        "rms": 0.048799033736935275
+      }
+    },
+    {
+      "file": "long_concert_11.mp3",
+      "start_s": 1987.214058956916,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.18866500025615096,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.8018508249986595,
+        "clipping_fraction": 0.0,
+        "rms": 0.024496196047457265
+      }
+    },
+    {
+      "file": "long_concert_11.mp3",
+      "start_s": 3974.428117913832,
+      "samples": 441000,
+      "sr": 44100,
+      "elapsed_s": 0.4225620422512293,
+      "diagnostics": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.6827727414531949,
+        "clipping_fraction": 0.0,
+        "rms": 0.08849464407459708
+      }
+    }
+  ]
+}

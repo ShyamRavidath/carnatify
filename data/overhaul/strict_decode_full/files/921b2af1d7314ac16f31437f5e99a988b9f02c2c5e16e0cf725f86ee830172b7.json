@@ -1,0 +1,11 @@
+{
+  "track": "archive__Śuddadhanyāsi__01 sri pArtasArati",
+  "audio": "data/concert_audio/Śuddadhanyāsi/01 sri pArtasArati.mp3",
+  "audio_sha256": "921b2af1d7314ac16f31437f5e99a988b9f02c2c5e16e0cf725f86ee830172b7",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2983039580285549
+}

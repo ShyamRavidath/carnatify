@@ -1,0 +1,11 @@
+{
+  "track": "archive__Haṁsānandi__anda nAL",
+  "audio": "data/concert_audio/Haṁsānandi/anda nAL.mp3",
+  "audio_sha256": "bb330d88b7ac9302b4b099e1d61e29badfd8617e4a79b214c4d61dff682bf87a",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.558542541693896
+}

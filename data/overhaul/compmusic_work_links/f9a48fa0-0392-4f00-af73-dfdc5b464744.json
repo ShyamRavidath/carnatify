@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/f9a48fa0-0392-4f00-af73-dfdc5b464744",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:25:40.717500+00:00",
+  "recording": {
+    "id": "f9a48fa0-0392-4f00-af73-dfdc5b464744",
+    "first-release-date": "2011",
+    "relations": [
+      {
+        "direction": "forward",
+        "attribute-values": {},
+        "target-credit": "",
+        "type": "performance",
+        "end": null,
+        "ended": false,
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "work": {
+          "language": null,
+          "type": null,
+          "disambiguation": "",
+          "languages": [],
+          "title": "Pahimam Parvati",
+          "iswcs": [],
+          "type-id": null,
+          "attributes": [],
+          "id": "089dc351-28d9-4cb5-8bbb-06317f59022b"
+        },
+        "source-credit": "",
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work"
+      }
+    ],
+    "length": 917000,
+    "disambiguation": "",
+    "title": "Pahimam Parvati",
+    "video": false
+  }
+}

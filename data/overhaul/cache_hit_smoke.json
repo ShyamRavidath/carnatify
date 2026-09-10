@@ -1,0 +1,221 @@
+{
+  "protocol": "all eligible Saraga tracks; deterministic center 60 seconds; existing labels only",
+  "corpus_sha256": "5db2931c9fe087570d9339e5a19f44f80d728ff8f149e0fa5faf513cf1d1744d",
+  "model_sha256": "8c28ee71b493a628b254d0ea4a032a742121f372ec0c8d9cd6d2c94fa2c894e5",
+  "baseline_sha256": "198078325c815ad6343fa39ba68eef77bea6fb50bf8196214fded1412a9f1acc",
+  "n_selected": 2,
+  "rows": [
+    {
+      "track": "100_Pavamaana_Suthudu_Pattu",
+      "source": "Live at Vani Mahal by Sanjay Subrahmanyan",
+      "raga": "Saurāṣtraṁ",
+      "metadata": {
+        "audio_sha256": "c11df70f594d1673ae2280836a97e4175acf58c7181510c93a24091a63f75c6f",
+        "start_s": 0,
+        "end_s": 42.50473922902494,
+        "tonic_estimated": 147.92799377441406,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.6407374460272236,
+          "clipping_fraction": 0.0,
+          "rms": 0.036222961812578676
+        },
+        "extraction_failure": null
+      },
+      "predictions": {
+        "combined_estimated": {
+          "in_vocabulary": false,
+          "correct": false,
+          "top3_correct": false,
+          "answered": true,
+          "accepted": false,
+          "top3": [
+            "Pūrvīkaḷyāṇi",
+            "Aṭāna",
+            "Bilahari"
+          ],
+          "voiced_s": 28.856598639455783,
+          "confidence": 0.2069393351710772
+        },
+        "combined_annotated": {
+          "in_vocabulary": false,
+          "correct": false,
+          "top3_correct": false,
+          "answered": true,
+          "accepted": false,
+          "top3": [
+            "Pūrvīkaḷyāṇi",
+            "Aṭāna",
+            "Dēvagāndhāri"
+          ],
+          "voiced_s": 28.856598639455783,
+          "confidence": 0.23678284662239696
+        },
+        "audited_rf_estimated": {
+          "in_vocabulary": false,
+          "correct": false,
+          "top3_correct": false,
+          "answered": true,
+          "accepted": false,
+          "top3": [
+            "Cakravākaṁ",
+            "Bhairavi",
+            "Bilahari"
+          ],
+          "voiced_s": 28.856598639455783,
+          "confidence": 0.125
+        },
+        "audited_rf_annotated": {
+          "in_vocabulary": false,
+          "correct": false,
+          "top3_correct": false,
+          "answered": true,
+          "accepted": false,
+          "top3": [
+            "Aṭāna",
+            "Pūrvīkaḷyāṇi",
+            "Cakravākaṁ"
+          ],
+          "voiced_s": 28.856598639455783,
+          "confidence": 0.09375
+        }
+      }
+    },
+    {
+      "track": "101_Maname_Kanamum",
+      "source": "Live at Vani Mahal by Sanjay Subrahmanyan",
+      "raga": "Karṇāṭaka dēvagāndhāri",
+      "metadata": {
+        "audio_sha256": "61939a4528e2f8838eaffbf270bfefcdd7cb4a36c9ac141c2dac2e9b9d7a9fc8",
+        "start_s": 63.71333333333334,
+        "end_s": 123.71333333333334,
+        "tonic_estimated": 147.92799377441406,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 2,
+          "downmix": "mean",
+          "downmix_power_ratio": 0.6824224578969346,
+          "clipping_fraction": 0.0,
+          "rms": 0.03805834839722356
+        },
+        "extraction_failure": null
+      },
+      "predictions": {
+        "combined_estimated": {
+          "in_vocabulary": false,
+          "correct": false,
+          "top3_correct": false,
+          "answered": true,
+          "accepted": false,
+          "top3": [
+            "Ṣanmukhapriya",
+            "Hamsadhvāni",
+            "Hindōḷaṁ"
+          ],
+          "voiced_s": 37.903673469387755,
+          "confidence": 0.10536961612247232
+        },
+        "combined_annotated": {
+          "in_vocabulary": false,
+          "correct": false,
+          "top3_correct": false,
+          "answered": true,
+          "accepted": false,
+          "top3": [
+            "Ṣanmukhapriya",
+            "Nāṭa",
+            "Kāmavardani"
+          ],
+          "voiced_s": 37.903673469387755,
+          "confidence": 0.09709113344679991
+        },
+        "audited_rf_estimated": {
+          "in_vocabulary": false,
+          "correct": false,
+          "top3_correct": false,
+          "answered": true,
+          "accepted": false,
+          "top3": [
+            "Kāpi",
+            "Karaharapriya",
+            "Nāṭa"
+          ],
+          "voiced_s": 37.903673469387755,
+          "confidence": 0.125
+        },
+        "audited_rf_annotated": {
+          "in_vocabulary": false,
+          "correct": false,
+          "top3_correct": false,
+          "answered": true,
+          "accepted": false,
+          "top3": [
+            "Ṣanmukhapriya",
+            "Kāpi",
+            "Hamsadhvāni"
+          ],
+          "voiced_s": 37.903673469387755,
+          "confidence": 0.078125
+        }
+      }
+    }
+  ],
+  "summary": {
+    "combined_estimated": {
+      "n": 2,
+      "n_in_vocabulary": 0,
+      "n_answered": 2,
+      "correct": 0,
+      "top1_all": 0.0,
+      "top1_in_vocabulary": null,
+      "top3_in_vocabulary": null,
+      "n_accepted": 0,
+      "coverage": 0.0,
+      "accepted_precision": null,
+      "oov_false_acceptance": 0.0
+    },
+    "combined_annotated": {
+      "n": 2,
+      "n_in_vocabulary": 0,
+      "n_answered": 2,
+      "correct": 0,
+      "top1_all": 0.0,
+      "top1_in_vocabulary": null,
+      "top3_in_vocabulary": null,
+      "n_accepted": 0,
+      "coverage": 0.0,
+      "accepted_precision": null,
+      "oov_false_acceptance": 0.0
+    },
+    "audited_rf_estimated": {
+      "n": 2,
+      "n_in_vocabulary": 0,
+      "n_answered": 2,
+      "correct": 0,
+      "top1_all": 0.0,
+      "top1_in_vocabulary": null,
+      "top3_in_vocabulary": null,
+      "n_accepted": 0,
+      "coverage": 0.0,
+      "accepted_precision": null,
+      "oov_false_acceptance": 0.0
+    },
+    "audited_rf_annotated": {
+      "n": 2,
+      "n_in_vocabulary": 0,
+      "n_answered": 2,
+      "correct": 0,
+      "top1_all": 0.0,
+      "top1_in_vocabulary": null,
+      "top3_in_vocabulary": null,
+      "n_accepted": 0,
+      "coverage": 0.0,
+      "accepted_precision": null,
+      "oov_false_acceptance": 0.0
+    }
+  },
+  "requires_new_manual_labels": false,
+  "elapsed_s": 0.5373028749600053
+}

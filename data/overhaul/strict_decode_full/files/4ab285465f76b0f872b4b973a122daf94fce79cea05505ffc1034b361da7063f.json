@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nādanāmakriya__Folk Melody",
+  "audio": "data/concert_audio/Nādanāmakriya/Folk Melody.mp3",
+  "audio_sha256": "4ab285465f76b0f872b4b973a122daf94fce79cea05505ffc1034b361da7063f",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.514341666828841
+}

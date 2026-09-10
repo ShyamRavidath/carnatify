@@ -1,0 +1,11 @@
+{
+  "track": "195_Mangalam_Kosalendraya",
+  "audio": "saraga1.5_carnatic/Sumithra Vasudev at Arkay by Sumithra Vasudev/Mangalam Kosalendraya/Mangalam Kosalendraya.mp3.mp3",
+  "audio_sha256": "34a6128a30dbe4c8ad2075270d133cc88ed04dd17201066d952e7587c5df3416",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.13105287496000528
+}

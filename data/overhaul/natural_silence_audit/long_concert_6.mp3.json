@@ -1,0 +1,15 @@
+{
+  "plan_sha256": "b92cd68264f7cc17b41fd231ddb378ac7f352b4c1dee5163ab14bbb850b081aa",
+  "file": "long_concert_6.mp3",
+  "audio_sha256": "e3be6793fdad506d47cdc689d0dc0829994b92c384ab9e41caa97ff58cf2ed4a",
+  "duration_s": 4052.648344671202,
+  "n_windows": 406,
+  "n_silent": 0,
+  "silent_intervals": [],
+  "interior_rms_percentiles": {
+    "min": 0.02234018812751493,
+    "p1": 0.032523450471025464,
+    "p5": 0.039897608373981014,
+    "p50": 0.10696387468942462
+  }
+}

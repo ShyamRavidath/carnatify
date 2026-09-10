@@ -1,0 +1,11 @@
+{
+  "track": "archive__Aṭāna__madura rAgavadaniyE",
+  "audio": "data/concert_audio/Aṭāna/madura rAgavadaniyE.mp3",
+  "audio_sha256": "5bfaee12d93a2d24ecb17695ef7cb269f494e21fcba6bc8ac138b0e69cd89ccd",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.281074040569365
+}

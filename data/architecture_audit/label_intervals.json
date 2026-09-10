@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "role": "held_out_evaluation_only",
+  "source": "data/long_concerts/LABELS.tsv",
+  "source_sha256": "a0d137ea236e48b7cab710feff1abb7f8fc42fa46ce8c0b3877bb023263e44bb",
+  "notes": "Recovered from the user's eight rows and explicit notes. Original TSV is untouched. Two intervals share one item ID around the explicitly excluded tani. Unlabeled gaps remain unknown. Approximate/muted and missing-confidence rows are excluded from primary scoring. Canonical spelling mappings here do not modify the global alias table.",
+  "intervals": [
+    {"concert":"long_concert_1", "item_id":"c1_1", "source_line":47, "start_s":2, "end_s":755, "raga_raw":"shankaraabharaNam", "raga":"Śankarābharaṇaṁ", "item":"sarOja daLanEtri", "confidence":"high", "primary":true},
+    {"concert":"long_concert_1", "item_id":"c1_1", "source_line":47, "start_s":1440, "end_s":1503, "raga_raw":"shankaraabharaNam", "raga":"Śankarābharaṇaṁ", "item":"sarOja daLanEtri", "confidence":"high", "primary":true},
+    {"concert":"long_concert_2", "item_id":"c2_1", "source_line":50, "start_s":12, "end_s":422, "raga_raw":"tODi", "raga":"Tōḍi", "item":"Era naapai", "confidence":"high", "primary":true},
+    {"concert":"long_concert_2", "item_id":"c2_2", "source_line":51, "start_s":914, "end_s":1718, "raga_raw":"hindOLam", "raga":"Hindōḷaṁ", "item":"saamagaana lOlanE", "confidence":"high", "primary":true},
+    {"concert":"long_concert_2", "item_id":"c2_3", "source_line":52, "start_s":1755, "end_s":1951.985, "raga_raw":"dhEnukaa", "raga":"Dhēnukā", "item":"teliyalEru raama", "confidence":"high", "primary":true, "note":"Ends at frozen file duration, per user's explicit truncated-song note; vocabulary membership must be checked against the actual model."},
+    {"concert":"long_concert_3", "item_id":"c3_1", "source_line":55, "start_s":60, "end_s":458, "raga_raw":"Anandabhairavi", "raga":"Ānandabhairavi", "item":"pAhi shrI girirAjasutE", "confidence":"high", "primary":true},
+    {"concert":"long_concert_3", "item_id":"c3_2", "source_line":56, "start_s":1155, "end_s":1960, "raga_raw":"varALi", "raga":"Varāḷi", "item":"mAmava mInAkSI rAjamAtangi", "confidence":"high", "primary":true},
+    {"concert":"long_concert_3", "item_id":"c3_3", "source_line":57, "start_s":2058, "end_s":2340, "raga_raw":"hamir kalyaNi", "raga":"Hamīr kaḷyaṇi", "item":"Sharade Karunanidhe", "confidence":"high", "primary":false, "note":"Approximate end, final 2-3 minutes reportedly muted; exact usable boundary not given."},
+    {"concert":"long_concert_3", "item_id":"c3_4", "source_line":58, "start_s":2379, "end_s":2553, "raga_raw":"kalAnidhi", "raga":"Kalānidhi", "item":"cinna nADE nA ceyi baTTitivE", "confidence":"", "primary":false, "note":"Confidence missing. Do not apply global alias kalAnidhi -> Kalyani: it changes raga identity."}
+  ],
+  "exclusions": [
+    {"concert":"long_concert_1", "start_s":755, "end_s":1440, "kind":"tani", "source_line":47},
+    {"concert":"long_concert_1", "start_s":1503, "end_s":1605.753, "kind":"after_song", "source_line":47}
+  ]
+}

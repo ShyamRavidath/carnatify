@@ -1,0 +1,24 @@
+{
+  "version": "musicfm_msd_25hz_layer7_cpu_mel_mps_backbone_v1",
+  "source_plan_sha256": "c5660b75544fee85819c840d6c2b13e298a856ccd5191aaa11723386dbd65b3f",
+  "query": {
+    "track": "180_Ninne_Bhajana",
+    "audio": "saraga1.5_carnatic/V Shankarnarayanan at Arkay by V Shankaranarayanan/Ninne Bhajana/Ninne Bhajana.mp3.mp3",
+    "audio_sha256": "1c5434fcc2804ab78600ed0af508a5f3197b058992bfeaeec5f80177c43d84c3",
+    "start_s": 319.63073696145125,
+    "duration_s": 10
+  },
+  "artifacts": {
+    "pretrained_msd.pt": "218b483a0256ddef736267425fabb166fd97008983696bb9270def464b47bded",
+    "config.json": "7a63cb5706c9a37483f1973a3c226d54eb504ce15cf62cb52637019540c8a75d",
+    "msd_stats.json": "c36c61ab10ca4d2e7fdfefc3fcc15205316bec276a06a47baa3641a62c546f22",
+    "musicfm/modules/features.py": "aa8e99711f4a4eab522ff89fe86fc27e281e373ed0ae416743736da229f171da",
+    "musicfm/modules/conv.py": "585705a6450db374e8c411034e846491f7f48d4ed0516fbf8d3b84855ef0d7d1"
+  },
+  "layer": 7,
+  "device": "mps",
+  "threads": 4,
+  "sample_rate": 24000,
+  "pooling": "mean over time axis 0 of verified time/channel output",
+  "repeats": 3
+}

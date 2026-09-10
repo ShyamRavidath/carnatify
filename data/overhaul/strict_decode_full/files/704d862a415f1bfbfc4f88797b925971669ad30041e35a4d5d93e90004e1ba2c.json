@@ -1,0 +1,11 @@
+{
+  "track": "archive__Behāg__tillAnA",
+  "audio": "data/concert_audio/Behāg/tillAnA.mp3",
+  "audio_sha256": "704d862a415f1bfbfc4f88797b925971669ad30041e35a4d5d93e90004e1ba2c",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.8268388751894236
+}

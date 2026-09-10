@@ -1,0 +1,11 @@
+{
+  "track": "77_Avani_Sutha",
+  "audio": "saraga1.5_carnatic/Vasundara Rajagopal at Arkay by Vasundara Rajagopal/Avani Sutha/Avani Sutha.mp3.mp3",
+  "audio_sha256": "f8eb1c1504a5a8422d06aa8afd6c683aa27b72d521b86820bfc75cc106fee1ab",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.23852816689759493
+}

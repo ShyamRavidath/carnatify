@@ -1,0 +1,11 @@
+{
+  "track": "archive__Hamsadhvāni__Narajanma Bandaga",
+  "audio": "data/concert_audio/Hamsadhvāni/Narajanma Bandaga.mp3",
+  "audio_sha256": "3009c5b61e2dc715b4f010e0b4dadff5d46f3041fa4ed6d60db0a4d1e7ebbf48",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7168367090635002
+}

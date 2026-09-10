@@ -1,0 +1,11 @@
+{
+  "track": "archive__Āhiri__mAyammA",
+  "audio": "data/concert_audio/Āhiri/mAyammA.mp3",
+  "audio_sha256": "e03ae064b11d17625732dbe6792913251dd8310ba1d8ad5904966203798250f0",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6741486671380699
+}

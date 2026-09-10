@@ -1,0 +1,11 @@
+{
+  "track": "26_Lokavana_Chatura",
+  "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Lokavana Chatura/Vignesh Ishwar - Lokavana Chatura.mp3",
+  "audio_sha256": "90bcac89a432bf4f34088616d51a4698f406397c592b8d02e388587af12cf800",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.454660249873996
+}

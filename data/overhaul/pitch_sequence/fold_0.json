@@ -1,0 +1,190 @@
+{
+  "status": "single fixed source-held-out fold; development temporal baseline, not complete CV",
+  "fold": 0,
+  "epochs": 20,
+  "seed": 42,
+  "feature_version": "relative_circular_moments_10hz_tcn_v1",
+  "base_feature_sha256": "b1b90b515956ef856a1a20b84d48e0aa8acbada9f3b7ea45ffbc9c2504736a1c",
+  "classes": [
+    "Aṭāna",
+    "Behāg",
+    "Bhairavi",
+    "Bilahari",
+    "Bēgaḍa",
+    "Bṛndāvana sāranga",
+    "Cakravākaṁ",
+    "Dhanyāsi",
+    "Dvijāvanti",
+    "Dēvagāndhāri",
+    "Gauḷa",
+    "Hamsadhvāni",
+    "Harikāmbhōji",
+    "Haṁsānandi",
+    "Hindōḷaṁ",
+    "Hussēnī",
+    "Jaganmōhini",
+    "Janaranjani",
+    "Jōnpuri",
+    "Kalyāṇi",
+    "Kamās",
+    "Karaharapriya",
+    "Kāmavardani",
+    "Kānaḍa",
+    "Kāpi",
+    "Kāṁbhōji",
+    "Kēdāragauḷa",
+    "Latāngi",
+    "Madhyamāvati",
+    "Mukhāri",
+    "Māyāmāḷavagauḷa",
+    "Mōhanaṁ",
+    "Nāṭa",
+    "Nāṭakurinji",
+    "Nīlāṁbari",
+    "Puṇṇāgavarāḷi",
+    "Pūrvīkaḷyāṇi",
+    "Pūrṇacandrika",
+    "Rītigauḷa",
+    "Sahānā",
+    "Sencuruṭṭi",
+    "Sindhubhairavi",
+    "Suraṭi",
+    "Sāma",
+    "Sāvēri",
+    "Tōḍi",
+    "Varāḷi",
+    "Vasanta",
+    "Yadukula kāṁbōji",
+    "Ābhōgi",
+    "Ānandabhairavi",
+    "Śankarābharaṇaṁ",
+    "Śrī",
+    "Śrīranjani",
+    "Śuddadhanyāsi",
+    "Ṣanmukhapriya"
+  ],
+  "n_train_windows": 3019,
+  "n_test_windows": 759,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 4.022090821204576,
+      "track_top1": 0.051181102362204724,
+      "elapsed_s": 63.25384487537667
+    },
+    {
+      "epoch": 2,
+      "train_loss": 3.60782445097017,
+      "track_top1": 0.15354330708661418,
+      "elapsed_s": 81.59286345820874
+    },
+    {
+      "epoch": 3,
+      "train_loss": 3.1100665520816184,
+      "track_top1": 0.21653543307086615,
+      "elapsed_s": 99.8290606662631
+    },
+    {
+      "epoch": 4,
+      "train_loss": 2.849932205523036,
+      "track_top1": 0.2795275590551181,
+      "elapsed_s": 122.5231232913211
+    },
+    {
+      "epoch": 5,
+      "train_loss": 2.650847240803691,
+      "track_top1": 0.31496062992125984,
+      "elapsed_s": 142.51319700013846
+    },
+    {
+      "epoch": 6,
+      "train_loss": 2.5025540385746963,
+      "track_top1": 0.3188976377952756,
+      "elapsed_s": 160.7198663330637
+    },
+    {
+      "epoch": 7,
+      "train_loss": 2.3807067059649265,
+      "track_top1": 0.38188976377952755,
+      "elapsed_s": 180.2463503330946
+    },
+    {
+      "epoch": 8,
+      "train_loss": 2.249680783030765,
+      "track_top1": 0.3858267716535433,
+      "elapsed_s": 200.3973872079514
+    },
+    {
+      "epoch": 9,
+      "train_loss": 2.13159656386456,
+      "track_top1": 0.3779527559055118,
+      "elapsed_s": 220.71346454136074
+    },
+    {
+      "epoch": 10,
+      "train_loss": 2.0592901936900976,
+      "track_top1": 0.4409448818897638,
+      "elapsed_s": 240.9571188329719
+    },
+    {
+      "epoch": 11,
+      "train_loss": 1.9229586688285238,
+      "track_top1": 0.43700787401574803,
+      "elapsed_s": 261.6845441660844
+    },
+    {
+      "epoch": 12,
+      "train_loss": 1.8540373181775534,
+      "track_top1": 0.43700787401574803,
+      "elapsed_s": 282.53071854123846
+    },
+    {
+      "epoch": 13,
+      "train_loss": 1.784610684402102,
+      "track_top1": 0.4881889763779528,
+      "elapsed_s": 303.4266917500645
+    },
+    {
+      "epoch": 14,
+      "train_loss": 1.7195039533471066,
+      "track_top1": 0.4645669291338583,
+      "elapsed_s": 322.7875896249898
+    },
+    {
+      "epoch": 15,
+      "train_loss": 1.5919227262489366,
+      "track_top1": 0.5118110236220472,
+      "elapsed_s": 341.4560553752817
+    },
+    {
+      "epoch": 16,
+      "train_loss": 1.5292677014582439,
+      "track_top1": 0.4645669291338583,
+      "elapsed_s": 360.0717362500727
+    },
+    {
+      "epoch": 17,
+      "train_loss": 1.477905007575908,
+      "track_top1": 0.468503937007874,
+      "elapsed_s": 378.7448262912221
+    },
+    {
+      "epoch": 18,
+      "train_loss": 1.3989339160895498,
+      "track_top1": 0.41338582677165353,
+      "elapsed_s": 397.5685191252269
+    },
+    {
+      "epoch": 19,
+      "train_loss": 1.383523386296313,
+      "track_top1": 0.49606299212598426,
+      "elapsed_s": 416.1979859159328
+    },
+    {
+      "epoch": 20,
+      "train_loss": 1.2926180206532902,
+      "track_top1": 0.4448818897637795,
+      "elapsed_s": 434.8866464579478
+    }
+  ]
+}

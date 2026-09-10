@@ -1,0 +1,1728 @@
+{
+  "plan_sha256": "baf5be0ad8f06e3aa755f36c96133725a32259451175d90a2f4468a3685d10ad",
+  "n_planned": 477,
+  "n_checked": 106,
+  "complete": false,
+  "rows": [
+    {
+      "track": "M_S__Subbulakshmi.Jagadoddharan",
+      "recording_id": "0096a390-e1dd-4e29-a4c9-2e92352535c4",
+      "title": "Jagadoddharan",
+      "artist": "M_S__Subbulakshmi",
+      "raga": "Kāpi",
+      "pitch": "RagaDataset/Carnatic/features/09c179f3-8b19-4792-a852-e9fa0090e409/M_S__Subbulakshmi/M_S__Subbulakshmi_concert_at_Chicago_1977/Jagadoddharan/Jagadoddharan.pitch",
+      "pitch_sha256": "8f45a0a5a3b2bda576992124fead668b3df8d65585722b96d6637b738a203141",
+      "works": [
+        {
+          "work_id": "6e4826a4-29ca-48f2-b442-5949dce5888b",
+          "title": "Jagadoddharana"
+        }
+      ],
+      "receipt_sha256": "ed3e4eee9b7ff42c02587f70be2d216bc3f2ab75f33f3a3521c93fa35917e2ec",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Sandeep_Narayan.Vanajaksha",
+      "recording_id": "029adb58-0f47-4c96-8f12-b7e31fc889bb",
+      "title": "Vanajaksha",
+      "artist": "Sandeep_Narayan",
+      "raga": "Rītigauḷa",
+      "pitch": "RagaDataset/Carnatic/features/4ce0b18d-f4df-41cf-9b40-9166199506b4/Sandeep_Narayan/December_Season_2011/Vanajaksha/Vanajaksha.pitch",
+      "pitch_sha256": "6bb94c648d1276003e567e0d0c109465ba64609a7a70a4aa4bab4d22e73f2f98",
+      "works": [
+        {
+          "work_id": "e5e9b230-c1b9-4a11-939f-356890fcdfdd",
+          "title": "Vanajaksha"
+        }
+      ],
+      "receipt_sha256": "96e8594ff00300cb3db3ec03a65a8e6bd171807349c0c4495c801b9e4eea80e8",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "M_S__Subbulakshmi.Sri_Kamakoti_Peethasthite",
+      "recording_id": "02ad2973-28de-4695-af92-01d2acd604f5",
+      "title": "Sri_Kamakoti_Peethasthite",
+      "artist": "M_S__Subbulakshmi",
+      "raga": "Sāvēri",
+      "pitch": "RagaDataset/Carnatic/features/a47e9d22-847a-46e8-b589-2a3537789f5f/M_S__Subbulakshmi/Paddhatti/Sri_Kamakoti_Peethasthite/Sri_Kamakoti_Peethasthite.pitch",
+      "pitch_sha256": "51bbefb2b8052ce8fadc3ff8901c4b87131b71a602a49d92395e72b858bb5d96",
+      "works": [
+        {
+          "work_id": "dd9ffae1-123c-436a-b91d-0b275e4198f7",
+          "title": "Sri Kamakoti Peethasthite"
+        }
+      ],
+      "receipt_sha256": "d84180a1652289d494154b6e4f62dedb1ec127dc84cff0dfd60a5a565ffab084",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "S_Sundar.Eppadi_Manam_Thunindhadho",
+      "recording_id": "033599e7-f096-4eff-b9e6-82b988150a79",
+      "title": "Eppadi_Manam_Thunindhadho",
+      "artist": "S_Sundar",
+      "raga": "Hussēnī",
+      "pitch": "RagaDataset/Carnatic/features/50bd048f-4482-4c5b-850c-9ad5e5ec46f1/S_Sundar/Dr_S_Sundar_at_Arkay/Eppadi_Manam_Thunindhadho/Eppadi_Manam_Thunindhadho.pitch",
+      "pitch_sha256": "9efbf97adeae21acaeb490ec48fb44575c93fa7965a6c204e268c696399084a4",
+      "works": [
+        {
+          "work_id": "2b1755b8-d1ec-4a4b-854a-93b05a33be10",
+          "title": "Eppadi Manam"
+        }
+      ],
+      "receipt_sha256": "135bcd916370a895dc32ccf26c100523c70467ffe38e74606c5e686c50d8f697",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Amrutha_Venkatesh.Karunimpa_Idi_Manchi",
+      "recording_id": "0383cf37-4f4e-45e4-99f1-32f19bf1156e",
+      "title": "Karunimpa_Idi_Manchi",
+      "artist": "Amrutha_Venkatesh",
+      "raga": "Sahānā",
+      "pitch": "RagaDataset/Carnatic/features/993d6cf6-dc89-4d23-9a9f-8eeed1524872/Amrutha_Venkatesh/December_Season_2007/Karunimpa_Idi_Manchi/Karunimpa_Idi_Manchi.pitch",
+      "pitch_sha256": "70a6e2e322570dcbe25f36039eb880436c63472b7c2acbd4384eea1000471d05",
+      "works": [
+        {
+          "work_id": "118eb8d2-e90e-40cc-aa6d-78ed6860ae88",
+          "title": "Karunimpa"
+        }
+      ],
+      "receipt_sha256": "c7219f8e89f1be1a5c05d4213ca57160c392a74482f28576b795ecdaafda441c",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Nisha_P_Rajagopal.Parama_Purusham",
+      "recording_id": "05a931ba-605b-468e-b7b5-64fe87a443ff",
+      "title": "Parama_Purusham",
+      "artist": "Nisha_P_Rajagopal",
+      "raga": "Behāg",
+      "pitch": "RagaDataset/Carnatic/features/700e1d92-7094-4c21-8a3b-d7b60c550edf/Nisha_P_Rajagopal/December_Season_2009/Parama_Purusham/Parama_Purusham.pitch",
+      "pitch_sha256": "6cf93066154d255d7226a45f0c68d5c634dd1d3b8ab2c6b72af5332604d530ca",
+      "works": [
+        {
+          "work_id": "096f3279-9983-49a6-a900-9ba6bfefd9e0",
+          "title": "Parama Purusham Anuyamavayam Sakhi"
+        }
+      ],
+      "receipt_sha256": "b8c85092fbf8f0f414f074963aa791a4baac0d022d0ff6b7e9ee2f4bbc25101a",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "S__Ramanathan.Dinamani_Vamsha",
+      "recording_id": "06621248-2527-4295-ba08-fba2e7f086ca",
+      "title": "Dinamani_Vamsha",
+      "artist": "S__Ramanathan",
+      "raga": "Harikāmbhōji",
+      "pitch": "RagaDataset/Carnatic/features/b08475a2-1049-433a-be8f-105bf14718fb/S__Ramanathan/Paddhatti/Dinamani_Vamsha/Dinamani_Vamsha.pitch",
+      "pitch_sha256": "6874ef4893a67bde8180c8555634fbf8f325081b00dabcd53517652f9b4abc4c",
+      "works": [
+        {
+          "work_id": "19d7d202-6282-4463-9bbb-976a8d97f819",
+          "title": "Dinamani Vamsha"
+        }
+      ],
+      "receipt_sha256": "a1cd78c7ffc16f033b3ed9ca8e3c65e8aeb03a275867bd00c7d1ca4e04a64d4a",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Gayathri_Venkataraghavan.Adum_Mayilai_-_Karpagame",
+      "recording_id": "06877163-9cb0-4f0f-b43c-e2892498e891",
+      "title": "Adum_Mayilai_-_Karpagame",
+      "artist": "Gayathri_Venkataraghavan",
+      "raga": "Madhyamāvati",
+      "pitch": "RagaDataset/Carnatic/features/18b1acb9-dff6-47ec-873a-b2086c8d268d/Gayathri_Venkataraghavan/December_Season_2010/Adum_Mayilai_-_Karpagame/Adum_Mayilai_-_Karpagame.pitch",
+      "pitch_sha256": "159f434f28f35f44436ae607cfd63f2ca332561dae6f070504b6fec3e510ffee",
+      "works": [
+        {
+          "work_id": "9af4b020-bde2-4289-b801-cb0855b4efeb",
+          "title": "Karpagame"
+        }
+      ],
+      "receipt_sha256": "823759ae90f6aedbb86918c7b26b92c94b7024a0ad318e8a7570e268f9187eec",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Gayathri_Venkataraghavan.Vani_Arul",
+      "recording_id": "0797f895-c946-4b38-a19e-0c45537140c4",
+      "title": "Vani_Arul",
+      "artist": "Gayathri_Venkataraghavan",
+      "raga": "Dhanyāsi",
+      "pitch": "RagaDataset/Carnatic/features/5ce23030-f71d-4f5d-9d76-f91c2c182392/Gayathri_Venkataraghavan/December_Season_2008/Vani_Arul/Vani_Arul.pitch",
+      "pitch_sha256": "ce028000804c9fb448c8547724d171bf2ad8e6cb6cd423d7d110de443b738d20",
+      "works": [
+        {
+          "work_id": "f6789aa0-f1e6-47cd-9e33-cd74d896928c",
+          "title": "Vani Arul"
+        }
+      ],
+      "receipt_sha256": "da5c9eeafe822a86a4be7bf30fe94b8bd5d41d23840ed0b8f784e56fd5346dcf",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Semmangudi_Srinivasa_Iyer.Kshinamai_Tiruga",
+      "recording_id": "07f75444-5832-468e-b317-876bc290ff03",
+      "title": "Kshinamai_Tiruga",
+      "artist": "Semmangudi_Srinivasa_Iyer",
+      "raga": "Mukhāri",
+      "pitch": "RagaDataset/Carnatic/features/978f4c3c-6a12-43fd-8427-c414ee17b252/Semmangudi_Srinivasa_Iyer/Paddhatti/Kshinamai_Tiruga/Kshinamai_Tiruga.pitch",
+      "pitch_sha256": "3f81abf06530ee4710f0c12ca01376366e6773fd7bdcf9ca9868ca7457f0ba77",
+      "works": [
+        {
+          "work_id": "e45ad7ec-f037-4494-8261-67ea9d5b0566",
+          "title": "Ksheenamai Tiruga"
+        }
+      ],
+      "receipt_sha256": "eb525a6646738caed88c2d8f93f1a62bcd4e7a590cfa9c31a3bdb337519d3611",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Sikkil_Gurucharan.Chalamela",
+      "recording_id": "08f924be-a91c-4493-9d95-63260cb5c8f4",
+      "title": "Chalamela",
+      "artist": "Sikkil_Gurucharan",
+      "raga": "Nāṭakurinji",
+      "pitch": "RagaDataset/Carnatic/features/cda9cbe9-c1aa-42bb-8b4c-e9dfc8af133c/Sikkil_Gurucharan/December_Season_2006/Chalamela/Chalamela.pitch",
+      "pitch_sha256": "3f1572ca7011356982b94e6f9109989ef6196202982c324dc34a507505b5031e",
+      "works": [
+        {
+          "work_id": "365d7b7d-6192-4042-9fc8-c7a7cb9106d6",
+          "title": "Chalamela jese vaiyya"
+        }
+      ],
+      "receipt_sha256": "0bd37123a278b6a31d7be4398cea15d3d7eb3e000c77047d7177c2050a297cf6",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Sikkil_Gurucharan.Marubalka",
+      "recording_id": "09695a4a-ae57-4b99-9baf-cb473dfd7e74",
+      "title": "Marubalka",
+      "artist": "Sikkil_Gurucharan",
+      "raga": "Śrīranjani",
+      "pitch": "RagaDataset/Carnatic/features/42dd0ccb-f92a-4622-ae5d-a3be571b4939/Sikkil_Gurucharan/December_Season_2010/Marubalka/Marubalka.pitch",
+      "pitch_sha256": "baea6907ca7aec4f29ff40cc0182b71675d118fd12cc36f1dc1fb9eeed672056",
+      "works": [
+        {
+          "work_id": "41b9a6ab-6f8d-4b14-81cb-c895c2707506",
+          "title": "Marubalka"
+        }
+      ],
+      "receipt_sha256": "da58d2066de8b1808d4f7194ff3f126ca8e13ee9d0b860d9f74ade124b5abef0",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Ranjani_Guruprasad.Shyamasundaranga",
+      "recording_id": "097f72f8-0fd2-4dd6-ba90-d03d5cbcc534",
+      "title": "Shyamasundaranga",
+      "artist": "Ranjani_Guruprasad",
+      "raga": "Dhanyāsi",
+      "pitch": "RagaDataset/Carnatic/features/5ce23030-f71d-4f5d-9d76-f91c2c182392/Ranjani_Guruprasad/December_Season_2010/Shyamasundaranga/Shyamasundaranga.pitch",
+      "pitch_sha256": "d26c7d2a993bb3195f5a434b803324f180e4f7e8a2b722d3a3c0c7edab87f2f7",
+      "works": [
+        {
+          "work_id": "0793b089-71df-494b-becf-80a02c71dbba",
+          "title": "Shyamasundaranga"
+        }
+      ],
+      "receipt_sha256": "5710a108c206d2342b56b6e95a54ca7375d04d7a569dda6989c207263e5479ba",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Amritha_Murali.Kamakshi",
+      "recording_id": "09bd5b5f-1b57-4269-aa76-e3bb87471743",
+      "title": "Kamakshi",
+      "artist": "Amritha_Murali",
+      "raga": "Varāḷi",
+      "pitch": "RagaDataset/Carnatic/features/e8a0bf54-13c6-4a09-922a-bfc744ddf38a/Amritha_Murali/December_Season_2005/Kamakshi/Kamakshi.pitch",
+      "pitch_sha256": "72cc22aae650557c9f17fe20349f431e8ed1f6ba7db5d44bce619f207864faef",
+      "works": [
+        {
+          "work_id": "e2ea167b-9bcf-4cf0-846d-90b6982bc6b8",
+          "title": "Kamakshi Bangaru"
+        }
+      ],
+      "receipt_sha256": "3303338af821caa740fac3f707f6471ed3ea9e18872c6593427af4711dc3b552",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Maharajapuram_S_Ramachandran.Himachala_Tanaya",
+      "recording_id": "09d56269-1fd8-4fb5-928c-71605ed01e17",
+      "title": "Himachala_Tanaya",
+      "artist": "Maharajapuram_S_Ramachandran",
+      "raga": "Ānandabhairavi",
+      "pitch": "RagaDataset/Carnatic/features/e18fcaa7-1f9c-4f09-b627-0687481f4ec7/Maharajapuram_S_Ramachandran/December_Season_2009/Himachala_Tanaya/Himachala_Tanaya.pitch",
+      "pitch_sha256": "55ea17de497b6631405970cbffcfe7ad44245ebab30dbd8dc9bf1c4ccfcd6cbe",
+      "works": [
+        {
+          "work_id": "eee08b71-0779-468f-a8e7-d372e6ebaba5",
+          "title": "Himachala Tanaya"
+        }
+      ],
+      "receipt_sha256": "eca099a9d296df609b8e98f3c36720182420ae41715bdcb1314ff0bff109521f",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Sumithra_Vasudev.Sri_Dakshinamurte",
+      "recording_id": "09da4438-b10c-470a-9b8b-a8012c8098ec",
+      "title": "Sri_Dakshinamurte",
+      "artist": "Sumithra_Vasudev",
+      "raga": "Śankarābharaṇaṁ",
+      "pitch": "RagaDataset/Carnatic/features/a2f9f182-0ceb-4531-b286-b840b47a54b8/Sumithra_Vasudev/Tasmai_Sri_Gurave_Namaha/Sri_Dakshinamurte/Sri_Dakshinamurte.pitch",
+      "pitch_sha256": "e649a22456735d2b2248e282e0d70c28bbe5130076b6a32318717c1f2defe306",
+      "works": [
+        {
+          "work_id": "ff383619-ee88-403e-b070-15737fa98fd1",
+          "title": "Sri Dakshinamurte"
+        }
+      ],
+      "receipt_sha256": "afff2132fa28cc4e7cc544a006586ccc4c9f69066866324376a3f321d55f6868",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Chaitra_Sairam.Rakta_Ganapatim",
+      "recording_id": "0a1c2ae7-e933-458d-afac-fa081338d5de",
+      "title": "Rakta_Ganapatim",
+      "artist": "Chaitra_Sairam",
+      "raga": "Mōhanaṁ",
+      "pitch": "RagaDataset/Carnatic/features/39821826-3327-41d7-9cd5-e22fe7b08360/Chaitra_Sairam/Chaitra_Sairam_at_Arkay/Rakta_Ganapatim/Rakta_Ganapatim.pitch",
+      "pitch_sha256": "e0a9a20a50cdbeeabaf5a31d0b9be23c69808af43dcd6891119c8979a799c51b",
+      "works": [
+        {
+          "work_id": "c7d574e6-4292-40bb-bc95-3774dcf394a6",
+          "title": "Rakta Ganapatim"
+        }
+      ],
+      "receipt_sha256": "841a326452294eef16cb83ff2faff7520c7930cca02f4ac9b91e2e9d65af65fa",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "K__V__Narayanaswami.Rasa_Vilasa",
+      "recording_id": "0ba5d4d1-037b-4dcc-ae0c-c832a7681b89",
+      "title": "Rasa_Vilasa",
+      "artist": "K__V__Narayanaswami",
+      "raga": "Kāṁbhōji",
+      "pitch": "RagaDataset/Carnatic/features/f0866e71-33b2-47db-ab75-0808c41f2401/K__V__Narayanaswami/Master_Piece_-_Live_Concert_at_Sri_Krishna_Gana_Sabha_Vol_II/Rasa_Vilasa/Rasa_Vilasa.pitch",
+      "pitch_sha256": "85184e2984b8b8992618ddf6ba890507ef1ceb85a816881ddc107bb86f960d34",
+      "works": [],
+      "receipt_sha256": "ab26a9ab3597020df9b669bb319847387885fd226b7b4cbdbc1a54cb14626c29",
+      "status": "no_work_link"
+    },
+    {
+      "track": "Kunnakkudi_M_Balamuralikrishna.Kaddanu_Variki",
+      "recording_id": "0cc1dc29-05af-42eb-8b87-7d15d706d7a6",
+      "title": "Kaddanu_Variki",
+      "artist": "Kunnakkudi_M_Balamuralikrishna",
+      "raga": "Tōḍi",
+      "pitch": "RagaDataset/Carnatic/features/a9413dff-91d1-4e29-ad92-c04019dce5b8/Kunnakkudi_M_Balamuralikrishna/December_Season_2008/Kaddanu_Variki/Kaddanu_Variki.pitch",
+      "pitch_sha256": "239d417d83d1fd73db9d993a0534f754a9a5af5bd4bb025bbc6960840c73dc6d",
+      "works": [
+        {
+          "work_id": "f28c7bd6-53cf-4b84-b504-2dad473b65ec",
+          "title": "Kaddanu variki"
+        }
+      ],
+      "receipt_sha256": "026837a5f2d3916d5b621b8401501075f2ceb2d284fe597f8dd74f30635068f5",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "T__M__Krishna.Nath_Hare",
+      "recording_id": "0d7e1620-60ad-472f-8287-abac88966c46",
+      "title": "Nath_Hare",
+      "artist": "T__M__Krishna",
+      "raga": "Sindhubhairavi",
+      "pitch": "RagaDataset/Carnatic/features/98d46d9e-5100-4f24-bcd4-d0f95966c7cb/T__M__Krishna/December_Season_2000/Nath_Hare/Nath_Hare.pitch",
+      "pitch_sha256": "2c0fe32708f580b9dac9f1113984d8a95f2f005ef7560e5ff98e03dbcff5a462",
+      "works": [
+        {
+          "work_id": "0a3c9ef3-8327-469c-bc18-561853f4e2de",
+          "title": "Natha Hare"
+        }
+      ],
+      "receipt_sha256": "8417bac23273150a62072f87f78029c94d7a8c808538661ea7f5495ff0dec955",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Kunnakkudi_M_Balamuralikrishna.Siddhi_Vinayakam",
+      "recording_id": "0ded0c52-7f15-4140-b45a-ca829106d053",
+      "title": "Siddhi_Vinayakam",
+      "artist": "Kunnakkudi_M_Balamuralikrishna",
+      "raga": "Ṣanmukhapriya",
+      "pitch": "RagaDataset/Carnatic/features/0277eae5-3411-4b22-9fa8-1b347e7528d1/Kunnakkudi_M_Balamuralikrishna/December_Season_2008/Siddhi_Vinayakam/Siddhi_Vinayakam.pitch",
+      "pitch_sha256": "4a15f6d84986365d9d023a5728b02dd5f8444bbea0ab735297889a20b64600fc",
+      "works": [
+        {
+          "work_id": "1bd9d41e-7689-40e8-9048-624395a24762",
+          "title": "Siddhi Vinayakam"
+        }
+      ],
+      "receipt_sha256": "9280b50df25edc8f4c7ab638fc9b4f06fe62622be5059783d0019ee0efa2e430",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Nisha_P_Rajagopal.Srikanta_Enagishtu",
+      "recording_id": "0e2350f2-bf49-4bf6-8c5c-83fee8e6c396",
+      "title": "Srikanta_Enagishtu",
+      "artist": "Nisha_P_Rajagopal",
+      "raga": "Kānaḍa",
+      "pitch": "RagaDataset/Carnatic/features/9a071e54-3eed-48b2-83a3-1a3fd683b8e0/Nisha_P_Rajagopal/December_Season_2011/Srikanta_Enagishtu/Srikanta_Enagishtu.pitch",
+      "pitch_sha256": "2fa966d48834c93b46ec3ebb219ecff0b20f07da8be799ed245d8d0fbc551933",
+      "works": [
+        {
+          "work_id": "f1c169fa-80e7-4ced-aa45-99469eaf33bd",
+          "title": "Srikanta Enagishtu"
+        }
+      ],
+      "receipt_sha256": "614503bdd734763dcc360d3301b2230939f7f1f53a1f4088198c5fec6080e679",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.Aadum_Mayilai_Karpagambikai_-_Viruttam",
+      "recording_id": "0e669af6-ca69-4b46-9e1d-1720c67b1507",
+      "title": "Aadum_Mayilai_Karpagambikai_-_Viruttam",
+      "artist": "Sanjay_Subrahmanyan",
+      "raga": "Behāg",
+      "pitch": "RagaDataset/Carnatic/features/700e1d92-7094-4c21-8a3b-d7b60c550edf/Sanjay_Subrahmanyan/December_Season_2010/Aadum_Mayilai_Karpagambikai_-_Viruttam/Aadum_Mayilai_Karpagambikai_-_Viruttam.pitch",
+      "pitch_sha256": "ea384430f053cd3fbd63160f73344ac5011a4cf39d44956c5835c3ee11798102",
+      "works": [],
+      "receipt_sha256": "31d0fe36f703c0305e2f60f1934a46f4e174f0d16280211492d1b0984f2ab366",
+      "status": "no_work_link"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.Sama_geeta_priyan",
+      "recording_id": "0f2006e9-ce85-47c2-a45b-de3586662d99",
+      "title": "Sama_geeta_priyan",
+      "artist": "Sanjay_Subrahmanyan",
+      "raga": "Gauḷa",
+      "pitch": "RagaDataset/Carnatic/features/e5c4d94a-b34a-42ef-acd7-f235612350e4/Sanjay_Subrahmanyan/Sanjay_at_Sastri_Hall/Sama_geeta_priyan/Sama_geeta_priyan.pitch",
+      "pitch_sha256": "8ed35f7e0a71084ab14dea3878aa66aa6f84e2999878f59addc8b27883ea94c4",
+      "works": [
+        {
+          "work_id": "5f017fe3-b7f6-42c7-a5aa-1f5959370b5e",
+          "title": "Sama Geeta Priyan"
+        }
+      ],
+      "receipt_sha256": "1f33d6dd88826b3f322f08c502c83013454bb6012508b01e701b00d701ef736b",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.Marivere_Gathi",
+      "recording_id": "0f212bc3-4ea9-47ef-baa2-b696ca7a2f90",
+      "title": "Marivere_Gathi",
+      "artist": "Sanjay_Subrahmanyan",
+      "raga": "Ānandabhairavi",
+      "pitch": "RagaDataset/Carnatic/features/e18fcaa7-1f9c-4f09-b627-0687481f4ec7/Sanjay_Subrahmanyan/December_Season_2010/Marivere_Gathi/Marivere_Gathi.pitch",
+      "pitch_sha256": "29e13612f7abdd0158829d52cfbeec3c628862083506533ca588b787419ceee2",
+      "works": [],
+      "receipt_sha256": "df6dab488eb1afc09eecbd2a020ceb2c02e28f64abab445f54d2e418d286d1ae",
+      "status": "no_work_link"
+    },
+    {
+      "track": "Gayathri_Venkataraghavan.Dayanidhe",
+      "recording_id": "110ab5e5-3fc6-4625-acf9-c9e22f26961d",
+      "title": "Dayanidhe",
+      "artist": "Gayathri_Venkataraghavan",
+      "raga": "Bēgaḍa",
+      "pitch": "RagaDataset/Carnatic/features/aa5f376f-06cd-4a69-9cc9-b1077104e0b0/Gayathri_Venkataraghavan/December_Season_2005/Dayanidhe/Dayanidhe.pitch",
+      "pitch_sha256": "e2da3b812b189ef609cbe3aac14cc891fba90aff05e6c8f4726184ff3eaf7cb0",
+      "works": [
+        {
+          "work_id": "86e0c361-758f-4ca9-98f1-0117c8e3d72b",
+          "title": "Dayanidhe"
+        }
+      ],
+      "receipt_sha256": "0debcb671d1ad6a4b8ce4b0a2969f7ad582f3d1d085c3349e60b61c47cbf15b0",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Aruna_Sairam.Valli_Kanavan",
+      "recording_id": "1197169e-74c6-4c0e-8a86-dffc5220aeaf",
+      "title": "Valli_Kanavan",
+      "artist": "Aruna_Sairam",
+      "raga": "Sencuruṭṭi",
+      "pitch": "RagaDataset/Carnatic/features/3af5a361-923a-465d-864d-9c7ba0c04a47/Aruna_Sairam/December_Season_2001/Valli_Kanavan/Valli_Kanavan.pitch",
+      "pitch_sha256": "794abd859dd5afabea293ad89b2ba7f1763b8460008ab3147b030eebc594d9fb",
+      "works": [
+        {
+          "work_id": "7f2c2fd8-7807-41b4-aee9-bf8ebb0f33f1",
+          "title": "Valli Kanavan"
+        }
+      ],
+      "receipt_sha256": "f3b0d2561bdba5e6d382c9666a1c04e7380278463d674f4dc8548c8d6b6c22a8",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "D__K__Jayaraman.Srivaralakshmi",
+      "recording_id": "13e9f408-0984-471e-ab08-e781e9a13f1d",
+      "title": "Srivaralakshmi",
+      "artist": "D__K__Jayaraman",
+      "raga": "Śrī",
+      "pitch": "RagaDataset/Carnatic/features/bdd80890-44f1-4a93-8d93-06a418781f97/D__K__Jayaraman/D__K__Jayaraman_concert_at_Shanmukhanantha_Hall,_1985/Srivaralakshmi/Srivaralakshmi.pitch",
+      "pitch_sha256": "7331fd92ed030c8107318af91ee8c7884f42ac3faf0a845523ab26e66250a2e1",
+      "works": [
+        {
+          "work_id": "74c3d6e7-c490-4a8f-9747-9392fb274868",
+          "title": "Sri Varalakshmi"
+        }
+      ],
+      "receipt_sha256": "a1dd34e4599b2165d6c39cce61c37fb12431ace70c654d45b9b862f6489455ac",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Prasanna_Venkataraman.Kadaikan_Parvai",
+      "recording_id": "14f9192e-8f5d-4945-9362-05ba1b9fa4b2",
+      "title": "Kadaikan_Parvai",
+      "artist": "Prasanna_Venkataraman",
+      "raga": "Kamās",
+      "pitch": "RagaDataset/Carnatic/features/a4ec6633-1050-4207-8313-b017194c8fa0/Prasanna_Venkataraman/December_Season_2008/Kadaikan_Parvai/Kadaikan_Parvai.pitch",
+      "pitch_sha256": "010c72cc9d7c3ec2e723a306d8ed099ad6ece163c1ffbd89af19ae73567e99c2",
+      "works": [
+        {
+          "work_id": "6581a668-8fb2-4709-a50c-67b550b36d6d",
+          "title": "Kadaikan Parvai"
+        }
+      ],
+      "receipt_sha256": "5add4f83300d1ff9ca42dcfc33861aae4ea1882142fdd4b321f217d430701aec",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.O_Rangashayee",
+      "recording_id": "1520c037-248b-46c8-8eab-65e31d3f3b08",
+      "title": "O_Rangashayee",
+      "artist": "Sanjay_Subrahmanyan",
+      "raga": "Kāṁbhōji",
+      "pitch": "RagaDataset/Carnatic/features/f0866e71-33b2-47db-ab75-0808c41f2401/Sanjay_Subrahmanyan/Sanjay_at_Sastri_Hall/O_Rangashayee/O_Rangashayee.pitch",
+      "pitch_sha256": "a1517acbe34695e20e36b488f714ab32d3954237266762654499af63dd34d6f5",
+      "works": [
+        {
+          "work_id": "b5b002a9-cf58-445e-b347-a513f3d5b8a6",
+          "title": "O Rangashayee"
+        }
+      ],
+      "receipt_sha256": "82c0466498bb076f0372f269c15416533455575e91e8901c9b4be2d28833abe3",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Amritha_Murali.Vidulaku",
+      "recording_id": "1587bdd5-60b6-481e-9a30-60525607850f",
+      "title": "Vidulaku",
+      "artist": "Amritha_Murali",
+      "raga": "Māyāmāḷavagauḷa",
+      "pitch": "RagaDataset/Carnatic/features/9cedca68-4a9d-4170-bec3-0d1db1ff730e/Amritha_Murali/December_Season_2009/Vidulaku/Vidulaku.pitch",
+      "pitch_sha256": "d733a9f5ae0689a3158dd71da5c3787d86ff6fc81d75deed0fa9bc5a16952e4e",
+      "works": [
+        {
+          "work_id": "c53cc516-3ec3-485f-ba2a-139d5a7fe710",
+          "title": "Vidulaku Mrokkeda"
+        }
+      ],
+      "receipt_sha256": "fca330327a2a6cf097bd93a8494842a4a5ae6a9fc38cffe98388ac156954e0fb",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "M_S__Subbulakshmi.Gajavadana",
+      "recording_id": "15cd462a-08c2-4341-aa2e-061711712fcb",
+      "title": "Gajavadana",
+      "artist": "M_S__Subbulakshmi",
+      "raga": "Śrīranjani",
+      "pitch": "RagaDataset/Carnatic/features/42dd0ccb-f92a-4622-ae5d-a3be571b4939/M_S__Subbulakshmi/Paddhatti_-_M_S_Subbulakshmi_-_Live_In_Concert_1956/Gajavadana/Gajavadana.pitch",
+      "pitch_sha256": "e0f289787f45a014518087342dab74cdb89a5ab3ec67bc9b5d78e308060d9371",
+      "works": [],
+      "receipt_sha256": "1a972a455dda122dbf9d9910886401d3d14e75c7f342555be9fd5be0427540f9",
+      "status": "no_work_link"
+    },
+    {
+      "track": "Sangeetha_Swaminathan.Emanine",
+      "recording_id": "1634762f-a482-473c-935c-7883f16f26cb",
+      "title": "Emanine",
+      "artist": "Sangeetha_Swaminathan",
+      "raga": "Mukhāri",
+      "pitch": "RagaDataset/Carnatic/features/978f4c3c-6a12-43fd-8427-c414ee17b252/Sangeetha_Swaminathan/December_Season_2011/Emanine/Emanine.pitch",
+      "pitch_sha256": "c5428fb5ffa55c81689b0d154ed993515d48ba8c574fd135758dc67c50fa9585",
+      "works": [
+        {
+          "work_id": "18c0cc01-e32d-443e-9583-187bb5b8b8ff",
+          "title": "Emanine"
+        }
+      ],
+      "receipt_sha256": "4a43bc870bad1006934d2535bf367126c0ab6f0e1cd495d852903d403c4af367",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.Thyagaraja_Palayasumam",
+      "recording_id": "167129a1-d931-4d86-a27d-7ce609944148",
+      "title": "Thyagaraja_Palayasumam",
+      "artist": "Sanjay_Subrahmanyan",
+      "raga": "Gauḷa",
+      "pitch": "RagaDataset/Carnatic/features/e5c4d94a-b34a-42ef-acd7-f235612350e4/Sanjay_Subrahmanyan/Compositions_Of_Muthuswami_Dikshitar/Thyagaraja_Palayasumam/Thyagaraja_Palayasumam.pitch",
+      "pitch_sha256": "5aa42556c76e664f992d46e36784aea3f3204b9742f2b48ccbdd21054fcbf566",
+      "works": [
+        {
+          "work_id": "57e762ca-375a-469a-a886-4baf37a754ea",
+          "title": "Tyagaraja Palayasumam"
+        }
+      ],
+      "receipt_sha256": "26d7fd1e9ab58379156420377a3a0c3bed809c94321063dc0c425665822797be",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Akkarai_Sisters.Siddhi_Vinayakam",
+      "recording_id": "16a3263f-31dc-40da-839b-f5955b77c0b6",
+      "title": "Siddhi_Vinayakam",
+      "artist": "Akkarai_Sisters",
+      "raga": "Ṣanmukhapriya",
+      "pitch": "RagaDataset/Carnatic/features/0277eae5-3411-4b22-9fa8-1b347e7528d1/Akkarai_Sisters/Akkarai_Sisters_at_Arkay/Siddhi_Vinayakam/Siddhi_Vinayakam.pitch",
+      "pitch_sha256": "7573f3bf59b8f02f45a1510950704f6aa465f5e58dd53bc49cbefa5d74602ca2",
+      "works": [
+        {
+          "work_id": "1bd9d41e-7689-40e8-9048-624395a24762",
+          "title": "Siddhi Vinayakam"
+        }
+      ],
+      "receipt_sha256": "7b22b342d2f952b1664a2c56d2f2951ccbbcbd6f8300711cb43a663a8496283a",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Kunnakkudi_M_Balamuralikrishna.Aravinda_Pada_Malar",
+      "recording_id": "16fbd94c-b09c-44d9-8d0f-841ada1b62c7",
+      "title": "Aravinda_Pada_Malar",
+      "artist": "Kunnakkudi_M_Balamuralikrishna",
+      "raga": "Kāpi",
+      "pitch": "RagaDataset/Carnatic/features/09c179f3-8b19-4792-a852-e9fa0090e409/Kunnakkudi_M_Balamuralikrishna/December_Season_2009/Aravinda_Pada_Malar/Aravinda_Pada_Malar.pitch",
+      "pitch_sha256": "e656e9f253dc78c43590058fb9687a3b338fcb5757af35576020d72ab92ea0f7",
+      "works": [
+        {
+          "work_id": "deaf4029-436d-412c-abdb-1e07e1bc3aaa",
+          "title": "Aravinda Padamalar"
+        }
+      ],
+      "receipt_sha256": "90169781f646a226ac0105a2115f8f5a6ea80ce23c088e9cbd43c6ea844a2a0f",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Nisha_P_Rajagopal.Rama_Nannu_Brovaravu",
+      "recording_id": "170970da-a19a-462d-8dae-4ece614f2780",
+      "title": "Rama_Nannu_Brovaravu",
+      "artist": "Nisha_P_Rajagopal",
+      "raga": "Harikāmbhōji",
+      "pitch": "RagaDataset/Carnatic/features/b08475a2-1049-433a-be8f-105bf14718fb/Nisha_P_Rajagopal/December_Season_2008/Rama_Nannu_Brovaravu/Rama_Nannu_Brovaravu.pitch",
+      "pitch_sha256": "cf0566e8b349c9b657a3fec42833eb0416c371514dfd5705a725a229b0625424",
+      "works": [
+        {
+          "work_id": "25c6592a-d581-4854-8b3e-90374fd481d7",
+          "title": "Rama Nannu Brovaravu"
+        }
+      ],
+      "receipt_sha256": "983598780f76eb18c092f3cd31d86608d68b5327a8f0be76e0fe0a8d12cfb029",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Amritha_Murali.Saketaniketana",
+      "recording_id": "17b24021-3716-4de5-907c-8105e0219647",
+      "title": "Saketaniketana",
+      "artist": "Amritha_Murali",
+      "raga": "Kānaḍa",
+      "pitch": "RagaDataset/Carnatic/features/9a071e54-3eed-48b2-83a3-1a3fd683b8e0/Amritha_Murali/December_Season_2009/Saketaniketana/Saketaniketana.pitch",
+      "pitch_sha256": "3ee5ea5f6c582645b9fb346eb4744d00d8186a11b3afd4eeb80af8409ae26050",
+      "works": [
+        {
+          "work_id": "d8dfa222-db51-4cd8-81c4-6bdb01831086",
+          "title": "Saketaniketana"
+        }
+      ],
+      "receipt_sha256": "6f2204c03114be394012667c1b673c319d518f7dd3034d7637ab1eabee3acf21",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Amritha_Murali.Vallabha_Nayakasya",
+      "recording_id": "189d1ce0-1c6d-4038-b28f-d55245039fcd",
+      "title": "Vallabha_Nayakasya",
+      "artist": "Amritha_Murali",
+      "raga": "Bēgaḍa",
+      "pitch": "RagaDataset/Carnatic/features/aa5f376f-06cd-4a69-9cc9-b1077104e0b0/Amritha_Murali/December_Season_2005/Vallabha_Nayakasya/Vallabha_Nayakasya.pitch",
+      "pitch_sha256": "945ae4c47711355cff8d19948400fca96b375ed0e570240cf74dd2a7693ac694",
+      "works": [
+        {
+          "work_id": "79b0c7be-0c7d-4b93-a31f-8c7160fb48be",
+          "title": "Vallabha Nayakasya"
+        }
+      ],
+      "receipt_sha256": "2fa86dda837db7af22fbd2352b684f5eecc3e0d8c85dd90a498fe9c981023567",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Amritha_Murali.Upacharamu",
+      "recording_id": "18d13645-6a51-4483-b122-6402f633a69b",
+      "title": "Upacharamu",
+      "artist": "Amritha_Murali",
+      "raga": "Bhairavi",
+      "pitch": "RagaDataset/Carnatic/features/123b09bd-9901-4e64-a65a-10b02c9e0597/Amritha_Murali/December_Season_2008/Upacharamu/Upacharamu.pitch",
+      "pitch_sha256": "62b724a7695d2dcec043aeae94e3dc279c50ff33226bd855b85bd961d4a44e57",
+      "works": [
+        {
+          "work_id": "881aae7a-44c5-431d-94a8-441bf8bbf920",
+          "title": "Upacharamu Jesevarunnaru"
+        }
+      ],
+      "receipt_sha256": "da1e673b47ea264a3fa976bdd7fc47d9de2410d714b716f5065c615481678286",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Gayathri_Venkataraghavan.Sri_Balasubramanya",
+      "recording_id": "18f47952-597e-425d-b048-9c5e2490e589",
+      "title": "Sri_Balasubramanya",
+      "artist": "Gayathri_Venkataraghavan",
+      "raga": "Bilahari",
+      "pitch": "RagaDataset/Carnatic/features/2165542c-45da-4301-af82-c2e7ddbe4768/Gayathri_Venkataraghavan/December_Season_2010/Sri_Balasubramanya/Sri_Balasubramanya.pitch",
+      "pitch_sha256": "5c0f7f409fd0c7db82766a2cb23b1b1aab1a77e6dbc2661d08a676d29b9d1af2",
+      "works": [
+        {
+          "work_id": "8e57c1c0-e8df-47bb-a6e1-89558feaf411",
+          "title": "Sri Balasubramanya"
+        }
+      ],
+      "receipt_sha256": "0ea82e4ef388447768408ee1ed98d4abe13b45d20bd6030ff6442cdc5d37864a",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Vijay_Siva.Abhayamba",
+      "recording_id": "19b4b0aa-a8fd-43d1-be38-4119abf7f8ca",
+      "title": "Abhayamba",
+      "artist": "Vijay_Siva",
+      "raga": "Kalyāṇi",
+      "pitch": "RagaDataset/Carnatic/features/bf4662d4-25c3-4cad-9249-4de2dc513c06/Vijay_Siva/Madrasil_Margazhi_2006/Abhayamba/Abhayamba.pitch",
+      "pitch_sha256": "70f1b4246217ce49cba8a2d50868578c0e73643855eb7dfedd33c1990d3bbc57",
+      "works": [
+        {
+          "work_id": "913f8065-ad50-4f97-900b-769108081879",
+          "title": "Abhayamba"
+        }
+      ],
+      "receipt_sha256": "d8ac9b57a4b5a27f4d812c4c2e4e41558802ec5acdc582038fa337f8b338e7d9",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Sikkil_Gurucharan.Emani_Vegintune",
+      "recording_id": "1b522203-3dc5-4348-8bdb-3a7f3ac2a485",
+      "title": "Emani_Vegintune",
+      "artist": "Sikkil_Gurucharan",
+      "raga": "Hussēnī",
+      "pitch": "RagaDataset/Carnatic/features/50bd048f-4482-4c5b-850c-9ad5e5ec46f1/Sikkil_Gurucharan/December_Season_2009/Emani_Vegintune/Emani_Vegintune.pitch",
+      "pitch_sha256": "6a1f02237051f4935ffe01a7de5bf885037ebe08297917b4443035cdc615d0fa",
+      "works": [
+        {
+          "work_id": "9cfa6013-7e81-4098-a116-4d643bc3c4c2",
+          "title": "Emani Vegintune"
+        }
+      ],
+      "receipt_sha256": "7a523b52c81f7b8297215028b7ced0d6ed6bdcee23fa38c1079366128169fe08",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "K__V__Narayanaswami.Ka_vaa_vaa",
+      "recording_id": "1c0836c6-d7d8-4ceb-96c5-9c968cd41442",
+      "title": "Ka_vaa_vaa",
+      "artist": "K__V__Narayanaswami",
+      "raga": "Varāḷi",
+      "pitch": "RagaDataset/Carnatic/features/e8a0bf54-13c6-4a09-922a-bfc744ddf38a/K__V__Narayanaswami/K__V__Narayanaswami_concert_at_Dayton,_1993/Ka_vaa_vaa/Ka_vaa_vaa.pitch",
+      "pitch_sha256": "b2f14a4a006fcf9ccd2c85376f1ae6a53ad0ccb29dff151dffb02af0876a5f3a",
+      "works": [
+        {
+          "work_id": "8da926f8-72f9-4501-9e88-68070e19835e",
+          "title": "Ka vaa vaa"
+        }
+      ],
+      "receipt_sha256": "14f80e3f968d2737dd9b5d0f975f383b3768c3d174d829c3535d83a3eea4bb66",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "S__Sowmya.Yarukkahilum",
+      "recording_id": "1c3d8526-6692-46f5-a00a-92dddbead9ff",
+      "title": "Yarukkahilum",
+      "artist": "S__Sowmya",
+      "raga": "Bēgaḍa",
+      "pitch": "RagaDataset/Carnatic/features/aa5f376f-06cd-4a69-9cc9-b1077104e0b0/S__Sowmya/Bharat_Sangeet_Utsav/Yarukkahilum/Yarukkahilum.pitch",
+      "pitch_sha256": "3cbfec80dff5d9b6bfdb611235cc97df000362b5bb7a32475ba6da43a8a62c73",
+      "works": [
+        {
+          "work_id": "19898782-a5d0-4476-b339-6570ff9c876c",
+          "title": "Yarukkahilum"
+        }
+      ],
+      "receipt_sha256": "da610b38cc5379171c1a7ad839c32ce3823df7a5a1174604d4e424e173513e52",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Aruna_Sairam.Karunimpa_Idi_Manchi",
+      "recording_id": "1d04eed5-b4b4-45d7-9103-3fa52cbd520d",
+      "title": "Karunimpa_Idi_Manchi",
+      "artist": "Aruna_Sairam",
+      "raga": "Sahānā",
+      "pitch": "RagaDataset/Carnatic/features/993d6cf6-dc89-4d23-9a9f-8eeed1524872/Aruna_Sairam/December_Season_2006/Karunimpa_Idi_Manchi/Karunimpa_Idi_Manchi.pitch",
+      "pitch_sha256": "0e152d0ebc466f80e58db8df0a57f2005d0b80cc66b05a9b3ef315257ed0244b",
+      "works": [
+        {
+          "work_id": "118eb8d2-e90e-40cc-aa6d-78ed6860ae88",
+          "title": "Karunimpa"
+        }
+      ],
+      "receipt_sha256": "3c3b4641c0bbe9f189494cc4d34480db25793e5a7f1a5efc7891c6c3b62806d3",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Sangeetha_Swaminathan.Jaya_Jaya_Jaya_Janaki_Kantha",
+      "recording_id": "1e2f83ca-b0ce-4f12-a571-037cdc676738",
+      "title": "Jaya_Jaya_Jaya_Janaki_Kantha",
+      "artist": "Sangeetha_Swaminathan",
+      "raga": "Nāṭa",
+      "pitch": "RagaDataset/Carnatic/features/9ebeb536-30a7-403f-8042-f7c1445c4b87/Sangeetha_Swaminathan/December_Season_1999/Jaya_Jaya_Jaya_Janaki_Kantha/Jaya_Jaya_Jaya_Janaki_Kantha.pitch",
+      "pitch_sha256": "dad8e0a880b6d271e36f9a68085384b03621e1912978a27ff028fa7266d194b7",
+      "works": [
+        {
+          "work_id": "d4d0961c-b5cb-4294-ae13-22605b9a26fe",
+          "title": "Jaya Jaya Janaki Kantha"
+        }
+      ],
+      "receipt_sha256": "189d09a062e1df43259c07082b5d586ae363bbb2887f65a6534f48a2688be0b5",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Aruna_Sairam.Vidulaku_Mrokkeda",
+      "recording_id": "1e3e10ad-93ed-439e-85b6-de67cd362d05",
+      "title": "Vidulaku_Mrokkeda",
+      "artist": "Aruna_Sairam",
+      "raga": "Māyāmāḷavagauḷa",
+      "pitch": "RagaDataset/Carnatic/features/9cedca68-4a9d-4170-bec3-0d1db1ff730e/Aruna_Sairam/December_Season_2000/Vidulaku_Mrokkeda/Vidulaku_Mrokkeda.pitch",
+      "pitch_sha256": "65e7cd792f0f4422e13bacaa98a7bb42a97d75809a88a1f9e74c116f3f9b3580",
+      "works": [
+        {
+          "work_id": "c53cc516-3ec3-485f-ba2a-139d5a7fe710",
+          "title": "Vidulaku Mrokkeda"
+        }
+      ],
+      "receipt_sha256": "d0061e7b970b631c56a1c0d4b47d61d5829a2fa2a8dd870ae015c8830c3a0016",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Nisha_P_Rajagopal.Veganivu",
+      "recording_id": "1e6adf52-e4e4-4835-9117-4babaa58e9e0",
+      "title": "Veganivu",
+      "artist": "Nisha_P_Rajagopal",
+      "raga": "Suraṭi",
+      "pitch": "RagaDataset/Carnatic/features/839bb6b4-1577-4a78-9e5d-4906c6453274/Nisha_P_Rajagopal/December_Season_2008/Veganivu/Veganivu.pitch",
+      "pitch_sha256": "32f640aaf7bd3b552e823edf183c124e5c7e9933ead29ed138341c8242b5981f",
+      "works": [
+        {
+          "work_id": "3b4ff99f-e778-4dd5-83eb-2c0e8fe1be1a",
+          "title": "Veganivu"
+        }
+      ],
+      "receipt_sha256": "858839ff4c2e24be8aac5c1857c03a70c15a858225af7af23176c6abd46b10d4",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Nithyasree_Mahadevan.Va_Muruga_Va",
+      "recording_id": "1ebe0640-b9e4-4bc8-b8fd-d1b06b2ac4e6",
+      "title": "Va_Muruga_Va",
+      "artist": "Nithyasree_Mahadevan",
+      "raga": "Bēgaḍa",
+      "pitch": "RagaDataset/Carnatic/features/aa5f376f-06cd-4a69-9cc9-b1077104e0b0/Nithyasree_Mahadevan/December_Season_2008/Va_Muruga_Va/Va_Muruga_Va.pitch",
+      "pitch_sha256": "2339708244ba5e7021562e0a0faec9d6a4d0b977ef25150ac4db2edac81d9180",
+      "works": [
+        {
+          "work_id": "0869d3e3-afe8-4bbc-85bc-9a52a6d20e7d",
+          "title": "Va Muruga Va"
+        }
+      ],
+      "receipt_sha256": "9fa89754a8b73f5b80f731bdeaf6f568343a12200beab2f8aba179aeb198279c",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Sangeetha_Swaminathan.Jesina_Della",
+      "recording_id": "1f33403a-d774-4338-9414-5353e22419d4",
+      "title": "Jesina_Della",
+      "artist": "Sangeetha_Swaminathan",
+      "raga": "Tōḍi",
+      "pitch": "RagaDataset/Carnatic/features/a9413dff-91d1-4e29-ad92-c04019dce5b8/Sangeetha_Swaminathan/December_Season_2009/Jesina_Della/Jesina_Della.pitch",
+      "pitch_sha256": "2a122711bccdabbb2217cfff9629fa6393f66843d22dae3908b006006001003c",
+      "works": [
+        {
+          "work_id": "757d1c01-0fbb-4cfd-8488-5c23eaee4983",
+          "title": "Jesinadella"
+        }
+      ],
+      "receipt_sha256": "fda5f324c79de87af0dbd8d8e78975b1157d67407a579792c28fca5059cdf588",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.Saamageeta_Priyan",
+      "recording_id": "1faf01d1-2228-4547-9ff0-1866cd2fd73e",
+      "title": "Saamageeta_Priyan",
+      "artist": "Sanjay_Subrahmanyan",
+      "raga": "Gauḷa",
+      "pitch": "RagaDataset/Carnatic/features/e5c4d94a-b34a-42ef-acd7-f235612350e4/Sanjay_Subrahmanyan/December_Season_2010/Saamageeta_Priyan/Saamageeta_Priyan.pitch",
+      "pitch_sha256": "b3a315543b7d14d943b838f88cc5e002c021737fe9d3feb7f53c6eb37d6a0b4c",
+      "works": [],
+      "receipt_sha256": "1647fdabe93c0b8d076058eb1b5428194f715eb95cfa4aa926d786f220cbc416",
+      "status": "no_work_link"
+    },
+    {
+      "track": "Kunnakkudi_M_Balamuralikrishna.Oraru_Mugane",
+      "recording_id": "2090d3b6-e738-43bd-ba59-0e3836e6226f",
+      "title": "Oraru_Mugane",
+      "artist": "Kunnakkudi_M_Balamuralikrishna",
+      "raga": "Rītigauḷa",
+      "pitch": "RagaDataset/Carnatic/features/4ce0b18d-f4df-41cf-9b40-9166199506b4/Kunnakkudi_M_Balamuralikrishna/December_Season_2009/Oraru_Mugane/Oraru_Mugane.pitch",
+      "pitch_sha256": "fe8dad9b8a940747aa6b8b500f9a675b85e175e0935c730964389c78239ce8d0",
+      "works": [
+        {
+          "work_id": "f93cd8f9-ffaf-4418-9f2e-4377420c9e43",
+          "title": "Oraru Mugane"
+        }
+      ],
+      "receipt_sha256": "ff8985448dd3f239889f87ab945ce4861a0ce9e50241532fbb7684873909318d",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.Mohana_Rama",
+      "recording_id": "21b210ec-6161-47e6-96fa-64a8bdcfadc9",
+      "title": "Mohana_Rama",
+      "artist": "Sanjay_Subrahmanyan",
+      "raga": "Mōhanaṁ",
+      "pitch": "RagaDataset/Carnatic/features/39821826-3327-41d7-9cd5-e22fe7b08360/Sanjay_Subrahmanyan/December_Season_2001/Mohana_Rama/Mohana_Rama.pitch",
+      "pitch_sha256": "f752f0b9d67370af58c1aada0c20510b36234c23cb41ebdf61e75d7fe4317cf9",
+      "works": [
+        {
+          "work_id": "069a59ad-9a10-4879-8003-3198645d17f3",
+          "title": "Mohana Rama"
+        }
+      ],
+      "receipt_sha256": "38cb17fc30a767e92e2467959a787f4d76429eaca406ad48adfbd8a1118cc71a",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.Janani",
+      "recording_id": "21f72d0f-5167-4c89-b312-84574b65613b",
+      "title": "Janani",
+      "artist": "Sanjay_Subrahmanyan",
+      "raga": "Rītigauḷa",
+      "pitch": "RagaDataset/Carnatic/features/4ce0b18d-f4df-41cf-9b40-9166199506b4/Sanjay_Subrahmanyan/Sanjay_at_Sastri_Hall/Janani/Janani.pitch",
+      "pitch_sha256": "0badba88d5b5727f6d7db9e72c3fe67bfbd27f89b2fd9a6cf967cc67a0fa0157",
+      "works": [
+        {
+          "work_id": "c9c86e19-a5b8-41f9-be4d-bf6327e30888",
+          "title": "Janani Ninnuvina"
+        }
+      ],
+      "receipt_sha256": "f6d69b732c9424fee22f525d7da99a9cc02627126ea10b7943d6cc0780f8e1b5",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "T__Brinda.Meru_Samana",
+      "recording_id": "225e1609-23af-44af-a360-5e1f5518caae",
+      "title": "Meru_Samana",
+      "artist": "T__Brinda",
+      "raga": "Māyāmāḷavagauḷa",
+      "pitch": "RagaDataset/Carnatic/features/9cedca68-4a9d-4170-bec3-0d1db1ff730e/T__Brinda/All_Time_Favourites_-_Vol_4/Meru_Samana/Meru_Samana.pitch",
+      "pitch_sha256": "3acdcef51983249067624493ee152dcfce7f027061d9164770b45dc3a0911f91",
+      "works": [],
+      "receipt_sha256": "58d848a993228836130a3726049d0ec298c9cdca7442e2fa75fbcebb9f03dc7f",
+      "status": "no_work_link"
+    },
+    {
+      "track": "Lalgudi_Jayaraman.Vaddhane",
+      "recording_id": "22601164-1342-42ae-9a27-02a9a657bb55",
+      "title": "Vaddhane",
+      "artist": "Lalgudi_Jayaraman",
+      "raga": "Ṣanmukhapriya",
+      "pitch": "RagaDataset/Carnatic/features/0277eae5-3411-4b22-9fa8-1b347e7528d1/Lalgudi_Jayaraman/Violin/Vaddhane/Vaddhane.pitch",
+      "pitch_sha256": "5200778e97de118e511104eb91b58d73d67c6fe74f4ee9f8ecd4c75b9f8a1c28",
+      "works": [
+        {
+          "work_id": "54eed95d-bf76-4b49-b0f3-b9a533e48e87",
+          "title": "Vaddane Vaaru"
+        }
+      ],
+      "receipt_sha256": "503d3fa47f89ad5a07ddb01d2d5e3dbe84fc29c1410c2f9ff9b9a9104fc175d3",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Ramnad_Krishnan.Naamakusumamula",
+      "recording_id": "25a4995d-43f1-49bd-8c54-a0011e4d8094",
+      "title": "Naamakusumamula",
+      "artist": "Ramnad_Krishnan",
+      "raga": "Śrī",
+      "pitch": "RagaDataset/Carnatic/features/bdd80890-44f1-4a93-8d93-06a418781f97/Ramnad_Krishnan/Music_Academy_1964_-_Ramnad_Krishnan/Naamakusumamula/Naamakusumamula.pitch",
+      "pitch_sha256": "d94c1a0c574f5672e9e7b3dc550b5938aa5f17e74077af278850c223ae698d83",
+      "works": [
+        {
+          "work_id": "3f6f0667-157a-4f76-b21c-8998047da017",
+          "title": "Naamakusumamula"
+        }
+      ],
+      "receipt_sha256": "054c44bc72273d2edaee828047ab959ac06298d3c54754abb4b64f0a3763181d",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.Angaraka_Ashrayamyaham",
+      "recording_id": "25a56baf-53f7-4320-92bc-66157c52f6fa",
+      "title": "Angaraka_Ashrayamyaham",
+      "artist": "Sanjay_Subrahmanyan",
+      "raga": "Suraṭi",
+      "pitch": "RagaDataset/Carnatic/features/839bb6b4-1577-4a78-9e5d-4906c6453274/Sanjay_Subrahmanyan/December_Season_2011/Angaraka_Ashrayamyaham/Angaraka_Ashrayamyaham.pitch",
+      "pitch_sha256": "1581a7456f6ee76dc4982de96e6b335b165ae2c9f34b6c809bed861ef334e163",
+      "works": [
+        {
+          "work_id": "4d5d7e2f-c670-4e06-8dfe-49ee61dd8914",
+          "title": "Angarakam Ashrayamyaham"
+        }
+      ],
+      "receipt_sha256": "7410ad8c39c7755fbf44c8147eb688dc92af5c982bcf78c0e1ef428ef3807159",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Semmangudi_Srinivasa_Iyer.Deva_DEva_Kalayamite",
+      "recording_id": "2611e0fd-7c4c-4fe2-8c35-d4dcde7a7962",
+      "title": "Deva_DEva_Kalayamite",
+      "artist": "Semmangudi_Srinivasa_Iyer",
+      "raga": "Māyāmāḷavagauḷa",
+      "pitch": "RagaDataset/Carnatic/features/9cedca68-4a9d-4170-bec3-0d1db1ff730e/Semmangudi_Srinivasa_Iyer/Paramatmakam/Deva_DEva_Kalayamite/Deva_DEva_Kalayamite.pitch",
+      "pitch_sha256": "139c5765b55dd0f60c4f83d7da34808782eabd55ea96dfe44d6bb120454efbda",
+      "works": [
+        {
+          "work_id": "0b02bf96-f0ed-4e53-b321-f7ebee25db7b",
+          "title": "02 Deva Deva Kalayamite"
+        },
+        {
+          "work_id": "6d8e7741-292e-45f3-9aa4-58fce39c54b4",
+          "title": "Deva Deva Kalayamite"
+        }
+      ],
+      "receipt_sha256": "1b90f4a0ff52280babe98d10ce77359d9355bf098e36ab0974fa3cfec5774660",
+      "status": "multiple_works_quarantined"
+    },
+    {
+      "track": "Aruna_Sairam.Pazhani_Shanmuga",
+      "recording_id": "26ba8577-b465-4d8e-a961-849a01c8ab7a",
+      "title": "Pazhani_Shanmuga",
+      "artist": "Aruna_Sairam",
+      "raga": "Sencuruṭṭi",
+      "pitch": "RagaDataset/Carnatic/features/3af5a361-923a-465d-864d-9c7ba0c04a47/Aruna_Sairam/December_Season_2002/Pazhani_Shanmuga/Pazhani_Shanmuga.pitch",
+      "pitch_sha256": "49dde21ca8861a3461b3dc1a24d9bfa530a438ef5f5b6f30d373a5d0f5c4c5eb",
+      "works": [
+        {
+          "work_id": "86772894-6332-42a1-b3e8-001bf603b734",
+          "title": "Pazhani Shanmuga Vel"
+        }
+      ],
+      "receipt_sha256": "06d4ebbb8efc5b88ce23e9586a137003bcfd5baa6f07c2378d278671e80c6252",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Nithyasree_Mahadevan.Sami_Daya_Juda_-_Varnam",
+      "recording_id": "26f0ffe7-a1d2-4644-96c2-02d6f17ddcbb",
+      "title": "Sami_Daya_Juda_-_Varnam",
+      "artist": "Nithyasree_Mahadevan",
+      "raga": "Kēdāragauḷa",
+      "pitch": "RagaDataset/Carnatic/features/df85a0a5-b1a8-42f1-a87b-3d7c7ee33fb4/Nithyasree_Mahadevan/December_Season_2000/Sami_Daya_Juda_-_Varnam/Sami_Daya_Juda_-_Varnam.pitch",
+      "pitch_sha256": "85ee031ab9979f14b23dd274ac23998e08c1f18762adfb14d3ff180eac594c8b",
+      "works": [
+        {
+          "work_id": "eaf5c7da-f656-48d3-986d-a143ead5bf74",
+          "title": "Sami Daya Juda"
+        }
+      ],
+      "receipt_sha256": "16f37268e2d2dc6a112f9c30c24859abe2e2b747da2e9316e2832e76cdb8a0a5",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "K__V__Narayanaswami.Pahimam_Brihannayike",
+      "recording_id": "26f34356-1288-4154-ada4-479cd8d82aca",
+      "title": "Pahimam_Brihannayike",
+      "artist": "K__V__Narayanaswami",
+      "raga": "Hussēnī",
+      "pitch": "RagaDataset/Carnatic/features/50bd048f-4482-4c5b-850c-9ad5e5ec46f1/K__V__Narayanaswami/Paddhatti/Pahimam_Brihannayike/Pahimam_Brihannayike.pitch",
+      "pitch_sha256": "ed9a1e201ebd7f731f2af737fd1c947b70aaf16d9307eeec3a5a92170eb42b71",
+      "works": [
+        {
+          "work_id": "d7a2b641-7972-4eaa-9b0c-a701bc215ac4",
+          "title": "PahimamBrihannayike"
+        }
+      ],
+      "receipt_sha256": "a5b8fcc73cdceba5267f8e7ce28bc9ac802458d3222ff69f635db1686840b72d",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Nithyasree_Mahadevan.Meenakshi_Memudam",
+      "recording_id": "27daf63a-d2a8-4323-8eef-c814e9c2bb02",
+      "title": "Meenakshi_Memudam",
+      "artist": "Nithyasree_Mahadevan",
+      "raga": "Pūrvīkaḷyāṇi",
+      "pitch": "RagaDataset/Carnatic/features/db085e26-665d-4f4c-a2a5-95251c22b69e/Nithyasree_Mahadevan/Memorable_Concerts_From_Rfas_September_Season_2009/Meenakshi_Memudam/Meenakshi_Memudam.pitch",
+      "pitch_sha256": "65784b80efe6d02621c08f3a80f5aade324fb6a68834b44dce07b292f696afba",
+      "works": [],
+      "receipt_sha256": "8b1acdbea3f07fd28c55e4190ca31781918223e0172876b8b396637208dd7486",
+      "status": "no_work_link"
+    },
+    {
+      "track": "Nithyasree_Mahadevan.Tukiya_Tiruvadi",
+      "recording_id": "2811747b-b49f-4a8f-b636-d5312056f4fc",
+      "title": "Tukiya_Tiruvadi",
+      "artist": "Nithyasree_Mahadevan",
+      "raga": "Śankarābharaṇaṁ",
+      "pitch": "RagaDataset/Carnatic/features/a2f9f182-0ceb-4531-b286-b840b47a54b8/Nithyasree_Mahadevan/December_Season_2007/Tukiya_Tiruvadi/Tukiya_Tiruvadi.pitch",
+      "pitch_sha256": "76caca3ead1d73cf972813ff4e9c9e6ebfd4f150901642621d5e5be64c16d395",
+      "works": [
+        {
+          "work_id": "29f3cb60-d364-40ff-9d7f-30d306f35528",
+          "title": "Tukiya Tiruvadi"
+        }
+      ],
+      "receipt_sha256": "b50214478c107e282473bc4632fdee3886f0c31c6aed71c4f9dbc72f50c7dab3",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Sandeep_Narayan.Paamalai",
+      "recording_id": "288a73f9-c6eb-4425-a7f2-d20e0b607e84",
+      "title": "Paamalai",
+      "artist": "Sandeep_Narayan",
+      "raga": "Harikāmbhōji",
+      "pitch": "RagaDataset/Carnatic/features/b08475a2-1049-433a-be8f-105bf14718fb/Sandeep_Narayan/December_Season_2011/Paamalai/Paamalai.pitch",
+      "pitch_sha256": "02dcd810de423a5d81acbaea9a4af6c942ad4eb9ff607a6e30f52b379be7b590",
+      "works": [
+        {
+          "work_id": "d348d629-4756-413e-bdc8-68a506d4c4cb",
+          "title": "Paamalai"
+        }
+      ],
+      "receipt_sha256": "6981fc3b2f0e5d2da49e6e281c777c255bbe6d0f3deaf9fae0eaade7eecb3121",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "T__Brinda.Nee_Chittamu",
+      "recording_id": "288ce104-4a50-4822-99d4-94a602353382",
+      "title": "Nee_Chittamu",
+      "artist": "T__Brinda",
+      "raga": "Dhanyāsi",
+      "pitch": "RagaDataset/Carnatic/features/5ce23030-f71d-4f5d-9d76-f91c2c182392/T__Brinda/All_Time_Favourites_-_Vol_4/Nee_Chittamu/Nee_Chittamu.pitch",
+      "pitch_sha256": "2249fe5aac95b8e0bab57f4ac60da3bc3a7d70cf4e5d291e769946230e48bbd9",
+      "works": [],
+      "receipt_sha256": "7a7381bb5c4f483c48ee8df881ae97acdd5a8379d12f278916ac24e67e0eee89",
+      "status": "no_work_link"
+    },
+    {
+      "track": "M_S__Subbulakshmi.O_Ranga_Sai",
+      "recording_id": "28bbe763-865b-4dd8-9e47-3b74919e945c",
+      "title": "O_Ranga_Sai",
+      "artist": "M_S__Subbulakshmi",
+      "raga": "Kāṁbhōji",
+      "pitch": "RagaDataset/Carnatic/features/f0866e71-33b2-47db-ab75-0808c41f2401/M_S__Subbulakshmi/Paddhatti/O_Ranga_Sai/O_Ranga_Sai.pitch",
+      "pitch_sha256": "01e53bf2d50da154545a1d2a1126156d3ebb7ac5a6f6ce7c04d0900e74ddcf8a",
+      "works": [
+        {
+          "work_id": "b5b002a9-cf58-445e-b347-a513f3d5b8a6",
+          "title": "O Rangashayee"
+        }
+      ],
+      "receipt_sha256": "121989a72d1b58947c9df822465e1fe6827811e2a44320b7dd95b1043b050f8a",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "M_S__Subbulakshmi.Emi_Neramu",
+      "recording_id": "2922757b-5a42-48b9-9f2e-7a4ae6b6073c",
+      "title": "Emi_Neramu",
+      "artist": "M_S__Subbulakshmi",
+      "raga": "Śankarābharaṇaṁ",
+      "pitch": "RagaDataset/Carnatic/features/a2f9f182-0ceb-4531-b286-b840b47a54b8/M_S__Subbulakshmi/Paddhatti/Emi_Neramu/Emi_Neramu.pitch",
+      "pitch_sha256": "555c4f45fe1af4e2c469f122c09c2d526149d119dbc9f472e12db3b3af4511e2",
+      "works": [
+        {
+          "work_id": "0218061a-7c35-4620-8a42-ad6c123a1687",
+          "title": "Emi Neramu"
+        }
+      ],
+      "receipt_sha256": "8b9d50129f3a2f28131207a55b9d35560092887fbc250898ce85ec31afcbb350",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Kunnakkudi_M_Balamuralikrishna.Yarenru_Raghavanai",
+      "recording_id": "29be57a7-c0b1-4eef-9470-a89bab82f8dd",
+      "title": "Yarenru_Raghavanai",
+      "artist": "Kunnakkudi_M_Balamuralikrishna",
+      "raga": "Yadukula kāṁbōji",
+      "pitch": "RagaDataset/Carnatic/features/ddff55ae-20f6-4d7d-ba9e-a6c10eeebd41/Kunnakkudi_M_Balamuralikrishna/December_Season_2006/Yarenru_Raghavanai/Yarenru_Raghavanai.pitch",
+      "pitch_sha256": "bc0e14cc34fd5f45e60d4e7e23f233492531f92c741bfee360cf5733d4aada87",
+      "works": [
+        {
+          "work_id": "565c6d5e-c1ce-440d-a39e-edd498bc87f7",
+          "title": "Yarendru Raghavane"
+        }
+      ],
+      "receipt_sha256": "9a87cde1304b3769cd6c9144b985353ef203eb8b1b186f4766baa015096438df",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "K__V__Narayanaswami.Ini_Oru_Kanam",
+      "recording_id": "2a1600a4-e130-4f86-bb19-08a27a4c8b5d",
+      "title": "Ini_Oru_Kanam",
+      "artist": "K__V__Narayanaswami",
+      "raga": "Śrīranjani",
+      "pitch": "RagaDataset/Carnatic/features/42dd0ccb-f92a-4622-ae5d-a3be571b4939/K__V__Narayanaswami/Master_Piece_-_Live_Concert_at_Sri_Krishna_Gana_Sabha_Vol_I/Ini_Oru_Kanam/Ini_Oru_Kanam.pitch",
+      "pitch_sha256": "00487e6e473a93a1e540581aacfd703da1f2fe1caee06bc63a3b4353bdd7fd2f",
+      "works": [],
+      "receipt_sha256": "2eac35456e2c9abf105f4ceb0a7ffe3b42637c1ad2acd2e12be218eaa1724f8d",
+      "status": "no_work_link"
+    },
+    {
+      "track": "S__Sowmya.Angayarkanni",
+      "recording_id": "2b71b02d-816e-4e58-8023-4f33f8578525",
+      "title": "Angayarkanni",
+      "artist": "S__Sowmya",
+      "raga": "Behāg",
+      "pitch": "RagaDataset/Carnatic/features/700e1d92-7094-4c21-8a3b-d7b60c550edf/S__Sowmya/December_Season_1999/Angayarkanni/Angayarkanni.pitch",
+      "pitch_sha256": "c7b54228ede95779e9be0d372e912ae2d5b34b03870ac35506989157c59737fa",
+      "works": [
+        {
+          "work_id": "b3bb323f-6d61-4f45-b0d1-828183908267",
+          "title": "Angayarkanni"
+        }
+      ],
+      "receipt_sha256": "5f18963817156799a38707936ff0e24ac980814ff9d7eb08e9ef793a0e20cf6c",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "T__M__Krishna.Nadamadi",
+      "recording_id": "2bade8d8-1cfa-4076-9329-98f7cacc65a0",
+      "title": "Nadamadi",
+      "artist": "T__M__Krishna",
+      "raga": "Kāṁbhōji",
+      "pitch": "RagaDataset/Carnatic/features/f0866e71-33b2-47db-ab75-0808c41f2401/T__M__Krishna/December_Season_2009/Nadamadi/Nadamadi.pitch",
+      "pitch_sha256": "e79f97ede0ba5bf60554665f7a874b28cd8c1bf0f287800584ab300457c07a06",
+      "works": [
+        {
+          "work_id": "054e2475-d3e2-4c16-bc69-78b776828ca9",
+          "title": "Nadamadi"
+        }
+      ],
+      "receipt_sha256": "a002eb1f95cfe36e309437af9a03b355f9ba8293b38281c0507f6602a4c8fb00",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Sikkil_Gurucharan.Kartikeyanai_Kannara",
+      "recording_id": "2c666f9b-17ae-4b27-8d29-a2bb49c2c2f5",
+      "title": "Kartikeyanai_Kannara",
+      "artist": "Sikkil_Gurucharan",
+      "raga": "Kāpi",
+      "pitch": "RagaDataset/Carnatic/features/09c179f3-8b19-4792-a852-e9fa0090e409/Sikkil_Gurucharan/December_Season_2009/Kartikeyanai_Kannara/Kartikeyanai_Kannara.pitch",
+      "pitch_sha256": "337c68157ac32a11b587548a8baf5bbc1c001a857d085d943e396b35684f56fd",
+      "works": [
+        {
+          "work_id": "a74fe784-d4b7-4f8f-8c14-d6077e616c77",
+          "title": "Kartikeyanai Kannara"
+        }
+      ],
+      "receipt_sha256": "65aa9b8e56f3e33c1a5f9ddbc01f83efbd6acf7fa01b0677c6971dcbcb6d827b",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Aruna_Sairam.Chakkani_Raja",
+      "recording_id": "2c9b2068-8f64-471e-be2f-fccae2452d5c",
+      "title": "Chakkani_Raja",
+      "artist": "Aruna_Sairam",
+      "raga": "Karaharapriya",
+      "pitch": "RagaDataset/Carnatic/features/f972db4d-5d16-4f9a-9841-f313e1601aaa/Aruna_Sairam/December_Season_2005/Chakkani_Raja/Chakkani_Raja.pitch",
+      "pitch_sha256": "7b2970f60daf8b84cf26c71b1b2e7ad767681f126e6bfc6dff02d6cfc87ff38e",
+      "works": [
+        {
+          "work_id": "9f0a9d69-75fa-463b-8d03-bf1f0353aba3",
+          "title": "Chakkani Raja"
+        }
+      ],
+      "receipt_sha256": "468a4258ea1f857be9126f170408568403252bdaf44aeb834cb37ac7d9a929ec",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Ramnad_Krishnan.Bhuvini_Dasudane",
+      "recording_id": "2cdd41f6-4433-4341-ac7f-132937989bf9",
+      "title": "Bhuvini_Dasudane",
+      "artist": "Ramnad_Krishnan",
+      "raga": "Śrīranjani",
+      "pitch": "RagaDataset/Carnatic/features/42dd0ccb-f92a-4622-ae5d-a3be571b4939/Ramnad_Krishnan/Ramnad_Krishnan_1970/Bhuvini_Dasudane/Bhuvini_Dasudane.pitch",
+      "pitch_sha256": "4aa98e4cc071d7d1f120d030d277c1242e30a8375ebeacc4f49c48def9c0c32a",
+      "works": [
+        {
+          "work_id": "4d05ce9b-c45e-4c85-9eca-941d68b61132",
+          "title": "Bhuvini Dasudane"
+        }
+      ],
+      "receipt_sha256": "b9b4c799360762bf7192510c2b59b7278c2af0c65d174e93b2c05ece64fa4b29",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "S__Somasundaram.Rama_Namamu",
+      "recording_id": "2e60e4ab-f247-4c52-b48a-4fa24f24fd8c",
+      "title": "Rama_Namamu",
+      "artist": "S__Somasundaram",
+      "raga": "Madhyamāvati",
+      "pitch": "RagaDataset/Carnatic/features/18b1acb9-dff6-47ec-873a-b2086c8d268d/S__Somasundaram/Madurai_Somasundaram/Rama_Namamu/Rama_Namamu.pitch",
+      "pitch_sha256": "ac115602a274c5995727e95e30ebc23864dcb97ed06247df0765ebd325fd4722",
+      "works": [
+        {
+          "work_id": "b112e223-7f39-400e-a30a-4ac3c95f1837",
+          "title": "Rama Namam Bhajare"
+        }
+      ],
+      "receipt_sha256": "c093bc42e48e412c5c965080fc48d6e33e10aa6b7148cc9a4dcbc72b5f08d184",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.Enneramum",
+      "recording_id": "2e648aa2-2172-4ab8-b43a-485213ca4d5f",
+      "title": "Enneramum",
+      "artist": "Sanjay_Subrahmanyan",
+      "raga": "Dēvagāndhāri",
+      "pitch": "RagaDataset/Carnatic/features/defad4cc-48aa-4372-a31a-c43624930713/Sanjay_Subrahmanyan/December_Season_2010/Enneramum/Enneramum.pitch",
+      "pitch_sha256": "4edbb0fccbcbb17871436992757dfb5b4f551ecb75630d20ec00aa88da207600",
+      "works": [],
+      "receipt_sha256": "89a0411a7817039cbc2e0d99e181d731eebc7de614f843fd91545315786c7de8",
+      "status": "no_work_link"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.Kadaikann_paarvai",
+      "recording_id": "2e6504c2-3ef1-4272-98a1-f32b2b0477e2",
+      "title": "Kadaikann_paarvai",
+      "artist": "Sanjay_Subrahmanyan",
+      "raga": "Kamās",
+      "pitch": "RagaDataset/Carnatic/features/a4ec6633-1050-4207-8313-b017194c8fa0/Sanjay_Subrahmanyan/December_Season_2010/Kadaikann_paarvai/Kadaikann_paarvai.pitch",
+      "pitch_sha256": "325df7da1c77dfd5755f5d797bfedc2dc34cf8e34736e938cce3883673a098b2",
+      "works": [],
+      "receipt_sha256": "c4afef78c297364730b8aa7cf84cd97a7c5f55e040d30a6133b066627b7cc8dc",
+      "status": "no_work_link"
+    },
+    {
+      "track": "Tanjore_S_Kalyanaraman.Talli_Ninnu_Nera",
+      "recording_id": "2ea6cabb-a422-4c1b-8f0b-752cbe68a5d4",
+      "title": "Talli_Ninnu_Nera",
+      "artist": "Tanjore_S_Kalyanaraman",
+      "raga": "Kalyāṇi",
+      "pitch": "RagaDataset/Carnatic/features/bf4662d4-25c3-4cad-9249-4de2dc513c06/Tanjore_S_Kalyanaraman/Tanjore_S_KALYANARAMAN_Live_in_concert-1972-vol_I_and_vol_II/Talli_Ninnu_Nera/Talli_Ninnu_Nera.pitch",
+      "pitch_sha256": "ac65b72ee913eacf1f859fac85b54096a65fea388be09f961e80e9aae33ae275",
+      "works": [
+        {
+          "work_id": "7b689b0e-bbf0-4559-93a7-48e77913cdc0",
+          "title": "Talli Ninnu Nera"
+        }
+      ],
+      "receipt_sha256": "961e7a9090bd4b31e2d6ee4ae69e2165b1d1a9113acfe990929600375fd54e1d",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Kunnakkudi_M_Balamuralikrishna.Nadopasana",
+      "recording_id": "2f792bd0-4788-4227-8540-354bb7be9365",
+      "title": "Nadopasana",
+      "artist": "Kunnakkudi_M_Balamuralikrishna",
+      "raga": "Bēgaḍa",
+      "pitch": "RagaDataset/Carnatic/features/aa5f376f-06cd-4a69-9cc9-b1077104e0b0/Kunnakkudi_M_Balamuralikrishna/December_Season_2009/Nadopasana/Nadopasana.pitch",
+      "pitch_sha256": "59d054c22b6f3264eedea61d7d19b376e4427eb9e73e5d348bc6dfbb98cd4c93",
+      "works": [
+        {
+          "work_id": "fc1469a0-8408-4268-b1c9-c58c534ae5d4",
+          "title": "Nadopasana"
+        }
+      ],
+      "receipt_sha256": "4fb0a0af531f1065ca2a7877e2268c0daf66b2d6af11f394fa8ba705942d7975",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Ranjani_Guruprasad.Nadopasana",
+      "recording_id": "2f9b5ddc-f253-46be-a316-36f9ce111b9e",
+      "title": "Nadopasana",
+      "artist": "Ranjani_Guruprasad",
+      "raga": "Bēgaḍa",
+      "pitch": "RagaDataset/Carnatic/features/aa5f376f-06cd-4a69-9cc9-b1077104e0b0/Ranjani_Guruprasad/December_Season_2010/Nadopasana/Nadopasana.pitch",
+      "pitch_sha256": "09aabc2ba64c3460b0ceeb3e45fb1818c5ce9c033248d0704b7f47a37bc4d69e",
+      "works": [
+        {
+          "work_id": "fc1469a0-8408-4268-b1c9-c58c534ae5d4",
+          "title": "Nadopasana"
+        }
+      ],
+      "receipt_sha256": "47f66b19d07aa59d33edf7ebcde1957fe44d813d485dbfef6bb94d31d8c5f14c",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "T__Brinda.Ninnusevinchina",
+      "recording_id": "2f9db2e1-0273-4b06-850b-66af589b9791",
+      "title": "Ninnusevinchina",
+      "artist": "T__Brinda",
+      "raga": "Yadukula kāṁbōji",
+      "pitch": "RagaDataset/Carnatic/features/ddff55ae-20f6-4d7d-ba9e-a6c10eeebd41/T__Brinda/All_Time_Favourites_-_Vol_1/Ninnusevinchina/Ninnusevinchina.pitch",
+      "pitch_sha256": "6fb9ddb619dc2f2b3612a26194ae32d7cc664f9b0fec2c5196ca88cdc91abbcc",
+      "works": [],
+      "receipt_sha256": "6d4a3cfbab5f80b7168f8f71c0f71d655c245ed8657876ff969ef127728fb048",
+      "status": "no_work_link"
+    },
+    {
+      "track": "Aruna_Sairam.Ekkalathilum",
+      "recording_id": "30c4acdb-a142-45cd-8096-cc245fc6d255",
+      "title": "Ekkalathilum",
+      "artist": "Aruna_Sairam",
+      "raga": "Pūrvīkaḷyāṇi",
+      "pitch": "RagaDataset/Carnatic/features/db085e26-665d-4f4c-a2a5-95251c22b69e/Aruna_Sairam/December_Season_2001/Ekkalathilum/Ekkalathilum.pitch",
+      "pitch_sha256": "165ae97711aa1fc01db7d04bffe8ad257a9625ed6f696aca8abc9c6b07b75f55",
+      "works": [
+        {
+          "work_id": "698a9323-dfd5-4532-941b-c588f617f542",
+          "title": "Ekkalathillum"
+        }
+      ],
+      "receipt_sha256": "1b10e60ee1e8b61ce540b0b3a1ac2ea4a6e0cb88905f6838300f3e76b263fba1",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.Paarengum",
+      "recording_id": "30ed13b0-58ac-48af-b8ac-f2c14ddbd71a",
+      "title": "Paarengum",
+      "artist": "Sanjay_Subrahmanyan",
+      "raga": "Kalyāṇi",
+      "pitch": "RagaDataset/Carnatic/features/bf4662d4-25c3-4cad-9249-4de2dc513c06/Sanjay_Subrahmanyan/Live_at_Vani_Mahal/Paarengum/Paarengum.pitch",
+      "pitch_sha256": "a264bafb2a9412e61967dc968681668286406518481c1ec2982c7421ba40cd64",
+      "works": [
+        {
+          "work_id": "6e2992f6-ddf4-4cee-8b28-e431c4cc5083",
+          "title": "Parengum Paarthaalum"
+        }
+      ],
+      "receipt_sha256": "1c198856ffdf9af60dce04785522ed7b58d40ebd9431cf3e467a87bc4d2bff47",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Sikkil_Gurucharan.Meevalla_Gunadosha",
+      "recording_id": "31ca1f76-ce7a-42f4-b429-ca43ef6b2ba1",
+      "title": "Meevalla_Gunadosha",
+      "artist": "Sikkil_Gurucharan",
+      "raga": "Kāpi",
+      "pitch": "RagaDataset/Carnatic/features/09c179f3-8b19-4792-a852-e9fa0090e409/Sikkil_Gurucharan/December_Season_2011/Meevalla_Gunadosha/Meevalla_Gunadosha.pitch",
+      "pitch_sha256": "5d2a32b0b811c3cb3fda2c2eea7c7d849788707a9e9dd396edda6b763405eb4c",
+      "works": [
+        {
+          "work_id": "8bcac63f-325e-496e-8805-c64997393dc0",
+          "title": "Meevalla Gunadosha"
+        }
+      ],
+      "receipt_sha256": "a34c60b336c3db96dda4643cb3890180e5402f972ced5fe4b509c981b9010465",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Nithyasree_Mahadevan.Sri_Raghuvara",
+      "recording_id": "323ff36b-db5c-4d91-a33a-239a944810e2",
+      "title": "Sri_Raghuvara",
+      "artist": "Nithyasree_Mahadevan",
+      "raga": "Kāṁbhōji",
+      "pitch": "RagaDataset/Carnatic/features/f0866e71-33b2-47db-ab75-0808c41f2401/Nithyasree_Mahadevan/December_Season_2002/Sri_Raghuvara/Sri_Raghuvara.pitch",
+      "pitch_sha256": "c09ff12849bbf684f676743a53a73ebd075eb16b11691bf6c90c3f05ace4aba0",
+      "works": [
+        {
+          "work_id": "f3170a00-69a8-4a62-9d01-958fa5de48ac",
+          "title": "Sri Raghuvara"
+        }
+      ],
+      "receipt_sha256": "12e1e8d83c28641470fb4bd397674616b837ca2356e6bc41aae5c1bdc8a02738",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "M__L__Vasanthakumari.Kalakalan_Kayilai_Nathan",
+      "recording_id": "324f3ce4-a77c-49ac-a98c-70511169b09e",
+      "title": "Kalakalan_Kayilai_Nathan",
+      "artist": "M__L__Vasanthakumari",
+      "raga": "Aṭāna",
+      "pitch": "RagaDataset/Carnatic/features/6345e8fe-7061-4bdc-842c-dcfd4a379820/M__L__Vasanthakumari/Paddhatti/Kalakalan_Kayilai_Nathan/Kalakalan_Kayilai_Nathan.pitch",
+      "pitch_sha256": "de020b2c38483cd26d2c7348ccff3ccf8154b924ee1f1bedf1a4939b63675190",
+      "works": [
+        {
+          "work_id": "52b77e9f-32e2-4a07-8668-026e9d624f98",
+          "title": "Kalakalan Kayilai Nathan"
+        }
+      ],
+      "receipt_sha256": "d27ed07ec1197abb76ea17be4d2c76334a5413ce02792578f0533c9d696200b8",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.Kamakshi",
+      "recording_id": "32806112-2104-4df2-972e-a527be20e82a",
+      "title": "Kamakshi",
+      "artist": "Sanjay_Subrahmanyan",
+      "raga": "Bhairavi",
+      "pitch": "RagaDataset/Carnatic/features/123b09bd-9901-4e64-a65a-10b02c9e0597/Sanjay_Subrahmanyan/Live_at_Kamarajar_Hall/Kamakshi/Kamakshi.pitch",
+      "pitch_sha256": "3e25abc1aecba9de108992cb9a2c84485b17fed67fba80135d8da17cf7de99d4",
+      "works": [
+        {
+          "work_id": "a566c7d3-ecaa-41c1-8a38-f9e5e123dbeb",
+          "title": "Amba Kamakshi"
+        }
+      ],
+      "receipt_sha256": "0dba30ad4ad5f56abe8056c9c517422396e4f8a9a13d8706d9634c3445c1621f",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "M__D__Ramanathan.Aarenduraghavanai",
+      "recording_id": "32961da8-7899-43d8-9e18-afe9142dbcf0",
+      "title": "Aarenduraghavanai",
+      "artist": "M__D__Ramanathan",
+      "raga": "Yadukula kāṁbōji",
+      "pitch": "RagaDataset/Carnatic/features/ddff55ae-20f6-4d7d-ba9e-a6c10eeebd41/M__D__Ramanathan/M__D__Ramanathan_concert_at_Vellore_1981/Aarenduraghavanai/Aarenduraghavanai.pitch",
+      "pitch_sha256": "a38b60991625f13d9a77fa3546fa5a0354a9cf5331e6680fc1f328fed690ef50",
+      "works": [
+        {
+          "work_id": "c8fddda6-c288-41dc-8206-0aa9fc8c5d78",
+          "title": "Aarenduraghavanai"
+        }
+      ],
+      "receipt_sha256": "1ca035a82ed597c5491928f1e3a7ee4bec4779d8930c34866d8d819caf18e47b",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Mahati.Kannallavo_Swami",
+      "recording_id": "32a6b005-6be5-4212-88c9-db67ec330724",
+      "title": "Kannallavo_Swami",
+      "artist": "Mahati",
+      "raga": "Suraṭi",
+      "pitch": "RagaDataset/Carnatic/features/839bb6b4-1577-4a78-9e5d-4906c6453274/Mahati/Mahati_at_Arkay/Kannallavo_Swami/Kannallavo_Swami.pitch",
+      "pitch_sha256": "d991afe7433b962623677e9f342b0be17baca42e06cdd8cb1e00fbcc43497609",
+      "works": [
+        {
+          "work_id": "2b17cb13-8fc0-4454-8df6-246099a16616",
+          "title": "Kannallavo Swami"
+        }
+      ],
+      "receipt_sha256": "007e9bf77c85379a7814c858d84ab439f5355072d826e4f5e5c6b0f9fe65e92a",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "T__M__Krishna.Viriboni",
+      "recording_id": "32d1f914-ee6d-497e-9d88-5a6544f56fac",
+      "title": "Viriboni",
+      "artist": "T__M__Krishna",
+      "raga": "Bhairavi",
+      "pitch": "RagaDataset/Carnatic/features/123b09bd-9901-4e64-a65a-10b02c9e0597/T__M__Krishna/December_Season_1999/Viriboni/Viriboni.pitch",
+      "pitch_sha256": "abecd04876f8191bdb53b5065c92b048bb37a8248b7d5bda4df9a715d621c269",
+      "works": [
+        {
+          "work_id": "bb332094-7f0c-469a-9f3b-4cce7b28c7f4",
+          "title": "Viriboni"
+        }
+      ],
+      "receipt_sha256": "8997d5ac778b22bc708e03a9fb0dc76eac9b0fc76159b5c72642d2226daed913",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "S__Sowmya.Karunai_Deivame",
+      "recording_id": "33ab13c8-5677-4a4b-b76b-ac4dc7957acf",
+      "title": "Karunai_Deivame",
+      "artist": "S__Sowmya",
+      "raga": "Sindhubhairavi",
+      "pitch": "RagaDataset/Carnatic/features/98d46d9e-5100-4f24-bcd4-d0f95966c7cb/S__Sowmya/December_Season_1999/Karunai_Deivame/Karunai_Deivame.pitch",
+      "pitch_sha256": "742c08cb8504c21332d86b19f42fcb955a8f0b7f74b96094272c40acf41ded2e",
+      "works": [
+        {
+          "work_id": "a1a4b40c-9432-4f75-a136-8ae1bb16714f",
+          "title": "Karunai Deivame"
+        }
+      ],
+      "receipt_sha256": "5c5114d0d07a3022be8050c7708d734d754b7771dbfda8afa2716ec800473e52",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "T__M__Krishna.Tiruvadidarisanam-Tirupati",
+      "recording_id": "33d38621-7d7a-4897-9bf4-60c33c6574ae",
+      "title": "Tiruvadidarisanam-Tirupati",
+      "artist": "T__M__Krishna",
+      "raga": "Dēvagāndhāri",
+      "pitch": "RagaDataset/Carnatic/features/defad4cc-48aa-4372-a31a-c43624930713/T__M__Krishna/Vaishnava_Ksetra/Tiruvadidarisanam-Tirupati/Tiruvadidarisanam-Tirupati.pitch",
+      "pitch_sha256": "bdb1b127befc2357c02231bdb3f69d5f7ec2784409ae1cf284d1b28b7d51a874",
+      "works": [],
+      "receipt_sha256": "90463e90fe8c42a4d753192205cd3e4b7afb0eb5fb23e8692474b936ca984f49",
+      "status": "no_work_link"
+    },
+    {
+      "track": "Tanjore_S__Kalyanaraman.Mamava_Karunaya",
+      "recording_id": "33d896d2-1a7b-4e5f-9508-c3fb5d228c94",
+      "title": "Mamava_Karunaya",
+      "artist": "Tanjore_S__Kalyanaraman",
+      "raga": "Ṣanmukhapriya",
+      "pitch": "RagaDataset/Carnatic/features/0277eae5-3411-4b22-9fa8-1b347e7528d1/Tanjore_S__Kalyanaraman/Live_Concert_1974/Mamava_Karunaya/Mamava_Karunaya.pitch",
+      "pitch_sha256": "a3665e4f399b24989a44ba9e5b077077f1903a1b7fa86f30003b7ebd826a07b4",
+      "works": [],
+      "receipt_sha256": "5fde85aef264baba8745e5fbffe8264020c21b348d3bc7cd5c87458b12a8aef2",
+      "status": "no_work_link"
+    },
+    {
+      "track": "T__M__Krishna.Ninni_Vinaga",
+      "recording_id": "3427f4b7-20e5-4abd-8171-bac216f2c213",
+      "title": "Ninni_Vinaga",
+      "artist": "T__M__Krishna",
+      "raga": "Pūrvīkaḷyāṇi",
+      "pitch": "RagaDataset/Carnatic/features/db085e26-665d-4f4c-a2a5-95251c22b69e/T__M__Krishna/December_Season_2006/Ninni_Vinaga/Ninni_Vinaga.pitch",
+      "pitch_sha256": "6681b9d1aa7da2037bf2f47d03f07b78dbec2469b3f1a9f43f4d5dc40e68f968",
+      "works": [
+        {
+          "work_id": "a2c69abe-88fe-42e5-821c-e6011a80a018",
+          "title": "Ninnu vinaga mari dikkevarunnaru"
+        }
+      ],
+      "receipt_sha256": "26a0ff9f9e82a7646ba12ebf6f2bb8255515b0e38e18255b147adbe36a041f5b",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "T__M__Krishna.Dakshinamurte",
+      "recording_id": "34954764-c897-48c6-b8d2-f50b682e29d8",
+      "title": "Dakshinamurte",
+      "artist": "T__M__Krishna",
+      "raga": "Śankarābharaṇaṁ",
+      "pitch": "RagaDataset/Carnatic/features/a2f9f182-0ceb-4531-b286-b840b47a54b8/T__M__Krishna/December_Season_2008/Dakshinamurte/Dakshinamurte.pitch",
+      "pitch_sha256": "9c445d79f1d204edfe869c6bc9f59cff7d4ede203c6798c9ba3a10ca2a36d5c4",
+      "works": [],
+      "receipt_sha256": "e2054a835339c4fe764375022053289f66ac249a250d5a9fb807ff978eaa2d55",
+      "status": "no_work_link"
+    },
+    {
+      "track": "Abhishek_Raghuram.Muruganin_marupeyar",
+      "recording_id": "34f12b1d-bb35-48bc-a6c4-ffc4b52f140d",
+      "title": "Muruganin_marupeyar",
+      "artist": "Abhishek_Raghuram",
+      "raga": "Behāg",
+      "pitch": "RagaDataset/Carnatic/features/700e1d92-7094-4c21-8a3b-d7b60c550edf/Abhishek_Raghuram/December_Season_2009/Muruganin_marupeyar/Muruganin_marupeyar.pitch",
+      "pitch_sha256": "79ee248a78f00b8e5066d4bbea91d1e49f2437f8b0a02f760681d32235af55bd",
+      "works": [],
+      "receipt_sha256": "6d84a5f5f825ddbed2a40a99cfff309d94eb939bfe8a49d9e271ae62c9a81160",
+      "status": "no_work_link"
+    },
+    {
+      "track": "Sikkil_Gurucharan.Ekadantam",
+      "recording_id": "35b62e92-a2b3-48ad-8312-c1d262062b2d",
+      "title": "Ekadantam",
+      "artist": "Sikkil_Gurucharan",
+      "raga": "Bilahari",
+      "pitch": "RagaDataset/Carnatic/features/2165542c-45da-4301-af82-c2e7ddbe4768/Sikkil_Gurucharan/December_Season_2008/Ekadantam/Ekadantam.pitch",
+      "pitch_sha256": "a88ce6b15f7cbcfd7cea6c79ced2e62a8b7661e1126031c2721b6bc22449c0d4",
+      "works": [
+        {
+          "work_id": "c0b22754-ae54-4371-82c2-7dc0dee721ed",
+          "title": "Ekadantam"
+        }
+      ],
+      "receipt_sha256": "939eb73021e0edf723a61aaed7dfad72f4a7a14dccad5e301b85731719cba297",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Abhishek_Raghuram.Karpuram_Naarumo",
+      "recording_id": "3658fd19-de11-491d-b0a2-a73510e22628",
+      "title": "Karpuram_Naarumo",
+      "artist": "Abhishek_Raghuram",
+      "raga": "Kamās",
+      "pitch": "RagaDataset/Carnatic/features/a4ec6633-1050-4207-8313-b017194c8fa0/Abhishek_Raghuram/December_Season_2008/Karpuram_Naarumo/Karpuram_Naarumo.pitch",
+      "pitch_sha256": "20d2c6b6944d7ac17e4b68af535a970e8e8fafb036dcd6dd2ef07e4412172a3f",
+      "works": [
+        {
+          "work_id": "26507f39-1596-41be-91b8-5e444ae210f7",
+          "title": "Karpuram Naarumo"
+        }
+      ],
+      "receipt_sha256": "982ee255d6feb89a47458c4dac742bdc15229d69761f6bad24dc329d9cad2149",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Kunnakkudi_M_Balamuralikrishna.Arivaar_Yaar_Unnai",
+      "recording_id": "366d4d2b-c450-4f3e-be3c-ab069c18aeb8",
+      "title": "Arivaar_Yaar_Unnai",
+      "artist": "Kunnakkudi_M_Balamuralikrishna",
+      "raga": "Mukhāri",
+      "pitch": "RagaDataset/Carnatic/features/978f4c3c-6a12-43fd-8427-c414ee17b252/Kunnakkudi_M_Balamuralikrishna/December_Season_2008/Arivaar_Yaar_Unnai/Arivaar_Yaar_Unnai.pitch",
+      "pitch_sha256": "de46483abd2fdefc1df548bdc0e1fb2c11ddd1ab9180767158edbc7efd526f2a",
+      "works": [
+        {
+          "work_id": "1888e127-614b-4b23-a930-0dda896647b6",
+          "title": "Arivaar yaar"
+        }
+      ],
+      "receipt_sha256": "b059b831acc213b775fedebd38696dc376cc20ee8dec686e46316a53810bc145",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "K__V__Narayanaswami.Andarama_Soundarya",
+      "recording_id": "3689ff42-2ed3-4d2f-b448-6083bdde2db5",
+      "title": "Andarama_Soundarya",
+      "artist": "K__V__Narayanaswami",
+      "raga": "Kēdāragauḷa",
+      "pitch": "RagaDataset/Carnatic/features/df85a0a5-b1a8-42f1-a87b-3d7c7ee33fb4/K__V__Narayanaswami/K__V__Narayanaswami_concert_at_Ohio_1998/Andarama_Soundarya/Andarama_Soundarya.pitch",
+      "pitch_sha256": "c9949a9551ad2f1a11eb58616c920e4c3a8458c8d04efdb64b65b76fcf04c14a",
+      "works": [
+        {
+          "work_id": "d969b1d0-fd6a-43c0-b917-5533073edeb0",
+          "title": "Andarama Soundarya"
+        }
+      ],
+      "receipt_sha256": "bebac8f6463376b2d5d00253aee62ed5d2cf20e3919e62d966ec031b1edd52c7",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "Sanjay_Subrahmanyan.Buddhi_Raadu",
+      "recording_id": "37476bbe-b180-415d-8368-af2c21d1b190",
+      "title": "Buddhi_Raadu",
+      "artist": "Sanjay_Subrahmanyan",
+      "raga": "Śankarābharaṇaṁ",
+      "pitch": "RagaDataset/Carnatic/features/a2f9f182-0ceb-4531-b286-b840b47a54b8/Sanjay_Subrahmanyan/December_Season_2010/Buddhi_Raadu/Buddhi_Raadu.pitch",
+      "pitch_sha256": "5d478950b1816439524c3fe3e3a972399d1f8d3ec29555fbba0fb22d94005626",
+      "works": [],
+      "receipt_sha256": "fb6d40165ca3b0afed406632fff0fd7d4443348e8f9503ba505ae25ef27e41ed",
+      "status": "no_work_link"
+    },
+    {
+      "track": "T__Brinda.Emanine",
+      "recording_id": "378ab482-9d87-47b7-9471-5f5c65923339",
+      "title": "Emanine",
+      "artist": "T__Brinda",
+      "raga": "Mukhāri",
+      "pitch": "RagaDataset/Carnatic/features/978f4c3c-6a12-43fd-8427-c414ee17b252/T__Brinda/All_Time_Favourites_-_Vol_2/Emanine/Emanine.pitch",
+      "pitch_sha256": "009375eadc7b0fca97924bc3dada82c733deffd0a29bf790c5840a0e0b2be41b",
+      "works": [],
+      "receipt_sha256": "a644c46f515c4740955901e72be7bf0f48a8c233c6665bc35ec336dc45290e60",
+      "status": "no_work_link"
+    },
+    {
+      "track": "Ramnad_Krishnan.Enna_Punniyam",
+      "recording_id": "37f6f144-6f0d-45e9-a08c-68c0a4a418cc",
+      "title": "Enna_Punniyam",
+      "artist": "Ramnad_Krishnan",
+      "raga": "Hussēnī",
+      "pitch": "RagaDataset/Carnatic/features/50bd048f-4482-4c5b-850c-9ad5e5ec46f1/Ramnad_Krishnan/Ramnad_Krishnan_concert_at_Music_Academy_1969/Enna_Punniyam/Enna_Punniyam.pitch",
+      "pitch_sha256": "d17d74046e6064dcf87286fe8d47332c77ec2a6d92c7517e44d68d7277ea12dc",
+      "works": [
+        {
+          "work_id": "2061e3a7-7e27-48ce-96be-48f8a150c6de",
+          "title": "Enna punniyam"
+        }
+      ],
+      "receipt_sha256": "57e3222e258bd8a4cbdf587e6d4c3219ff697db08451cb4337ad49ec9f04102a",
+      "status": "single_explicit_work"
+    },
+    {
+      "track": "M_S__Subbulakshmi.Amba_Kamakshi_Padayugame",
+      "recording_id": "39dcbd24-412a-4b2d-b287-cfa5166fc8cc",
+      "title": "Amba_Kamakshi_Padayugame",
+      "artist": "M_S__Subbulakshmi",
+      "raga": "Yadukula kāṁbōji",
+      "pitch": "RagaDataset/Carnatic/features/ddff55ae-20f6-4d7d-ba9e-a6c10eeebd41/M_S__Subbulakshmi/Paddhatti/Amba_Kamakshi_Padayugame/Amba_Kamakshi_Padayugame.pitch",
+      "pitch_sha256": "28da21dfdfa4fa855f997a302765e8523347bde3caec14dabb862cd9801192b5",
+      "works": [
+        {
+          "work_id": "950facdd-94f1-4ed0-8050-ce7883150c99",
+          "title": "Amba Kamakshi"
+        }
+      ],
+      "receipt_sha256": "cf4a9653173a0a1e7a2fcb443c340488ac70101fab1abc5090a5f52d2b3886f4",
+      "status": "single_explicit_work"
+    }
+  ],
+  "network_attempts": 112,
+  "unavailable_http_status": null,
+  "unavailable_error": null,
+  "status": "public recording relations only; not yet integrated into a song catalog"
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāmavardani__nE podaDakunTE",
+  "audio": "data/concert_audio/Kāmavardani/nE podaDakunTE.mp3",
+  "audio_sha256": "f3bc57dc874ebb49de5f04194fb8ea4e54705e163dbc0893f519e87c70fe5aac",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8231620420701802
+}

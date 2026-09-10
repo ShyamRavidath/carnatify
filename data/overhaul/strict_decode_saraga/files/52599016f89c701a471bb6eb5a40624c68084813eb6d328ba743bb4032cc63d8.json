@@ -1,0 +1,11 @@
+{
+  "track": "69_Munnu_Ravana",
+  "audio": "saraga1.5_carnatic/Vasundara Rajagopal at Arkay by Vasundara Rajagopal/Munnu Ravana/Munnu Ravana.mp3.mp3",
+  "audio_sha256": "52599016f89c701a471bb6eb5a40624c68084813eb6d328ba743bb4032cc63d8",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.44843499967828393
+}

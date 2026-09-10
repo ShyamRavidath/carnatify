@@ -1,0 +1,11 @@
+{
+  "track": "223_Ramachandraya_Mangalam",
+  "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Ramachandraya Mangalam/Rithvik Raja - Ramachandraya Mangalam.mp3",
+  "audio_sha256": "02e3104b83832dcafccac129d263de0ec6044423439f33f6ab301e355288937f",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.23725120816379786
+}

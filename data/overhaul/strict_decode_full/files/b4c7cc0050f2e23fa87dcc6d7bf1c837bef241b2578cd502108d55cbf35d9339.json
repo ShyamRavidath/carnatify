@@ -1,0 +1,11 @@
+{
+  "track": "archive__Karaharapriya__B",
+  "audio": "data/concert_audio/Karaharapriya/B.mp3",
+  "audio_sha256": "b4c7cc0050f2e23fa87dcc6d7bf1c837bef241b2578cd502108d55cbf35d9339",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2919993340037763
+}

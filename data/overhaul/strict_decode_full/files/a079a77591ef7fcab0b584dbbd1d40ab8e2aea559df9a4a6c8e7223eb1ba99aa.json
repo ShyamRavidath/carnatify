@@ -1,0 +1,11 @@
+{
+  "track": "archive__Śankarābharaṇaṁ__manasu swAdinamai",
+  "audio": "data/concert_audio/Śankarābharaṇaṁ/manasu swAdinamai.mp3",
+  "audio_sha256": "a079a77591ef7fcab0b584dbbd1d40ab8e2aea559df9a4a6c8e7223eb1ba99aa",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5082660838961601
+}

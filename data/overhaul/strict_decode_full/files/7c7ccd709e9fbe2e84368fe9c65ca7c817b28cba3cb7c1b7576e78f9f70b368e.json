@@ -1,0 +1,11 @@
+{
+  "track": "archive__Yadukula kāṁbōji__srirAma jayarAma",
+  "audio": "data/concert_audio/Yadukula kāṁbōji/srirAma jayarAma.mp3",
+  "audio_sha256": "7c7ccd709e9fbe2e84368fe9c65ca7c817b28cba3cb7c1b7576e78f9f70b368e",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2960069580003619
+}

@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/4b1065d7-084a-437c-bae5-f6e9f3b9f71c",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:35:06.466482+00:00",
+  "recording": {
+    "video": false,
+    "title": "Annapoorne",
+    "disambiguation": "",
+    "length": 267122,
+    "relations": [
+      {
+        "type": "performance",
+        "attribute-values": {},
+        "target-credit": "",
+        "direction": "forward",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "ended": false,
+        "end": null,
+        "source-credit": "",
+        "work": {
+          "attributes": [],
+          "id": "9ded667e-e19d-42dc-be0d-30378cc11e9b",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "disambiguation": "",
+          "languages": [
+            "san"
+          ],
+          "iswcs": [],
+          "title": "Annapoorne Vishalakshi",
+          "language": "san",
+          "type": "Song"
+        },
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work"
+      }
+    ],
+    "first-release-date": "1986",
+    "id": "4b1065d7-084a-437c-bae5-f6e9f3b9f71c"
+  }
+}

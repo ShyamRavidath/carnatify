@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kānaḍa__1224829 aswinsainarain",
+  "audio": "data/concert_audio/Kānaḍa/1224829 aswinsainarain.mp3",
+  "audio_sha256": "50f5a6fcf476406b0fc8f6c686fbb4ebe5f6484e7851be61d0a704509f9f9318",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8795440001413226
+}

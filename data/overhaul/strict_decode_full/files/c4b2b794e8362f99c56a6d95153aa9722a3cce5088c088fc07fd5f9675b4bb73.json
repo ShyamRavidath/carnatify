@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nāṭa__Namo Namo",
+  "audio": "data/concert_audio/Nāṭa/Namo Namo.mp3",
+  "audio_sha256": "c4b2b794e8362f99c56a6d95153aa9722a3cce5088c088fc07fd5f9675b4bb73",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.0301204998977482
+}

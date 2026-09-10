@@ -1,0 +1,11 @@
+{
+  "track": "archive__Aṭāna__nArada gAnalOla",
+  "audio": "data/concert_audio/Aṭāna/nArada gAnalOla.mp3",
+  "audio_sha256": "53793da14b7c1e5ae4c1000223f22f66c96e89f7e5bc66c3012237e173427f68",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6636672075837851
+}

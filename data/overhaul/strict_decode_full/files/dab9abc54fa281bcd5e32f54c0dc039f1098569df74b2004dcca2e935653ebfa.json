@@ -1,0 +1,11 @@
+{
+  "track": "archive__Harikāmbhōji__Enthara Neethana",
+  "audio": "data/concert_audio/Harikāmbhōji/Enthara Neethana.mp3",
+  "audio_sha256": "dab9abc54fa281bcd5e32f54c0dc039f1098569df74b2004dcca2e935653ebfa",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.8318741666153073
+}

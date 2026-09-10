@@ -1,0 +1,11 @@
+{
+  "track": "archive__Varāḷi__sEshAchala nAyakam",
+  "audio": "data/concert_audio/Varāḷi/sEshAchala nAyakam.mp3",
+  "audio_sha256": "cd342395d0fa2a135ef79bd1c3a1c5ac5eda6ee5ac70f958d6ac84eb7c8ba437",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.7512576673179865
+}

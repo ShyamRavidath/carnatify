@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/65e824a1-9527-44e5-b272-486525b3061b",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:42:36.007339+00:00",
+  "recording": {
+    "first-release-date": "2006",
+    "id": "65e824a1-9527-44e5-b272-486525b3061b",
+    "length": 854000,
+    "title": "Nannu Vidachi",
+    "video": false,
+    "disambiguation": "",
+    "relations": [
+      {
+        "direction": "forward",
+        "attribute-values": {},
+        "source-credit": "",
+        "target-credit": "",
+        "work": {
+          "title": "Nannu Vidachi",
+          "languages": [],
+          "type-id": null,
+          "language": null,
+          "disambiguation": "",
+          "type": null,
+          "iswcs": [],
+          "id": "2babfd21-7547-4664-af05-cb4c82f243ef",
+          "attributes": []
+        },
+        "end": null,
+        "type": "performance",
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work",
+        "ended": false,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        }
+      }
+    ]
+  }
+}

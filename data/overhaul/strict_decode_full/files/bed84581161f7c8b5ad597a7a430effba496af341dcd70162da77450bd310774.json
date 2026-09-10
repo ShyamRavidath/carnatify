@@ -1,0 +1,11 @@
+{
+  "track": "archive__Pūrṇacandrika__01 Makelara",
+  "audio": "data/concert_audio/Pūrṇacandrika/01 Makelara.mp3",
+  "audio_sha256": "bed84581161f7c8b5ad597a7a430effba496af341dcd70162da77450bd310774",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8230914170853794
+}

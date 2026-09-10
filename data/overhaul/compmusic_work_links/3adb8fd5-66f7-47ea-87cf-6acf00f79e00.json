@@ -1,0 +1,14 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/3adb8fd5-66f7-47ea-87cf-6acf00f79e00",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:30:09.306262+00:00",
+  "recording": {
+    "title": "Vaderadeivamu",
+    "video": false,
+    "disambiguation": "",
+    "relations": [],
+    "first-release-date": "2010",
+    "id": "3adb8fd5-66f7-47ea-87cf-6acf00f79e00",
+    "length": 450529
+  }
+}

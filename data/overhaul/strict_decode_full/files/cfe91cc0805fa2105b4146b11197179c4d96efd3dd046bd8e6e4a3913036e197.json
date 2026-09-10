@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kānaḍa__4SUKHI EVARO",
+  "audio": "data/concert_audio/Kānaḍa/4SUKHI EVARO.mp3",
+  "audio_sha256": "cfe91cc0805fa2105b4146b11197179c4d96efd3dd046bd8e6e4a3913036e197",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "decoder_error",
+  "returncode": 183,
+  "stderr_bytes": 603,
+  "stderr_excerpt": "[mp3float @ 0xa60c44e00] Header missing\n[aist#0:0/mp3 @ 0xa61008300] [dec:mp3float @ 0xa6100c280] Error submitting packet to decoder: Invalid data found when processing input\n[aist#0:0/mp3 @ 0xa61008300] [dec:mp3float @ 0xa6100c280] Error processing packet in decoder: Invalid data found when processing input\n[aist#0:0/mp3 @ 0xa61008300] [dec:mp3float @ 0xa6100c280] Task finished with error code: -1094995529 (Invalid data found when processing input)\n[aist#0:0/mp3 @ 0xa61008300] [dec:mp3float @ 0xa6100c280] Terminating thread with return code -1094995529 (Invalid data found when processing input)\n",
+  "elapsed_s": 2.0046695829369128
+}

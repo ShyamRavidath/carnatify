@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nāṭakurinji__09 siva dikshA jAvaLi",
+  "audio": "data/concert_audio/Nāṭakurinji/09 siva dikshA jAvaLi.mp3",
+  "audio_sha256": "2abbac552f818a1efa2aa6289f5b37d5406f03184a9bf9da663a958cb89b71d9",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.46444225031882524
+}

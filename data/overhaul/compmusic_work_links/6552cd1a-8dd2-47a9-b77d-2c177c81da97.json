@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/6552cd1a-8dd2-47a9-b77d-2c177c81da97",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:42:15.196532+00:00",
+  "recording": {
+    "video": false,
+    "disambiguation": "",
+    "title": "Govindarajaya",
+    "length": 1200000,
+    "relations": [
+      {
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "end": null,
+        "ended": false,
+        "attribute-values": {},
+        "target-credit": "",
+        "type": "performance",
+        "direction": "forward",
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work",
+        "source-credit": "",
+        "work": {
+          "language": null,
+          "type": null,
+          "languages": [],
+          "title": "Govindarajaya",
+          "iswcs": [],
+          "disambiguation": "",
+          "type-id": null,
+          "id": "83c42e36-6637-41b7-ab4a-93f0d3cf3c6d",
+          "attributes": []
+        }
+      }
+    ],
+    "id": "6552cd1a-8dd2-47a9-b77d-2c177c81da97",
+    "first-release-date": "2009"
+  }
+}

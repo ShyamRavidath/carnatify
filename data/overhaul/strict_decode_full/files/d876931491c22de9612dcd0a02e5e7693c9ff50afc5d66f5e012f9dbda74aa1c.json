@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kamās__konji konji vA guhanE",
+  "audio": "data/concert_audio/Kamās/konji konji vA guhanE.mp3",
+  "audio_sha256": "d876931491c22de9612dcd0a02e5e7693c9ff50afc5d66f5e012f9dbda74aa1c",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.38634791737422347
+}

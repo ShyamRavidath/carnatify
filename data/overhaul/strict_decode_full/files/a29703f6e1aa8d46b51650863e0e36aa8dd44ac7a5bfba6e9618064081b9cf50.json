@@ -1,0 +1,11 @@
+{
+  "track": "archive__Hindōḷaṁ__RTP",
+  "audio": "data/concert_audio/Hindōḷaṁ/RTP.mp3",
+  "audio_sha256": "a29703f6e1aa8d46b51650863e0e36aa8dd44ac7a5bfba6e9618064081b9cf50",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 4.640964624937624
+}

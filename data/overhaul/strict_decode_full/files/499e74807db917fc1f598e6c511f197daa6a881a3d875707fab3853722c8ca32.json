@@ -1,0 +1,11 @@
+{
+  "track": "archive__Jaganmōhini__1 Shobillu Sapthaswara",
+  "audio": "data/concert_audio/Jaganmōhini/1 Shobillu Sapthaswara.mp3",
+  "audio_sha256": "499e74807db917fc1f598e6c511f197daa6a881a3d875707fab3853722c8ca32",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7117613330483437
+}

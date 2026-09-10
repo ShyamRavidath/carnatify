@@ -1,0 +1,11 @@
+{
+  "track": "archive__Mōhanaṁ__kshEmam kuru",
+  "audio": "data/concert_audio/Mōhanaṁ/kshEmam kuru.mp3",
+  "audio_sha256": "2639ded96f827408da1f6c6bb2d8e589e3b9f582c658d399487211e786af8c29",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8227570839226246
+}

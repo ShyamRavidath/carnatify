@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sāvēri__Sarasooda",
+  "audio": "data/concert_audio/Sāvēri/Sarasooda.mp3",
+  "audio_sha256": "932fcb7d57364638cce3fec4627d2af4cbb8522f1cae2d12d8f7f037e31713d1",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.846502291969955
+}

@@ -1,0 +1,11 @@
+{
+  "track": "184_Ardhanareeshwaram",
+  "audio": "saraga1.5_carnatic/V Shankarnarayanan at Arkay by V Shankaranarayanan/Ardhanareeshwaram/Ardhanareeshwaram.mp3.mp3",
+  "audio_sha256": "76011894abd7008014a5f080efe31b8d0103e01a885a73e71c9c9f844688aa8c",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 3.1731074168346822
+}

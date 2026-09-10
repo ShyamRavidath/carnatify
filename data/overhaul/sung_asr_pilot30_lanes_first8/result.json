@@ -1,0 +1,1072 @@
+{
+  "plan_sha256": "a39d9c445383938cf13c7c73d750908a67a756036e9b4e9a27784fe81ce0f25a",
+  "rows": [
+    {
+      "plan_sha256": "a39d9c445383938cf13c7c73d750908a67a756036e9b4e9a27784fe81ce0f25a",
+      "query": {
+        "track": "180_Ninne_Bhajana",
+        "audio": "saraga1.5_carnatic/V Shankarnarayanan at Arkay by V Shankaranarayanan/Ninne Bhajana/Ninne Bhajana.mp3.mp3",
+        "audio_sha256": "1c5434fcc2804ab78600ed0af508a5f3197b058992bfeaeec5f80177c43d84c3",
+        "start_s": 309.63073696145125,
+        "duration_s": 30
+      },
+      "audio": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9699454139936552,
+        "clipping_fraction": 0.0,
+        "rms": 0.08886665756693808
+      },
+      "waveform_sha256": "60e18d21da2999476f56beae6c4af2c79a327dddadbc7580e68e8e169cac744f",
+      "transcription_s": 63.20476554101333,
+      "hypotheses": {
+        "auto": {
+          "text": "I am a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 30.0,
+              "text": " I am a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a",
+              "avg_logprob": -0.15273551093207466,
+              "no_speech_prob": 7.425795534032886e-10,
+              "compression_ratio": 23.258064516129032
+            }
+          ],
+          "language": "en",
+          "status": "unverified_hypothesis"
+        },
+        "ta": {
+          "text": "காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன் காப்பாக்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் ப",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 2.0,
+              "text": " காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன்",
+              "avg_logprob": -0.3406080118815104,
+              "no_speech_prob": 7.425795534032886e-10,
+              "compression_ratio": 11.448275862068966
+            },
+            {
+              "start": 2.0,
+              "end": 4.0,
+              "text": " காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன்",
+              "avg_logprob": -0.3406080118815104,
+              "no_speech_prob": 7.425795534032886e-10,
+              "compression_ratio": 11.448275862068966
+            },
+            {
+              "start": 4.0,
+              "end": 6.0,
+              "text": " காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன்",
+              "avg_logprob": -0.3406080118815104,
+              "no_speech_prob": 7.425795534032886e-10,
+              "compression_ratio": 11.448275862068966
+            },
+            {
+              "start": 6.0,
+              "end": 30.0,
+              "text": " காப்பாக்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் ப",
+              "avg_logprob": -0.380430908203125,
+              "no_speech_prob": 1.334175991907216e-09,
+              "compression_ratio": 15.704545454545455
+            }
+          ],
+          "language": "ta",
+          "status": "unverified_hypothesis"
+        },
+        "te": {
+          "text": "మాదిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండ",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 30.0,
+              "text": " మాదిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండ",
+              "avg_logprob": -0.18451348198784723,
+              "no_speech_prob": 7.425795534032886e-10,
+              "compression_ratio": 10.40625
+            }
+          ],
+          "language": "te",
+          "status": "unverified_hypothesis"
+        },
+        "hi": {
+          "text": "आजे जलनो दनिन्ने भजनाम सेगो आड़नो निन्ने पमागा मार्जा निन्ने ने वब बब बगा मवानी ने बब बब",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 22.0,
+              "text": " आजे जलनो दनिन्ने भजनाम सेगो आड़नो निन्ने पमागा मार्जा निन्ने",
+              "avg_logprob": -0.5196096692766462,
+              "no_speech_prob": 7.425795534032886e-10,
+              "compression_ratio": 1.7608695652173914
+            },
+            {
+              "start": 22.0,
+              "end": 23.0,
+              "text": " ने",
+              "avg_logprob": -0.5911549517982885,
+              "no_speech_prob": 5.39698952195522e-10,
+              "compression_ratio": 1.3958333333333333
+            },
+            {
+              "start": 23.0,
+              "end": 30.0,
+              "text": " वब बब बगा मवानी ने बब बब",
+              "avg_logprob": -0.5911549517982885,
+              "no_speech_prob": 5.39698952195522e-10,
+              "compression_ratio": 1.3958333333333333
+            }
+          ],
+          "language": "hi",
+          "status": "unverified_hypothesis"
+        }
+      }
+    },
+    {
+      "plan_sha256": "a39d9c445383938cf13c7c73d750908a67a756036e9b4e9a27784fe81ce0f25a",
+      "query": {
+        "track": "133_Paramatmudu",
+        "audio": "saraga1.5_carnatic/Modhumudi Sudhakar at Arkay by Modhumudi Sudhakar/Paramatmudu/Paramatmudu.mp3.mp3",
+        "audio_sha256": "97689fa1bf0f44b6b2843dc72d8711d5f9b895edd27dfa84d3f83d3f9bbcbc4f",
+        "start_s": 431.3874716553288,
+        "duration_s": 30
+      },
+      "audio": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9797168184438313,
+        "clipping_fraction": 0.0,
+        "rms": 0.1726365071515947
+      },
+      "waveform_sha256": "68af1ea2255273665ae223506724629cdf94c2217d03c979ce985d263a84f4e2",
+      "transcription_s": 59.833427582867444,
+      "hypotheses": {
+        "auto": {
+          "text": "मूच्छ तबाग तेलू सुकोरे परमात मूडू वेलिगे मुझे तरह",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 25.0,
+              "text": " मूच्छ तबाग तेलू सुकोरे परमात मूडू वेलिगे",
+              "avg_logprob": -0.27992955693658794,
+              "no_speech_prob": 2.2599218937102705e-05,
+              "compression_ratio": 1.2705882352941176
+            },
+            {
+              "start": 25.0,
+              "end": 30.0,
+              "text": " मुझे तरह",
+              "avg_logprob": -0.44336583064152646,
+              "no_speech_prob": 9.227326813743275e-08,
+              "compression_ratio": 0.6666666666666666
+            }
+          ],
+          "language": "hi",
+          "status": "unverified_hypothesis"
+        },
+        "ta": {
+          "text": "मूच्छ तबाग तेलू सुकोरे परमात मूडू वेलिगे موسیقی",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 12.0,
+              "text": " मूच्छ तबाग तेलू सुकोरे",
+              "avg_logprob": -0.3208398645574396,
+              "no_speech_prob": 2.2599218937102705e-05,
+              "compression_ratio": 1.2705882352941176
+            },
+            {
+              "start": 12.0,
+              "end": 25.0,
+              "text": " परमात मूडू वेलिगे",
+              "avg_logprob": -0.3208398645574396,
+              "no_speech_prob": 2.2599218937102705e-05,
+              "compression_ratio": 1.2705882352941176
+            },
+            {
+              "start": 25.0,
+              "end": 29.0,
+              "text": " موسیقی",
+              "avg_logprob": -0.600744903087616,
+              "no_speech_prob": 9.227326813743275e-08,
+              "compression_ratio": 0.5714285714285714
+            }
+          ],
+          "language": "ta",
+          "status": "unverified_hypothesis"
+        },
+        "te": {
+          "text": "మూచటబాగతేలు సుకోరే పరమాత్ముడు వేలిగే మూచేటగి",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 24.240000000000002,
+              "text": " మూచటబాగతేలు సుకోరే పరమాత్ముడు వేలిగే",
+              "avg_logprob": -0.29271762435500687,
+              "no_speech_prob": 2.2599218937102705e-05,
+              "compression_ratio": 1.2289156626506024
+            },
+            {
+              "start": 24.24,
+              "end": 29.979999999999997,
+              "text": " మూచేటగి",
+              "avg_logprob": -0.4545169406467014,
+              "no_speech_prob": 6.871054836210533e-08,
+              "compression_ratio": 0.65625
+            }
+          ],
+          "language": "te",
+          "status": "unverified_hypothesis"
+        },
+        "hi": {
+          "text": "मूच्छ तबाग तेलू सुकोरे परमात मूडू वेलिगे मुझे तरह",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 25.0,
+              "text": " मूच्छ तबाग तेलू सुकोरे परमात मूडू वेलिगे",
+              "avg_logprob": -0.27992955693658794,
+              "no_speech_prob": 2.2599218937102705e-05,
+              "compression_ratio": 1.2705882352941176
+            },
+            {
+              "start": 25.0,
+              "end": 30.0,
+              "text": " मुझे तरह",
+              "avg_logprob": -0.44336583064152646,
+              "no_speech_prob": 9.227326813743275e-08,
+              "compression_ratio": 0.6666666666666666
+            }
+          ],
+          "language": "hi",
+          "status": "unverified_hypothesis"
+        }
+      }
+    },
+    {
+      "plan_sha256": "a39d9c445383938cf13c7c73d750908a67a756036e9b4e9a27784fe81ce0f25a",
+      "query": {
+        "track": "47_Koti_Janmani",
+        "audio": "saraga1.5_carnatic/Akkarai Sisters at Arkay by Akkarai Sisters/Koti Janmani/Koti Janmani.mp3.mp3",
+        "audio_sha256": "10d03b57f877301572181e7e00d6effbd5a3ad11a3382ff08a3686e085792dc7",
+        "start_s": 248.34747165532877,
+        "duration_s": 30
+      },
+      "audio": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9663398898757625,
+        "clipping_fraction": 0.0,
+        "rms": 0.15750515161794124
+      },
+      "waveform_sha256": "fb6fec40f1fa322c19dfe52057179c9dd917eefdb0fd2a7b86f5527ee252ae01",
+      "transcription_s": 51.12447908287868,
+      "hypotheses": {
+        "auto": {
+          "text": "Oh The the the the the the the the the the the the the the the the the the the the the",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 2.0,
+              "text": " Oh",
+              "avg_logprob": -1.9050275802612304,
+              "no_speech_prob": 6.4281416598532815e-06,
+              "compression_ratio": 0.2
+            },
+            {
+              "start": 2.0,
+              "end": 2.98,
+              "text": " The",
+              "avg_logprob": -0.7241582430326021,
+              "no_speech_prob": 8.785296813584864e-06,
+              "compression_ratio": 5.533333333333333
+            },
+            {
+              "start": 2.98,
+              "end": 5.0,
+              "text": " the",
+              "avg_logprob": -0.7241582430326021,
+              "no_speech_prob": 8.785296813584864e-06,
+              "compression_ratio": 5.533333333333333
+            },
+            {
+              "start": 5.0,
+              "end": 9.0,
+              "text": " the",
+              "avg_logprob": -0.7241582430326021,
+              "no_speech_prob": 8.785296813584864e-06,
+              "compression_ratio": 5.533333333333333
+            },
+            {
+              "start": 9.0,
+              "end": 11.0,
+              "text": " the",
+              "avg_logprob": -0.7241582430326021,
+              "no_speech_prob": 8.785296813584864e-06,
+              "compression_ratio": 5.533333333333333
+            },
+            {
+              "start": 11.0,
+              "end": 13.0,
+              "text": " the",
+              "avg_logprob": -0.7241582430326021,
+              "no_speech_prob": 8.785296813584864e-06,
+              "compression_ratio": 5.533333333333333
+            },
+            {
+              "start": 13.0,
+              "end": 15.0,
+              "text": " the",
+              "avg_logprob": -0.7241582430326021,
+              "no_speech_prob": 8.785296813584864e-06,
+              "compression_ratio": 5.533333333333333
+            },
+            {
+              "start": 15.0,
+              "end": 16.0,
+              "text": " the",
+              "avg_logprob": -0.7241582430326021,
+              "no_speech_prob": 8.785296813584864e-06,
+              "compression_ratio": 5.533333333333333
+            },
+            {
+              "start": 16.0,
+              "end": 17.0,
+              "text": " the",
+              "avg_logprob": -0.7241582430326021,
+              "no_speech_prob": 8.785296813584864e-06,
+              "compression_ratio": 5.533333333333333
+            },
+            {
+              "start": 17.0,
+              "end": 18.0,
+              "text": " the",
+              "avg_logprob": -0.7241582430326021,
+              "no_speech_prob": 8.785296813584864e-06,
+              "compression_ratio": 5.533333333333333
+            },
+            {
+              "start": 18.0,
+              "end": 19.0,
+              "text": " the",
+              "avg_logprob": -0.7241582430326021,
+              "no_speech_prob": 8.785296813584864e-06,
+              "compression_ratio": 5.533333333333333
+            },
+            {
+              "start": 19.0,
+              "end": 20.0,
+              "text": " the",
+              "avg_logprob": -0.7241582430326021,
+              "no_speech_prob": 8.785296813584864e-06,
+              "compression_ratio": 5.533333333333333
+            },
+            {
+              "start": 20.0,
+              "end": 21.0,
+              "text": " the",
+              "avg_logprob": -0.7241582430326021,
+              "no_speech_prob": 8.785296813584864e-06,
+              "compression_ratio": 5.533333333333333
+            },
+            {
+              "start": 21.0,
+              "end": 22.0,
+              "text": " the",
+              "avg_logprob": -0.7241582430326021,
+              "no_speech_prob": 8.785296813584864e-06,
+              "compression_ratio": 5.533333333333333
+            },
+            {
+              "start": 22.0,
+              "end": 23.0,
+              "text": " the",
+              "avg_logprob": -0.7241582430326021,
+              "no_speech_prob": 8.785296813584864e-06,
+              "compression_ratio": 5.533333333333333
+            },
+            {
+              "start": 23.0,
+              "end": 24.0,
+              "text": " the",
+              "avg_logprob": -0.7241582430326021,
+              "no_speech_prob": 8.785296813584864e-06,
+              "compression_ratio": 5.533333333333333
+            },
+            {
+              "start": 24.0,
+              "end": 25.0,
+              "text": " the",
+              "avg_logprob": -0.7241582430326021,
+              "no_speech_prob": 8.785296813584864e-06,
+              "compression_ratio": 5.533333333333333
+            },
+            {
+              "start": 25.0,
+              "end": 26.0,
+              "text": " the",
+              "avg_logprob": -0.7241582430326021,
+              "no_speech_prob": 8.785296813584864e-06,
+              "compression_ratio": 5.533333333333333
+            },
+            {
+              "start": 26.0,
+              "end": 27.0,
+              "text": " the",
+              "avg_logprob": -0.7241582430326021,
+              "no_speech_prob": 8.785296813584864e-06,
+              "compression_ratio": 5.533333333333333
+            },
+            {
+              "start": 27.0,
+              "end": 28.0,
+              "text": " the",
+              "avg_logprob": -0.7241582430326021,
+              "no_speech_prob": 8.785296813584864e-06,
+              "compression_ratio": 5.533333333333333
+            },
+            {
+              "start": 28.0,
+              "end": 29.0,
+              "text": " the",
+              "avg_logprob": -0.7241582430326021,
+              "no_speech_prob": 8.785296813584864e-06,
+              "compression_ratio": 5.533333333333333
+            },
+            {
+              "start": 29.0,
+              "end": 30.0,
+              "text": " the",
+              "avg_logprob": -0.7241582430326021,
+              "no_speech_prob": 8.785296813584864e-06,
+              "compression_ratio": 5.533333333333333
+            }
+          ],
+          "language": "en",
+          "status": "unverified_hypothesis"
+        },
+        "ta": {
+          "text": "கேட்டாரிப்பர பத்தே உத்து ஓப்பது ஜனாலோசன் விஷயாகோமலாமதுர் பாம்பினினிரட கோடிஜன்மானி",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 13.0,
+              "text": " கேட்டாரிப்பர பத்தே உத்து",
+              "avg_logprob": -0.7819225947062175,
+              "no_speech_prob": 6.4281416598532815e-06,
+              "compression_ratio": 1.595959595959596
+            },
+            {
+              "start": 13.0,
+              "end": 22.0,
+              "text": " ஓப்பது ஜனாலோசன் விஷயாகோமலாமதுர்",
+              "avg_logprob": -0.7819225947062175,
+              "no_speech_prob": 6.4281416598532815e-06,
+              "compression_ratio": 1.595959595959596
+            },
+            {
+              "start": 22.0,
+              "end": 29.94,
+              "text": " பாம்பினினிரட கோடிஜன்மானி",
+              "avg_logprob": -0.6603478325737847,
+              "no_speech_prob": 4.07580458272605e-08,
+              "compression_ratio": 1.25
+            }
+          ],
+          "language": "ta",
+          "status": "unverified_hypothesis"
+        },
+        "te": {
+          "text": "కేతారి పరా పతే ఉతుంగా మోపవదు జనా లో చానా విషయా గోమళా మధురభా మినినిరా గోడి జనా",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 29.98,
+              "text": " కేతారి పరా పతే ఉతుంగా మోపవదు జనా లో చానా విషయా గోమళా మధురభా మినినిరా గోడి జనా",
+              "avg_logprob": -0.2479937586291083,
+              "no_speech_prob": 6.4281416598532815e-06,
+              "compression_ratio": 1.7672413793103448
+            }
+          ],
+          "language": "te",
+          "status": "unverified_hypothesis"
+        },
+        "hi": {
+          "text": "तुनिगा, खेतारिप्पर पत्ये उतिगा, लोप वदुजना लोचना विशया को मळा मधूर भामिनिरणा कोडि जमानि",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 29.98,
+              "text": " तुनिगा, खेतारिप्पर पत्ये उतिगा, लोप वदुजना लोचना विशया को मळा मधूर भामिनिरणा कोडि जमानि",
+              "avg_logprob": -0.3761425944207941,
+              "no_speech_prob": 6.4281416598532815e-06,
+              "compression_ratio": 1.75
+            }
+          ],
+          "language": "hi",
+          "status": "unverified_hypothesis"
+        }
+      }
+    },
+    {
+      "plan_sha256": "a39d9c445383938cf13c7c73d750908a67a756036e9b4e9a27784fe81ce0f25a",
+      "query": {
+        "track": "243_Kamalamba_Samrakshatu",
+        "audio": "saraga1.5_carnatic/Chaitra Sairam at Arkay by Chaitra Sairam/Kamalamba Samrakshatu/Chaitra Sairam - Kamalamba Samrakshatu.mp3",
+        "audio_sha256": "1908f6b9e00c867564b11df6a4c87a502f185d05fcaf60085442ceef27c8144a",
+        "start_s": 316.42257369614515,
+        "duration_s": 30
+      },
+      "audio": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9957220580294285,
+        "clipping_fraction": 0.0,
+        "rms": 0.04992788170235547
+      },
+      "waveform_sha256": "ab09a8e51a74daea2be2aecb63566358158084a9a716a39b3c269b01569d75fc",
+      "transcription_s": 44.83550583291799,
+      "hypotheses": {
+        "auto": {
+          "text": "Thank you.",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 29.98,
+              "text": " Thank you.",
+              "avg_logprob": -0.8242050806681315,
+              "no_speech_prob": 7.899337295391717e-10,
+              "compression_ratio": 0.5555555555555556
+            }
+          ],
+          "language": "en",
+          "status": "unverified_hypothesis"
+        },
+        "ta": {
+          "text": "நான் பார்க்ச் செய்தும்",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 29.98,
+              "text": " நான் பார்க்ச் செய்தும்",
+              "avg_logprob": -1.0402125482973845,
+              "no_speech_prob": 7.899337295391717e-10,
+              "compression_ratio": 1.1272727272727272
+            }
+          ],
+          "language": "ta",
+          "status": "unverified_hypothesis"
+        },
+        "te": {
+          "text": "కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాల",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 30.0,
+              "text": " కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాల",
+              "avg_logprob": -0.2013685777452257,
+              "no_speech_prob": 7.899337295391717e-10,
+              "compression_ratio": 12.346153846153847
+            }
+          ],
+          "language": "te",
+          "status": "unverified_hypothesis"
+        },
+        "hi": {
+          "text": "प्रच्छ तुमा रिकाम लाव नगर नीवासी अबरका माला",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 25.0,
+              "text": " प्रच्छ तुमा रिकाम लाव नगर नीवासी",
+              "avg_logprob": -0.7439230985419695,
+              "no_speech_prob": 7.899337295391717e-10,
+              "compression_ratio": 1.2285714285714286
+            },
+            {
+              "start": 25.0,
+              "end": 30.0,
+              "text": " अबरका माला",
+              "avg_logprob": -0.7882806232997349,
+              "no_speech_prob": 1.4544109250280712e-09,
+              "compression_ratio": 0.8
+            }
+          ],
+          "language": "hi",
+          "status": "unverified_hypothesis"
+        }
+      }
+    },
+    {
+      "plan_sha256": "a39d9c445383938cf13c7c73d750908a67a756036e9b4e9a27784fe81ce0f25a",
+      "query": {
+        "track": "40_Kamakshi",
+        "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Kamakshi/Sanjay Subrahmanyan - Kamakshi.mp3",
+        "audio_sha256": "247213aff363dae0be9549dec3306b126aa08d49671d195b6ab0b58aa8285104",
+        "start_s": 596.9575510204081,
+        "duration_s": 30
+      },
+      "audio": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.6616852578384678,
+        "clipping_fraction": 0.0,
+        "rms": 0.03500964611545858
+      },
+      "waveform_sha256": "51d02f7a8e7c091a219834c2fb1cc2dc9af2fb6b7cf2800f6cc1e9088c87f5c3",
+      "transcription_s": 42.304338624700904,
+      "hypotheses": {
+        "auto": {
+          "text": "Thank you.",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 29.98,
+              "text": " Thank you.",
+              "avg_logprob": -0.6566553115844727,
+              "no_speech_prob": 1.6678058933905504e-10,
+              "compression_ratio": 0.5555555555555556
+            }
+          ],
+          "language": "en",
+          "status": "unverified_hypothesis"
+        },
+        "ta": {
+          "text": "நான் மாக்கரிக்காம்",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 2.0,
+              "text": " நான் மாக்கரிக்காம்",
+              "avg_logprob": -1.0951663970947265,
+              "no_speech_prob": 1.6678058933905504e-10,
+              "compression_ratio": 1.1818181818181819
+            }
+          ],
+          "language": "ta",
+          "status": "unverified_hypothesis"
+        },
+        "te": {
+          "text": "కాాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగా",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 30.0,
+              "text": " కాాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగా",
+              "avg_logprob": -0.17281607733832466,
+              "no_speech_prob": 1.6678058933905504e-10,
+              "compression_ratio": 15.857142857142858
+            }
+          ],
+          "language": "te",
+          "status": "unverified_hypothesis"
+        },
+        "hi": {
+          "text": "प्रवार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बा",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 30.0,
+              "text": " प्रवार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बा",
+              "avg_logprob": -0.25270316229926215,
+              "no_speech_prob": 1.6678058933905504e-10,
+              "compression_ratio": 15.416666666666666
+            }
+          ],
+          "language": "hi",
+          "status": "unverified_hypothesis"
+        }
+      }
+    },
+    {
+      "plan_sha256": "a39d9c445383938cf13c7c73d750908a67a756036e9b4e9a27784fe81ce0f25a",
+      "query": {
+        "track": "237_Manasaramathi",
+        "audio": "saraga1.5_carnatic/KP Nandini at Arkay by KP Nandini/Manasaramathi/Manasaramathi.mp3.mp3",
+        "audio_sha256": "31fd6bce5d2f628b78231dacc6451a92bb7764eb78cd878a7bd8168adf73c595",
+        "start_s": 705.5556349206349,
+        "duration_s": 30
+      },
+      "audio": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.5597527762405984,
+        "clipping_fraction": 0.0,
+        "rms": 0.050335624292663285
+      },
+      "waveform_sha256": "2953d5d3733a45ff1908a8a96dd4f7a3fb55008c16857985f9873880546d8935",
+      "transcription_s": 42.97354874992743,
+      "hypotheses": {
+        "auto": {
+          "text": "¶¶",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 10.0,
+              "text": " ¶¶",
+              "avg_logprob": -0.5655794143676758,
+              "no_speech_prob": 7.96546370529505e-11,
+              "compression_ratio": 0.3333333333333333
+            }
+          ],
+          "language": "en",
+          "status": "unverified_hypothesis"
+        },
+        "ta": {
+          "text": "நான் வார்க்கிறேன்",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 29.98,
+              "text": " நான் வார்க்கிறேன்",
+              "avg_logprob": -1.1213366859837581,
+              "no_speech_prob": 7.96546370529505e-11,
+              "compression_ratio": 1.065217391304348
+            }
+          ],
+          "language": "ta",
+          "status": "unverified_hypothesis"
+        },
+        "te": {
+          "text": "కాాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగా",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 30.0,
+              "text": " కాాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగా",
+              "avg_logprob": -0.2734563361273872,
+              "no_speech_prob": 7.96546370529505e-11,
+              "compression_ratio": 15.857142857142858
+            }
+          ],
+          "language": "te",
+          "status": "unverified_hypothesis"
+        },
+        "hi": {
+          "text": "कर दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 29.98,
+              "text": " कर दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो",
+              "avg_logprob": -0.37626449584960936,
+              "no_speech_prob": 7.96546370529505e-11,
+              "compression_ratio": 17.73076923076923
+            }
+          ],
+          "language": "hi",
+          "status": "unverified_hypothesis"
+        }
+      }
+    },
+    {
+      "plan_sha256": "a39d9c445383938cf13c7c73d750908a67a756036e9b4e9a27784fe81ce0f25a",
+      "query": {
+        "track": "154_Innamum_Oru_thalam",
+        "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/Innamum Oru thalam/Sanjay Subrahmanyan - Innamum Oru thalam.mp3",
+        "audio_sha256": "fa647899b0d184baf8eaf0ae9c9d86f2c36b6c70f4c2d9eab902c369795f06c7",
+        "start_s": 136.44,
+        "duration_s": 30
+      },
+      "audio": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.7177427293424079,
+        "clipping_fraction": 0.0,
+        "rms": 0.08301172277250825
+      },
+      "waveform_sha256": "55ed29132b60878bf8b0dd3bc7efe01832b39fbcdf45a11265a7f503cd08a9ff",
+      "transcription_s": 73.29635041719303,
+      "hypotheses": {
+        "auto": {
+          "text": "மாலைக்கின் சொல்லேன் சொன்ன தலங்கை குவோகி கலைத்து சோடிந்தர் என்றாலிந்த ஆதிச்சி தம்பரம் போல்யு நமும் ஒரு தலம் இறுக்கும் என்றுருக்காலை மாலைக்கின் மாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலால",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 3.0,
+              "text": " மாலைக்கின்",
+              "avg_logprob": -0.37536953865213596,
+              "no_speech_prob": 1.752628463691508e-06,
+              "compression_ratio": 2.341317365269461
+            },
+            {
+              "start": 3.0,
+              "end": 8.9,
+              "text": " சொல்லேன் சொன்ன தலங்கை",
+              "avg_logprob": -0.37536953865213596,
+              "no_speech_prob": 1.752628463691508e-06,
+              "compression_ratio": 2.341317365269461
+            },
+            {
+              "start": 8.9,
+              "end": 11.84,
+              "text": " குவோகி கலைத்து",
+              "avg_logprob": -0.37536953865213596,
+              "no_speech_prob": 1.752628463691508e-06,
+              "compression_ratio": 2.341317365269461
+            },
+            {
+              "start": 11.84,
+              "end": 14.74,
+              "text": " சோடிந்தர் என்றாலிந்த",
+              "avg_logprob": -0.37536953865213596,
+              "no_speech_prob": 1.752628463691508e-06,
+              "compression_ratio": 2.341317365269461
+            },
+            {
+              "start": 14.74,
+              "end": 17.42,
+              "text": " ஆதிச்சி தம்பரம்",
+              "avg_logprob": -0.37536953865213596,
+              "no_speech_prob": 1.752628463691508e-06,
+              "compression_ratio": 2.341317365269461
+            },
+            {
+              "start": 17.42,
+              "end": 21.16,
+              "text": " போல்யு நமும் ஒரு தலம்",
+              "avg_logprob": -0.37536953865213596,
+              "no_speech_prob": 1.752628463691508e-06,
+              "compression_ratio": 2.341317365269461
+            },
+            {
+              "start": 21.16,
+              "end": 23.8,
+              "text": " இறுக்கும் என்றுருக்காலை",
+              "avg_logprob": -0.37536953865213596,
+              "no_speech_prob": 1.752628463691508e-06,
+              "compression_ratio": 2.341317365269461
+            },
+            {
+              "start": 23.8,
+              "end": 27.0,
+              "text": " மாலைக்கின்",
+              "avg_logprob": -0.37536953865213596,
+              "no_speech_prob": 1.752628463691508e-06,
+              "compression_ratio": 2.341317365269461
+            },
+            {
+              "start": 27.0,
+              "end": 30.0,
+              "text": " மாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலால",
+              "avg_logprob": -0.40656185574001735,
+              "no_speech_prob": 7.044621136431672e-11,
+              "compression_ratio": 27.875
+            }
+          ],
+          "language": "ta",
+          "status": "unverified_hypothesis"
+        },
+        "ta": {
+          "text": "மாலைக்கின் சொல்லேன் சொன்ன தலங்கை குவோகி கலைத்து சோடிந்தர் என்றாலிந்த ஆதிச்சி தம்பரம் போல்யு நமும் ஒரு தலம் இறுக்கும் என்றுருக்காலை மாலைக்கின் மாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலால",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 3.0,
+              "text": " மாலைக்கின்",
+              "avg_logprob": -0.37536953865213596,
+              "no_speech_prob": 1.752628463691508e-06,
+              "compression_ratio": 2.341317365269461
+            },
+            {
+              "start": 3.0,
+              "end": 8.9,
+              "text": " சொல்லேன் சொன்ன தலங்கை",
+              "avg_logprob": -0.37536953865213596,
+              "no_speech_prob": 1.752628463691508e-06,
+              "compression_ratio": 2.341317365269461
+            },
+            {
+              "start": 8.9,
+              "end": 11.84,
+              "text": " குவோகி கலைத்து",
+              "avg_logprob": -0.37536953865213596,
+              "no_speech_prob": 1.752628463691508e-06,
+              "compression_ratio": 2.341317365269461
+            },
+            {
+              "start": 11.84,
+              "end": 14.74,
+              "text": " சோடிந்தர் என்றாலிந்த",
+              "avg_logprob": -0.37536953865213596,
+              "no_speech_prob": 1.752628463691508e-06,
+              "compression_ratio": 2.341317365269461
+            },
+            {
+              "start": 14.74,
+              "end": 17.42,
+              "text": " ஆதிச்சி தம்பரம்",
+              "avg_logprob": -0.37536953865213596,
+              "no_speech_prob": 1.752628463691508e-06,
+              "compression_ratio": 2.341317365269461
+            },
+            {
+              "start": 17.42,
+              "end": 21.16,
+              "text": " போல்யு நமும் ஒரு தலம்",
+              "avg_logprob": -0.37536953865213596,
+              "no_speech_prob": 1.752628463691508e-06,
+              "compression_ratio": 2.341317365269461
+            },
+            {
+              "start": 21.16,
+              "end": 23.8,
+              "text": " இறுக்கும் என்றுருக்காலை",
+              "avg_logprob": -0.37536953865213596,
+              "no_speech_prob": 1.752628463691508e-06,
+              "compression_ratio": 2.341317365269461
+            },
+            {
+              "start": 23.8,
+              "end": 27.0,
+              "text": " மாலைக்கின்",
+              "avg_logprob": -0.37536953865213596,
+              "no_speech_prob": 1.752628463691508e-06,
+              "compression_ratio": 2.341317365269461
+            },
+            {
+              "start": 27.0,
+              "end": 30.0,
+              "text": " மாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலாலால",
+              "avg_logprob": -0.40656185574001735,
+              "no_speech_prob": 7.044621136431672e-11,
+              "compression_ratio": 27.875
+            }
+          ],
+          "language": "ta",
+          "status": "unverified_hypothesis"
+        },
+        "te": {
+          "text": "క్కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలే�",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 30.0,
+              "text": " క్కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలేం కాలే�",
+              "avg_logprob": -0.1802278815375434,
+              "no_speech_prob": 1.752628463691508e-06,
+              "compression_ratio": 8.552631578947368
+            }
+          ],
+          "language": "te",
+          "status": "unverified_hypothesis"
+        },
+        "hi": {
+          "text": "आए, मालैकिन, सोल्ल, न सोन्न, तलंगय, गुवोगी, कलेइद्ट, सोटिंद्धर, एंदालींद, आदिच्छि, धंबरं, पोल्य, नमु, औरु तलं, इरकुम्, एन्रुरु काल, झाल झाल झाल झाल झाल",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 23.5,
+              "text": " आए, मालैकिन, सोल्ल, न सोन्न, तलंगय, गुवोगी, कलेइद्ट, सोटिंद्धर, एंदालींद, आदिच्छि, धंबरं, पोल्य, नमु, औरु तलं, इरकुम्, एन्रुरु काल,",
+              "avg_logprob": -0.34903074565686676,
+              "no_speech_prob": 1.752628463691508e-06,
+              "compression_ratio": 1.911764705882353
+            },
+            {
+              "start": 23.5,
+              "end": 29.96,
+              "text": " झाल झाल झाल झाल झाल",
+              "avg_logprob": -0.6226455854332965,
+              "no_speech_prob": 2.584164306151937e-11,
+              "compression_ratio": 2.227272727272727
+            }
+          ],
+          "language": "hi",
+          "status": "unverified_hypothesis"
+        }
+      }
+    },
+    {
+      "plan_sha256": "a39d9c445383938cf13c7c73d750908a67a756036e9b4e9a27784fe81ce0f25a",
+      "query": {
+        "track": "94_Hiranmayeem",
+        "audio": "saraga1.5_carnatic/Mahati at Arkay by Mahati/Hiranmayeem/Hiranmayeem.mp3.mp3",
+        "audio_sha256": "5a01c246f9b7819b2db4b4338e2f6ebb2610082830503cbb991a657a6295954a",
+        "start_s": 732.1874716553287,
+        "duration_s": 30
+      },
+      "audio": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.6344722329495576,
+        "clipping_fraction": 0.0,
+        "rms": 0.0851117724213719
+      },
+      "waveform_sha256": "63794569ca0b5dd2efdca9c6808e427c7fde7c83e025161558540aae66cc4926",
+      "transcription_s": 42.144200833979994,
+      "hypotheses": {
+        "auto": {
+          "text": ". . .",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 29.98,
+              "text": " . . .",
+              "avg_logprob": -0.9501868089040121,
+              "no_speech_prob": 9.4559686469875e-11,
+              "compression_ratio": 0.38461538461538464
+            }
+          ],
+          "language": "en",
+          "status": "unverified_hypothesis"
+        },
+        "ta": {
+          "text": "நான் வார்க்கிறேன்",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 29.98,
+              "text": " நான் வார்க்கிறேன்",
+              "avg_logprob": -1.09150515104595,
+              "no_speech_prob": 9.4559686469875e-11,
+              "compression_ratio": 1.065217391304348
+            }
+          ],
+          "language": "ta",
+          "status": "unverified_hypothesis"
+        },
+        "te": {
+          "text": "కాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాా",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 30.0,
+              "text": " కాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాాా",
+              "avg_logprob": -0.19002809312608507,
+              "no_speech_prob": 9.4559686469875e-11,
+              "compression_ratio": 18.5
+            }
+          ],
+          "language": "te",
+          "status": "unverified_hypothesis"
+        },
+        "hi": {
+          "text": "कर दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो द",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 30.0,
+              "text": " कर दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो दो द",
+              "avg_logprob": -0.38056121826171874,
+              "no_speech_prob": 9.4559686469875e-11,
+              "compression_ratio": 20.03846153846154
+            }
+          ],
+          "language": "hi",
+          "status": "unverified_hypothesis"
+        }
+      }
+    }
+  ],
+  "complete": true,
+  "elapsed_s": 428.71466658404097,
+  "status": "unverified ASR pilot; no word-accuracy or identity claim"
+}

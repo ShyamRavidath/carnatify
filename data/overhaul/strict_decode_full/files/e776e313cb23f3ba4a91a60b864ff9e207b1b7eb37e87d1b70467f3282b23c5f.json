@@ -1,0 +1,11 @@
+{
+  "track": "archive__Puṇṇāgavarāḷi__Sripate Neepada",
+  "audio": "data/concert_audio/Puṇṇāgavarāḷi/Sripate Neepada.mp3",
+  "audio_sha256": "e776e313cb23f3ba4a91a60b864ff9e207b1b7eb37e87d1b70467f3282b23c5f",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.2033480838872492
+}

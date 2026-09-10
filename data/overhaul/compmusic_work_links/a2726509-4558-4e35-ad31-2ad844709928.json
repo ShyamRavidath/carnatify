@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/a2726509-4558-4e35-ad31-2ad844709928",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:00:42.061287+00:00",
+  "recording": {
+    "relations": [
+      {
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "attributes": [
+          "live"
+        ],
+        "end": null,
+        "ended": false,
+        "target-type": "work",
+        "target-credit": "",
+        "direction": "forward",
+        "begin": null,
+        "source-credit": "",
+        "attribute-values": {},
+        "work": {
+          "attributes": [],
+          "type": null,
+          "id": "66140377-a276-4938-b4f5-6040b89ff85a",
+          "type-id": null,
+          "disambiguation": "",
+          "title": "Sri Parvati",
+          "language": null,
+          "iswcs": [],
+          "languages": []
+        },
+        "type": "performance",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0"
+      }
+    ],
+    "first-release-date": "2007",
+    "length": 315000,
+    "id": "a2726509-4558-4e35-ad31-2ad844709928",
+    "video": false,
+    "disambiguation": "",
+    "title": "Sri Parvati"
+  }
+}

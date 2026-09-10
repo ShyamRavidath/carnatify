@@ -1,0 +1,35 @@
+{
+  "plan_sha256": "5a583f91b605504a2a0253c877138662a6a91dc0ee37b2bd6b3167a5c101611c",
+  "query": {
+    "track": "94_Hiranmayeem",
+    "audio": "saraga1.5_carnatic/Mahati at Arkay by Mahati/Hiranmayeem/Hiranmayeem.mp3.mp3",
+    "audio_sha256": "5a01c246f9b7819b2db4b4338e2f6ebb2610082830503cbb991a657a6295954a",
+    "start_s": 742.1874716553287,
+    "duration_s": 10
+  },
+  "audio": {
+    "source_sr": 44100,
+    "channels": 2,
+    "downmix": "mean",
+    "downmix_power_ratio": 0.6322555860683013,
+    "clipping_fraction": 0.0,
+    "rms": 0.11109752951537048
+  },
+  "waveform_sha256": "ab289695630a96d392f44fb085eb32d8df9a220bd46c3a1e6db2ad4e004b3479",
+  "hypothesis": {
+    "text": ".",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 10.0,
+        "text": " .",
+        "avg_logprob": -0.9216188788414001,
+        "no_speech_prob": 8.773737986134122e-11,
+        "compression_ratio": 0.1111111111111111
+      }
+    ],
+    "language": "en",
+    "status": "unverified_hypothesis"
+  },
+  "transcription_s": 14.386605250183493
+}

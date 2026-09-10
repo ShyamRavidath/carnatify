@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kamās__brOcEvArevarurA",
+  "audio": "data/concert_audio/Kamās/brOcEvArevarurA.mp3",
+  "audio_sha256": "79028e462e4b8bc016634e6080ca72adc89cb41e5f6cdd9877e48037f1f97de4",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.4179884167388082
+}

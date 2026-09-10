@@ -1,0 +1,11 @@
+{
+  "track": "archive__Vasanta__koDubEku",
+  "audio": "data/concert_audio/Vasanta/koDubEku.mp3",
+  "audio_sha256": "568ee3bed10979eb9b42711b3df409e47c8f24162ae1f258c0b357f28c7e7801",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.18366337521001697
+}

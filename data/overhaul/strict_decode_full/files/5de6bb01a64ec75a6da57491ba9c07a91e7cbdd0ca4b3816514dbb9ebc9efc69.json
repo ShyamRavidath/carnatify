@@ -1,0 +1,11 @@
+{
+  "track": "archive__Jōnpuri__mAlATi",
+  "audio": "data/concert_audio/Jōnpuri/mAlATi.mp3",
+  "audio_sha256": "5de6bb01a64ec75a6da57491ba9c07a91e7cbdd0ca4b3816514dbb9ebc9efc69",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3948817919008434
+}

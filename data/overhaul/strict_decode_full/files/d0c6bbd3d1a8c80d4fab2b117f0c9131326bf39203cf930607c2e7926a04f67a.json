@@ -1,0 +1,11 @@
+{
+  "track": "archive__Aṭāna__Sri Maha Ganapathim",
+  "audio": "data/concert_audio/Aṭāna/Sri Maha Ganapathim.mp3",
+  "audio_sha256": "d0c6bbd3d1a8c80d4fab2b117f0c9131326bf39203cf930607c2e7926a04f67a",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8235324998386204
+}

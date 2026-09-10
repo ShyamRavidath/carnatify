@@ -1,0 +1,40 @@
+{
+  "policy": "recording label Ragamalika has no single-raga window truth; excluded from this separate summary only",
+  "excluded_mixed_recording_tracks": [
+    "105_Karuvutranaal_Mudalaaga",
+    "178_Muruga_Muruga_Muruga",
+    "187_Aaniraimekkani",
+    "25_Sanchara_Dhadhara",
+    "52_Geeta_Nayakan",
+    "58_Nera_Nammiti",
+    "85_Chinnanchiru_Kiliye",
+    "90_Vandu_Ketpaar_Illayo"
+  ],
+  "summary": {
+    "candidate_annotated": {
+      "n": 176,
+      "n_correct": 94,
+      "n_known": 139,
+      "n_known_correct": 94,
+      "n_oov": 37,
+      "n_oov_false_accepts": 6,
+      "n_accepted": 75,
+      "n_accepted_correct": 62
+    },
+    "candidate_estimated": {
+      "n": 176,
+      "n_correct": 98,
+      "n_known": 139,
+      "n_known_correct": 98,
+      "n_oov": 37,
+      "n_oov_false_accepts": 7,
+      "n_accepted": 79,
+      "n_accepted_correct": 62
+    }
+  },
+  "limitation": "Other labels remain recording-level, not time-aligned ground truth. Changed denominator is not a model gain.",
+  "inputs": {
+    "data/overhaul/file_tag_guarded/evaluation.json": "b3e2a24da88809ee9ceafe5686974c7ca0cc1347cd9110fd2fc74680811a3c26",
+    "data/overhaul/repro_audio_identity/evaluation_corpus.json": "53622b4e2349873b61cf0af11be3a40ecb37d212145d2f1678064a0b8ce07b19"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Śuddadhanyāsi__Sri Parthasarathina",
+  "audio": "data/concert_audio/Śuddadhanyāsi/Sri Parthasarathina.mp3",
+  "audio_sha256": "7bb834546426ee26f3bc254a1728184faed5af3e341a4c3b609285a246cc4919",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5069313747808337
+}

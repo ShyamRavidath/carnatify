@@ -1,0 +1,11 @@
+{
+  "track": "archive__Janaranjani__bhajana sEyu mArgamunu joopavE",
+  "audio": "data/concert_audio/Janaranjani/bhajana sEyu mArgamunu joopavE.mp3",
+  "audio_sha256": "445f5b7cab1e6b3e7aebf5ccd4e5479378a3fc8db16eac839bc2eccace27e326",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4470793749205768
+}

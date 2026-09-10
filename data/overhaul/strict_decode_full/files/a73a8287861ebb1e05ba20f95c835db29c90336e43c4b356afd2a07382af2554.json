@@ -1,0 +1,11 @@
+{
+  "track": "archive__Jaganmōhini__sObillu saptaswara_r2",
+  "audio": "data/concert_audio/Jaganmōhini/sObillu saptaswara_r2.mp3",
+  "audio_sha256": "a73a8287861ebb1e05ba20f95c835db29c90336e43c4b356afd2a07382af2554",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.28880720818415284
+}

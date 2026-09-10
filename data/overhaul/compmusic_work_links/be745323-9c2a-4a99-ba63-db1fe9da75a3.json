@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/be745323-9c2a-4a99-ba63-db1fe9da75a3",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:08:01.874100+00:00",
+  "recording": {
+    "id": "be745323-9c2a-4a99-ba63-db1fe9da75a3",
+    "video": false,
+    "length": 212000,
+    "first-release-date": "1999",
+    "disambiguation": "",
+    "relations": [
+      {
+        "attribute-values": {},
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "end": null,
+        "work": {
+          "type-id": null,
+          "language": null,
+          "attributes": [],
+          "iswcs": [],
+          "type": null,
+          "languages": [],
+          "id": "9af4b020-bde2-4289-b801-cb0855b4efeb",
+          "title": "Karpagame",
+          "disambiguation": ""
+        },
+        "attributes": [
+          "live"
+        ],
+        "type": "performance",
+        "begin": null,
+        "target-type": "work",
+        "direction": "forward",
+        "target-credit": "",
+        "source-credit": "",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "ended": false
+      }
+    ],
+    "title": "Karpagame"
+  }
+}

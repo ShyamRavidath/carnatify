@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kuntalavarāḷi__bhArata puNya bhoomi",
+  "audio": "data/concert_audio/Kuntalavarāḷi/bhArata puNya bhoomi.mp3",
+  "audio_sha256": "ed86f5f1b5d13af7e33df366ce6f0d499e227f2b2c82ea319176ed460e1f8e23",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2919227499514818
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Haṁsānandi__Tullu Mada",
+  "audio": "data/concert_audio/Haṁsānandi/Tullu Mada.mp3",
+  "audio_sha256": "7c9bf3ae7caf5a29ace9945778e8345d0316af22999b1875cc428c725f761fe8",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8315477916039526
+}

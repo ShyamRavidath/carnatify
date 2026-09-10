@@ -1,0 +1,17 @@
+{
+  "plan_sha256": "13954c0f53b50e1e9e14d772655dfdd2b3f43089d7a0c5eba381dc405660a58d",
+  "audio": "data/overhaul/dhenuka_coverage_pilot/candidate.mp3",
+  "hashes": {
+    "md5": "31594d5f03a8b6143db97cee855b8205",
+    "sha1": "58e77238f759fbcecfb4fb38717ece5c9e89228b",
+    "sha256": "1225bbe673a950a861904d63c7a209a36ffb9700abcff9080ef67d54c4f0a0c2"
+  },
+  "bytes": 4632616,
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "ok"
+    }
+  ],
+  "status": "downloaded candidate only; not admitted or trained"
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kalyāṇi__nee sari samanamevaru",
+  "audio": "data/concert_audio/Kalyāṇi/nee sari samanamevaru.mp3",
+  "audio_sha256": "136df0569aa1e4e65af46f8da57440e0788ed1d565d655d09b95021fcb02b922",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.23152674967423081
+}

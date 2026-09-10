@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kuntalavarāḷi__HMV P 5866 G C -8-10152",
+  "audio": "data/concert_audio/Kuntalavarāḷi/HMV P 5866 G C -8-10152.mp3",
+  "audio_sha256": "4c46a3ea7d9b43d2b8c5f394d77481e98aca19fed7748c007983fc0376dcf3a6",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.45356958406046033
+}

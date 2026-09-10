@@ -1,0 +1,8 @@
+{
+  "model_sha256": "c01e3213b7640667259bee6c8cd77c3d9873685e0d97a254f63accc810746063",
+  "elapsed_s": 84.13766466733068,
+  "n_windows": 3017,
+  "n_tracks": 1009,
+  "n_classes": 51,
+  "status": "v4-style forest; matched archive-only data, no Saraga training"
+}

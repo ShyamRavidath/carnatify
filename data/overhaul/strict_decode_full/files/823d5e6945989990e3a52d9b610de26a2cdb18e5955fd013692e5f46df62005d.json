@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kalyāṇi__sundaramAna",
+  "audio": "data/concert_audio/Kalyāṇi/sundaramAna.mp3",
+  "audio_sha256": "823d5e6945989990e3a52d9b610de26a2cdb18e5955fd013692e5f46df62005d",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.28532245801761746
+}

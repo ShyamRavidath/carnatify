@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kamās__B Marulu Konnadhira",
+  "audio": "data/concert_audio/Kamās/B Marulu Konnadhira.mp3",
+  "audio_sha256": "7d7aef9d702f6759687f0a3ef599a94d9992992b42adeb7182c403332fa2ba87",
+  "plan_sha256": "e0babfbb17ff59861b0f951c98fa857adcc486715904a4fa250f57daf00a6c12",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.39435370825231075
+}

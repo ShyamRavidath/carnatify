@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/05a931ba-605b-468e-b7b5-64fe87a443ff",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:13:54.802940+00:00",
+  "recording": {
+    "length": 417000,
+    "disambiguation": "",
+    "video": false,
+    "relations": [
+      {
+        "type": "performance",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "work": {
+          "type": "Song",
+          "attributes": [],
+          "language": "san",
+          "title": "Parama Purusham Anuyamavayam Sakhi",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "id": "096f3279-9983-49a6-a900-9ba6bfefd9e0",
+          "iswcs": [],
+          "disambiguation": "Narayana Teertha Krithi",
+          "languages": [
+            "san"
+          ]
+        },
+        "target-credit": "",
+        "ended": false,
+        "end": null,
+        "source-credit": "",
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ],
+        "direction": "forward",
+        "begin": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "attribute-values": {}
+      }
+    ],
+    "id": "05a931ba-605b-468e-b7b5-64fe87a443ff",
+    "title": "Parama Purusham",
+    "first-release-date": "2009"
+  }
+}

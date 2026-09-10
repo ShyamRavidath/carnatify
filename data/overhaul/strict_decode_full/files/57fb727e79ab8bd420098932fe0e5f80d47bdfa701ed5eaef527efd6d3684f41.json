@@ -1,0 +1,11 @@
+{
+  "track": "archive__Hamsadhvāni__vAtApi gaNapatim",
+  "audio": "data/concert_audio/Hamsadhvāni/vAtApi gaNapatim.mp3",
+  "audio_sha256": "57fb727e79ab8bd420098932fe0e5f80d47bdfa701ed5eaef527efd6d3684f41",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.9977234578691423
+}

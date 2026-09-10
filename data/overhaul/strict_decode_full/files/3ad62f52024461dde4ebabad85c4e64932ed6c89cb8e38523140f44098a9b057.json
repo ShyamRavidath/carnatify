@@ -1,0 +1,11 @@
+{
+  "track": "archive__Behāg__idutAnO tillai",
+  "audio": "data/concert_audio/Behāg/idutAnO tillai.mp3",
+  "audio_sha256": "3ad62f52024461dde4ebabad85c4e64932ed6c89cb8e38523140f44098a9b057",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4049773751758039
+}

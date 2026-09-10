@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bēgaḍa__Bhuvaneswari Padam",
+  "audio": "data/concert_audio/Bēgaḍa/Bhuvaneswari Padam.mp3",
+  "audio_sha256": "14415c1b7f668e6b8b1ba3be6d4df2a90568ec5ee5953ea550498155e3777531",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6746550002135336
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Jōnpuri__nOduvadE",
+  "audio": "data/concert_audio/Jōnpuri/nOduvadE.mp3",
+  "audio_sha256": "5099f751531807677cb4dd8253993d9b2f86587d42fae271252b1189c6610c68",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3918312923051417
+}

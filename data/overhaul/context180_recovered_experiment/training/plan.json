@@ -1,0 +1,91 @@
+{
+  "inputs": {
+    "/Users/shyamravidath/carnatify/data/overhaul/context180_strict_decode/plan.json": "cc4aad541aa15a2488ba0748f8daebb4db9a23b1b4420eeca950a17e4cbae042",
+    "/Users/shyamravidath/carnatify/data/overhaul/context180_strict_decode/extraction.json": "47ab73d5063bd6882621cc80950b8364aa8bc062d7e9c0d674a03cba91d66e25",
+    "/Users/shyamravidath/carnatify/data/overhaul/context180_strict_decode/manifest.json": "912e5541e2f0daeb4ee73d96be7620c58e086741c816aa64701a3f56f348b5bc",
+    "/Users/shyamravidath/carnatify/data/overhaul/context180_strict_decode/features.npz": "f48a31d33611497c6c79beb826c5232f9b24c01c23eddd8d9b16f463abdd11e5",
+    "/Users/shyamravidath/carnatify/data/overhaul/file_artist_strict_decode/folds.json": "7608e42687f5d9371ca29f2a4b729997298f05e7fd244941ce4f9b38e3cb6814",
+    "/Users/shyamravidath/carnatify/scripts/merge_context_decode_recovery.py": "e1f09591d802ea233a519480c2bf1df51f397a61db3587664c366e24f3bca46a",
+    "/Users/shyamravidath/carnatify/data/overhaul/context180_recovered_experiment/recoveries/5717d29690c57182690e17e6230b1a211c34c0d0f8f90568a4fb315610b167ba/plan.json": "fcdd16a1636f725e293786301c6eafcc02478f27f0aeeabcc32e283f85b63af2",
+    "/Users/shyamravidath/carnatify/data/overhaul/context180_recovered_experiment/recoveries/5717d29690c57182690e17e6230b1a211c34c0d0f8f90568a4fb315610b167ba/result.json": "03554d0b5c10bbb6298d79f15664b730f63cb6c36b9cf3daa24a55d3b72ea128",
+    "/Users/shyamravidath/carnatify/data/overhaul/context180_recovered_experiment/recoveries/5717d29690c57182690e17e6230b1a211c34c0d0f8f90568a4fb315610b167ba/window_0.npz": "8c1ad0a194eb8b925f77890e83ae736f5c9aa06f504444a9afd7c53568c92e94",
+    "/Users/shyamravidath/carnatify/data/overhaul/context180_decode_recovery_kamas/plan.json": "eebac628020141bd49e494be8dae7083ff899e1fd36a9f2337c90cd2d5cd19fa",
+    "/Users/shyamravidath/carnatify/data/overhaul/context180_decode_recovery_kamas/result.json": "35af426dd536e5fab9bb608f97856f17638af09d6978e88ac13c6fb5ad97ee21",
+    "/Users/shyamravidath/carnatify/data/overhaul/context180_decode_recovery_kamas/window_0.npz": "fb67183414f84fd9d7cfa20e512659a701d0cd056d0dc24c994f45f2639c2bec",
+    "/Users/shyamravidath/carnatify/data/overhaul/context180_recovered_experiment/recoveries/744fd085f85ed8977433b469ee6b0b95f422a2afdc42299fe473353b5883433e/plan.json": "cd644c0e6c9d2073d7e72266b4f349de1aa5792da0566e8200e91838581e1612",
+    "/Users/shyamravidath/carnatify/data/overhaul/context180_recovered_experiment/recoveries/744fd085f85ed8977433b469ee6b0b95f422a2afdc42299fe473353b5883433e/result.json": "ece07827d95aeaaef9dfb16500bfc8b964a1da83a20a77193a54451774046c7a",
+    "/Users/shyamravidath/carnatify/data/overhaul/context180_recovered_experiment/recoveries/744fd085f85ed8977433b469ee6b0b95f422a2afdc42299fe473353b5883433e/window_0.npz": "156abc18e4277eed22d33ddaf41799bbaef08670e6aaadcad15fb4c97d32a4c1"
+  },
+  "added": [
+    {
+      "track": "archive__Jōnpuri__tillAnA",
+      "start_s": 0.0,
+      "duration_s": 128.4992290249433,
+      "actual_duration_s": 128.49632653061224,
+      "tonic_hz": 173.94363403320312,
+      "voiced_s": 92.34866213151928,
+      "decoder": {
+        "decoder": "ffmpeg_strict_output_seek",
+        "stderr_bytes": 0,
+        "stderr_excerpt": "",
+        "start_s": 0.0,
+        "requested_duration_s": 128.4992290249433
+      },
+      "audio": {
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.7514174629742699,
+        "clipping_fraction": 0.0,
+        "rms": 0.08971438160718599
+      },
+      "recovery_plan_sha256": "fcdd16a1636f725e293786301c6eafcc02478f27f0aeeabcc32e283f85b63af2"
+    },
+    {
+      "track": "archive__Kamās__mODi jEsEvElrA",
+      "start_s": 0.0,
+      "duration_s": 158.3049433106576,
+      "actual_duration_s": 158.30204081632652,
+      "tonic_hz": 145.38243103027344,
+      "voiced_s": 98.98086167800454,
+      "decoder": {
+        "decoder": "ffmpeg_strict_output_seek",
+        "stderr_bytes": 0,
+        "stderr_excerpt": "",
+        "start_s": 0.0,
+        "requested_duration_s": 158.3049433106576
+      },
+      "audio": {
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.8864867130026074,
+        "clipping_fraction": 0.0,
+        "rms": 0.08103855607474487
+      },
+      "recovery_plan_sha256": "eebac628020141bd49e494be8dae7083ff899e1fd36a9f2337c90cd2d5cd19fa"
+    },
+    {
+      "track": "archive__Pūrṇacandrika__tillAnA",
+      "start_s": 0.0,
+      "duration_s": 107.02657596371883,
+      "actual_duration_s": 107.02367346938776,
+      "tonic_hz": 146.22604370117188,
+      "voiced_s": 66.01433106575963,
+      "decoder": {
+        "decoder": "ffmpeg_strict_output_seek",
+        "stderr_bytes": 0,
+        "stderr_excerpt": "",
+        "start_s": 0.0,
+        "requested_duration_s": 107.02657596371883
+      },
+      "audio": {
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.9083897961187367,
+        "clipping_fraction": 0.0,
+        "rms": 0.1130102405115919
+      },
+      "recovery_plan_sha256": "cd644c0e6c9d2073d7e72266b4f349de1aa5792da0566e8200e91838581e1612"
+    }
+  ],
+  "policy": "append only verified decoder-rejected windows; preserve labels/groups and fixed development folds"
+}

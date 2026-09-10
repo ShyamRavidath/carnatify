@@ -1,0 +1,11 @@
+{
+  "track": "25_Sanchara_Dhadhara",
+  "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Sanchara Dhadhara/Vignesh Ishwar - Sanchara Dhadhara.mp3",
+  "audio_sha256": "c983cc44394da95cfb50abe2e89fc0c208b2a1fcd9acedbbe1ad43aca7599369",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7268233327195048
+}

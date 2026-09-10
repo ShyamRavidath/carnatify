@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/83ac0d01-9145-41a7-96fc-3ddb31d5a391",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:51:39.032917+00:00",
+  "recording": {
+    "first-release-date": "2001",
+    "disambiguation": "",
+    "title": "Chelimi Kori",
+    "relations": [
+      {
+        "attributes": [
+          "live"
+        ],
+        "work": {
+          "disambiguation": "",
+          "title": "Chelimi Kori",
+          "languages": [],
+          "type": null,
+          "id": "5b3eedaa-684c-46a0-8eb8-b45f49cb4dc6",
+          "type-id": null,
+          "iswcs": [],
+          "attributes": [],
+          "language": null
+        },
+        "end": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-values": {},
+        "direction": "forward",
+        "target-type": "work",
+        "begin": null,
+        "type": "performance",
+        "source-credit": "",
+        "target-credit": "",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "ended": false
+      }
+    ],
+    "id": "83ac0d01-9145-41a7-96fc-3ddb31d5a391",
+    "length": 238000,
+    "video": false
+  }
+}

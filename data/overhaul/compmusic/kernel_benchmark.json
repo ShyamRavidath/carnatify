@@ -1,0 +1,3104 @@
+{
+  "feature_sha256": "740f4df2941cb5c6a58bd4770e4e0a3218fc03253712fe8422c3b30fc1d62cdb",
+  "reference_sha256": "f160b1214d956db149fdc914ad1ced1395bb781c8c3ee3a15961dbc43d5e5ff7",
+  "protocol": {
+    "legacy_hellinger_svc": {
+      "source": "legacy",
+      "mode": "tdms",
+      "C": 10,
+      "gamma": 2
+    },
+    "elapsed_hellinger_svc": {
+      "source": "X",
+      "mode": "tdms",
+      "C": 10,
+      "gamma": 2
+    },
+    "fused_hellinger_svc": {
+      "source": "X",
+      "mode": "fused",
+      "C": 10,
+      "gamma": 2
+    },
+    "elapsed_kernel_ridge": {
+      "source": "X",
+      "mode": "tdms",
+      "alpha": 0.1,
+      "gamma": 2
+    },
+    "legacy_kernel_ridge": {
+      "source": "legacy",
+      "mode": "tdms",
+      "alpha": 0.1,
+      "gamma": 2
+    }
+  },
+  "status": "development CV; not final held-out accuracy",
+  "arms": {
+    "legacy_kernel_ridge": {
+      "top1": 0.8638743455497382,
+      "top3": 0.9554973821989529,
+      "macro_recall": 0.8625505050505049,
+      "macro_f1": 0.8574552404024237,
+      "fit_seconds": 0.6703872079961002,
+      "per_track": [
+        {
+          "track": "compmusic__Abhishek_Raghuram.Brochevaarevare",
+          "group": "artist:abhishekraghuram",
+          "truth": "Śrīranjani",
+          "prediction": "Śrīranjani",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Abhishek_Raghuram.Brochevarevarura",
+          "group": "artist:abhishekraghuram",
+          "truth": "Kamās",
+          "prediction": "Kamās",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Abhishek_Raghuram.Deva_Shri",
+          "group": "artist:abhishekraghuram",
+          "truth": "Madhyamāvati",
+          "prediction": "Madhyamāvati",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Abhishek_Raghuram.Isha_Paahimam",
+          "group": "artist:abhishekraghuram",
+          "truth": "Kalyāṇi",
+          "prediction": "Kalyāṇi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Abhishek_Raghuram.Karpagambike",
+          "group": "artist:abhishekraghuram",
+          "truth": "Bilahari",
+          "prediction": "Bilahari",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Abhishek_Raghuram.Karpuram_Naarumo",
+          "group": "artist:abhishekraghuram",
+          "truth": "Kamās",
+          "prediction": "Kamās",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Abhishek_Raghuram.Mahita_Pravrddha",
+          "group": "artist:abhishekraghuram",
+          "truth": "Kāṁbhōji",
+          "prediction": "Kamās",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Abhishek_Raghuram.Mamavasada_Varade",
+          "group": "artist:abhishekraghuram",
+          "truth": "Nāṭakurinji",
+          "prediction": "Nāṭakurinji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Abhishek_Raghuram.Muruganin_marupeyar",
+          "group": "artist:abhishekraghuram",
+          "truth": "Behāg",
+          "prediction": "Behāg",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Abhishek_Raghuram.Nidhi_Chala_Sukhama",
+          "group": "artist:abhishekraghuram",
+          "truth": "Kalyāṇi",
+          "prediction": "Kalyāṇi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Abhishek_Raghuram.Saaramaina_Matalu",
+          "group": "artist:abhishekraghuram",
+          "truth": "Behāg",
+          "prediction": "Behāg",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Abhishek_Raghuram.Sadaanandamu",
+          "group": "artist:abhishekraghuram",
+          "truth": "Ṣanmukhapriya",
+          "prediction": "Ṣanmukhapriya",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Abhishek_Raghuram.Sri_Rama_Jaya_Rama",
+          "group": "artist:abhishekraghuram",
+          "truth": "Yadukula kāṁbōji",
+          "prediction": "Sāma",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amritha_Murali.Brindavana_Dolagaaduva",
+          "group": "artist:amrithamurali",
+          "truth": "Kāpi",
+          "prediction": "Kāpi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amritha_Murali.Ekkalathilum",
+          "group": "artist:amrithamurali",
+          "truth": "Nāṭakurinji",
+          "prediction": "Nāṭakurinji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amritha_Murali.Enati_Nomu_Phalamu",
+          "group": "artist:amrithamurali",
+          "truth": "Bhairavi",
+          "prediction": "Bhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amritha_Murali.Kamakshi",
+          "group": "artist:amrithamurali",
+          "truth": "Varāḷi",
+          "prediction": "Varāḷi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amritha_Murali.Karuna_Judavamma",
+          "group": "artist:amrithamurali",
+          "truth": "Tōḍi",
+          "prediction": "Tōḍi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amritha_Murali.Karunaelagante",
+          "group": "artist:amrithamurali",
+          "truth": "Varāḷi",
+          "prediction": "Varāḷi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amritha_Murali.Karunajudu_Ninna_Nammina",
+          "group": "artist:amrithamurali",
+          "truth": "Śrī",
+          "prediction": "Ānandabhairavi",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amritha_Murali.Koniyadina_Napai",
+          "group": "artist:amrithamurali",
+          "truth": "Kāṁbhōji",
+          "prediction": "Kāṁbhōji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amritha_Murali.Minakshi",
+          "group": "artist:amrithamurali",
+          "truth": "Pūrvīkaḷyāṇi",
+          "prediction": "Pūrvīkaḷyāṇi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amritha_Murali.O_Jagadamba",
+          "group": "artist:amrithamurali",
+          "truth": "Ānandabhairavi",
+          "prediction": "Ānandabhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amritha_Murali.Pakkala_Nilabadi",
+          "group": "artist:amrithamurali",
+          "truth": "Karaharapriya",
+          "prediction": "Karaharapriya",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amritha_Murali.Pavanatmajagaccha",
+          "group": "artist:amrithamurali",
+          "truth": "Nāṭa",
+          "prediction": "Nāṭa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amritha_Murali.Raghupate_Rama",
+          "group": "artist:amrithamurali",
+          "truth": "Sahānā",
+          "prediction": "Sahānā",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amritha_Murali.Raghuvara_nannu",
+          "group": "artist:amrithamurali",
+          "truth": "Kāmavardani",
+          "prediction": "Kāmavardani",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amritha_Murali.Saketaniketana",
+          "group": "artist:amrithamurali",
+          "truth": "Kānaḍa",
+          "prediction": "Kānaḍa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amritha_Murali.Tirupati_Venkataramana",
+          "group": "artist:amrithamurali",
+          "truth": "Sindhubhairavi",
+          "prediction": "Sindhubhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amritha_Murali.Tyagarajamahadhwajaroha",
+          "group": "artist:amrithamurali",
+          "truth": "Śrī",
+          "prediction": "Hussēnī",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amritha_Murali.Upacharamu",
+          "group": "artist:amrithamurali",
+          "truth": "Bhairavi",
+          "prediction": "Bhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amritha_Murali.Vallabha_Nayakasya",
+          "group": "artist:amrithamurali",
+          "truth": "Bēgaḍa",
+          "prediction": "Bēgaḍa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amritha_Murali.Vazhimaraithirukkuthe",
+          "group": "artist:amrithamurali",
+          "truth": "Nāṭakurinji",
+          "prediction": "Harikāmbhōji",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amritha_Murali.Vidulaku",
+          "group": "artist:amrithamurali",
+          "truth": "Māyāmāḷavagauḷa",
+          "prediction": "Māyāmāḷavagauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amrutha_Venkatesh.Akshayalinga_Vibho",
+          "group": "artist:amruthavenkatesh",
+          "truth": "Śankarābharaṇaṁ",
+          "prediction": "Bēgaḍa",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amrutha_Venkatesh.Chediyaya_Valvinaiga",
+          "group": "artist:amruthavenkatesh",
+          "truth": "Sindhubhairavi",
+          "prediction": "Sindhubhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amrutha_Venkatesh.Entha_Ninne",
+          "group": "artist:amruthavenkatesh",
+          "truth": "Mukhāri",
+          "prediction": "Mukhāri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amrutha_Venkatesh.Gajavadana_Karuna",
+          "group": "artist:amruthavenkatesh",
+          "truth": "Śrīranjani",
+          "prediction": "Śrīranjani",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amrutha_Venkatesh.Janani_Ninnu_Vina",
+          "group": "artist:amruthavenkatesh",
+          "truth": "Rītigauḷa",
+          "prediction": "Rītigauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amrutha_Venkatesh.Kaamajanaka",
+          "group": "artist:amruthavenkatesh",
+          "truth": "Gauḷa",
+          "prediction": "Gauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amrutha_Venkatesh.Kanamum_Maravade",
+          "group": "artist:amruthavenkatesh",
+          "truth": "Sāma",
+          "prediction": "Sāma",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amrutha_Venkatesh.Karunimpa_Idi_Manchi",
+          "group": "artist:amruthavenkatesh",
+          "truth": "Sahānā",
+          "prediction": "Sahānā",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amrutha_Venkatesh.Kunjida_Padattai",
+          "group": "artist:amruthavenkatesh",
+          "truth": "Kāmavardani",
+          "prediction": "Kāmavardani",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amrutha_Venkatesh.Mahaganapathim",
+          "group": "artist:amruthavenkatesh",
+          "truth": "Nāṭa",
+          "prediction": "Nāṭa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amrutha_Venkatesh.Mamavasada_Janani",
+          "group": "artist:amruthavenkatesh",
+          "truth": "Kānaḍa",
+          "prediction": "Kānaḍa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amrutha_Venkatesh.Namoraalakimpavemi",
+          "group": "artist:amruthavenkatesh",
+          "truth": "Dēvagāndhāri",
+          "prediction": "Dēvagāndhāri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amrutha_Venkatesh.Narayana_Te_Namo___",
+          "group": "artist:amruthavenkatesh",
+          "truth": "Behāg",
+          "prediction": "Behāg",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amrutha_Venkatesh.Ninne_Bhajana",
+          "group": "artist:amruthavenkatesh",
+          "truth": "Nāṭa",
+          "prediction": "Nāṭa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amrutha_Venkatesh.Sri_Matru_Bhootam",
+          "group": "artist:amruthavenkatesh",
+          "truth": "Kānaḍa",
+          "prediction": "Kānaḍa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amrutha_Venkatesh.Toli_Janmamuna",
+          "group": "artist:amruthavenkatesh",
+          "truth": "Bilahari",
+          "prediction": "Bilahari",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amrutha_Venkatesh.Vanajakshiro",
+          "group": "artist:amruthavenkatesh",
+          "truth": "Kalyāṇi",
+          "prediction": "Kalyāṇi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amrutha_Venkatesh.Vandaan_Vandaan_Bharatha",
+          "group": "artist:amruthavenkatesh",
+          "truth": "Mōhanaṁ",
+          "prediction": "Mōhanaṁ",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Amrutha_Venkatesh.Vidulaku_Mrokkeda",
+          "group": "artist:amruthavenkatesh",
+          "truth": "Māyāmāḷavagauḷa",
+          "prediction": "Māyāmāḷavagauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Aruna_Sairam.Chakkani_Raja",
+          "group": "artist:arunasairam",
+          "truth": "Karaharapriya",
+          "prediction": "Kānaḍa",
+          "correct": false,
+          "top3": false
+        },
+        {
+          "track": "compmusic__Aruna_Sairam.Dinamani_Vamsha",
+          "group": "artist:arunasairam",
+          "truth": "Harikāmbhōji",
+          "prediction": "Harikāmbhōji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Aruna_Sairam.Duru_Suga_Kripa",
+          "group": "artist:arunasairam",
+          "truth": "Sāvēri",
+          "prediction": "Sāvēri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Aruna_Sairam.Ekkalathilum",
+          "group": "artist:arunasairam",
+          "truth": "Pūrvīkaḷyāṇi",
+          "prediction": "Pūrvīkaḷyāṇi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Aruna_Sairam.Ela_Ni_Dayaradu",
+          "group": "artist:arunasairam",
+          "truth": "Aṭāna",
+          "prediction": "Aṭāna",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Aruna_Sairam.Eti_Janmam",
+          "group": "artist:arunasairam",
+          "truth": "Varāḷi",
+          "prediction": "Varāḷi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Aruna_Sairam.Kamalamba",
+          "group": "artist:arunasairam",
+          "truth": "Ānandabhairavi",
+          "prediction": "Ānandabhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Aruna_Sairam.Kanakasabhapati",
+          "group": "artist:arunasairam",
+          "truth": "Dhanyāsi",
+          "prediction": "Dhanyāsi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Aruna_Sairam.Karunimpa_Idi_Manchi",
+          "group": "artist:arunasairam",
+          "truth": "Sahānā",
+          "prediction": "Sahānā",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Aruna_Sairam.Nadupai",
+          "group": "artist:arunasairam",
+          "truth": "Madhyamāvati",
+          "prediction": "Madhyamāvati",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Aruna_Sairam.Nera_Nammiti",
+          "group": "artist:arunasairam",
+          "truth": "Kānaḍa",
+          "prediction": "Kānaḍa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Aruna_Sairam.O_Jagadamba",
+          "group": "artist:arunasairam",
+          "truth": "Ānandabhairavi",
+          "prediction": "Ānandabhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Aruna_Sairam.Pazhani_Shanmuga",
+          "group": "artist:arunasairam",
+          "truth": "Sencuruṭṭi",
+          "prediction": "Sencuruṭṭi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Aruna_Sairam.Raghuveera",
+          "group": "artist:arunasairam",
+          "truth": "Hussēnī",
+          "prediction": "Mukhāri",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Aruna_Sairam.Satileni_Guruguha",
+          "group": "artist:arunasairam",
+          "truth": "Pūrvīkaḷyāṇi",
+          "prediction": "Pūrvīkaḷyāṇi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Aruna_Sairam.Tatvamariya_Tarama",
+          "group": "artist:arunasairam",
+          "truth": "Rītigauḷa",
+          "prediction": "Rītigauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Aruna_Sairam.Valli_Kanavan",
+          "group": "artist:arunasairam",
+          "truth": "Sencuruṭṭi",
+          "prediction": "Sencuruṭṭi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Aruna_Sairam.Vidulaku_Mrokkeda",
+          "group": "artist:arunasairam",
+          "truth": "Māyāmāḷavagauḷa",
+          "prediction": "Māyāmāḷavagauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Bombay_Jayashri.Deva_Deva",
+          "group": "artist:bombayjayashri",
+          "truth": "Pūrvīkaḷyāṇi",
+          "prediction": "Pūrvīkaḷyāṇi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Bombay_Jayashri.Emi_Jesite_Nemi",
+          "group": "artist:bombayjayashri",
+          "truth": "Tōḍi",
+          "prediction": "Tōḍi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Bombay_Jayashri.Eppadi_Manam",
+          "group": "artist:bombayjayashri",
+          "truth": "Hussēnī",
+          "prediction": "Mukhāri",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Bombay_Jayashri.Muruga_Muruga",
+          "group": "artist:bombayjayashri",
+          "truth": "Sāvēri",
+          "prediction": "Sāvēri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Bombay_Jayashri.Shankari_Neeve",
+          "group": "artist:bombayjayashri",
+          "truth": "Bēgaḍa",
+          "prediction": "Bēgaḍa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Bombay_Jayashri.Sri_Raghuvara_Sugunalaya",
+          "group": "artist:bombayjayashri",
+          "truth": "Bhairavi",
+          "prediction": "Bhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__D__K__Jayaraman.Enadu_Ullame",
+          "group": "artist:dkjayaraman",
+          "truth": "Sencuruṭṭi",
+          "prediction": "Sencuruṭṭi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__D__K__Jayaraman.Mamayooram_Meedil_Eriva",
+          "group": "artist:dkjayaraman",
+          "truth": "Bilahari",
+          "prediction": "Bilahari",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__D__K__Jayaraman.Neesati_Deivamendu",
+          "group": "artist:dkjayaraman",
+          "truth": "Śrīranjani",
+          "prediction": "Rītigauḷa",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__D__K__Jayaraman.Srivaralakshmi",
+          "group": "artist:dkjayaraman",
+          "truth": "Śrī",
+          "prediction": "Śrī",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__D__K__Jayaraman.Thaye_Ezhai",
+          "group": "artist:dkjayaraman",
+          "truth": "Bhairavi",
+          "prediction": "Bhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Dr_Pantula_Rama.Ananda_Natamaduvar_Tillai",
+          "group": "artist:drpantularama",
+          "truth": "Pūrvīkaḷyāṇi",
+          "prediction": "Pūrvīkaḷyāṇi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Dr_Pantula_Rama.Budhamashrayami",
+          "group": "artist:drpantularama",
+          "truth": "Nāṭakurinji",
+          "prediction": "Nāṭakurinji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Dr_Pantula_Rama.Ekadantam",
+          "group": "artist:drpantularama",
+          "truth": "Bilahari",
+          "prediction": "Bilahari",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Dr_Pantula_Rama.Maamava_Karunaya",
+          "group": "artist:drpantularama",
+          "truth": "Ṣanmukhapriya",
+          "prediction": "Ṣanmukhapriya",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Dr_Pantula_Rama.Naa_Jeevadhara",
+          "group": "artist:drpantularama",
+          "truth": "Bilahari",
+          "prediction": "Bilahari",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__G__N__Balasubramaniam.Innamum_Oru_daram",
+          "group": "artist:gnbalasubramaniam",
+          "truth": "Kēdāragauḷa",
+          "prediction": "Kēdāragauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Girish.Anupamagunabhudhi",
+          "group": "artist:gayathrigirish",
+          "truth": "Aṭāna",
+          "prediction": "Aṭāna",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Girish.Chalame",
+          "group": "artist:gayathrigirish",
+          "truth": "Nāṭakurinji",
+          "prediction": "Nāṭakurinji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Girish.Sri_Madhava",
+          "group": "artist:gayathrigirish",
+          "truth": "Behāg",
+          "prediction": "Behāg",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Adum_Mayilai_-_Karpagame",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Madhyamāvati",
+          "prediction": "Madhyamāvati",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Dayanidhe",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Bēgaḍa",
+          "prediction": "Bēgaḍa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Deva_Deva_Kalayami",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Māyāmāḷavagauḷa",
+          "prediction": "Māyāmāḷavagauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Ekambranatham_Bhajeham",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Pūrvīkaḷyāṇi",
+          "prediction": "Pūrvīkaḷyāṇi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Govindarajaya",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Suraṭi",
+          "prediction": "Suraṭi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Jagadodharana",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Kāpi",
+          "prediction": "Kāpi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Kaappaduve_Unadu",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Ānandabhairavi",
+          "prediction": "Ānandabhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Kallarkkum",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Sencuruṭṭi",
+          "prediction": "Sencuruṭṭi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Kanden_Kaliten",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Kalyāṇi",
+          "prediction": "Kalyāṇi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Kundram_Endi_-_Balakrishnan_Pada_Malar",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Dhanyāsi",
+          "prediction": "Dhanyāsi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Manasu_Swamidhinamayi",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Śankarābharaṇaṁ",
+          "prediction": "Kalyāṇi",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Ni_Pada_Mule",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Bhairavi",
+          "prediction": "Kāmavardani",
+          "correct": false,
+          "top3": false
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Parakela_Nannu",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Kēdāragauḷa",
+          "prediction": "Kēdāragauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Raman_Ezhundarulinaar",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Ānandabhairavi",
+          "prediction": "Ānandabhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Samininne_Kori",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Śrī",
+          "prediction": "Śrī",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Sarasijanaabha",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Nāṭa",
+          "prediction": "Nāṭa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Sariyevaramma",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Bhairavi",
+          "prediction": "Bhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Satatam_Tavaka",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Karaharapriya",
+          "prediction": "Karaharapriya",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Seshachalanayakam",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Varāḷi",
+          "prediction": "Varāḷi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Sri_Balasubramanya",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Bilahari",
+          "prediction": "Bilahari",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Sri_Rama_Nama_Bhajanai",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Aṭāna",
+          "prediction": "Aṭāna",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Vani_Arul",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Dhanyāsi",
+          "prediction": "Dhanyāsi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Gayathri_Venkataraghavan.Varuvaro_Varam_Taruvaro",
+          "group": "artist:gayathrivenkataraghavan",
+          "truth": "Sāma",
+          "prediction": "Sāma",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Andarama_Soundarya",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Kēdāragauḷa",
+          "prediction": "Kēdāragauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Annapoorne",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Sāma",
+          "prediction": "Sāma",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Anupamagunambudi",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Aṭāna",
+          "prediction": "Madhyamāvati",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Bhujaga_Sayinam",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Yadukula kāṁbōji",
+          "prediction": "Yadukula kāṁbōji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Dinamanivamsa",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Harikāmbhōji",
+          "prediction": "Harikāmbhōji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Elani_Dayaradu",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Aṭāna",
+          "prediction": "Aṭāna",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Eppadimanam",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Hussēnī",
+          "prediction": "Hussēnī",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Ethuku_Ithanai",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Suraṭi",
+          "prediction": "Suraṭi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Evarura",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Mōhanaṁ",
+          "prediction": "Mōhanaṁ",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Hechariga",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Yadukula kāṁbōji",
+          "prediction": "Yadukula kāṁbōji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Ini_Oru_Kanam",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Śrīranjani",
+          "prediction": "Śrīranjani",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Ka_vaa_vaa",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Varāḷi",
+          "prediction": "Varāḷi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Kaliyugathil",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Sencuruṭṭi",
+          "prediction": "Sencuruṭṭi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Kallarkkum_Karravarkkum",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Sencuruṭṭi",
+          "prediction": "Sencuruṭṭi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Manam_Irangata",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Māyāmāḷavagauḷa",
+          "prediction": "Māyāmāḷavagauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Marakatha_Valli",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Kāṁbhōji",
+          "prediction": "Harikāmbhōji",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Neranammiti",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Kānaḍa",
+          "prediction": "Sāvēri",
+          "correct": false,
+          "top3": false
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Pahimam_Brihannayike",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Hussēnī",
+          "prediction": "Mukhāri",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Rasa_Vilasa",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Kāṁbhōji",
+          "prediction": "Śrīranjani",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Sadhbhakthiya",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Ānandabhairavi",
+          "prediction": "Ānandabhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Saketha",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Harikāmbhōji",
+          "prediction": "Bhairavi",
+          "correct": false,
+          "top3": false
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Satatam_Tavaka",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Karaharapriya",
+          "prediction": "Karaharapriya",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Seshachala_Nayakam",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Varāḷi",
+          "prediction": "Varāḷi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Sreenivasa_Thavacharanam",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Karaharapriya",
+          "prediction": "Karaharapriya",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__K__V__Narayanaswami.Thulasidala",
+          "group": "artist:kvnarayanaswami",
+          "truth": "Māyāmāḷavagauḷa",
+          "prediction": "Māyāmāḷavagauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Kunnakkudi_M_Balamuralikrishna.Aravinda_Pada_Malar",
+          "group": "artist:kunnakkudimbalamuralikrishna",
+          "truth": "Kāpi",
+          "prediction": "Kāpi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Kunnakkudi_M_Balamuralikrishna.Arivaar_Yaar_Unnai",
+          "group": "artist:kunnakkudimbalamuralikrishna",
+          "truth": "Mukhāri",
+          "prediction": "Mukhāri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Kunnakkudi_M_Balamuralikrishna.Deva_Deva_Jagadeesha",
+          "group": "artist:kunnakkudimbalamuralikrishna",
+          "truth": "Pūrvīkaḷyāṇi",
+          "prediction": "Pūrvīkaḷyāṇi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Kunnakkudi_M_Balamuralikrishna.Eti_Janmam",
+          "group": "artist:kunnakkudimbalamuralikrishna",
+          "truth": "Varāḷi",
+          "prediction": "Varāḷi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Kunnakkudi_M_Balamuralikrishna.Ilalo_Pranatartiharudanuchu",
+          "group": "artist:kunnakkudimbalamuralikrishna",
+          "truth": "Aṭāna",
+          "prediction": "Madhyamāvati",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Kunnakkudi_M_Balamuralikrishna.Kaddanu_Variki",
+          "group": "artist:kunnakkudimbalamuralikrishna",
+          "truth": "Tōḍi",
+          "prediction": "Tōḍi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Kunnakkudi_M_Balamuralikrishna.Maryada_Teliyakane",
+          "group": "artist:kunnakkudimbalamuralikrishna",
+          "truth": "Suraṭi",
+          "prediction": "Suraṭi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Kunnakkudi_M_Balamuralikrishna.Nadopasana",
+          "group": "artist:kunnakkudimbalamuralikrishna",
+          "truth": "Bēgaḍa",
+          "prediction": "Bēgaḍa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Kunnakkudi_M_Balamuralikrishna.Nannu_Palimpa",
+          "group": "artist:kunnakkudimbalamuralikrishna",
+          "truth": "Mōhanaṁ",
+          "prediction": "Kāṁbhōji",
+          "correct": false,
+          "top3": false
+        },
+        {
+          "track": "compmusic__Kunnakkudi_M_Balamuralikrishna.Oraru_Mugane",
+          "group": "artist:kunnakkudimbalamuralikrishna",
+          "truth": "Rītigauḷa",
+          "prediction": "Rītigauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Kunnakkudi_M_Balamuralikrishna.Shambho_Mahadeva",
+          "group": "artist:kunnakkudimbalamuralikrishna",
+          "truth": "Kāmavardani",
+          "prediction": "Kāmavardani",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Kunnakkudi_M_Balamuralikrishna.Siddhi_Vinayakam",
+          "group": "artist:kunnakkudimbalamuralikrishna",
+          "truth": "Ṣanmukhapriya",
+          "prediction": "Ṣanmukhapriya",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Kunnakkudi_M_Balamuralikrishna.Teruvadeppo",
+          "group": "artist:kunnakkudimbalamuralikrishna",
+          "truth": "Kamās",
+          "prediction": "Kamās",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Kunnakkudi_M_Balamuralikrishna.Tillana",
+          "group": "artist:kunnakkudimbalamuralikrishna",
+          "truth": "Sencuruṭṭi",
+          "prediction": "Sencuruṭṭi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Kunnakkudi_M_Balamuralikrishna.Vagaladi",
+          "group": "artist:kunnakkudimbalamuralikrishna",
+          "truth": "Behāg",
+          "prediction": "Behāg",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Kunnakkudi_M_Balamuralikrishna.Yarenru_Raghavanai",
+          "group": "artist:kunnakkudimbalamuralikrishna",
+          "truth": "Yadukula kāṁbōji",
+          "prediction": "Yadukula kāṁbōji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Lalgudi_GJR_Krishnan.Sharavanabhava_Guhane",
+          "group": "artist:lalgudigjrkrishnan",
+          "truth": "Madhyamāvati",
+          "prediction": "Madhyamāvati",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Lalgudi_Jayaraman.Annapoorne",
+          "group": "artist:lalgudijayaraman",
+          "truth": "Sāma",
+          "prediction": "Sāma",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Lalgudi_Jayaraman.Vaddhane",
+          "group": "artist:lalgudijayaraman",
+          "truth": "Ṣanmukhapriya",
+          "prediction": "Ṣanmukhapriya",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__M_R_Subramaniam.Kallarkkum",
+          "group": "artist:mrsubramaniam",
+          "truth": "Sencuruṭṭi",
+          "prediction": "Sencuruṭṭi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__M_R_Subramaniam.Vanga_Kadal",
+          "group": "artist:mrsubramaniam",
+          "truth": "Suraṭi",
+          "prediction": "Suraṭi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__M_S__Subbulakshmi.Amba_Kamakshi_Padayugame",
+          "group": "artist:mssubbulakshmi",
+          "truth": "Yadukula kāṁbōji",
+          "prediction": "Kēdāragauḷa",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__M_S__Subbulakshmi.Ambikaye_Arul_Purivaai",
+          "group": "artist:mssubbulakshmi",
+          "truth": "Ānandabhairavi",
+          "prediction": "Ānandabhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__M_S__Subbulakshmi.Dinamani_Vamsha",
+          "group": "artist:mssubbulakshmi",
+          "truth": "Harikāmbhōji",
+          "prediction": "Harikāmbhōji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__M_S__Subbulakshmi.Emi_Neramu",
+          "group": "artist:mssubbulakshmi",
+          "truth": "Śankarābharaṇaṁ",
+          "prediction": "Śankarābharaṇaṁ",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__M_S__Subbulakshmi.Endaromahanubhavulu",
+          "group": "artist:mssubbulakshmi",
+          "truth": "Śrī",
+          "prediction": "Śrī",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__M_S__Subbulakshmi.Gajavadana",
+          "group": "artist:mssubbulakshmi",
+          "truth": "Śrīranjani",
+          "prediction": "Sencuruṭṭi",
+          "correct": false,
+          "top3": false
+        },
+        {
+          "track": "compmusic__M_S__Subbulakshmi.Jagadoddharan",
+          "group": "artist:mssubbulakshmi",
+          "truth": "Kāpi",
+          "prediction": "Sindhubhairavi",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__M_S__Subbulakshmi.Ksheenamai",
+          "group": "artist:mssubbulakshmi",
+          "truth": "Mukhāri",
+          "prediction": "Mukhāri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__M_S__Subbulakshmi.Ksheera_Sagara_Shayana",
+          "group": "artist:mssubbulakshmi",
+          "truth": "Māyāmāḷavagauḷa",
+          "prediction": "Māyāmāḷavagauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__M_S__Subbulakshmi.Naada_Bindu_Kalaadi",
+          "group": "artist:mssubbulakshmi",
+          "truth": "Sencuruṭṭi",
+          "prediction": "Sencuruṭṭi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__M_S__Subbulakshmi.O_Ranga_Sai",
+          "group": "artist:mssubbulakshmi",
+          "truth": "Kāṁbhōji",
+          "prediction": "Kāṁbhōji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__M_S__Subbulakshmi.Ramanatham_Bhajeham",
+          "group": "artist:mssubbulakshmi",
+          "truth": "Kāmavardani",
+          "prediction": "Kāmavardani",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__M_S__Subbulakshmi.Sarasaaksha",
+          "group": "artist:mssubbulakshmi",
+          "truth": "Kāmavardani",
+          "prediction": "Kāmavardani",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__M_S__Subbulakshmi.Sri_Kamakoti_Peethasthite",
+          "group": "artist:mssubbulakshmi",
+          "truth": "Sāvēri",
+          "prediction": "Sāvēri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__M__D__Ramanathan.Aarenduraghavanai",
+          "group": "artist:mdramanathan",
+          "truth": "Yadukula kāṁbōji",
+          "prediction": "Pūrvīkaḷyāṇi",
+          "correct": false,
+          "top3": false
+        },
+        {
+          "track": "compmusic__M__L__Vasanthakumari.Kalakalan_Kayilai_Nathan",
+          "group": "artist:mlvasanthakumari",
+          "truth": "Aṭāna",
+          "prediction": "Aṭāna",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Madurai_Mani_Iyer.Diwakara_Tanujam",
+          "group": "artist:maduraimaniiyer",
+          "truth": "Yadukula kāṁbōji",
+          "prediction": "Yadukula kāṁbōji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Maharajapuram_S_Ramachandran.Elara_Nee_Dayaraadu",
+          "group": "artist:maharajapuramsramachandran",
+          "truth": "Aṭāna",
+          "prediction": "Aṭāna",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Maharajapuram_S_Ramachandran.Himachala_Tanaya",
+          "group": "artist:maharajapuramsramachandran",
+          "truth": "Ānandabhairavi",
+          "prediction": "Ānandabhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Maharajapuram_S_Ramachandran.Seshachala_Nayakam",
+          "group": "artist:maharajapuramsramachandran",
+          "truth": "Varāḷi",
+          "prediction": "Varāḷi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Maharajapuram_S_Ramachandran.Shivatraya_Mahaganapatim",
+          "group": "artist:maharajapuramsramachandran",
+          "truth": "Nāṭa",
+          "prediction": "Nāṭa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Maharajapuram_Santhanam.Manasa_Sancharare",
+          "group": "artist:maharajapuramsanthanam",
+          "truth": "Sāma",
+          "prediction": "Sāma",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Maharajapuram_Santhanam.Sri_Vatapi",
+          "group": "artist:maharajapuramsanthanam",
+          "truth": "Sahānā",
+          "prediction": "Sahānā",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Maharajapuram_Santhanam.Vilayada_Idu_Nerama",
+          "group": "artist:maharajapuramsanthanam",
+          "truth": "Ṣanmukhapriya",
+          "prediction": "Ṣanmukhapriya",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Malladi_Brothers.Vinaradana_Manavee",
+          "group": "artist:malladibrothers",
+          "truth": "Dēvagāndhāri",
+          "prediction": "Dēvagāndhāri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Musiri_Subramania_Iyer.Sri_Kumara",
+          "group": "artist:musirisubramaniaiyer",
+          "truth": "Aṭāna",
+          "prediction": "Aṭāna",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Musiri_Subramania_Iyer.Tiruvadicharanam",
+          "group": "artist:musirisubramaniaiyer",
+          "truth": "Kāṁbhōji",
+          "prediction": "Śankarābharaṇaṁ",
+          "correct": false,
+          "top3": false
+        },
+        {
+          "track": "compmusic__Mysore_Manjunath_-_Nagaraj.Annapoorne_Visalakshi",
+          "group": "artist:mysoremanjunathnagaraj",
+          "truth": "Sāma",
+          "prediction": "Sāma",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nedunuri_Krishnamurthy.Chakkani_Raja",
+          "group": "artist:nedunurikrishnamurthy",
+          "truth": "Karaharapriya",
+          "prediction": "Mōhanaṁ",
+          "correct": false,
+          "top3": false
+        },
+        {
+          "track": "compmusic__Nedunuri_Krishnamurthy.Emani_Vegintune",
+          "group": "artist:nedunurikrishnamurthy",
+          "truth": "Hussēnī",
+          "prediction": "Hussēnī",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nedunuri_Krishnamurthy.Koluvai_Yunnade",
+          "group": "artist:nedunurikrishnamurthy",
+          "truth": "Dēvagāndhāri",
+          "prediction": "Dēvagāndhāri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Neyveli_R_Santhanagopalan.Ramanatham_Bhajeham",
+          "group": "artist:neyvelirsanthanagopalan",
+          "truth": "Kāmavardani",
+          "prediction": "Kāmavardani",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nisha_P_Rajagopal.Deva_Deva_Kalayami",
+          "group": "artist:nishaprajagopal",
+          "truth": "Māyāmāḷavagauḷa",
+          "prediction": "Māyāmāḷavagauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nisha_P_Rajagopal.Dvaitamu",
+          "group": "artist:nishaprajagopal",
+          "truth": "Rītigauḷa",
+          "prediction": "Rītigauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nisha_P_Rajagopal.Enadu_Manam",
+          "group": "artist:nishaprajagopal",
+          "truth": "Harikāmbhōji",
+          "prediction": "Harikāmbhōji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nisha_P_Rajagopal.Karu_Baru",
+          "group": "artist:nishaprajagopal",
+          "truth": "Mukhāri",
+          "prediction": "Mukhāri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nisha_P_Rajagopal.Karunimpa_Idi_Manchi",
+          "group": "artist:nishaprajagopal",
+          "truth": "Sahānā",
+          "prediction": "Sahānā",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nisha_P_Rajagopal.Mahaganapatim",
+          "group": "artist:nishaprajagopal",
+          "truth": "Nāṭa",
+          "prediction": "Nāṭa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nisha_P_Rajagopal.Mamava_Minakshi",
+          "group": "artist:nishaprajagopal",
+          "truth": "Varāḷi",
+          "prediction": "Varāḷi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nisha_P_Rajagopal.Mamava_sada",
+          "group": "artist:nishaprajagopal",
+          "truth": "Nāṭakurinji",
+          "prediction": "Nāṭakurinji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nisha_P_Rajagopal.Nidhi_Chala_Sukhama",
+          "group": "artist:nishaprajagopal",
+          "truth": "Kalyāṇi",
+          "prediction": "Bilahari",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nisha_P_Rajagopal.Ninne_Nammi_Naanu",
+          "group": "artist:nishaprajagopal",
+          "truth": "Tōḍi",
+          "prediction": "Tōḍi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nisha_P_Rajagopal.Parama_Purusham",
+          "group": "artist:nishaprajagopal",
+          "truth": "Behāg",
+          "prediction": "Behāg",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nisha_P_Rajagopal.Paridaanamichite",
+          "group": "artist:nishaprajagopal",
+          "truth": "Bilahari",
+          "prediction": "Bilahari",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nisha_P_Rajagopal.Raksha_Bettare",
+          "group": "artist:nishaprajagopal",
+          "truth": "Bhairavi",
+          "prediction": "Bhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nisha_P_Rajagopal.Rama_Nannu_Brovaravu",
+          "group": "artist:nishaprajagopal",
+          "truth": "Harikāmbhōji",
+          "prediction": "Nāṭakurinji",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nisha_P_Rajagopal.Srikanta_Enagishtu",
+          "group": "artist:nishaprajagopal",
+          "truth": "Kānaḍa",
+          "prediction": "Sindhubhairavi",
+          "correct": false,
+          "top3": false
+        },
+        {
+          "track": "compmusic__Nisha_P_Rajagopal.Veganivu",
+          "group": "artist:nishaprajagopal",
+          "truth": "Suraṭi",
+          "prediction": "Suraṭi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nithyasree_Mahadevan.Ento_Premato",
+          "group": "artist:nithyasreemahadevan",
+          "truth": "Suraṭi",
+          "prediction": "Suraṭi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nithyasree_Mahadevan.Guruguhaya_Bhakanugrahaya",
+          "group": "artist:nithyasreemahadevan",
+          "truth": "Sāma",
+          "prediction": "Sāma",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nithyasree_Mahadevan.Karu_Baru",
+          "group": "artist:nithyasreemahadevan",
+          "truth": "Mukhāri",
+          "prediction": "Mukhāri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nithyasree_Mahadevan.Meenakshi_Memudam",
+          "group": "artist:nithyasreemahadevan",
+          "truth": "Pūrvīkaḷyāṇi",
+          "prediction": "Pūrvīkaḷyāṇi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nithyasree_Mahadevan.Parama_Pavana_Rama",
+          "group": "artist:nithyasreemahadevan",
+          "truth": "Pūrvīkaḷyāṇi",
+          "prediction": "Pūrvīkaḷyāṇi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nithyasree_Mahadevan.RaghuveeraRanadheera",
+          "group": "artist:nithyasreemahadevan",
+          "truth": "Hussēnī",
+          "prediction": "Mukhāri",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nithyasree_Mahadevan.Sami_Daya_Juda_-_Varnam",
+          "group": "artist:nithyasreemahadevan",
+          "truth": "Kēdāragauḷa",
+          "prediction": "Kēdāragauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nithyasree_Mahadevan.Shantamuleka",
+          "group": "artist:nithyasreemahadevan",
+          "truth": "Sāma",
+          "prediction": "Yadukula kāṁbōji",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nithyasree_Mahadevan.Sri_Krishnam_Bhaja",
+          "group": "artist:nithyasreemahadevan",
+          "truth": "Tōḍi",
+          "prediction": "Tōḍi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nithyasree_Mahadevan.Sri_Raghuvara",
+          "group": "artist:nithyasreemahadevan",
+          "truth": "Kāṁbhōji",
+          "prediction": "Mōhanaṁ",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nithyasree_Mahadevan.Sri_Vaidyanatham",
+          "group": "artist:nithyasreemahadevan",
+          "truth": "Aṭāna",
+          "prediction": "Aṭāna",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nithyasree_Mahadevan.Svami_Nan_Unran",
+          "group": "artist:nithyasreemahadevan",
+          "truth": "Nāṭakurinji",
+          "prediction": "Nāṭakurinji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nithyasree_Mahadevan.Tukiya_Tiruvadi",
+          "group": "artist:nithyasreemahadevan",
+          "truth": "Śankarābharaṇaṁ",
+          "prediction": "Śankarābharaṇaṁ",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nithyasree_Mahadevan.Tyagarajaya_Namaste",
+          "group": "artist:nithyasreemahadevan",
+          "truth": "Bēgaḍa",
+          "prediction": "Bēgaḍa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nithyasree_Mahadevan.Va_Muruga_Va",
+          "group": "artist:nithyasreemahadevan",
+          "truth": "Bēgaḍa",
+          "prediction": "Bēgaḍa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Nithyasree_Mahadevan.Velan_Varuvaradi",
+          "group": "artist:nithyasreemahadevan",
+          "truth": "Ṣanmukhapriya",
+          "prediction": "Ānandabhairavi",
+          "correct": false,
+          "top3": false
+        },
+        {
+          "track": "compmusic__Nithyasree_Mahadevan.Vidalaguma",
+          "group": "artist:nithyasreemahadevan",
+          "truth": "Dēvagāndhāri",
+          "prediction": "Dēvagāndhāri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__O__S__Thyagarajan.Jagadodharana",
+          "group": "artist:osthyagarajan",
+          "truth": "Kāpi",
+          "prediction": "Kāpi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__O__S__Thyagarajan.Nadupai",
+          "group": "artist:osthyagarajan",
+          "truth": "Madhyamāvati",
+          "prediction": "Madhyamāvati",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__O__S__Thyagarajan.Ninnu_Nera_Nammi",
+          "group": "artist:osthyagarajan",
+          "truth": "Kāmavardani",
+          "prediction": "Kāmavardani",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__O__S__Thyagarajan.Sami_Ninne_Koriyunnanu",
+          "group": "artist:osthyagarajan",
+          "truth": "Śrī",
+          "prediction": "Śrī",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__O__S__Thyagarajan.Vandanamu",
+          "group": "artist:osthyagarajan",
+          "truth": "Sahānā",
+          "prediction": "Ānandabhairavi",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__O__S__Thyagarajan.Varnnam_Intachalamu",
+          "group": "artist:osthyagarajan",
+          "truth": "Bēgaḍa",
+          "prediction": "Bēgaḍa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Parassala_Ponnammal.Mohanamayee",
+          "group": "artist:parassalaponnammal",
+          "truth": "Yadukula kāṁbōji",
+          "prediction": "Yadukula kāṁbōji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Prasanna_Venkataraman.Angarakam",
+          "group": "artist:prasannavenkataraman",
+          "truth": "Suraṭi",
+          "prediction": "Suraṭi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Prasanna_Venkataraman.Chalamela",
+          "group": "artist:prasannavenkataraman",
+          "truth": "Nāṭakurinji",
+          "prediction": "Nāṭakurinji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Prasanna_Venkataraman.Ini_Oru_Kanam",
+          "group": "artist:prasannavenkataraman",
+          "truth": "Śrīranjani",
+          "prediction": "Śrīranjani",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Prasanna_Venkataraman.Kadaikan_Parvai",
+          "group": "artist:prasannavenkataraman",
+          "truth": "Kamās",
+          "prediction": "Kamās",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Prasanna_Venkataraman.Karunimpa_Idi_Manchi",
+          "group": "artist:prasannavenkataraman",
+          "truth": "Sahānā",
+          "prediction": "Sahānā",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Prasanna_Venkataraman.Kshitija_Ramanam",
+          "group": "artist:prasannavenkataraman",
+          "truth": "Dēvagāndhāri",
+          "prediction": "Dēvagāndhāri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Prasanna_Venkataraman.Maruvakadaya",
+          "group": "artist:prasannavenkataraman",
+          "truth": "Mōhanaṁ",
+          "prediction": "Mōhanaṁ",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Prasanna_Venkataraman.Nannupalimpa",
+          "group": "artist:prasannavenkataraman",
+          "truth": "Mōhanaṁ",
+          "prediction": "Mōhanaṁ",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Prasanna_Venkataraman.Narayana_Divya_namam",
+          "group": "artist:prasannavenkataraman",
+          "truth": "Mōhanaṁ",
+          "prediction": "Mōhanaṁ",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Prasanna_Venkataraman.Nera_Nammiti",
+          "group": "artist:prasannavenkataraman",
+          "truth": "Kānaḍa",
+          "prediction": "Sahānā",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Prasanna_Venkataraman.Rama_Ninne",
+          "group": "artist:prasannavenkataraman",
+          "truth": "Mōhanaṁ",
+          "prediction": "Bilahari",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Prasanna_Venkataraman.Saragunapalimpa",
+          "group": "artist:prasannavenkataraman",
+          "truth": "Kēdāragauḷa",
+          "prediction": "Kēdāragauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Prasanna_Venkataraman.Sharanagati_Enru_nambi",
+          "group": "artist:prasannavenkataraman",
+          "truth": "Gauḷa",
+          "prediction": "Gauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Prasanna_Venkataraman.Sivakama_Sundari",
+          "group": "artist:prasannavenkataraman",
+          "truth": "Mukhāri",
+          "prediction": "Mukhāri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Prasanna_Venkataraman.Sivanar_Manam",
+          "group": "artist:prasannavenkataraman",
+          "truth": "Karaharapriya",
+          "prediction": "Karaharapriya",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Prasanna_Venkataraman.Vaderadeivamu",
+          "group": "artist:prasannavenkataraman",
+          "truth": "Kāmavardani",
+          "prediction": "Kāmavardani",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Prasanna_Venkataraman.Velaiya_Dayavillaiya",
+          "group": "artist:prasannavenkataraman",
+          "truth": "Sāvēri",
+          "prediction": "Sāvēri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Prasanna_Venkataraman.Viruttam_-_Vizhikkuthunai_followed_by_Saravanabhava",
+          "group": "artist:prasannavenkataraman",
+          "truth": "Ṣanmukhapriya",
+          "prediction": "Ṣanmukhapriya",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Prasanna_Venkataraman.Vizhikkuttunai",
+          "group": "artist:prasannavenkataraman",
+          "truth": "Kāpi",
+          "prediction": "Kāpi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__R_Vedavalli.Kanakavela_karunalavala",
+          "group": "artist:rvedavalli",
+          "truth": "Śrī",
+          "prediction": "Śrī",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__R_Vedavalli.Oru_murai_darishanam",
+          "group": "artist:rvedavalli",
+          "truth": "Karaharapriya",
+          "prediction": "Suraṭi",
+          "correct": false,
+          "top3": false
+        },
+        {
+          "track": "compmusic__Ramnad_Krishnan.Bhuvini_Dasudane",
+          "group": "artist:ramnadkrishnan",
+          "truth": "Śrīranjani",
+          "prediction": "Śrīranjani",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Ramnad_Krishnan.Enna_Punniyam",
+          "group": "artist:ramnadkrishnan",
+          "truth": "Hussēnī",
+          "prediction": "Hussēnī",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Ramnad_Krishnan.Maragathamani",
+          "group": "artist:ramnadkrishnan",
+          "truth": "Varāḷi",
+          "prediction": "Varāḷi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Ramnad_Krishnan.Naamakusumamula",
+          "group": "artist:ramnadkrishnan",
+          "truth": "Śrī",
+          "prediction": "Śrī",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Ramnad_Krishnan.Rama_Ika_Nannu",
+          "group": "artist:ramnadkrishnan",
+          "truth": "Sahānā",
+          "prediction": "Sahānā",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Ramnad_Krishnan.Ramakatha_Sudarasa",
+          "group": "artist:ramnadkrishnan",
+          "truth": "Madhyamāvati",
+          "prediction": "Madhyamāvati",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Ranjani_Guruprasad.Nadopasana",
+          "group": "artist:ranjaniguruprasad",
+          "truth": "Bēgaḍa",
+          "prediction": "Bēgaḍa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Ranjani_Guruprasad.Patta_Padaada",
+          "group": "artist:ranjaniguruprasad",
+          "truth": "Bilahari",
+          "prediction": "Bilahari",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Ranjani_Guruprasad.Shyamasundaranga",
+          "group": "artist:ranjaniguruprasad",
+          "truth": "Dhanyāsi",
+          "prediction": "Dhanyāsi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Ranjani_and_Gayathri.Balambikayam",
+          "group": "artist:ranjaniandgayathri",
+          "truth": "Kānaḍa",
+          "prediction": "Kānaḍa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Ranjani_and_Gayathri.Endraikku_Sivakrupai",
+          "group": "artist:ranjaniandgayathri",
+          "truth": "Mukhāri",
+          "prediction": "Mukhāri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Ranjani_and_Gayathri.Undedi_Ramudu",
+          "group": "artist:ranjaniandgayathri",
+          "truth": "Harikāmbhōji",
+          "prediction": "Kamās",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__S__Ramanathan.Dinamani_Vamsha",
+          "group": "artist:sramanathan",
+          "truth": "Harikāmbhōji",
+          "prediction": "Harikāmbhōji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__S__Ramanathan.Koluvaiyunnaade",
+          "group": "artist:sramanathan",
+          "truth": "Dēvagāndhāri",
+          "prediction": "Karaharapriya",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__S__Somasundaram.Rama_Namamu",
+          "group": "artist:ssomasundaram",
+          "truth": "Madhyamāvati",
+          "prediction": "Aṭāna",
+          "correct": false,
+          "top3": false
+        },
+        {
+          "track": "compmusic__S__Sowmya.Angayarkanni",
+          "group": "artist:ssowmya",
+          "truth": "Behāg",
+          "prediction": "Behāg",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__S__Sowmya.Anna_Purne",
+          "group": "artist:ssowmya",
+          "truth": "Sāma",
+          "prediction": "Sāma",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__S__Sowmya.Anupama_Gunambudhi",
+          "group": "artist:ssowmya",
+          "truth": "Aṭāna",
+          "prediction": "Aṭāna",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__S__Sowmya.Diwakara_Tanujam",
+          "group": "artist:ssowmya",
+          "truth": "Yadukula kāṁbōji",
+          "prediction": "Yadukula kāṁbōji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__S__Sowmya.Kandanai_Nesithaal",
+          "group": "artist:ssowmya",
+          "truth": "Ṣanmukhapriya",
+          "prediction": "Ṣanmukhapriya",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__S__Sowmya.Karpagame",
+          "group": "artist:ssowmya",
+          "truth": "Madhyamāvati",
+          "prediction": "Śrī",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__S__Sowmya.Karunai_Deivame",
+          "group": "artist:ssowmya",
+          "truth": "Sindhubhairavi",
+          "prediction": "Sindhubhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__S__Sowmya.Sarasuda",
+          "group": "artist:ssowmya",
+          "truth": "Sāvēri",
+          "prediction": "Sāvēri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__S__Sowmya.Villinai_Otha",
+          "group": "artist:ssowmya",
+          "truth": "Sencuruṭṭi",
+          "prediction": "Sencuruṭṭi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__S__Sowmya.Yarukkahilum",
+          "group": "artist:ssowmya",
+          "truth": "Bēgaḍa",
+          "prediction": "Bēgaḍa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sandeep_Narayan.Paamalai",
+          "group": "artist:sandeepnarayan",
+          "truth": "Harikāmbhōji",
+          "prediction": "Kāṁbhōji",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sandeep_Narayan.Vanajaksha",
+          "group": "artist:sandeepnarayan",
+          "truth": "Rītigauḷa",
+          "prediction": "Rītigauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sangeetha_Swaminathan.Amma_Kripai_Thandu",
+          "group": "artist:sangeethaswaminathan",
+          "truth": "Kāpi",
+          "prediction": "Kāpi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sangeetha_Swaminathan.Emanine",
+          "group": "artist:sangeethaswaminathan",
+          "truth": "Mukhāri",
+          "prediction": "Mukhāri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sangeetha_Swaminathan.Gananadhaya",
+          "group": "artist:sangeethaswaminathan",
+          "truth": "Gauḷa",
+          "prediction": "Gauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sangeetha_Swaminathan.Jaya_Jaya_Jaya_Janaki_Kantha",
+          "group": "artist:sangeethaswaminathan",
+          "truth": "Nāṭa",
+          "prediction": "Nāṭa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sangeetha_Swaminathan.Jesina_Della",
+          "group": "artist:sangeethaswaminathan",
+          "truth": "Tōḍi",
+          "prediction": "Tōḍi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sangeetha_Swaminathan.Nannu_vidachi",
+          "group": "artist:sangeethaswaminathan",
+          "truth": "Rītigauḷa",
+          "prediction": "Rītigauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sangeetha_Swaminathan.Pahimam_Parvati",
+          "group": "artist:sangeethaswaminathan",
+          "truth": "Mōhanaṁ",
+          "prediction": "Mōhanaṁ",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sangeetha_Swaminathan.Sri_Raja_Rajeswari",
+          "group": "artist:sangeethaswaminathan",
+          "truth": "Māyāmāḷavagauḷa",
+          "prediction": "Māyāmāḷavagauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sangeetha_Swaminathan.Srimaha_Ganapati",
+          "group": "artist:sangeethaswaminathan",
+          "truth": "Gauḷa",
+          "prediction": "Gauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sangeetha_Swaminathan.Vanajaksha",
+          "group": "artist:sangeethaswaminathan",
+          "truth": "Behāg",
+          "prediction": "Behāg",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sangeetha_Swaminathan.Visweswara",
+          "group": "artist:sangeethaswaminathan",
+          "truth": "Sindhubhairavi",
+          "prediction": "Sindhubhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Semmangudi_Srinivasa_Iyer.Deva_DEva_Kalayamite",
+          "group": "artist:semmangudisrinivasaiyer",
+          "truth": "Māyāmāḷavagauḷa",
+          "prediction": "Māyāmāḷavagauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Semmangudi_Srinivasa_Iyer.Emani_Vegintune",
+          "group": "artist:semmangudisrinivasaiyer",
+          "truth": "Hussēnī",
+          "prediction": "Hussēnī",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Semmangudi_Srinivasa_Iyer.Kshinamai_Tiruga",
+          "group": "artist:semmangudisrinivasaiyer",
+          "truth": "Mukhāri",
+          "prediction": "Mukhāri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Semmangudi_Srinivasa_Iyer.Rama_Nee_Samanamevaru",
+          "group": "artist:semmangudisrinivasaiyer",
+          "truth": "Karaharapriya",
+          "prediction": "Karaharapriya",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Chalamela",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Nāṭakurinji",
+          "prediction": "Nāṭakurinji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Chittam_Irrangadenaiyya",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Sahānā",
+          "prediction": "Sahānā",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Ekadantam",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Bilahari",
+          "prediction": "Bilahari",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Ekkalathilum",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Pūrvīkaḷyāṇi",
+          "prediction": "Pūrvīkaḷyāṇi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Emani_Vegintune",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Hussēnī",
+          "prediction": "Hussēnī",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Enna_Gaanu",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Kāmavardani",
+          "prediction": "Kāmavardani",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Jo_Achyuta_Nanda",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Kāpi",
+          "prediction": "Kāpi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Kanaka_Sabhaiyai",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Kāpi",
+          "prediction": "Kāpi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Kartikeyanai_Kannara",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Kāpi",
+          "prediction": "Kāpi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Kaya_Roha",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Dēvagāndhāri",
+          "prediction": "Suraṭi",
+          "correct": false,
+          "top3": false
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Keechu_Keechu",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Bhairavi",
+          "prediction": "Mukhāri",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Kshinamai_Tiruga",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Mukhāri",
+          "prediction": "Mukhāri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Marubalka",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Śrīranjani",
+          "prediction": "Śrīranjani",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Meevalla_Gunadosha",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Kāpi",
+          "prediction": "Kāpi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Nannu_Vidachi",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Rītigauḷa",
+          "prediction": "Rītigauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Nenjukku_Neediyum",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Sindhubhairavi",
+          "prediction": "Sindhubhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Ninnu_Vinaga_Mari",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Pūrvīkaḷyāṇi",
+          "prediction": "Pūrvīkaḷyāṇi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Pakkala_Nilabadi",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Karaharapriya",
+          "prediction": "Bhairavi",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Sami_Ninne",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Śankarābharaṇaṁ",
+          "prediction": "Śankarābharaṇaṁ",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Sri_Madhava",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Behāg",
+          "prediction": "Behāg",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Sri_Varalakshmi",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Śrī",
+          "prediction": "Śrī",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Sri_Venkata_Girirshama",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Suraṭi",
+          "prediction": "Suraṭi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Sukhi_Evvaro",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Kānaḍa",
+          "prediction": "Kānaḍa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Talli_Ninnu_Nera",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Kalyāṇi",
+          "prediction": "Kalyāṇi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Sikkil_Gurucharan.Tiru_Kanden_-_Karpuram_Narumo",
+          "group": "artist:sikkilgurucharan",
+          "truth": "Kamās",
+          "prediction": "Kamās",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T_K_Rangachari.Kannanai_Pani_Maname",
+          "group": "artist:tkrangachari",
+          "truth": "Ṣanmukhapriya",
+          "prediction": "Ṣanmukhapriya",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__Brinda.Daritapu",
+          "group": "artist:tbrinda",
+          "truth": "Sāvēri",
+          "prediction": "Sāvēri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__Brinda.Emanadichevo",
+          "group": "artist:tbrinda",
+          "truth": "Sahānā",
+          "prediction": "Sahānā",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__Brinda.Emanine",
+          "group": "artist:tbrinda",
+          "truth": "Mukhāri",
+          "prediction": "Bhairavi",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__Brinda.Karunajooda",
+          "group": "artist:tbrinda",
+          "truth": "Śrī",
+          "prediction": "Śrī",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__Brinda.Meru_Samana",
+          "group": "artist:tbrinda",
+          "truth": "Māyāmāḷavagauḷa",
+          "prediction": "Māyāmāḷavagauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__Brinda.Nee_Chittamu",
+          "group": "artist:tbrinda",
+          "truth": "Dhanyāsi",
+          "prediction": "Dhanyāsi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__Brinda.Ninnusevinchina",
+          "group": "artist:tbrinda",
+          "truth": "Yadukula kāṁbōji",
+          "prediction": "Yadukula kāṁbōji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__Brinda.Sharanu",
+          "group": "artist:tbrinda",
+          "truth": "Sencuruṭṭi",
+          "prediction": "Sencuruṭṭi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__Brinda.Talachina",
+          "group": "artist:tbrinda",
+          "truth": "Dhanyāsi",
+          "prediction": "Dhanyāsi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__Brinda.Valaputala",
+          "group": "artist:tbrinda",
+          "truth": "Aṭāna",
+          "prediction": "Tōḍi",
+          "correct": false,
+          "top3": false
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Aiyan_Azhagan_-_Azhagarkoil",
+          "group": "artist:tmkrishna",
+          "truth": "Suraṭi",
+          "prediction": "Suraṭi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Alakalella",
+          "group": "artist:tmkrishna",
+          "truth": "Madhyamāvati",
+          "prediction": "Śrī",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Anandesvarena",
+          "group": "artist:tmkrishna",
+          "truth": "Ānandabhairavi",
+          "prediction": "Ānandabhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Anrivvulagam",
+          "group": "artist:tmkrishna",
+          "truth": "Sindhubhairavi",
+          "prediction": "Sindhubhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Balagopala_Special_Note_by_T_M_Krishna",
+          "group": "artist:tmkrishna",
+          "truth": "Bhairavi",
+          "prediction": "Bhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Brocevarevarura",
+          "group": "artist:tmkrishna",
+          "truth": "Kamās",
+          "prediction": "Kamās",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Celimikori_Varnam",
+          "group": "artist:tmkrishna",
+          "truth": "Gauḷa",
+          "prediction": "Gauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Cheraravade_Mi_Ra",
+          "group": "artist:tmkrishna",
+          "truth": "Rītigauḷa",
+          "prediction": "Rītigauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Dachchuko_Valena_Dasharathi",
+          "group": "artist:tmkrishna",
+          "truth": "Tōḍi",
+          "prediction": "Tōḍi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Dakshinamurte",
+          "group": "artist:tmkrishna",
+          "truth": "Śankarābharaṇaṁ",
+          "prediction": "Śankarābharaṇaṁ",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Dasarathi_Ni",
+          "group": "artist:tmkrishna",
+          "truth": "Tōḍi",
+          "prediction": "Tōḍi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Enduku_Nirdaya",
+          "group": "artist:tmkrishna",
+          "truth": "Harikāmbhōji",
+          "prediction": "Harikāmbhōji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Karumugil_Vannam_-Badrinath",
+          "group": "artist:tmkrishna",
+          "truth": "Śrīranjani",
+          "prediction": "Śrīranjani",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Kedaragaula_-_Ragam_-_Vocal_-_Violin",
+          "group": "artist:tmkrishna",
+          "truth": "Kēdāragauḷa",
+          "prediction": "Kēdāragauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Mahisanthi_Murthim",
+          "group": "artist:tmkrishna",
+          "truth": "Nāṭakurinji",
+          "prediction": "Nāṭakurinji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Mariveradikkevaraiya_Rama",
+          "group": "artist:tmkrishna",
+          "truth": "Ṣanmukhapriya",
+          "prediction": "Ṣanmukhapriya",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Minalochana_Brova",
+          "group": "artist:tmkrishna",
+          "truth": "Dhanyāsi",
+          "prediction": "Dhanyāsi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Nadamadi",
+          "group": "artist:tmkrishna",
+          "truth": "Kāṁbhōji",
+          "prediction": "Kāṁbhōji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Nath_Hare",
+          "group": "artist:tmkrishna",
+          "truth": "Sindhubhairavi",
+          "prediction": "Sindhubhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Navasiddhi_Petralum",
+          "group": "artist:tmkrishna",
+          "truth": "Karaharapriya",
+          "prediction": "Suraṭi",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Ninni_Vinaga",
+          "group": "artist:tmkrishna",
+          "truth": "Pūrvīkaḷyāṇi",
+          "prediction": "Pūrvīkaḷyāṇi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Nirupamana",
+          "group": "artist:tmkrishna",
+          "truth": "Behāg",
+          "prediction": "Behāg",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Pahi_Krishna",
+          "group": "artist:tmkrishna",
+          "truth": "Behāg",
+          "prediction": "Behāg",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Ramakathasudha",
+          "group": "artist:tmkrishna",
+          "truth": "Madhyamāvati",
+          "prediction": "Madhyamāvati",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Saraguna_Paalimpa",
+          "group": "artist:tmkrishna",
+          "truth": "Kēdāragauḷa",
+          "prediction": "Yadukula kāṁbōji",
+          "correct": false,
+          "top3": false
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Sarasuda_Ninne",
+          "group": "artist:tmkrishna",
+          "truth": "Sāvēri",
+          "prediction": "Sāvēri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Sitapathe",
+          "group": "artist:tmkrishna",
+          "truth": "Kamās",
+          "prediction": "Kamās",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Sithavara_Sangita",
+          "group": "artist:tmkrishna",
+          "truth": "Dēvagāndhāri",
+          "prediction": "Dēvagāndhāri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Swaminatha_Paripalaya",
+          "group": "artist:tmkrishna",
+          "truth": "Nāṭa",
+          "prediction": "Nāṭa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Tiruvadidarisanam-Tirupati",
+          "group": "artist:tmkrishna",
+          "truth": "Dēvagāndhāri",
+          "prediction": "Dēvagāndhāri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Vazhi_Maraittirukkude",
+          "group": "artist:tmkrishna",
+          "truth": "Tōḍi",
+          "prediction": "Tōḍi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Viriboni",
+          "group": "artist:tmkrishna",
+          "truth": "Bhairavi",
+          "prediction": "Sindhubhairavi",
+          "correct": false,
+          "top3": false
+        },
+        {
+          "track": "compmusic__T__M__Krishna.Vishweshsra",
+          "group": "artist:tmkrishna",
+          "truth": "Sindhubhairavi",
+          "prediction": "Sindhubhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__T__V__Gopala_Krishnan.Meru_Samana",
+          "group": "artist:tvgopalakrishnan",
+          "truth": "Māyāmāḷavagauḷa",
+          "prediction": "Māyāmāḷavagauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Tanjore_S_Kalyanaraman.Talli_Ninnu_Nera",
+          "group": "artist:tanjoreskalyanaraman",
+          "truth": "Kalyāṇi",
+          "prediction": "Kalyāṇi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Tanjore_S__Kalyanaraman.Mamava_Karunaya",
+          "group": "artist:tanjoreskalyanaraman",
+          "truth": "Ṣanmukhapriya",
+          "prediction": "Ṣanmukhapriya",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Tanjore_S__Kalyanaraman.Venuganaloluni",
+          "group": "artist:tanjoreskalyanaraman",
+          "truth": "Kēdāragauḷa",
+          "prediction": "Kēdāragauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Unnikrishnan.Dewarkaratanujam",
+          "group": "artist:unnikrishnan",
+          "truth": "Yadukula kāṁbōji",
+          "prediction": "Yadukula kāṁbōji",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Unnikrishnan.Kanndu_Nee_Sollavendum",
+          "group": "artist:unnikrishnan",
+          "truth": "Sindhubhairavi",
+          "prediction": "Sindhubhairavi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Unnikrishnan.Karuna_Yela_Kante",
+          "group": "artist:unnikrishnan",
+          "truth": "Varāḷi",
+          "prediction": "Varāḷi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Unnikrishnan.Manasa_Sancharare",
+          "group": "artist:unnikrishnan",
+          "truth": "Sāma",
+          "prediction": "Sāma",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Unnikrishnan.Ragam_Tanam_Pallavi",
+          "group": "artist:unnikrishnan",
+          "truth": "Bilahari",
+          "prediction": "Bilahari",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Unnikrishnan.Sami_Daya_Juda",
+          "group": "artist:unnikrishnan",
+          "truth": "Kēdāragauḷa",
+          "prediction": "Kēdāragauḷa",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Unnikrishnan.Sami_Ni",
+          "group": "artist:unnikrishnan",
+          "truth": "Kāmavardani",
+          "prediction": "Kāmavardani",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Unnikrishnan.Sarasa_Samamukha",
+          "group": "artist:unnikrishnan",
+          "truth": "Kamās",
+          "prediction": "Harikāmbhōji",
+          "correct": false,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Vijay_Siva.Abhayamba",
+          "group": "artist:vijaysiva",
+          "truth": "Kalyāṇi",
+          "prediction": "Kalyāṇi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Vijay_Siva.Enta_ninne",
+          "group": "artist:vijaysiva",
+          "truth": "Mukhāri",
+          "prediction": "Mukhāri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Vijay_Siva.Ragam_Tanam_Pallavi",
+          "group": "artist:vijaysiva",
+          "truth": "Kamās",
+          "prediction": "Kamās",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Vijay_Siva.Rama_Dayajudave",
+          "group": "artist:vijaysiva",
+          "truth": "Dhanyāsi",
+          "prediction": "Dhanyāsi",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Voleti_Venkateshwarlu.Kshitija_Ramanam",
+          "group": "artist:voletivenkateshwarlu",
+          "truth": "Dēvagāndhāri",
+          "prediction": "Dēvagāndhāri",
+          "correct": true,
+          "top3": true
+        },
+        {
+          "track": "compmusic__Voleti_Venkateshwarlu.Sarasiruhasanapriye",
+          "group": "artist:voletivenkateshwarlu",
+          "truth": "Nāṭa",
+          "prediction": "Nāṭa",
+          "correct": true,
+          "top3": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Hindōḷaṁ__mA ramaNan",
+  "audio": "data/concert_audio/Hindōḷaṁ/mA ramaNan.mp3",
+  "audio_sha256": "9ff73d23e3402aaa0d765b36f61e915408ff2b1c48564399d0549232dfb8206e",
+  "plan_sha256": "e0babfbb17ff59861b0f951c98fa857adcc486715904a4fa250f57daf00a6c12",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.9782785843126476
+}

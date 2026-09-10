@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sāvēri__RTP",
+  "audio": "data/concert_audio/Sāvēri/RTP.mp3",
+  "audio_sha256": "9c3d89c8891d15e0d558051a9d445e66738ccd9e45b1bd1b339b622cb7b146bf",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 4.6703180419281125
+}

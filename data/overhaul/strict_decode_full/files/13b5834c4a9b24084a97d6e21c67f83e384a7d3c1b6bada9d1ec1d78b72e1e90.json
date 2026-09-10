@@ -1,0 +1,11 @@
+{
+  "track": "archive__Madhyamāvati__kaNNA",
+  "audio": "data/concert_audio/Madhyamāvati/kaNNA.mp3",
+  "audio_sha256": "13b5834c4a9b24084a97d6e21c67f83e384a7d3c1b6bada9d1ec1d78b72e1e90",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7948277089744806
+}

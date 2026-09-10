@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/66388b2a-d7d5-44d1-8464-4b5eeff1af6a",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:42:47.283748+00:00",
+  "recording": {
+    "length": 2848000,
+    "title": "Balagopala (Special Note by T M Krishna)",
+    "disambiguation": "",
+    "first-release-date": "2009",
+    "relations": [
+      {
+        "type": "performance",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "ended": false,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "target-type": "work",
+        "work": {
+          "language": "san",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "title": "Balagopala Palaya",
+          "disambiguation": "",
+          "attributes": [],
+          "iswcs": [],
+          "languages": [
+            "san"
+          ],
+          "type": "Song",
+          "id": "df3228b7-8419-471d-9b29-461e3b12bd3f"
+        },
+        "attributes": [
+          "live"
+        ],
+        "direction": "forward",
+        "target-credit": "",
+        "source-credit": "",
+        "attribute-values": {},
+        "end": null
+      }
+    ],
+    "id": "66388b2a-d7d5-44d1-8464-4b5eeff1af6a",
+    "video": false
+  }
+}

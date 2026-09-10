@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bilahari__Evari Ni Vedanu",
+  "audio": "data/concert_audio/Bilahari/Evari Ni Vedanu.mp3",
+  "audio_sha256": "fc6926b3475b1f290d8c314e242f179ddbf31c1a017fbe63469e42b909c089d7",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.5344282500445843
+}

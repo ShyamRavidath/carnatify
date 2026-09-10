@@ -1,0 +1,45 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/6c6ad237-dab0-4598-b247-b8a19324a26c",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:44:48.520648+00:00",
+  "recording": {
+    "length": 939000,
+    "video": false,
+    "id": "6c6ad237-dab0-4598-b247-b8a19324a26c",
+    "title": "Ramanatham Bhajeham",
+    "relations": [
+      {
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "ended": false,
+        "target-type": "work",
+        "direction": "forward",
+        "begin": null,
+        "type": "performance",
+        "work": {
+          "title": "Ramanatham Bhajeham",
+          "disambiguation": "",
+          "type-id": null,
+          "iswcs": [],
+          "attributes": [],
+          "language": "qaa",
+          "languages": [
+            "qaa"
+          ],
+          "type": null,
+          "id": "2105eeb3-f7cc-4bde-915a-85e4ecd945a5"
+        },
+        "attributes": [
+          "live"
+        ],
+        "end": null,
+        "attribute-values": {},
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "target-credit": "",
+        "source-credit": ""
+      }
+    ],
+    "disambiguation": ""
+  }
+}

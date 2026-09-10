@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kalyāṇi__Sevinthuraa Ithani",
+  "audio": "data/concert_audio/Kalyāṇi/Sevinthuraa Ithani.mp3",
+  "audio_sha256": "84c9f9576ab1f9401bf23e7e1d1307476081456e57c5a01d733dd52937459983",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.9930045423097908
+}

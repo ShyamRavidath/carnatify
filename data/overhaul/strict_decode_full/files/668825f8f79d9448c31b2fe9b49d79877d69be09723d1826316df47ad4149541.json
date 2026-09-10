@@ -1,0 +1,11 @@
+{
+  "track": "archive__Śankarābharaṇaṁ__sarOjadhalanEtri",
+  "audio": "data/concert_audio/Śankarābharaṇaṁ/sarOjadhalanEtri.mp3",
+  "audio_sha256": "668825f8f79d9448c31b2fe9b49d79877d69be09723d1826316df47ad4149541",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.0299834576435387
+}

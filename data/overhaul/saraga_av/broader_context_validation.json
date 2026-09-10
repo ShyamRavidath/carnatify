@@ -1,0 +1,2254 @@
+{
+  "plan_sha256": "8ec802c905f594156af88bd2cfe4b8c1a1e759c124ec1924de516f95f7bf72c1",
+  "original_protocol_sha256": "05561ed4163c452b4b267bb3fde55cca9723615d6e7172d8cc85cdf6a63e8714",
+  "protocol": {
+    "plan_sha256": "8ec802c905f594156af88bd2cfe4b8c1a1e759c124ec1924de516f95f7bf72c1",
+    "models": {
+      "combined": {
+        "path": "data/overhaul/combined/raga_ridge.joblib",
+        "sha256": "8c28ee71b493a628b254d0ea4a032a742121f372ec0c8d9cd6d2c94fa2c894e5"
+      },
+      "forest800": {
+        "path": "data/overhaul/raga_forest800.joblib",
+        "sha256": "c01e3213b7640667259bee6c8cd77c3d9873685e0d97a254f63accc810746063"
+      },
+      "multiscale": {
+        "path": "data/overhaul/multiscale/raga.joblib",
+        "sha256": "322002bcd93d858d931faf70ec86b7ccc2b5a93c953ff3cef662dd6a4c5f1e88"
+      },
+      "candidate": {
+        "path": "data/overhaul/broader/raga.joblib",
+        "sha256": "59544dd8dd7854952584bf848042f6c33cc41c00f71aae554c4e35d10915352e"
+      }
+    },
+    "query": "deterministic center 180 seconds; estimated tonic",
+    "metrics": "top1 all; paired common-vocabulary top1; top3; empirical threshold precision",
+    "status": "post-development validation on previously inspected AV cohort; not fresh test"
+  },
+  "rows": [
+    {
+      "track": "saraga_av__bf197cad-30d5-478c-9eae-b0897eef7a4f",
+      "artist": "Abhiram Bode",
+      "truth": "Kēdāragauḷa",
+      "metadata": {
+        "audio_sha256": "e278bfae74e8eb23b7941e41dfd8eff115da4275ae2ecb00e7f2233a72fd7730",
+        "start_s": 30.183333333333337,
+        "end_s": 210.18333333333334,
+        "tonic_estimated": 149.64971923828125,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 1.1574074074074074e-07,
+          "rms": 0.0513713233040217
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Bṛndāvana sāranga",
+            "Kalyāṇi",
+            "Madhyamāvati"
+          ],
+          "confidence": 0.30499390697075823
+        },
+        "forest800": {
+          "in_vocabulary": false,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Bṛndāvana sāranga",
+            "Madhyamāvati",
+            "Kalyāṇi"
+          ],
+          "confidence": 0.1315
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Bṛndāvana sāranga",
+            "Kāpi",
+            "Kalyāṇi"
+          ],
+          "confidence": 0.41060333101683766
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Bṛndāvana sāranga",
+            "Kalyāṇi",
+            "Maṇirangu"
+          ],
+          "confidence": 0.14904773354819434
+        }
+      }
+    },
+    {
+      "track": "saraga_av__9ba47460-8e82-49eb-a156-7b10cf99d3ad",
+      "artist": "Abhishek Ravishankar",
+      "truth": "Hindōḷaṁ",
+      "metadata": {
+        "audio_sha256": "b277a4f0a7df00f76fbd243461116bcc6093398c9bf5ea53c1185daca9662294",
+        "start_s": 5.5,
+        "end_s": 185.5,
+        "tonic_estimated": 138.8064422607422,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 3.4722222222222224e-07,
+          "rms": 0.07851102622106451
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Hindōḷaṁ",
+            "Dhanyāsi",
+            "Sāvēri"
+          ],
+          "confidence": 0.30133327318663433
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Śuddadhanyāsi",
+            "Hindōḷaṁ",
+            "Sāvēri"
+          ],
+          "confidence": 0.20825000000000002
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Hindōḷaṁ",
+            "Śuddadhanyāsi",
+            "Dhanyāsi"
+          ],
+          "confidence": 0.2490385508395236
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Hindōḷaṁ",
+            "Dhanyāsi",
+            "Sāvēri"
+          ],
+          "confidence": 0.15266216471939908
+        }
+      }
+    },
+    {
+      "track": "saraga_av__ef36217b-d648-49a6-b6f5-c71fdd4c9da4",
+      "artist": "Aditi Prahlad",
+      "truth": "Hamsadhvāni",
+      "metadata": {
+        "audio_sha256": "0e4febdd0a5091cbf844293aecadb37673a71ac6952912346200b605bf11f7a2",
+        "start_s": 72.0,
+        "end_s": 252.0,
+        "tonic_estimated": 146.22604370117188,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 1.5117157974300832e-06,
+          "rms": 0.05536304748819759
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Aṭāna",
+            "Kalyāṇi",
+            "Madhyamāvati"
+          ],
+          "confidence": 0.12738939297651458
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Ṣanmukhapriya",
+            "Aṭāna",
+            "Madhyamāvati"
+          ],
+          "confidence": 0.11725
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Aṭāna",
+            "Madhyamāvati",
+            "Kalyāṇi"
+          ],
+          "confidence": 0.19408781880785955
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Aṭāna",
+            "Sāranga",
+            "Kalyāṇi"
+          ],
+          "confidence": 0.0754859100873506
+        }
+      }
+    },
+    {
+      "track": "saraga_av__325e6cf6-044c-4d6d-a01e-84d4e6fb1b59",
+      "artist": "Adityanarayanan",
+      "truth": "Kāmavardani",
+      "metadata": {
+        "audio_sha256": "0745e3cdc946956c37b585c4122393766f50fa5a8c082ea8a84420b8a572ad90",
+        "start_s": 362.7,
+        "end_s": 542.7,
+        "tonic_estimated": 138.8064422607422,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 1.8518518518518519e-06,
+          "rms": 0.06948807831047549
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Kāmavardani",
+            "Varāḷi",
+            "Latāngi"
+          ],
+          "confidence": 0.4730735608425285
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Kāmavardani",
+            "Latāngi",
+            "Sāvēri"
+          ],
+          "confidence": 0.42475
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Kāmavardani",
+            "Latāngi",
+            "Varāḷi"
+          ],
+          "confidence": 0.40726796074801397
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Kāmavardani",
+            "Varāḷi",
+            "Latāngi"
+          ],
+          "confidence": 0.19420289114371292
+        }
+      }
+    },
+    {
+      "track": "saraga_av__9b33d779-ccbd-4a4b-9093-cfb9d409abbe",
+      "artist": "Amyea Karthikeyan",
+      "truth": "Kāpi",
+      "metadata": {
+        "audio_sha256": "9e3b40ee23d464377b35d1dbe77ed27bfddc443856ea1990ccee482a5f6318f4",
+        "start_s": 132.96666666666667,
+        "end_s": 312.9666666666667,
+        "tonic_estimated": 165.11761474609375,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 5.474537037037037e-05,
+          "rms": 0.07681913639596605
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Jōnpuri",
+            "Kāpi",
+            "Sindhubhairavi"
+          ],
+          "confidence": 0.1042772918109576
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Sindhubhairavi",
+            "Jōnpuri",
+            "Kāpi"
+          ],
+          "confidence": 0.09525
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Jōnpuri",
+            "Sindhubhairavi",
+            "Suraṭi"
+          ],
+          "confidence": 0.15463127378390593
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Jōnpuri",
+            "Kāpi",
+            "Sindhubhairavi"
+          ],
+          "confidence": 0.0676751570121709
+        }
+      }
+    },
+    {
+      "track": "saraga_av__c74a9c49-372b-4439-be04-f62c72c36947",
+      "artist": "Anjana Thirumalai",
+      "truth": "Nāṭa",
+      "metadata": {
+        "audio_sha256": "6672036deb90a5fd8ca76967bdc35380fdd5349b3722c7ab37a53231c7114432",
+        "start_s": 177.51666666666665,
+        "end_s": 357.51666666666665,
+        "tonic_estimated": 138.00563049316406,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 1.1574074074074074e-06,
+          "rms": 0.06943653279972022
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": true,
+          "top3": [
+            "Aṭāna",
+            "Kalyāṇi",
+            "Bṛndāvana sāranga"
+          ],
+          "confidence": 0.6881551261473781
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Aṭāna",
+            "Kalyāṇi",
+            "Ṣanmukhapriya"
+          ],
+          "confidence": 0.2605
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": true,
+          "top3": [
+            "Aṭāna",
+            "Kalyāṇi",
+            "Ṣanmukhapriya"
+          ],
+          "confidence": 0.5362141146940457
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": true,
+          "top3": [
+            "Aṭāna",
+            "Bṛndāvana sāranga",
+            "Kalyāṇi"
+          ],
+          "confidence": 0.38191530483250674
+        }
+      }
+    },
+    {
+      "track": "saraga_av__d11b1bec-c5bf-4c83-b4fc-dc36adef1423",
+      "artist": "Ashok Subramanyam",
+      "truth": "Nāṭa",
+      "metadata": {
+        "audio_sha256": "fa47cf0deed46517a5370df4c26acdef7609fd5e6ef242a8662af427728313a0",
+        "start_s": 108.01666666666668,
+        "end_s": 288.01666666666665,
+        "tonic_estimated": 131.0031280517578,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 1.2597631645250694e-07,
+          "rms": 0.04574681682383909
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Nāṭa",
+            "Ānandabhairavi",
+            "Latāngi"
+          ],
+          "confidence": 0.9994926423455203
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Nāṭa",
+            "Gauḷa",
+            "Ānandabhairavi"
+          ],
+          "confidence": 0.6940000000000001
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Nāṭa",
+            "Ānandabhairavi",
+            "Janaranjani"
+          ],
+          "confidence": 0.9993679621802282
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Nāṭa",
+            "Ānandabhairavi",
+            "Kedāraṁ"
+          ],
+          "confidence": 0.981944465157358
+        }
+      }
+    },
+    {
+      "track": "saraga_av__beeecd4c-434b-44c8-9910-25a5dc231a7b",
+      "artist": "Ashwin Srikant",
+      "truth": "Behāg",
+      "metadata": {
+        "audio_sha256": "110d43e9a6464a71defcf942a05c0058ae5a62d22af8e06113488d3b530b05d7",
+        "start_s": 102.5,
+        "end_s": 282.5,
+        "tonic_estimated": 138.8064422607422,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 8.564814814814816e-06,
+          "rms": 0.09987955312048111
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Behāg",
+            "Kalyāṇi",
+            "Kāpi"
+          ],
+          "confidence": 0.9059166565249411
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Behāg",
+            "Kalyāṇi",
+            "Śankarābharaṇaṁ"
+          ],
+          "confidence": 0.24125
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Behāg",
+            "Kalyāṇi",
+            "Kāpi"
+          ],
+          "confidence": 0.8650866927620717
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Behāg",
+            "Kalyāṇi",
+            "Kāpi"
+          ],
+          "confidence": 0.5915901037996015
+        }
+      }
+    },
+    {
+      "track": "saraga_av__082c79ae-11ce-4216-81e6-4c351d763d7a",
+      "artist": "Bhargavi Chandrashekar",
+      "truth": "Māyāmāḷavagauḷa",
+      "metadata": {
+        "audio_sha256": "8b620a2c1a128f7fef1b3c41162bf892131ce2d79d999c2ac01823aa8f70505f",
+        "start_s": 40.349999999999994,
+        "end_s": 220.35,
+        "tonic_estimated": 103.93694305419922,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.0,
+          "rms": 0.060638945014270834
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Māyāmāḷavagauḷa",
+            "Nīlāṁbari",
+            "Tōḍi"
+          ],
+          "confidence": 0.9773947049336097
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Māyāmāḷavagauḷa",
+            "Jaganmōhini",
+            "Nīlāṁbari"
+          ],
+          "confidence": 0.18475000000000003
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Māyāmāḷavagauḷa",
+            "Behāg",
+            "Nīlāṁbari"
+          ],
+          "confidence": 0.9772558551249404
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Māyāmāḷavagauḷa",
+            "Lalita",
+            "Nīlāṁbari"
+          ],
+          "confidence": 0.6517565702662113
+        }
+      }
+    },
+    {
+      "track": "saraga_av__98bb2ecf-721e-4130-a860-be8b707d9282",
+      "artist": "Brindha Manickavasakan",
+      "truth": "Mōhanaṁ",
+      "metadata": {
+        "audio_sha256": "1b3096998238f45162354d6ceca3a23da38ccca2ee563d053896c49dcede7b76",
+        "start_s": 167.4563945578231,
+        "end_s": 347.4563945578231,
+        "tonic_estimated": 196.41615295410156,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 4.787100025195263e-06,
+          "rms": 0.08557817187499923
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Bēgaḍa",
+            "Latāngi"
+          ],
+          "confidence": 0.12875999935209198
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Bēgaḍa",
+            "Sāvēri"
+          ],
+          "confidence": 0.11274999999999999
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Bēgaḍa",
+            "Sāma"
+          ],
+          "confidence": 0.10938192069687587
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Bēgaḍa",
+            "Latāngi"
+          ],
+          "confidence": 0.06592072397807995
+        }
+      }
+    },
+    {
+      "track": "saraga_av__e7c859c3-703d-4614-9042-8c54d46fa01b",
+      "artist": "Chandana Bala",
+      "truth": "Varāḷi",
+      "metadata": {
+        "audio_sha256": "a9f63b3372f535695d64030b712e329484695fba48dddbdb7a90ee7b0be91b11",
+        "start_s": 276.51666666666665,
+        "end_s": 456.51666666666665,
+        "tonic_estimated": 206.91517639160156,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.0,
+          "rms": 0.0673622788505901
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Varāḷi",
+            "Kāmavardani",
+            "Madhyamāvati"
+          ],
+          "confidence": 0.8852114525719503
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Varāḷi",
+            "Kāmavardani",
+            "Hamsadhvāni"
+          ],
+          "confidence": 0.14925
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Varāḷi",
+            "Janaranjani",
+            "Madhyamāvati"
+          ],
+          "confidence": 0.8498178957374796
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Varāḷi",
+            "Kāmavardani",
+            "Janaranjani"
+          ],
+          "confidence": 0.5688211077965963
+        }
+      }
+    },
+    {
+      "track": "saraga_av__7e33daf9-b3fb-46f8-bd96-128a700e0a7d",
+      "artist": "Hamzini",
+      "truth": "Bilahari",
+      "metadata": {
+        "audio_sha256": "b35ecfac79880ebcfc7aa9c54f1a4d8631437e0c540a5ec91a713b881e4a3536",
+        "start_s": 0,
+        "end_s": 164.03333333333333,
+        "tonic_estimated": 196.41615295410156,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.0,
+          "rms": 0.07137560487494225
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Bilahari",
+            "Kāṁbhōji",
+            "Behāg"
+          ],
+          "confidence": 0.44153471645589076
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Bilahari",
+            "Harikāmbhōji",
+            "Bēgaḍa"
+          ],
+          "confidence": 0.116
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Bilahari",
+            "Behāg",
+            "Kalyāṇi"
+          ],
+          "confidence": 0.43928345559996307
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Bilahari",
+            "Kāṁbhōji",
+            "Behāg"
+          ],
+          "confidence": 0.17791088477327718
+        }
+      }
+    },
+    {
+      "track": "saraga_av__d07176d5-933e-479a-bbce-65f1c98c4a39",
+      "artist": "Manickam Yogeswaran",
+      "truth": "Pūrvīkaḷyāṇi",
+      "metadata": {
+        "audio_sha256": "004d9ebe883685610eca55449c221df03724bc68362903716998e067e5b74998",
+        "start_s": 46.01666666666668,
+        "end_s": 226.01666666666668,
+        "tonic_estimated": 138.8064422607422,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.00010324074074074074,
+          "rms": 0.09661635314474976
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Pūrvīkaḷyāṇi",
+            "Haṁsānandi",
+            "Vasanta"
+          ],
+          "confidence": 0.7217122397580441
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Pūrvīkaḷyāṇi",
+            "Haṁsānandi",
+            "Varāḷi"
+          ],
+          "confidence": 0.30224999999999996
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Pūrvīkaḷyāṇi",
+            "Haṁsānandi",
+            "Mōhanaṁ"
+          ],
+          "confidence": 0.7804032385698368
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Pūrvīkaḷyāṇi",
+            "Saurāṣtraṁ",
+            "Haṁsānandi"
+          ],
+          "confidence": 0.2854146198414633
+        }
+      }
+    },
+    {
+      "track": "saraga_av__1856ed70-44f4-4cd9-bab9-7a87d52a60d9",
+      "artist": "Mukund Bharadwaj",
+      "truth": "Dvijāvanti",
+      "metadata": {
+        "audio_sha256": "14ec05efc9680e591ea6749ce6efb61b587cc90146ade154c57c13f048305d9a",
+        "start_s": 228.51666666666665,
+        "end_s": 408.51666666666665,
+        "tonic_estimated": 138.8064422607422,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.000608912037037037,
+          "rms": 0.11393832956883194
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Śankarābharaṇaṁ",
+            "Sāma",
+            "Vasanta"
+          ],
+          "confidence": 0.10076915985375468
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Nāṭa",
+            "Bhairavi",
+            "Śankarābharaṇaṁ"
+          ],
+          "confidence": 0.07
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Śankarābharaṇaṁ",
+            "Sāma",
+            "Vasanta"
+          ],
+          "confidence": 0.1212015502619976
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Saurāṣtraṁ",
+            "Śankarābharaṇaṁ",
+            "Sāma"
+          ],
+          "confidence": 0.06780407209597211
+        }
+      }
+    },
+    {
+      "track": "saraga_av__4ed7749c-4b90-4aef-8741-72da671259a8",
+      "artist": "Niranjan Dindodi",
+      "truth": "Behāg",
+      "metadata": {
+        "audio_sha256": "c612fa2e47e7443e27c66b7eb71ff99d5b03071b261626f13de566bba159a071",
+        "start_s": 28.5,
+        "end_s": 208.5,
+        "tonic_estimated": 147.92799377441406,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 5.208333333333333e-06,
+          "rms": 0.09163469855540181
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Behāg",
+            "Kalyāṇi",
+            "Sindhubhairavi"
+          ],
+          "confidence": 0.9942784641220235
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Behāg",
+            "Śankarābharaṇaṁ",
+            "Kalyāṇi"
+          ],
+          "confidence": 0.38625
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Behāg",
+            "Kalyāṇi",
+            "Sindhubhairavi"
+          ],
+          "confidence": 0.9656152661833874
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Behāg",
+            "Kalyāṇi",
+            "Sāranga"
+          ],
+          "confidence": 0.9234107592947891
+        }
+      }
+    },
+    {
+      "track": "saraga_av__db36c8dc-b27f-4d3b-b091-623d3bac2420",
+      "artist": "Pranathi Ganapuram",
+      "truth": "Behāg",
+      "metadata": {
+        "audio_sha256": "a717410652859944129a46e5599a736d48c34385a121b1b4bb36a5451737e0ec",
+        "start_s": 47.5,
+        "end_s": 227.5,
+        "tonic_estimated": 103.3373031616211,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.0,
+          "rms": 0.11017423565973548
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Behāg",
+            "Kalyāṇi",
+            "Harikāmbhōji"
+          ],
+          "confidence": 0.9926323090852279
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Behāg",
+            "Kānaḍa",
+            "Bēgaḍa"
+          ],
+          "confidence": 0.15700000000000003
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Behāg",
+            "Sāma",
+            "Nīlāṁbari"
+          ],
+          "confidence": 0.9920571259730241
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Behāg",
+            "Kalyāṇi",
+            "Harikāmbhōji"
+          ],
+          "confidence": 0.890483911700176
+        }
+      }
+    },
+    {
+      "track": "saraga_av__c2e679f2-4c69-4b0c-8ada-841bd95b2b20",
+      "artist": "Prithvi Harish",
+      "truth": "Suraṭi",
+      "metadata": {
+        "audio_sha256": "79965dc0961af095ee9b2b01cdaa5754a636a7422572fa1bcaec656d690110df",
+        "start_s": 88.5,
+        "end_s": 268.5,
+        "tonic_estimated": 131.0031280517578,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.0,
+          "rms": 0.06179229886116402
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Suraṭi",
+            "Dvijāvanti",
+            "Sāma"
+          ],
+          "confidence": 0.4678767966074373
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Suraṭi",
+            "Sāma",
+            "Kānaḍa"
+          ],
+          "confidence": 0.12675
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Suraṭi",
+            "Dvijāvanti",
+            "Sahānā"
+          ],
+          "confidence": 0.6098407814410485
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Suraṭi",
+            "Dvijāvanti",
+            "Sahānā"
+          ],
+          "confidence": 0.21075102752954675
+        }
+      }
+    },
+    {
+      "track": "saraga_av__89d54b0f-c28a-40fd-9d07-ec889e697e0d",
+      "artist": "Raghav Krishna",
+      "truth": "Sindhubhairavi",
+      "metadata": {
+        "audio_sha256": "4f229b363f597294baeaedec138127c1587de47d1c5e253a71032cb08f2d7a9b",
+        "start_s": 21.5,
+        "end_s": 201.5,
+        "tonic_estimated": 131.0031280517578,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.0,
+          "rms": 0.04027630179348938
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Sindhubhairavi",
+            "Ṣanmukhapriya",
+            "Tōḍi"
+          ],
+          "confidence": 0.8959394368823758
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Sindhubhairavi",
+            "Ṣanmukhapriya",
+            "Tōḍi"
+          ],
+          "confidence": 0.22549999999999998
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Sindhubhairavi",
+            "Ṣanmukhapriya",
+            "Tōḍi"
+          ],
+          "confidence": 0.7988061628997377
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Sindhubhairavi",
+            "Ṣanmukhapriya",
+            "Tōḍi"
+          ],
+          "confidence": 0.6068546807505452
+        }
+      }
+    },
+    {
+      "track": "saraga_av__d80636c8-2b78-4957-87c1-9a4ab72af48d",
+      "artist": "Ramya Kiranmayi",
+      "truth": "Aṭāna",
+      "metadata": {
+        "audio_sha256": "157794c3a3683d44f7c515fced09eff218b209da46a68bd383dc955ce13bcefb",
+        "start_s": 70.01666666666668,
+        "end_s": 250.01666666666668,
+        "tonic_estimated": 196.41615295410156,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 2.519526329050139e-07,
+          "rms": 0.1145857411958972
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Aṭāna",
+            "Karaharapriya",
+            "Suraṭi"
+          ],
+          "confidence": 0.8144064605848096
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Aṭāna",
+            "Karaharapriya",
+            "Suraṭi"
+          ],
+          "confidence": 0.1635
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Aṭāna",
+            "Karaharapriya",
+            "Suraṭi"
+          ],
+          "confidence": 0.7539549241449048
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Aṭāna",
+            "Karaharapriya",
+            "Dēvagāndhāri"
+          ],
+          "confidence": 0.4684502276210327
+        }
+      }
+    },
+    {
+      "track": "saraga_av__096692b0-f8fd-4013-9212-9b639e4c8986",
+      "artist": "S Pavani",
+      "truth": "Hindōḷaṁ",
+      "metadata": {
+        "audio_sha256": "64e9f99772e446c33896fa5518d67c66e3a993016a23cf0d68865b2a129266ad",
+        "start_s": 10.516666666666666,
+        "end_s": 190.51666666666665,
+        "tonic_estimated": 138.00563049316406,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.0,
+          "rms": 0.048335998661403444
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Hindōḷaṁ",
+            "Suraṭi",
+            "Dhanyāsi"
+          ],
+          "confidence": 0.15587022356460364
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Hindōḷaṁ",
+            "Śuddadhanyāsi",
+            "Madhyamāvati"
+          ],
+          "confidence": 0.181
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Hindōḷaṁ",
+            "Dhanyāsi",
+            "Suraṭi"
+          ],
+          "confidence": 0.22844907469974302
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Hindōḷaṁ",
+            "Suraṭi",
+            "Dhanyāsi"
+          ],
+          "confidence": 0.08866016018576921
+        }
+      }
+    },
+    {
+      "track": "saraga_av__76d6579a-5646-400c-8824-7abb2c271d12",
+      "artist": "Sahana",
+      "truth": "Nīlāṁbari",
+      "metadata": {
+        "audio_sha256": "c4f11cee19196218c01f87bb7985935437e2d89e85c25c70204ea0c221d232a4",
+        "start_s": 96.01666666666668,
+        "end_s": 276.01666666666665,
+        "tonic_estimated": 122.21602630615234,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.0,
+          "rms": 0.05398872550786934
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Hindōḷaṁ",
+            "Sindhubhairavi",
+            "Nīlāṁbari"
+          ],
+          "confidence": 0.461828603161723
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Sindhubhairavi",
+            "Sāvēri",
+            "Hindōḷaṁ"
+          ],
+          "confidence": 0.15775
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Sindhubhairavi",
+            "Hindōḷaṁ",
+            "Nīlāṁbari"
+          ],
+          "confidence": 0.3553596673565823
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Hindōḷaṁ",
+            "Sindhubhairavi",
+            "Nīlāṁbari"
+          ],
+          "confidence": 0.22710536350531416
+        }
+      }
+    },
+    {
+      "track": "saraga_av__6bbe7868-1116-4f69-97f7-15dbaea19b18",
+      "artist": "Sampadgodu Vighnaraja",
+      "truth": "Behāg",
+      "metadata": {
+        "audio_sha256": "2c1197d825a65e4bf92c252bcee35e4bc6269c9ea3bfb057a159d22df45610f1",
+        "start_s": 101.01666666666668,
+        "end_s": 281.01666666666665,
+        "tonic_estimated": 138.8064422607422,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.0,
+          "rms": 0.04415989039053027
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Behāg",
+            "Pūrvīkaḷyāṇi",
+            "Kalyāṇi"
+          ],
+          "confidence": 0.9597144041197143
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Behāg",
+            "Śankarābharaṇaṁ",
+            "Kalyāṇi"
+          ],
+          "confidence": 0.325
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Behāg",
+            "Kalyāṇi",
+            "Dhanyāsi"
+          ],
+          "confidence": 0.9657622008330714
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Behāg",
+            "Pūrvīkaḷyāṇi",
+            "Kalyāṇi"
+          ],
+          "confidence": 0.7210950362599976
+        }
+      }
+    },
+    {
+      "track": "saraga_av__e7af5323-91e5-4d7c-98f9-d4131a2e69a2",
+      "artist": "Sandhya Ramaswamy",
+      "truth": "Māyāmāḷavagauḷa",
+      "metadata": {
+        "audio_sha256": "d1db894f22174a9cc26099090b2a4f9f8d59b13b2cc9e28952da742013a14e95",
+        "start_s": 37.83333333333333,
+        "end_s": 217.83333333333331,
+        "tonic_estimated": 185.3741912841797,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 4.363425925925926e-05,
+          "rms": 0.0919276561482892
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Māyāmāḷavagauḷa",
+            "Kāmavardani",
+            "Jaganmōhini"
+          ],
+          "confidence": 0.4445563118136288
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Nāṭa",
+            "Māyāmāḷavagauḷa",
+            "Śankarābharaṇaṁ"
+          ],
+          "confidence": 0.10475
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Māyāmāḷavagauḷa",
+            "Jaganmōhini",
+            "Kāmavardani"
+          ],
+          "confidence": 0.332700355958749
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Māyāmāḷavagauḷa",
+            "Kāmavardani",
+            "Śankarābharaṇaṁ"
+          ],
+          "confidence": 0.1472410421706732
+        }
+      }
+    },
+    {
+      "track": "saraga_av__368cb36a-9a70-4144-a064-7d86dbb94839",
+      "artist": "Sanjay Swaminathan",
+      "truth": "Kalyāṇi",
+      "metadata": {
+        "audio_sha256": "27988a4802a0cda31e96f46e20a655730ffb5e7d09ee07b17516909635eb59c1",
+        "start_s": 136.93333333333334,
+        "end_s": 316.93333333333334,
+        "tonic_estimated": 147.07455444335938,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 1.0185185185185185e-05,
+          "rms": 0.10902773611613473
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Kalyāṇi",
+            "Behāg",
+            "Śrī"
+          ],
+          "confidence": 0.7961106950412593
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Kalyāṇi",
+            "Bēgaḍa",
+            "Behāg"
+          ],
+          "confidence": 0.20825
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Kalyāṇi",
+            "Latāngi",
+            "Nīlāṁbari"
+          ],
+          "confidence": 0.7263174996060863
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Kalyāṇi",
+            "Sāranga",
+            "Nīlāṁbari"
+          ],
+          "confidence": 0.31335509530415623
+        }
+      }
+    },
+    {
+      "track": "saraga_av__1589a83c-d6c5-4994-b5a0-4cdae847e40a",
+      "artist": "Surya Prakash",
+      "truth": "Cakravākaṁ",
+      "metadata": {
+        "audio_sha256": "165878432cf17388718b857a68fd3edf2b83790ac422bee9c8537fdc71f1fcf4",
+        "start_s": 80.28333333333333,
+        "end_s": 260.2833333333333,
+        "tonic_estimated": 147.92799377441406,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 1.273148148148148e-06,
+          "rms": 0.06878711846397949
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Cakravākaṁ",
+            "Sahānā",
+            "Sāma"
+          ],
+          "confidence": 0.09451235392995375
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Cakravākaṁ",
+            "Kānaḍa",
+            "Sahānā"
+          ],
+          "confidence": 0.08275
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Sahānā",
+            "Sāma",
+            "Kānaḍa"
+          ],
+          "confidence": 0.08668968524187104
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Saurāṣtraṁ",
+            "Sāma",
+            "Cakravākaṁ"
+          ],
+          "confidence": 0.06781955986581018
+        }
+      }
+    },
+    {
+      "track": "saraga_av__0d50c155-5fa0-4d72-abf9-e6f25dd4727c",
+      "artist": "Swarathmika",
+      "truth": "Kāṁbhōji",
+      "metadata": {
+        "audio_sha256": "9800085b1e54c8223f1c2637f1bc770f183013e80fd80351426c039ea909330c",
+        "start_s": 82.51666666666668,
+        "end_s": 262.51666666666665,
+        "tonic_estimated": 185.3741912841797,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.0,
+          "rms": 0.04774345419587782
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Kāṁbhōji",
+            "Bilahari"
+          ],
+          "confidence": 0.2682613509384323
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": false,
+          "accepted": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Sāma",
+            "Bēgaḍa"
+          ],
+          "confidence": 0.16424999999999998
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Kāṁbhōji",
+            "Bilahari"
+          ],
+          "confidence": 0.31484011754588936
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": false,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Kāṁbhōji",
+            "Bēgaḍa"
+          ],
+          "confidence": 0.11630987685579376
+        }
+      }
+    },
+    {
+      "track": "saraga_av__44f2418e-89fa-4a64-b4f0-75794ad1add9",
+      "artist": "Vaibhav Ramu",
+      "truth": "Vasanta",
+      "metadata": {
+        "audio_sha256": "7ee0355bc82ea01f1518d12c3bc53cb3ea3aa30ee1cbfaab65ff7f7e57c9317c",
+        "start_s": 0,
+        "end_s": 176.53333333333333,
+        "tonic_estimated": 131.7633056640625,
+        "audio": {
+          "source_sr": 44100,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 1.2845017160942927e-07,
+          "rms": 0.17885009137073693
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Vasanta",
+            "Nāṭakurinji",
+            "Haṁsānandi"
+          ],
+          "confidence": 0.9992935266867713
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Vasanta",
+            "Haṁsānandi",
+            "Hindōḷaṁ"
+          ],
+          "confidence": 0.7145
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Vasanta",
+            "Nāṭakurinji",
+            "Haṁsānandi"
+          ],
+          "confidence": 0.9993693074712099
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Vasanta",
+            "Nāṭakurinji",
+            "Haṁsānandi"
+          ],
+          "confidence": 0.9822244077531792
+        }
+      }
+    },
+    {
+      "track": "saraga_av__Artist not found",
+      "artist": "Vidya Kalyanaraman",
+      "truth": "Behāg",
+      "metadata": {
+        "audio_sha256": "8386d183187826863d1b2a2139466aaecb81b90eebec96cfc8f638d9386a0f34",
+        "start_s": 147.01666666666668,
+        "end_s": 327.01666666666665,
+        "tonic_estimated": 103.93694305419922,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 0.0,
+          "rms": 0.02732892122373705
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Behāg",
+            "Bilahari",
+            "Jaganmōhini"
+          ],
+          "confidence": 0.9981645722828499
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Behāg",
+            "Bilahari",
+            "Kānaḍa"
+          ],
+          "confidence": 0.29475
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Behāg",
+            "Kamās",
+            "Sindhubhairavi"
+          ],
+          "confidence": 0.9982056516391608
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": true,
+          "top3": [
+            "Behāg",
+            "Bilahari",
+            "Sindhubhairavi"
+          ],
+          "confidence": 0.9621708314007987
+        }
+      }
+    },
+    {
+      "track": "saraga_av__292a7c93-d309-444a-8e14-af37b86adf47",
+      "artist": "Yoga Keerthana",
+      "truth": "Jōnpuri",
+      "metadata": {
+        "audio_sha256": "4f419de0e0bac1b7ec7032c8e25e635ce0fdfe7f10ee3ca079983fa81b310b07",
+        "start_s": 0,
+        "end_s": 153.0,
+        "tonic_estimated": 195.28297424316406,
+        "audio": {
+          "source_sr": 48000,
+          "channels": 1,
+          "downmix": "mean",
+          "downmix_power_ratio": 1.0,
+          "clipping_fraction": 1.3616557734204792e-07,
+          "rms": 0.046565474963476045
+        },
+        "extraction_failure": null,
+        "extraction_profile": "default"
+      },
+      "predictions": {
+        "combined": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Jōnpuri",
+            "Ṣanmukhapriya",
+            "Kāpi"
+          ],
+          "confidence": 0.1568858237230487
+        },
+        "forest800": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Jōnpuri",
+            "Sindhubhairavi",
+            "Bhairavi"
+          ],
+          "confidence": 0.14475
+        },
+        "multiscale": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Jōnpuri",
+            "Ṣanmukhapriya",
+            "Sindhubhairavi"
+          ],
+          "confidence": 0.20956515054007901
+        },
+        "candidate": {
+          "in_vocabulary": true,
+          "answered": true,
+          "correct": true,
+          "top3_correct": true,
+          "accepted": false,
+          "top3": [
+            "Jōnpuri",
+            "Ṣanmukhapriya",
+            "Kāpi"
+          ],
+          "confidence": 0.07663395442714468
+        }
+      }
+    }
+  ],
+  "summary": {
+    "combined": {
+      "n": 29,
+      "correct": 22,
+      "top1": 0.7586206896551724,
+      "top3": 0.8620689655172413,
+      "in_vocabulary": 29,
+      "accepted": 19,
+      "accepted_precision": 0.8947368421052632
+    },
+    "forest800": {
+      "n": 29,
+      "correct": 20,
+      "top1": 0.6896551724137931,
+      "top3": 0.7931034482758621,
+      "in_vocabulary": 28,
+      "accepted": 0,
+      "accepted_precision": null
+    },
+    "multiscale": {
+      "n": 29,
+      "correct": 21,
+      "top1": 0.7241379310344828,
+      "top3": 0.7931034482758621,
+      "in_vocabulary": 29,
+      "accepted": 16,
+      "accepted_precision": 0.9375
+    },
+    "candidate": {
+      "n": 29,
+      "correct": 21,
+      "top1": 0.7241379310344828,
+      "top3": 0.8620689655172413,
+      "in_vocabulary": 29,
+      "accepted": 14,
+      "accepted_precision": 0.9285714285714286
+    }
+  },
+  "window_s": 180,
+  "status": "post-development validation on previously inspected cohort; not fresh or SOTA evidence",
+  "common_vocabulary": {
+    "n": 28,
+    "correct": {
+      "combined": 22,
+      "forest800": 20,
+      "multiscale": 21,
+      "candidate": 21
+    }
+  }
+}

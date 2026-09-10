@@ -1,0 +1,11 @@
+{
+  "track": "archive__Suraṭi__Angaraka",
+  "audio": "data/concert_audio/Suraṭi/Angaraka.mp3",
+  "audio_sha256": "db065bf809d28aba3e421ef5e9233422232aa425117c83421a2d4f53ff760e84",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8245895421132445
+}

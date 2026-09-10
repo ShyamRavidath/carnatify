@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kānaḍa__Veena Dhanammal sri nArada",
+  "audio": "data/concert_audio/Kānaḍa/Veena Dhanammal sri nArada.mp3",
+  "audio_sha256": "8362e7700148526b00b3729186272e983ea089b9af829ac6bd75e085c8f5dd65",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.28540691593661904
+}

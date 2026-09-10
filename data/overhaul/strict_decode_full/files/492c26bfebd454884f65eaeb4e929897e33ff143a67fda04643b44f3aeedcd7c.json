@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kānaḍa__chuinna jAti",
+  "audio": "data/concert_audio/Kānaḍa/chuinna jAti.mp3",
+  "audio_sha256": "492c26bfebd454884f65eaeb4e929897e33ff143a67fda04643b44f3aeedcd7c",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2892989576794207
+}

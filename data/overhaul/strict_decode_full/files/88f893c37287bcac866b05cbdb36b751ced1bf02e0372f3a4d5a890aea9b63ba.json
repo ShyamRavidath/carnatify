@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bhairavi__indu enagE",
+  "audio": "data/concert_audio/Bhairavi/indu enagE.mp3",
+  "audio_sha256": "88f893c37287bcac866b05cbdb36b751ced1bf02e0372f3a4d5a890aea9b63ba",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3952064998447895
+}

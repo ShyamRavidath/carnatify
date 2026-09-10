@@ -1,0 +1,11 @@
+{
+  "track": "archive__Tōḍi__kadanuvArkki",
+  "audio": "data/concert_audio/Tōḍi/kadanuvArkki.mp3",
+  "audio_sha256": "9f9f6bf1c65d4c68cd7d56850e333d2ccfa2beabb2e1f33a07b5a5907bd725d0",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.44637887505814433
+}

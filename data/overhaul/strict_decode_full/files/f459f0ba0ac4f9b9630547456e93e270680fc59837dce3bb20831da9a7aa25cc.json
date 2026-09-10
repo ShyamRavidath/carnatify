@@ -1,0 +1,11 @@
+{
+  "track": "archive__Gauḷa__sri mahAgaNapati",
+  "audio": "data/concert_audio/Gauḷa/sri mahAgaNapati.mp3",
+  "audio_sha256": "f459f0ba0ac4f9b9630547456e93e270680fc59837dce3bb20831da9a7aa25cc",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3436260833404958
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Mānḍu__1256720 Music NCBS",
+  "audio": "data/concert_audio/Mānḍu/1256720 Music NCBS.mp3",
+  "audio_sha256": "9fa6883970f4f6f252e5904b7ccddccae9813ba2895a6b9f89ccbcf934fb5461",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4428482921794057
+}

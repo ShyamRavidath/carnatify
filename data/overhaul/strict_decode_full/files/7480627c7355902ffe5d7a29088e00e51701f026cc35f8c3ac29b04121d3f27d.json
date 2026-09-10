@@ -1,0 +1,11 @@
+{
+  "track": "archive__Tōḍi__Endhuku Dayaradura",
+  "audio": "data/concert_audio/Tōḍi/Endhuku Dayaradura.mp3",
+  "audio_sha256": "7480627c7355902ffe5d7a29088e00e51701f026cc35f8c3ac29b04121d3f27d",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.3732257918454707
+}

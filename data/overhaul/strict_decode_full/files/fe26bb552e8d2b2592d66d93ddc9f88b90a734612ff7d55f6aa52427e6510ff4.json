@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sindhubhairavi__hariguNa",
+  "audio": "data/concert_audio/Sindhubhairavi/hariguNa.mp3",
+  "audio_sha256": "fe26bb552e8d2b2592d66d93ddc9f88b90a734612ff7d55f6aa52427e6510ff4",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7860460840165615
+}

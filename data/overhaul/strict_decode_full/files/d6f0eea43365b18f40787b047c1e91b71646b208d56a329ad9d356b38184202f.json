@@ -1,0 +1,11 @@
+{
+  "track": "archive__Tōḍi__vanDinam uralum sOlai",
+  "audio": "data/concert_audio/Tōḍi/vanDinam uralum sOlai.mp3",
+  "audio_sha256": "d6f0eea43365b18f40787b047c1e91b71646b208d56a329ad9d356b38184202f",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.28554220916703343
+}

@@ -1,0 +1,11 @@
+{
+  "track": "113_Prathi_Vaaram_Vaaram",
+  "audio": "saraga1.5_carnatic/Cherthala Ranganatha Sharma at Arkay by Cherthala Ranganatha Sharma/Prathi Vaaram Vaaram/Prathi Vaaram Vaaram.mp3.mp3",
+  "audio_sha256": "a73e1fec3e7c318159e67d6bd38e23ee7592144f9df684683f27ddfd54af7949",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.9311614581383765
+}

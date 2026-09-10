@@ -1,0 +1,11 @@
+{
+  "track": "archive__Cakravākaṁ__03 suguNamule",
+  "audio": "data/concert_audio/Cakravākaṁ/03 suguNamule.mp3",
+  "audio_sha256": "b65f931fa722424a66d985710829110d32ffc281a7649c3e57c916e9333acaa9",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.0507727498188615
+}

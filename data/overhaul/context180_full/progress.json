@@ -1,0 +1,7 @@
+{
+  "plan_sha256": "5f8ca8b63e33ba48d8e3c8cd84c13e7892a46ca446979f31d69e5efa09a9f84e",
+  "completed": 180,
+  "expected": 1248,
+  "windows": 516,
+  "elapsed_s": 1102.4333325419575
+}

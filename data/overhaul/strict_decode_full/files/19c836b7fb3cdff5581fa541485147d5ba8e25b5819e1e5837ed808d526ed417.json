@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ānandabhairavi__AndOLika vAhanE",
+  "audio": "data/concert_audio/Ānandabhairavi/AndOLika vAhanE.mp3",
+  "audio_sha256": "19c836b7fb3cdff5581fa541485147d5ba8e25b5819e1e5837ed808d526ed417",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4493324998766184
+}

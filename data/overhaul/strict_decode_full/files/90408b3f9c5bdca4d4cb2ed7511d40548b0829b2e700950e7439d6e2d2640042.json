@@ -1,0 +1,11 @@
+{
+  "track": "archive__Mōhanaṁ__maravA varam",
+  "audio": "data/concert_audio/Mōhanaṁ/maravA varam.mp3",
+  "audio_sha256": "90408b3f9c5bdca4d4cb2ed7511d40548b0829b2e700950e7439d6e2d2640042",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7272665840573609
+}

@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/c81aa59b-bcc7-4199-a27a-0ded0764c8f3",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:09:59.154495+00:00",
+  "recording": {
+    "relations": [
+      {
+        "end": null,
+        "ended": false,
+        "attributes": [
+          "live"
+        ],
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "direction": "forward",
+        "begin": null,
+        "work": {
+          "disambiguation": "",
+          "title": "Pavanatmajagaccha",
+          "language": null,
+          "type-id": null,
+          "attributes": [],
+          "id": "c52d1800-e0fa-44aa-af0b-273a8a4ad148",
+          "type": null,
+          "languages": [],
+          "iswcs": []
+        },
+        "attribute-values": {},
+        "source-credit": "",
+        "type": "performance",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "target-type": "work",
+        "target-credit": ""
+      }
+    ],
+    "first-release-date": "2011",
+    "length": 563684,
+    "video": false,
+    "id": "c81aa59b-bcc7-4199-a27a-0ded0764c8f3",
+    "title": "Pavanatmajagaccha",
+    "disambiguation": ""
+  }
+}

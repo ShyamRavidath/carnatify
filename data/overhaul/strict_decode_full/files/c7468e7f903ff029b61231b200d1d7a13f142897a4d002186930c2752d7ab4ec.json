@@ -1,0 +1,11 @@
+{
+  "track": "archive__Karṇāṭaka dēvagāndhāri__nEnendu vedukudurA",
+  "audio": "data/concert_audio/Karṇāṭaka dēvagāndhāri/nEnendu vedukudurA.mp3",
+  "audio_sha256": "c7468e7f903ff029b61231b200d1d7a13f142897a4d002186930c2752d7ab4ec",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5013051251880825
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Rītigauḷa__sadguru swAmiki",
+  "audio": "data/concert_audio/Rītigauḷa/sadguru swAmiki.mp3",
+  "audio_sha256": "510b8bc3f99a547ea923434710ecf0657fb9b1661bf4f0d5c47c50c8c0536319",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6662082909606397
+}

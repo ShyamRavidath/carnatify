@@ -1,0 +1,11 @@
+{
+  "track": "archive__Latāngi__marivErE",
+  "audio": "data/concert_audio/Latāngi/marivErE.mp3",
+  "audio_sha256": "6490d0bedc98695b39d7b3bcc8f90f43ede430ccd12bfadc149449b7dca5c5e1",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6098924158141017
+}

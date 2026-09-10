@@ -1,0 +1,11 @@
+{
+  "track": "archive__Vasanta__07 HariharaPuthram",
+  "audio": "data/concert_audio/Vasanta/07 HariharaPuthram.mp3",
+  "audio_sha256": "67bcba80ab94206dec9252ce0e91a73b43461a7e9d82e7569d7f717183abcb17",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.075046082958579
+}

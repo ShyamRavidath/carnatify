@@ -1,0 +1,11 @@
+{
+  "track": "archive__Pūrṇacandrika__telesi rAma",
+  "audio": "data/concert_audio/Pūrṇacandrika/telesi rAma.mp3",
+  "audio_sha256": "5356b6e618764b2e86001bf359b6b917dbe4e9784ef80dddaefc78c0b22cfb9e",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3571307919919491
+}

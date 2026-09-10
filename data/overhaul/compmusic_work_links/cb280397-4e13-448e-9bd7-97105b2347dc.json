@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/cb280397-4e13-448e-9bd7-97105b2347dc",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:10:27.797160+00:00",
+  "recording": {
+    "disambiguation": "",
+    "title": "Nadupai",
+    "video": false,
+    "id": "cb280397-4e13-448e-9bd7-97105b2347dc",
+    "first-release-date": "2003",
+    "relations": [
+      {
+        "target-credit": "",
+        "attribute-values": {},
+        "type": "performance",
+        "direction": "forward",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "end": null,
+        "ended": false,
+        "source-credit": "",
+        "work": {
+          "attributes": [],
+          "id": "c4de5238-48e2-4028-879b-d7e0d61111c1",
+          "type-id": null,
+          "disambiguation": "",
+          "iswcs": [],
+          "languages": [],
+          "title": "Nadupai",
+          "language": null,
+          "type": null
+        },
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ]
+      }
+    ],
+    "length": 79000
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Varāḷi__ETi janmamidhi",
+  "audio": "data/concert_audio/Varāḷi/ETi janmamidhi.mp3",
+  "audio_sha256": "1385184789f7be6dfe53c1cf9f2703a8bb51593cd31ce8f4a2e0b7c20d729b30",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 7.006113332696259
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sindhubhairavi__chandrsekara",
+  "audio": "data/concert_audio/Sindhubhairavi/chandrsekara.mp3",
+  "audio_sha256": "596d758064235aa48ec8f62115f92b6394e98d4ef46f7c38ac9812089bd117b1",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.1870284997858107
+}

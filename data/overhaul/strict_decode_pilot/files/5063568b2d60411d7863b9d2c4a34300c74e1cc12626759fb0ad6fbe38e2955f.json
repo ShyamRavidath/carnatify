@@ -1,0 +1,11 @@
+{
+  "track": "archive__Rītigauḷa__Janani Raag",
+  "audio": "data/concert_audio/Rītigauḷa/Janani Raag.mp3",
+  "audio_sha256": "5063568b2d60411d7863b9d2c4a34300c74e1cc12626759fb0ad6fbe38e2955f",
+  "plan_sha256": "e0babfbb17ff59861b0f951c98fa857adcc486715904a4fa250f57daf00a6c12",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.0980910421349108
+}

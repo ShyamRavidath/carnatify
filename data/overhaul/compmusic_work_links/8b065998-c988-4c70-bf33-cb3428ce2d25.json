@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/8b065998-c988-4c70-bf33-cb3428ce2d25",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:53:31.901975+00:00",
+  "recording": {
+    "video": false,
+    "disambiguation": "",
+    "relations": [
+      {
+        "target-type": "work",
+        "ended": true,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": "1995-09-09",
+        "attributes": [
+          "live"
+        ],
+        "target-credit": "",
+        "work": {
+          "languages": [],
+          "title": "Sri Kamalambikayam",
+          "type-id": null,
+          "language": null,
+          "disambiguation": "",
+          "type": null,
+          "iswcs": [],
+          "id": "52f098fe-12c2-4882-89d9-6f3e78b3abd5",
+          "attributes": []
+        },
+        "end": "1995-09-09",
+        "type": "performance",
+        "direction": "forward",
+        "attribute-values": {},
+        "source-credit": ""
+      }
+    ],
+    "title": "Sri Kamalambikayam",
+    "id": "8b065998-c988-4c70-bf33-cb3428ce2d25",
+    "length": 1572000,
+    "first-release-date": "2005-02"
+  }
+}

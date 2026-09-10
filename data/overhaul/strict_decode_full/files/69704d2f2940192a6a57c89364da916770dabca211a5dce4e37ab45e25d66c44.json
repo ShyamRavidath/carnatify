@@ -1,0 +1,11 @@
+{
+  "track": "archive__Cittaranjani__02 nAda tanum anisam",
+  "audio": "data/concert_audio/Cittaranjani/02 nAda tanum anisam.mp3",
+  "audio_sha256": "69704d2f2940192a6a57c89364da916770dabca211a5dce4e37ab45e25d66c44",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7741087079048157
+}

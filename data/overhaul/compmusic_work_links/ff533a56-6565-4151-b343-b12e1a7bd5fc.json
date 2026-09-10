@@ -1,0 +1,14 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/ff533a56-6565-4151-b343-b12e1a7bd5fc",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:27:05.685163+00:00",
+  "recording": {
+    "first-release-date": "2011",
+    "length": 421933,
+    "id": "ff533a56-6565-4151-b343-b12e1a7bd5fc",
+    "title": "Varnam - Evvaremi",
+    "video": false,
+    "disambiguation": "",
+    "relations": []
+  }
+}

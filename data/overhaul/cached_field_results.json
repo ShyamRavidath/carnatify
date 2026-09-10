@@ -1,0 +1,4539 @@
+{
+  "status": "historical field diagnostic; not proven source/artist/label independent",
+  "window_policy": "registered w60 if present; otherwise registered whole <=60s clip",
+  "n_feature_files": 29,
+  "frozen_sha256": "a0496f8b61072e9492b5c236570548c6e7a350c0943e4e02ee059689e4392b04",
+  "protocol_sha256": "63c452e8ff1e51e4b9dcfb04d51d2dcfc6e547e8f49a3a5fb48d6fc492ac3522",
+  "models": {
+    "data/overhaul/raga_ridge.joblib": {
+      "model_sha256": "af55e900844711227a115763c67d8e41a2c5761f845c57fae1f0f2f5e14637fe",
+      "summary": {
+        "mix": {
+          "n": 29,
+          "correct": 15,
+          "top1": 0.5172413793103449,
+          "n_answered": 29,
+          "n_accepted": 7,
+          "accepted_precision": 0.8571428571428571
+        },
+        "mix_voiceband": {
+          "n": 29,
+          "correct": 15,
+          "top1": 0.5172413793103449,
+          "n_answered": 29,
+          "n_accepted": 8,
+          "accepted_precision": 0.875
+        },
+        "demucs": {
+          "n": 29,
+          "correct": 13,
+          "top1": 0.4482758620689655,
+          "n_answered": 29,
+          "n_accepted": 6,
+          "accepted_precision": 0.8333333333333334
+        }
+      },
+      "rows": [
+        {
+          "file": "Amba Kamakshi__Bhairavi.mp3",
+          "truth": "Bhairavi",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a947203c2de247eaef85663c7f86216548e4aa7eccb6af161068c14f8f0b2de7",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Bhairavi",
+            "Ābhōgi"
+          ],
+          "confidence": 0.33443851540528025
+        },
+        {
+          "file": "Amba Kamakshi__Bhairavi.mp3",
+          "truth": "Bhairavi",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a947203c2de247eaef85663c7f86216548e4aa7eccb6af161068c14f8f0b2de7",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Bhairavi",
+            "Ābhōgi"
+          ],
+          "confidence": 0.29044260232632285
+        },
+        {
+          "file": "Amba Kamakshi__Bhairavi.mp3",
+          "truth": "Bhairavi",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a947203c2de247eaef85663c7f86216548e4aa7eccb6af161068c14f8f0b2de7",
+          "tonic_fallback": false,
+          "top3": [
+            "Sahānā",
+            "Mukhāri",
+            "Bhairavi"
+          ],
+          "confidence": 0.1473278020537773
+        },
+        {
+          "file": "Enu Dhanyalo Lakumi__Todi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "d5dba6d504206791d299bf74f7eaa0000859f80af29772a89f4f64b3e5cfa543",
+          "tonic_fallback": false,
+          "top3": [
+            "Dhanyāsi",
+            "Śuddadhanyāsi",
+            "Vasanta"
+          ],
+          "confidence": 0.102408057870797
+        },
+        {
+          "file": "Enu Dhanyalo Lakumi__Todi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "d5dba6d504206791d299bf74f7eaa0000859f80af29772a89f4f64b3e5cfa543",
+          "tonic_fallback": false,
+          "top3": [
+            "Dhanyāsi",
+            "Śuddadhanyāsi",
+            "Vasanta"
+          ],
+          "confidence": 0.10420060545871677
+        },
+        {
+          "file": "Enu Dhanyalo Lakumi__Todi.mp3",
+          "truth": "Tōḍi",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "d5dba6d504206791d299bf74f7eaa0000859f80af29772a89f4f64b3e5cfa543",
+          "tonic_fallback": false,
+          "top3": [
+            "Dhanyāsi",
+            "Śuddadhanyāsi",
+            "Vasanta"
+          ],
+          "confidence": 0.10309754309671101
+        },
+        {
+          "file": "Jagadanandakaraka__Nata.m4a",
+          "truth": "Nāṭa",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "5f31eed3c33e91cdbc9a1100ce288ec63eb082feb4485d41d0a60b848dc719d2",
+          "tonic_fallback": false,
+          "top3": [
+            "Bṛndāvana sāranga",
+            "Nāṭa",
+            "Ṣanmukhapriya"
+          ],
+          "confidence": 0.3465086476461242
+        },
+        {
+          "file": "Jagadanandakaraka__Nata.m4a",
+          "truth": "Nāṭa",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "5f31eed3c33e91cdbc9a1100ce288ec63eb082feb4485d41d0a60b848dc719d2",
+          "tonic_fallback": false,
+          "top3": [
+            "Nāṭa",
+            "Bṛndāvana sāranga",
+            "Gauḷa"
+          ],
+          "confidence": 0.8925562567643522
+        },
+        {
+          "file": "Jagadanandakaraka__Nata.m4a",
+          "truth": "Nāṭa",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "5f31eed3c33e91cdbc9a1100ce288ec63eb082feb4485d41d0a60b848dc719d2",
+          "tonic_fallback": false,
+          "top3": [
+            "Nāṭa",
+            "Bṛndāvana sāranga",
+            "Hamsadhvāni"
+          ],
+          "confidence": 0.34696754177947214
+        },
+        {
+          "file": "Kaddanuvariki__Todi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "0e712fcca8b8754db905024359e138ff161087a70f612c8d373e90fd38484408",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Madhyamāvati",
+            "Varāḷi"
+          ],
+          "confidence": 0.6109726228029843
+        },
+        {
+          "file": "Kaddanuvariki__Todi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "0e712fcca8b8754db905024359e138ff161087a70f612c8d373e90fd38484408",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Madhyamāvati",
+            "Varāḷi"
+          ],
+          "confidence": 0.6114705697550264
+        },
+        {
+          "file": "Kaddanuvariki__Todi.mp3",
+          "truth": "Tōḍi",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "0e712fcca8b8754db905024359e138ff161087a70f612c8d373e90fd38484408",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Madhyamāvati",
+            "Bilahari"
+          ],
+          "confidence": 0.6295874016582583
+        },
+        {
+          "file": "Koluvamaregada kodandapani__Tōḍi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "f4dff6969478ee35003257f09462a4db8bbda0ca45268f521d85c08db6e4f66a",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Dhanyāsi",
+            "Puṇṇāgavarāḷi"
+          ],
+          "confidence": 0.3568060933402455
+        },
+        {
+          "file": "Koluvamaregada kodandapani__Tōḍi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "f4dff6969478ee35003257f09462a4db8bbda0ca45268f521d85c08db6e4f66a",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Puṇṇāgavarāḷi",
+            "Dhanyāsi"
+          ],
+          "confidence": 0.3651954344715592
+        },
+        {
+          "file": "Koluvamaregada kodandapani__Tōḍi.mp3",
+          "truth": "Tōḍi",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "f4dff6969478ee35003257f09462a4db8bbda0ca45268f521d85c08db6e4f66a",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Sāvēri",
+            "Māyāmāḷavagauḷa"
+          ],
+          "confidence": 0.17435396338483597
+        },
+        {
+          "file": "Maithreem Bhajata__Kalyani__OOC.mp3",
+          "truth": "Kalyāṇi",
+          "arm": "mix",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "9b14e571cf3b021ce474ad3f047e9f18f93bb2a0d203178e0c0ce139c56e888e",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Behāg",
+            "Bilahari"
+          ],
+          "confidence": 0.10953519755151862
+        },
+        {
+          "file": "Maithreem Bhajata__Kalyani__OOC.mp3",
+          "truth": "Kalyāṇi",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "9b14e571cf3b021ce474ad3f047e9f18f93bb2a0d203178e0c0ce139c56e888e",
+          "tonic_fallback": false,
+          "top3": [
+            "Behāg",
+            "Kalyāṇi",
+            "Harikāmbhōji"
+          ],
+          "confidence": 0.1177949693549858
+        },
+        {
+          "file": "Maithreem Bhajata__Kalyani__OOC.mp3",
+          "truth": "Kalyāṇi",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "9b14e571cf3b021ce474ad3f047e9f18f93bb2a0d203178e0c0ce139c56e888e",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Bilahari",
+            "Behāg"
+          ],
+          "confidence": 0.08110662824711583
+        },
+        {
+          "file": "Ninnukori Yunnanura__Mohanam.m4a",
+          "truth": "Mōhanaṁ",
+          "arm": "mix",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a77b3e5311bc1d63ac5f6ff46e979a917ed0d957b9ec87f10a0cae15d3854a30",
+          "tonic_fallback": false,
+          "top3": [
+            "Hindōḷaṁ",
+            "Sindhubhairavi",
+            "Śuddadhanyāsi"
+          ],
+          "confidence": 0.9875935132244512
+        },
+        {
+          "file": "Ninnukori Yunnanura__Mohanam.m4a",
+          "truth": "Mōhanaṁ",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a77b3e5311bc1d63ac5f6ff46e979a917ed0d957b9ec87f10a0cae15d3854a30",
+          "tonic_fallback": false,
+          "top3": [
+            "Hindōḷaṁ",
+            "Janaranjani",
+            "Sindhubhairavi"
+          ],
+          "confidence": 0.987728076293961
+        },
+        {
+          "file": "Ninnukori Yunnanura__Mohanam.m4a",
+          "truth": "Mōhanaṁ",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a77b3e5311bc1d63ac5f6ff46e979a917ed0d957b9ec87f10a0cae15d3854a30",
+          "tonic_fallback": false,
+          "top3": [
+            "Hindōḷaṁ",
+            "Śuddadhanyāsi",
+            "Sindhubhairavi"
+          ],
+          "confidence": 0.9896333836843376
+        },
+        {
+          "file": "Pillangoviya__Mohanam.mp3",
+          "truth": "Mōhanaṁ",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "9dbd27f3d0c94623f7fae750b7569207e94df002ec869ce12498c8a89f7ee252",
+          "tonic_fallback": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Behāg",
+            "Kalyāṇi"
+          ],
+          "confidence": 0.7860277757103855
+        },
+        {
+          "file": "Pillangoviya__Mohanam.mp3",
+          "truth": "Mōhanaṁ",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "9dbd27f3d0c94623f7fae750b7569207e94df002ec869ce12498c8a89f7ee252",
+          "tonic_fallback": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Behāg",
+            "Kalyāṇi"
+          ],
+          "confidence": 0.7860277757103855
+        },
+        {
+          "file": "Pillangoviya__Mohanam.mp3",
+          "truth": "Mōhanaṁ",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "9dbd27f3d0c94623f7fae750b7569207e94df002ec869ce12498c8a89f7ee252",
+          "tonic_fallback": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Behāg",
+            "Kalyāṇi"
+          ],
+          "confidence": 0.6793434882565441
+        },
+        {
+          "file": "Ranga Baro__Sindhu Bhairavi.mp3",
+          "truth": "Sindhubhairavi",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "960e12e284c49e75a3fbc6c5536ab4ca2b2ece9bb7d6dc3ff84abb5c46c7c293",
+          "tonic_fallback": false,
+          "top3": [
+            "Madhyamāvati",
+            "Sāvēri",
+            "Kānaḍa"
+          ],
+          "confidence": 0.10999593448342034
+        },
+        {
+          "file": "Ranga Baro__Sindhu Bhairavi.mp3",
+          "truth": "Sindhubhairavi",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "960e12e284c49e75a3fbc6c5536ab4ca2b2ece9bb7d6dc3ff84abb5c46c7c293",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Kānaḍa",
+            "Madhyamāvati"
+          ],
+          "confidence": 0.13748635052642946
+        },
+        {
+          "file": "Ranga Baro__Sindhu Bhairavi.mp3",
+          "truth": "Sindhubhairavi",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "960e12e284c49e75a3fbc6c5536ab4ca2b2ece9bb7d6dc3ff84abb5c46c7c293",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Kānaḍa",
+            "Madhyamāvati"
+          ],
+          "confidence": 0.19058817486382887
+        },
+        {
+          "file": "Thaye Yashoda__Todi__OOC.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "edf941a7c5184b672440efbd64c0df1a846ff7bee750ee0e715a39838d7b3a18",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Cakravākaṁ",
+            "Sāvēri"
+          ],
+          "confidence": 0.39123531225183433
+        },
+        {
+          "file": "Thaye Yashoda__Todi__OOC.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "edf941a7c5184b672440efbd64c0df1a846ff7bee750ee0e715a39838d7b3a18",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Cakravākaṁ",
+            "Sāvēri"
+          ],
+          "confidence": 0.3667355885367906
+        },
+        {
+          "file": "Thaye Yashoda__Todi__OOC.mp3",
+          "truth": "Tōḍi",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "edf941a7c5184b672440efbd64c0df1a846ff7bee750ee0e715a39838d7b3a18",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Cakravākaṁ",
+            "Sāvēri"
+          ],
+          "confidence": 0.29224035663242076
+        },
+        {
+          "file": "bhajarE bhaja mAnasa__Kanada.m4a",
+          "truth": "Kānaḍa",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "f808151ea2ad89c8e2149537ee1c47b88a9a40b17f87e806d0bfce6964775a7b",
+          "tonic_fallback": false,
+          "top3": [
+            "Pūrvīkaḷyāṇi",
+            "Dhanyāsi",
+            "Aṭāna"
+          ],
+          "confidence": 0.11781120731743638
+        },
+        {
+          "file": "bhajarE bhaja mAnasa__Kanada.m4a",
+          "truth": "Kānaḍa",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "f808151ea2ad89c8e2149537ee1c47b88a9a40b17f87e806d0bfce6964775a7b",
+          "tonic_fallback": false,
+          "top3": [
+            "Dhanyāsi",
+            "Pūrvīkaḷyāṇi",
+            "Bhairavi"
+          ],
+          "confidence": 0.13584566270788517
+        },
+        {
+          "file": "bhajarE bhaja mAnasa__Kanada.m4a",
+          "truth": "Kānaḍa",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "f808151ea2ad89c8e2149537ee1c47b88a9a40b17f87e806d0bfce6964775a7b",
+          "tonic_fallback": false,
+          "top3": [
+            "Bhairavi",
+            "Dhanyāsi",
+            "Vasanta"
+          ],
+          "confidence": 0.051195136847699774
+        },
+        {
+          "file": "bhajare__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "eb9db44a7b8f67be0e17f672542415bf2e54abcc0137bdaec84b58bb78d7e996",
+          "tonic_fallback": false,
+          "top3": [
+            "Śankarābharaṇaṁ",
+            "Nāṭakurinji",
+            "Māyāmāḷavagauḷa"
+          ],
+          "confidence": 0.2904439446522764
+        },
+        {
+          "file": "bhajare__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "eb9db44a7b8f67be0e17f672542415bf2e54abcc0137bdaec84b58bb78d7e996",
+          "tonic_fallback": false,
+          "top3": [
+            "Śankarābharaṇaṁ",
+            "Nāṭakurinji",
+            "Māyāmāḷavagauḷa"
+          ],
+          "confidence": 0.3114480895429262
+        },
+        {
+          "file": "bhajare__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "eb9db44a7b8f67be0e17f672542415bf2e54abcc0137bdaec84b58bb78d7e996",
+          "tonic_fallback": false,
+          "top3": [
+            "Śankarābharaṇaṁ",
+            "Nāṭakurinji",
+            "Māyāmāḷavagauḷa"
+          ],
+          "confidence": 0.2862481038492092
+        },
+        {
+          "file": "brOchevarevarura__Khamas.m4a",
+          "truth": "Kamās",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "b69ebf7304cfecefb6b930dd88b9e1a81d42bddcea11542e19f8ce3afe7774fc",
+          "tonic_fallback": false,
+          "top3": [
+            "Kamās",
+            "Nāṭakurinji",
+            "Bēgaḍa"
+          ],
+          "confidence": 0.9557626565960718
+        },
+        {
+          "file": "brOchevarevarura__Khamas.m4a",
+          "truth": "Kamās",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "b69ebf7304cfecefb6b930dd88b9e1a81d42bddcea11542e19f8ce3afe7774fc",
+          "tonic_fallback": false,
+          "top3": [
+            "Kamās",
+            "Bēgaḍa",
+            "Nāṭakurinji"
+          ],
+          "confidence": 0.9561215465737953
+        },
+        {
+          "file": "brOchevarevarura__Khamas.m4a",
+          "truth": "Kamās",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "b69ebf7304cfecefb6b930dd88b9e1a81d42bddcea11542e19f8ce3afe7774fc",
+          "tonic_fallback": false,
+          "top3": [
+            "Kamās",
+            "Nāṭakurinji",
+            "Harikāmbhōji"
+          ],
+          "confidence": 0.5215792814110228
+        },
+        {
+          "file": "chakkani rAja__Kharaharapriya.m4a",
+          "truth": "Karaharapriya",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "6d063d324e93163efc7aab40c5bccb596fc09761dc7ca3dd9148265deb095902",
+          "tonic_fallback": false,
+          "top3": [
+            "Kānaḍa",
+            "Karaharapriya",
+            "Rītigauḷa"
+          ],
+          "confidence": 0.15959327022178244
+        },
+        {
+          "file": "chakkani rAja__Kharaharapriya.m4a",
+          "truth": "Karaharapriya",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "6d063d324e93163efc7aab40c5bccb596fc09761dc7ca3dd9148265deb095902",
+          "tonic_fallback": false,
+          "top3": [
+            "Kānaḍa",
+            "Rītigauḷa",
+            "Karaharapriya"
+          ],
+          "confidence": 0.15514685302029854
+        },
+        {
+          "file": "chakkani rAja__Kharaharapriya.m4a",
+          "truth": "Karaharapriya",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "6d063d324e93163efc7aab40c5bccb596fc09761dc7ca3dd9148265deb095902",
+          "tonic_fallback": false,
+          "top3": [
+            "Kānaḍa",
+            "Karaharapriya",
+            "Rītigauḷa"
+          ],
+          "confidence": 0.12028373057839047
+        },
+        {
+          "file": "entara__Harikambhoji.m4a",
+          "truth": "Harikāmbhōji",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "1a94935e6cd4e5eb89e3ddeb15bb5719ffcda0b8c645ca50623c04e640caa470",
+          "tonic_fallback": false,
+          "top3": [
+            "Harikāmbhōji",
+            "Kāṁbhōji",
+            "Sahānā"
+          ],
+          "confidence": 0.8431908567655563
+        },
+        {
+          "file": "entara__Harikambhoji.m4a",
+          "truth": "Harikāmbhōji",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "1a94935e6cd4e5eb89e3ddeb15bb5719ffcda0b8c645ca50623c04e640caa470",
+          "tonic_fallback": false,
+          "top3": [
+            "Harikāmbhōji",
+            "Kāṁbhōji",
+            "Kamās"
+          ],
+          "confidence": 0.827128326716652
+        },
+        {
+          "file": "entara__Harikambhoji.m4a",
+          "truth": "Harikāmbhōji",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "1a94935e6cd4e5eb89e3ddeb15bb5719ffcda0b8c645ca50623c04e640caa470",
+          "tonic_fallback": false,
+          "top3": [
+            "Harikāmbhōji",
+            "Kāṁbhōji",
+            "Sahānā"
+          ],
+          "confidence": 0.8444512002292119
+        },
+        {
+          "file": "himAdrisutE__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "mix",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "14fe06c85855ea3bdf60fca9ab30e4f822b85709408aa4895db9a066f1493ae1",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Śankarābharaṇaṁ",
+            "Sencuruṭṭi"
+          ],
+          "confidence": 0.31878729807256573
+        },
+        {
+          "file": "himAdrisutE__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "14fe06c85855ea3bdf60fca9ab30e4f822b85709408aa4895db9a066f1493ae1",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Śankarābharaṇaṁ",
+            "Sencuruṭṭi"
+          ],
+          "confidence": 0.31878729807256573
+        },
+        {
+          "file": "himAdrisutE__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "14fe06c85855ea3bdf60fca9ab30e4f822b85709408aa4895db9a066f1493ae1",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Śankarābharaṇaṁ",
+            "Sencuruṭṭi"
+          ],
+          "confidence": 0.35957930687977646
+        },
+        {
+          "file": "nagumomu ganaleni__Saveri.m4a",
+          "truth": "Sāvēri",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "913952224d4a56c1287282e0a8a02ddcba8f042a67ee4e3086d0f9b1eb1ef645",
+          "tonic_fallback": false,
+          "top3": [
+            "Ānandabhairavi",
+            "Suraṭi",
+            "Kāṁbhōji"
+          ],
+          "confidence": 0.1748814215275651
+        },
+        {
+          "file": "nagumomu ganaleni__Saveri.m4a",
+          "truth": "Sāvēri",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "913952224d4a56c1287282e0a8a02ddcba8f042a67ee4e3086d0f9b1eb1ef645",
+          "tonic_fallback": false,
+          "top3": [
+            "Ānandabhairavi",
+            "Kāṁbhōji",
+            "Bēgaḍa"
+          ],
+          "confidence": 0.19369902257866714
+        },
+        {
+          "file": "nagumomu ganaleni__Saveri.m4a",
+          "truth": "Sāvēri",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "913952224d4a56c1287282e0a8a02ddcba8f042a67ee4e3086d0f9b1eb1ef645",
+          "tonic_fallback": false,
+          "top3": [
+            "Ānandabhairavi",
+            "Suraṭi",
+            "Kāṁbhōji"
+          ],
+          "confidence": 0.15790773018496884
+        },
+        {
+          "file": "nannu pAlimpa__Mōhanaṁ.mp3",
+          "truth": "Mōhanaṁ",
+          "arm": "mix",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a3406f4961a33b0bc9469c575165faacca26f9ecabcfb42e0d7a60d35fb16729",
+          "tonic_fallback": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Bēgaḍa",
+            "Kāṁbhōji"
+          ],
+          "confidence": 0.45137285690871987
+        },
+        {
+          "file": "nannu pAlimpa__Mōhanaṁ.mp3",
+          "truth": "Mōhanaṁ",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a3406f4961a33b0bc9469c575165faacca26f9ecabcfb42e0d7a60d35fb16729",
+          "tonic_fallback": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Bēgaḍa",
+            "Bilahari"
+          ],
+          "confidence": 0.6905761437202201
+        },
+        {
+          "file": "nannu pAlimpa__Mōhanaṁ.mp3",
+          "truth": "Mōhanaṁ",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a3406f4961a33b0bc9469c575165faacca26f9ecabcfb42e0d7a60d35fb16729",
+          "tonic_fallback": false,
+          "top3": [
+            "Bēgaḍa",
+            "Mōhanaṁ",
+            "Hamsadhvāni"
+          ],
+          "confidence": 0.24345248595431582
+        },
+        {
+          "file": "nidhi chAla sukhamA__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a3217c629e243e8e1effa1b7f4c54e6ab601bc9a8c3e5a7fc32d5a32e2a36207",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Aṭāna",
+            "Kāṁbhōji"
+          ],
+          "confidence": 0.8085266293533282
+        },
+        {
+          "file": "nidhi chAla sukhamA__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a3217c629e243e8e1effa1b7f4c54e6ab601bc9a8c3e5a7fc32d5a32e2a36207",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Aṭāna",
+            "Kāṁbhōji"
+          ],
+          "confidence": 0.8085266293533282
+        },
+        {
+          "file": "nidhi chAla sukhamA__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a3217c629e243e8e1effa1b7f4c54e6ab601bc9a8c3e5a7fc32d5a32e2a36207",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Aṭāna",
+            "Behāg"
+          ],
+          "confidence": 0.7796709441568609
+        },
+        {
+          "file": "rAma nannu brOvara__Harikambhoji.m4a",
+          "truth": "Harikāmbhōji",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "01357259bbcaf4e00edddf7c37de312ddf545715467b529f79e440f130d1b4dd",
+          "tonic_fallback": false,
+          "top3": [
+            "Kamās",
+            "Harikāmbhōji",
+            "Jaganmōhini"
+          ],
+          "confidence": 0.1870533467437109
+        },
+        {
+          "file": "rAma nannu brOvara__Harikambhoji.m4a",
+          "truth": "Harikāmbhōji",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "01357259bbcaf4e00edddf7c37de312ddf545715467b529f79e440f130d1b4dd",
+          "tonic_fallback": false,
+          "top3": [
+            "Kamās",
+            "Jaganmōhini",
+            "Harikāmbhōji"
+          ],
+          "confidence": 0.1534936463866466
+        },
+        {
+          "file": "rAma nannu brOvara__Harikambhoji.m4a",
+          "truth": "Harikāmbhōji",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "01357259bbcaf4e00edddf7c37de312ddf545715467b529f79e440f130d1b4dd",
+          "tonic_fallback": false,
+          "top3": [
+            "Kāṁbhōji",
+            "Kamās",
+            "Cakravākaṁ"
+          ],
+          "confidence": 0.1304429119565265
+        },
+        {
+          "file": "rAma nee__Karaharapriya.m4a",
+          "truth": "Karaharapriya",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "335a50cb84b78e790b95c9632ede3f4b224b9f4dd092e70eef898a64a56119aa",
+          "tonic_fallback": false,
+          "top3": [
+            "Suraṭi",
+            "Ānandabhairavi",
+            "Puṇṇāgavarāḷi"
+          ],
+          "confidence": 0.31377176688102554
+        },
+        {
+          "file": "rAma nee__Karaharapriya.m4a",
+          "truth": "Karaharapriya",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "335a50cb84b78e790b95c9632ede3f4b224b9f4dd092e70eef898a64a56119aa",
+          "tonic_fallback": false,
+          "top3": [
+            "Suraṭi",
+            "Puṇṇāgavarāḷi",
+            "Ānandabhairavi"
+          ],
+          "confidence": 0.33114157801089533
+        },
+        {
+          "file": "rAma nee__Karaharapriya.m4a",
+          "truth": "Karaharapriya",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "335a50cb84b78e790b95c9632ede3f4b224b9f4dd092e70eef898a64a56119aa",
+          "tonic_fallback": false,
+          "top3": [
+            "Suraṭi",
+            "Puṇṇāgavarāḷi",
+            "Ṣanmukhapriya"
+          ],
+          "confidence": 0.3244997701360457
+        },
+        {
+          "file": "raghuvara__Kamavardani.m4a",
+          "truth": "Kāmavardani",
+          "arm": "mix",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "09e66e1d0108e84debee782f76b10788334aee9b5a5b0a1b5f02f58a15768138",
+          "tonic_fallback": false,
+          "top3": [
+            "Kāmavardani",
+            "Varāḷi",
+            "Pūrvīkaḷyāṇi"
+          ],
+          "confidence": 0.6160232994299483
+        },
+        {
+          "file": "raghuvara__Kamavardani.m4a",
+          "truth": "Kāmavardani",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "09e66e1d0108e84debee782f76b10788334aee9b5a5b0a1b5f02f58a15768138",
+          "tonic_fallback": false,
+          "top3": [
+            "Kāmavardani",
+            "Varāḷi",
+            "Pūrvīkaḷyāṇi"
+          ],
+          "confidence": 0.5962141210109284
+        },
+        {
+          "file": "raghuvara__Kamavardani.m4a",
+          "truth": "Kāmavardani",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "09e66e1d0108e84debee782f76b10788334aee9b5a5b0a1b5f02f58a15768138",
+          "tonic_fallback": false,
+          "top3": [
+            "Kāmavardani",
+            "Varāḷi",
+            "Latāngi"
+          ],
+          "confidence": 0.9024700354827631
+        },
+        {
+          "file": "sarOja daLa nEtri__Śankarābharaṇaṁ.mp3",
+          "truth": "Śankarābharaṇaṁ",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "682b3e61a9d393a48f9b08c8b999f8636905de984362584a693e12feea1170ba",
+          "tonic_fallback": false,
+          "top3": [
+            "Bēgaḍa",
+            "Nīlāṁbari",
+            "Śankarābharaṇaṁ"
+          ],
+          "confidence": 0.4613014263234738
+        },
+        {
+          "file": "sarOja daLa nEtri__Śankarābharaṇaṁ.mp3",
+          "truth": "Śankarābharaṇaṁ",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "682b3e61a9d393a48f9b08c8b999f8636905de984362584a693e12feea1170ba",
+          "tonic_fallback": false,
+          "top3": [
+            "Bēgaḍa",
+            "Mōhanaṁ",
+            "Śankarābharaṇaṁ"
+          ],
+          "confidence": 0.4168864219078211
+        },
+        {
+          "file": "sarOja daLa nEtri__Śankarābharaṇaṁ.mp3",
+          "truth": "Śankarābharaṇaṁ",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "682b3e61a9d393a48f9b08c8b999f8636905de984362584a693e12feea1170ba",
+          "tonic_fallback": false,
+          "top3": [
+            "Bēgaḍa",
+            "Nīlāṁbari",
+            "Kānaḍa"
+          ],
+          "confidence": 0.15403835901811308
+        },
+        {
+          "file": "sarasijanAba murArE__Tōḍi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "fd1932523c639811ecc85f5d5e2cb7632699f857bddace6cb206e3d2c150898f",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Māyāmāḷavagauḷa",
+            "Bhairavi"
+          ],
+          "confidence": 0.11221781161548702
+        },
+        {
+          "file": "sarasijanAba murArE__Tōḍi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "fd1932523c639811ecc85f5d5e2cb7632699f857bddace6cb206e3d2c150898f",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Māyāmāḷavagauḷa",
+            "Suraṭi"
+          ],
+          "confidence": 0.11916622327356814
+        },
+        {
+          "file": "sarasijanAba murArE__Tōḍi.mp3",
+          "truth": "Tōḍi",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "fd1932523c639811ecc85f5d5e2cb7632699f857bddace6cb206e3d2c150898f",
+          "tonic_fallback": false,
+          "top3": [
+            "Māyāmāḷavagauḷa",
+            "Tōḍi",
+            "Suraṭi"
+          ],
+          "confidence": 0.09876388613068182
+        },
+        {
+          "file": "siddhi vinAyakam__Shanmukhapriya.m4a",
+          "truth": "Ṣanmukhapriya",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "94ef50d6f70fb89b6bb33aca2e0d77e87b199916d3628ea05613fc1552caa6f6",
+          "tonic_fallback": false,
+          "top3": [
+            "Ṣanmukhapriya",
+            "Madhyamāvati",
+            "Bilahari"
+          ],
+          "confidence": 0.7234859688320064
+        },
+        {
+          "file": "siddhi vinAyakam__Shanmukhapriya.m4a",
+          "truth": "Ṣanmukhapriya",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "94ef50d6f70fb89b6bb33aca2e0d77e87b199916d3628ea05613fc1552caa6f6",
+          "tonic_fallback": false,
+          "top3": [
+            "Ṣanmukhapriya",
+            "Madhyamāvati",
+            "Kānaḍa"
+          ],
+          "confidence": 0.7183512162691597
+        },
+        {
+          "file": "siddhi vinAyakam__Shanmukhapriya.m4a",
+          "truth": "Ṣanmukhapriya",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "94ef50d6f70fb89b6bb33aca2e0d77e87b199916d3628ea05613fc1552caa6f6",
+          "tonic_fallback": false,
+          "top3": [
+            "Ṣanmukhapriya",
+            "Latāngi",
+            "Kānaḍa"
+          ],
+          "confidence": 0.748567482389239
+        },
+        {
+          "file": "swAminatha__Nata.m4a",
+          "truth": "Nāṭa",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "c31b0f5e0dc5251e0371a3cc1f548e4022387f307361fb7facefb80ea559e85f",
+          "tonic_fallback": false,
+          "top3": [
+            "Nāṭa",
+            "Kāpi",
+            "Śankarābharaṇaṁ"
+          ],
+          "confidence": 0.925210822379343
+        },
+        {
+          "file": "swAminatha__Nata.m4a",
+          "truth": "Nāṭa",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "c31b0f5e0dc5251e0371a3cc1f548e4022387f307361fb7facefb80ea559e85f",
+          "tonic_fallback": false,
+          "top3": [
+            "Nāṭa",
+            "Kāpi",
+            "Śankarābharaṇaṁ"
+          ],
+          "confidence": 0.9280726721413036
+        },
+        {
+          "file": "swAminatha__Nata.m4a",
+          "truth": "Nāṭa",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "c31b0f5e0dc5251e0371a3cc1f548e4022387f307361fb7facefb80ea559e85f",
+          "tonic_fallback": false,
+          "top3": [
+            "Nāṭa",
+            "Kāpi",
+            "Śankarābharaṇaṁ"
+          ],
+          "confidence": 0.9102637736529917
+        },
+        {
+          "file": "vAtApi gaNapathim__Hamsadhvāni.mp3",
+          "truth": "Hamsadhvāni",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "44265822332e89efe4be440a0b0ea3db39e99f2e64d56f584a472e5aeabe760c",
+          "tonic_fallback": false,
+          "top3": [
+            "Sencuruṭṭi",
+            "Sahānā",
+            "Nāṭakurinji"
+          ],
+          "confidence": 0.4278044450083479
+        },
+        {
+          "file": "vAtApi gaNapathim__Hamsadhvāni.mp3",
+          "truth": "Hamsadhvāni",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "44265822332e89efe4be440a0b0ea3db39e99f2e64d56f584a472e5aeabe760c",
+          "tonic_fallback": false,
+          "top3": [
+            "Sencuruṭṭi",
+            "Sahānā",
+            "Nāṭakurinji"
+          ],
+          "confidence": 0.4278044450083479
+        },
+        {
+          "file": "vAtApi gaNapathim__Hamsadhvāni.mp3",
+          "truth": "Hamsadhvāni",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "44265822332e89efe4be440a0b0ea3db39e99f2e64d56f584a472e5aeabe760c",
+          "tonic_fallback": false,
+          "top3": [
+            "Sencuruṭṭi",
+            "Sahānā",
+            "Nāṭakurinji"
+          ],
+          "confidence": 0.5113562156444631
+        },
+        {
+          "file": "yArO ivar yArO__Bhairavi.m4a",
+          "truth": "Bhairavi",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "85d7d1a9b28451f416ff113f440ac76c1c12644555821f7d03db2e8dd5eb5ba1",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Bhairavi",
+            "Sāvēri"
+          ],
+          "confidence": 0.17835683814451594
+        },
+        {
+          "file": "yArO ivar yArO__Bhairavi.m4a",
+          "truth": "Bhairavi",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "85d7d1a9b28451f416ff113f440ac76c1c12644555821f7d03db2e8dd5eb5ba1",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Sāvēri",
+            "Ṣanmukhapriya"
+          ],
+          "confidence": 0.15298949338360632
+        },
+        {
+          "file": "yArO ivar yArO__Bhairavi.m4a",
+          "truth": "Bhairavi",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "85d7d1a9b28451f416ff113f440ac76c1c12644555821f7d03db2e8dd5eb5ba1",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Bhairavi",
+            "Kānaḍa"
+          ],
+          "confidence": 0.21659457212981265
+        },
+        {
+          "file": "yEnATi mOmu palamu__Bhairavi.m4a",
+          "truth": "Bhairavi",
+          "arm": "mix",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "74c055085e554d7852a15828494d6e7021bae1322d053b88d038f8f61ac1518b",
+          "tonic_fallback": false,
+          "top3": [
+            "Bhairavi",
+            "Mukhāri",
+            "Sahānā"
+          ],
+          "confidence": 0.23687935235361607
+        },
+        {
+          "file": "yEnATi mOmu palamu__Bhairavi.m4a",
+          "truth": "Bhairavi",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "74c055085e554d7852a15828494d6e7021bae1322d053b88d038f8f61ac1518b",
+          "tonic_fallback": false,
+          "top3": [
+            "Bhairavi",
+            "Mukhāri",
+            "Sindhubhairavi"
+          ],
+          "confidence": 0.3567472228318358
+        },
+        {
+          "file": "yEnATi mOmu palamu__Bhairavi.m4a",
+          "truth": "Bhairavi",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "74c055085e554d7852a15828494d6e7021bae1322d053b88d038f8f61ac1518b",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Bhairavi",
+            "Jōnpuri"
+          ],
+          "confidence": 0.2062367666796666
+        }
+      ]
+    },
+    "data/overhaul/compmusic/raga_ridge.joblib": {
+      "model_sha256": "78905c1270fd455b9418232f04e35f9a1348c6fb1390915d931ef6725bbe5a51",
+      "summary": {
+        "mix": {
+          "n": 29,
+          "correct": 14,
+          "top1": 0.4827586206896552,
+          "n_answered": 29,
+          "n_accepted": 25,
+          "accepted_precision": 0.56
+        },
+        "mix_voiceband": {
+          "n": 29,
+          "correct": 14,
+          "top1": 0.4827586206896552,
+          "n_answered": 29,
+          "n_accepted": 26,
+          "accepted_precision": 0.5384615384615384
+        },
+        "demucs": {
+          "n": 29,
+          "correct": 14,
+          "top1": 0.4827586206896552,
+          "n_answered": 29,
+          "n_accepted": 24,
+          "accepted_precision": 0.5833333333333334
+        }
+      },
+      "rows": [
+        {
+          "file": "Amba Kamakshi__Bhairavi.mp3",
+          "truth": "Bhairavi",
+          "arm": "mix",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a947203c2de247eaef85663c7f86216548e4aa7eccb6af161068c14f8f0b2de7",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Bhairavi",
+            "Kānaḍa"
+          ],
+          "confidence": 0.8549190590646812
+        },
+        {
+          "file": "Amba Kamakshi__Bhairavi.mp3",
+          "truth": "Bhairavi",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a947203c2de247eaef85663c7f86216548e4aa7eccb6af161068c14f8f0b2de7",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Bhairavi",
+            "Hussēnī"
+          ],
+          "confidence": 0.9067635492402252
+        },
+        {
+          "file": "Amba Kamakshi__Bhairavi.mp3",
+          "truth": "Bhairavi",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a947203c2de247eaef85663c7f86216548e4aa7eccb6af161068c14f8f0b2de7",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Bhairavi",
+            "Hussēnī"
+          ],
+          "confidence": 0.4321020531659911
+        },
+        {
+          "file": "Enu Dhanyalo Lakumi__Todi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "d5dba6d504206791d299bf74f7eaa0000859f80af29772a89f4f64b3e5cfa543",
+          "tonic_fallback": false,
+          "top3": [
+            "Rītigauḷa",
+            "Gauḷa",
+            "Tōḍi"
+          ],
+          "confidence": 0.1775135796489858
+        },
+        {
+          "file": "Enu Dhanyalo Lakumi__Todi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "d5dba6d504206791d299bf74f7eaa0000859f80af29772a89f4f64b3e5cfa543",
+          "tonic_fallback": false,
+          "top3": [
+            "Gauḷa",
+            "Rītigauḷa",
+            "Tōḍi"
+          ],
+          "confidence": 0.17823069643945794
+        },
+        {
+          "file": "Enu Dhanyalo Lakumi__Todi.mp3",
+          "truth": "Tōḍi",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "d5dba6d504206791d299bf74f7eaa0000859f80af29772a89f4f64b3e5cfa543",
+          "tonic_fallback": false,
+          "top3": [
+            "Gauḷa",
+            "Rītigauḷa",
+            "Tōḍi"
+          ],
+          "confidence": 0.17812878768908377
+        },
+        {
+          "file": "Jagadanandakaraka__Nata.m4a",
+          "truth": "Nāṭa",
+          "arm": "mix",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "5f31eed3c33e91cdbc9a1100ce288ec63eb082feb4485d41d0a60b848dc719d2",
+          "tonic_fallback": false,
+          "top3": [
+            "Śrī",
+            "Kāpi",
+            "Varāḷi"
+          ],
+          "confidence": 0.4520126528064243
+        },
+        {
+          "file": "Jagadanandakaraka__Nata.m4a",
+          "truth": "Nāṭa",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "5f31eed3c33e91cdbc9a1100ce288ec63eb082feb4485d41d0a60b848dc719d2",
+          "tonic_fallback": false,
+          "top3": [
+            "Śrī",
+            "Gauḷa",
+            "Nāṭa"
+          ],
+          "confidence": 0.670881507080952
+        },
+        {
+          "file": "Jagadanandakaraka__Nata.m4a",
+          "truth": "Nāṭa",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "5f31eed3c33e91cdbc9a1100ce288ec63eb082feb4485d41d0a60b848dc719d2",
+          "tonic_fallback": false,
+          "top3": [
+            "Śrī",
+            "Kāpi",
+            "Varāḷi"
+          ],
+          "confidence": 0.40339330686360175
+        },
+        {
+          "file": "Kaddanuvariki__Todi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "0e712fcca8b8754db905024359e138ff161087a70f612c8d373e90fd38484408",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Bilahari",
+            "Dhanyāsi"
+          ],
+          "confidence": 0.9557037805516113
+        },
+        {
+          "file": "Kaddanuvariki__Todi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "0e712fcca8b8754db905024359e138ff161087a70f612c8d373e90fd38484408",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Dhanyāsi",
+            "Ānandabhairavi"
+          ],
+          "confidence": 0.956552295223252
+        },
+        {
+          "file": "Kaddanuvariki__Todi.mp3",
+          "truth": "Tōḍi",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "0e712fcca8b8754db905024359e138ff161087a70f612c8d373e90fd38484408",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Dhanyāsi",
+            "Sāvēri"
+          ],
+          "confidence": 0.9638423085047877
+        },
+        {
+          "file": "Koluvamaregada kodandapani__Tōḍi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "f4dff6969478ee35003257f09462a4db8bbda0ca45268f521d85c08db6e4f66a",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Dhanyāsi",
+            "Ānandabhairavi"
+          ],
+          "confidence": 0.549055107072756
+        },
+        {
+          "file": "Koluvamaregada kodandapani__Tōḍi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "f4dff6969478ee35003257f09462a4db8bbda0ca45268f521d85c08db6e4f66a",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Dhanyāsi",
+            "Ānandabhairavi"
+          ],
+          "confidence": 0.5437517556342274
+        },
+        {
+          "file": "Koluvamaregada kodandapani__Tōḍi.mp3",
+          "truth": "Tōḍi",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "f4dff6969478ee35003257f09462a4db8bbda0ca45268f521d85c08db6e4f66a",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Māyāmāḷavagauḷa",
+            "Dhanyāsi"
+          ],
+          "confidence": 0.3754049621359675
+        },
+        {
+          "file": "Maithreem Bhajata__Kalyani__OOC.mp3",
+          "truth": "Kalyāṇi",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "9b14e571cf3b021ce474ad3f047e9f18f93bb2a0d203178e0c0ce139c56e888e",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Behāg",
+            "Harikāmbhōji"
+          ],
+          "confidence": 0.8085122017394595
+        },
+        {
+          "file": "Maithreem Bhajata__Kalyani__OOC.mp3",
+          "truth": "Kalyāṇi",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "9b14e571cf3b021ce474ad3f047e9f18f93bb2a0d203178e0c0ce139c56e888e",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Behāg",
+            "Harikāmbhōji"
+          ],
+          "confidence": 0.7503562000094824
+        },
+        {
+          "file": "Maithreem Bhajata__Kalyani__OOC.mp3",
+          "truth": "Kalyāṇi",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "9b14e571cf3b021ce474ad3f047e9f18f93bb2a0d203178e0c0ce139c56e888e",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Behāg",
+            "Harikāmbhōji"
+          ],
+          "confidence": 0.5960431639509377
+        },
+        {
+          "file": "Ninnukori Yunnanura__Mohanam.m4a",
+          "truth": "Mōhanaṁ",
+          "arm": "mix",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a77b3e5311bc1d63ac5f6ff46e979a917ed0d957b9ec87f10a0cae15d3854a30",
+          "tonic_fallback": false,
+          "top3": [
+            "Sindhubhairavi",
+            "Dēvagāndhāri",
+            "Rītigauḷa"
+          ],
+          "confidence": 0.5790241235497677
+        },
+        {
+          "file": "Ninnukori Yunnanura__Mohanam.m4a",
+          "truth": "Mōhanaṁ",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a77b3e5311bc1d63ac5f6ff46e979a917ed0d957b9ec87f10a0cae15d3854a30",
+          "tonic_fallback": false,
+          "top3": [
+            "Sindhubhairavi",
+            "Kāpi",
+            "Dēvagāndhāri"
+          ],
+          "confidence": 0.7040059050005351
+        },
+        {
+          "file": "Ninnukori Yunnanura__Mohanam.m4a",
+          "truth": "Mōhanaṁ",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a77b3e5311bc1d63ac5f6ff46e979a917ed0d957b9ec87f10a0cae15d3854a30",
+          "tonic_fallback": false,
+          "top3": [
+            "Sindhubhairavi",
+            "Dēvagāndhāri",
+            "Rītigauḷa"
+          ],
+          "confidence": 0.7332458108488848
+        },
+        {
+          "file": "Pillangoviya__Mohanam.mp3",
+          "truth": "Mōhanaṁ",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "9dbd27f3d0c94623f7fae750b7569207e94df002ec869ce12498c8a89f7ee252",
+          "tonic_fallback": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Behāg",
+            "Bilahari"
+          ],
+          "confidence": 0.9401705433003745
+        },
+        {
+          "file": "Pillangoviya__Mohanam.mp3",
+          "truth": "Mōhanaṁ",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "9dbd27f3d0c94623f7fae750b7569207e94df002ec869ce12498c8a89f7ee252",
+          "tonic_fallback": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Behāg",
+            "Bilahari"
+          ],
+          "confidence": 0.9401705433003745
+        },
+        {
+          "file": "Pillangoviya__Mohanam.mp3",
+          "truth": "Mōhanaṁ",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "9dbd27f3d0c94623f7fae750b7569207e94df002ec869ce12498c8a89f7ee252",
+          "tonic_fallback": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Behāg",
+            "Bilahari"
+          ],
+          "confidence": 0.8447137081181536
+        },
+        {
+          "file": "Ranga Baro__Sindhu Bhairavi.mp3",
+          "truth": "Sindhubhairavi",
+          "arm": "mix",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "960e12e284c49e75a3fbc6c5536ab4ca2b2ece9bb7d6dc3ff84abb5c46c7c293",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Hussēnī",
+            "Kānaḍa"
+          ],
+          "confidence": 0.3756318532125749
+        },
+        {
+          "file": "Ranga Baro__Sindhu Bhairavi.mp3",
+          "truth": "Sindhubhairavi",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "960e12e284c49e75a3fbc6c5536ab4ca2b2ece9bb7d6dc3ff84abb5c46c7c293",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Hussēnī",
+            "Kānaḍa"
+          ],
+          "confidence": 0.5732810961618574
+        },
+        {
+          "file": "Ranga Baro__Sindhu Bhairavi.mp3",
+          "truth": "Sindhubhairavi",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "960e12e284c49e75a3fbc6c5536ab4ca2b2ece9bb7d6dc3ff84abb5c46c7c293",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Hussēnī",
+            "Kānaḍa"
+          ],
+          "confidence": 0.6594252185958547
+        },
+        {
+          "file": "Thaye Yashoda__Todi__OOC.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "edf941a7c5184b672440efbd64c0df1a846ff7bee750ee0e715a39838d7b3a18",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Sāvēri",
+            "Dhanyāsi"
+          ],
+          "confidence": 0.7213116493802015
+        },
+        {
+          "file": "Thaye Yashoda__Todi__OOC.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "edf941a7c5184b672440efbd64c0df1a846ff7bee750ee0e715a39838d7b3a18",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Sāvēri",
+            "Dhanyāsi"
+          ],
+          "confidence": 0.7506594362472279
+        },
+        {
+          "file": "Thaye Yashoda__Todi__OOC.mp3",
+          "truth": "Tōḍi",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "edf941a7c5184b672440efbd64c0df1a846ff7bee750ee0e715a39838d7b3a18",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Sāvēri",
+            "Dhanyāsi"
+          ],
+          "confidence": 0.4806530382696519
+        },
+        {
+          "file": "bhajarE bhaja mAnasa__Kanada.m4a",
+          "truth": "Kānaḍa",
+          "arm": "mix",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "f808151ea2ad89c8e2149537ee1c47b88a9a40b17f87e806d0bfce6964775a7b",
+          "tonic_fallback": false,
+          "top3": [
+            "Dhanyāsi",
+            "Pūrvīkaḷyāṇi",
+            "Suraṭi"
+          ],
+          "confidence": 0.42740415010232996
+        },
+        {
+          "file": "bhajarE bhaja mAnasa__Kanada.m4a",
+          "truth": "Kānaḍa",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "f808151ea2ad89c8e2149537ee1c47b88a9a40b17f87e806d0bfce6964775a7b",
+          "tonic_fallback": false,
+          "top3": [
+            "Dhanyāsi",
+            "Pūrvīkaḷyāṇi",
+            "Kāmavardani"
+          ],
+          "confidence": 0.48928147872815037
+        },
+        {
+          "file": "bhajarE bhaja mAnasa__Kanada.m4a",
+          "truth": "Kānaḍa",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "f808151ea2ad89c8e2149537ee1c47b88a9a40b17f87e806d0bfce6964775a7b",
+          "tonic_fallback": false,
+          "top3": [
+            "Behāg",
+            "Dhanyāsi",
+            "Pūrvīkaḷyāṇi"
+          ],
+          "confidence": 0.19198148243120283
+        },
+        {
+          "file": "bhajare__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "eb9db44a7b8f67be0e17f672542415bf2e54abcc0137bdaec84b58bb78d7e996",
+          "tonic_fallback": false,
+          "top3": [
+            "Māyāmāḷavagauḷa",
+            "Kānaḍa",
+            "Rītigauḷa"
+          ],
+          "confidence": 0.1898412737517725
+        },
+        {
+          "file": "bhajare__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "eb9db44a7b8f67be0e17f672542415bf2e54abcc0137bdaec84b58bb78d7e996",
+          "tonic_fallback": false,
+          "top3": [
+            "Māyāmāḷavagauḷa",
+            "Kānaḍa",
+            "Sahānā"
+          ],
+          "confidence": 0.2181584661618346
+        },
+        {
+          "file": "bhajare__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "eb9db44a7b8f67be0e17f672542415bf2e54abcc0137bdaec84b58bb78d7e996",
+          "tonic_fallback": false,
+          "top3": [
+            "Māyāmāḷavagauḷa",
+            "Kānaḍa",
+            "Sahānā"
+          ],
+          "confidence": 0.20926495560375846
+        },
+        {
+          "file": "brOchevarevarura__Khamas.m4a",
+          "truth": "Kamās",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "b69ebf7304cfecefb6b930dd88b9e1a81d42bddcea11542e19f8ce3afe7774fc",
+          "tonic_fallback": false,
+          "top3": [
+            "Kamās",
+            "Harikāmbhōji",
+            "Bēgaḍa"
+          ],
+          "confidence": 0.9991964634223299
+        },
+        {
+          "file": "brOchevarevarura__Khamas.m4a",
+          "truth": "Kamās",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "b69ebf7304cfecefb6b930dd88b9e1a81d42bddcea11542e19f8ce3afe7774fc",
+          "tonic_fallback": false,
+          "top3": [
+            "Kamās",
+            "Bēgaḍa",
+            "Harikāmbhōji"
+          ],
+          "confidence": 0.995319093920944
+        },
+        {
+          "file": "brOchevarevarura__Khamas.m4a",
+          "truth": "Kamās",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "b69ebf7304cfecefb6b930dd88b9e1a81d42bddcea11542e19f8ce3afe7774fc",
+          "tonic_fallback": false,
+          "top3": [
+            "Kamās",
+            "Nāṭakurinji",
+            "Kāṁbhōji"
+          ],
+          "confidence": 0.9821532487948598
+        },
+        {
+          "file": "chakkani rAja__Kharaharapriya.m4a",
+          "truth": "Karaharapriya",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "6d063d324e93163efc7aab40c5bccb596fc09761dc7ca3dd9148265deb095902",
+          "tonic_fallback": false,
+          "top3": [
+            "Karaharapriya",
+            "Hussēnī",
+            "Kānaḍa"
+          ],
+          "confidence": 0.6068383969286566
+        },
+        {
+          "file": "chakkani rAja__Kharaharapriya.m4a",
+          "truth": "Karaharapriya",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "6d063d324e93163efc7aab40c5bccb596fc09761dc7ca3dd9148265deb095902",
+          "tonic_fallback": false,
+          "top3": [
+            "Karaharapriya",
+            "Hussēnī",
+            "Rītigauḷa"
+          ],
+          "confidence": 0.5735372205203874
+        },
+        {
+          "file": "chakkani rAja__Kharaharapriya.m4a",
+          "truth": "Karaharapriya",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "6d063d324e93163efc7aab40c5bccb596fc09761dc7ca3dd9148265deb095902",
+          "tonic_fallback": false,
+          "top3": [
+            "Karaharapriya",
+            "Ānandabhairavi",
+            "Hussēnī"
+          ],
+          "confidence": 0.4550398698527053
+        },
+        {
+          "file": "entara__Harikambhoji.m4a",
+          "truth": "Harikāmbhōji",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "1a94935e6cd4e5eb89e3ddeb15bb5719ffcda0b8c645ca50623c04e640caa470",
+          "tonic_fallback": false,
+          "top3": [
+            "Harikāmbhōji",
+            "Kamās",
+            "Sahānā"
+          ],
+          "confidence": 0.447837573040406
+        },
+        {
+          "file": "entara__Harikambhoji.m4a",
+          "truth": "Harikāmbhōji",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "1a94935e6cd4e5eb89e3ddeb15bb5719ffcda0b8c645ca50623c04e640caa470",
+          "tonic_fallback": false,
+          "top3": [
+            "Harikāmbhōji",
+            "Kamās",
+            "Sahānā"
+          ],
+          "confidence": 0.4393131902681792
+        },
+        {
+          "file": "entara__Harikambhoji.m4a",
+          "truth": "Harikāmbhōji",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "1a94935e6cd4e5eb89e3ddeb15bb5719ffcda0b8c645ca50623c04e640caa470",
+          "tonic_fallback": false,
+          "top3": [
+            "Harikāmbhōji",
+            "Kamās",
+            "Sahānā"
+          ],
+          "confidence": 0.4200072678578906
+        },
+        {
+          "file": "himAdrisutE__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "mix",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "14fe06c85855ea3bdf60fca9ab30e4f822b85709408aa4895db9a066f1493ae1",
+          "tonic_fallback": false,
+          "top3": [
+            "Śankarābharaṇaṁ",
+            "Kalyāṇi",
+            "Yadukula kāṁbōji"
+          ],
+          "confidence": 0.900941211648846
+        },
+        {
+          "file": "himAdrisutE__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "14fe06c85855ea3bdf60fca9ab30e4f822b85709408aa4895db9a066f1493ae1",
+          "tonic_fallback": false,
+          "top3": [
+            "Śankarābharaṇaṁ",
+            "Kalyāṇi",
+            "Yadukula kāṁbōji"
+          ],
+          "confidence": 0.900941211648846
+        },
+        {
+          "file": "himAdrisutE__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "14fe06c85855ea3bdf60fca9ab30e4f822b85709408aa4895db9a066f1493ae1",
+          "tonic_fallback": false,
+          "top3": [
+            "Śankarābharaṇaṁ",
+            "Kalyāṇi",
+            "Dēvagāndhāri"
+          ],
+          "confidence": 0.8303773237690883
+        },
+        {
+          "file": "nagumomu ganaleni__Saveri.m4a",
+          "truth": "Sāvēri",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "913952224d4a56c1287282e0a8a02ddcba8f042a67ee4e3086d0f9b1eb1ef645",
+          "tonic_fallback": false,
+          "top3": [
+            "Ānandabhairavi",
+            "Kāṁbhōji",
+            "Sahānā"
+          ],
+          "confidence": 0.30344343373235133
+        },
+        {
+          "file": "nagumomu ganaleni__Saveri.m4a",
+          "truth": "Sāvēri",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "913952224d4a56c1287282e0a8a02ddcba8f042a67ee4e3086d0f9b1eb1ef645",
+          "tonic_fallback": false,
+          "top3": [
+            "Ānandabhairavi",
+            "Kāṁbhōji",
+            "Sahānā"
+          ],
+          "confidence": 0.36239172434176536
+        },
+        {
+          "file": "nagumomu ganaleni__Saveri.m4a",
+          "truth": "Sāvēri",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "913952224d4a56c1287282e0a8a02ddcba8f042a67ee4e3086d0f9b1eb1ef645",
+          "tonic_fallback": false,
+          "top3": [
+            "Ānandabhairavi",
+            "Kāṁbhōji",
+            "Sahānā"
+          ],
+          "confidence": 0.33344525676319303
+        },
+        {
+          "file": "nannu pAlimpa__Mōhanaṁ.mp3",
+          "truth": "Mōhanaṁ",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a3406f4961a33b0bc9469c575165faacca26f9ecabcfb42e0d7a60d35fb16729",
+          "tonic_fallback": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Harikāmbhōji",
+            "Bilahari"
+          ],
+          "confidence": 0.9169228959390433
+        },
+        {
+          "file": "nannu pAlimpa__Mōhanaṁ.mp3",
+          "truth": "Mōhanaṁ",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a3406f4961a33b0bc9469c575165faacca26f9ecabcfb42e0d7a60d35fb16729",
+          "tonic_fallback": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Harikāmbhōji",
+            "Bilahari"
+          ],
+          "confidence": 0.9670366397746536
+        },
+        {
+          "file": "nannu pAlimpa__Mōhanaṁ.mp3",
+          "truth": "Mōhanaṁ",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a3406f4961a33b0bc9469c575165faacca26f9ecabcfb42e0d7a60d35fb16729",
+          "tonic_fallback": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Harikāmbhōji",
+            "Bilahari"
+          ],
+          "confidence": 0.8079278112100406
+        },
+        {
+          "file": "nidhi chAla sukhamA__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a3217c629e243e8e1effa1b7f4c54e6ab601bc9a8c3e5a7fc32d5a32e2a36207",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Behāg",
+            "Sahānā"
+          ],
+          "confidence": 0.9318160277650206
+        },
+        {
+          "file": "nidhi chAla sukhamA__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a3217c629e243e8e1effa1b7f4c54e6ab601bc9a8c3e5a7fc32d5a32e2a36207",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Behāg",
+            "Sahānā"
+          ],
+          "confidence": 0.9318160277650206
+        },
+        {
+          "file": "nidhi chAla sukhamA__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a3217c629e243e8e1effa1b7f4c54e6ab601bc9a8c3e5a7fc32d5a32e2a36207",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Behāg",
+            "Sahānā"
+          ],
+          "confidence": 0.9165305575780607
+        },
+        {
+          "file": "rAma nannu brOvara__Harikambhoji.m4a",
+          "truth": "Harikāmbhōji",
+          "arm": "mix",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "01357259bbcaf4e00edddf7c37de312ddf545715467b529f79e440f130d1b4dd",
+          "tonic_fallback": false,
+          "top3": [
+            "Kamās",
+            "Harikāmbhōji",
+            "Kāṁbhōji"
+          ],
+          "confidence": 0.8910251880557967
+        },
+        {
+          "file": "rAma nannu brOvara__Harikambhoji.m4a",
+          "truth": "Harikāmbhōji",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "01357259bbcaf4e00edddf7c37de312ddf545715467b529f79e440f130d1b4dd",
+          "tonic_fallback": false,
+          "top3": [
+            "Kamās",
+            "Harikāmbhōji",
+            "Sāma"
+          ],
+          "confidence": 0.8688733361225409
+        },
+        {
+          "file": "rAma nannu brOvara__Harikambhoji.m4a",
+          "truth": "Harikāmbhōji",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "01357259bbcaf4e00edddf7c37de312ddf545715467b529f79e440f130d1b4dd",
+          "tonic_fallback": false,
+          "top3": [
+            "Karaharapriya",
+            "Kamās",
+            "Pūrvīkaḷyāṇi"
+          ],
+          "confidence": 0.23705369194217815
+        },
+        {
+          "file": "rAma nee__Karaharapriya.m4a",
+          "truth": "Karaharapriya",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "335a50cb84b78e790b95c9632ede3f4b224b9f4dd092e70eef898a64a56119aa",
+          "tonic_fallback": false,
+          "top3": [
+            "Sencuruṭṭi",
+            "Ānandabhairavi",
+            "Suraṭi"
+          ],
+          "confidence": 0.18289292788204406
+        },
+        {
+          "file": "rAma nee__Karaharapriya.m4a",
+          "truth": "Karaharapriya",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "335a50cb84b78e790b95c9632ede3f4b224b9f4dd092e70eef898a64a56119aa",
+          "tonic_fallback": false,
+          "top3": [
+            "Sencuruṭṭi",
+            "Ānandabhairavi",
+            "Aṭāna"
+          ],
+          "confidence": 0.1649553181726716
+        },
+        {
+          "file": "rAma nee__Karaharapriya.m4a",
+          "truth": "Karaharapriya",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "335a50cb84b78e790b95c9632ede3f4b224b9f4dd092e70eef898a64a56119aa",
+          "tonic_fallback": false,
+          "top3": [
+            "Suraṭi",
+            "Ānandabhairavi",
+            "Sencuruṭṭi"
+          ],
+          "confidence": 0.249784750978593
+        },
+        {
+          "file": "raghuvara__Kamavardani.m4a",
+          "truth": "Kāmavardani",
+          "arm": "mix",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "09e66e1d0108e84debee782f76b10788334aee9b5a5b0a1b5f02f58a15768138",
+          "tonic_fallback": false,
+          "top3": [
+            "Varāḷi",
+            "Kāmavardani",
+            "Gauḷa"
+          ],
+          "confidence": 0.6122734423281436
+        },
+        {
+          "file": "raghuvara__Kamavardani.m4a",
+          "truth": "Kāmavardani",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "09e66e1d0108e84debee782f76b10788334aee9b5a5b0a1b5f02f58a15768138",
+          "tonic_fallback": false,
+          "top3": [
+            "Varāḷi",
+            "Kāmavardani",
+            "Gauḷa"
+          ],
+          "confidence": 0.6102794035732726
+        },
+        {
+          "file": "raghuvara__Kamavardani.m4a",
+          "truth": "Kāmavardani",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "09e66e1d0108e84debee782f76b10788334aee9b5a5b0a1b5f02f58a15768138",
+          "tonic_fallback": false,
+          "top3": [
+            "Kāmavardani",
+            "Varāḷi",
+            "Sāvēri"
+          ],
+          "confidence": 0.982587253056607
+        },
+        {
+          "file": "sarOja daLa nEtri__Śankarābharaṇaṁ.mp3",
+          "truth": "Śankarābharaṇaṁ",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "682b3e61a9d393a48f9b08c8b999f8636905de984362584a693e12feea1170ba",
+          "tonic_fallback": false,
+          "top3": [
+            "Śankarābharaṇaṁ",
+            "Bēgaḍa",
+            "Bilahari"
+          ],
+          "confidence": 0.7132810239017325
+        },
+        {
+          "file": "sarOja daLa nEtri__Śankarābharaṇaṁ.mp3",
+          "truth": "Śankarābharaṇaṁ",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "682b3e61a9d393a48f9b08c8b999f8636905de984362584a693e12feea1170ba",
+          "tonic_fallback": false,
+          "top3": [
+            "Śankarābharaṇaṁ",
+            "Bēgaḍa",
+            "Mōhanaṁ"
+          ],
+          "confidence": 0.6316897410617051
+        },
+        {
+          "file": "sarOja daLa nEtri__Śankarābharaṇaṁ.mp3",
+          "truth": "Śankarābharaṇaṁ",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "682b3e61a9d393a48f9b08c8b999f8636905de984362584a693e12feea1170ba",
+          "tonic_fallback": false,
+          "top3": [
+            "Bēgaḍa",
+            "Śankarābharaṇaṁ",
+            "Kalyāṇi"
+          ],
+          "confidence": 0.7022605157152528
+        },
+        {
+          "file": "sarasijanAba murArE__Tōḍi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "fd1932523c639811ecc85f5d5e2cb7632699f857bddace6cb206e3d2c150898f",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Māyāmāḷavagauḷa",
+            "Bhairavi"
+          ],
+          "confidence": 0.5135746515561231
+        },
+        {
+          "file": "sarasijanAba murArE__Tōḍi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "fd1932523c639811ecc85f5d5e2cb7632699f857bddace6cb206e3d2c150898f",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Māyāmāḷavagauḷa",
+            "Bhairavi"
+          ],
+          "confidence": 0.4413520991059104
+        },
+        {
+          "file": "sarasijanAba murArE__Tōḍi.mp3",
+          "truth": "Tōḍi",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "fd1932523c639811ecc85f5d5e2cb7632699f857bddace6cb206e3d2c150898f",
+          "tonic_fallback": false,
+          "top3": [
+            "Māyāmāḷavagauḷa",
+            "Tōḍi",
+            "Behāg"
+          ],
+          "confidence": 0.47203622803923045
+        },
+        {
+          "file": "siddhi vinAyakam__Shanmukhapriya.m4a",
+          "truth": "Ṣanmukhapriya",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "94ef50d6f70fb89b6bb33aca2e0d77e87b199916d3628ea05613fc1552caa6f6",
+          "tonic_fallback": false,
+          "top3": [
+            "Ṣanmukhapriya",
+            "Varāḷi",
+            "Tōḍi"
+          ],
+          "confidence": 0.9977784599321357
+        },
+        {
+          "file": "siddhi vinAyakam__Shanmukhapriya.m4a",
+          "truth": "Ṣanmukhapriya",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "94ef50d6f70fb89b6bb33aca2e0d77e87b199916d3628ea05613fc1552caa6f6",
+          "tonic_fallback": false,
+          "top3": [
+            "Ṣanmukhapriya",
+            "Varāḷi",
+            "Tōḍi"
+          ],
+          "confidence": 0.9967540838621847
+        },
+        {
+          "file": "siddhi vinAyakam__Shanmukhapriya.m4a",
+          "truth": "Ṣanmukhapriya",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "94ef50d6f70fb89b6bb33aca2e0d77e87b199916d3628ea05613fc1552caa6f6",
+          "tonic_fallback": false,
+          "top3": [
+            "Ṣanmukhapriya",
+            "Varāḷi",
+            "Bhairavi"
+          ],
+          "confidence": 0.9980742046074607
+        },
+        {
+          "file": "swAminatha__Nata.m4a",
+          "truth": "Nāṭa",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "c31b0f5e0dc5251e0371a3cc1f548e4022387f307361fb7facefb80ea559e85f",
+          "tonic_fallback": false,
+          "top3": [
+            "Nāṭa",
+            "Sāma",
+            "Kāpi"
+          ],
+          "confidence": 0.9979795009745467
+        },
+        {
+          "file": "swAminatha__Nata.m4a",
+          "truth": "Nāṭa",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "c31b0f5e0dc5251e0371a3cc1f548e4022387f307361fb7facefb80ea559e85f",
+          "tonic_fallback": false,
+          "top3": [
+            "Nāṭa",
+            "Sāma",
+            "Kāpi"
+          ],
+          "confidence": 0.9980492311800228
+        },
+        {
+          "file": "swAminatha__Nata.m4a",
+          "truth": "Nāṭa",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "c31b0f5e0dc5251e0371a3cc1f548e4022387f307361fb7facefb80ea559e85f",
+          "tonic_fallback": false,
+          "top3": [
+            "Nāṭa",
+            "Sāma",
+            "Kāpi"
+          ],
+          "confidence": 0.9977908148958381
+        },
+        {
+          "file": "vAtApi gaNapathim__Hamsadhvāni.mp3",
+          "truth": "Hamsadhvāni",
+          "arm": "mix",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": false,
+          "feature_sha256": "44265822332e89efe4be440a0b0ea3db39e99f2e64d56f584a472e5aeabe760c",
+          "tonic_fallback": false,
+          "top3": [
+            "Sahānā",
+            "Sencuruṭṭi",
+            "Kamās"
+          ],
+          "confidence": 0.6686865525124878
+        },
+        {
+          "file": "vAtApi gaNapathim__Hamsadhvāni.mp3",
+          "truth": "Hamsadhvāni",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": false,
+          "feature_sha256": "44265822332e89efe4be440a0b0ea3db39e99f2e64d56f584a472e5aeabe760c",
+          "tonic_fallback": false,
+          "top3": [
+            "Sahānā",
+            "Sencuruṭṭi",
+            "Kamās"
+          ],
+          "confidence": 0.6686865525124878
+        },
+        {
+          "file": "vAtApi gaNapathim__Hamsadhvāni.mp3",
+          "truth": "Hamsadhvāni",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": false,
+          "feature_sha256": "44265822332e89efe4be440a0b0ea3db39e99f2e64d56f584a472e5aeabe760c",
+          "tonic_fallback": false,
+          "top3": [
+            "Sahānā",
+            "Sencuruṭṭi",
+            "Kamās"
+          ],
+          "confidence": 0.5384851840041085
+        },
+        {
+          "file": "yArO ivar yArO__Bhairavi.m4a",
+          "truth": "Bhairavi",
+          "arm": "mix",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "85d7d1a9b28451f416ff113f440ac76c1c12644555821f7d03db2e8dd5eb5ba1",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Śrī",
+            "Varāḷi"
+          ],
+          "confidence": 0.5722309216989602
+        },
+        {
+          "file": "yArO ivar yArO__Bhairavi.m4a",
+          "truth": "Bhairavi",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "85d7d1a9b28451f416ff113f440ac76c1c12644555821f7d03db2e8dd5eb5ba1",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Śrī",
+            "Bhairavi"
+          ],
+          "confidence": 0.4427283305705721
+        },
+        {
+          "file": "yArO ivar yArO__Bhairavi.m4a",
+          "truth": "Bhairavi",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "85d7d1a9b28451f416ff113f440ac76c1c12644555821f7d03db2e8dd5eb5ba1",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Bhairavi",
+            "Sāvēri"
+          ],
+          "confidence": 0.46499591178109995
+        },
+        {
+          "file": "yEnATi mOmu palamu__Bhairavi.m4a",
+          "truth": "Bhairavi",
+          "arm": "mix",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "74c055085e554d7852a15828494d6e7021bae1322d053b88d038f8f61ac1518b",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Kānaḍa",
+            "Bhairavi"
+          ],
+          "confidence": 0.7855493237082654
+        },
+        {
+          "file": "yEnATi mOmu palamu__Bhairavi.m4a",
+          "truth": "Bhairavi",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "74c055085e554d7852a15828494d6e7021bae1322d053b88d038f8f61ac1518b",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Kānaḍa",
+            "Bhairavi"
+          ],
+          "confidence": 0.8531327818633001
+        },
+        {
+          "file": "yEnATi mOmu palamu__Bhairavi.m4a",
+          "truth": "Bhairavi",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "74c055085e554d7852a15828494d6e7021bae1322d053b88d038f8f61ac1518b",
+          "tonic_fallback": false,
+          "top3": [
+            "Bhairavi",
+            "Mukhāri",
+            "Kānaḍa"
+          ],
+          "confidence": 0.4834880693270254
+        }
+      ]
+    },
+    "data/overhaul/combined/raga_ridge.joblib": {
+      "model_sha256": "8c28ee71b493a628b254d0ea4a032a742121f372ec0c8d9cd6d2c94fa2c894e5",
+      "summary": {
+        "mix": {
+          "n": 29,
+          "correct": 15,
+          "top1": 0.5172413793103449,
+          "n_answered": 29,
+          "n_accepted": 17,
+          "accepted_precision": 0.7058823529411765
+        },
+        "mix_voiceband": {
+          "n": 29,
+          "correct": 16,
+          "top1": 0.5517241379310345,
+          "n_answered": 29,
+          "n_accepted": 18,
+          "accepted_precision": 0.7222222222222222
+        },
+        "demucs": {
+          "n": 29,
+          "correct": 14,
+          "top1": 0.4827586206896552,
+          "n_answered": 29,
+          "n_accepted": 12,
+          "accepted_precision": 0.75
+        }
+      },
+      "rows": [
+        {
+          "file": "Amba Kamakshi__Bhairavi.mp3",
+          "truth": "Bhairavi",
+          "arm": "mix",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a947203c2de247eaef85663c7f86216548e4aa7eccb6af161068c14f8f0b2de7",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Bhairavi",
+            "Kānaḍa"
+          ],
+          "confidence": 0.6093184703520752
+        },
+        {
+          "file": "Amba Kamakshi__Bhairavi.mp3",
+          "truth": "Bhairavi",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a947203c2de247eaef85663c7f86216548e4aa7eccb6af161068c14f8f0b2de7",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Bhairavi",
+            "Hussēnī"
+          ],
+          "confidence": 0.6165359836313811
+        },
+        {
+          "file": "Amba Kamakshi__Bhairavi.mp3",
+          "truth": "Bhairavi",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a947203c2de247eaef85663c7f86216548e4aa7eccb6af161068c14f8f0b2de7",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Bhairavi",
+            "Sahānā"
+          ],
+          "confidence": 0.23229814236595325
+        },
+        {
+          "file": "Enu Dhanyalo Lakumi__Todi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "d5dba6d504206791d299bf74f7eaa0000859f80af29772a89f4f64b3e5cfa543",
+          "tonic_fallback": false,
+          "top3": [
+            "Dhanyāsi",
+            "Tōḍi",
+            "Rītigauḷa"
+          ],
+          "confidence": 0.1770227443986972
+        },
+        {
+          "file": "Enu Dhanyalo Lakumi__Todi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "d5dba6d504206791d299bf74f7eaa0000859f80af29772a89f4f64b3e5cfa543",
+          "tonic_fallback": false,
+          "top3": [
+            "Dhanyāsi",
+            "Tōḍi",
+            "Rītigauḷa"
+          ],
+          "confidence": 0.18166432495496593
+        },
+        {
+          "file": "Enu Dhanyalo Lakumi__Todi.mp3",
+          "truth": "Tōḍi",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "d5dba6d504206791d299bf74f7eaa0000859f80af29772a89f4f64b3e5cfa543",
+          "tonic_fallback": false,
+          "top3": [
+            "Dhanyāsi",
+            "Tōḍi",
+            "Rītigauḷa"
+          ],
+          "confidence": 0.1863592230998118
+        },
+        {
+          "file": "Jagadanandakaraka__Nata.m4a",
+          "truth": "Nāṭa",
+          "arm": "mix",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "5f31eed3c33e91cdbc9a1100ce288ec63eb082feb4485d41d0a60b848dc719d2",
+          "tonic_fallback": false,
+          "top3": [
+            "Bṛndāvana sāranga",
+            "Nāṭa",
+            "Hamsadhvāni"
+          ],
+          "confidence": 0.5100837693448094
+        },
+        {
+          "file": "Jagadanandakaraka__Nata.m4a",
+          "truth": "Nāṭa",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "5f31eed3c33e91cdbc9a1100ce288ec63eb082feb4485d41d0a60b848dc719d2",
+          "tonic_fallback": false,
+          "top3": [
+            "Nāṭa",
+            "Bṛndāvana sāranga",
+            "Śrī"
+          ],
+          "confidence": 0.8224827576114425
+        },
+        {
+          "file": "Jagadanandakaraka__Nata.m4a",
+          "truth": "Nāṭa",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "5f31eed3c33e91cdbc9a1100ce288ec63eb082feb4485d41d0a60b848dc719d2",
+          "tonic_fallback": false,
+          "top3": [
+            "Bṛndāvana sāranga",
+            "Nāṭa",
+            "Hamsadhvāni"
+          ],
+          "confidence": 0.3757601468087712
+        },
+        {
+          "file": "Kaddanuvariki__Todi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "0e712fcca8b8754db905024359e138ff161087a70f612c8d373e90fd38484408",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Bilahari",
+            "Madhyamāvati"
+          ],
+          "confidence": 0.8780033645323557
+        },
+        {
+          "file": "Kaddanuvariki__Todi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "0e712fcca8b8754db905024359e138ff161087a70f612c8d373e90fd38484408",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Bilahari",
+            "Madhyamāvati"
+          ],
+          "confidence": 0.8802704323696537
+        },
+        {
+          "file": "Kaddanuvariki__Todi.mp3",
+          "truth": "Tōḍi",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "0e712fcca8b8754db905024359e138ff161087a70f612c8d373e90fd38484408",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Dhanyāsi",
+            "Bilahari"
+          ],
+          "confidence": 0.8922682870364644
+        },
+        {
+          "file": "Koluvamaregada kodandapani__Tōḍi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "f4dff6969478ee35003257f09462a4db8bbda0ca45268f521d85c08db6e4f66a",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Dhanyāsi",
+            "Puṇṇāgavarāḷi"
+          ],
+          "confidence": 0.6654632103890361
+        },
+        {
+          "file": "Koluvamaregada kodandapani__Tōḍi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "f4dff6969478ee35003257f09462a4db8bbda0ca45268f521d85c08db6e4f66a",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Dhanyāsi",
+            "Puṇṇāgavarāḷi"
+          ],
+          "confidence": 0.6640826744112269
+        },
+        {
+          "file": "Koluvamaregada kodandapani__Tōḍi.mp3",
+          "truth": "Tōḍi",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "f4dff6969478ee35003257f09462a4db8bbda0ca45268f521d85c08db6e4f66a",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Māyāmāḷavagauḷa",
+            "Sāvēri"
+          ],
+          "confidence": 0.4059721951495935
+        },
+        {
+          "file": "Maithreem Bhajata__Kalyani__OOC.mp3",
+          "truth": "Kalyāṇi",
+          "arm": "mix",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "9b14e571cf3b021ce474ad3f047e9f18f93bb2a0d203178e0c0ce139c56e888e",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Bilahari",
+            "Behāg"
+          ],
+          "confidence": 0.18575429836541912
+        },
+        {
+          "file": "Maithreem Bhajata__Kalyani__OOC.mp3",
+          "truth": "Kalyāṇi",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "9b14e571cf3b021ce474ad3f047e9f18f93bb2a0d203178e0c0ce139c56e888e",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Behāg",
+            "Bilahari"
+          ],
+          "confidence": 0.17871133983957788
+        },
+        {
+          "file": "Maithreem Bhajata__Kalyani__OOC.mp3",
+          "truth": "Kalyāṇi",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "9b14e571cf3b021ce474ad3f047e9f18f93bb2a0d203178e0c0ce139c56e888e",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Bilahari",
+            "Behāg"
+          ],
+          "confidence": 0.11964933207627046
+        },
+        {
+          "file": "Ninnukori Yunnanura__Mohanam.m4a",
+          "truth": "Mōhanaṁ",
+          "arm": "mix",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a77b3e5311bc1d63ac5f6ff46e979a917ed0d957b9ec87f10a0cae15d3854a30",
+          "tonic_fallback": false,
+          "top3": [
+            "Hindōḷaṁ",
+            "Śuddadhanyāsi",
+            "Sindhubhairavi"
+          ],
+          "confidence": 0.9982325475424021
+        },
+        {
+          "file": "Ninnukori Yunnanura__Mohanam.m4a",
+          "truth": "Mōhanaṁ",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a77b3e5311bc1d63ac5f6ff46e979a917ed0d957b9ec87f10a0cae15d3854a30",
+          "tonic_fallback": false,
+          "top3": [
+            "Hindōḷaṁ",
+            "Śuddadhanyāsi",
+            "Kāpi"
+          ],
+          "confidence": 0.9977663358621428
+        },
+        {
+          "file": "Ninnukori Yunnanura__Mohanam.m4a",
+          "truth": "Mōhanaṁ",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a77b3e5311bc1d63ac5f6ff46e979a917ed0d957b9ec87f10a0cae15d3854a30",
+          "tonic_fallback": false,
+          "top3": [
+            "Hindōḷaṁ",
+            "Śuddadhanyāsi",
+            "Sindhubhairavi"
+          ],
+          "confidence": 0.998532790674225
+        },
+        {
+          "file": "Pillangoviya__Mohanam.mp3",
+          "truth": "Mōhanaṁ",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "9dbd27f3d0c94623f7fae750b7569207e94df002ec869ce12498c8a89f7ee252",
+          "tonic_fallback": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Behāg",
+            "Bilahari"
+          ],
+          "confidence": 0.8668168090588115
+        },
+        {
+          "file": "Pillangoviya__Mohanam.mp3",
+          "truth": "Mōhanaṁ",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "9dbd27f3d0c94623f7fae750b7569207e94df002ec869ce12498c8a89f7ee252",
+          "tonic_fallback": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Behāg",
+            "Bilahari"
+          ],
+          "confidence": 0.8668168090588115
+        },
+        {
+          "file": "Pillangoviya__Mohanam.mp3",
+          "truth": "Mōhanaṁ",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "9dbd27f3d0c94623f7fae750b7569207e94df002ec869ce12498c8a89f7ee252",
+          "tonic_fallback": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Behāg",
+            "Bilahari"
+          ],
+          "confidence": 0.7471110680593901
+        },
+        {
+          "file": "Ranga Baro__Sindhu Bhairavi.mp3",
+          "truth": "Sindhubhairavi",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "960e12e284c49e75a3fbc6c5536ab4ca2b2ece9bb7d6dc3ff84abb5c46c7c293",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Kānaḍa",
+            "Śuddadhanyāsi"
+          ],
+          "confidence": 0.18041457949095505
+        },
+        {
+          "file": "Ranga Baro__Sindhu Bhairavi.mp3",
+          "truth": "Sindhubhairavi",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "960e12e284c49e75a3fbc6c5536ab4ca2b2ece9bb7d6dc3ff84abb5c46c7c293",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Kānaḍa",
+            "Sāvēri"
+          ],
+          "confidence": 0.3896457615045699
+        },
+        {
+          "file": "Ranga Baro__Sindhu Bhairavi.mp3",
+          "truth": "Sindhubhairavi",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "960e12e284c49e75a3fbc6c5536ab4ca2b2ece9bb7d6dc3ff84abb5c46c7c293",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Kānaḍa",
+            "Śuddadhanyāsi"
+          ],
+          "confidence": 0.4931272850101393
+        },
+        {
+          "file": "Thaye Yashoda__Todi__OOC.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "edf941a7c5184b672440efbd64c0df1a846ff7bee750ee0e715a39838d7b3a18",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Sāvēri",
+            "Cakravākaṁ"
+          ],
+          "confidence": 0.5529492161619401
+        },
+        {
+          "file": "Thaye Yashoda__Todi__OOC.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "edf941a7c5184b672440efbd64c0df1a846ff7bee750ee0e715a39838d7b3a18",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Cakravākaṁ",
+            "Sāvēri"
+          ],
+          "confidence": 0.5480242345679179
+        },
+        {
+          "file": "Thaye Yashoda__Todi__OOC.mp3",
+          "truth": "Tōḍi",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "edf941a7c5184b672440efbd64c0df1a846ff7bee750ee0e715a39838d7b3a18",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Cakravākaṁ",
+            "Dhanyāsi"
+          ],
+          "confidence": 0.372198340773857
+        },
+        {
+          "file": "bhajarE bhaja mAnasa__Kanada.m4a",
+          "truth": "Kānaḍa",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "f808151ea2ad89c8e2149537ee1c47b88a9a40b17f87e806d0bfce6964775a7b",
+          "tonic_fallback": false,
+          "top3": [
+            "Pūrvīkaḷyāṇi",
+            "Dhanyāsi",
+            "Tōḍi"
+          ],
+          "confidence": 0.16229686807408425
+        },
+        {
+          "file": "bhajarE bhaja mAnasa__Kanada.m4a",
+          "truth": "Kānaḍa",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "f808151ea2ad89c8e2149537ee1c47b88a9a40b17f87e806d0bfce6964775a7b",
+          "tonic_fallback": false,
+          "top3": [
+            "Dhanyāsi",
+            "Pūrvīkaḷyāṇi",
+            "Ānandabhairavi"
+          ],
+          "confidence": 0.2417510861284073
+        },
+        {
+          "file": "bhajarE bhaja mAnasa__Kanada.m4a",
+          "truth": "Kānaḍa",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "f808151ea2ad89c8e2149537ee1c47b88a9a40b17f87e806d0bfce6964775a7b",
+          "tonic_fallback": false,
+          "top3": [
+            "Dhanyāsi",
+            "Haṁsānandi",
+            "Vasanta"
+          ],
+          "confidence": 0.059969822758190364
+        },
+        {
+          "file": "bhajare__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "eb9db44a7b8f67be0e17f672542415bf2e54abcc0137bdaec84b58bb78d7e996",
+          "tonic_fallback": false,
+          "top3": [
+            "Śankarābharaṇaṁ",
+            "Sahānā",
+            "Māyāmāḷavagauḷa"
+          ],
+          "confidence": 0.3296370619527084
+        },
+        {
+          "file": "bhajare__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "eb9db44a7b8f67be0e17f672542415bf2e54abcc0137bdaec84b58bb78d7e996",
+          "tonic_fallback": false,
+          "top3": [
+            "Śankarābharaṇaṁ",
+            "Māyāmāḷavagauḷa",
+            "Sahānā"
+          ],
+          "confidence": 0.3959989337509377
+        },
+        {
+          "file": "bhajare__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "eb9db44a7b8f67be0e17f672542415bf2e54abcc0137bdaec84b58bb78d7e996",
+          "tonic_fallback": false,
+          "top3": [
+            "Śankarābharaṇaṁ",
+            "Māyāmāḷavagauḷa",
+            "Sahānā"
+          ],
+          "confidence": 0.296378622385038
+        },
+        {
+          "file": "brOchevarevarura__Khamas.m4a",
+          "truth": "Kamās",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "b69ebf7304cfecefb6b930dd88b9e1a81d42bddcea11542e19f8ce3afe7774fc",
+          "tonic_fallback": false,
+          "top3": [
+            "Kamās",
+            "Bēgaḍa",
+            "Harikāmbhōji"
+          ],
+          "confidence": 0.9956997541885305
+        },
+        {
+          "file": "brOchevarevarura__Khamas.m4a",
+          "truth": "Kamās",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "b69ebf7304cfecefb6b930dd88b9e1a81d42bddcea11542e19f8ce3afe7774fc",
+          "tonic_fallback": false,
+          "top3": [
+            "Kamās",
+            "Bēgaḍa",
+            "Harikāmbhōji"
+          ],
+          "confidence": 0.9920663885076685
+        },
+        {
+          "file": "brOchevarevarura__Khamas.m4a",
+          "truth": "Kamās",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "b69ebf7304cfecefb6b930dd88b9e1a81d42bddcea11542e19f8ce3afe7774fc",
+          "tonic_fallback": false,
+          "top3": [
+            "Kamās",
+            "Nāṭakurinji",
+            "Harikāmbhōji"
+          ],
+          "confidence": 0.8795629436348021
+        },
+        {
+          "file": "chakkani rAja__Kharaharapriya.m4a",
+          "truth": "Karaharapriya",
+          "arm": "mix",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "6d063d324e93163efc7aab40c5bccb596fc09761dc7ca3dd9148265deb095902",
+          "tonic_fallback": false,
+          "top3": [
+            "Karaharapriya",
+            "Kānaḍa",
+            "Rītigauḷa"
+          ],
+          "confidence": 0.28956763503070754
+        },
+        {
+          "file": "chakkani rAja__Kharaharapriya.m4a",
+          "truth": "Karaharapriya",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "6d063d324e93163efc7aab40c5bccb596fc09761dc7ca3dd9148265deb095902",
+          "tonic_fallback": false,
+          "top3": [
+            "Karaharapriya",
+            "Kānaḍa",
+            "Rītigauḷa"
+          ],
+          "confidence": 0.23607737398901008
+        },
+        {
+          "file": "chakkani rAja__Kharaharapriya.m4a",
+          "truth": "Karaharapriya",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "6d063d324e93163efc7aab40c5bccb596fc09761dc7ca3dd9148265deb095902",
+          "tonic_fallback": false,
+          "top3": [
+            "Karaharapriya",
+            "Rītigauḷa",
+            "Ānandabhairavi"
+          ],
+          "confidence": 0.22963032352673274
+        },
+        {
+          "file": "entara__Harikambhoji.m4a",
+          "truth": "Harikāmbhōji",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "1a94935e6cd4e5eb89e3ddeb15bb5719ffcda0b8c645ca50623c04e640caa470",
+          "tonic_fallback": false,
+          "top3": [
+            "Harikāmbhōji",
+            "Kāṁbhōji",
+            "Sahānā"
+          ],
+          "confidence": 0.9042017183644869
+        },
+        {
+          "file": "entara__Harikambhoji.m4a",
+          "truth": "Harikāmbhōji",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "1a94935e6cd4e5eb89e3ddeb15bb5719ffcda0b8c645ca50623c04e640caa470",
+          "tonic_fallback": false,
+          "top3": [
+            "Harikāmbhōji",
+            "Kāṁbhōji",
+            "Sahānā"
+          ],
+          "confidence": 0.9001290849740625
+        },
+        {
+          "file": "entara__Harikambhoji.m4a",
+          "truth": "Harikāmbhōji",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "1a94935e6cd4e5eb89e3ddeb15bb5719ffcda0b8c645ca50623c04e640caa470",
+          "tonic_fallback": false,
+          "top3": [
+            "Harikāmbhōji",
+            "Kāṁbhōji",
+            "Sahānā"
+          ],
+          "confidence": 0.8856724525755536
+        },
+        {
+          "file": "himAdrisutE__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "14fe06c85855ea3bdf60fca9ab30e4f822b85709408aa4895db9a066f1493ae1",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Śankarābharaṇaṁ",
+            "Dēvagāndhāri"
+          ],
+          "confidence": 0.45546523787573284
+        },
+        {
+          "file": "himAdrisutE__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "14fe06c85855ea3bdf60fca9ab30e4f822b85709408aa4895db9a066f1493ae1",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Śankarābharaṇaṁ",
+            "Dēvagāndhāri"
+          ],
+          "confidence": 0.45546523787573284
+        },
+        {
+          "file": "himAdrisutE__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "14fe06c85855ea3bdf60fca9ab30e4f822b85709408aa4895db9a066f1493ae1",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Śankarābharaṇaṁ",
+            "Dēvagāndhāri"
+          ],
+          "confidence": 0.49718769976387717
+        },
+        {
+          "file": "nagumomu ganaleni__Saveri.m4a",
+          "truth": "Sāvēri",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "913952224d4a56c1287282e0a8a02ddcba8f042a67ee4e3086d0f9b1eb1ef645",
+          "tonic_fallback": false,
+          "top3": [
+            "Ānandabhairavi",
+            "Kāṁbhōji",
+            "Dēvagāndhāri"
+          ],
+          "confidence": 0.14383929763089187
+        },
+        {
+          "file": "nagumomu ganaleni__Saveri.m4a",
+          "truth": "Sāvēri",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "913952224d4a56c1287282e0a8a02ddcba8f042a67ee4e3086d0f9b1eb1ef645",
+          "tonic_fallback": false,
+          "top3": [
+            "Ānandabhairavi",
+            "Kāṁbhōji",
+            "Dēvagāndhāri"
+          ],
+          "confidence": 0.1742862524261894
+        },
+        {
+          "file": "nagumomu ganaleni__Saveri.m4a",
+          "truth": "Sāvēri",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "913952224d4a56c1287282e0a8a02ddcba8f042a67ee4e3086d0f9b1eb1ef645",
+          "tonic_fallback": false,
+          "top3": [
+            "Ānandabhairavi",
+            "Kāṁbhōji",
+            "Pūrṇacandrika"
+          ],
+          "confidence": 0.1037445427344706
+        },
+        {
+          "file": "nannu pAlimpa__Mōhanaṁ.mp3",
+          "truth": "Mōhanaṁ",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a3406f4961a33b0bc9469c575165faacca26f9ecabcfb42e0d7a60d35fb16729",
+          "tonic_fallback": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Bēgaḍa",
+            "Kāṁbhōji"
+          ],
+          "confidence": 0.653134179163298
+        },
+        {
+          "file": "nannu pAlimpa__Mōhanaṁ.mp3",
+          "truth": "Mōhanaṁ",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a3406f4961a33b0bc9469c575165faacca26f9ecabcfb42e0d7a60d35fb16729",
+          "tonic_fallback": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Bēgaḍa",
+            "Harikāmbhōji"
+          ],
+          "confidence": 0.886575226960394
+        },
+        {
+          "file": "nannu pAlimpa__Mōhanaṁ.mp3",
+          "truth": "Mōhanaṁ",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a3406f4961a33b0bc9469c575165faacca26f9ecabcfb42e0d7a60d35fb16729",
+          "tonic_fallback": false,
+          "top3": [
+            "Mōhanaṁ",
+            "Bēgaḍa",
+            "Harikāmbhōji"
+          ],
+          "confidence": 0.38769416865472756
+        },
+        {
+          "file": "nidhi chAla sukhamA__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a3217c629e243e8e1effa1b7f4c54e6ab601bc9a8c3e5a7fc32d5a32e2a36207",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Aṭāna",
+            "Behāg"
+          ],
+          "confidence": 0.9000744603151117
+        },
+        {
+          "file": "nidhi chAla sukhamA__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a3217c629e243e8e1effa1b7f4c54e6ab601bc9a8c3e5a7fc32d5a32e2a36207",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Aṭāna",
+            "Behāg"
+          ],
+          "confidence": 0.9000744603151117
+        },
+        {
+          "file": "nidhi chAla sukhamA__Kalyani.m4a",
+          "truth": "Kalyāṇi",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "a3217c629e243e8e1effa1b7f4c54e6ab601bc9a8c3e5a7fc32d5a32e2a36207",
+          "tonic_fallback": false,
+          "top3": [
+            "Kalyāṇi",
+            "Behāg",
+            "Aṭāna"
+          ],
+          "confidence": 0.8811875273116949
+        },
+        {
+          "file": "rAma nannu brOvara__Harikambhoji.m4a",
+          "truth": "Harikāmbhōji",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "01357259bbcaf4e00edddf7c37de312ddf545715467b529f79e440f130d1b4dd",
+          "tonic_fallback": false,
+          "top3": [
+            "Kamās",
+            "Harikāmbhōji",
+            "Cakravākaṁ"
+          ],
+          "confidence": 0.40308936833517
+        },
+        {
+          "file": "rAma nannu brOvara__Harikambhoji.m4a",
+          "truth": "Harikāmbhōji",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "01357259bbcaf4e00edddf7c37de312ddf545715467b529f79e440f130d1b4dd",
+          "tonic_fallback": false,
+          "top3": [
+            "Kamās",
+            "Harikāmbhōji",
+            "Cakravākaṁ"
+          ],
+          "confidence": 0.3482759075858445
+        },
+        {
+          "file": "rAma nannu brOvara__Harikambhoji.m4a",
+          "truth": "Harikāmbhōji",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "01357259bbcaf4e00edddf7c37de312ddf545715467b529f79e440f130d1b4dd",
+          "tonic_fallback": false,
+          "top3": [
+            "Kāṁbhōji",
+            "Karaharapriya",
+            "Kamās"
+          ],
+          "confidence": 0.11889254858368534
+        },
+        {
+          "file": "rAma nee__Karaharapriya.m4a",
+          "truth": "Karaharapriya",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "335a50cb84b78e790b95c9632ede3f4b224b9f4dd092e70eef898a64a56119aa",
+          "tonic_fallback": false,
+          "top3": [
+            "Suraṭi",
+            "Puṇṇāgavarāḷi",
+            "Ānandabhairavi"
+          ],
+          "confidence": 0.13289155715363823
+        },
+        {
+          "file": "rAma nee__Karaharapriya.m4a",
+          "truth": "Karaharapriya",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "335a50cb84b78e790b95c9632ede3f4b224b9f4dd092e70eef898a64a56119aa",
+          "tonic_fallback": false,
+          "top3": [
+            "Suraṭi",
+            "Puṇṇāgavarāḷi",
+            "Ānandabhairavi"
+          ],
+          "confidence": 0.14498134600536175
+        },
+        {
+          "file": "rAma nee__Karaharapriya.m4a",
+          "truth": "Karaharapriya",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "335a50cb84b78e790b95c9632ede3f4b224b9f4dd092e70eef898a64a56119aa",
+          "tonic_fallback": false,
+          "top3": [
+            "Suraṭi",
+            "Puṇṇāgavarāḷi",
+            "Janaranjani"
+          ],
+          "confidence": 0.19183027030028277
+        },
+        {
+          "file": "raghuvara__Kamavardani.m4a",
+          "truth": "Kāmavardani",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "09e66e1d0108e84debee782f76b10788334aee9b5a5b0a1b5f02f58a15768138",
+          "tonic_fallback": false,
+          "top3": [
+            "Kāmavardani",
+            "Varāḷi",
+            "Aṭāna"
+          ],
+          "confidence": 0.6494054810301115
+        },
+        {
+          "file": "raghuvara__Kamavardani.m4a",
+          "truth": "Kāmavardani",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "09e66e1d0108e84debee782f76b10788334aee9b5a5b0a1b5f02f58a15768138",
+          "tonic_fallback": false,
+          "top3": [
+            "Kāmavardani",
+            "Varāḷi",
+            "Vasanta"
+          ],
+          "confidence": 0.6321932126032345
+        },
+        {
+          "file": "raghuvara__Kamavardani.m4a",
+          "truth": "Kāmavardani",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "09e66e1d0108e84debee782f76b10788334aee9b5a5b0a1b5f02f58a15768138",
+          "tonic_fallback": false,
+          "top3": [
+            "Kāmavardani",
+            "Varāḷi",
+            "Latāngi"
+          ],
+          "confidence": 0.9605999506474105
+        },
+        {
+          "file": "sarOja daLa nEtri__Śankarābharaṇaṁ.mp3",
+          "truth": "Śankarābharaṇaṁ",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "682b3e61a9d393a48f9b08c8b999f8636905de984362584a693e12feea1170ba",
+          "tonic_fallback": false,
+          "top3": [
+            "Bēgaḍa",
+            "Śankarābharaṇaṁ",
+            "Nīlāṁbari"
+          ],
+          "confidence": 0.33811589873349324
+        },
+        {
+          "file": "sarOja daLa nEtri__Śankarābharaṇaṁ.mp3",
+          "truth": "Śankarābharaṇaṁ",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "682b3e61a9d393a48f9b08c8b999f8636905de984362584a693e12feea1170ba",
+          "tonic_fallback": false,
+          "top3": [
+            "Bēgaḍa",
+            "Śankarābharaṇaṁ",
+            "Mōhanaṁ"
+          ],
+          "confidence": 0.42745856575558666
+        },
+        {
+          "file": "sarOja daLa nEtri__Śankarābharaṇaṁ.mp3",
+          "truth": "Śankarābharaṇaṁ",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "682b3e61a9d393a48f9b08c8b999f8636905de984362584a693e12feea1170ba",
+          "tonic_fallback": false,
+          "top3": [
+            "Bēgaḍa",
+            "Nīlāṁbari",
+            "Śankarābharaṇaṁ"
+          ],
+          "confidence": 0.21856253719157676
+        },
+        {
+          "file": "sarasijanAba murArE__Tōḍi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "fd1932523c639811ecc85f5d5e2cb7632699f857bddace6cb206e3d2c150898f",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Māyāmāḷavagauḷa",
+            "Bhairavi"
+          ],
+          "confidence": 0.276162775289999
+        },
+        {
+          "file": "sarasijanAba murArE__Tōḍi.mp3",
+          "truth": "Tōḍi",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "fd1932523c639811ecc85f5d5e2cb7632699f857bddace6cb206e3d2c150898f",
+          "tonic_fallback": false,
+          "top3": [
+            "Tōḍi",
+            "Māyāmāḷavagauḷa",
+            "Bhairavi"
+          ],
+          "confidence": 0.26042156703690594
+        },
+        {
+          "file": "sarasijanAba murArE__Tōḍi.mp3",
+          "truth": "Tōḍi",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "fd1932523c639811ecc85f5d5e2cb7632699f857bddace6cb206e3d2c150898f",
+          "tonic_fallback": false,
+          "top3": [
+            "Māyāmāḷavagauḷa",
+            "Tōḍi",
+            "Bhairavi"
+          ],
+          "confidence": 0.23072167989001935
+        },
+        {
+          "file": "siddhi vinAyakam__Shanmukhapriya.m4a",
+          "truth": "Ṣanmukhapriya",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "94ef50d6f70fb89b6bb33aca2e0d77e87b199916d3628ea05613fc1552caa6f6",
+          "tonic_fallback": false,
+          "top3": [
+            "Ṣanmukhapriya",
+            "Madhyamāvati",
+            "Latāngi"
+          ],
+          "confidence": 0.9507921553376104
+        },
+        {
+          "file": "siddhi vinAyakam__Shanmukhapriya.m4a",
+          "truth": "Ṣanmukhapriya",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "94ef50d6f70fb89b6bb33aca2e0d77e87b199916d3628ea05613fc1552caa6f6",
+          "tonic_fallback": false,
+          "top3": [
+            "Ṣanmukhapriya",
+            "Madhyamāvati",
+            "Latāngi"
+          ],
+          "confidence": 0.9448924603254603
+        },
+        {
+          "file": "siddhi vinAyakam__Shanmukhapriya.m4a",
+          "truth": "Ṣanmukhapriya",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "94ef50d6f70fb89b6bb33aca2e0d77e87b199916d3628ea05613fc1552caa6f6",
+          "tonic_fallback": false,
+          "top3": [
+            "Ṣanmukhapriya",
+            "Latāngi",
+            "Kānaḍa"
+          ],
+          "confidence": 0.9590179455635315
+        },
+        {
+          "file": "swAminatha__Nata.m4a",
+          "truth": "Nāṭa",
+          "arm": "mix",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "c31b0f5e0dc5251e0371a3cc1f548e4022387f307361fb7facefb80ea559e85f",
+          "tonic_fallback": false,
+          "top3": [
+            "Nāṭa",
+            "Kāpi",
+            "Dēvagāndhāri"
+          ],
+          "confidence": 0.9904407436661264
+        },
+        {
+          "file": "swAminatha__Nata.m4a",
+          "truth": "Nāṭa",
+          "arm": "mix_voiceband",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "c31b0f5e0dc5251e0371a3cc1f548e4022387f307361fb7facefb80ea559e85f",
+          "tonic_fallback": false,
+          "top3": [
+            "Nāṭa",
+            "Kāpi",
+            "Śankarābharaṇaṁ"
+          ],
+          "confidence": 0.991026004281233
+        },
+        {
+          "file": "swAminatha__Nata.m4a",
+          "truth": "Nāṭa",
+          "arm": "demucs",
+          "correct": true,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "c31b0f5e0dc5251e0371a3cc1f548e4022387f307361fb7facefb80ea559e85f",
+          "tonic_fallback": false,
+          "top3": [
+            "Nāṭa",
+            "Kāpi",
+            "Śankarābharaṇaṁ"
+          ],
+          "confidence": 0.9882132935588028
+        },
+        {
+          "file": "vAtApi gaNapathim__Hamsadhvāni.mp3",
+          "truth": "Hamsadhvāni",
+          "arm": "mix",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "44265822332e89efe4be440a0b0ea3db39e99f2e64d56f584a472e5aeabe760c",
+          "tonic_fallback": false,
+          "top3": [
+            "Sahānā",
+            "Sencuruṭṭi",
+            "Māyāmāḷavagauḷa"
+          ],
+          "confidence": 0.6307470434477376
+        },
+        {
+          "file": "vAtApi gaNapathim__Hamsadhvāni.mp3",
+          "truth": "Hamsadhvāni",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "44265822332e89efe4be440a0b0ea3db39e99f2e64d56f584a472e5aeabe760c",
+          "tonic_fallback": false,
+          "top3": [
+            "Sahānā",
+            "Sencuruṭṭi",
+            "Māyāmāḷavagauḷa"
+          ],
+          "confidence": 0.6307470434477376
+        },
+        {
+          "file": "vAtApi gaNapathim__Hamsadhvāni.mp3",
+          "truth": "Hamsadhvāni",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "44265822332e89efe4be440a0b0ea3db39e99f2e64d56f584a472e5aeabe760c",
+          "tonic_fallback": false,
+          "top3": [
+            "Sahānā",
+            "Sencuruṭṭi",
+            "Māyāmāḷavagauḷa"
+          ],
+          "confidence": 0.5089449235986664
+        },
+        {
+          "file": "yArO ivar yArO__Bhairavi.m4a",
+          "truth": "Bhairavi",
+          "arm": "mix",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "85d7d1a9b28451f416ff113f440ac76c1c12644555821f7d03db2e8dd5eb5ba1",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Bhairavi",
+            "Sāvēri"
+          ],
+          "confidence": 0.3225067703884615
+        },
+        {
+          "file": "yArO ivar yArO__Bhairavi.m4a",
+          "truth": "Bhairavi",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "85d7d1a9b28451f416ff113f440ac76c1c12644555821f7d03db2e8dd5eb5ba1",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Sāvēri",
+            "Bhairavi"
+          ],
+          "confidence": 0.26287991999634097
+        },
+        {
+          "file": "yArO ivar yArO__Bhairavi.m4a",
+          "truth": "Bhairavi",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "85d7d1a9b28451f416ff113f440ac76c1c12644555821f7d03db2e8dd5eb5ba1",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Bhairavi",
+            "Kānaḍa"
+          ],
+          "confidence": 0.3386051855527737
+        },
+        {
+          "file": "yEnATi mOmu palamu__Bhairavi.m4a",
+          "truth": "Bhairavi",
+          "arm": "mix",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "74c055085e554d7852a15828494d6e7021bae1322d053b88d038f8f61ac1518b",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Bhairavi",
+            "Sahānā"
+          ],
+          "confidence": 0.4899120077092397
+        },
+        {
+          "file": "yEnATi mOmu palamu__Bhairavi.m4a",
+          "truth": "Bhairavi",
+          "arm": "mix_voiceband",
+          "correct": false,
+          "accepted": true,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "74c055085e554d7852a15828494d6e7021bae1322d053b88d038f8f61ac1518b",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Bhairavi",
+            "Kānaḍa"
+          ],
+          "confidence": 0.4874747545645733
+        },
+        {
+          "file": "yEnATi mOmu palamu__Bhairavi.m4a",
+          "truth": "Bhairavi",
+          "arm": "demucs",
+          "correct": false,
+          "accepted": false,
+          "answered": true,
+          "in_vocabulary": true,
+          "feature_sha256": "74c055085e554d7852a15828494d6e7021bae1322d053b88d038f8f61ac1518b",
+          "tonic_fallback": false,
+          "top3": [
+            "Mukhāri",
+            "Bhairavi",
+            "Kānaḍa"
+          ],
+          "confidence": 0.20773936529181608
+        }
+      ]
+    }
+  }
+}

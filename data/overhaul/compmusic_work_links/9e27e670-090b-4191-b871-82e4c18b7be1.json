@@ -1,0 +1,42 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/9e27e670-090b-4191-b871-82e4c18b7be1",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:00:12.466944+00:00",
+  "recording": {
+    "first-release-date": "1997",
+    "id": "9e27e670-090b-4191-b871-82e4c18b7be1",
+    "length": 870000,
+    "title": "Deva Deva",
+    "disambiguation": "",
+    "video": false,
+    "relations": [
+      {
+        "attributes": [],
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "attribute-ids": {},
+        "target-type": "work",
+        "ended": false,
+        "attribute-values": {},
+        "source-credit": "",
+        "direction": "forward",
+        "end": null,
+        "type": "performance",
+        "target-credit": "",
+        "work": {
+          "language": "san",
+          "disambiguation": "",
+          "type": "Song",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "title": "Deva Deva Jagadeeshwara",
+          "languages": [
+            "san"
+          ],
+          "attributes": [],
+          "id": "bd9e3783-dd09-47d2-a8a9-200e5f935bdf",
+          "iswcs": []
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Mukhāri__saraseeruhAnana",
+  "audio": "data/concert_audio/Mukhāri/saraseeruhAnana.mp3",
+  "audio_sha256": "72ea837f82d948b1f35f7e6d55d74c7499de1ef6276e63014c16d5faed6e565c",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.9661968750879169
+}

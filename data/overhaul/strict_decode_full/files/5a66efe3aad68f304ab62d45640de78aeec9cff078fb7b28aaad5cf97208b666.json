@@ -1,0 +1,11 @@
+{
+  "track": "archive__Latāngi__venkaTa ramaNa",
+  "audio": "data/concert_audio/Latāngi/venkaTa ramaNa.mp3",
+  "audio_sha256": "5a66efe3aad68f304ab62d45640de78aeec9cff078fb7b28aaad5cf97208b666",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 3.594124416820705
+}

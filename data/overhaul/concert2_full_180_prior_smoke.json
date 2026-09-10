@@ -1,0 +1,1641 @@
+{
+  "audio": "data/long_concerts/audio/long_concert_2.mp3",
+  "audio_sha256": "0a1325fa5b4a4f77787207142b790dc0945b52261b2d3d4370d665f813cc42bc",
+  "model_sha256": "59544dd8dd7854952584bf848042f6c33cc41c00f71aae554c4e35d10915352e",
+  "event_model_sha256": "ae0c1e2ad4e1381d851fa9bf298ba13ebc9c5a914cdee2dbe427a6583869924d",
+  "feature_version": "melody_v1_voiced_compressed",
+  "duration_s": 180.0,
+  "block_frontend": "concert_mix_events_only_v2",
+  "raga_context_s": 180,
+  "composition_context_s": 180,
+  "composition_raga_prior_weight": 0.1,
+  "composition_raga_prior_model_sha256": "59544dd8dd7854952584bf848042f6c33cc41c00f71aae554c4e35d10915352e",
+  "composition_frontend": "independent_exact_query_v1",
+  "query_frontend": "mixed_tonic_query_melodia_v1",
+  "requires_manual_labels": false,
+  "label_origin": "automatic_prediction",
+  "calibration_status": "OOF training calibration; independent validation still required",
+  "threshold": 0.23437111040222178,
+  "identity_status": "candidate_only; production rejection calibration not established",
+  "activity_calibration_sha256": null,
+  "activity_calibration_status": "uncalibrated",
+  "pitch_activity_model_sha256": null,
+  "composition_catalog_sha256": "4857e4879d666e62071f08210627b71c245e61178870d23fb8db47351bab1a26",
+  "timing": {
+    "elapsed_s": 120.23688200023025
+  },
+  "events": [
+    {
+      "state": "music",
+      "music": 0.809395432472229,
+      "speech": 0.04250612109899521,
+      "applause": 0.00010597103391773999,
+      "percussion": 0.03513019159436226,
+      "melodic": 0.44949871301651,
+      "top_events": [
+        {
+          "event": "Music",
+          "score": 0.809395432472229
+        },
+        {
+          "event": "Carnatic music",
+          "score": 0.6077880263328552
+        },
+        {
+          "event": "Musical instrument",
+          "score": 0.5399450659751892
+        },
+        {
+          "event": "Bowed string instrument",
+          "score": 0.44949871301651
+        },
+        {
+          "event": "Classical music",
+          "score": 0.4067547023296356
+        },
+        {
+          "event": "Sitar",
+          "score": 0.23871120810508728
+        },
+        {
+          "event": "Double bass",
+          "score": 0.07450951635837555
+        },
+        {
+          "event": "Cello",
+          "score": 0.05713639408349991
+        }
+      ],
+      "start_s": 0.0,
+      "end_s": 10.0
+    },
+    {
+      "state": "music",
+      "music": 0.9035999178886414,
+      "speech": 0.009643115103244781,
+      "applause": 0.00016216281801462173,
+      "percussion": 0.011425257660448551,
+      "melodic": 0.2150370180606842,
+      "top_events": [
+        {
+          "event": "Music",
+          "score": 0.9035999178886414
+        },
+        {
+          "event": "Carnatic music",
+          "score": 0.785324215888977
+        },
+        {
+          "event": "Musical instrument",
+          "score": 0.24079471826553345
+        },
+        {
+          "event": "Classical music",
+          "score": 0.23042906820774078
+        },
+        {
+          "event": "Singing",
+          "score": 0.2150370180606842
+        },
+        {
+          "event": "Music of Asia",
+          "score": 0.07390313595533371
+        },
+        {
+          "event": "Sitar",
+          "score": 0.06045925244688988
+        },
+        {
+          "event": "Plucked string instrument",
+          "score": 0.05021963641047478
+        }
+      ],
+      "start_s": 10.0,
+      "end_s": 20.0
+    },
+    {
+      "state": "music",
+      "music": 0.841150164604187,
+      "speech": 0.010966251604259014,
+      "applause": 0.00015210828860290349,
+      "percussion": 0.4334246814250946,
+      "melodic": 0.26243117451667786,
+      "top_events": [
+        {
+          "event": "Music",
+          "score": 0.841150164604187
+        },
+        {
+          "event": "Carnatic music",
+          "score": 0.8385310173034668
+        },
+        {
+          "event": "Musical instrument",
+          "score": 0.474867582321167
+        },
+        {
+          "event": "Classical music",
+          "score": 0.4498674273490906
+        },
+        {
+          "event": "Tabla",
+          "score": 0.4334246814250946
+        },
+        {
+          "event": "Singing",
+          "score": 0.26243117451667786
+        },
+        {
+          "event": "Percussion",
+          "score": 0.22132395207881927
+        },
+        {
+          "event": "Drum",
+          "score": 0.17592406272888184
+        }
+      ],
+      "start_s": 20.0,
+      "end_s": 30.0
+    },
+    {
+      "state": "percussion",
+      "music": 0.6261540651321411,
+      "speech": 0.016066478565335274,
+      "applause": 0.0002860874228645116,
+      "percussion": 0.7325525283813477,
+      "melodic": 0.11798962205648422,
+      "top_events": [
+        {
+          "event": "Tabla",
+          "score": 0.7325525283813477
+        },
+        {
+          "event": "Music",
+          "score": 0.6261540651321411
+        },
+        {
+          "event": "Carnatic music",
+          "score": 0.39829638600349426
+        },
+        {
+          "event": "Percussion",
+          "score": 0.3292906880378723
+        },
+        {
+          "event": "Drum",
+          "score": 0.3267361521720886
+        },
+        {
+          "event": "Musical instrument",
+          "score": 0.29209670424461365
+        },
+        {
+          "event": "Classical music",
+          "score": 0.2598731219768524
+        },
+        {
+          "event": "Singing",
+          "score": 0.11798962205648422
+        }
+      ],
+      "start_s": 30.0,
+      "end_s": 40.0
+    },
+    {
+      "state": "percussion",
+      "music": 0.6579503417015076,
+      "speech": 0.01000323798507452,
+      "applause": 0.0001263769227080047,
+      "percussion": 0.7053824663162231,
+      "melodic": 0.1157180666923523,
+      "top_events": [
+        {
+          "event": "Tabla",
+          "score": 0.7053824663162231
+        },
+        {
+          "event": "Music",
+          "score": 0.6579503417015076
+        },
+        {
+          "event": "Percussion",
+          "score": 0.48299846053123474
+        },
+        {
+          "event": "Carnatic music",
+          "score": 0.3986545205116272
+        },
+        {
+          "event": "Drum",
+          "score": 0.3626915216445923
+        },
+        {
+          "event": "Musical instrument",
+          "score": 0.3087502717971802
+        },
+        {
+          "event": "Classical music",
+          "score": 0.30337387323379517
+        },
+        {
+          "event": "Singing",
+          "score": 0.1157180666923523
+        }
+      ],
+      "start_s": 40.0,
+      "end_s": 50.0
+    },
+    {
+      "state": "percussion",
+      "music": 0.6021879315376282,
+      "speech": 0.012770917266607285,
+      "applause": 0.0002089193440042436,
+      "percussion": 0.6372960209846497,
+      "melodic": 0.09540560096502304,
+      "top_events": [
+        {
+          "event": "Tabla",
+          "score": 0.6372960209846497
+        },
+        {
+          "event": "Music",
+          "score": 0.6021879315376282
+        },
+        {
+          "event": "Carnatic music",
+          "score": 0.4568651020526886
+        },
+        {
+          "event": "Percussion",
+          "score": 0.3716049790382385
+        },
+        {
+          "event": "Drum",
+          "score": 0.2824340760707855
+        },
+        {
+          "event": "Musical instrument",
+          "score": 0.2666518986225128
+        },
+        {
+          "event": "Classical music",
+          "score": 0.2069903314113617
+        },
+        {
+          "event": "Singing",
+          "score": 0.09540560096502304
+        }
+      ],
+      "start_s": 50.0,
+      "end_s": 60.0
+    },
+    {
+      "state": "percussion",
+      "music": 0.5760070085525513,
+      "speech": 0.009015575051307678,
+      "applause": 0.0004510022699832916,
+      "percussion": 0.6169649362564087,
+      "melodic": 0.0804586112499237,
+      "top_events": [
+        {
+          "event": "Tabla",
+          "score": 0.6169649362564087
+        },
+        {
+          "event": "Music",
+          "score": 0.5760070085525513
+        },
+        {
+          "event": "Carnatic music",
+          "score": 0.45228397846221924
+        },
+        {
+          "event": "Percussion",
+          "score": 0.4357401430606842
+        },
+        {
+          "event": "Drum",
+          "score": 0.34903791546821594
+        },
+        {
+          "event": "Musical instrument",
+          "score": 0.30038461089134216
+        },
+        {
+          "event": "Classical music",
+          "score": 0.2826079726219177
+        },
+        {
+          "event": "Singing",
+          "score": 0.0804586112499237
+        }
+      ],
+      "start_s": 60.0,
+      "end_s": 70.0
+    },
+    {
+      "state": "percussion",
+      "music": 0.6577833890914917,
+      "speech": 0.006516177672892809,
+      "applause": 0.00020938258967362344,
+      "percussion": 0.739746630191803,
+      "melodic": 0.07452502101659775,
+      "top_events": [
+        {
+          "event": "Tabla",
+          "score": 0.739746630191803
+        },
+        {
+          "event": "Music",
+          "score": 0.6577833890914917
+        },
+        {
+          "event": "Percussion",
+          "score": 0.4328252971172333
+        },
+        {
+          "event": "Carnatic music",
+          "score": 0.3795711100101471
+        },
+        {
+          "event": "Drum",
+          "score": 0.3482847809791565
+        },
+        {
+          "event": "Musical instrument",
+          "score": 0.30680879950523376
+        },
+        {
+          "event": "Classical music",
+          "score": 0.281019926071167
+        },
+        {
+          "event": "Music of Asia",
+          "score": 0.08541450649499893
+        }
+      ],
+      "start_s": 70.0,
+      "end_s": 80.0
+    },
+    {
+      "state": "music",
+      "music": 0.7346689105033875,
+      "speech": 0.008905927650630474,
+      "applause": 0.00027250227867625654,
+      "percussion": 0.5072070360183716,
+      "melodic": 0.15943512320518494,
+      "top_events": [
+        {
+          "event": "Music",
+          "score": 0.7346689105033875
+        },
+        {
+          "event": "Carnatic music",
+          "score": 0.5775402188301086
+        },
+        {
+          "event": "Tabla",
+          "score": 0.5072070360183716
+        },
+        {
+          "event": "Classical music",
+          "score": 0.46523410081863403
+        },
+        {
+          "event": "Musical instrument",
+          "score": 0.43135830760002136
+        },
+        {
+          "event": "Percussion",
+          "score": 0.3097155690193176
+        },
+        {
+          "event": "Drum",
+          "score": 0.2423459142446518
+        },
+        {
+          "event": "Singing",
+          "score": 0.15943512320518494
+        }
+      ],
+      "start_s": 80.0,
+      "end_s": 90.0
+    },
+    {
+      "state": "music",
+      "music": 0.4805189073085785,
+      "speech": 0.02645055577158928,
+      "applause": 0.00016835791757330298,
+      "percussion": 0.5746501684188843,
+      "melodic": 0.09460070729255676,
+      "top_events": [
+        {
+          "event": "Tabla",
+          "score": 0.5746501684188843
+        },
+        {
+          "event": "Percussion",
+          "score": 0.4875756800174713
+        },
+        {
+          "event": "Music",
+          "score": 0.4805189073085785
+        },
+        {
+          "event": "Drum",
+          "score": 0.32388466596603394
+        },
+        {
+          "event": "Carnatic music",
+          "score": 0.2766123414039612
+        },
+        {
+          "event": "Musical instrument",
+          "score": 0.2598915100097656
+        },
+        {
+          "event": "Classical music",
+          "score": 0.19541610777378082
+        },
+        {
+          "event": "Singing",
+          "score": 0.09460070729255676
+        }
+      ],
+      "start_s": 90.0,
+      "end_s": 100.0
+    },
+    {
+      "state": "percussion",
+      "music": 0.6231877207756042,
+      "speech": 0.009777613915503025,
+      "applause": 0.00011914213973795995,
+      "percussion": 0.6923134326934814,
+      "melodic": 0.122138112783432,
+      "top_events": [
+        {
+          "event": "Tabla",
+          "score": 0.6923134326934814
+        },
+        {
+          "event": "Music",
+          "score": 0.6231877207756042
+        },
+        {
+          "event": "Carnatic music",
+          "score": 0.4844460189342499
+        },
+        {
+          "event": "Percussion",
+          "score": 0.42806166410446167
+        },
+        {
+          "event": "Classical music",
+          "score": 0.3944920301437378
+        },
+        {
+          "event": "Musical instrument",
+          "score": 0.29011866450309753
+        },
+        {
+          "event": "Drum",
+          "score": 0.27687621116638184
+        },
+        {
+          "event": "Singing",
+          "score": 0.122138112783432
+        }
+      ],
+      "start_s": 100.0,
+      "end_s": 110.0
+    },
+    {
+      "state": "music",
+      "music": 0.7158807516098022,
+      "speech": 0.009364812634885311,
+      "applause": 0.00025035953149199486,
+      "percussion": 0.4907993972301483,
+      "melodic": 0.11289866268634796,
+      "top_events": [
+        {
+          "event": "Music",
+          "score": 0.7158807516098022
+        },
+        {
+          "event": "Carnatic music",
+          "score": 0.6408292055130005
+        },
+        {
+          "event": "Tabla",
+          "score": 0.4907993972301483
+        },
+        {
+          "event": "Percussion",
+          "score": 0.31853505969047546
+        },
+        {
+          "event": "Classical music",
+          "score": 0.24292825162410736
+        },
+        {
+          "event": "Musical instrument",
+          "score": 0.22257183492183685
+        },
+        {
+          "event": "Drum",
+          "score": 0.17163515090942383
+        },
+        {
+          "event": "Singing",
+          "score": 0.11289866268634796
+        }
+      ],
+      "start_s": 110.0,
+      "end_s": 120.0
+    },
+    {
+      "state": "music",
+      "music": 0.620018482208252,
+      "speech": 0.014993865974247456,
+      "applause": 0.0003411458746995777,
+      "percussion": 0.5787514448165894,
+      "melodic": 0.06417375057935715,
+      "top_events": [
+        {
+          "event": "Music",
+          "score": 0.620018482208252
+        },
+        {
+          "event": "Tabla",
+          "score": 0.5787514448165894
+        },
+        {
+          "event": "Percussion",
+          "score": 0.4934123456478119
+        },
+        {
+          "event": "Drum",
+          "score": 0.35100099444389343
+        },
+        {
+          "event": "Musical instrument",
+          "score": 0.2727453112602234
+        },
+        {
+          "event": "Carnatic music",
+          "score": 0.23739907145500183
+        },
+        {
+          "event": "Classical music",
+          "score": 0.1937231719493866
+        },
+        {
+          "event": "Folk music",
+          "score": 0.08462855219841003
+        }
+      ],
+      "start_s": 120.0,
+      "end_s": 130.0
+    },
+    {
+      "state": "percussion",
+      "music": 0.6224549412727356,
+      "speech": 0.013434781692922115,
+      "applause": 0.0011205102782696486,
+      "percussion": 0.6238401532173157,
+      "melodic": 0.0905376672744751,
+      "top_events": [
+        {
+          "event": "Tabla",
+          "score": 0.6238401532173157
+        },
+        {
+          "event": "Music",
+          "score": 0.6224549412727356
+        },
+        {
+          "event": "Carnatic music",
+          "score": 0.414817750453949
+        },
+        {
+          "event": "Percussion",
+          "score": 0.3649190366268158
+        },
+        {
+          "event": "Musical instrument",
+          "score": 0.30216366052627563
+        },
+        {
+          "event": "Classical music",
+          "score": 0.264957070350647
+        },
+        {
+          "event": "Drum",
+          "score": 0.24845841526985168
+        },
+        {
+          "event": "Singing",
+          "score": 0.0905376672744751
+        }
+      ],
+      "start_s": 130.0,
+      "end_s": 140.0
+    },
+    {
+      "state": "percussion",
+      "music": 0.7401776313781738,
+      "speech": 0.022218097001314163,
+      "applause": 0.0003973909479100257,
+      "percussion": 0.6238036155700684,
+      "melodic": 0.08372762054204941,
+      "top_events": [
+        {
+          "event": "Music",
+          "score": 0.7401776313781738
+        },
+        {
+          "event": "Tabla",
+          "score": 0.6238036155700684
+        },
+        {
+          "event": "Percussion",
+          "score": 0.417800635099411
+        },
+        {
+          "event": "Musical instrument",
+          "score": 0.41023316979408264
+        },
+        {
+          "event": "Carnatic music",
+          "score": 0.3941092789173126
+        },
+        {
+          "event": "Classical music",
+          "score": 0.36435651779174805
+        },
+        {
+          "event": "Drum",
+          "score": 0.2797882556915283
+        },
+        {
+          "event": "Singing",
+          "score": 0.08372762054204941
+        }
+      ],
+      "start_s": 140.0,
+      "end_s": 150.0
+    },
+    {
+      "state": "music",
+      "music": 0.7513009309768677,
+      "speech": 0.017455007880926132,
+      "applause": 0.000281350570730865,
+      "percussion": 0.6069520711898804,
+      "melodic": 0.16084815561771393,
+      "top_events": [
+        {
+          "event": "Music",
+          "score": 0.7513009309768677
+        },
+        {
+          "event": "Tabla",
+          "score": 0.6069520711898804
+        },
+        {
+          "event": "Carnatic music",
+          "score": 0.3717612326145172
+        },
+        {
+          "event": "Percussion",
+          "score": 0.344546914100647
+        },
+        {
+          "event": "Musical instrument",
+          "score": 0.27963775396347046
+        },
+        {
+          "event": "Drum",
+          "score": 0.2341967225074768
+        },
+        {
+          "event": "Classical music",
+          "score": 0.2235342264175415
+        },
+        {
+          "event": "Singing",
+          "score": 0.16084815561771393
+        }
+      ],
+      "start_s": 150.0,
+      "end_s": 160.0
+    },
+    {
+      "state": "music",
+      "music": 0.7765312790870667,
+      "speech": 0.011879852041602135,
+      "applause": 0.0003945810894947499,
+      "percussion": 0.3253166973590851,
+      "melodic": 0.18279039859771729,
+      "top_events": [
+        {
+          "event": "Music",
+          "score": 0.7765312790870667
+        },
+        {
+          "event": "Classical music",
+          "score": 0.4156806170940399
+        },
+        {
+          "event": "Carnatic music",
+          "score": 0.40819984674453735
+        },
+        {
+          "event": "Musical instrument",
+          "score": 0.3371101915836334
+        },
+        {
+          "event": "Tabla",
+          "score": 0.3253166973590851
+        },
+        {
+          "event": "Percussion",
+          "score": 0.2400723248720169
+        },
+        {
+          "event": "Singing",
+          "score": 0.18279039859771729
+        },
+        {
+          "event": "Drum",
+          "score": 0.1522081196308136
+        }
+      ],
+      "start_s": 160.0,
+      "end_s": 170.0
+    },
+    {
+      "state": "music",
+      "music": 0.6693010330200195,
+      "speech": 0.04041154682636261,
+      "applause": 0.0027145659551024437,
+      "percussion": 0.503435492515564,
+      "melodic": 0.15280619263648987,
+      "top_events": [
+        {
+          "event": "Music",
+          "score": 0.6693010330200195
+        },
+        {
+          "event": "Tabla",
+          "score": 0.503435492515564
+        },
+        {
+          "event": "Carnatic music",
+          "score": 0.4631412625312805
+        },
+        {
+          "event": "Musical instrument",
+          "score": 0.401091068983078
+        },
+        {
+          "event": "Classical music",
+          "score": 0.35836508870124817
+        },
+        {
+          "event": "Percussion",
+          "score": 0.2759993076324463
+        },
+        {
+          "event": "Drum",
+          "score": 0.18132854998111725
+        },
+        {
+          "event": "Singing",
+          "score": 0.15280619263648987
+        }
+      ],
+      "start_s": 170.0,
+      "end_s": 180.0
+    }
+  ],
+  "windows": [
+    {
+      "start_s": 0.0,
+      "end_s": 180.0,
+      "tonic_hz": 139.6118927001953,
+      "query_extraction_failure": null,
+      "status": "candidate",
+      "voiced_s": 110.25705215419501,
+      "probabilities": {
+        "Amṛtavarṣiṇi": 0.05901332925474224,
+        "Aṭāna": 0.005113852066457754,
+        "Behāg": 0.011034816615687466,
+        "Bhairavi": 0.021247220841924742,
+        "Bilahari": 0.008747517832338753,
+        "Bēgaḍa": 0.024729295422459576,
+        "Bṛndāvana sāranga": 0.00889598969469368,
+        "Cakravākaṁ": 0.01743352588129631,
+        "Cittaranjani": 0.007834929085415337,
+        "Dhanyāsi": 0.03078264340361977,
+        "Dvijāvanti": 0.009861187642929075,
+        "Dēvagāndhāri": 0.013425225901046606,
+        "Gauḷa": 0.007829531436473311,
+        "Hamsadhvāni": 0.02471353810767738,
+        "Harikāmbhōji": 0.01096331570788086,
+        "Haṁsānandi": 0.006278186934036207,
+        "Hindōḷaṁ": 0.010786132852192416,
+        "Hussēnī": 0.016187681686213345,
+        "Jaganmōhini": 0.007241246632829167,
+        "Janaranjani": 0.024725421146765153,
+        "Jōnpuri": 0.013389011690066168,
+        "Kalyāṇi": 0.009120833657088049,
+        "Kamās": 0.007285065403270465,
+        "Karaharapriya": 0.012284095752227095,
+        "Karṇāṭaka dēvagāndhāri": 0.008430376739666063,
+        "Kedāraṁ": 0.008870193800071497,
+        "Kuntalavarāḷi": 0.012481282404726735,
+        "Kāmavardani": 0.0030791798888230165,
+        "Kānaḍa": 0.01636896519206109,
+        "Kāpi": 0.010621534156870381,
+        "Kāṁbhōji": 0.008150526301959149,
+        "Kēdāragauḷa": 0.008523513539281212,
+        "Lalita": 0.012666106838741874,
+        "Latāngi": 0.006909766434869787,
+        "Madhyamāvati": 0.009942293560708334,
+        "Maṇirangu": 0.009102147799413441,
+        "Mukhāri": 0.009007062404245906,
+        "Mānḍu": 0.010842937811432843,
+        "Māyāmāḷavagauḷa": 0.043486660153057376,
+        "Mōhanaṁ": 0.011540391681470233,
+        "Nādanāmakriya": 0.010465413986209317,
+        "Nāṭa": 0.014700810548283082,
+        "Nāṭakurinji": 0.011601599064089068,
+        "Nīlāṁbari": 0.014495328548534032,
+        "Puṇṇāgavarāḷi": 0.005497110459286767,
+        "Pūrvīkaḷyāṇi": 0.00910578385901823,
+        "Pūrṇacandrika": 0.017556562889584716,
+        "Rītigauḷa": 0.00935026769000948,
+        "Sahānā": 0.012198261638374385,
+        "Saurāṣtraṁ": 0.006723826959161392,
+        "Sencuruṭṭi": 0.012356816289775039,
+        "Sindhubhairavi": 0.008326875948304826,
+        "Suraṭi": 0.011538095739645144,
+        "Sāma": 0.010702760438299938,
+        "Sāranga": 0.0052418668122772676,
+        "Sāvēri": 0.074664798382028,
+        "Tōḍi": 0.08925585162091253,
+        "Vakuḷābharaṇaṁ": 0.011023473297827383,
+        "Varāḷi": 0.009177308949291408,
+        "Vasanta": 0.008069458250643022,
+        "Yadukula kāṁbōji": 0.010745421700113854,
+        "Ābhōgi": 0.011316867389876946,
+        "Āhiri": 0.009673149770031409,
+        "Ānandabhairavi": 0.007844717828958058,
+        "Śankarābharaṇaṁ": 0.00842706739599945,
+        "Śrī": 0.007592655593932856,
+        "Śrīranjani": 0.014941269506681088,
+        "Śuddadhanyāsi": 0.00838672791643862,
+        "Ṣanmukhapriya": 0.01007331816968276
+      },
+      "composition_query": {
+        "start_s": 0.0,
+        "end_s": 180.0
+      },
+      "composition_tonic_hz": 139.6118927001953,
+      "composition_extraction_failure": null,
+      "composition_voiced_s": 110.25705215419501,
+      "composition_candidates": [
+        {
+          "work_id": "2d9ff47b-a9d4-4944-9cd3-55934fd8685e",
+          "title": "Eranapai",
+          "raga": "Tōḍi",
+          "reference_track": "compmusic__Sanjay_Subrahmanyan.Varnam_Eranapai_Inta",
+          "distance": 0.31324374260573484,
+          "ranking_cost": 0.31324374260573484,
+          "status": "unverified_candidate",
+          "identity_evidence": "explicit_musicbrainz_performance_work_relation"
+        },
+        {
+          "work_id": "f6789aa0-f1e6-47cd-9e33-cd74d896928c",
+          "title": "Vani Arul",
+          "raga": "Dhanyāsi",
+          "reference_track": "compmusic__Gayathri_Venkataraghavan.Vani_Arul",
+          "distance": 0.35061094715677377,
+          "ranking_cost": 0.35061094715677377,
+          "status": "unverified_candidate",
+          "identity_evidence": "explicit_musicbrainz_performance_work_relation"
+        },
+        {
+          "work_id": "897d156f-da68-4141-a8fc-7336d2bc8c19",
+          "title": "Thappi Bratikipova",
+          "raga": "Tōḍi",
+          "reference_track": "175_Thappi_Bratikipova",
+          "distance": 0.35251734902118725,
+          "ranking_cost": 0.35251734902118725,
+          "status": "unverified_candidate",
+          "identity_evidence": "unspecified"
+        }
+      ],
+      "composition_status": "unverified_candidates_no_acceptance_threshold",
+      "composition_estimated_raga_probabilities": {}
+    },
+    {
+      "start_s": 30.0,
+      "end_s": 180.0,
+      "tonic_hz": 140.42201232910156,
+      "query_extraction_failure": null,
+      "status": "candidate",
+      "voiced_s": 90.3459410430839,
+      "probabilities": {
+        "Amṛtavarṣiṇi": 0.06216306135661687,
+        "Aṭāna": 0.005278926705993317,
+        "Behāg": 0.011955668219577609,
+        "Bhairavi": 0.017335171243545795,
+        "Bilahari": 0.010393954024354153,
+        "Bēgaḍa": 0.030891262381342342,
+        "Bṛndāvana sāranga": 0.009162823441582734,
+        "Cakravākaṁ": 0.023472078992779262,
+        "Cittaranjani": 0.009617054836104125,
+        "Dhanyāsi": 0.019719229425945298,
+        "Dvijāvanti": 0.012008131541147661,
+        "Dēvagāndhāri": 0.01145927071832357,
+        "Gauḷa": 0.008725891729899321,
+        "Hamsadhvāni": 0.01993199550413803,
+        "Harikāmbhōji": 0.010504975014526718,
+        "Haṁsānandi": 0.007167435672285745,
+        "Hindōḷaṁ": 0.011034124418741733,
+        "Hussēnī": 0.011811646339477696,
+        "Jaganmōhini": 0.006065507661556344,
+        "Janaranjani": 0.033856692961677544,
+        "Jōnpuri": 0.012906049779916428,
+        "Kalyāṇi": 0.008114887598074974,
+        "Kamās": 0.008349689423997714,
+        "Karaharapriya": 0.0128829831877006,
+        "Karṇāṭaka dēvagāndhāri": 0.009026224763440822,
+        "Kedāraṁ": 0.010451337077093208,
+        "Kuntalavarāḷi": 0.011485480693151367,
+        "Kāmavardani": 0.00491876910134822,
+        "Kānaḍa": 0.017683013535280387,
+        "Kāpi": 0.007986822274773582,
+        "Kāṁbhōji": 0.008586033972619613,
+        "Kēdāragauḷa": 0.007028748829831255,
+        "Lalita": 0.012739905466927513,
+        "Latāngi": 0.007357971616167525,
+        "Madhyamāvati": 0.00978130813612892,
+        "Maṇirangu": 0.011214933704239262,
+        "Mukhāri": 0.009755713032144531,
+        "Mānḍu": 0.012703346586898652,
+        "Māyāmāḷavagauḷa": 0.04260215293136874,
+        "Mōhanaṁ": 0.010681261967945697,
+        "Nādanāmakriya": 0.011828182260455474,
+        "Nāṭa": 0.016954428158762448,
+        "Nāṭakurinji": 0.010147278661627169,
+        "Nīlāṁbari": 0.021392098923385863,
+        "Puṇṇāgavarāḷi": 0.005724803939224741,
+        "Pūrvīkaḷyāṇi": 0.010834796404505496,
+        "Pūrṇacandrika": 0.013819446747073572,
+        "Rītigauḷa": 0.013020606373676243,
+        "Sahānā": 0.010223946135723826,
+        "Saurāṣtraṁ": 0.005958574636038475,
+        "Sencuruṭṭi": 0.010826159101137153,
+        "Sindhubhairavi": 0.00955851643782886,
+        "Suraṭi": 0.009783895374120742,
+        "Sāma": 0.01102097515383197,
+        "Sāranga": 0.005072080394160807,
+        "Sāvēri": 0.09353819390826282,
+        "Tōḍi": 0.039004889434334784,
+        "Vakuḷābharaṇaṁ": 0.012620657368271998,
+        "Varāḷi": 0.009524651910353097,
+        "Vasanta": 0.010352635690993471,
+        "Yadukula kāṁbōji": 0.012939937663422172,
+        "Ābhōgi": 0.011044034807728758,
+        "Āhiri": 0.01269979712572984,
+        "Ānandabhairavi": 0.010760467725228172,
+        "Śankarābharaṇaṁ": 0.007790012791425341,
+        "Śrī": 0.007096901929860672,
+        "Śrīranjani": 0.016608463797807522,
+        "Śuddadhanyāsi": 0.00771379638504871,
+        "Ṣanmukhapriya": 0.013328234891314888
+      },
+      "composition_query": {
+        "start_s": 30.0,
+        "end_s": 180.0
+      },
+      "composition_tonic_hz": 140.42201232910156,
+      "composition_extraction_failure": null,
+      "composition_voiced_s": 90.3459410430839,
+      "composition_candidates": [
+        {
+          "work_id": "2d9ff47b-a9d4-4944-9cd3-55934fd8685e",
+          "title": "Eranapai",
+          "raga": "Tōḍi",
+          "reference_track": "compmusic__Sanjay_Subrahmanyan.Varnam_Eranapai_Inta",
+          "distance": 0.3245229470824432,
+          "ranking_cost": 0.3245229470824432,
+          "status": "unverified_candidate",
+          "identity_evidence": "explicit_musicbrainz_performance_work_relation"
+        },
+        {
+          "work_id": "897d156f-da68-4141-a8fc-7336d2bc8c19",
+          "title": "Thappi Bratikipova",
+          "raga": "Tōḍi",
+          "reference_track": "175_Thappi_Bratikipova",
+          "distance": 0.3508929514222668,
+          "ranking_cost": 0.3508929514222668,
+          "status": "unverified_candidate",
+          "identity_evidence": "unspecified"
+        },
+        {
+          "work_id": "02164e5a-0c76-4662-ba07-f8c75b7b93e5",
+          "title": "Sri Raja Rajeswari",
+          "raga": "Māyāmāḷavagauḷa",
+          "reference_track": "compmusic__Sangeetha_Swaminathan.Sri_Raja_Rajeswari",
+          "distance": 0.3566051695554968,
+          "ranking_cost": 0.3566051695554968,
+          "status": "unverified_candidate",
+          "identity_evidence": "explicit_musicbrainz_performance_work_relation"
+        }
+      ],
+      "composition_status": "unverified_candidates_no_acceptance_threshold",
+      "composition_estimated_raga_probabilities": {}
+    },
+    {
+      "start_s": 60.0,
+      "end_s": 180.0,
+      "tonic_hz": 140.42201232910156,
+      "query_extraction_failure": null,
+      "status": "candidate",
+      "voiced_s": 71.93832199546486,
+      "probabilities": {
+        "Amṛtavarṣiṇi": 0.04490830433240559,
+        "Aṭāna": 0.006745043592361626,
+        "Behāg": 0.01334504478965572,
+        "Bhairavi": 0.01979658715322987,
+        "Bilahari": 0.009287941720925539,
+        "Bēgaḍa": 0.0282999355759878,
+        "Bṛndāvana sāranga": 0.008970650964449284,
+        "Cakravākaṁ": 0.025280189066127917,
+        "Cittaranjani": 0.011396018224668207,
+        "Dhanyāsi": 0.024828591518618614,
+        "Dvijāvanti": 0.013356098900559306,
+        "Dēvagāndhāri": 0.011047966443909669,
+        "Gauḷa": 0.0088264234701037,
+        "Hamsadhvāni": 0.014329789792833092,
+        "Harikāmbhōji": 0.015357094048804984,
+        "Haṁsānandi": 0.007002038206077419,
+        "Hindōḷaṁ": 0.012207210332581158,
+        "Hussēnī": 0.011170281114931145,
+        "Jaganmōhini": 0.006364427617907943,
+        "Janaranjani": 0.028667758582996025,
+        "Jōnpuri": 0.01028074811784817,
+        "Kalyāṇi": 0.008903558491834307,
+        "Kamās": 0.005271881141991357,
+        "Karaharapriya": 0.01951845072665108,
+        "Karṇāṭaka dēvagāndhāri": 0.009099965117932617,
+        "Kedāraṁ": 0.011539936359376664,
+        "Kuntalavarāḷi": 0.008268906107390105,
+        "Kāmavardani": 0.005268348028625968,
+        "Kānaḍa": 0.016496714461009275,
+        "Kāpi": 0.009650420174852499,
+        "Kāṁbhōji": 0.010809094778633094,
+        "Kēdāragauḷa": 0.009742644067000202,
+        "Lalita": 0.012969050095151329,
+        "Latāngi": 0.0099711955877482,
+        "Madhyamāvati": 0.013194272205671773,
+        "Maṇirangu": 0.023588649246514076,
+        "Mukhāri": 0.010194165865662814,
+        "Mānḍu": 0.012954124841833557,
+        "Māyāmāḷavagauḷa": 0.01506969292426823,
+        "Mōhanaṁ": 0.008664829607763757,
+        "Nādanāmakriya": 0.014418491601674781,
+        "Nāṭa": 0.016735622997148515,
+        "Nāṭakurinji": 0.01005491240933785,
+        "Nīlāṁbari": 0.014855152163931708,
+        "Puṇṇāgavarāḷi": 0.006139535994994479,
+        "Pūrvīkaḷyāṇi": 0.012642353675712197,
+        "Pūrṇacandrika": 0.018774655574273907,
+        "Rītigauḷa": 0.011265845533169932,
+        "Sahānā": 0.009654945295793083,
+        "Saurāṣtraṁ": 0.004829097324164077,
+        "Sencuruṭṭi": 0.012025279551486034,
+        "Sindhubhairavi": 0.01028795778592778,
+        "Suraṭi": 0.008447557585500387,
+        "Sāma": 0.011969728779950442,
+        "Sāranga": 0.005521558213766093,
+        "Sāvēri": 0.07900974553067064,
+        "Tōḍi": 0.0572054028626532,
+        "Vakuḷābharaṇaṁ": 0.019758380518269135,
+        "Varāḷi": 0.011335632091090158,
+        "Vasanta": 0.011349728918820256,
+        "Yadukula kāṁbōji": 0.011171045715916263,
+        "Ābhōgi": 0.011366839441445514,
+        "Āhiri": 0.015428781282302795,
+        "Ānandabhairavi": 0.008059191178458172,
+        "Śankarābharaṇaṁ": 0.008534472265227286,
+        "Śrī": 0.01023112400034617,
+        "Śrīranjani": 0.017362969995323486,
+        "Śuddadhanyāsi": 0.007562387021151265,
+        "Ṣanmukhapriya": 0.011357561294600483
+      },
+      "composition_query": {
+        "start_s": 60.0,
+        "end_s": 180.0
+      },
+      "composition_tonic_hz": 140.42201232910156,
+      "composition_extraction_failure": null,
+      "composition_voiced_s": 71.93832199546486,
+      "composition_candidates": [
+        {
+          "work_id": "be454ab9-c6df-4bc7-99ce-691bb9345db3",
+          "title": "Sarasuda Ninne Kori",
+          "raga": "Sāvēri",
+          "reference_track": "compmusic__S__Sowmya.Sarasuda",
+          "distance": 0.35019671503860117,
+          "ranking_cost": 0.35019671503860117,
+          "status": "unverified_candidate",
+          "identity_evidence": "explicit_musicbrainz_performance_work_relation"
+        },
+        {
+          "work_id": "2d9ff47b-a9d4-4944-9cd3-55934fd8685e",
+          "title": "Eranapai",
+          "raga": "Tōḍi",
+          "reference_track": "compmusic__Sanjay_Subrahmanyan.Varnam_Eranapai_Inta",
+          "distance": 0.35270769283322956,
+          "ranking_cost": 0.35270769283322956,
+          "status": "unverified_candidate",
+          "identity_evidence": "explicit_musicbrainz_performance_work_relation"
+        },
+        {
+          "work_id": "01076308-9613-4fce-960d-ca0e65c01a20",
+          "title": "Sami ninnekori",
+          "raga": "Śrī",
+          "reference_track": "compmusic__O__S__Thyagarajan.Sami_Ninne_Koriyunnanu",
+          "distance": 0.35624516600429357,
+          "ranking_cost": 0.35624516600429357,
+          "status": "unverified_candidate",
+          "identity_evidence": "explicit_musicbrainz_performance_work_relation"
+        }
+      ],
+      "composition_status": "unverified_candidates_no_acceptance_threshold",
+      "composition_estimated_raga_probabilities": {}
+    },
+    {
+      "start_s": 90.0,
+      "end_s": 180.0,
+      "tonic_hz": 140.42201232910156,
+      "query_extraction_failure": null,
+      "status": "candidate",
+      "voiced_s": 54.93260770975057,
+      "probabilities": {
+        "Amṛtavarṣiṇi": 0.0549924563678195,
+        "Aṭāna": 0.006354724389737903,
+        "Behāg": 0.012831942142789963,
+        "Bhairavi": 0.019863563929731428,
+        "Bilahari": 0.008278001629814935,
+        "Bēgaḍa": 0.02649441178930848,
+        "Bṛndāvana sāranga": 0.009245320728642297,
+        "Cakravākaṁ": 0.023604434151653163,
+        "Cittaranjani": 0.015110901804200867,
+        "Dhanyāsi": 0.020599378976832998,
+        "Dvijāvanti": 0.015170852771006044,
+        "Dēvagāndhāri": 0.00977845704844493,
+        "Gauḷa": 0.011563640655748424,
+        "Hamsadhvāni": 0.015523844475673766,
+        "Harikāmbhōji": 0.020578523661793215,
+        "Haṁsānandi": 0.0076666904116814314,
+        "Hindōḷaṁ": 0.015517840630525153,
+        "Hussēnī": 0.008526843594807597,
+        "Jaganmōhini": 0.006691005318639829,
+        "Janaranjani": 0.02346092812019136,
+        "Jōnpuri": 0.009636412393600425,
+        "Kalyāṇi": 0.008232165249743299,
+        "Kamās": 0.0053658136283889,
+        "Karaharapriya": 0.022051311991976342,
+        "Karṇāṭaka dēvagāndhāri": 0.00865107395425233,
+        "Kedāraṁ": 0.010080650973612063,
+        "Kuntalavarāḷi": 0.01204681551421769,
+        "Kāmavardani": 0.005801497571832061,
+        "Kānaḍa": 0.014408759582642282,
+        "Kāpi": 0.009447164726500331,
+        "Kāṁbhōji": 0.00746364557494569,
+        "Kēdāragauḷa": 0.007111346538777457,
+        "Lalita": 0.022713387222643874,
+        "Latāngi": 0.010194079751398655,
+        "Madhyamāvati": 0.015836763888288034,
+        "Maṇirangu": 0.021671058452749466,
+        "Mukhāri": 0.007339390820513008,
+        "Mānḍu": 0.012446012839491134,
+        "Māyāmāḷavagauḷa": 0.01867573314377293,
+        "Mōhanaṁ": 0.00750397023112513,
+        "Nādanāmakriya": 0.013915981552574145,
+        "Nāṭa": 0.025635879183020755,
+        "Nāṭakurinji": 0.010475373102982846,
+        "Nīlāṁbari": 0.012184903211607348,
+        "Puṇṇāgavarāḷi": 0.004911810192469243,
+        "Pūrvīkaḷyāṇi": 0.009234600035841952,
+        "Pūrṇacandrika": 0.019106753280860377,
+        "Rītigauḷa": 0.008127623621807169,
+        "Sahānā": 0.011043413210513879,
+        "Saurāṣtraṁ": 0.0036803885903088614,
+        "Sencuruṭṭi": 0.009528911582551855,
+        "Sindhubhairavi": 0.008884315811956913,
+        "Suraṭi": 0.010288544594581213,
+        "Sāma": 0.013482297568922212,
+        "Sāranga": 0.005152506429225931,
+        "Sāvēri": 0.05041680643147895,
+        "Tōḍi": 0.07573283455851809,
+        "Vakuḷābharaṇaṁ": 0.01218483931169498,
+        "Varāḷi": 0.013131295776060023,
+        "Vasanta": 0.013088812736709669,
+        "Yadukula kāṁbōji": 0.013673328713783907,
+        "Ābhōgi": 0.010433240744769885,
+        "Āhiri": 0.014769435039588443,
+        "Ānandabhairavi": 0.008375040966648966,
+        "Śankarābharaṇaṁ": 0.0072991762988872,
+        "Śrī": 0.007650489759413172,
+        "Śrīranjani": 0.017727104582274243,
+        "Śuddadhanyāsi": 0.008403505553938472,
+        "Ṣanmukhapriya": 0.01292997090749473
+      },
+      "composition_query": {
+        "start_s": 90.0,
+        "end_s": 180.0
+      },
+      "composition_tonic_hz": 140.42201232910156,
+      "composition_extraction_failure": null,
+      "composition_voiced_s": 54.93260770975057,
+      "composition_candidates": [
+        {
+          "work_id": "02164e5a-0c76-4662-ba07-f8c75b7b93e5",
+          "title": "Sri Raja Rajeswari",
+          "raga": "Māyāmāḷavagauḷa",
+          "reference_track": "compmusic__Sangeetha_Swaminathan.Sri_Raja_Rajeswari",
+          "distance": 0.3325435851789579,
+          "ranking_cost": 0.3325435851789579,
+          "status": "unverified_candidate",
+          "identity_evidence": "explicit_musicbrainz_performance_work_relation"
+        },
+        {
+          "work_id": "f28c7bd6-53cf-4b84-b504-2dad473b65ec",
+          "title": "Kaddanu variki",
+          "raga": "Tōḍi",
+          "reference_track": "compmusic__Kunnakkudi_M_Balamuralikrishna.Kaddanu_Variki",
+          "distance": 0.3473048776577987,
+          "ranking_cost": 0.3473048776577987,
+          "status": "unverified_candidate",
+          "identity_evidence": "explicit_musicbrainz_performance_work_relation"
+        },
+        {
+          "work_id": "6ba75eb3-0b26-4c21-8010-7f675d646e9c",
+          "title": "Kandanai Nesithaal",
+          "raga": "Ṣanmukhapriya",
+          "reference_track": "compmusic__S__Sowmya.Kandanai_Nesithaal",
+          "distance": 0.35017109835983046,
+          "ranking_cost": 0.35017109835983046,
+          "status": "unverified_candidate",
+          "identity_evidence": "explicit_musicbrainz_performance_work_relation"
+        }
+      ],
+      "composition_status": "unverified_candidates_no_acceptance_threshold",
+      "composition_estimated_raga_probabilities": {}
+    },
+    {
+      "start_s": 120.0,
+      "end_s": 180.0,
+      "tonic_hz": 140.42201232910156,
+      "query_extraction_failure": null,
+      "status": "candidate",
+      "voiced_s": 37.918185941043085,
+      "probabilities": {
+        "Amṛtavarṣiṇi": 0.06427296337322623,
+        "Aṭāna": 0.005566625759715197,
+        "Behāg": 0.013540772782464407,
+        "Bhairavi": 0.022980676537152488,
+        "Bilahari": 0.006796017060712732,
+        "Bēgaḍa": 0.031801999773394006,
+        "Bṛndāvana sāranga": 0.007291389543865143,
+        "Cakravākaṁ": 0.03669805082576422,
+        "Cittaranjani": 0.01202823178810396,
+        "Dhanyāsi": 0.024355163820979457,
+        "Dvijāvanti": 0.013657611126640759,
+        "Dēvagāndhāri": 0.007529511970286989,
+        "Gauḷa": 0.01732720493729871,
+        "Hamsadhvāni": 0.021590680382221075,
+        "Harikāmbhōji": 0.016732032870449547,
+        "Haṁsānandi": 0.006411591835935577,
+        "Hindōḷaṁ": 0.025336427779532874,
+        "Hussēnī": 0.008761775285691822,
+        "Jaganmōhini": 0.007323572009307684,
+        "Janaranjani": 0.03641696318944954,
+        "Jōnpuri": 0.006605540267864974,
+        "Kalyāṇi": 0.009375773585975146,
+        "Kamās": 0.004751434912683562,
+        "Karaharapriya": 0.030952861021888822,
+        "Karṇāṭaka dēvagāndhāri": 0.007618634458385505,
+        "Kedāraṁ": 0.005270082034202434,
+        "Kuntalavarāḷi": 0.008609888567455913,
+        "Kāmavardani": 0.004714197122358748,
+        "Kānaḍa": 0.016183203771877985,
+        "Kāpi": 0.006694912560253736,
+        "Kāṁbhōji": 0.006569272988164128,
+        "Kēdāragauḷa": 0.008156082321863488,
+        "Lalita": 0.027411743790758367,
+        "Latāngi": 0.008262801683750941,
+        "Madhyamāvati": 0.018083236405723326,
+        "Maṇirangu": 0.018493001067029894,
+        "Mukhāri": 0.006006808383998635,
+        "Mānḍu": 0.010740914611708988,
+        "Māyāmāḷavagauḷa": 0.011697598622300916,
+        "Mōhanaṁ": 0.00792954056767814,
+        "Nādanāmakriya": 0.014350691211182843,
+        "Nāṭa": 0.029877975943071962,
+        "Nāṭakurinji": 0.007778549643024145,
+        "Nīlāṁbari": 0.016216753188597298,
+        "Puṇṇāgavarāḷi": 0.005702162335097724,
+        "Pūrvīkaḷyāṇi": 0.011466876853288946,
+        "Pūrṇacandrika": 0.01969722417627083,
+        "Rītigauḷa": 0.006744698304120822,
+        "Sahānā": 0.011623337462945188,
+        "Saurāṣtraṁ": 0.003784068174808592,
+        "Sencuruṭṭi": 0.008887656818222343,
+        "Sindhubhairavi": 0.012474352385602796,
+        "Suraṭi": 0.01346166126590542,
+        "Sāma": 0.01043583425736328,
+        "Sāranga": 0.00539832406785805,
+        "Sāvēri": 0.033383004927201705,
+        "Tōḍi": 0.039943256806219976,
+        "Vakuḷābharaṇaṁ": 0.015379649383652489,
+        "Varāḷi": 0.015435792474655303,
+        "Vasanta": 0.011037625471776663,
+        "Yadukula kāṁbōji": 0.014431342979096724,
+        "Ābhōgi": 0.011884439764251664,
+        "Āhiri": 0.00880391957224156,
+        "Ānandabhairavi": 0.007120478177263298,
+        "Śankarābharaṇaṁ": 0.008142051223036455,
+        "Śrī": 0.004575131485046917,
+        "Śrīranjani": 0.020571181857117787,
+        "Śuddadhanyāsi": 0.007271210680326662,
+        "Ṣanmukhapriya": 0.013573957712636512
+      },
+      "composition_query": {
+        "start_s": 120.0,
+        "end_s": 180.0
+      },
+      "composition_tonic_hz": 140.42201232910156,
+      "composition_extraction_failure": null,
+      "composition_voiced_s": 37.918185941043085,
+      "composition_candidates": [
+        {
+          "work_id": "ea41c115-c5f2-4160-b327-a35c0f099161",
+          "title": "Rama Daya Joodava",
+          "raga": "Dhanyāsi",
+          "reference_track": "compmusic__Vijay_Siva.Rama_Dayajudave",
+          "distance": 0.33429814913056116,
+          "ranking_cost": 0.33429814913056116,
+          "status": "unverified_candidate",
+          "identity_evidence": "explicit_musicbrainz_performance_work_relation"
+        },
+        {
+          "work_id": "be454ab9-c6df-4bc7-99ce-691bb9345db3",
+          "title": "Sarasuda Ninne Kori",
+          "raga": "Sāvēri",
+          "reference_track": "compmusic__S__Sowmya.Sarasuda",
+          "distance": 0.3375727585229006,
+          "ranking_cost": 0.3375727585229006,
+          "status": "unverified_candidate",
+          "identity_evidence": "explicit_musicbrainz_performance_work_relation"
+        },
+        {
+          "work_id": "f6789aa0-f1e6-47cd-9e33-cd74d896928c",
+          "title": "Vani Arul",
+          "raga": "Dhanyāsi",
+          "reference_track": "compmusic__Gayathri_Venkataraghavan.Vani_Arul",
+          "distance": 0.34200306155464866,
+          "ranking_cost": 0.34200306155464866,
+          "status": "unverified_candidate",
+          "identity_evidence": "explicit_musicbrainz_performance_work_relation"
+        }
+      ],
+      "composition_status": "unverified_candidates_no_acceptance_threshold",
+      "composition_estimated_raga_probabilities": {}
+    },
+    {
+      "start_s": 150.0,
+      "end_s": 180.0,
+      "tonic_hz": 140.42201232910156,
+      "query_extraction_failure": null,
+      "status": "candidate",
+      "voiced_s": 18.416326530612245,
+      "probabilities": {
+        "Amṛtavarṣiṇi": 0.05267769739139856,
+        "Aṭāna": 0.007450502878406682,
+        "Behāg": 0.00724040729312634,
+        "Bhairavi": 0.01028444258416376,
+        "Bilahari": 0.006821551181235271,
+        "Bēgaḍa": 0.013928421315393263,
+        "Bṛndāvana sāranga": 0.011956764320934222,
+        "Cakravākaṁ": 0.04535997575781456,
+        "Cittaranjani": 0.011320822127383268,
+        "Dhanyāsi": 0.11950957829140407,
+        "Dvijāvanti": 0.01020093049310408,
+        "Dēvagāndhāri": 0.013360881875140194,
+        "Gauḷa": 0.01970466090509285,
+        "Hamsadhvāni": 0.011197718852122826,
+        "Harikāmbhōji": 0.011780899768214082,
+        "Haṁsānandi": 0.006019451354397861,
+        "Hindōḷaṁ": 0.008973751582562365,
+        "Hussēnī": 0.013345744497515325,
+        "Jaganmōhini": 0.00952994897222639,
+        "Janaranjani": 0.010428836932610205,
+        "Jōnpuri": 0.009095845537696906,
+        "Kalyāṇi": 0.00643860467946986,
+        "Kamās": 0.008360027285291017,
+        "Karaharapriya": 0.017473649792439094,
+        "Karṇāṭaka dēvagāndhāri": 0.0077670476152139675,
+        "Kedāraṁ": 0.006444428035396212,
+        "Kuntalavarāḷi": 0.005230392339393099,
+        "Kāmavardani": 0.12013593140127297,
+        "Kānaḍa": 0.012679653312310822,
+        "Kāpi": 0.0043084066760659635,
+        "Kāṁbhōji": 0.010801469542103715,
+        "Kēdāragauḷa": 0.010727433272688753,
+        "Lalita": 0.003316329143800511,
+        "Latāngi": 0.009492166679862466,
+        "Madhyamāvati": 0.003839668866423639,
+        "Maṇirangu": 0.004415550558908439,
+        "Mukhāri": 0.007469392675572256,
+        "Mānḍu": 0.009794368957669428,
+        "Māyāmāḷavagauḷa": 0.023080365147842393,
+        "Mōhanaṁ": 0.006436207987582254,
+        "Nādanāmakriya": 0.010640382832667519,
+        "Nāṭa": 0.016570249768768548,
+        "Nāṭakurinji": 0.008793158953384226,
+        "Nīlāṁbari": 0.017845449361874325,
+        "Puṇṇāgavarāḷi": 0.006184768109333547,
+        "Pūrvīkaḷyāṇi": 0.017599488874763,
+        "Pūrṇacandrika": 0.0359879128563089,
+        "Rītigauḷa": 0.008913368259050133,
+        "Sahānā": 0.006347919664691568,
+        "Saurāṣtraṁ": 0.0029650116029696057,
+        "Sencuruṭṭi": 0.007311222262858261,
+        "Sindhubhairavi": 0.013866536641628123,
+        "Suraṭi": 0.007980270650813548,
+        "Sāma": 0.011465308259905854,
+        "Sāranga": 0.006012371607424409,
+        "Sāvēri": 0.021028768873509168,
+        "Tōḍi": 0.0030392402433897965,
+        "Vakuḷābharaṇaṁ": 0.024035187247656135,
+        "Varāḷi": 0.006710259641447297,
+        "Vasanta": 0.004374178911045695,
+        "Yadukula kāṁbōji": 0.010534825273962743,
+        "Ābhōgi": 0.009627594299266268,
+        "Āhiri": 0.0050467835135069765,
+        "Ānandabhairavi": 0.0060720598642758925,
+        "Śankarābharaṇaṁ": 0.007445931603527718,
+        "Śrī": 0.00839735932144132,
+        "Śrīranjani": 0.009962901871271568,
+        "Śuddadhanyāsi": 0.006713714388042697,
+        "Ṣanmukhapriya": 0.010127847359965308
+      },
+      "composition_query": {
+        "start_s": 150.0,
+        "end_s": 180.0
+      },
+      "composition_tonic_hz": 140.42201232910156,
+      "composition_extraction_failure": null,
+      "composition_voiced_s": 18.416326530612245,
+      "composition_candidates": [
+        {
+          "work_id": "a0b3496e-c161-45cf-b6e7-08e5652d9184",
+          "title": "Emi Jesite",
+          "raga": "Tōḍi",
+          "reference_track": "compmusic__Bombay_Jayashri.Emi_Jesite_Nemi",
+          "distance": 0.27534085399699676,
+          "ranking_cost": 0.27534085399699676,
+          "status": "unverified_candidate",
+          "identity_evidence": "explicit_musicbrainz_performance_work_relation"
+        },
+        {
+          "work_id": "7ffceda2-b2cb-4db0-81de-600c5f5be8f7",
+          "title": "Sarasiruhasanapriye",
+          "raga": "Nāṭa",
+          "reference_track": "compmusic__Voleti_Venkateshwarlu.Sarasiruhasanapriye",
+          "distance": 0.28189989125953546,
+          "ranking_cost": 0.28189989125953546,
+          "status": "unverified_candidate",
+          "identity_evidence": "explicit_musicbrainz_performance_work_relation"
+        },
+        {
+          "work_id": "e5fccb08-d39d-4966-8cdf-521a0482bd10",
+          "title": "Shankari Shankuru",
+          "raga": "Sāvēri",
+          "reference_track": "49_Shankari_Shankuru",
+          "distance": 0.2822301650946996,
+          "ranking_cost": 0.2822301650946996,
+          "status": "unverified_candidate",
+          "identity_evidence": "unspecified"
+        }
+      ],
+      "composition_status": "unverified_candidates_no_acceptance_threshold",
+      "composition_estimated_raga_probabilities": {}
+    }
+  ],
+  "segments": [
+    {
+      "start_s": 0.0,
+      "end_s": 30.0,
+      "kind": "melodic_music",
+      "raga": null,
+      "status": "uncertain",
+      "score": 0.08925585162091254,
+      "candidates": [
+        {
+          "raga": "Tōḍi",
+          "score": 0.08925585162091254
+        },
+        {
+          "raga": "Sāvēri",
+          "score": 0.07466479838202801
+        },
+        {
+          "raga": "Amṛtavarṣiṇi",
+          "score": 0.059013329254742244
+        },
+        {
+          "raga": "Māyāmāḷavagauḷa",
+          "score": 0.04348666015305739
+        },
+        {
+          "raga": "Dhanyāsi",
+          "score": 0.030782643403619782
+        }
+      ],
+      "label_origin": "automatic_prediction",
+      "n_event_windows": 3
+    },
+    {
+      "start_s": 30.0,
+      "end_s": 80.0,
+      "kind": "percussion",
+      "raga": null,
+      "status": "uncertain",
+      "score": 0.08054391704108776,
+      "candidates": [
+        {
+          "raga": "Sāvēri",
+          "score": 0.08054391704108776
+        },
+        {
+          "raga": "Tōḍi",
+          "score": 0.07272583277410445
+        },
+        {
+          "raga": "Amṛtavarṣiṇi",
+          "score": 0.059359699542992375
+        },
+        {
+          "raga": "Māyāmāḷavagauḷa",
+          "score": 0.04200350645680647
+        },
+        {
+          "raga": "Janaranjani",
+          "score": 0.0276486052600692
+        }
+      ],
+      "label_origin": "automatic_prediction",
+      "n_event_windows": 5
+    },
+    {
+      "start_s": 80.0,
+      "end_s": 180.0,
+      "kind": "melodic_music",
+      "raga": null,
+      "status": "uncertain",
+      "score": 0.06581580115558001,
+      "candidates": [
+        {
+          "raga": "Sāvēri",
+          "score": 0.06581580115558001
+        },
+        {
+          "raga": "Amṛtavarṣiṇi",
+          "score": 0.056193549090147184
+        },
+        {
+          "raga": "Tōḍi",
+          "score": 0.05570244677971323
+        },
+        {
+          "raga": "Dhanyāsi",
+          "score": 0.033083660435172184
+        },
+        {
+          "raga": "Māyāmāḷavagauḷa",
+          "score": 0.027805708793872844
+        }
+      ],
+      "label_origin": "automatic_prediction",
+      "n_event_windows": 10
+    }
+  ]
+}

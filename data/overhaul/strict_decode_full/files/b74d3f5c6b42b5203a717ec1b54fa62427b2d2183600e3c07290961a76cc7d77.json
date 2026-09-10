@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ābhōgī__Sabapathikku Veru DevamSamanamaguma Rupaka",
+  "audio": "data/concert_audio/Ābhōgī/Sabapathikku Veru DevamSamanamaguma Rupaka.mp3",
+  "audio_sha256": "b74d3f5c6b42b5203a717ec1b54fa62427b2d2183600e3c07290961a76cc7d77",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8677873332053423
+}

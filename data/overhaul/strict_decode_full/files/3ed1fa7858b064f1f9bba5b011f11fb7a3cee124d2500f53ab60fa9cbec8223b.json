@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sindhubhairavi__malAsipOkam",
+  "audio": "data/concert_audio/Sindhubhairavi/malAsipOkam.mp3",
+  "audio_sha256": "3ed1fa7858b064f1f9bba5b011f11fb7a3cee124d2500f53ab60fa9cbec8223b",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2987723331898451
+}

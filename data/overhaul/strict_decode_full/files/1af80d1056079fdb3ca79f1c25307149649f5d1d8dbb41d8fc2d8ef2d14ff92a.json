@@ -1,0 +1,11 @@
+{
+  "track": "archive__Maṇirangu__kadalinai",
+  "audio": "data/concert_audio/Maṇirangu/kadalinai.mp3",
+  "audio_sha256": "1af80d1056079fdb3ca79f1c25307149649f5d1d8dbb41d8fc2d8ef2d14ff92a",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2878245413303375
+}

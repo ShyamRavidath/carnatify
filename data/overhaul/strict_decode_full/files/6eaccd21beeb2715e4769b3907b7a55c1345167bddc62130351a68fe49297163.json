@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bhairavi__tanayuni brOva",
+  "audio": "data/concert_audio/Bhairavi/tanayuni brOva.mp3",
+  "audio_sha256": "6eaccd21beeb2715e4769b3907b7a55c1345167bddc62130351a68fe49297163",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 7.898275500163436
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāmavardani__siva siva siva ena rAdA",
+  "audio": "data/concert_audio/Kāmavardani/siva siva siva ena rAdA.mp3",
+  "audio_sha256": "e3ca5517b7a27dc1ffd9948b7fcdd1b756102708206638c6fc120f3756c48c0f",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.90377016691491
+}

@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/d793dcb8-74c4-4280-a4f5-4e89e266f4c4",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:13:32.539910+00:00",
+  "recording": {
+    "first-release-date": "1993",
+    "id": "d793dcb8-74c4-4280-a4f5-4e89e266f4c4",
+    "length": 289390,
+    "title": "Anupamagunambudi",
+    "disambiguation": "",
+    "video": false,
+    "relations": [
+      {
+        "source-credit": "",
+        "attribute-values": {},
+        "direction": "forward",
+        "type": "performance",
+        "end": null,
+        "work": {
+          "id": "b095c36b-5e30-4bdb-8382-5e6b91e869c8",
+          "attributes": [],
+          "iswcs": [],
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "language": "tel",
+          "type": "Song",
+          "disambiguation": "",
+          "title": "Anupamagunambudhi",
+          "languages": [
+            "tel"
+          ]
+        },
+        "target-credit": "",
+        "attributes": [
+          "live"
+        ],
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "ended": false,
+        "target-type": "work"
+      }
+    ]
+  }
+}

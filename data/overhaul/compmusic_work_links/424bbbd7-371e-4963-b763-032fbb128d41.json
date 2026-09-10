@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/424bbbd7-371e-4963-b763-032fbb128d41",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:32:17.558569+00:00",
+  "recording": {
+    "title": "Vazhimaraithirukkuthe",
+    "relations": [
+      {
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "ended": false,
+        "begin": null,
+        "type": "performance",
+        "direction": "forward",
+        "target-type": "work",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-values": {},
+        "work": {
+          "id": "cd0c0289-8499-4215-a48f-714dccdd116b",
+          "type": "Song",
+          "languages": [
+            "tam"
+          ],
+          "language": "tam",
+          "attributes": [],
+          "iswcs": [],
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "disambiguation": "Nattakurinji version of the krithi",
+          "title": "Vazhimaraithirukkuthe"
+        },
+        "end": null,
+        "attributes": [
+          "live"
+        ],
+        "target-credit": "",
+        "source-credit": ""
+      }
+    ],
+    "first-release-date": "2009",
+    "disambiguation": "",
+    "length": 452000,
+    "video": false,
+    "id": "424bbbd7-371e-4963-b763-032fbb128d41"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Janaranjani__Melakartha Chakkaram",
+  "audio": "data/concert_audio/Janaranjani/Melakartha Chakkaram.mp3",
+  "audio_sha256": "7479b6716ccc5af9855586b32d25855446e5811d85fb9600807392c1bf4f3a07",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.852049333974719
+}

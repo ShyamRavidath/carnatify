@@ -1,0 +1,11 @@
+{
+  "track": "22_Hiranmayeem_Lakshmeem",
+  "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Hiranmayeem Lakshmeem/Vignesh Ishwar - Hiranmayeem Lakshmeem.mp3",
+  "audio_sha256": "bd885aa599faf7e071ebc837982b6cf30be5ae24a9a75db35d4684296b1c3445",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.9351214161142707
+}

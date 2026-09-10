@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sāma__maravagavE",
+  "audio": "data/concert_audio/Sāma/maravagavE.mp3",
+  "audio_sha256": "05d857f78e70bca11d2385dcb2a989da34b7248978fdd98b5fee7ffcfaa4340a",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.40009895898401737
+}

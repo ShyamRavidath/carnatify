@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ṣanmukhapriya__pAdalenDrum pudhiyadu",
+  "audio": "data/concert_audio/Ṣanmukhapriya/pAdalenDrum pudhiyadu.mp3",
+  "audio_sha256": "572505655b537422eede6945f048fe9d18bde34b3dc32c2108fea47920ffb82b",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.23703254107385874
+}

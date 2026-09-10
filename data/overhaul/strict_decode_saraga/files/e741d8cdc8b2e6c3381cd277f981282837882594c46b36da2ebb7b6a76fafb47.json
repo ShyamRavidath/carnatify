@@ -1,0 +1,11 @@
+{
+  "track": "190_Va_Va_Brindavana",
+  "audio": "saraga1.5_carnatic/Sumithra Vasudev at Arkay by Sumithra Vasudev/Va Va Brindavana/Va Va Brindavana.mp3.mp3",
+  "audio_sha256": "e741d8cdc8b2e6c3381cd277f981282837882594c46b36da2ebb7b6a76fafb47",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.44541870802640915
+}

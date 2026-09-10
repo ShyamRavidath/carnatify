@@ -1,0 +1,11 @@
+{
+  "track": "111_Sarasadalanayana",
+  "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sarasadalanayana/Sanjay Subrahmanyan - Sarasadalanayana.mp3",
+  "audio_sha256": "ba9852539589bf5ac74669e5f60624a6c8ed34249ea14f7eadad1db48fadef9c",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 4.494161915965378
+}

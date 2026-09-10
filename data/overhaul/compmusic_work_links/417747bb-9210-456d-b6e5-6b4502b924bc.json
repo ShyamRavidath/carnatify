@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/417747bb-9210-456d-b6e5-6b4502b924bc",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:32:01.477828+00:00",
+  "recording": {
+    "relations": [
+      {
+        "target-credit": "",
+        "target-type": "work",
+        "type": "performance",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "direction": "forward",
+        "begin": null,
+        "source-credit": "",
+        "attribute-values": {},
+        "work": {
+          "title": "Mamavasada Janani",
+          "disambiguation": "",
+          "language": null,
+          "attributes": [],
+          "id": "60decd41-399e-4b78-aae6-ab59cd3726b2",
+          "type": null,
+          "type-id": null,
+          "languages": [],
+          "iswcs": []
+        },
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "attributes": [
+          "live"
+        ],
+        "end": null,
+        "ended": false
+      }
+    ],
+    "first-release-date": "2007",
+    "id": "417747bb-9210-456d-b6e5-6b4502b924bc",
+    "video": false,
+    "length": 351000,
+    "disambiguation": "",
+    "title": "Mamavasada Janani"
+  }
+}

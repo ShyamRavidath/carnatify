@@ -1,0 +1,11 @@
+{
+  "track": "archive__Pūrvīkaḷyāṇi__Ninnuvinaaga Mari Dikkevarunnaaru",
+  "audio": "data/concert_audio/Pūrvīkaḷyāṇi/Ninnuvinaaga Mari Dikkevarunnaaru.mp3",
+  "audio_sha256": "0d6bff8624077e54487beedcdc21001bb51306eea3a30c7f037d66b7b5ef4435",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 4.275366999674588
+}

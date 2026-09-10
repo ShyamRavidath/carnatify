@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bhairavi__02Balagopala",
+  "audio": "data/concert_audio/Bhairavi/02Balagopala.mp3",
+  "audio_sha256": "ec67104264f1eabf7c27a6fab7b0c2da9af5827f9450e580de22330be923c491",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 5.177463834173977
+}

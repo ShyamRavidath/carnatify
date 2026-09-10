@@ -1,0 +1,21 @@
+{
+  "status": "passed_synthetic_loss_update_and_gradient_norm_control",
+  "max_absolute_difference_by_step": [
+    2.2631669871486793e-07,
+    6.818935716409319e-07,
+    2.3081975306787905e-09
+  ],
+  "rtol": 0.001,
+  "atol": 1e-06,
+  "limitation": "Single synthetic example; parameter norms, not full gradient vectors; no semantic accuracy claim",
+  "inputs": {
+    "data/overhaul/musicfm_cpu_gradient_boundary_diagnostic/plan.json": "c96a7a21e4431334e0a1f1c09bc55698d6c45250c41cd2638bfa2382858a55ab",
+    "data/overhaul/musicfm_cpu_gradient_boundary_diagnostic/result.json": "59a29223936a669df8cb280be2757c7b270fd4703ea90d68a8bd18dca77be876",
+    "data/overhaul/musicfm_mps_gradient_boundary_diagnostic/plan.json": "24b5ab624217f1a428811e58b2c8002a10ce26c96575a68622f65d4ed59e1414",
+    "data/overhaul/musicfm_mps_gradient_boundary_diagnostic/result.json": "4f4664f8012dbd268f300a6c2ecd668a708e997538b4436fdeb177deaf9b8fbf"
+  },
+  "implementation_sha256": {
+    "compare_musicfm_gradients.py": "b30220518cf6085654d4b6d9dcc1133ff8f60507c293726c0db8aee120665601",
+    "probe_musicfm_gradients.py": "f4dbc300b97a25e44e4b7f34eb8f79379c75355ef401991f85925d5ed36a40ed"
+  }
+}

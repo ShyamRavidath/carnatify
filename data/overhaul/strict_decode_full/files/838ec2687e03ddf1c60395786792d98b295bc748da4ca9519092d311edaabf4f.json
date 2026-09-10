@@ -1,0 +1,11 @@
+{
+  "track": "archive__Harikāmbhōji__Melakartha Chakkaram Sarasangi",
+  "audio": "data/concert_audio/Harikāmbhōji/Melakartha Chakkaram Sarasangi.mp3",
+  "audio_sha256": "838ec2687e03ddf1c60395786792d98b295bc748da4ca9519092d311edaabf4f",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 6.1648292504251
+}

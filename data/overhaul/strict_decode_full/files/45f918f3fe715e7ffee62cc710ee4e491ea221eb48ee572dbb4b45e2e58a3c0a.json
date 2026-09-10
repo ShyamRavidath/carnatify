@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sindhubhairavi__sivanAr manam kuLira",
+  "audio": "data/concert_audio/Sindhubhairavi/sivanAr manam kuLira.mp3",
+  "audio_sha256": "45f918f3fe715e7ffee62cc710ee4e491ea221eb48ee572dbb4b45e2e58a3c0a",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.18657008279114962
+}

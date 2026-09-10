@@ -1,0 +1,11 @@
+{
+  "track": "186_Shloka",
+  "audio": "saraga1.5_carnatic/V Shankarnarayanan at Arkay by V Shankaranarayanan/Shloka/Shloka.mp3.mp3",
+  "audio_sha256": "3178910db9897f7324182b7e83aa529678dc5179450e74919433f794439cf2a1",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.1837720419280231
+}

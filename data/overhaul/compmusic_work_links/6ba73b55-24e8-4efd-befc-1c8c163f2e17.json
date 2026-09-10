@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/6ba73b55-24e8-4efd-befc-1c8c163f2e17",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:44:39.724837+00:00",
+  "recording": {
+    "video": false,
+    "id": "6ba73b55-24e8-4efd-befc-1c8c163f2e17",
+    "relations": [
+      {
+        "type": "performance",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "work": {
+          "type": null,
+          "attributes": [],
+          "language": null,
+          "title": "Swaminatha Paripalaya",
+          "type-id": null,
+          "id": "b707ade9-a0c4-4c6e-aec5-c8e6c8c5c712",
+          "iswcs": [],
+          "disambiguation": "",
+          "languages": []
+        },
+        "target-credit": "",
+        "source-credit": "",
+        "ended": false,
+        "end": null,
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ],
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "direction": "forward",
+        "begin": null,
+        "attribute-values": {}
+      }
+    ],
+    "disambiguation": "",
+    "length": 281000,
+    "first-release-date": "2005",
+    "title": "Swaminatha Paripalaya"
+  }
+}

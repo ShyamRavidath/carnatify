@@ -1,0 +1,11 @@
+{
+  "track": "archive__Śankarābharaṇaṁ__ennil kaninda",
+  "audio": "data/concert_audio/Śankarābharaṇaṁ/ennil kaninda.mp3",
+  "audio_sha256": "69b48be32852e11436b424adca2e303cf6422f3369904b359f720798287e1265",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5525537496432662
+}

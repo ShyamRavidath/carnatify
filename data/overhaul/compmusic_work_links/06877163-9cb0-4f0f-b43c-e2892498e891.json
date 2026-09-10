@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/06877163-9cb0-4f0f-b43c-e2892498e891",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:13:58.400703+00:00",
+  "recording": {
+    "video": false,
+    "length": 417000,
+    "id": "06877163-9cb0-4f0f-b43c-e2892498e891",
+    "relations": [
+      {
+        "ended": false,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "source-credit": "",
+        "target-credit": "",
+        "work": {
+          "languages": [],
+          "type": null,
+          "id": "9af4b020-bde2-4289-b801-cb0855b4efeb",
+          "type-id": null,
+          "iswcs": [],
+          "attributes": [],
+          "language": null,
+          "disambiguation": "",
+          "title": "Karpagame"
+        },
+        "end": null,
+        "attributes": [
+          "live"
+        ],
+        "attribute-values": {},
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "target-type": "work",
+        "direction": "forward",
+        "begin": null,
+        "type": "performance"
+      }
+    ],
+    "title": "Adum Mayilai - Karpagame",
+    "first-release-date": "2010",
+    "disambiguation": ""
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kānaḍa__Brihadhishwara Mahadeva",
+  "audio": "data/concert_audio/Kānaḍa/Brihadhishwara Mahadeva.mp3",
+  "audio_sha256": "18cf322bf0e6aebd95a0afafb4a94d8da439fed2f0d02b396bd3477f8cb2efdb",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6012078747153282
+}

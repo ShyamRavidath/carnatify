@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bēgaḍa__karuNAkara",
+  "audio": "data/concert_audio/Bēgaḍa/karuNAkara.mp3",
+  "audio_sha256": "7af02fbe9dde5a4e866a7f2508b788d0ec894249f13d54dbadf38db87f5afc47",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.650814125314355
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nāṭa__jaya jaya swAmin",
+  "audio": "data/concert_audio/Nāṭa/jaya jaya swAmin.mp3",
+  "audio_sha256": "5508d902de9a6596d1c320e3bfc54c8626c61d656f35858f67f379235e5653ad",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.3457419159822166
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāṁbhōji__sri raguvara",
+  "audio": "data/concert_audio/Kāṁbhōji/sri raguvara.mp3",
+  "audio_sha256": "0b8d8f577530d5547f5593ac701cd94adc359e18a933423fe537fec7907cd18a",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7679022923111916
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Saurāṣtraṁ__D K Jayaraman Pancharathana Krithis Sri Ganapathini",
+  "audio": "data/concert_audio/Saurāṣtraṁ/D K Jayaraman Pancharathana Krithis Sri Ganapathini.mp3",
+  "audio_sha256": "b89cb07ee220cd36db374e123be353675a3c78331de460842fe3b76e89778e0d",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.44419829174876213
+}

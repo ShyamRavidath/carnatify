@@ -1,0 +1,2401 @@
+{
+  "plan_sha256": "037337e5bb7eb98df918edb1fd51d3f6899113b54f8943934067f57cb37e0d76",
+  "rows": [
+    {
+      "identifier": "01-ASI",
+      "url": "https://archive.org/metadata/01-ASI",
+      "status": "ok",
+      "raw_file": "1d29c08029c9ded7d6ad34926d945de8bdf2e8f90d9653e3c0426028c82119f5.raw.json",
+      "raw_sha256": "b21e182745e9fa5fb54b95632fe514137590faed2c550c0318364f003d967bb6",
+      "files": 23,
+      "attempt": 1
+    },
+    {
+      "identifier": "01-namo-namo-nattai-rupakam-annamacharya",
+      "url": "https://archive.org/metadata/01-namo-namo-nattai-rupakam-annamacharya",
+      "status": "ok",
+      "raw_file": "7f6787818bbeaeb5cd9bd678d4028b382286e9a1c6015e8b6139c45cfb9a5710.raw.json",
+      "raw_sha256": "a59dc596c045d1e398ca94f310d5a32ee6de0ce276073057dae6e7638acdefc1",
+      "files": 8,
+      "attempt": 1
+    },
+    {
+      "identifier": "01.VarnamNatakurinji",
+      "url": "https://archive.org/metadata/01.VarnamNatakurinji",
+      "status": "ok",
+      "raw_file": "c98a70a1d7b4b39607b89ab72b097bf6774246f6d2f7990c8e889978ee1d872f.raw.json",
+      "raw_sha256": "04bda87296ed61002fa49a5b8ebf4c1c05dc3a702c581d6ba00932bac44506c3",
+      "files": 41,
+      "attempt": 1
+    },
+    {
+      "identifier": "01SamiNinnePanthuvaraliShatkalaNarasayya",
+      "url": "https://archive.org/metadata/01SamiNinnePanthuvaraliShatkalaNarasayya",
+      "status": "ok",
+      "raw_file": "14671cb91ec0a6803402fc1b0412f849f27447a125192596e35f77fdc018ab49.raw.json",
+      "raw_sha256": "e2670432f34c02fabd5808d24fc5f55065910108832e101a74308d0facc38539",
+      "files": 110,
+      "attempt": 1
+    },
+    {
+      "identifier": "01VarnamPantuvarali",
+      "url": "https://archive.org/metadata/01VarnamPantuvarali",
+      "status": "ok",
+      "raw_file": "c87f81c8f1a03fb26653274c929e1af2ff09b7aca4bd918f1b60c04219cf5b8b.raw.json",
+      "raw_sha256": "e8408799a247f5fe43c52ac471c8476b52398d5e6170aa80d3b0e51a7277caa6",
+      "files": 45,
+      "attempt": 1
+    },
+    {
+      "identifier": "02RKSuryanarayana",
+      "url": "https://archive.org/metadata/02RKSuryanarayana",
+      "status": "ok",
+      "raw_file": "d4a2f791784adbd7d39c23eaaa6240e2a31505c046a2b1d2d838ac1dc17e2960.raw.json",
+      "raw_sha256": "f9f0aeaa2fb1a0dd30890edd60e0c4ba546796dccb7b59c1c055cccf4a470a75",
+      "files": 55,
+      "attempt": 1
+    },
+    {
+      "identifier": "03-dhurusuka-saveri-adhi-shyama-sasthri",
+      "url": "https://archive.org/metadata/03-dhurusuka-saveri-adhi-shyama-sasthri",
+      "status": "ok",
+      "raw_file": "1f05288b68b17bbb0f5ddb61dcb31159a88f5be40e80823f9e967566c89c85ad.raw.json",
+      "raw_sha256": "3b6be9ed3940e89fd3b461a9c5e6600cff2fab0933613539906464074df0f219",
+      "files": 14,
+      "attempt": 1
+    },
+    {
+      "identifier": "03GhananayaRishabhapriyA",
+      "url": "https://archive.org/metadata/03GhananayaRishabhapriyA",
+      "status": "ok",
+      "raw_file": "4a1017413598c195e8ae1baaf505513a750bc51e69ef76329f6651b56dfe1245.raw.json",
+      "raw_sha256": "016530ba4f615330f86d0dd34baf96597351d1fcf2a533c0f9630484e049be82",
+      "files": 10,
+      "attempt": 1
+    },
+    {
+      "identifier": "03MahItaPravrddhaShrImatiKAmbOji",
+      "url": "https://archive.org/metadata/03MahItaPravrddhaShrImatiKAmbOji",
+      "status": "ok",
+      "raw_file": "b017d2fa5fd7a1dcda9e5195f86ce7066ee58dc21c6555bb6591864ee1a23e7f.raw.json",
+      "raw_sha256": "9232b0a1cf8605d767863e7fad73962d813c4735a5a85052f1fede758a9c7cf1",
+      "files": 30,
+      "attempt": 1
+    },
+    {
+      "identifier": "05-k-ana-kank-odi-kambh-oji",
+      "url": "https://archive.org/metadata/05-k-ana-kank-odi-kambh-oji",
+      "status": "ok",
+      "raw_file": "f3dfa5c8bc04e11f40d70b92dafda18fe4ac1a6cbc5594c8a0f2b41ee5009008.raw.json",
+      "raw_sha256": "78a41e472b67ade472887c3ad5861b7ed97bf2116a78d69a5920cda233312604",
+      "files": 23,
+      "attempt": 1
+    },
+    {
+      "identifier": "05-tsk",
+      "url": "https://archive.org/metadata/05-tsk",
+      "status": "ok",
+      "raw_file": "d015279923fd56db8d839b893643442c19edc2e59b071cf2a9a3e8622b9ba6ae.raw.json",
+      "raw_sha256": "bd6b9d4e9de46438ef2164b7f185ba9bc2d4add8a6f05d33053f5a2792aa1404",
+      "files": 56,
+      "attempt": 1
+    },
+    {
+      "identifier": "05.NagalingamMohanamKS",
+      "url": "https://archive.org/metadata/05.NagalingamMohanamKS",
+      "status": "ok",
+      "raw_file": "0efa5951aa704fc1cd5090675a4e05af832af40fafd8882c49de52ef009aa800.raw.json",
+      "raw_sha256": "81b7d20b46573a76c9f660f42883394abece9ca9c15298f27dd5eeb8194f8467",
+      "files": 12,
+      "attempt": 1
+    },
+    {
+      "identifier": "05srirajarajeswarimayamalavagowla",
+      "url": "https://archive.org/metadata/05srirajarajeswarimayamalavagowla",
+      "status": "ok",
+      "raw_file": "cc8f191592df1e4b6e3d8cd5e12585bad1e3ddecfc605ccf5cd326d8e42b7cf6.raw.json",
+      "raw_sha256": "d24fa7c6dbbcce46629b8230007fdcb6605f86d34c0e7f85085e28fadb834673",
+      "files": 50,
+      "attempt": 1
+    },
+    {
+      "identifier": "05unidentifiedkrithiinkambodhi",
+      "url": "https://archive.org/metadata/05unidentifiedkrithiinkambodhi",
+      "status": "ok",
+      "raw_file": "52347bba3a712a29c078607fa8e099df692034d9165f41189426545462351e0a.raw.json",
+      "raw_sha256": "9ce9cc5382259304a65f77785d676dc9c19c49d6825e2c04dc2aa704ac5bd684",
+      "files": 45,
+      "attempt": 1
+    },
+    {
+      "identifier": "066-tns-mc-vr-gh-hamsadwani-chennai",
+      "url": "https://archive.org/metadata/066-tns-mc-vr-gh-hamsadwani-chennai",
+      "status": "ok",
+      "raw_file": "7e77fc2af7b0ac8dbb87dbf2e851d51a981d6cb565f1f17403fbd73430b884b0.raw.json",
+      "raw_sha256": "0d9088b76e6b0504cdfe617d46a633a7b16a1da92ce9e3452de4fe6853b9e30e",
+      "files": 8,
+      "attempt": 1
+    },
+    {
+      "identifier": "069-tns",
+      "url": "https://archive.org/metadata/069-tns",
+      "status": "ok",
+      "raw_file": "1ac2bd76c8cb3dc461e3b13ff794d2282c17ca59e0796957aeff01959b3d9e6a.raw.json",
+      "raw_sha256": "1f72ac5137c9b46849a72408f1e2281560acd01db3e7799bb4f366230391fb80",
+      "files": 44,
+      "attempt": 1
+    },
+    {
+      "identifier": "07-swara-r-aga-sudh-arasa-sankar-abara-nam",
+      "url": "https://archive.org/metadata/07-swara-r-aga-sudh-arasa-sankar-abara-nam",
+      "status": "ok",
+      "raw_file": "94ea27cbdb57fb6d40a6c5cc10b3fd85195549cfa12b0f9b4ed8ed68ae748648.raw.json",
+      "raw_sha256": "42dc178861a9425b8d40038062fd00838b392bf46e2f376c4b98f9b622bf7772",
+      "files": 32,
+      "attempt": 1
+    },
+    {
+      "identifier": "073-tns",
+      "url": "https://archive.org/metadata/073-tns",
+      "status": "ok",
+      "raw_file": "681667870b6b7db9832b0f9dd42be46f10b6a56df9c715185234642c3cc05946.raw.json",
+      "raw_sha256": "a46ad785904a5a8c801d295c3158443a0d7bea37ecf1e08fbce98a469e6afbff",
+      "files": 32,
+      "attempt": 1
+    },
+    {
+      "identifier": "089-tns",
+      "url": "https://archive.org/metadata/089-tns",
+      "status": "ok",
+      "raw_file": "e7ee1cd824020e5cbaba79c609f252c03b259aa515db36de803ce46ef9c6eb49.raw.json",
+      "raw_sha256": "127f8d4da88984ef5bd40b80fd898ebfac19a794f3dbbe0c9adefaba2ea5cfe0",
+      "files": 44,
+      "attempt": 1
+    },
+    {
+      "identifier": "08MahatmuleRishabhapriya",
+      "url": "https://archive.org/metadata/08MahatmuleRishabhapriya",
+      "status": "ok",
+      "raw_file": "171793de8bf89e678733dbd260bd2701280c548cc49896a5d1940af33804a7af.raw.json",
+      "raw_sha256": "101d9469cd4373ac8e3ed7630666055b40f6aade2038d2da1e02d3451e085780",
+      "files": 60,
+      "attempt": 1
+    },
+    {
+      "identifier": "1-MR-VT-ManakkalSriram",
+      "url": "https://archive.org/metadata/1-MR-VT-ManakkalSriram",
+      "status": "ok",
+      "raw_file": "1ab66b73b27c66b43dd7baf6c2270e5bf3c5cb16b34612af3359e8af20c1a780.raw.json",
+      "raw_sha256": "1d586d4f79f84e56bd1af5ce789e14a91f31da5db1fdbc82529a471bea8cd6e4",
+      "files": 14,
+      "attempt": 1
+    },
+    {
+      "identifier": "10-ab_202512",
+      "url": "https://archive.org/metadata/10-ab_202512",
+      "status": "ok",
+      "raw_file": "f42f29cfcf7ae1d03be58c3b064cb8f4bcca065edfaa48f8eed86e207f520264.raw.json",
+      "raw_sha256": "3be3321657f2810096c96f863c4e2f5a54414db435391cbed96dbcfcdd57acc4",
+      "files": 47,
+      "attempt": 1
+    },
+    {
+      "identifier": "10-tnk-music-academy-2003",
+      "url": "https://archive.org/metadata/10-tnk-music-academy-2003",
+      "status": "ok",
+      "raw_file": "fb673719452c4b1a89470bcb3c16e98d3129117b3487c08337dde57e990eea52.raw.json",
+      "raw_sha256": "484ef50d1e92044629a12d9d400d428022d2dc59f4635766cbb6897acc4f4b74",
+      "files": 50,
+      "attempt": 1
+    },
+    {
+      "identifier": "101VirboniVarnamBhairavi",
+      "url": "https://archive.org/metadata/101VirboniVarnamBhairavi",
+      "status": "ok",
+      "raw_file": "75b98406c62b8404e6eedbed3f082eaf0ffd3174ee1f14db143fbb9b9457cc81.raw.json",
+      "raw_sha256": "995a591d4b28fa057b60f8c856cbd482aa6c17dfce0fad06df8f80fc8095ae5a",
+      "files": 32,
+      "attempt": 1
+    },
+    {
+      "identifier": "102-tsk",
+      "url": "https://archive.org/metadata/102-tsk",
+      "status": "ok",
+      "raw_file": "3fecf10cf23ae8e001ae95488227b95047c32fb3307add5589b38b40340a7822.raw.json",
+      "raw_sha256": "d121f8cd7097cb7dc8c0c9c7a05f2c1d371654f38ba9c35b8c8d8b75d204c170",
+      "files": 20,
+      "attempt": 1
+    },
+    {
+      "identifier": "108-tns",
+      "url": "https://archive.org/metadata/108-tns",
+      "status": "ok",
+      "raw_file": "b542c1f7a83c37e04aff9c44312fd5076670ec0bf75d71a969180e4a3dd66cc9.raw.json",
+      "raw_sha256": "cad93cd5e760691f8a01b4c0985621f2c299927fad6dd14e90eb9c711b56efeb",
+      "files": 56,
+      "attempt": 1
+    },
+    {
+      "identifier": "108-tsk",
+      "url": "https://archive.org/metadata/108-tsk",
+      "status": "ok",
+      "raw_file": "7ddd01036ecf08668d72149e4116473689a9ef6b8fd269a198f2c4c55d86781a.raw.json",
+      "raw_sha256": "b72cd882bf2adc71737f24ebd90366d311d436f3eea8771a35bb55c295489318",
+      "files": 53,
+      "attempt": 1
+    },
+    {
+      "identifier": "11-MR-VSethuramiah-TU-RGurumurthy-MusicAcademy",
+      "url": "https://archive.org/metadata/11-MR-VSethuramiah-TU-RGurumurthy-MusicAcademy",
+      "status": "ok",
+      "raw_file": "6bc497ffee7eeec37bbd1f75eddf148c7c9c343fbe48a16106bfb40c8c295fc1.raw.json",
+      "raw_sha256": "e6b3a3a5c9a0c9844c179980ff37b7613a32342593fd56a6d19faf6deac7518a",
+      "files": 11,
+      "attempt": 1
+    },
+    {
+      "identifier": "11-ab",
+      "url": "https://archive.org/metadata/11-ab",
+      "status": "ok",
+      "raw_file": "a70045e1aace44a2073f5487437dcb8e8fe0473de16a27f9a6713114f8ca1d8f.raw.json",
+      "raw_sha256": "6ed15a37e5b4ec68c571aa6e400f51880243c2ded28f0b5ec642993180a2ed66",
+      "files": 20,
+      "attempt": 1
+    },
+    {
+      "identifier": "11-tnk-music-today",
+      "url": "https://archive.org/metadata/11-tnk-music-today",
+      "status": "ok",
+      "raw_file": "5e5fc4ee406aad7c2f7284899a7b8a9f8f76624c0ffeb51f5b59d58ababcb90e.raw.json",
+      "raw_sha256": "d0c406a826c1efc2612cf998764e6cbd0d59d1e44dd4c3d84fb09fa78b0fc356",
+      "files": 23,
+      "attempt": 1
+    },
+    {
+      "identifier": "12-MR-MSG",
+      "url": "https://archive.org/metadata/12-MR-MSG",
+      "status": "ok",
+      "raw_file": "a744c1d6b0ebd899ff09a1a33f10103aa00a4a8d2dc8d9db6484f1bcf3660dd1.raw.json",
+      "raw_sha256": "e556846629ca828c565614041ef30f1cdd0c7a206fb8200e15005320fdc5a715",
+      "files": 29,
+      "attempt": 1
+    },
+    {
+      "identifier": "12-TMT-MSG-UKS",
+      "url": "https://archive.org/metadata/12-TMT-MSG-UKS",
+      "status": "ok",
+      "raw_file": "24bfb18d02617fb3003f4aca74b5fd2cce705d0681dcd65106cb031be0473a56.raw.json",
+      "raw_sha256": "ccedc456ba489533edcfc4d5926627e5a6cd55e00fb23d6b902fdc7c606a8ad9",
+      "files": 55,
+      "attempt": 1
+    },
+    {
+      "identifier": "12-ab",
+      "url": "https://archive.org/metadata/12-ab",
+      "status": "ok",
+      "raw_file": "9bb5120b3db92771488396521267bf24996828eb4796ecdbcdfbced39ded5c65.raw.json",
+      "raw_sha256": "c315318201c3e37c80cba14982a0b90bbf7ac20123a81a256edca4536742cc81",
+      "files": 53,
+      "attempt": 1
+    },
+    {
+      "identifier": "12-tnk-sifa-2002",
+      "url": "https://archive.org/metadata/12-tnk-sifa-2002",
+      "status": "ok",
+      "raw_file": "622c46da5e12f635f23901f0030d11b8ba2535841bf4b37ef9dc04a738fc820a.raw.json",
+      "raw_sha256": "08cd08b26c0cd4b2f6b0dc2d640bae82cb00ad9e305e9cd77ad61ca91d60413b",
+      "files": 44,
+      "attempt": 1
+    },
+    {
+      "identifier": "13-tnk",
+      "url": "https://archive.org/metadata/13-tnk",
+      "status": "ok",
+      "raw_file": "4f7600d83ca5f75166dd7170b72bb42c813e00780025a51765c05472e97f617e.raw.json",
+      "raw_sha256": "0819fd8faea28ac591e8768325df1a2d92e7abcbe861c2f0901edda2b29b3cdc",
+      "files": 26,
+      "attempt": 1
+    },
+    {
+      "identifier": "131-tns",
+      "url": "https://archive.org/metadata/131-tns",
+      "status": "ok",
+      "raw_file": "e0e849a607cc728b422d0bb80f56e2d095b011ed14291503e1be8978e089a457.raw.json",
+      "raw_sha256": "f55d6e9fb5ceb7ca13664b56244af7805c8e280b264f901890da58fdbb54de3d",
+      "files": 47,
+      "attempt": 1
+    },
+    {
+      "identifier": "133-tnk-mc",
+      "url": "https://archive.org/metadata/133-tnk-mc",
+      "status": "ok",
+      "raw_file": "852b84c8072176b03ab33606479d59470a58ea588927908aaf26323fb5d5760f.raw.json",
+      "raw_sha256": "f2b287dff63b9145dda8fd141312ed7a321735ec43e06be8223ef547fa1b3795",
+      "files": 32,
+      "attempt": 1
+    },
+    {
+      "identifier": "142-TMT-MSG-UKS",
+      "url": "https://archive.org/metadata/142-TMT-MSG-UKS",
+      "status": "ok",
+      "raw_file": "11a4a8896c46b8816e5f3d56e9ef43cec04dcdddbadde8970471fc80def470ca.raw.json",
+      "raw_sha256": "b984fbdcbed02f08750f6693c8acf1547c908c8ed8de2e81f707cad2c34b8fa6",
+      "files": 70,
+      "attempt": 1
+    },
+    {
+      "identifier": "15-MR-TNK-ManakkalSriram-AIR",
+      "url": "https://archive.org/metadata/15-MR-TNK-ManakkalSriram-AIR",
+      "status": "ok",
+      "raw_file": "b8246bf2b354ff394456b7cd0d7a7aceb31c728543c4d8ed2b121bd054d10fec.raw.json",
+      "raw_sha256": "e02ec34dc00832efa1194b68a5e61640f2275cd9306cd633034fbc6e3c67deaa",
+      "files": 23,
+      "attempt": 1
+    },
+    {
+      "identifier": "16-MR",
+      "url": "https://archive.org/metadata/16-MR",
+      "status": "ok",
+      "raw_file": "26a98328aab15ad7ed0db4dc30f9eb0848410d38cac18c95fa63670d8acde1da.raw.json",
+      "raw_sha256": "e72c6fcd691f18e91f185ab1752bda0db5cc2a0c8a1a00aca36281506957817c",
+      "files": 23,
+      "attempt": 1
+    },
+    {
+      "identifier": "16-TMT-MSG-KM",
+      "url": "https://archive.org/metadata/16-TMT-MSG-KM",
+      "status": "ok",
+      "raw_file": "97969268212e8f24bed229387cb360e6bdc9d9575ab83b64b698660d7346388f.raw.json",
+      "raw_sha256": "a2e77bd7ae0cfcbe74324478b1ce51f4bab5bbe81df3c8521f6bafefabaf853c",
+      "files": 70,
+      "attempt": 1
+    },
+    {
+      "identifier": "16-ssi",
+      "url": "https://archive.org/metadata/16-ssi",
+      "status": "ok",
+      "raw_file": "d3f88df606c9838247090b5bc3cd14f1e2eae49a5b56cd216f67a5dca23ae27f.raw.json",
+      "raw_sha256": "41cd21ac11a640c1e62fe5c909b8e02e548acaf9ef4fd7531bb116edfb77f166",
+      "files": 26,
+      "attempt": 1
+    },
+    {
+      "identifier": "16-tsk",
+      "url": "https://archive.org/metadata/16-tsk",
+      "status": "ok",
+      "raw_file": "39d3a12d215b00fc5b1b8fc0f83d10bd9d7adc5ebd8d3476426f3013f801ca08.raw.json",
+      "raw_sha256": "68275923462fa545d7407353155ae4f04a62b171b638ba3a4d674cd15ef61d40",
+      "files": 29,
+      "attempt": 1
+    },
+    {
+      "identifier": "16-tsk_202408",
+      "url": "https://archive.org/metadata/16-tsk_202408",
+      "status": "ok",
+      "raw_file": "fe84e48ec377bfd0f36340980ab95d6c33905b6b425639c482ce4befb471b9ae.raw.json",
+      "raw_sha256": "24ffb4a32aa39d8da8a3dcd86c3992564fa0c3e7812db3b6f4694d05ff40ab8c",
+      "files": 32,
+      "attempt": 1
+    },
+    {
+      "identifier": "170-tns-mc-tu-mumbai",
+      "url": "https://archive.org/metadata/170-tns-mc-tu-mumbai",
+      "status": "ok",
+      "raw_file": "5bbd1f5bf366147136936339e17d8ec100aa63a6e391e7e2c0200d6cad1e6c69.raw.json",
+      "raw_sha256": "f7dad9fecff7d06bf051ff374840410ce2435e55e79544a3cad5bc96d2c277b6",
+      "files": 8,
+      "attempt": 1
+    },
+    {
+      "identifier": "19-ab",
+      "url": "https://archive.org/metadata/19-ab",
+      "status": "ok",
+      "raw_file": "0402e74bfcbbd5bd9b36efd9a4d9814afd3f2baf0915143508b0ff4ba6fc4320.raw.json",
+      "raw_sha256": "4cd0b1383265f6a8a78bcffe8925e99239d66dbdfc23f12cdd3b7387c6b6e5e2",
+      "files": 42,
+      "attempt": 1
+    },
+    {
+      "identifier": "19-mss",
+      "url": "https://archive.org/metadata/19-mss",
+      "status": "ok",
+      "raw_file": "63d700320c09ff0ff3d0ad43c7d75ef173478814d129732c14eca306740da32e.raw.json",
+      "raw_sha256": "1b765c8294d9c1c68ff13abf0ad25fbcd2940b2a584dded8ed9474ca60e5dc19",
+      "files": 47,
+      "attempt": 1
+    },
+    {
+      "identifier": "1_20231006_20231006_1329",
+      "url": "https://archive.org/metadata/1_20231006_20231006_1329",
+      "status": "ok",
+      "raw_file": "f8e535210efd595e8d545c51163a0bf2bc50e1690aa1d9657029160c7c519197.raw.json",
+      "raw_sha256": "91a6f63954b01da57293d2334d5a8d684131360ab9775ea861451301f7bcb46b",
+      "files": 15,
+      "attempt": 1
+    },
+    {
+      "identifier": "2-MR-TC-MaduraiKrishnaIyengar",
+      "url": "https://archive.org/metadata/2-MR-TC-MaduraiKrishnaIyengar",
+      "status": "ok",
+      "raw_file": "d09301718c7887483bb33dc229b8eae4d960d41ef27694f67099669c4b0cc3de.raw.json",
+      "raw_sha256": "ae11f3aa48765a56b2ec1cc0ec95931eac032edbdfdd5629e8c2c7e58f93516e",
+      "files": 14,
+      "attempt": 1
+    },
+    {
+      "identifier": "20-emani-msg",
+      "url": "https://archive.org/metadata/20-emani-msg",
+      "status": "ok",
+      "raw_file": "0ab669ea974e8f8bc7e7305646c67bcf016ece0b6c7b0a9de6d4dd087fb56ad8.raw.json",
+      "raw_sha256": "51480a49077a4371ba378ae0838714451222a6a12c23025fad85c889b4a109e8",
+      "files": 14,
+      "attempt": 1
+    },
+    {
+      "identifier": "20-mss",
+      "url": "https://archive.org/metadata/20-mss",
+      "status": "ok",
+      "raw_file": "eb926dfad082353bcca37e4f24e2850f135b63ed51003b823bfa9fc62ff4f452.raw.json",
+      "raw_sha256": "9ab977f2ff28f0624e4f7d1d8b02f62086ae573fad54ae255ce3decfeb453219",
+      "files": 38,
+      "attempt": 1
+    },
+    {
+      "identifier": "20-tsk",
+      "url": "https://archive.org/metadata/20-tsk",
+      "status": "ok",
+      "raw_file": "57f98e99da7c95f8ea44b76c0434cf57e7697a5437850ba78d91e5316b2cc44f.raw.json",
+      "raw_sha256": "d24a580582f945095105c4638fbabb1e111735def0de78f25c8b59606c81546b",
+      "files": 50,
+      "attempt": 1
+    },
+    {
+      "identifier": "22-emani-msg",
+      "url": "https://archive.org/metadata/22-emani-msg",
+      "status": "ok",
+      "raw_file": "15d450d40c2eb473c3810af762b491c7bbaccbda007371cf72f603a831c1e42b.raw.json",
+      "raw_sha256": "2c4f4e0afe69486096199222e908760aa08662c66505f53623a3cb209548634b",
+      "files": 41,
+      "attempt": 1
+    },
+    {
+      "identifier": "23-mss",
+      "url": "https://archive.org/metadata/23-mss",
+      "status": "ok",
+      "raw_file": "2c625ac635bacd476f1129808d2bef7133bad5e3bdebc598c75969cdcb7270be.raw.json",
+      "raw_sha256": "05985a2cfa5ae173f45fd2f9df6ac6f93a57035cb5994af21cfab440bed05949",
+      "files": 41,
+      "attempt": 1
+    },
+    {
+      "identifier": "24-s-kalyanaraman",
+      "url": "https://archive.org/metadata/24-s-kalyanaraman",
+      "status": "ok",
+      "raw_file": "a22a7766f9e441749be4197bdfe523df93ff5a73e092b40ccc53d1c84a860499.raw.json",
+      "raw_sha256": "7664b1ba0bb060b1b715a11981deca6e39d0ff62ed29e0b81f409451d330b57e",
+      "files": 32,
+      "attempt": 1
+    },
+    {
+      "identifier": "24-tsk",
+      "url": "https://archive.org/metadata/24-tsk",
+      "status": "ok",
+      "raw_file": "60b611df0f8a3c2baf6fb746391949a973849caea62b271e8e826889e74b97f0.raw.json",
+      "raw_sha256": "135b7bcf46e6ebb0c483b514bea08ff02d00bf2bbbf0fec22013acaa0f9fb231",
+      "files": 32,
+      "attempt": 1
+    },
+    {
+      "identifier": "27-ab",
+      "url": "https://archive.org/metadata/27-ab",
+      "status": "ok",
+      "raw_file": "46fbb4721f6418749901b39b1b4fb5c682ef779749c1771a48af870ea60b3cd0.raw.json",
+      "raw_sha256": "f52d97430806facd6b524a9f0985bd416f72631214b6391ede5414da7b013c35",
+      "files": 38,
+      "attempt": 1
+    },
+    {
+      "identifier": "28thJune2009_GayatriGirish_Part1",
+      "url": "https://archive.org/metadata/28thJune2009_GayatriGirish_Part1",
+      "status": "ok",
+      "raw_file": "67873b86b49a75c5c925e381d67e8d4e0459d4c9f76cbf5aed7875e210bed6c2.raw.json",
+      "raw_sha256": "02d48e27637b28058179efb5e30eb077204c8f045ddc661c9efa1d2c33d67724",
+      "files": 36,
+      "attempt": 1
+    },
+    {
+      "identifier": "29-tns",
+      "url": "https://archive.org/metadata/29-tns",
+      "status": "ok",
+      "raw_file": "6b9aabbd7e8d8c942ebed264e0e662aa9d850241fcb6786f127f1605eca60728.raw.json",
+      "raw_sha256": "a02fd691392bf61d5537e059f79cd46a3a9db56b18ea5e04fb1e1edeb3dfc668",
+      "files": 35,
+      "attempt": 1
+    },
+    {
+      "identifier": "291-tns-mc-tkm-hamsadwani-1998",
+      "url": "https://archive.org/metadata/291-tns-mc-tkm-hamsadwani-1998",
+      "status": "ok",
+      "raw_file": "f201e99db9a4c93e2331ca890179e28fb2d38ad9210cababbfdce3e8a113b8d2.raw.json",
+      "raw_sha256": "8d8b0dbd977e237847cf19ee4be413548b4a507b7e8a814c020025e4a13cb8f5",
+      "files": 8,
+      "attempt": 1
+    },
+    {
+      "identifier": "3-MR-TC-MaduraiKrishnaIyengar",
+      "url": "https://archive.org/metadata/3-MR-TC-MaduraiKrishnaIyengar",
+      "status": "ok",
+      "raw_file": "b006f706d7b25428a1e28dbefee7497bfc5c45ecb6e754ef9c1dd49561bf9448.raw.json",
+      "raw_sha256": "27fa100cf9ed8869a61cd97bda47538732132f39e484125c2a3760ec5daeed5d",
+      "files": 20,
+      "attempt": 1
+    },
+    {
+      "identifier": "30-ess",
+      "url": "https://archive.org/metadata/30-ess",
+      "status": "ok",
+      "raw_file": "d4a185d04b783d9ba9f0d394ef13b0bf16902918950a505aac6ffb258c8b1387.raw.json",
+      "raw_sha256": "3bf707db489df092f090c213df7a592c642b561f55a2a6f9137be27212172814",
+      "files": 20,
+      "attempt": 1
+    },
+    {
+      "identifier": "30-tsk",
+      "url": "https://archive.org/metadata/30-tsk",
+      "status": "ok",
+      "raw_file": "6317e38353af342fa108a59d6781a151a85bc3bc95ab04b5ca45d38864253cfa.raw.json",
+      "raw_sha256": "92abda26317a75a19589a29667f85873772101f91d6d9bb20eb7d95228419b86",
+      "files": 29,
+      "attempt": 1
+    },
+    {
+      "identifier": "300-skr",
+      "url": "https://archive.org/metadata/300-skr",
+      "status": "ok",
+      "raw_file": "1369632af6428da45549538d15865064555d575186a51eeae76d67e37c065ce4.raw.json",
+      "raw_sha256": "1e66bf4964049ef26ccb798b6fa1cf118ad159d06922189a72158b79b06c336b",
+      "files": 17,
+      "attempt": 1
+    },
+    {
+      "identifier": "300ssi",
+      "url": "https://archive.org/metadata/300ssi",
+      "status": "ok",
+      "raw_file": "e36b0f634775a5056170e99e79f00ab24279f8e724a95e653a373ee812c40c49.raw.json",
+      "raw_sha256": "56ecbcbcf31a7821bee3eb716d03191bce53909f960c51f8cd3356e2dac01d99",
+      "files": 50,
+      "attempt": 1
+    },
+    {
+      "identifier": "301-Mali",
+      "url": "https://archive.org/metadata/301-Mali",
+      "status": "ok",
+      "raw_file": "207214b02dad25f7f8415055f8f125241b008df8be5363d573e1dfade176671b.raw.json",
+      "raw_sha256": "f4e4eeb266214e1935f0709a3277a19a7430ffe5115a125a2e4e624363b49047",
+      "files": 45,
+      "attempt": 1
+    },
+    {
+      "identifier": "302-Mali",
+      "url": "https://archive.org/metadata/302-Mali",
+      "status": "ok",
+      "raw_file": "ab5297138ee49f25c1bb3a60a4e03fc05b98da6b6bc6d139cb15318d819eaa19.raw.json",
+      "raw_sha256": "fcca6733d35f864f3856c8cabccf8db3fd2ee02ee08ab4910e639927bc76e3d9",
+      "files": 30,
+      "attempt": 1
+    },
+    {
+      "identifier": "304-Mali",
+      "url": "https://archive.org/metadata/304-Mali",
+      "status": "ok",
+      "raw_file": "fdc0f58f42a1471e2bc956c81beaeb0a4f8a1b2fcf9769c2422772892a69ecd4.raw.json",
+      "raw_sha256": "d9060d809622a8c25a6d567f516cf6d9cf0498b7274d7191edb3e03ba3fd6e4b",
+      "files": 65,
+      "attempt": 1
+    },
+    {
+      "identifier": "305-Mali",
+      "url": "https://archive.org/metadata/305-Mali",
+      "status": "ok",
+      "raw_file": "8edc6ae7962b087270de08428be346cf085b685008b57882596136270033604e.raw.json",
+      "raw_sha256": "196633e1ed7186575f7ba3a10951729d4484647773559f2c89e54d05308d7305",
+      "files": 65,
+      "attempt": 1
+    },
+    {
+      "identifier": "305-tns",
+      "url": "https://archive.org/metadata/305-tns",
+      "status": "ok",
+      "raw_file": "a5ab8aabd85a65bb0fd748dadf93093b5442a3bef1994b0cbdc685489c6db8a3.raw.json",
+      "raw_sha256": "44f9a4e87d4248f9d39a1ce2595bd53d9715826005ebf7455787497905f6dae8",
+      "files": 41,
+      "attempt": 1
+    },
+    {
+      "identifier": "306-Mali",
+      "url": "https://archive.org/metadata/306-Mali",
+      "status": "ok",
+      "raw_file": "a4b1a5e639d5f127b1ee53218828df79daed3684819ec8a6bf81996710765ab8.raw.json",
+      "raw_sha256": "9f2665f3aec5d7694d1fa767ecc2ba7fc1054ca73c0b47b2c6ae93399b3711fe",
+      "files": 37,
+      "attempt": 1
+    },
+    {
+      "identifier": "307-Mali",
+      "url": "https://archive.org/metadata/307-Mali",
+      "status": "ok",
+      "raw_file": "3076c546abdc72512270015c0b002946dc171ec192fb1a37367fee12ff2defcd.raw.json",
+      "raw_sha256": "5029dc898326acee26c0e757c57e6a504d0963e2ed1c591ab14e6eba75afc397",
+      "files": 60,
+      "attempt": 1
+    },
+    {
+      "identifier": "308-Mali",
+      "url": "https://archive.org/metadata/308-Mali",
+      "status": "ok",
+      "raw_file": "c735137b48d44b9655786d459f4c5ab8504f3fed4fffaee12236153d2974a250.raw.json",
+      "raw_sha256": "9ec4b058e7dfbfafcde339b6cdf0985bf993eb451d94d3f21ef652027c97b259",
+      "files": 50,
+      "attempt": 1
+    },
+    {
+      "identifier": "31-ess-drmr",
+      "url": "https://archive.org/metadata/31-ess-drmr",
+      "status": "ok",
+      "raw_file": "72ed782f44873c52af68515acedda5e745f7acdad7db3cf2260225f6540d1e48.raw.json",
+      "raw_sha256": "04e67c7e6f0cc2917f9670e8f9523e2c7cab37a0f879b25a82bb980d5d94d8a0",
+      "files": 35,
+      "attempt": 1
+    },
+    {
+      "identifier": "313-tns",
+      "url": "https://archive.org/metadata/313-tns",
+      "status": "ok",
+      "raw_file": "975b909f4141d3242a608fdd13dffd2cfb36723bfdf6d920cb422ebf7eda214f.raw.json",
+      "raw_sha256": "fe3a8c87215ee8ce461926bc2aea606b870e96290ff9e7b297c896e0e72513fe",
+      "files": 32,
+      "attempt": 1
+    },
+    {
+      "identifier": "314-tns",
+      "url": "https://archive.org/metadata/314-tns",
+      "status": "ok",
+      "raw_file": "286565f5d8c22e77b75411599145747e9bbe6fe9cb54ded14f6c10d1aadcbb4d.raw.json",
+      "raw_sha256": "2b9fa2b2bd5c257fbb124ec9257db6cfcd0ab16e1b07e7e4b9e1c0740ccafe6a",
+      "files": 32,
+      "attempt": 1
+    },
+    {
+      "identifier": "316-tns",
+      "url": "https://archive.org/metadata/316-tns",
+      "status": "ok",
+      "raw_file": "467b8a9698c30c74444c54e4579f94e65c12d4a9df2cf92fc14ef6911bbaa176.raw.json",
+      "raw_sha256": "d99ad7b61d72ebedb660f0596366ceb46e056f9558a9d8147d4a56a566c24eac",
+      "files": 38,
+      "attempt": 1
+    },
+    {
+      "identifier": "32-ess-ts",
+      "url": "https://archive.org/metadata/32-ess-ts",
+      "status": "ok",
+      "raw_file": "ea629e4f0f2c6d056d40495d21c42c29df8d01df5699968bf168285e00bacb6f.raw.json",
+      "raw_sha256": "d22bd9a228c5f15b9090c57e511540eeb343d001b1f6f5007b05fd340fd6eff0",
+      "files": 38,
+      "attempt": 1
+    },
+    {
+      "identifier": "34-ess",
+      "url": "https://archive.org/metadata/34-ess",
+      "status": "ok",
+      "raw_file": "aecf03ed55a9ad40199fb9b79298a800682b2b3474716009e7766d064f81eee1.raw.json",
+      "raw_sha256": "3801151a23ea3cd52ef51b8ab2db449fa011437c3537f265a3a6dce7485943ab",
+      "files": 6,
+      "attempt": 1
+    },
+    {
+      "identifier": "34-ess_202203",
+      "url": "https://archive.org/metadata/34-ess_202203",
+      "status": "ok",
+      "raw_file": "976e6d98a95322ac6c7979e63f33b5653291e4c4bd857998d7e0cbec4ad0e311.raw.json",
+      "raw_sha256": "5312bde8f03dbecbc64439a5eac55e649df358cad304b9e5a356281a3fa104b0",
+      "files": 17,
+      "attempt": 1
+    },
+    {
+      "identifier": "34-tsk",
+      "url": "https://archive.org/metadata/34-tsk",
+      "status": "ok",
+      "raw_file": "19ee7cd6a4a8748ef23770eeb97cf193313208cbe03e3e44d70b6a103863b4c6.raw.json",
+      "raw_sha256": "28e295ace639ba0aefc8c7bbbe546b35eccf66f6430edd778293109c33fd5714",
+      "files": 20,
+      "attempt": 1
+    },
+    {
+      "identifier": "35-ess",
+      "url": "https://archive.org/metadata/35-ess",
+      "status": "ok",
+      "raw_file": "6233350db94e6ca3b966fd549189e23558a7cd471e8348d5885584b64ffe69b9.raw.json",
+      "raw_sha256": "21fd7e6cff06dffba91242fac37653ad4d6a842a14363c5be830f2b15b9d9c20",
+      "files": 14,
+      "attempt": 1
+    },
+    {
+      "identifier": "36-ess",
+      "url": "https://archive.org/metadata/36-ess",
+      "status": "ok",
+      "raw_file": "42300e765dd4bd7878ff183176ea4ed6b0231977b23c80e79641ec2e960a220b.raw.json",
+      "raw_sha256": "229b815cf836a637dcffb9e31317e08b08c113f4cfff7712ba176761f18946bd",
+      "files": 14,
+      "attempt": 1
+    },
+    {
+      "identifier": "37-ess",
+      "url": "https://archive.org/metadata/37-ess",
+      "status": "ok",
+      "raw_file": "1d1a44b6c860d13e52d695d672a8f9aec9d9f1bb9019c60e017d1767bc690bd0.raw.json",
+      "raw_sha256": "3ce0c88841cec9584d785e55104d2a3bc34a516a670d2dcfab99458c1f8bf013",
+      "files": 14,
+      "attempt": 1
+    },
+    {
+      "identifier": "38-ess",
+      "url": "https://archive.org/metadata/38-ess",
+      "status": "ok",
+      "raw_file": "a9022928ce56059449ef9b22a043264b0cdb451b325c09418eb75508bbb5a7b2.raw.json",
+      "raw_sha256": "f24ffd5c68eb5d64d0a7e1f4c380e93b43e570438363943b657084ce2e70cde1",
+      "files": 23,
+      "attempt": 1
+    },
+    {
+      "identifier": "39RaamaNeeSamaanaEvaru",
+      "url": "https://archive.org/metadata/39RaamaNeeSamaanaEvaru",
+      "status": "ok",
+      "raw_file": "ff4d710a1d2402647ce02c041f26af8e36fc3b834da9861d117a9f8df61bcbd7.raw.json",
+      "raw_sha256": "b024e7b0f23fc7645d58e025e84101deb5f1afa98785656f6e6b86b90f7ad4db",
+      "files": 362,
+      "attempt": 1
+    },
+    {
+      "identifier": "3HecharigaRaRaYathukulaKambhoji",
+      "url": "https://archive.org/metadata/3HecharigaRaRaYathukulaKambhoji",
+      "status": "ok",
+      "raw_file": "502561643d8dbb3aa2562b5fc5eee2af895f88d3ab71529250fb6534968b30c7.raw.json",
+      "raw_sha256": "6bbf4fff78b95dcfb5e13da8b14d107a76be4d5f23430fbd80c0b2170decde2b",
+      "files": 47,
+      "attempt": 1
+    },
+    {
+      "identifier": "3_20231122_20231122",
+      "url": "https://archive.org/metadata/3_20231122_20231122",
+      "status": "ok",
+      "raw_file": "321e4e503f28c56f616eb9e0cd827ce92832b8e3069e99c3320972e77620405e.raw.json",
+      "raw_sha256": "a5718caa69f27f1b2207d2dcd873be12994596953a156dacb7ba87bd2ce25eae",
+      "files": 15,
+      "attempt": 1
+    },
+    {
+      "identifier": "4-MR-KandadeviAlagiriswamy-ManakkalSriram-AlangudiRamachandran",
+      "url": "https://archive.org/metadata/4-MR-KandadeviAlagiriswamy-ManakkalSriram-AlangudiRamachandran",
+      "status": "ok",
+      "raw_file": "6ba261277f2c84e22253773d2be6accd99c4fec6e3abfb09e8fecf578ae01f09.raw.json",
+      "raw_sha256": "20beff74bca57f505b3743f4b58e7542b53143a32538df61c3d4da2a51566eb8",
+      "files": 17,
+      "attempt": 1
+    },
+    {
+      "identifier": "416RKS",
+      "url": "https://archive.org/metadata/416RKS",
+      "status": "ok",
+      "raw_file": "cc1d76745620af51e0391cc40ee5f73b6fee22d00c728bcaf202ff2391638ce6.raw.json",
+      "raw_sha256": "bd48862ffcba5c42e33d3c75cc266e1fa1b2cee598b57239ab30a20f79a5c2ac",
+      "files": 70,
+      "attempt": 1
+    },
+    {
+      "identifier": "43-3ss",
+      "url": "https://archive.org/metadata/43-3ss",
+      "status": "ok",
+      "raw_file": "d194be72b8162355b4ae5efd7d41ec4160cec2bd31d2732af8ee45008a152b13.raw.json",
+      "raw_sha256": "b4692e97668b0a9d3e45fafe8966caf5c3f7199537d83093ac57ef92fe273864",
+      "files": 23,
+      "attempt": 1
+    },
+    {
+      "identifier": "46-tsk",
+      "url": "https://archive.org/metadata/46-tsk",
+      "status": "ok",
+      "raw_file": "b37cd500bf0333fe95e8d621c1b0d22a0e0cbb3f8a21679d0c4dd1767edef023.raw.json",
+      "raw_sha256": "6b9e6eb3c02dc593f5b50651fb1064bbded9a05d7d4ac08a04fb82985baa0880",
+      "files": 32,
+      "attempt": 1
+    },
+    {
+      "identifier": "5-MR-AIR",
+      "url": "https://archive.org/metadata/5-MR-AIR",
+      "status": "ok",
+      "raw_file": "e76bf93d0302c09cd263c94c6483c28b8d6f911238b954f04c563a5b1ba1c5e5.raw.json",
+      "raw_sha256": "3ebdcfcd62fcb7005864a3599bff3eeb0bb9b84fab9d1af043150f8937aabcea",
+      "files": 17,
+      "attempt": 1
+    },
+    {
+      "identifier": "515RKS",
+      "url": "https://archive.org/metadata/515RKS",
+      "status": "ok",
+      "raw_file": "ff22c35c0b9517e65a8fbb16d72281ecff89d85827be4d1cbd2599da2d0b8b92.raw.json",
+      "raw_sha256": "06570fb84a64b6a185cc3474b2891e050fd822a3a5cabe3d491c1c2a3154e678",
+      "files": 95,
+      "attempt": 1
+    },
+    {
+      "identifier": "516RKS",
+      "url": "https://archive.org/metadata/516RKS",
+      "status": "ok",
+      "raw_file": "a6c98136bd2e267132cd92f137119c520e99b751b246e21e39620b05770bced8.raw.json",
+      "raw_sha256": "5980da607fa300f7178f3e9a841f1414b4c433d88b9748956717f0662abfb4c5",
+      "files": 65,
+      "attempt": 1
+    },
+    {
+      "identifier": "517RKS",
+      "url": "https://archive.org/metadata/517RKS",
+      "status": "ok",
+      "raw_file": "380e02417c76d22c439d6b5a04a3360f466e8fe8e67b7e697df50c4fc70fc844.raw.json",
+      "raw_sha256": "07a9534538b4c85c6ac6d9961d30538d0ab66f0c5cbf0f15358ab66fdfe70644",
+      "files": 75,
+      "attempt": 1
+    },
+    {
+      "identifier": "519RKS",
+      "url": "https://archive.org/metadata/519RKS",
+      "status": "ok",
+      "raw_file": "c4de566ef2d33b0466a219e32172a17919d163d5725bbe6a3c21ce774a49b841.raw.json",
+      "raw_sha256": "67fcdadbe99d3e66c0e1ce9229b2825a666ee20b1e67a5d178d8b26b8834f915",
+      "files": 55,
+      "attempt": 1
+    },
+    {
+      "identifier": "525-TMT-MSG-PR",
+      "url": "https://archive.org/metadata/525-TMT-MSG-PR",
+      "status": "ok",
+      "raw_file": "6e85798c0131174f3f87ed65b88dee7f8f98162f8ad8d374348d80d4b8200777.raw.json",
+      "raw_sha256": "79e8be738dcaec6b81e726695202ab60e9bc6d17ff68d22865e01230f72312f1",
+      "files": 80,
+      "attempt": 1
+    },
+    {
+      "identifier": "526-tmt-msg",
+      "url": "https://archive.org/metadata/526-tmt-msg",
+      "status": "ok",
+      "raw_file": "2d31c096c7a9baaed3a51a577120bd1ca3cfc7b728143a5675e7f7264e8bd420.raw.json",
+      "raw_sha256": "304ae221913b17f8793a84d952965c63903f5f8ef15aa30fc36eb1687105c4f0",
+      "files": 30,
+      "attempt": 1
+    },
+    {
+      "identifier": "579-tsk",
+      "url": "https://archive.org/metadata/579-tsk",
+      "status": "ok",
+      "raw_file": "be06154ed04d0215055b01470249c97c0dfe5e0d6e45f72eab2add25863b9be1.raw.json",
+      "raw_sha256": "ab6f9640fb2d5e4ec3f05e991a8d70eb79c517a23c89246284f752f5b3c05c0f",
+      "files": 50,
+      "attempt": 1
+    },
+    {
+      "identifier": "581-tsk",
+      "url": "https://archive.org/metadata/581-tsk",
+      "status": "ok",
+      "raw_file": "9a2a7d40acae6b769ed32994163181e3ec5957588c64e39fcff68fc263194f0e.raw.json",
+      "raw_sha256": "c53b4cd5ed02f0bef3042d0020949fbbfa85537519469410e39dacd5b8a5fad0",
+      "files": 20,
+      "attempt": 1
+    },
+    {
+      "identifier": "6-MR-VSethuramiah-ManakkalSriram-CKShyamsundar",
+      "url": "https://archive.org/metadata/6-MR-VSethuramiah-ManakkalSriram-CKShyamsundar",
+      "status": "ok",
+      "raw_file": "6f4f6b7e0caa64d7e86d6c968f5351a559e86c373bcec8466f706d5305a3fc88.raw.json",
+      "raw_sha256": "06a58134896289c7e5929fe41a4a054e0a72aed3c1edbbfcb795d3e59540a84f",
+      "files": 11,
+      "attempt": 1
+    },
+    {
+      "identifier": "677RKS",
+      "url": "https://archive.org/metadata/677RKS",
+      "status": "ok",
+      "raw_file": "5c46602aafb60743653d6b08642a15ca44f533e05845dfd35d67d71035ba6047.raw.json",
+      "raw_sha256": "6bf3187ecdb2f640936f252b0c04791d0c7a3742f065e7604369059889fe7500",
+      "files": 85,
+      "attempt": 1
+    },
+    {
+      "identifier": "7-mr_20260114",
+      "url": "https://archive.org/metadata/7-mr_20260114",
+      "status": "ok",
+      "raw_file": "70ff0c04896e687545031be2ea2a98bd08d799c65aaf84d4dbd80dc2e108c9b9.raw.json",
+      "raw_sha256": "9d3b98643d680ce886b7dcb7d48b18e13bb474ba8f72848ae9e593405efa7b8b",
+      "files": 26,
+      "attempt": 1
+    },
+    {
+      "identifier": "70-ab",
+      "url": "https://archive.org/metadata/70-ab",
+      "status": "ok",
+      "raw_file": "ba446913c1100807167ae50f77a6012c6346542b2ffc4188bf7cbd4a4d74c985.raw.json",
+      "raw_sha256": "a2826b39275d068e3a67f4d3d2aa32e282b0b7f1bb5eced9ad1402db8e6243e7",
+      "files": 14,
+      "attempt": 1
+    },
+    {
+      "identifier": "71-tsk",
+      "url": "https://archive.org/metadata/71-tsk",
+      "status": "ok",
+      "raw_file": "3bc478e915ea506cc04d1c2646a6c40869508584fd55ac91f3d4b3fd78824074.raw.json",
+      "raw_sha256": "d8df650e288e0e3d0caa7c36799ac4ff7d3c9a450a0f95c3c73b1342bca4a2ea",
+      "files": 27,
+      "attempt": 1
+    },
+    {
+      "identifier": "72-tsk",
+      "url": "https://archive.org/metadata/72-tsk",
+      "status": "ok",
+      "raw_file": "bd3eb38a545fa9f28317ff0e87bb3c65263b8212f9e4fb029a0565212f2235e0.raw.json",
+      "raw_sha256": "8751d44503ee4735b4b85c45801d35a7c93f05d169471d6150e0ac368776dc71",
+      "files": 14,
+      "attempt": 1
+    },
+    {
+      "identifier": "74-tsk",
+      "url": "https://archive.org/metadata/74-tsk",
+      "status": "ok",
+      "raw_file": "3ed47e077bbbb5a9b92997dc48281b1b751c6a63eb4c800dcdb69ea9fa4313dd.raw.json",
+      "raw_sha256": "40ea64746525c49db5b69a23ae70eb9b5233c4783b602744c1a099bdd2782848",
+      "files": 47,
+      "attempt": 1
+    },
+    {
+      "identifier": "76AnanthaPadmanabha",
+      "url": "https://archive.org/metadata/76AnanthaPadmanabha",
+      "status": "ok",
+      "raw_file": "a48475dc3b1b9de4d668586844cbc1add165d6e03ad28845f6fe994f493f7fe2.raw.json",
+      "raw_sha256": "5143dd72b679aa793e23d2f1ce1765e434f64162a66e8f6a712b92d4cdbab128",
+      "files": 173,
+      "attempt": 1
+    },
+    {
+      "identifier": "78RPM-Ariyakudi-Ramanuja-Iyengar",
+      "url": "https://archive.org/metadata/78RPM-Ariyakudi-Ramanuja-Iyengar",
+      "status": "ok",
+      "raw_file": "e4fc31d257d509d43db87e79ac2d98c7a4554d13122e180c764e5b50600425d2.raw.json",
+      "raw_sha256": "ca20778e2a78462ba8a8ad7c1d4479472efc8c2986ae4bbe3cefb9c03f1f41c2",
+      "files": 33,
+      "attempt": 1
+    },
+    {
+      "identifier": "78RPM-Chembai-Vaidyanatha-Bhagavathar",
+      "url": "https://archive.org/metadata/78RPM-Chembai-Vaidyanatha-Bhagavathar",
+      "status": "ok",
+      "raw_file": "8d240181056cce7b6ccdb8f7a91fd32867f7e65e7ead840531b9c2a52d025f87.raw.json",
+      "raw_sha256": "3b23e591cc9b38707cb79f58016029a346a80642de551f78e7b356273b8243c4",
+      "files": 101,
+      "attempt": 1
+    },
+    {
+      "identifier": "78RPM-Chittor-V-Nagaiah",
+      "url": "https://archive.org/metadata/78RPM-Chittor-V-Nagaiah",
+      "status": "ok",
+      "raw_file": "38adf3464263eaf3cbaf25db7c6e37941c27623dbcee3d4bf66d53def66a31ff.raw.json",
+      "raw_sha256": "1af1aff3e52f77d5f869fa1808fa39b5eb25f22479d6bbb7c42799dc7cc1879e",
+      "files": 21,
+      "attempt": 1
+    },
+    {
+      "identifier": "78RPM-G-N-Balasubramaniam",
+      "url": "https://archive.org/metadata/78RPM-G-N-Balasubramaniam",
+      "status": "ok",
+      "raw_file": "07cc5d3c1a2b0fa192e72807fe9c0e8655a9b9b0a97b3afe32cac5019ccecc6f.raw.json",
+      "raw_sha256": "0a4322efc8f8601c9b69cd4797cd5874661e8be3f248693c4ca9b2397bf02b48",
+      "files": 85,
+      "attempt": 1
+    },
+    {
+      "identifier": "78RPM-M-L-Vasantakumari",
+      "url": "https://archive.org/metadata/78RPM-M-L-Vasantakumari",
+      "status": "ok",
+      "raw_file": "715da3a2e0f89716f7caf58faa2798f193e2d0dc2d4112d627ad11eeadbcbe92.raw.json",
+      "raw_sha256": "1ed532bc02976ae4705c10e25d11a54e1e33fd73a5c2ab934ef33d21ac20c631",
+      "files": 53,
+      "attempt": 1
+    },
+    {
+      "identifier": "78RPM-M-S-Subbalakshmi",
+      "url": "https://archive.org/metadata/78RPM-M-S-Subbalakshmi",
+      "status": "ok",
+      "raw_file": "e65aefc66693036a286208437c769e612c8c7353f7aa1877d7e70d1964148145.raw.json",
+      "raw_sha256": "f01102b2d647babefa40c6ce2885400dccec1e9dcb289a08ad6b53b2f0c9a287",
+      "files": 93,
+      "attempt": 1
+    },
+    {
+      "identifier": "78RPM-M-S-Subbalakshmi-young",
+      "url": "https://archive.org/metadata/78RPM-M-S-Subbalakshmi-young",
+      "status": "ok",
+      "raw_file": "aa5cf5b9e58a17f6f873b0ae76b9ddc85fa35b5541a888aa9c710613f1538708.raw.json",
+      "raw_sha256": "9d452541dcb391be795aa258cfb68b53cea1fa1f0bd7eb3e81401df1866a9038",
+      "files": 33,
+      "attempt": 1
+    },
+    {
+      "identifier": "78RPM-Musiri-Subramanya-Iyer",
+      "url": "https://archive.org/metadata/78RPM-Musiri-Subramanya-Iyer",
+      "status": "ok",
+      "raw_file": "399f6a6b3c42905dc721c4754fae5e21ab26068f5274ab0765d98777838ddee3.raw.json",
+      "raw_sha256": "d4b0b450a747454d63e0db119408a28a324f1c140f90c360aa1d07ed61f87558",
+      "files": 77,
+      "attempt": 1
+    },
+    {
+      "identifier": "78RPM-Musiri-Subramanya-Iyer-Thukaram-Film",
+      "url": "https://archive.org/metadata/78RPM-Musiri-Subramanya-Iyer-Thukaram-Film",
+      "status": "ok",
+      "raw_file": "2d0c423f18b1700eaf668abc6a1f632558e4c5317b08eea0cc8b28df50706180.raw.json",
+      "raw_sha256": "b4f6a907e2d9095656548972c9dbb8f446b44aea959dfff8948eac8103e4b5de",
+      "files": 33,
+      "attempt": 1
+    },
+    {
+      "identifier": "78RPM-Narayana-Iyengar-Gottuvadyam",
+      "url": "https://archive.org/metadata/78RPM-Narayana-Iyengar-Gottuvadyam",
+      "status": "ok",
+      "raw_file": "9123d38c8657e2671dbb4bb61fb2b75bd62905bba537f263516d44ca1b6e8595.raw.json",
+      "raw_sha256": "9cd61a8c6dfac9ba1174bcd504c07ac877e16e2112ceb7aac0bc0b81cf3bd4eb",
+      "files": 25,
+      "attempt": 1
+    },
+    {
+      "identifier": "78RPM-S-V-Subbiah-Bhagavathar",
+      "url": "https://archive.org/metadata/78RPM-S-V-Subbiah-Bhagavathar",
+      "status": "ok",
+      "raw_file": "b3d8c6a089c990f73a5bbad89176936caa9f2cd295787d060b8128b2e3d8c140.raw.json",
+      "raw_sha256": "667a7255ab78b9ceb6fcf36116735c7fe017ba72a77010ada2f18426a552db78",
+      "files": 49,
+      "attempt": 1
+    },
+    {
+      "identifier": "78RPM-V-V-Sadagopan",
+      "url": "https://archive.org/metadata/78RPM-V-V-Sadagopan",
+      "status": "ok",
+      "raw_file": "27bb1d0bfbfb2b597005402a5b68964415dce3f1831085336dc489943e813318.raw.json",
+      "raw_sha256": "1e578ae397c5fafaffd517486b31dcd125efcf133e80ad4daf02475f592fda5c",
+      "files": 17,
+      "attempt": 1
+    },
+    {
+      "identifier": "78RPMDKPattammal",
+      "url": "https://archive.org/metadata/78RPMDKPattammal",
+      "status": "ok",
+      "raw_file": "6a686f4707165d4b2d88f178774e29f253560925d9830c55e6195f97e7c75b74.raw.json",
+      "raw_sha256": "067a59ddac3a4ab032868d82c9e30bf2e1477fe4b9ca99897b6500d7c3548152",
+      "files": 209,
+      "attempt": 1
+    },
+    {
+      "identifier": "78rpm-Anantalakshmi-Sadagopan",
+      "url": "https://archive.org/metadata/78rpm-Anantalakshmi-Sadagopan",
+      "status": "ok",
+      "raw_file": "9ce1eae848bde20a7e3f04f71d23f26c986118c14b352ec18aee6357cf772ad0.raw.json",
+      "raw_sha256": "3cfc235d95c654fe652ab829429d6543f90a66dc94335890a8d80237d43467f0",
+      "files": 25,
+      "attempt": 1
+    },
+    {
+      "identifier": "78rpm-NC-Vasantakokilam",
+      "url": "https://archive.org/metadata/78rpm-NC-Vasantakokilam",
+      "status": "ok",
+      "raw_file": "97e0aea1cacd4a245e6af3638c62888fef5451d07b1267a2bc63b01b071dd46e.raw.json",
+      "raw_sha256": "d3a47e27edf85157e5ddc3e089421af52dac0d486edce6633fe8ba9d886e356c",
+      "files": 49,
+      "attempt": 1
+    },
+    {
+      "identifier": "78rpm-k-b-sundarambal",
+      "url": "https://archive.org/metadata/78rpm-k-b-sundarambal",
+      "status": "ok",
+      "raw_file": "9990ca019d723901898535940f20e556dca90fccd8f5c939c14906aee49b5543.raw.json",
+      "raw_sha256": "2432a5dacffee6dccf27ce61bbf11ff766ca4316342287d69ff5095138c18ed2",
+      "files": 125,
+      "attempt": 1
+    },
+    {
+      "identifier": "78rpm-madurai-mani-iyer",
+      "url": "https://archive.org/metadata/78rpm-madurai-mani-iyer",
+      "status": "ok",
+      "raw_file": "fa926d980510b541ee2af7a968b685307ead28dd900c8f52bb6f7baa1885ef07.raw.json",
+      "raw_sha256": "002cca8b346ebe34598d657f694d92eebc929c62b5269d3dac69a7bca99006a4",
+      "files": 45,
+      "attempt": 1
+    },
+    {
+      "identifier": "78rpm-mkt",
+      "url": "https://archive.org/metadata/78rpm-mkt",
+      "status": "ok",
+      "raw_file": "fbfdb964fb8a6396d881f114dc884268558d48cfd2416692b4868b5f5c0436ae.raw.json",
+      "raw_sha256": "89dd50254334549535dd2bf986e3108b9c0dbf64218852bc1ecfb142af0faf51",
+      "files": 301,
+      "attempt": 1
+    },
+    {
+      "identifier": "78rpmBSRajaIyengar",
+      "url": "https://archive.org/metadata/78rpmBSRajaIyengar",
+      "status": "ok",
+      "raw_file": "a41d1d9ee523589e53f8752564812657ecb4b4624633391a2cdbf514ef61c1cd.raw.json",
+      "raw_sha256": "9b51e63c8e4d509f3c125dc464337777d1fe684b0e7e689a9d61cee65a115e4f",
+      "files": 89,
+      "attempt": 1
+    },
+    {
+      "identifier": "78rpmdesamangalamsubramanyaiyer",
+      "url": "https://archive.org/metadata/78rpmdesamangalamsubramanyaiyer",
+      "status": "ok",
+      "raw_file": "15ed8d0e32f9d33ef55697ed13becbce70df45d6e1408b6c49f9215788e2ba77.raw.json",
+      "raw_sha256": "ee1c92a9b75d8aeb21bb33ec23b5c5326f87f47ff5680cc624bba6c1fd823f48",
+      "files": 37,
+      "attempt": 1
+    },
+    {
+      "identifier": "8-MR-CoimbatoreDakshinamurthy-MadrasKannan",
+      "url": "https://archive.org/metadata/8-MR-CoimbatoreDakshinamurthy-MadrasKannan",
+      "status": "ok",
+      "raw_file": "5d39d44b48fc088a3af392c3b87cbabfb9befcbca2eee07df557da31d780a935.raw.json",
+      "raw_sha256": "52f63af348db1441a23a453374ed5cd2d5d55995eb94ef357e95765f59c2ec8a",
+      "files": 17,
+      "attempt": 1
+    },
+    {
+      "identifier": "8-tnk-kwm",
+      "url": "https://archive.org/metadata/8-tnk-kwm",
+      "status": "ok",
+      "raw_file": "cdc84833549b29e6cf61e46c3c3e1943dd4fea67c7612fefa7563deb6a463b37.raw.json",
+      "raw_sha256": "fc39f29924259cdc02c8cc42eec8e2e3119145ba248d2b5237cec8577937fdbf",
+      "files": 20,
+      "attempt": 1
+    },
+    {
+      "identifier": "80-tsk",
+      "url": "https://archive.org/metadata/80-tsk",
+      "status": "ok",
+      "raw_file": "07dc3e0557bc94e917609c39e1352289288d46fcef3e5d14e00e5eee51c96a5e.raw.json",
+      "raw_sha256": "a4ce47d9a9342ac63d69d1f0164bf5d34c32702fc981342ecece3786c1dce2c2",
+      "files": 29,
+      "attempt": 1
+    },
+    {
+      "identifier": "85-tsk",
+      "url": "https://archive.org/metadata/85-tsk",
+      "status": "ok",
+      "raw_file": "b698fcae7362ce431271f6f5570b7e8525837c7fa8646083c48643de646d68c3.raw.json",
+      "raw_sha256": "56c440356d2a4723f23f57223891963129f69e24aad44e9ce3f01b5a33687263",
+      "files": 26,
+      "attempt": 1
+    },
+    {
+      "identifier": "87MeevallaGunadhoshamemi",
+      "url": "https://archive.org/metadata/87MeevallaGunadhoshamemi",
+      "status": "ok",
+      "raw_file": "6a8a1f8ccbda5193d1aeae2a13e38c534369031d01556d5054feb6f8aace0857.raw.json",
+      "raw_sha256": "545dc7e8ba6a9baed811abb8c6724fd11e7e38b3a992b3029090335dadb97767",
+      "files": 54,
+      "attempt": 1
+    },
+    {
+      "identifier": "89-tsk",
+      "url": "https://archive.org/metadata/89-tsk",
+      "status": "ok",
+      "raw_file": "19a8948ac0ab9cdbf1db518d7ddb10883489ffcc5360be998e5429b39d4157bd.raw.json",
+      "raw_sha256": "c06aca89ebaa3930d0e698ceceb6566294e5f8432d3345d4fb8b27099ca09a03",
+      "files": 23,
+      "attempt": 1
+    },
+    {
+      "identifier": "9-MR-CoimbatoreDakshinamurthi-MadrasKannan-UmayalpuramNarayanaswamy",
+      "url": "https://archive.org/metadata/9-MR-CoimbatoreDakshinamurthi-MadrasKannan-UmayalpuramNarayanaswamy",
+      "status": "ok",
+      "raw_file": "68cc08c7eff23de96daec1887900196e9eed4dd931881702086a054a095a2878.raw.json",
+      "raw_sha256": "a5423efe37b40edb61f73edfa682f3e543595cffa1661b473ca9f653885459d2",
+      "files": 17,
+      "attempt": 1
+    },
+    {
+      "identifier": "90-tns",
+      "url": "https://archive.org/metadata/90-tns",
+      "status": "ok",
+      "raw_file": "50b38ad6f916514a23e9232a0441c6cb9f3b1ee6054a69ee3afdd673669ee064.raw.json",
+      "raw_sha256": "bb4ac513e5f3087486d4d0992a60219a5a552da31d6013e7d2d99b6f8d955de0",
+      "files": 38,
+      "attempt": 1
+    },
+    {
+      "identifier": "934-tsk",
+      "url": "https://archive.org/metadata/934-tsk",
+      "status": "ok",
+      "raw_file": "d3717ad5bc2708cfdb3e6049f9051dfe71027d1714611de61cd0ae45a991190a.raw.json",
+      "raw_sha256": "9ea18ccd1fa35feca66307722c8046b5c3ab1cd8aebbf6ab649069bca1cf6729",
+      "files": 50,
+      "attempt": 1
+    },
+    {
+      "identifier": "97-tsk",
+      "url": "https://archive.org/metadata/97-tsk",
+      "status": "ok",
+      "raw_file": "b208ab4d9971419dac08515c3c9b3844a8e7299eac2fae662980751f0063760d.raw.json",
+      "raw_sha256": "ee1d4352086fe1cd20a3d5af97ac7ea6bf5d8ac0f0bd4f9fadd243ad1ec8e6df",
+      "files": 17,
+      "attempt": 1
+    },
+    {
+      "identifier": "97-tsk_202408",
+      "url": "https://archive.org/metadata/97-tsk_202408",
+      "status": "ok",
+      "raw_file": "1d2938092ceed3d5afcbca84d236dac36cf58cec42293479df60d23c8dde6673.raw.json",
+      "raw_sha256": "ad4028ead4f752c8dadddd4a23e5c53071b6a5cbaec7878f66f318b2c28f864b",
+      "files": 26,
+      "attempt": 1
+    },
+    {
+      "identifier": "992RKS",
+      "url": "https://archive.org/metadata/992RKS",
+      "status": "ok",
+      "raw_file": "77cfd9d89bc85e91de2fe121e666892ea9951ece2b9f2fa1ab4977ccd8d18ec1.raw.json",
+      "raw_sha256": "16b627392a3ab1577b773569fe34ca20e4811784da93445e603b4a190c3f792c",
+      "files": 85,
+      "attempt": 1
+    },
+    {
+      "identifier": "993RKS",
+      "url": "https://archive.org/metadata/993RKS",
+      "status": "ok",
+      "raw_file": "d239b6d0d004b7350314dc3506b4261214fdadf19e1efa3c9acccb30682a84aa.raw.json",
+      "raw_sha256": "f9b10d2dc724c401ee9ae4793962c5bcd915822aef2d815c8d6f5c8c7fac4852",
+      "files": 40,
+      "attempt": 1
+    },
+    {
+      "identifier": "995RKS",
+      "url": "https://archive.org/metadata/995RKS",
+      "status": "ok",
+      "raw_file": "bc35b6ef24fbfe7dc4ab788bdb425058a5449f5db0c716036bd555e9c02213a1.raw.json",
+      "raw_sha256": "98c16c1ce271eb7d0b60068aafbb9ed0d2d5d4c769b308590fd79239e47785b3",
+      "files": 55,
+      "attempt": 1
+    },
+    {
+      "identifier": "AR-HMS-KJR-GU-SpicMacay2020",
+      "url": "https://archive.org/metadata/AR-HMS-KJR-GU-SpicMacay2020",
+      "status": "ok",
+      "raw_file": "c571e1122e5ff19155dedd7f5a3512d831dea75a73348a0da4781e934a95a7eb.raw.json",
+      "raw_sha256": "f0125f9f419fe91c3315d62131274784ae13293bc728629a96e5246029768545",
+      "files": 25,
+      "attempt": 1
+    },
+    {
+      "identifier": "ASrinivasaTavaCharanamKharaharapriya",
+      "url": "https://archive.org/metadata/ASrinivasaTavaCharanamKharaharapriya",
+      "status": "ok",
+      "raw_file": "b97b78d6e40c1171bf1a4f3de96caa4f3bb31c6ed96b1a90c5f215235eacd172.raw.json",
+      "raw_sha256": "f1e1028d90e93cababfab1f6c03d567887946d99823d88b14a91208d7e1f04bb",
+      "files": 8,
+      "attempt": 1
+    },
+    {
+      "identifier": "AkkaraiSistersAtArkay",
+      "url": "https://archive.org/metadata/AkkaraiSistersAtArkay",
+      "status": "ok",
+      "raw_file": "d3454cc83273f537aed1bb002c3b82bbe01c084e6d4bd1b897ee037c1a4e9d85.raw.json",
+      "raw_sha256": "22737965a86e0a289370cb4a2c28a9064f9549e1664b3142812b71a4f6ed30ae",
+      "files": 55,
+      "attempt": 1
+    },
+    {
+      "identifier": "BSriChamundeswariBilahari",
+      "url": "https://archive.org/metadata/BSriChamundeswariBilahari",
+      "status": "ok",
+      "raw_file": "ea33a6446983bc7b5ceb9e0ee7c686a03c29434cd77b9445f836a058ba24f55f.raw.json",
+      "raw_sha256": "78e76b5565d411fbc753761a5960c42b7a5ec11463e3c69fd736d54a2d691a4f",
+      "files": 8,
+      "attempt": 1
+    },
+    {
+      "identifier": "Bidaram-Krishnappa",
+      "url": "https://archive.org/metadata/Bidaram-Krishnappa",
+      "status": "ok",
+      "raw_file": "cdb5132df5893e65eb43c4e0908ac3c76fe14b0c7f0df0979a2eea476679ffa2.raw.json",
+      "raw_sha256": "ad3515f61ee9898a48a3003d5e306893450f32a01444e9167298603fa52c8e06",
+      "files": 41,
+      "attempt": 1
+    },
+    {
+      "identifier": "Chittoor-Subramanya-Pillai",
+      "url": "https://archive.org/metadata/Chittoor-Subramanya-Pillai",
+      "status": "ok",
+      "raw_file": "70fd2a791e387621cb6edf885456fc3a41d64b75707201a321d816ef1d94afc2.raw.json",
+      "raw_sha256": "8ae99855c4166312806a44304d88a297b2359e79af6f093690e27664edd7a834",
+      "files": 59,
+      "attempt": 1
+    },
+    {
+      "identifier": "DKPDKJRTPJaganmohini",
+      "url": "https://archive.org/metadata/DKPDKJRTPJaganmohini",
+      "status": "ok",
+      "raw_file": "a9726e96b431d2e0b71c4c3e3ea5e57c080b5105057acd1365cec06ce8ba2de8.raw.json",
+      "raw_sha256": "c74eabcceaab44eaac6ec97d4b8c7e4df1e0d7e1eed21335e125676cb958f9ca",
+      "files": 10,
+      "attempt": 1
+    },
+    {
+      "identifier": "DP-001",
+      "url": "https://archive.org/metadata/DP-001",
+      "status": "ok",
+      "raw_file": "d15540ad0b5956a070d77a9ac84be19acf948387d77ba6cc567e69e633640fef.raw.json",
+      "raw_sha256": "20ac2bb2838a00122fbd5cfa36d0700bb6ee879e1b51239b8a40ad6f77b1fe6f",
+      "files": 25,
+      "attempt": 1
+    },
+    {
+      "identifier": "DP-002",
+      "url": "https://archive.org/metadata/DP-002",
+      "status": "ok",
+      "raw_file": "38e2ae65153a2457f67c83a957ba9cf313b1da755549eb02570708bd54533c23.raw.json",
+      "raw_sha256": "024672d167a562953778541b39ed5a793e14cd40d2af6ef4821aaf21b7a910d3",
+      "files": 15,
+      "attempt": 1
+    },
+    {
+      "identifier": "DP-003",
+      "url": "https://archive.org/metadata/DP-003",
+      "status": "ok",
+      "raw_file": "3ba6a3fc96672ba57cd88372cd48ecf4abb8073a2cc57212cbd6d65dc74d06c3.raw.json",
+      "raw_sha256": "408d4ad5b32237d2e338ffa529d5ad5e8a8188bfe139c0a7b8492a6d17ef9705",
+      "files": 30,
+      "attempt": 1
+    },
+    {
+      "identifier": "DP-004",
+      "url": "https://archive.org/metadata/DP-004",
+      "status": "ok",
+      "raw_file": "3ee1609782525cc7a3f3a575b6bd521b76576a7e2266eb672ad30195afff2dd9.raw.json",
+      "raw_sha256": "b01240fe207059c6f9a8a6a44cfc084d86efe8cee3440742fc555d8700e072c9",
+      "files": 45,
+      "attempt": 1
+    },
+    {
+      "identifier": "DP-005",
+      "url": "https://archive.org/metadata/DP-005",
+      "status": "ok",
+      "raw_file": "bc17aee20b6ee4c16293fb5b47fc6ed84d11ccfca1e690aba428bf7f5c70d977.raw.json",
+      "raw_sha256": "dfd1a75c0ff18aee422092b7addd70f36e54a5259bef7a219f7a9b7a46727bb5",
+      "files": 35,
+      "attempt": 1
+    },
+    {
+      "identifier": "DP-006",
+      "url": "https://archive.org/metadata/DP-006",
+      "status": "ok",
+      "raw_file": "c2d1bba386695e339a3c3a1f0c57328f3b92134358b357ee804acfa210347ed1.raw.json",
+      "raw_sha256": "31eb79e685aeb310c7e19ae9d326efea0ae569da5f3ed36bc02a634c5e585136",
+      "files": 20,
+      "attempt": 1
+    },
+    {
+      "identifier": "DP-007",
+      "url": "https://archive.org/metadata/DP-007",
+      "status": "ok",
+      "raw_file": "ffb3a6e699df67eb209093821c5bc0a3312fc3334b1c293e0b972c31bce845ea.raw.json",
+      "raw_sha256": "9e9d92f84a761d86071255d565d6c971fb0c310e8a40a5ad25a5854e40ed88b4",
+      "files": 30,
+      "attempt": 1
+    },
+    {
+      "identifier": "DP-008",
+      "url": "https://archive.org/metadata/DP-008",
+      "status": "ok",
+      "raw_file": "3c608f8690131acb0ffcc4dea5ca6511495e2a94b34b0cdcb073807d519633c3.raw.json",
+      "raw_sha256": "33a9bd495bcb0c2a02ba737e0b42f59117c0d33d258e1d759cb8720bedef6729",
+      "files": 35,
+      "attempt": 1
+    },
+    {
+      "identifier": "DP-009",
+      "url": "https://archive.org/metadata/DP-009",
+      "status": "ok",
+      "raw_file": "300f03fe19ebfde750ea145e4d87f0bce988628c432cd92150dbf97391671a88.raw.json",
+      "raw_sha256": "b48740fed75ddce3b5fca125f9c8cc5d488c03f493352a433ac3c6a5c3759078",
+      "files": 65,
+      "attempt": 1
+    },
+    {
+      "identifier": "DP-010",
+      "url": "https://archive.org/metadata/DP-010",
+      "status": "ok",
+      "raw_file": "4e43f75de001d882601c9ca69af172eb935a26ddcd9169d351499333b69b1fbe.raw.json",
+      "raw_sha256": "e1ef47d17b89c65ec90da6ede0199c7c97c585cfdf8f62d5546fda6bf30d44fd",
+      "files": 60,
+      "attempt": 1
+    },
+    {
+      "identifier": "DP-011",
+      "url": "https://archive.org/metadata/DP-011",
+      "status": "ok",
+      "raw_file": "eff5e20fa35da8b36bf30fc135310ab70e9374329e65b25146493b13e9815a41.raw.json",
+      "raw_sha256": "b5c34a6aa8e7ed917f66d72347ae44560afe8f6b04dd3ce06ebcfd2cfe558d06",
+      "files": 30,
+      "attempt": 1
+    },
+    {
+      "identifier": "DP-012",
+      "url": "https://archive.org/metadata/DP-012",
+      "status": "ok",
+      "raw_file": "e6d0f45499b41fa0223b1a393bd2e5368874318fc4f9c569b6911f0a29a0306e.raw.json",
+      "raw_sha256": "7f0714905872cb8a12ab1326de238629d84d0cecdb8b74d9eb8c2c66558f17fc",
+      "files": 25,
+      "attempt": 1
+    },
+    {
+      "identifier": "DP-013",
+      "url": "https://archive.org/metadata/DP-013",
+      "status": "ok",
+      "raw_file": "3f9077df3800129a2b4ab8366f010a02469295738cc3b856c716ccba021f80b7.raw.json",
+      "raw_sha256": "b94cf66913db1993c793b284c2db4045a02e8fdde636d694eb81e041e62c937e",
+      "files": 45,
+      "attempt": 1
+    },
+    {
+      "identifier": "HindustaniAndCarnatic-Vocal",
+      "url": "https://archive.org/metadata/HindustaniAndCarnatic-Vocal",
+      "status": "ok",
+      "raw_file": "1536e034a28e4ce4cd93eb2c91187395e697e05b9b72cc35cead095917fd6fed.raw.json",
+      "raw_sha256": "a8d5b825606f11ec72f0ef2c12a92a7789f33607fd556cfd6330fe56bcca7cb6",
+      "files": 43,
+      "attempt": 1
+    },
+    {
+      "identifier": "HyderabadBrothersConcert_2ndJan2009_1",
+      "url": "https://archive.org/metadata/HyderabadBrothersConcert_2ndJan2009_1",
+      "status": "ok",
+      "raw_file": "82a9781ce5b7779ab5eb0edb6d321cabc05c5f6c0b48198019c2686a7382ce2b.raw.json",
+      "raw_sha256": "e7080c8da2be071266113b58c2dc4f446f8baba159ac6c818d77a14880d6711a",
+      "files": 43,
+      "attempt": 1
+    },
+    {
+      "identifier": "InMemoriam-Mumbai1126-RagasOfPeace",
+      "url": "https://archive.org/metadata/InMemoriam-Mumbai1126-RagasOfPeace",
+      "status": "ok",
+      "raw_file": "a530c866653a6ce8f5079016f5112031de75a43dc3b5f2458164d215a4d0ec9c.raw.json",
+      "raw_sha256": "053adddf95bdf95b1273543707a490746c8cd926283977ac7174e4682cfcded4",
+      "files": 8,
+      "attempt": 1
+    },
+    {
+      "identifier": "KVN_MC_UKS_fullConcert",
+      "url": "https://archive.org/metadata/KVN_MC_UKS_fullConcert",
+      "status": "ok",
+      "raw_file": "d3461cec6175ab523bb719ae092f6011635b5f167e275b0542ab79219de9b246.raw.json",
+      "raw_sha256": "81ebb0b5af3a14fe8808cf7ee2b81a2b81462db9cfab2d9ccb86a48342b5e96d",
+      "files": 44,
+      "attempt": 1
+    },
+    {
+      "identifier": "LokanathaSharmaEtulabroChakravakam",
+      "url": "https://archive.org/metadata/LokanathaSharmaEtulabroChakravakam",
+      "status": "ok",
+      "raw_file": "c5efa978fbaf95e89d1e2d78f6b63d3c57270154ebbb37674c63bed77fabfc01.raw.json",
+      "raw_sha256": "331ef993f8195a8030622602f7836c7f7950e6ac48b097c3283d3c4a02cb50d4",
+      "files": 10,
+      "attempt": 1
+    },
+    {
+      "identifier": "MANDOLIN",
+      "url": "https://archive.org/metadata/MANDOLIN",
+      "status": "ok",
+      "raw_file": "3b89ef10b63267f286ce3eeddcb9f3c7afc7fc9299bebd23b427692e24765b21.raw.json",
+      "raw_sha256": "1125d271800b12b03ca0501fdd6fbb242e12f8faea392ff999ff8ff124ee45ba",
+      "files": 366,
+      "attempt": 1
+    },
+    {
+      "identifier": "MDR_vathapiganapatim_hamsadhvani_Adi_Dikshitar",
+      "url": "https://archive.org/metadata/MDR_vathapiganapatim_hamsadhvani_Adi_Dikshitar",
+      "status": "ok",
+      "raw_file": "675a8b1d74668788c96b8c24c4637a4a2efda2e27c77a11a55c5972661e8b8d6.raw.json",
+      "raw_sha256": "db7e4e086413669d95364bccebe96148ad8d0f0035ded05157f2c38ec52cb678",
+      "files": 10,
+      "attempt": 1
+    },
+    {
+      "identifier": "MMDandapaniDesikar",
+      "url": "https://archive.org/metadata/MMDandapaniDesikar",
+      "status": "ok",
+      "raw_file": "f07fb6871b1d38c569391d8112d8165ef866c73d2769d01434d3ce68bb134029.raw.json",
+      "raw_sha256": "e9e468d8b3e000cdbce1f11faf2425c3417fb1117fa250ec5c5ef0dd68d813db",
+      "files": 107,
+      "attempt": 1
+    },
+    {
+      "identifier": "MSSHarinarayanaKedaram",
+      "url": "https://archive.org/metadata/MSSHarinarayanaKedaram",
+      "status": "ok",
+      "raw_file": "94b017ac7cdcd6be038e4af0d65322d1f1cb5b7911c06e071a4684aceb4ebddf.raw.json",
+      "raw_sha256": "9cfc7321b0bc3cc33ee9b1df0cf798315f949c81f113e9a9d6d4b1999d543334",
+      "files": 10,
+      "attempt": 1
+    },
+    {
+      "identifier": "Madurai-Keshava-Bhagavatar",
+      "url": "https://archive.org/metadata/Madurai-Keshava-Bhagavatar",
+      "status": "ok",
+      "raw_file": "f3eba720b92752b446fe1774e020deb501f0d391dbde7c3399c6b42707c262e4.raw.json",
+      "raw_sha256": "41ffa49f5e47b9f46d2a6e028f1e4483854ee9e45f32dda0691246aa4c7b502f",
+      "files": 29,
+      "attempt": 1
+    },
+    {
+      "identifier": "MaharajapuramSrinivasan_22ndOctober2008_Part1",
+      "url": "https://archive.org/metadata/MaharajapuramSrinivasan_22ndOctober2008_Part1",
+      "status": "ok",
+      "raw_file": "41b0640fb64a64ef1623c94d8e448389572d9a31fe85016756a89b3ac8edf67f.raw.json",
+      "raw_sha256": "a67ac77d3c4ae841bcc5c432789fa109e9018df9c3f80e87c1c889bd9c6654dc",
+      "files": 53,
+      "attempt": 1
+    },
+    {
+      "identifier": "MaharajapuramSrinivasan_22ndOctober2008_Part2",
+      "url": "https://archive.org/metadata/MaharajapuramSrinivasan_22ndOctober2008_Part2",
+      "status": "ok",
+      "raw_file": "a34c03804dba808c5a0b966f89648526882367562f24ffd34aa81642a4d66f57.raw.json",
+      "raw_sha256": "28842f6a74e70d2ae8ab1b0975e4c6b88c89af1970064d50f9d4c36b27207dad",
+      "files": 33,
+      "attempt": 1
+    },
+    {
+      "identifier": "Mahathi-PKF-Concert-2018-at-Navi_Mumbai",
+      "url": "https://archive.org/metadata/Mahathi-PKF-Concert-2018-at-Navi_Mumbai",
+      "status": "ok",
+      "raw_file": "7962e8fbfca1798d3f0bc0ff206ed74db535a643aad2363dca4e9ea24b6e727d.raw.json",
+      "raw_sha256": "35761260b4643c11d2d8ecaf8394cb23defa1bcaca829ff04208deaf26ed59d2",
+      "files": 62,
+      "attempt": 1
+    },
+    {
+      "identifier": "MaliRtp",
+      "url": "https://archive.org/metadata/MaliRtp",
+      "status": "ok",
+      "raw_file": "85207a38704c5689ccc5da2f4389696350c2a5f818a6388645315efa23d994eb.raw.json",
+      "raw_sha256": "625e7c3658fe0c7bcced766f1d127c0dfcc031ae9749e4fcd898e3028a09fe5b",
+      "files": 7,
+      "attempt": 1
+    },
+    {
+      "identifier": "NeeveRakshavarnamKadanakuthoohalam",
+      "url": "https://archive.org/metadata/NeeveRakshavarnamKadanakuthoohalam",
+      "status": "ok",
+      "raw_file": "e17e84843943bb43a3235f44ce490ed40074c9c1385ed4ef283416804b96e231.raw.json",
+      "raw_sha256": "c12b45f57bdba039fd00005889f2073082fee03f288a1ade8651a8e11afac1ac",
+      "files": 55,
+      "attempt": 1
+    },
+    {
+      "identifier": "OSThyagarajan_7thFeb2009_Part1",
+      "url": "https://archive.org/metadata/OSThyagarajan_7thFeb2009_Part1",
+      "status": "ok",
+      "raw_file": "0ca9645835a3e2debd53df31cfdc53f78161560bc755f21cc5fdb3b7bff7b030.raw.json",
+      "raw_sha256": "de0cdc423b769dd83366ad75432e7e752c0bd6a05eec619f341b9bdca6da076c",
+      "files": 40,
+      "attempt": 1
+    },
+    {
+      "identifier": "OSThyagarajan_7thFeb2009_Part2",
+      "url": "https://archive.org/metadata/OSThyagarajan_7thFeb2009_Part2",
+      "status": "ok",
+      "raw_file": "f28db8f5d1ce31a1663b5f150720ada2f5237e0ed05a2bd72c04890702e12a44.raw.json",
+      "raw_sha256": "70880581f4a7eaa0c85cef7ff2b64e11af0df3904197ab62ba15d6b30864bf29",
+      "files": 28,
+      "attempt": 1
+    },
+    {
+      "identifier": "RAmnAdKrishnan-1",
+      "url": "https://archive.org/metadata/RAmnAdKrishnan-1",
+      "status": "ok",
+      "raw_file": "4368338d77d5693d228a4158fb181e9c6599b5bd445c098f476a9066c3bed6fb.raw.json",
+      "raw_sha256": "f8697611508b5ed49a904aea43043dcfaee35e70abed523fd7539c32d786305b",
+      "files": 25,
+      "attempt": 1
+    },
+    {
+      "identifier": "RNK-LGJ-TS-1970",
+      "url": "https://archive.org/metadata/RNK-LGJ-TS-1970",
+      "status": "ok",
+      "raw_file": "4bbd6f25dac9fb0b2b478f9c53aacd1090c89ee49c530a0b6779e061415b296e.raw.json",
+      "raw_sha256": "97c61e428a9583ac6e317b5e76f69dac7ed8f3ac0570919fd2b247cae410f158",
+      "files": 35,
+      "attempt": 1
+    },
+    {
+      "identifier": "R_Vedavalli_Maaye_Tarangini_Adi_Dikshitar_part_1",
+      "url": "https://archive.org/metadata/R_Vedavalli_Maaye_Tarangini_Adi_Dikshitar_part_1",
+      "status": "ok",
+      "raw_file": "f4f009698084145f6af94a1179333a4d48c185f11a7aecd3dfa4255d1a029773.raw.json",
+      "raw_sha256": "468adf78025628e8a36adbde564b56144ed27fa07ee9e816af216290088d1e8a",
+      "files": 32,
+      "attempt": 1
+    },
+    {
+      "identifier": "RagamTanamPallavi-Shanmukhapriya",
+      "url": "https://archive.org/metadata/RagamTanamPallavi-Shanmukhapriya",
+      "status": "ok",
+      "raw_file": "29b5ea07f24e6a3c8267e11b239758e31763138b8cca29a7a7aba4e3065d54a9.raw.json",
+      "raw_sha256": "71a67d1136a0d8965d1d516665336ddc34f5e0b54cb9ef691a7f8b559e074d9e",
+      "files": 7,
+      "attempt": 1
+    },
+    {
+      "identifier": "Ragas-Lecdem-SRamanathan",
+      "url": "https://archive.org/metadata/Ragas-Lecdem-SRamanathan",
+      "status": "ok",
+      "raw_file": "0c400113269dae616bbc0c61d417b91205b2b9b7b036313a4a5c6acc2e1a7417.raw.json",
+      "raw_sha256": "5d95c30e38ba6e9403604f17839b1683bcf35d6116051c222733f3569429cfc0",
+      "files": 89,
+      "attempt": 1
+    },
+    {
+      "identifier": "SGKittappa",
+      "url": "https://archive.org/metadata/SGKittappa",
+      "status": "ok",
+      "raw_file": "29bb6d79864e6d4d1838682bc03861ceb3463d08661060f4b5155a6a2e40f4af.raw.json",
+      "raw_sha256": "77ca7fc0a672895a1fba060d1851b355545b807afb5b9a79a68559e80ddbb326",
+      "files": 116,
+      "attempt": 1
+    },
+    {
+      "identifier": "SanjaySubramanian_26thMay2008_Part1",
+      "url": "https://archive.org/metadata/SanjaySubramanian_26thMay2008_Part1",
+      "status": "ok",
+      "raw_file": "bd9d24827b7e585fa258f7fb3f943963729e2bb42464f53a5948610e68c87804.raw.json",
+      "raw_sha256": "5d0ed132ad9de45255f213255bdc353585a8eb7ac9b904023e774f6d0e6436a6",
+      "files": 28,
+      "attempt": 1
+    },
+    {
+      "identifier": "SaturSubramaniam",
+      "url": "https://archive.org/metadata/SaturSubramaniam",
+      "status": "ok",
+      "raw_file": "34415d3ef112fc6b4260c41a10ff785fb00d0f41c6db65224d129ebee393aec4.raw.json",
+      "raw_sha256": "661296055aea7c88f7cfee0be66a4f2bd0daa67adc85bcc3adedf856988575cd",
+      "files": 20,
+      "attempt": 1
+    },
+    {
+      "identifier": "Siddhishwaraya",
+      "url": "https://archive.org/metadata/Siddhishwaraya",
+      "status": "ok",
+      "raw_file": "3cde31afa431eaff727984abbe300d72a76dc9d8c64203e8b79b87e6a11e9e12.raw.json",
+      "raw_sha256": "60a4de032fbc8a72c0d1f6d293617c036d093fb86de0276e8200cd8c7429f473",
+      "files": 12,
+      "attempt": 1
+    },
+    {
+      "identifier": "SriRamaChandraSatakam-Sanskrit",
+      "url": "https://archive.org/metadata/SriRamaChandraSatakam-Sanskrit",
+      "status": "ok",
+      "raw_file": "18f8eaac5365c629a56b345fc029e5fe0307eb79bccb07936314b2a1cbadb7e2.raw.json",
+      "raw_sha256": "85e725361a27d002d53616bb8bdb6d154396729cf59263ff110c54576ece625f",
+      "files": 8,
+      "attempt": 1
+    },
+    {
+      "identifier": "SriRanjani",
+      "url": "https://archive.org/metadata/SriRanjani",
+      "status": "ok",
+      "raw_file": "d22fb6579c9e3cb301dd1741c60d75b7f6e90ad7fcfd3748ba278f5d6e334285.raw.json",
+      "raw_sha256": "fe4102aef39147db234939bae10bab1e08931512d65f5295a054bc2015d28136",
+      "files": 10,
+      "attempt": 1
+    },
+    {
+      "identifier": "TamilCarnaticChristianWorshipSongsAudio",
+      "url": "https://archive.org/metadata/TamilCarnaticChristianWorshipSongsAudio",
+      "status": "ok",
+      "raw_file": "5910987a2166a9afd37f97394ede07edd09f5380a17ae70882a9a4619b19600a.raw.json",
+      "raw_sha256": "d9bdcc57f9a02f30228f7d29c0f8b2815eff10deafabbb69a6c120c4f767a3ff",
+      "files": 114,
+      "attempt": 1
+    },
+    {
+      "identifier": "TripunituraViswanathaBagavathar",
+      "url": "https://archive.org/metadata/TripunituraViswanathaBagavathar",
+      "status": "ok",
+      "raw_file": "bcbc7c8c0faeca808e323d309528f659da69400aa2554d6bb2c4b4b467aa9a4e.raw.json",
+      "raw_sha256": "7f32e0a3628e311c660a7a056e8ed806a39aadb84cc2fd42341caa29368154eb",
+      "files": 17,
+      "attempt": 1
+    },
+    {
+      "identifier": "TurayoorRajagopalaSarma",
+      "url": "https://archive.org/metadata/TurayoorRajagopalaSarma",
+      "status": "ok",
+      "raw_file": "9b3104362c69e78a32cf09ff2ed0c01201aa175192dae3e54585fd5dfac5cc73.raw.json",
+      "raw_sha256": "9c9a3aeb4c06f94e63c3a2fcc303c044c13125305b2dc22c3a24bd4a26827c21",
+      "files": 44,
+      "attempt": 1
+    },
+    {
+      "identifier": "VOLMSGAIROct220004RTPTodi",
+      "url": "https://archive.org/metadata/VOLMSGAIROct220004RTPTodi",
+      "status": "ok",
+      "raw_file": "c9fb3ef5726a6c553be77f524e5879f1cff65631084627e36cb993d4b489e19a.raw.json",
+      "raw_sha256": "7f661eaaeffbb17cd06e8c5c605aa21f4da6443bb949e9b534bb3fd2d4cd8d8f",
+      "files": 10,
+      "attempt": 1
+    },
+    {
+      "identifier": "VamankaStithayaAtanaDikshitarMp3",
+      "url": "https://archive.org/metadata/VamankaStithayaAtanaDikshitarMp3",
+      "status": "ok",
+      "raw_file": "32a4e3280b3aa824845034edce083dabe848a6e9f7576133c3f0975490dad6c9.raw.json",
+      "raw_sha256": "3f1922d3763481e3875a5db257adc91d3d55bdc2948500e3b4f74a6ac3d328b8",
+      "files": 7,
+      "attempt": 1
+    },
+    {
+      "identifier": "VasundharaRajagopalan_31stMay_Part2",
+      "url": "https://archive.org/metadata/VasundharaRajagopalan_31stMay_Part2",
+      "status": "ok",
+      "raw_file": "d40c4f9e0c2c9408a2c2abc28a24fa2eb8f4e47d2a109c1afcc9b2491d34be03.raw.json",
+      "raw_sha256": "fa8de4a495da7cc1ba9d0265ae91c587f9c6b2f9db880bfa75de2eda5eb51c8c",
+      "files": 28,
+      "attempt": 1
+    },
+    {
+      "identifier": "Vedavalli_21stOct2008_Part1",
+      "url": "https://archive.org/metadata/Vedavalli_21stOct2008_Part1",
+      "status": "ok",
+      "raw_file": "aad127d158e6aa1e35c6587c109100be64644b215ec8c18ce136d789fc0c0cdd.raw.json",
+      "raw_sha256": "9115b5f7cba846f6db2d5879f5d4a5a7f1c9945b88601fddbf527eb050d00911",
+      "files": 36,
+      "attempt": 1
+    },
+    {
+      "identifier": "Vedavalli_21stOct2008_Part2",
+      "url": "https://archive.org/metadata/Vedavalli_21stOct2008_Part2",
+      "status": "ok",
+      "raw_file": "1c75cef522564c841510842ef733943c9551f6d97ffde8aec3fcd16dbb2a92f4.raw.json",
+      "raw_sha256": "280a715ab16485894ef10c378b4ccb022c3a7056562a96c6e1916781af6dbfa3",
+      "files": 38,
+      "attempt": 1
+    },
+    {
+      "identifier": "a-4933301-1632286178-7685",
+      "url": "https://archive.org/metadata/a-4933301-1632286178-7685",
+      "status": "ok",
+      "raw_file": "bc6534f9b2a9840893e9656d91af6ad58a2cdf33effd98ddee2e13e6fa4bc4aa.raw.json",
+      "raw_sha256": "249d86dcb3c6c899819cec4276769c5d30af901812240b282549d73768adadce",
+      "files": 15,
+      "attempt": 1
+    },
+    {
+      "identifier": "a-neethu-mahima-hamsadwani",
+      "url": "https://archive.org/metadata/a-neethu-mahima-hamsadwani",
+      "status": "ok",
+      "raw_file": "73807dbc8592e4830057a6de108d49e1967eb933a2fe302a5205b4bd021cc1ee.raw.json",
+      "raw_sha256": "08801935bf2fdac8bd719422f68c55f1a2de55b8684efb50bef1043a25e69e30",
+      "files": 15,
+      "attempt": 1
+    },
+    {
+      "identifier": "a_20230920_20230920_0528",
+      "url": "https://archive.org/metadata/a_20230920_20230920_0528",
+      "status": "ok",
+      "raw_file": "a0c02c125dfe312151e2344358015c2141cb7329077c323b5dcf0479f1a4ea84.raw.json",
+      "raw_sha256": "bd8c4de7b904c2d835ef988513d754afa94b9df7936812c40eda628ee08c48de",
+      "files": 15,
+      "attempt": 1
+    },
+    {
+      "identifier": "air-tyagaraja",
+      "url": "https://archive.org/metadata/air-tyagaraja",
+      "status": "ok",
+      "raw_file": "84095701943eb1520ba4b61c1c74c19c64b263c17b39f5c97c963c325fc8f976.raw.json",
+      "raw_sha256": "6af2ec7f06f876d1a7c5d71c5ced5028f957796af0d616c70e32389060d330dd",
+      "files": 32,
+      "attempt": 1
+    },
+    {
+      "identifier": "ajit-svt-pgh",
+      "url": "https://archive.org/metadata/ajit-svt-pgh",
+      "status": "ok",
+      "raw_file": "0cf6d01e493c8b61f8ea8bd91513b36732c9291c16925db28b42d31848453ed4.raw.json",
+      "raw_sha256": "55aed7602a05b5c8adf5831b9bf09520b3f80fc07ae401a25921469029e82ac6",
+      "files": 44,
+      "attempt": 1
+    },
+    {
+      "identifier": "ajit-w-lafeyette",
+      "url": "https://archive.org/metadata/ajit-w-lafeyette",
+      "status": "ok",
+      "raw_file": "826ffc095e8522c5c7e11d7dacb626af01ea8c80b41047bd5f1fe17ca1111444.raw.json",
+      "raw_sha256": "99107cfe28b7ae0c7815ed54dc6e982b48b85d69ffb17d1364f85a6ba59f8b25",
+      "files": 35,
+      "attempt": 1
+    },
+    {
+      "identifier": "akhilandeshwari-dwijawanthi-mss",
+      "url": "https://archive.org/metadata/akhilandeshwari-dwijawanthi-mss",
+      "status": "ok",
+      "raw_file": "f5a122dd430eaf8cd40c55e047c3c70c1594928708150749862360b99f079832.raw.json",
+      "raw_sha256": "03f66567bc41b4d826ab16bfee3b70581bb1eab6df2c8689169f4bdf881571d3",
+      "files": 9,
+      "attempt": 1
+    },
+    {
+      "identifier": "alapanasubhapantuvaralitiruvaiyaru1967",
+      "url": "https://archive.org/metadata/alapanasubhapantuvaralitiruvaiyaru1967",
+      "status": "ok",
+      "raw_file": "6db1f582885b9ea1610d33e0f678361c28392863d97894a88d5900dfad35e9e8.raw.json",
+      "raw_sha256": "7b3fced343e331bb08aadca2c6023c1b649b3697019573a884cefad77bf35542",
+      "files": 9,
+      "attempt": 1
+    },
+    {
+      "identifier": "ariyakudi-ramanuja-iyengar-carnatic-classic-music",
+      "url": "https://archive.org/metadata/ariyakudi-ramanuja-iyengar-carnatic-classic-music",
+      "status": "ok",
+      "raw_file": "fbf8866e9456c8cd96c5b0f164c1038b2f8c0ae438acb857026fed69e4c017f6.raw.json",
+      "raw_sha256": "8b5c5cbd1b0cec1b9b6a3e3a584fcde6b4f0cc5cfacace092ae79de179c3351c",
+      "files": 24,
+      "attempt": 1
+    },
+    {
+      "identifier": "assorted-artists-78rpm",
+      "url": "https://archive.org/metadata/assorted-artists-78rpm",
+      "status": "ok",
+      "raw_file": "ab88c128b280581f2d79957c1175b534e634f0825a4a56f6e130278cc165557a.raw.json",
+      "raw_sha256": "e6b1acd3d6b717a2712cfe8fdca21925966e8f9f03791271fc5a2c1cb92f75c8",
+      "files": 62,
+      "attempt": 1
+    },
+    {
+      "identifier": "assortedtyagarajakrthis",
+      "url": "https://archive.org/metadata/assortedtyagarajakrthis",
+      "status": "ok",
+      "raw_file": "be3d428c21d76005196c520d4cee00c1063caad4579237414fc6e129ea7e87a1.raw.json",
+      "raw_sha256": "aa4ffa6568a2df0efa51c36f9e03d66402c7f653d968d6ee769c62ae53eb141a",
+      "files": 55,
+      "attempt": 1
+    },
+    {
+      "identifier": "brihadhishwara-mahadeva-kanada-bmk",
+      "url": "https://archive.org/metadata/brihadhishwara-mahadeva-kanada-bmk",
+      "status": "ok",
+      "raw_file": "d73105e0fb0c2af3228f7a958ac271e1805363d2b9d41d533bc18344c3104755.raw.json",
+      "raw_sha256": "39bbe9613e42bda51681d08221ed767fc57539890eb8877954f1a88f192c6073",
+      "files": 9,
+      "attempt": 1
+    },
+    {
+      "identifier": "c_20230723_202307",
+      "url": "https://archive.org/metadata/c_20230723_202307",
+      "status": "ok",
+      "raw_file": "ccc5bba295dbcbf624696d5e5887c04af0cfbf85dec36ec510edd291d08b0d32.raw.json",
+      "raw_sha256": "2a1eab6f5494af8c637efc5ad95b8c083d0f7dafce9832b8b9da0c8ba275e74e",
+      "files": 15,
+      "attempt": 1
+    },
+    {
+      "identifier": "cd_carnatic-classical_hyderabad-brothers",
+      "url": "https://archive.org/metadata/cd_carnatic-classical_hyderabad-brothers",
+      "status": "ok",
+      "raw_file": "ab41aa8b6f1c87ab8ae285c4df5ec21c34fcfbc2d56624ed371ed918299597c2.raw.json",
+      "raw_sha256": "ccd7102979e919d1360b45cc1a33aa9550acc2d8bb6155d2968f6f2f67c8ba8e",
+      "files": 70,
+      "attempt": 1
+    },
+    {
+      "identifier": "d.k.-pattammal-classical-carnatic-songs",
+      "url": "https://archive.org/metadata/d.k.-pattammal-classical-carnatic-songs",
+      "status": "ok",
+      "raw_file": "b3297d4bf91539839f5096cc335c5ff44a8638ddead1ab830737d736a9a18949.raw.json",
+      "raw_sha256": "9765443c4620e8323021d09ec1ee32834797c2447e18ce5e18143af264466dd7",
+      "files": 24,
+      "attempt": 1
+    },
+    {
+      "identifier": "d.k.jayaramanpancharathanakrithisdudukugalagowlai3",
+      "url": "https://archive.org/metadata/d.k.jayaramanpancharathanakrithisdudukugalagowlai3",
+      "status": "ok",
+      "raw_file": "50c554f895d838ca0a9b0cc662e108a01e0bf49b842917e712b7ab925c95aba4.raw.json",
+      "raw_sha256": "0ceeb3182bac8e9053a52e61be1b09c2933afd5b8ad83c88be7475d24143813c",
+      "files": 25,
+      "attempt": 1
+    },
+    {
+      "identifier": "dkp31",
+      "url": "https://archive.org/metadata/dkp31",
+      "status": "ok",
+      "raw_file": "c4d43022e4fe570422ec09963723dde963dbbc69386e9056ae08226901f9777e.raw.json",
+      "raw_sha256": "bb507aea60aaeb7803c5ed72f97ab13eed7b6dda0ced80c0496edcc093eccd2c",
+      "files": 85,
+      "attempt": 1
+    },
+    {
+      "identifier": "dkp32",
+      "url": "https://archive.org/metadata/dkp32",
+      "status": "ok",
+      "raw_file": "bdacdadb8231f7a094d0dc9dd0f70c42c35f3ef154e7eba68c52a52181ae4ee4.raw.json",
+      "raw_sha256": "dca3edd611a48f6822f4bc8ccecdfb53f5daf5981a542f01d3874d44c46c2dde",
+      "files": 135,
+      "attempt": 1
+    },
+    {
+      "identifier": "dkp33",
+      "url": "https://archive.org/metadata/dkp33",
+      "status": "ok",
+      "raw_file": "9856121d09da6dc7423118a0236f6206ceaa7ac8aae0d5f5a2b199c507cbc726.raw.json",
+      "raw_sha256": "2c7361e58bc6ec2ba58075da6c4211c20e226e1b581a6c4ef347c3ab92eaae86",
+      "files": 55,
+      "attempt": 1
+    },
+    {
+      "identifier": "etu-nammina-balasubhramaniam",
+      "url": "https://archive.org/metadata/etu-nammina-balasubhramaniam",
+      "status": "ok",
+      "raw_file": "5b4158210ffdf1d3565472d3ac2e6ba0ee1f93f4d2b506f548e4cf7be5f7789c.raw.json",
+      "raw_sha256": "d1d70189c92c7b2112ac42f05c4dec2187a5507aaec3e99e29a2d3ca418101b8",
+      "files": 17,
+      "attempt": 1
+    },
+    {
+      "identifier": "g-2437-b-jm-2373-bhananevaye-kedaram-chembai-vaidyanatha-bhagvatar",
+      "url": "https://archive.org/metadata/g-2437-b-jm-2373-bhananevaye-kedaram-chembai-vaidyanatha-bhagvatar",
+      "status": "ok",
+      "raw_file": "362ec6d175befb9bdcf4de92acc929340669f7d92df1542da95e9dbcc111dc52.raw.json",
+      "raw_sha256": "99fc895a818ca47fdd4dc5b9a0bf7b80363dcc0f139b195226c57892ae3a72e5",
+      "files": 11,
+      "attempt": 1
+    },
+    {
+      "identifier": "g-c-8-13782-13163o-nadanamakriya-arulpa-by-coimbtore-thayi-tamil-female-song",
+      "url": "https://archive.org/metadata/g-c-8-13782-13163o-nadanamakriya-arulpa-by-coimbtore-thayi-tamil-female-song",
+      "status": "ok",
+      "raw_file": "8d0455cdd77648cd7f7a84724f4644fd65997375607adce262e964717c7cbea1.raw.json",
+      "raw_sha256": "9c008c40ee0e050eb75530d7727653fe10497fcfda8ab317b654924fdc2ddeb6",
+      "files": 15,
+      "attempt": 1
+    },
+    {
+      "identifier": "gayathri-girish-vocal-1",
+      "url": "https://archive.org/metadata/gayathri-girish-vocal-1",
+      "status": "ok",
+      "raw_file": "613a53df6a19e6667a11d0d73c6d3aecf845f089d2036b9f9a15578b64297f59.raw.json",
+      "raw_sha256": "9dcb67fda7bba24a4c9dd0fd1937e73d1435675b38826ea989878d2de58bd9c7",
+      "files": 29,
+      "attempt": 1
+    },
+    {
+      "identifier": "gayathri-girish-vocal-2",
+      "url": "https://archive.org/metadata/gayathri-girish-vocal-2",
+      "status": "ok",
+      "raw_file": "21456e8aaf1b44e8c22fd7c674d51605826bba2357d78ac50c6795764a9b2290.raw.json",
+      "raw_sha256": "e60986f98ee07436616bd61d05bcaefd69920aaafd37f9075173f5decdbc6558",
+      "files": 47,
+      "attempt": 1
+    },
+    {
+      "identifier": "hiranmayeemlalita",
+      "url": "https://archive.org/metadata/hiranmayeemlalita",
+      "status": "ok",
+      "raw_file": "f9455c460bc3950e5fef871b71f909147d493cec88ffe7d0c67f42ff3f099cc2.raw.json",
+      "raw_sha256": "8ee6faf772b98cc816dc330d91d9eb3f682b33cf0ae1b993f3f6801852064197",
+      "files": 9,
+      "attempt": 1
+    },
+    {
+      "identifier": "hmv-p-5866-g-c-8-10152-kunthalavarali-balkrishnan-party",
+      "url": "https://archive.org/metadata/hmv-p-5866-g-c-8-10152-kunthalavarali-balkrishnan-party",
+      "status": "ok",
+      "raw_file": "3d7ca81eafe26b2da3f9ef423b3238bf358dcf839e587099653d9de0d37c0c47.raw.json",
+      "raw_sha256": "6da44450ed820362df1661887163eb130b82d7b364b6dd1fc6c37b121e8af44e",
+      "files": 15,
+      "attempt": 1
+    },
+    {
+      "identifier": "jamendo-146935",
+      "url": "https://archive.org/metadata/jamendo-146935",
+      "status": "ok",
+      "raw_file": "de0a4435846100fe30f1fa26a1ca48d12e268a2b07241ecc729b29aa5d8ec580.raw.json",
+      "raw_sha256": "dfd81e938023545ade4fd46cb4e864f1e78ac9d8f282eecceda374b26cc100a0",
+      "files": 42,
+      "attempt": 1
+    },
+    {
+      "identifier": "jamendo-150288",
+      "url": "https://archive.org/metadata/jamendo-150288",
+      "status": "ok",
+      "raw_file": "bd828d8f4276b7f29c8c1ac12761859270236dea2da1174138e9851925204bee.raw.json",
+      "raw_sha256": "a8d1fc7384502f82b7b884a5da39b49ff1e7512b4f42e5b45586483f97a39d3d",
+      "files": 42,
+      "attempt": 1
+    },
+    {
+      "identifier": "jaya-ganesh-vidyalaya-tala-vadya-kutcheri",
+      "url": "https://archive.org/metadata/jaya-ganesh-vidyalaya-tala-vadya-kutcheri",
+      "status": "ok",
+      "raw_file": "73346141737b05feb984e49a148431f8bba302f2dddabd74410567c592be5fef.raw.json",
+      "raw_sha256": "6d2a0f97dd76c38892c5c892bea00de5c6535f834c245eead611d69f5df424be",
+      "files": 29,
+      "attempt": 1
+    },
+    {
+      "identifier": "kvn-225",
+      "url": "https://archive.org/metadata/kvn-225",
+      "status": "ok",
+      "raw_file": "0c3cbc594448d077ccac4a60691c31067bb0fae6937107e762b755dfa726f157.raw.json",
+      "raw_sha256": "61106bba74cc3af23634b3cd092194706f90c9e5a5b643b3530b8a6be5f23bcb",
+      "files": 14,
+      "attempt": 1
+    },
+    {
+      "identifier": "kvn-226",
+      "url": "https://archive.org/metadata/kvn-226",
+      "status": "ok",
+      "raw_file": "230031fdca0aaa5cf21c4cae37bf8aff8009d0ee0bf44c0ffbdb733ddd9f742c.raw.json",
+      "raw_sha256": "187a38e55444a0e6d83a255edbabd999deb336ecb280b20f9fec8813f9e3ced9",
+      "files": 44,
+      "attempt": 1
+    },
+    {
+      "identifier": "kvn-227",
+      "url": "https://archive.org/metadata/kvn-227",
+      "status": "ok",
+      "raw_file": "788327a4184bdef9e585423bb45d7c1d081c4952b0712c934c32170c43ffa9eb.raw.json",
+      "raw_sha256": "d8683909043ca28503ef88c6a1a6582dea90ea8d8485c9aac1614b8d4add0466",
+      "files": 56,
+      "attempt": 1
+    },
+    {
+      "identifier": "kvn-228",
+      "url": "https://archive.org/metadata/kvn-228",
+      "status": "ok",
+      "raw_file": "507ea0b842c6d94f919ba84a63b047b906b1f074f62144ec7167447c1f21d9ca.raw.json",
+      "raw_sha256": "0218713f8132189c10f9bc61b497d611f833b9dd21be2078e809887176a5922a",
+      "files": 44,
+      "attempt": 1
+    },
+    {
+      "identifier": "kvn-229",
+      "url": "https://archive.org/metadata/kvn-229",
+      "status": "ok",
+      "raw_file": "534407d2a1431d6475f2a8e059de5269765816a16e5033d4fa3ff72ca79de76f.raw.json",
+      "raw_sha256": "32bdc3b235ad10768912d0aaad5033aaf73d1879e59cd466f44107a9d09f240e",
+      "files": 59,
+      "attempt": 1
+    },
+    {
+      "identifier": "lalgudi-bilahari-najeevadhara",
+      "url": "https://archive.org/metadata/lalgudi-bilahari-najeevadhara",
+      "status": "ok",
+      "raw_file": "c980524c05960109daca14e82b789aabde2c434d70e77ba3c4cf2a480541e650.raw.json",
+      "raw_sha256": "8d543e5bd5a43505c193f7e63eee38ba76b9b33db78d1a6da665edeea47bb53e",
+      "files": 8,
+      "attempt": 1
+    },
+    {
+      "identifier": "m.s.-subbulakshmi-carnatic-concert",
+      "url": "https://archive.org/metadata/m.s.-subbulakshmi-carnatic-concert",
+      "status": "ok",
+      "raw_file": "8060837b6d4d74f1e3f628174d2d340a5172e2e871e92ffd52b9a52b9a19269b.raw.json",
+      "raw_sha256": "63b616809638cdf0d11742885f3b6f51edc6b5d5c506a8f452037950e62c0b18",
+      "files": 21,
+      "attempt": 1
+    },
+    {
+      "identifier": "mbk-msg-tvg-concert",
+      "url": "https://archive.org/metadata/mbk-msg-tvg-concert",
+      "status": "ok",
+      "raw_file": "706b512aee6767fe8a39adee9d713fd529f163446a5fdd1beaa1a5af7ea1c3f2.raw.json",
+      "raw_sha256": "055c88aece3d27a3239062c941e1e5211b59ae0f1442e1d2dc18cd51bc638695",
+      "files": 33,
+      "attempt": 1
+    },
+    {
+      "identifier": "melakartalecdems",
+      "url": "https://archive.org/metadata/melakartalecdems",
+      "status": "ok",
+      "raw_file": "39552ca0de20454604ad2f56fbe5a72a3d81cf5eb8f5daa4c851f1262bf67947.raw.json",
+      "raw_sha256": "b690e9d6d76cbe3e71ea2a056c9b5e2ae2023fba61eb62d15de1a0c1bcd4f9ad",
+      "files": 92,
+      "attempt": 1
+    },
+    {
+      "identifier": "muchata-brahmadulaku-madyamavati-s-rajam",
+      "url": "https://archive.org/metadata/muchata-brahmadulaku-madyamavati-s-rajam",
+      "status": "ok",
+      "raw_file": "8898975fbe3647d50c8d84ea22e1420acc4851f9ac8bd9f6af7807b37932fb8d.raw.json",
+      "raw_sha256": "c88b32ef03f7a6af27c83953c948dd0e0e1095dc4859e556e5a7e12337795c50",
+      "files": 9,
+      "attempt": 1
+    },
+    {
+      "identifier": "mvi78rpm",
+      "url": "https://archive.org/metadata/mvi78rpm",
+      "status": "ok",
+      "raw_file": "7a3ac31d2cb64763aa50e5c1186a515c5ddd19cd0bd86da5bfef0d0872c47b9c.raw.json",
+      "raw_sha256": "9881ac17f1f5de17ae92eba565f82c19ce16d3c13d07a782cbb48a9e6b914a61",
+      "files": 109,
+      "attempt": 1
+    },
+    {
+      "identifier": "nadatanu-vnarayanswamy_202107",
+      "url": "https://archive.org/metadata/nadatanu-vnarayanswamy_202107",
+      "status": "ok",
+      "raw_file": "a1ecd2a2e981dfbd95d7c8242863a63640d245a1f874667cf428f9c47630f5c8.raw.json",
+      "raw_sha256": "8b7a5f863709b9621b0ba90f114add73bd407954ae9a136ac7133586158c9644",
+      "files": 8,
+      "attempt": 1
+    },
+    {
+      "identifier": "ninnebhajanamsg",
+      "url": "https://archive.org/metadata/ninnebhajanamsg",
+      "status": "ok",
+      "raw_file": "015fa0f474ec32ae20ae3c8419502e31f010c6891163adaacece9164b6f5b6c3.raw.json",
+      "raw_sha256": "0fd52ea9103b9eb1039baf7f6396c78a3f89fa30dfa5424546ee626b6ed931ea",
+      "files": 10,
+      "attempt": 1
+    },
+    {
+      "identifier": "pankaja-senangudi",
+      "url": "https://archive.org/metadata/pankaja-senangudi",
+      "status": "ok",
+      "raw_file": "ad5674a0edfb383090553f28ffff5264457e1415bd4c178c453a54885fa30534.raw.json",
+      "raw_sha256": "a33b2cbd4bd6c807d483dbb22e1e7b44d034a8ef514da1e5f23c859b40c323b3",
+      "files": 11,
+      "attempt": 1
+    },
+    {
+      "identifier": "ragas-through-pallavi-NSanthanagopalan",
+      "url": "https://archive.org/metadata/ragas-through-pallavi-NSanthanagopalan",
+      "status": "ok",
+      "raw_file": "7258a6c9b169e2a5c70e49ff279964659c0bfc4b9adc99494dcf54c440dda8fb.raw.json",
+      "raw_sha256": "6cdbf2e3284797143006d97ff2194e892c661b58f3e1550519af75439e2705ec",
+      "files": 305,
+      "attempt": 1
+    },
+    {
+      "identifier": "rk-lgj-jamshedpur-1964",
+      "url": "https://archive.org/metadata/rk-lgj-jamshedpur-1964",
+      "status": "ok",
+      "raw_file": "5bee3e2d9fb0a125e4b7c8591640b7ac31ffc1654b4eba847ee7f3e921efb358.raw.json",
+      "raw_sha256": "6d38873a081e31e1aea5b0818226f39a865c463efd020fc959d10993fb60cfb6",
+      "files": 57,
+      "attempt": 1
+    },
+    {
+      "identifier": "rk_20201218",
+      "url": "https://archive.org/metadata/rk_20201218",
+      "status": "ok",
+      "raw_file": "f38ae0c1c84b862c76608e438277ef7cb7607a376a10abcd3d0adcc90019d142.raw.json",
+      "raw_sha256": "fae30ee05b578f8cb8a36b06ff5f69a116d6e6a5d1cad2450b41a5fe85eb77e1",
+      "files": 53,
+      "attempt": 1
+    },
+    {
+      "identifier": "rtp-vnarayanswamy",
+      "url": "https://archive.org/metadata/rtp-vnarayanswamy",
+      "status": "ok",
+      "raw_file": "e6f0bfedd6df566667020602c8110b75cd835284ec3909791ce2ba3019b6a884.raw.json",
+      "raw_sha256": "87a2fafb989d7877dab2171bb64ba5d4992a3285c13d6ea82d15dd37424113e6",
+      "files": 11,
+      "attempt": 1
+    },
+    {
+      "identifier": "samagana-balasubhramaniam",
+      "url": "https://archive.org/metadata/samagana-balasubhramaniam",
+      "status": "ok",
+      "raw_file": "929901fd6959ca98798795dd79b69a0e06d7eae10a9df145b1342957fa4e0f8e.raw.json",
+      "raw_sha256": "8cf48e842489ca5a6ea52c8662ed2a724e04343d6634c93f3b395229d0e3d82b",
+      "files": 14,
+      "attempt": 1
+    },
+    {
+      "identifier": "shri-manini-gopalakrishnan",
+      "url": "https://archive.org/metadata/shri-manini-gopalakrishnan",
+      "status": "ok",
+      "raw_file": "55078acf72eb41fa0cb8deb692129dcc8f8d468916d2650cddbe93f0c24f8812.raw.json",
+      "raw_sha256": "866ebcfb3d10341e383b98d9454545c0a0899186fca5acfbd2cf27fe799929f8",
+      "files": 11,
+      "attempt": 1
+    },
+    {
+      "identifier": "smarane-senangudi",
+      "url": "https://archive.org/metadata/smarane-senangudi",
+      "status": "ok",
+      "raw_file": "4a0380de55c570d224efd65e4deeb217c0b48a25b3794a63998176c9a77e5aaf.raw.json",
+      "raw_sha256": "9db1d12880a056047b9661965d187c0bbde2ad1fb4958d2eb18152600204c1e2",
+      "files": 11,
+      "attempt": 1
+    },
+    {
+      "identifier": "sn-501-shanmugapriya",
+      "url": "https://archive.org/metadata/sn-501-shanmugapriya",
+      "status": "ok",
+      "raw_file": "3b1cc96032962751f24554fdfdc780b1ddd82a2d35b8d123f2bf0a2f0e42a51d.raw.json",
+      "raw_sha256": "a70ce14e4ca637d28cae5c744339f61ba0b8ea6d972db0dff05fd86a47be9ba4",
+      "files": 11,
+      "attempt": 1
+    },
+    {
+      "identifier": "sreepahe-vnarayanswamy",
+      "url": "https://archive.org/metadata/sreepahe-vnarayanswamy",
+      "status": "ok",
+      "raw_file": "4f909354e65104c60e629641721a81967dbebc3d6646f78563103012417cd7a9.raw.json",
+      "raw_sha256": "4a79c1710aaf5f199f2f2c10b5dfe616f9df611fb337596f0ab964d729ae38de",
+      "files": 11,
+      "attempt": 1
+    },
+    {
+      "identifier": "sri-vaidyanatham-atana-vs",
+      "url": "https://archive.org/metadata/sri-vaidyanatham-atana-vs",
+      "status": "ok",
+      "raw_file": "3f2181f81fc04524a92cf963ee3aa18baac8e2a2ac6af0b71fa429e6d40ed92b.raw.json",
+      "raw_sha256": "d563ee58f7cefe8aaf668979d70c8d5ec0934b3b8dd4e2c1ee5ebeba2984b8f9",
+      "files": 9,
+      "attempt": 1
+    },
+    {
+      "identifier": "ssi-mss-o-rangasayi_202601",
+      "url": "https://archive.org/metadata/ssi-mss-o-rangasayi_202601",
+      "status": "ok",
+      "raw_file": "60ad23b00cc7233ae6d7ec92882779ab739a6fb4f2c2312a2e5e0cdcc91f176f.raw.json",
+      "raw_sha256": "dff960bcccb3ac98a437f2e21c1feb619acea392c5a196619082d1b16f8ecb11",
+      "files": 8,
+      "attempt": 1
+    },
+    {
+      "identifier": "ssi-slokam-navarasam",
+      "url": "https://archive.org/metadata/ssi-slokam-navarasam",
+      "status": "ok",
+      "raw_file": "9697f60347db00b8a412df3dba0a3bc281c674cb05b48e957722c21bd46de6f6.raw.json",
+      "raw_sha256": "e55b8f381dfc4164d64b9f3961083b55b57ada33652cdd07b967b0a2be037299",
+      "files": 8,
+      "attempt": 1
+    },
+    {
+      "identifier": "tnk-iitb",
+      "url": "https://archive.org/metadata/tnk-iitb",
+      "status": "ok",
+      "raw_file": "796341ffc1ea9e94f7b10c0358caf386ff1451340021cbb02253342679a72183.raw.json",
+      "raw_sha256": "fc4f50af8e404d9dfb3fceeee82f1a49028255a1f27a4f61cefd2b2d4f432bdd",
+      "files": 17,
+      "attempt": 1
+    },
+    {
+      "identifier": "tnk-vr-thk-hmv",
+      "url": "https://archive.org/metadata/tnk-vr-thk-hmv",
+      "status": "ok",
+      "raw_file": "0414d9950074718fcdaff673fac13f6ed265b8b10ba7026b08744bceb178e14d.raw.json",
+      "raw_sha256": "6c0c512d7fc05665fce74c776d8e35c505a101a427243f226d7803534a9cc881",
+      "files": 26,
+      "attempt": 1
+    },
+    {
+      "identifier": "tns-album-1980",
+      "url": "https://archive.org/metadata/tns-album-1980",
+      "status": "ok",
+      "raw_file": "0e8dc9343774585efdac43f11944d6ed6b9d0714cae303bc597f4151ee9e6cda.raw.json",
+      "raw_sha256": "480f98eb100bf35a3ee140f07f6be8d786008edfda62c3bb51f09d7bc5d0161c",
+      "files": 29,
+      "attempt": 1
+    },
+    {
+      "identifier": "tns-slokams",
+      "url": "https://archive.org/metadata/tns-slokams",
+      "status": "ok",
+      "raw_file": "a0ee99ef2ca41dc69b8c3cba85ef2def4210e2cc6dd37840115a6b5800b16f83.raw.json",
+      "raw_sha256": "4b92394c00f8b0191e782cc9b9e99d97f3fe0862e000d42760b0ac5c2a21d9a4",
+      "files": 32,
+      "attempt": 1
+    },
+    {
+      "identifier": "tsk-whistle",
+      "url": "https://archive.org/metadata/tsk-whistle",
+      "status": "ok",
+      "raw_file": "0182c780b782c6f31b0f697f205a622625229ebe515a099dd953329e1aed6890.raw.json",
+      "raw_sha256": "780dfc4f984343a8317ac5112a36cef62fbcdc61a806f173401fad63a7fe353b",
+      "files": 26,
+      "attempt": 1
+    },
+    {
+      "identifier": "tvs-concert-23",
+      "url": "https://archive.org/metadata/tvs-concert-23",
+      "status": "ok",
+      "raw_file": "e83d8939e790860f0caf9e63cb836bd21514aeae9019e5e96d5eba2c38450e2b.raw.json",
+      "raw_sha256": "8fcae57d54e8bfdf937a1eb3973ef230bb2826ae2cb09f036c42a1166269f63f",
+      "files": 29,
+      "attempt": 1
+    },
+    {
+      "identifier": "tvs-concert-24",
+      "url": "https://archive.org/metadata/tvs-concert-24",
+      "status": "ok",
+      "raw_file": "a7f1c45bb3c0093eae1a8d24a766d6eb64c1074f1d4c021d4c737102d7fbb2fd.raw.json",
+      "raw_sha256": "e25471fd48b372e55632cf92b22b9b7b5856f29c75f86fff54e1aeab15dc934b",
+      "files": 20,
+      "attempt": 1
+    },
+    {
+      "identifier": "tvs-concert-25",
+      "url": "https://archive.org/metadata/tvs-concert-25",
+      "status": "ok",
+      "raw_file": "1571e249f348951abee24924e1cba132f0357b50f75455ded595192bfb1a5098.raw.json",
+      "raw_sha256": "bcc9ba47196ce6b5fe05e9bd3cf7e5db9985845c949430f0a8535395598e1bc0",
+      "files": 35,
+      "attempt": 1
+    },
+    {
+      "identifier": "tvs-concert-26",
+      "url": "https://archive.org/metadata/tvs-concert-26",
+      "status": "ok",
+      "raw_file": "60c010d56e38c84110307e161fbd601479bbc032c8d926c57a6c8abc3921ff73.raw.json",
+      "raw_sha256": "df599c37a0e2606d15025673bb7713cbb70771e25f7ec93894a2d3a1e7ed38fa",
+      "files": 41,
+      "attempt": 1
+    },
+    {
+      "identifier": "tvs-concert-27",
+      "url": "https://archive.org/metadata/tvs-concert-27",
+      "status": "ok",
+      "raw_file": "acd9c6574e73778bd97e04f969091dd857216c2d4a59f6619b907c291860e0dd.raw.json",
+      "raw_sha256": "80e10c1825a663309a1d22892f15a7e9512b3c544d5b49c5bde0f1d8df148f3f",
+      "files": 35,
+      "attempt": 1
+    },
+    {
+      "identifier": "tvs-concert-28",
+      "url": "https://archive.org/metadata/tvs-concert-28",
+      "status": "ok",
+      "raw_file": "345376963f6d98d340c2ce14ea8de662c4832fd9e032fcc1998e6f736f174610.raw.json",
+      "raw_sha256": "422ccf2ff00b8d9e7303f305844df7d70949192791e8c7ac5a4fc2d297aadf3b",
+      "files": 14,
+      "attempt": 1
+    },
+    {
+      "identifier": "varnamsahana",
+      "url": "https://archive.org/metadata/varnamsahana",
+      "status": "ok",
+      "raw_file": "0e06cc27b0570860426c55f532a1095e5c095b68825ac8cadb1b19c6323a142c.raw.json",
+      "raw_sha256": "a95db9ae40139e2757fc610bc91e1b5855ded30c86de9cf48bda8199c8b9e3af",
+      "files": 29,
+      "attempt": 1
+    }
+  ],
+  "completed": 266,
+  "expected": 266
+}

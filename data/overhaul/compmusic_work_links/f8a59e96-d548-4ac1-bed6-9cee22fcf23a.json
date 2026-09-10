@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/f8a59e96-d548-4ac1-bed6-9cee22fcf23a",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:25:37.103644+00:00",
+  "recording": {
+    "title": "Evarura",
+    "length": 478000,
+    "id": "f8a59e96-d548-4ac1-bed6-9cee22fcf23a",
+    "video": false,
+    "relations": [
+      {
+        "target-credit": "",
+        "end": null,
+        "attribute-values": {},
+        "source-credit": "",
+        "direction": "forward",
+        "attributes": [
+          "live"
+        ],
+        "work": {
+          "type-id": null,
+          "title": "Evarura Ninu Vina",
+          "language": "tel",
+          "type": null,
+          "id": "11d3ea14-7cb2-4a8e-b77b-232e7fb86af0",
+          "disambiguation": "",
+          "attributes": [],
+          "iswcs": [],
+          "languages": [
+            "tel"
+          ]
+        },
+        "target-type": "work",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "ended": false,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "type": "performance",
+        "begin": null
+      }
+    ],
+    "first-release-date": "2006-09",
+    "disambiguation": ""
+  }
+}

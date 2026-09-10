@@ -1,0 +1,43 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/90615b61-f052-4f29-8003-4a53be4ad723",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:55:38.687840+00:00",
+  "recording": {
+    "id": "90615b61-f052-4f29-8003-4a53be4ad723",
+    "video": false,
+    "length": 653000,
+    "disambiguation": "",
+    "title": "Ambikaye Arul Purivaai",
+    "relations": [
+      {
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "ended": false,
+        "work": {
+          "id": "fca7b1f7-1957-40c7-832a-7c1fe9855081",
+          "type": null,
+          "languages": [],
+          "language": null,
+          "attributes": [],
+          "iswcs": [],
+          "type-id": null,
+          "disambiguation": "",
+          "title": "Ambikaye Arul Purivaai"
+        },
+        "end": null,
+        "attributes": [
+          "live"
+        ],
+        "attribute-values": {},
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "target-type": "work",
+        "direction": "forward",
+        "begin": null,
+        "type": "performance",
+        "target-credit": "",
+        "source-credit": ""
+      }
+    ]
+  }
+}

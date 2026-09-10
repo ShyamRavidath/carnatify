@@ -1,0 +1,11 @@
+{
+  "track": "archive__Maṇirangu__unknown",
+  "audio": "data/concert_audio/Maṇirangu/unknown.mp3",
+  "audio_sha256": "7c6ca6745477f148e41a274c2af73062f16022e2b262ea496edbb2a1071c8830",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.3327143751084805
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Tōḍi__ninnE namminAnu",
+  "audio": "data/concert_audio/Tōḍi/ninnE namminAnu.mp3",
+  "audio_sha256": "19e8c6ea9d23c44673c6c34674e53c93e758b981538b9f65162e3d8358630750",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 4.1396427089348435
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Saurāṣtraṁ__1 MMI sri gaNapati",
+  "audio": "data/concert_audio/Saurāṣtraṁ/1 MMI sri gaNapati.mp3",
+  "audio_sha256": "8e6d2e3d10f549f3e120b7bb78a3dd66f68f060e65dcfa14556ae0d959e476bf",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3420125828124583
+}

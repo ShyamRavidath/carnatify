@@ -1,0 +1,120 @@
+{
+  "status": "synthetic transition development stress test, not natural-concert validation",
+  "plan_sha256": "f62ec57b6227d500e3414062e9430e9f266d749e4668c159af4ace14a4f07695",
+  "report_sha256": "dc819804b4c0e3bba191c4116d78e94b6659e71082cc03961a76fd223d4cf27d",
+  "context_s": 180,
+  "context_policy": "interior_rms_1e-5_trim50ms_v1",
+  "timeline": {
+    "musical_s": 270.0,
+    "candidate_correct_s": 240.0,
+    "candidate_accuracy": 0.8888888888888888,
+    "candidate_coverage_s": 240.0,
+    "asserted_identity_s": 0.0
+  },
+  "n_windows": 9,
+  "n_pure": 8,
+  "n_pure_correct": 6,
+  "pure_accuracy": 0.75,
+  "n_mixed": 0,
+  "rows": [
+    {
+      "start_s": 0.0,
+      "end_s": 90.0,
+      "pure_single_item": true,
+      "musical_items": 1,
+      "dominant_fraction": 1.0,
+      "candidate": "Nāṭa",
+      "dominant_raga": "Nāṭa",
+      "correct": true,
+      "status": "candidate"
+    },
+    {
+      "start_s": 30.0,
+      "end_s": 90.0,
+      "pure_single_item": true,
+      "musical_items": 1,
+      "dominant_fraction": 1.0,
+      "candidate": "Nāṭa",
+      "dominant_raga": "Nāṭa",
+      "correct": true,
+      "status": "candidate"
+    },
+    {
+      "start_s": 60.0,
+      "end_s": 90.0,
+      "pure_single_item": true,
+      "musical_items": 1,
+      "dominant_fraction": 1.0,
+      "candidate": "Nāṭa",
+      "dominant_raga": "Nāṭa",
+      "correct": true,
+      "status": "candidate"
+    },
+    {
+      "start_s": 90.0,
+      "end_s": 100.0,
+      "pure_single_item": false,
+      "musical_items": 0,
+      "dominant_fraction": 0.0,
+      "candidate": null,
+      "dominant_raga": null,
+      "correct": null,
+      "status": "insufficient_melody"
+    },
+    {
+      "start_s": 120.0,
+      "end_s": 190.0,
+      "pure_single_item": true,
+      "musical_items": 1,
+      "dominant_fraction": 1.0,
+      "candidate": "Rītigauḷa",
+      "dominant_raga": "Rītigauḷa",
+      "correct": true,
+      "status": "candidate"
+    },
+    {
+      "start_s": 150.0,
+      "end_s": 190.0,
+      "pure_single_item": true,
+      "musical_items": 1,
+      "dominant_fraction": 1.0,
+      "candidate": "Suraṭi",
+      "dominant_raga": "Rītigauḷa",
+      "correct": false,
+      "status": "candidate"
+    },
+    {
+      "start_s": 180.0,
+      "end_s": 190.0,
+      "pure_single_item": true,
+      "musical_items": 1,
+      "dominant_fraction": 1.0,
+      "candidate": null,
+      "dominant_raga": "Rītigauḷa",
+      "correct": false,
+      "status": "insufficient_melody"
+    },
+    {
+      "start_s": 210.0,
+      "end_s": 290.0,
+      "pure_single_item": true,
+      "musical_items": 1,
+      "dominant_fraction": 1.0,
+      "candidate": "Ānandabhairavi",
+      "dominant_raga": "Ānandabhairavi",
+      "correct": true,
+      "status": "candidate"
+    },
+    {
+      "start_s": 240.0,
+      "end_s": 290.0,
+      "pure_single_item": true,
+      "musical_items": 1,
+      "dominant_fraction": 1.0,
+      "candidate": "Ānandabhairavi",
+      "dominant_raga": "Ānandabhairavi",
+      "correct": true,
+      "status": "candidate"
+    }
+  ]
+}

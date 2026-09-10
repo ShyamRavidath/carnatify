@@ -1,0 +1,11 @@
+{
+  "track": "archive__Behāg__nirupamAna",
+  "audio": "data/concert_audio/Behāg/nirupamAna.mp3",
+  "audio_sha256": "8f92b42b1681754f7b5823c573949ae054ca7f2322a15573ad36bc1a3446805b",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.44128779182210565
+}

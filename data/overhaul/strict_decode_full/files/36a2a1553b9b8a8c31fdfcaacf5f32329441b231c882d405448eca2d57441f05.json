@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kānaḍa__brhadIshvara mahAdEva",
+  "audio": "data/concert_audio/Kānaḍa/brhadIshvara mahAdEva.mp3",
+  "audio_sha256": "36a2a1553b9b8a8c31fdfcaacf5f32329441b231c882d405448eca2d57441f05",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5522127076983452
+}

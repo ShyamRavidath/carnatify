@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sāma__hari bhajanamE",
+  "audio": "data/concert_audio/Sāma/hari bhajanamE.mp3",
+  "audio_sha256": "666e7fa72a7e33c0bbe26709b2124b960343bbeef2b69ac260610a6c5781be3e",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.24242912512272596
+}

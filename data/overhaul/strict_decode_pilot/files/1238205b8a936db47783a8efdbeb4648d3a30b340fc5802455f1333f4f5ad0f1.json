@@ -1,0 +1,11 @@
+{
+  "track": "archive__Dhanyāsi__06 BalakrishnanPadhaMalar",
+  "audio": "data/concert_audio/Dhanyāsi/06 BalakrishnanPadhaMalar.mp3",
+  "audio_sha256": "1238205b8a936db47783a8efdbeb4648d3a30b340fc5802455f1333f4f5ad0f1",
+  "plan_sha256": "e0babfbb17ff59861b0f951c98fa857adcc486715904a4fa250f57daf00a6c12",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7262289999052882
+}

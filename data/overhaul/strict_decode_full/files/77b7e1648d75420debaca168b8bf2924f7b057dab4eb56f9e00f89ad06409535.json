@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ṣanmukhapriya__Siva pancAksharam",
+  "audio": "data/concert_audio/Ṣanmukhapriya/Siva pancAksharam.mp3",
+  "audio_sha256": "77b7e1648d75420debaca168b8bf2924f7b057dab4eb56f9e00f89ad06409535",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.29321820801123977
+}

@@ -1,0 +1,13 @@
+{
+  "version": "relative_24bin_halfsecond_oti_v1",
+  "catalog_sha256": "cb39b9f557a9a5438601e958beb95c21ea0fac9bd2f84d3bed1b4d8fed9c32f1",
+  "base_catalog_sha256": "7ffc5d778871bbeb2630cf1b3d0018f45e97cf8765c825fb32b2b443c4971759",
+  "source_links_sha256": "63b1fa03bebbebf6cef5618c9ca8de57a826a2befc37e8328cd6a07c66b0f821",
+  "source_links_snapshot_sha256": "63b1fa03bebbebf6cef5618c9ca8de57a826a2befc37e8328cd6a07c66b0f821",
+  "metadata_lookup_complete": false,
+  "n_tracks": 191,
+  "n_works": 171,
+  "n_added": 10,
+  "skipped": [],
+  "status": "candidate catalog; expanded-reference evaluation and rejection required; no deployment"
+}

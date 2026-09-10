@@ -1,0 +1,11 @@
+{
+  "track": "archive__Rītigauḷa__janani ninnuvinA",
+  "audio": "data/concert_audio/Rītigauḷa/janani ninnuvinA.mp3",
+  "audio_sha256": "9388de77db7b799e55123afc2114732a41ee8073aa6ee7cec4d2114a175e18f5",
+  "plan_sha256": "e0babfbb17ff59861b0f951c98fa857adcc486715904a4fa250f57daf00a6c12",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.3464287910610437
+}

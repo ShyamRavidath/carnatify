@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bilahari__jaya viTTala",
+  "audio": "data/concert_audio/Bilahari/jaya viTTala.mp3",
+  "audio_sha256": "a7c6a09a3c4b4d140efd98d9e705899f25925c4559672dd2868324378bb0013d",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2966204169206321
+}

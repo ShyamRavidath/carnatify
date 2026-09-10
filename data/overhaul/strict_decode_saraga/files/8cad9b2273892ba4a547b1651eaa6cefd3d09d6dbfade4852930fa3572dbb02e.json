@@ -1,0 +1,11 @@
+{
+  "track": "45_Apparama_Bhakti",
+  "audio": "saraga1.5_carnatic/Akkarai Sisters at Arkay by Akkarai Sisters/Apparama Bhakti/Apparama Bhakti.mp3.mp3",
+  "audio_sha256": "8cad9b2273892ba4a547b1651eaa6cefd3d09d6dbfade4852930fa3572dbb02e",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 3.094940041657537
+}

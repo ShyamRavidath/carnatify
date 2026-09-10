@@ -1,0 +1,11 @@
+{
+  "track": "161_Chalamelara_Saketha_Rama",
+  "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/Chalamelara Saketha Rama/Sanjay Subrahmanyan - Chalamelara Saketha Rama.mp3",
+  "audio_sha256": "c54d0649d7d0ed2147705eeb18e9cf37a57f2290f966086079a6997314df0944",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4008323750458658
+}

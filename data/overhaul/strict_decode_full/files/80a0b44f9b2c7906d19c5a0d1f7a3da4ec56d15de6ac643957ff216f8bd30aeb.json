@@ -1,0 +1,11 @@
+{
+  "track": "archive__Rītigauḷa__Mama Hridaye",
+  "audio": "data/concert_audio/Rītigauḷa/Mama Hridaye.mp3",
+  "audio_sha256": "80a0b44f9b2c7906d19c5a0d1f7a3da4ec56d15de6ac643957ff216f8bd30aeb",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.188988707959652
+}

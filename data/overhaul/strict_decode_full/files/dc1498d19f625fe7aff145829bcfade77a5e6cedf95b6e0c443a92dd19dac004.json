@@ -1,0 +1,11 @@
+{
+  "track": "archive__Dēvagāndhāri__81 Na Moralakimpa Vemi",
+  "audio": "data/concert_audio/Dēvagāndhāri/81 Na Moralakimpa Vemi.mp3",
+  "audio_sha256": "dc1498d19f625fe7aff145829bcfade77a5e6cedf95b6e0c443a92dd19dac004",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.3086338751018047
+}

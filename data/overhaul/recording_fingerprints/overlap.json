@@ -1,0 +1,168 @@
+{
+  "input_sha256": "8a6df128f2394f95ec9c9321048ac6fd022649ff7f871c612f5880c804bc3a0d",
+  "policy": {
+    "max_code_occurrences": 128,
+    "min_votes": 8,
+    "offsets_per_pair": 8,
+    "window_frames": 160,
+    "min_unique_codes": 32,
+    "max_bit_error": 0.1,
+    "action": "flag only; independent audio verification required"
+  },
+  "n_queries": 184,
+  "decode_failures": [
+    {
+      "track": "archive__Varāḷi__ne pogadakunTE",
+      "role": "train",
+      "audio": "data/concert_audio/Varāḷi/ne pogadakunTE.mp3",
+      "sha256": "1aa6d72982d3e37565fc80540636ce43bfd3b202411052dfd879ee086b9ec194",
+      "status": "decode_failed",
+      "error": "RuntimeError: FFmpeg decode not clean (0): [mp3float @ 0x79ec64e00] Header missing\n[aist#0:0/mp3 @ 0x79f008300] [dec:mp3float @ 0x79f00c280] Error submitting packet to decoder: Invalid data found when processing input\n[mp3float @ 0x79ec64e00] Header missing\n[aist#0:0/mp3 @ 0x79f008300] [dec:mp3float @ 0x79f00c280] Error submitting packet to decoder: Invalid data found when processing input\n"
+    },
+    {
+      "track": "archive__Madhyamāvati__sri kAnthimatim",
+      "role": "train",
+      "audio": "data/concert_audio/Madhyamāvati/sri kAnthimatim.mp3",
+      "sha256": "454e3b075f586fbc52064dc478ea6151f388a1f45fb4e82b545ca92f65358906",
+      "status": "decode_failed",
+      "error": "RuntimeError: FFmpeg decode not clean (0): [mp3float @ 0x792c68e00] Header missing\n[aist#0:0/mp3 @ 0x793008300] [dec:mp3float @ 0x79300c280] Error submitting packet to decoder: Invalid data found when processing input\n[mp3float @ 0x792c68e00] Header missing\n[aist#0:0/mp3 @ 0x793008300] [dec:mp3float @ 0x79300c280] Error submitting packet to decoder: Invalid data found when processing input\n"
+    },
+    {
+      "track": "archive__Tōḍi__amba nannu brOvavE",
+      "role": "train",
+      "audio": "data/concert_audio/Tōḍi/amba nannu brOvavE.mp3",
+      "sha256": "4b2d4b4b4da00880145f2f7f9f763d1e4a031073b95c21859fd7b7df61624875",
+      "status": "decode_failed",
+      "error": "RuntimeError: FFmpeg decode not clean (0): [mp3float @ 0x9d8c68e00] Header missing\n[aist#0:0/mp3 @ 0x9d9008300] [dec:mp3float @ 0x9d900c280] Error submitting packet to decoder: Invalid data found when processing input\n[mp3float @ 0x9d8c68e00] Header missing\n[aist#0:0/mp3 @ 0x9d9008300] [dec:mp3float @ 0x9d900c280] Error submitting packet to decoder: Invalid data found when processing input\n[mp3float @ 0x9d8c68e00] Header missing\n[aist#0:0/mp3 @ 0x9d9008300] [dec:mp3float @ 0x9d900c280] Error submitting packet to decoder: Invalid data found when processing input\n"
+    },
+    {
+      "track": "archive__Hindōḷaṁ__05 neerajAkshi",
+      "role": "train",
+      "audio": "data/concert_audio/Hindōḷaṁ/05 neerajAkshi.mp3",
+      "sha256": "5ab854b4c86e784be70a31fc7b52c43500d905d372deb932620c87e4f2d1f4c6",
+      "status": "decode_failed",
+      "error": "RuntimeError: FFmpeg decode not clean (0): [mp3float @ 0xa10c88e00] Header missing\n[aist#0:0/mp3 @ 0xa11008300] [dec:mp3float @ 0xa1100c280] Error submitting packet to decoder: Invalid data found when processing input\n"
+    },
+    {
+      "track": "archive__Kāṁbhōji__kOniyAdEdina",
+      "role": "train",
+      "audio": "data/concert_audio/Kāṁbhōji/kOniyAdEdina.mp3",
+      "sha256": "5b358a02ac8877a1e3f35579a87b4de756ae10b9154ac3e3fd2eff00e41e17d3",
+      "status": "decode_failed",
+      "error": "RuntimeError: FFmpeg decode not clean (0): [mp3float @ 0xc32c70e00] Header missing\n[aist#0:0/mp3 @ 0xc33008300] [dec:mp3float @ 0xc32c1c280] Error submitting packet to decoder: Invalid data found when processing input\n[mp3float @ 0xc32c70e00] Header missing\n[aist#0:0/mp3 @ 0xc33008300] [dec:mp3float @ 0xc32c1c280] Error submitting packet to decoder: Invalid data found when processing input\n"
+    },
+    {
+      "track": "archive__Hamsadhvāni__TNS MC TKM",
+      "role": "train",
+      "audio": "data/concert_audio/Hamsadhvāni/TNS MC TKM.mp3",
+      "sha256": "6348f38916f50757507220a0cb744d4197687be86189442af48f6ebd64c8a1ba",
+      "status": "decode_failed",
+      "error": "RuntimeError: FFmpeg decode not clean (0): [mp3float @ 0x98ac64e00] Header missing\n[aist#0:0/mp3 @ 0x98b008300] [dec:mp3float @ 0x98b00c280] Error submitting packet to decoder: Invalid data found when processing input\n"
+    },
+    {
+      "track": "archive__Lalita__hiranmayeem",
+      "role": "train",
+      "audio": "data/concert_audio/Lalita/hiranmayeem.mp3",
+      "sha256": "6a087dac589df101851ff3ae627110ebc93b73c19497d82737e80820cf197397",
+      "status": "decode_failed",
+      "error": "RuntimeError: FFmpeg decode not clean (0): [mp3float @ 0x752c68e00] Header missing\n[aist#0:0/mp3 @ 0x753009980] [dec:mp3float @ 0x75300c640] Error submitting packet to decoder: Invalid data found when processing input\n[mp3float @ 0x752c68e00] Header missing\n[aist#0:0/mp3 @ 0x753009980] [dec:mp3float @ 0x75300c640] Error submitting packet to decoder: Invalid data found when processing input\n"
+    },
+    {
+      "track": "archive__Śankarābharaṇaṁ__swara rAga sudhArasa",
+      "role": "train",
+      "audio": "data/concert_audio/Śankarābharaṇaṁ/swara rAga sudhArasa.mp3",
+      "sha256": "93bb6b673a76e153a6eed49b9d935d6187019faf7db152e8714b3fbcdf0890db",
+      "status": "decode_failed",
+      "error": "RuntimeError: FFmpeg decode not clean (0): [mp3float @ 0x934c48e00] Header missing\n[aist#0:0/mp3 @ 0x934800300] [dec:mp3float @ 0x934c18280] Error submitting packet to decoder: Invalid data found when processing input\n[mp3float @ 0x934c48e00] Header missing\n[aist#0:0/mp3 @ 0x934800300] [dec:mp3float @ 0x934c18280] Error submitting packet to decoder: Invalid data found when processing input\n"
+    },
+    {
+      "track": "archive__Hamsadhvāni__TNS MC VR GH",
+      "role": "train",
+      "audio": "data/concert_audio/Hamsadhvāni/TNS MC VR GH.mp3",
+      "sha256": "9ab2dfba28e283de530fabc05e24ab51150b308413ccc64d1a2f224af7166ebb",
+      "status": "decode_failed",
+      "error": "RuntimeError: FFmpeg decode not clean (0): [mp3float @ 0x950c68e00] Header missing\n[aist#0:0/mp3 @ 0x951008300] [dec:mp3float @ 0x95100c280] Error submitting packet to decoder: Invalid data found when processing input\n"
+    },
+    {
+      "track": "archive__Jaganmōhini__DKP DKJ RTP",
+      "role": "train",
+      "audio": "data/concert_audio/Jaganmōhini/DKP DKJ RTP.mp3",
+      "sha256": "c19bd452eab49f957d07bbdb3b7fdf0892921fa1bf969a5fc0cf4c091b99e043",
+      "status": "decode_failed",
+      "error": "RuntimeError: FFmpeg decode not clean (0): [mp3float @ 0x92a850e00] Header missing\n[aist#0:0/mp3 @ 0x92b400300] [dec:mp3float @ 0x92b404280] Error submitting packet to decoder: Invalid data found when processing input\n"
+    },
+    {
+      "track": "archive__Nīlāṁbari__ennaga manasuku",
+      "role": "train",
+      "audio": "data/concert_audio/Nīlāṁbari/ennaga manasuku.mp3",
+      "sha256": "cbc05c04803fa910ee463b88fb3b2635ec4a237c2eab87d6cf174c9671336ad3",
+      "status": "decode_failed",
+      "error": "RuntimeError: FFmpeg decode not clean (0): [mp3float @ 0xc08c6ce00] Header missing\n[aist#0:0/mp3 @ 0xc08c18300] [dec:mp3float @ 0xc08c1c280] Error submitting packet to decoder: Invalid data found when processing input\n[mp3float @ 0xc08c6ce00] Header missing\n[aist#0:0/mp3 @ 0xc08c18300] [dec:mp3float @ 0xc08c1c280] Error submitting packet to decoder: Invalid data found when processing input\n"
+    },
+    {
+      "track": "archive__Hamsadhvāni__sri ragukula",
+      "role": "train",
+      "audio": "data/concert_audio/Hamsadhvāni/sri ragukula.mp3",
+      "sha256": "d82c621a7a67611052b70aa6f6412d7dde3270dd31f596fc16f2d3ecd2864f3c",
+      "status": "decode_failed",
+      "error": "RuntimeError: FFmpeg decode not clean (0): [mp3float @ 0x89ac68e00] Header missing\n[aist#0:0/mp3 @ 0x89b008300] [dec:mp3float @ 0x89b00c280] Error submitting packet to decoder: Invalid data found when processing input\n[mp3float @ 0x89ac68e00] Header missing\n[aist#0:0/mp3 @ 0x89b008300] [dec:mp3float @ 0x89b00c280] Error submitting packet to decoder: Invalid data found when processing input\n"
+    },
+    {
+      "track": "archive__Kamās__brOchevArevarurA",
+      "role": "train",
+      "audio": "data/concert_audio/Kamās/brOchevArevarurA.mp3",
+      "sha256": "df264540b0e07c7ea9158d8ac0a03a43495b54589e4ac14dab09ea71d64a7ac7",
+      "status": "decode_failed",
+      "error": "RuntimeError: FFmpeg decode not clean (0): [mp3float @ 0xa7ec64e00] Header missing\n[aist#0:0/mp3 @ 0xa7f008300] [dec:mp3float @ 0xa7f00c280] Error submitting packet to decoder: Invalid data found when processing input\n[mp3float @ 0xa7ec64e00] Header missing\n[aist#0:0/mp3 @ 0xa7f008300] [dec:mp3float @ 0xa7f00c280] Error submitting packet to decoder: Invalid data found when processing input\n"
+    },
+    {
+      "track": "archive__Sāvēri__04 karikaLabhamukham",
+      "role": "train",
+      "audio": "data/concert_audio/Sāvēri/04 karikaLabhamukham.mp3",
+      "sha256": "e4e2ec2efd6960c54396ecad632f9edbe38c8f895e55b92b4a0201621ee35aa6",
+      "status": "decode_failed",
+      "error": "RuntimeError: FFmpeg decode not clean (0): [mp3float @ 0x8e8c20e00] Header missing\n[aist#0:0/mp3 @ 0x8e9008300] [dec:mp3float @ 0x8e8800280] Error submitting packet to decoder: Invalid data found when processing input\n[mp3float @ 0x8e8c20e00] Header missing\n[aist#0:0/mp3 @ 0x8e9008300] [dec:mp3float @ 0x8e8800280] Error submitting packet to decoder: Invalid data found when processing input\n"
+    },
+    {
+      "track": "archive__Hindōḷaṁ__neerajAkshi",
+      "role": "train",
+      "audio": "data/concert_audio/Hindōḷaṁ/neerajAkshi.mp3",
+      "sha256": "e4f863e5ad0fc6af8bb2266d17ec6bc1e49eaeafab47268ca81b948df0840a18",
+      "status": "decode_failed",
+      "error": "RuntimeError: FFmpeg decode not clean (0): [mp3float @ 0xc90c64e00] Header missing\n[aist#0:0/mp3 @ 0xc91008300] [dec:mp3float @ 0xc9100c280] Error submitting packet to decoder: Invalid data found when processing input\n[mp3float @ 0xc90c64e00] Header missing\n[aist#0:0/mp3 @ 0xc91008300] [dec:mp3float @ 0xc9100c280] Error submitting packet to decoder: Invalid data found when processing input\n"
+    },
+    {
+      "track": "archive__Karaharapriya__rAmA neeyeDa",
+      "role": "train",
+      "audio": "data/concert_audio/Karaharapriya/rAmA neeyeDa.mp3",
+      "sha256": "f0df6fa2e55ec00dd584c6d4dc62fcc9ab1c456d826232017ea37fd3ec55ee8e",
+      "status": "decode_failed",
+      "error": "RuntimeError: FFmpeg decode not clean (0): [mp3float @ 0xb32c64e00] Header missing\n[aist#0:0/mp3 @ 0xb33008300] [dec:mp3float @ 0xb3300c280] Error submitting packet to decoder: Invalid data found when processing input\n[mp3float @ 0xb32c64e00] Header missing\n[aist#0:0/mp3 @ 0xb33008300] [dec:mp3float @ 0xb3300c280] Error submitting packet to decoder: Invalid data found when processing input\n"
+    },
+    {
+      "track": "archive__Tōḍi__amba nAdu",
+      "role": "train",
+      "audio": "data/concert_audio/Tōḍi/amba nAdu.mp3",
+      "sha256": "fcebda97532e8598e4a2170435237097a856c552c777b1e64c46f181d004d85c",
+      "status": "decode_failed",
+      "error": "RuntimeError: FFmpeg decode not clean (0): [mp3float @ 0x7b0c6ce00] Header missing\n[aist#0:0/mp3 @ 0x7b0c18300] [dec:mp3float @ 0x7b0c1c280] Error submitting packet to decoder: Invalid data found when processing input\n[mp3float @ 0x7b0c6ce00] Header missing\n[aist#0:0/mp3 @ 0x7b0c18300] [dec:mp3float @ 0x7b0c1c280] Error submitting packet to decoder: Invalid data found when processing input\n"
+    }
+  ],
+  "expected_references": 874,
+  "completed_references": 874,
+  "flags": [
+    {
+      "bit_error": 0.0,
+      "query_frame": 0,
+      "reference_frame": 0,
+      "landmark_votes": 6076,
+      "offset_frames": 0,
+      "window_frames": 160,
+      "query": "53_Siddhi_Vinayakam",
+      "reference": "archive__Ṣanmukhapriya__Siddhi Vinayakam_r2",
+      "query_audio_sha256": "938db15dc389755d97e16021b35dd1590a4484cc9bffbd106f475043497d27ec",
+      "reference_audio_sha256": "841bd2f689b17ffb030f540c86436c213dfbfc205a83c3b60f21103df79e7ed6"
+    }
+  ],
+  "limitation": "Screening only; zero flags would not prove recording or artist independence"
+}

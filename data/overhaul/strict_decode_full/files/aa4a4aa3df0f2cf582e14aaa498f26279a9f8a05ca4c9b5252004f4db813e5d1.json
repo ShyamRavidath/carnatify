@@ -1,0 +1,11 @@
+{
+  "track": "archive__Haṁsānandi__tirupugazh_r2",
+  "audio": "data/concert_audio/Haṁsānandi/tirupugazh_r2.mp3",
+  "audio_sha256": "aa4a4aa3df0f2cf582e14aaa498f26279a9f8a05ca4c9b5252004f4db813e5d1",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5694482089020312
+}

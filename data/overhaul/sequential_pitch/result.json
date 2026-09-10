@@ -1,0 +1,11 @@
+{
+  "version": "spd120_bounded_excursions_v1",
+  "status": "Bounded-excursion variant, not exact published SPD ensemble reproduction",
+  "feature_sha256": "e6550ab5e86b8b2d6400865e4616af2c394d69e16b50124dcc07f13685669566",
+  "base_feature_sha256": "740f4df2941cb5c6a58bd4770e4e0a3218fc03253712fe8422c3b30fc1d62cdb",
+  "fold_sha256": "f160b1214d956db149fdc914ad1ced1395bb781c8c3ee3a15961dbc43d5e5ff7",
+  "n_tracks": 382,
+  "n_classes": 40,
+  "top1": 0.581151832460733,
+  "elapsed_s": 30.173992125317454
+}

@@ -1,0 +1,11 @@
+{
+  "track": "130_Ghandhamu_Poyyaruga",
+  "audio": "saraga1.5_carnatic/Modhumudi Sudhakar at Arkay by Modhumudi Sudhakar/Ghandhamu Poyyaruga/Ghandhamu Poyyaruga.mp3.mp3",
+  "audio_sha256": "5de7471c950eb0ed99610eb77eada2f7773134dfad9b3f7aaa6bbac6f02f659b",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.44387658312916756
+}

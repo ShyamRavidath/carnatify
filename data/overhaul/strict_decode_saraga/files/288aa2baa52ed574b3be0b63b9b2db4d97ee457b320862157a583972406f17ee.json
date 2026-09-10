@@ -1,0 +1,11 @@
+{
+  "track": "20_Aparadhamula",
+  "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Aparadhamula/Ashwath Narayanan - Aparadhamula.mp3",
+  "audio_sha256": "288aa2baa52ed574b3be0b63b9b2db4d97ee457b320862157a583972406f17ee",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.7012842088006437
+}

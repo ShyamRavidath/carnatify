@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/dc885903-1ee0-418a-9f49-6abd0923cd41",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:14:55.378179+00:00",
+  "recording": {
+    "length": 1827000,
+    "id": "dc885903-1ee0-418a-9f49-6abd0923cd41",
+    "first-release-date": "2007",
+    "video": false,
+    "disambiguation": "",
+    "relations": [
+      {
+        "ended": false,
+        "target-type": "work",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attributes": [
+          "live"
+        ],
+        "work": {
+          "attributes": [],
+          "id": "4983d381-72b6-49d2-b85d-f262ce6e9949",
+          "iswcs": [],
+          "type": null,
+          "disambiguation": "",
+          "language": null,
+          "type-id": null,
+          "languages": [],
+          "title": "Akshayalinga Vibho"
+        },
+        "target-credit": "",
+        "type": "performance",
+        "end": null,
+        "direction": "forward",
+        "source-credit": "",
+        "attribute-values": {}
+      }
+    ],
+    "title": "Akshayalinga Vibho"
+  }
+}

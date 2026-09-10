@@ -1,0 +1,11 @@
+{
+  "track": "archive__Tōḍi__innuxxx bandanO",
+  "audio": "data/concert_audio/Tōḍi/innuxxx bandanO.mp3",
+  "audio_sha256": "3488bdcca285e7526f699f2c429e1ae55477c577c6d69e99ce6c9a4c5f227c1f",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6660183328203857
+}

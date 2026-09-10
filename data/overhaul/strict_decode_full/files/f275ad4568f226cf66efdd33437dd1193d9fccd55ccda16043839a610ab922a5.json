@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bhairavi__apuroopamAna peN",
+  "audio": "data/concert_audio/Bhairavi/apuroopamAna peN.mp3",
+  "audio_sha256": "f275ad4568f226cf66efdd33437dd1193d9fccd55ccda16043839a610ab922a5",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4041162091307342
+}

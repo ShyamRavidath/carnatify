@@ -1,0 +1,11 @@
+{
+  "track": "55_Enadhu_Manam_Kavalai",
+  "audio": "saraga1.5_carnatic/Dr S Sundar at Arkay by S Sundar/Enadhu Manam Kavalai/Enadhu Manam Kavalai.mp3.mp3",
+  "audio_sha256": "032207cd757605b0469bafe7bcc291b512acb0b6e461a96abdde6605ebe90b06",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7312394161708653
+}

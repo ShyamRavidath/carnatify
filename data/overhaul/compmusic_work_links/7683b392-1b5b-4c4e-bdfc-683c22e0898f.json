@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/7683b392-1b5b-4c4e-bdfc-683c22e0898f",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:48:34.152457+00:00",
+  "recording": {
+    "length": 1070000,
+    "disambiguation": "",
+    "id": "7683b392-1b5b-4c4e-bdfc-683c22e0898f",
+    "relations": [
+      {
+        "target-type": "work",
+        "source-credit": "",
+        "ended": false,
+        "end": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "target-credit": "",
+        "work": {
+          "iswcs": [],
+          "languages": [
+            "tel"
+          ],
+          "disambiguation": "",
+          "id": "3852c12b-e092-4f4b-8656-4b82cbd7414a",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "title": "Dwaitamu Sukhama",
+          "type": "Song",
+          "attributes": [],
+          "language": "tel"
+        },
+        "type": "performance",
+        "attribute-values": {},
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "direction": "forward",
+        "begin": null,
+        "attributes": [
+          "live"
+        ]
+      }
+    ],
+    "video": false,
+    "title": "Dvaitamu",
+    "first-release-date": "2003"
+  }
+}

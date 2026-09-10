@@ -1,0 +1,11 @@
+{
+  "track": "archive__Pūrvīkaḷyāṇi__04 Ninnuvina gamari",
+  "audio": "data/concert_audio/Pūrvīkaḷyāṇi/04 Ninnuvina gamari.mp3",
+  "audio_sha256": "c68348e083a612b84dc07898f1a5bc6daee25a572d9f85da5f95d65615606658",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.989892166107893
+}

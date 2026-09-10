@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bēgaḍa__Alapana",
+  "audio": "data/concert_audio/Bēgaḍa/Alapana.mp3",
+  "audio_sha256": "923ccde68874ba0ccefdc3859bb0e2efc6e22d02aeffb77fe97ed69aae48fa14",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.160874207969755
+}

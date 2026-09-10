@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/71511da3-06e5-48f3-bf3b-7e2793b5b56a",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:47:34.861971+00:00",
+  "recording": {
+    "id": "71511da3-06e5-48f3-bf3b-7e2793b5b56a",
+    "relations": [
+      {
+        "type": "performance",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "work": {
+          "disambiguation": "",
+          "iswcs": [],
+          "languages": [
+            "san"
+          ],
+          "id": "2e8f4b1b-5d8c-498e-ac9b-8f1cb17a220d",
+          "title": "Sri Krishnam Bhaja",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "type": "Song",
+          "language": "san",
+          "attributes": []
+        },
+        "target-credit": "",
+        "source-credit": "",
+        "ended": false,
+        "end": null,
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ],
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "direction": "forward",
+        "begin": null,
+        "attribute-values": {}
+      }
+    ],
+    "video": false,
+    "disambiguation": "",
+    "length": 2825000,
+    "first-release-date": "2008",
+    "title": "Sri Krishnam Bhaja"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kalyāṇi__Srimadhadhi Thyagaraja",
+  "audio": "data/concert_audio/Kalyāṇi/Srimadhadhi Thyagaraja.mp3",
+  "audio_sha256": "86deacf804d65e064430a45c4ca6e996b826a4a3c296779ba78c7f1fccbcd832",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6113789170049131
+}

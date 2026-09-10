@@ -1,0 +1,43 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/bce736e0-4ec1-4b08-b3c2-94c6709ae066",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:07:04.724349+00:00",
+  "recording": {
+    "title": "Kapali",
+    "relations": [
+      {
+        "attribute-values": {},
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attributes": [
+          "live"
+        ],
+        "work": {
+          "language": null,
+          "iswcs": [],
+          "attributes": [],
+          "type-id": null,
+          "id": "a5974d2f-da7a-40f2-a195-bab6b18ba5b8",
+          "type": null,
+          "languages": [],
+          "title": "Kapali",
+          "disambiguation": ""
+        },
+        "end": null,
+        "begin": null,
+        "type": "performance",
+        "target-type": "work",
+        "direction": "forward",
+        "target-credit": "",
+        "source-credit": "",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "ended": false
+      }
+    ],
+    "disambiguation": "",
+    "length": 1314000,
+    "video": false,
+    "id": "bce736e0-4ec1-4b08-b3c2-94c6709ae066"
+  }
+}

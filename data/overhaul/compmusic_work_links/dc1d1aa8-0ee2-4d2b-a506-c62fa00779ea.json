@@ -1,0 +1,42 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/dc1d1aa8-0ee2-4d2b-a506-c62fa00779ea",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:14:50.659176+00:00",
+  "recording": {
+    "video": false,
+    "disambiguation": "",
+    "title": "Mati Matiki",
+    "length": 2596858,
+    "relations": [
+      {
+        "direction": "forward",
+        "type": "performance",
+        "target-credit": "",
+        "attribute-values": {},
+        "ended": false,
+        "end": null,
+        "attribute-ids": {},
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "work": {
+          "id": "266f1f9b-9c77-4bc9-83fe-fbae3484a351",
+          "attributes": [],
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "disambiguation": "",
+          "languages": [
+            "tel"
+          ],
+          "iswcs": [],
+          "title": "Mati Matiki",
+          "type": "Song",
+          "language": "tel"
+        },
+        "source-credit": "",
+        "target-type": "work",
+        "attributes": []
+      }
+    ],
+    "id": "dc1d1aa8-0ee2-4d2b-a506-c62fa00779ea",
+    "first-release-date": "2015-06-22"
+  }
+}

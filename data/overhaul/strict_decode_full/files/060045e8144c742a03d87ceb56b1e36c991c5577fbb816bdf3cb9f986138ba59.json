@@ -1,0 +1,11 @@
+{
+  "track": "archive__Maṇirangu__rAnidi rAdu",
+  "audio": "data/concert_audio/Maṇirangu/rAnidi rAdu.mp3",
+  "audio_sha256": "060045e8144c742a03d87ceb56b1e36c991c5577fbb816bdf3cb9f986138ba59",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.6870626253075898
+}

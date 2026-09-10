@@ -1,0 +1,11 @@
+{
+  "track": "archive__Varāḷi__Eti janma_r2",
+  "audio": "data/concert_audio/Varāḷi/Eti janma_r2.mp3",
+  "audio_sha256": "6d5b840f18efc1f49ef97259a5e9eaf27921739b0b19ac26aacda370c3d787d7",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4445667080581188
+}

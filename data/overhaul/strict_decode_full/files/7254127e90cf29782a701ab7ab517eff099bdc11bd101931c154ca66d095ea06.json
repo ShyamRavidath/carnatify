@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kēdāragauḷa__tiruvaDi nambi vandEn",
+  "audio": "data/concert_audio/Kēdāragauḷa/tiruvaDi nambi vandEn.mp3",
+  "audio_sha256": "7254127e90cf29782a701ab7ab517eff099bdc11bd101931c154ca66d095ea06",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.502895999699831
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Mōhanaṁ__Evaroora Ninnuvina",
+  "audio": "data/concert_audio/Mōhanaṁ/Evaroora Ninnuvina.mp3",
+  "audio_sha256": "50088a86f14ca3b8546fe2392094cbcf1172a4ecdf47a0c6088810a51ecc26e0",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 3.3135339999571443
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Pūrvīkaḷyāṇi__sri rAjeswari",
+  "audio": "data/concert_audio/Pūrvīkaḷyāṇi/sri rAjeswari.mp3",
+  "audio_sha256": "0eab18cb2c976737e38303384e907a7e2a90e4d5ef6a5412e1f75ee756b7de9d",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 3.3253830829635262
+}

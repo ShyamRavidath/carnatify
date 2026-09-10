@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/dd4a77c6-1a5e-4784-80cd-f82e0a53654a",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:15:19.300034+00:00",
+  "recording": {
+    "disambiguation": "",
+    "first-release-date": "2008",
+    "title": "Kalai Tukki",
+    "relations": [
+      {
+        "source-credit": "",
+        "target-credit": "",
+        "begin": null,
+        "type": "performance",
+        "target-type": "work",
+        "direction": "forward",
+        "attribute-values": {},
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "work": {
+          "title": "Kalai Tukki",
+          "disambiguation": "",
+          "type-id": null,
+          "language": null,
+          "attributes": [],
+          "iswcs": [],
+          "type": null,
+          "languages": [],
+          "id": "15949e0a-6a4a-4d5e-98ed-ee076995e52a"
+        },
+        "end": null,
+        "attributes": [
+          "live"
+        ],
+        "ended": false,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        }
+      }
+    ],
+    "id": "dd4a77c6-1a5e-4784-80cd-f82e0a53654a",
+    "video": false,
+    "length": 1166000
+  }
+}

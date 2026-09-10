@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ābhōgī__sabhApatikku",
+  "audio": "data/concert_audio/Ābhōgī/sabhApatikku.mp3",
+  "audio_sha256": "cb600aa550e88235869f527cbed15288f951113f5415d075a97ca99be2148da6",
+  "plan_sha256": "e0babfbb17ff59861b0f951c98fa857adcc486715904a4fa250f57daf00a6c12",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.7170372079126537
+}

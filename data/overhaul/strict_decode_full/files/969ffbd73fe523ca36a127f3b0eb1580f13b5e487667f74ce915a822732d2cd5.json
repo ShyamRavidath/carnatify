@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāpi__EnODi inda kOpam",
+  "audio": "data/concert_audio/Kāpi/EnODi inda kOpam.mp3",
+  "audio_sha256": "969ffbd73fe523ca36a127f3b0eb1580f13b5e487667f74ce915a822732d2cd5",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.24037245893850923
+}

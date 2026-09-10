@@ -1,0 +1,11 @@
+{
+  "track": "archive__Śankarābharaṇaṁ__sankarAchAryam",
+  "audio": "data/concert_audio/Śankarābharaṇaṁ/sankarAchAryam.mp3",
+  "audio_sha256": "e5e366d57d364c1adbb3c73790d207648103ad2f2c588102dda8b34e83ceabf8",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.892943334300071
+}

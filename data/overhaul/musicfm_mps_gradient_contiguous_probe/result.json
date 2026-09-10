@@ -1,0 +1,27 @@
+{
+  "steps": [
+    {
+      "step": 0,
+      "loss": 2.3908510208129883,
+      "encoder_gradient_norm": 12.581896781921387,
+      "parameters_with_gradient": 31,
+      "elapsed_s": 6.67215466639027
+    },
+    {
+      "step": 1,
+      "loss": 0.0008299482287839055,
+      "encoder_gradient_norm": 0.01215495727956295,
+      "parameters_with_gradient": 31,
+      "elapsed_s": 1.7485376251861453
+    },
+    {
+      "step": 2,
+      "loss": 0.0008228015503846109,
+      "encoder_gradient_norm": 26.454492568969727,
+      "parameters_with_gradient": 31,
+      "elapsed_s": 0.966433749999851
+    }
+  ],
+  "checked_parameter_max_abs_change": 0.0003825053572654724,
+  "status": "Synthetic one-example gradient sanity only; no semantic accuracy or saved weights"
+}

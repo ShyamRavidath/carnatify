@@ -1,0 +1,11 @@
+{
+  "track": "archive__Jaganmōhini__Mahathi PKF Sunaada Vinodini Ragam",
+  "audio": "data/concert_audio/Jaganmōhini/Mahathi PKF Sunaada Vinodini Ragam.mp3",
+  "audio_sha256": "419cf57ced49a81ec8af3e1b1b2f3faf739e203b39552c1963ee0668447da91c",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 4.424821167252958
+}

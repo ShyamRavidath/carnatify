@@ -1,0 +1,82 @@
+{
+  "plan_sha256": "a39d9c445383938cf13c7c73d750908a67a756036e9b4e9a27784fe81ce0f25a",
+  "query": {
+    "track": "40_Kamakshi",
+    "audio": "saraga1.5_carnatic/Live at Kamarajar Hall by Sanjay Subrahmanyan/Kamakshi/Sanjay Subrahmanyan - Kamakshi.mp3",
+    "audio_sha256": "247213aff363dae0be9549dec3306b126aa08d49671d195b6ab0b58aa8285104",
+    "start_s": 596.9575510204081,
+    "duration_s": 30
+  },
+  "audio": {
+    "source_sr": 44100,
+    "channels": 2,
+    "downmix": "mean",
+    "downmix_power_ratio": 0.6616852578384678,
+    "clipping_fraction": 0.0,
+    "rms": 0.03500964611545858
+  },
+  "waveform_sha256": "51d02f7a8e7c091a219834c2fb1cc2dc9af2fb6b7cf2800f6cc1e9088c87f5c3",
+  "transcription_s": 42.304338624700904,
+  "hypotheses": {
+    "auto": {
+      "text": "Thank you.",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 29.98,
+          "text": " Thank you.",
+          "avg_logprob": -0.6566553115844727,
+          "no_speech_prob": 1.6678058933905504e-10,
+          "compression_ratio": 0.5555555555555556
+        }
+      ],
+      "language": "en",
+      "status": "unverified_hypothesis"
+    },
+    "ta": {
+      "text": "நான் மாக்கரிக்காம்",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " நான் மாக்கரிக்காம்",
+          "avg_logprob": -1.0951663970947265,
+          "no_speech_prob": 1.6678058933905504e-10,
+          "compression_ratio": 1.1818181818181819
+        }
+      ],
+      "language": "ta",
+      "status": "unverified_hypothesis"
+    },
+    "te": {
+      "text": "కాాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగా",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 30.0,
+          "text": " కాాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగాగా",
+          "avg_logprob": -0.17281607733832466,
+          "no_speech_prob": 1.6678058933905504e-10,
+          "compression_ratio": 15.857142857142858
+        }
+      ],
+      "language": "te",
+      "status": "unverified_hypothesis"
+    },
+    "hi": {
+      "text": "प्रवार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बा",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 30.0,
+          "text": " प्रवार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बार बा",
+          "avg_logprob": -0.25270316229926215,
+          "no_speech_prob": 1.6678058933905504e-10,
+          "compression_ratio": 15.416666666666666
+        }
+      ],
+      "language": "hi",
+      "status": "unverified_hypothesis"
+    }
+  }
+}

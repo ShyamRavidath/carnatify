@@ -1,0 +1,11 @@
+{
+  "track": "archive__Pūrṇacandrika__Sri Hari Vallabhe",
+  "audio": "data/concert_audio/Pūrṇacandrika/Sri Hari Vallabhe.mp3",
+  "audio_sha256": "daa4761bc65210240e5687e1700ec0225baf1c08690f08dac2953d57f758d2bf",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6101826247759163
+}

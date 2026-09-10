@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ābhōgī__sabhApatikku Eru daivamu",
+  "audio": "data/concert_audio/Ābhōgī/sabhApatikku Eru daivamu.mp3",
+  "audio_sha256": "f2c362de7a14c58e96b7f1fd4a07baaef18319b517e3f6a96efa8d137c140268",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.2154926247894764
+}

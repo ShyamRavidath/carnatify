@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kānaḍa__madhiyilla",
+  "audio": "data/concert_audio/Kānaḍa/madhiyilla.mp3",
+  "audio_sha256": "111ce9f829d6828e376ba999e44b059a859f1f439fcc7793850885cab9f83a1f",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2948715412057936
+}

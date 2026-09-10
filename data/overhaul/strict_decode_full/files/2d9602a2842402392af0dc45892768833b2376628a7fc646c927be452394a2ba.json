@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sindhubhairavi__chandrasekarA",
+  "audio": "data/concert_audio/Sindhubhairavi/chandrasekarA.mp3",
+  "audio_sha256": "2d9602a2842402392af0dc45892768833b2376628a7fc646c927be452394a2ba",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2921457081101835
+}

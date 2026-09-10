@@ -1,0 +1,11 @@
+{
+  "track": "archive__Mukhāri__tyAgarAja nee bhAgyamu",
+  "audio": "data/concert_audio/Mukhāri/tyAgarAja nee bhAgyamu.mp3",
+  "audio_sha256": "fae2c8bb86ae7f145ff80bd00c67a182e122d0785300876833a99226f352951a",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.9809873327612877
+}

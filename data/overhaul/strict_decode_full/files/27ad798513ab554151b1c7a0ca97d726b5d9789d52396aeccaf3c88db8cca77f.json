@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bhairavi__Virboni varnam",
+  "audio": "data/concert_audio/Bhairavi/Virboni varnam.mp3",
+  "audio_sha256": "27ad798513ab554151b1c7a0ca97d726b5d9789d52396aeccaf3c88db8cca77f",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.6012368751689792
+}

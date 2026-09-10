@@ -1,0 +1,11 @@
+{
+  "track": "archive__Vasanta__vElai piDittavanin",
+  "audio": "data/concert_audio/Vasanta/vElai piDittavanin.mp3",
+  "audio_sha256": "b0baeb6895562a4a19145702fad67c35cd7e6626bbae8d76ba49bf9c0613d61a",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.23520762473344803
+}

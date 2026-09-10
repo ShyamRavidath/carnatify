@@ -1,0 +1,11 @@
+{
+  "track": "archive__Mukhāri__TNS MC TU",
+  "audio": "data/concert_audio/Mukhāri/TNS MC TU.mp3",
+  "audio_sha256": "d567ca770eb3aaee09d4ae494f7119e06d79ddc857594cabe82f53aab7ed58c4",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 20.3447665409185
+}

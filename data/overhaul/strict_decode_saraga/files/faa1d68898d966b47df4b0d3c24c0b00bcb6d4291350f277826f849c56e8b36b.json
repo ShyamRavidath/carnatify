@@ -1,0 +1,11 @@
+{
+  "track": "157_Janani",
+  "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/Janani/Sanjay Subrahmanyan - Janani.mp3",
+  "audio_sha256": "faa1d68898d966b47df4b0d3c24c0b00bcb6d4291350f277826f849c56e8b36b",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.733271332923323
+}

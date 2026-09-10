@@ -1,0 +1,11 @@
+{
+  "track": "archive__Hindōḷaṁ__05 manasulOni marmamulu",
+  "audio": "data/concert_audio/Hindōḷaṁ/05 manasulOni marmamulu.mp3",
+  "audio_sha256": "f32c675d717c653e6aa75bd50f9723d04227a74771480703a12d9714507ee558",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7272198749706149
+}

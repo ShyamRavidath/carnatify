@@ -1,0 +1,19 @@
+{
+  "track": "archive__Kamās__mODi jEsEvElrA",
+  "audio_sha256": "85ecd08d604dd6b1196e67d5b2f23d56611aeecb7121ecdfcf56adcd9d297ee8",
+  "results": [
+    {
+      "start_s": 0.0,
+      "frames": 6981120,
+      "sample_rate": 44100,
+      "channels": 2,
+      "metadata": {
+        "decoder": "ffmpeg_strict_output_seek",
+        "stderr_bytes": 0,
+        "stderr_excerpt": "",
+        "start_s": 0.0,
+        "requested_duration_s": 180.0
+      }
+    }
+  ]
+}

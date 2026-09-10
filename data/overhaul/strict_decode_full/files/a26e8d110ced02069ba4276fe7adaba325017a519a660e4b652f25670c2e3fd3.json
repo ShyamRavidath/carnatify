@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nāṭakurinji__agnAni kalakooDE",
+  "audio": "data/concert_audio/Nāṭakurinji/agnAni kalakooDE.mp3",
+  "audio_sha256": "a26e8d110ced02069ba4276fe7adaba325017a519a660e4b652f25670c2e3fd3",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.29564904188737273
+}

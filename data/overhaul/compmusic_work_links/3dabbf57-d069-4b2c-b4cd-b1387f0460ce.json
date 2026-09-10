@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/3dabbf57-d069-4b2c-b4cd-b1387f0460ce",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:31:00.901126+00:00",
+  "recording": {
+    "id": "3dabbf57-d069-4b2c-b4cd-b1387f0460ce",
+    "first-release-date": "2000",
+    "length": 1908000,
+    "relations": [
+      {
+        "direction": "forward",
+        "type": "performance",
+        "target-credit": "",
+        "attribute-values": {},
+        "ended": false,
+        "end": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "work": {
+          "attributes": [],
+          "id": "9182c5da-05ec-4b7f-baad-48dffefc111a",
+          "type-id": null,
+          "languages": [],
+          "title": "Sri Raja Gopala",
+          "iswcs": [],
+          "disambiguation": "",
+          "language": null,
+          "type": null
+        },
+        "source-credit": "",
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ]
+      }
+    ],
+    "disambiguation": "",
+    "title": "Sri Raja Gopala",
+    "video": false
+  }
+}

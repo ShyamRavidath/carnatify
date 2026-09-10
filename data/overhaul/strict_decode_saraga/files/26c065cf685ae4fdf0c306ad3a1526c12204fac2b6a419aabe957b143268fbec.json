@@ -1,0 +1,11 @@
+{
+  "track": "109_Sri_Raghuvara_Sugunaalaya",
+  "audio": "saraga1.5_carnatic/Live at Vani Mahal by Sanjay Subrahmanyan/Sri Raghuvara Sugunaalaya/Sanjay Subrahmanyan - Sri Raghuvara Sugunaalaya.mp3",
+  "audio_sha256": "26c065cf685ae4fdf0c306ad3a1526c12204fac2b6a419aabe957b143268fbec",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.45667345775291324
+}

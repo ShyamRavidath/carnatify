@@ -1,0 +1,35 @@
+{
+  "plan_sha256": "5a583f91b605504a2a0253c877138662a6a91dc0ee37b2bd6b3167a5c101611c",
+  "query": {
+    "track": "237_Manasaramathi",
+    "audio": "saraga1.5_carnatic/KP Nandini at Arkay by KP Nandini/Manasaramathi/Manasaramathi.mp3.mp3",
+    "audio_sha256": "31fd6bce5d2f628b78231dacc6451a92bb7764eb78cd878a7bd8168adf73c595",
+    "start_s": 715.5556349206349,
+    "duration_s": 10
+  },
+  "audio": {
+    "source_sr": 44100,
+    "channels": 2,
+    "downmix": "mean",
+    "downmix_power_ratio": 0.5699938053244074,
+    "clipping_fraction": 0.0,
+    "rms": 0.04560785949354153
+  },
+  "waveform_sha256": "8eab54bf8578564c4567e5d52bce939675b49d0500194d381f0bb36ebc876f4f",
+  "hypothesis": {
+    "text": "¶¶",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 10.0,
+        "text": " ¶¶",
+        "avg_logprob": -0.3948029450007847,
+        "no_speech_prob": 8.431242509709946e-11,
+        "compression_ratio": 0.3333333333333333
+      }
+    ],
+    "language": "en",
+    "status": "unverified_hypothesis"
+  },
+  "transcription_s": 13.541848875116557
+}

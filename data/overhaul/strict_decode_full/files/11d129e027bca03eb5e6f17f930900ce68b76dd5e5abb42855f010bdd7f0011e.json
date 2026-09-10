@@ -1,0 +1,11 @@
+{
+  "track": "archive__Varāḷi__D K Jayaraman Pancharathana Krithis Kanakanaruchira",
+  "audio": "data/concert_audio/Varāḷi/D K Jayaraman Pancharathana Krithis Kanakanaruchira.mp3",
+  "audio_sha256": "11d129e027bca03eb5e6f17f930900ce68b76dd5e5abb42855f010bdd7f0011e",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.0380423748865724
+}

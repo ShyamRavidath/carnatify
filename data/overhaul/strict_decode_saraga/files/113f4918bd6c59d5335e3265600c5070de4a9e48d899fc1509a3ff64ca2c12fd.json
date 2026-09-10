@@ -1,0 +1,11 @@
+{
+  "track": "117_Karuna_Nidhi_Illalo",
+  "audio": "saraga1.5_carnatic/Cherthala Ranganatha Sharma at Arkay by Cherthala Ranganatha Sharma/Karuna Nidhi Illalo/Karuna Nidhi Illalo.mp3.mp3",
+  "audio_sha256": "113f4918bd6c59d5335e3265600c5070de4a9e48d899fc1509a3ff64ca2c12fd",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.835713665932417
+}

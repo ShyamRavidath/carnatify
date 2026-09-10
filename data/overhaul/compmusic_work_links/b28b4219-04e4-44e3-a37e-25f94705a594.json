@@ -1,0 +1,43 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/b28b4219-04e4-44e3-a37e-25f94705a594",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:04:24.118034+00:00",
+  "recording": {
+    "id": "b28b4219-04e4-44e3-a37e-25f94705a594",
+    "title": "Naada Bindu Kalaadi",
+    "video": false,
+    "relations": [
+      {
+        "source-credit": "",
+        "end": null,
+        "attribute-values": {},
+        "target-credit": "",
+        "attributes": [
+          "live"
+        ],
+        "work": {
+          "type-id": null,
+          "title": "Naada Bindu Kalaadi",
+          "language": null,
+          "type": null,
+          "id": "1deda15a-ce04-49cc-9420-d8a27fcde929",
+          "attributes": [],
+          "disambiguation": "",
+          "iswcs": [],
+          "languages": []
+        },
+        "direction": "forward",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "ended": false,
+        "target-type": "work",
+        "begin": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "type": "performance"
+      }
+    ],
+    "length": 183000,
+    "disambiguation": ""
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Madhyamāvati__rAmakatA",
+  "audio": "data/concert_audio/Madhyamāvati/rAmakatA.mp3",
+  "audio_sha256": "4e4bd92dd814c70db30fc2f04cd424073d28b46c40d4c1c6b35de60315b66964",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.7941781664267182
+}

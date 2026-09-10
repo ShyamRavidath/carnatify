@@ -1,0 +1,11 @@
+{
+  "track": "archive__Dēvagāndhāri__Sarasija Nabha Sodhari",
+  "audio": "data/concert_audio/Dēvagāndhāri/Sarasija Nabha Sodhari.mp3",
+  "audio_sha256": "e3ac9bda79775d5a51cb4d6772eefe0664c92434b77f6db7187b26b0efe66a78",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.614545582793653
+}

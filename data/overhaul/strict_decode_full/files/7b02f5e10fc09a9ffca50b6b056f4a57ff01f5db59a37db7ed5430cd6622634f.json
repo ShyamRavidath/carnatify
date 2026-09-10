@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ṣanmukhapriya__ghananaya",
+  "audio": "data/concert_audio/Ṣanmukhapriya/ghananaya.mp3",
+  "audio_sha256": "7b02f5e10fc09a9ffca50b6b056f4a57ff01f5db59a37db7ed5430cd6622634f",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.52652220800519
+}

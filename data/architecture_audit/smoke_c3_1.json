@@ -1,0 +1,99 @@
+{
+  "audio": "/Users/shyamravidath/carnatify/data/long_concerts/audio/long_concert_3.mp3",
+  "audio_sha256": "544dffd4a31840e36485d38597235e2086e8feede64bbe1b4f5db86b1d4258a1",
+  "model_sha256": "198078325c815ad6343fa39ba68eef77bea6fb50bf8196214fded1412a9f1acc",
+  "feature_version": "melody_v1_elapsed_contiguous",
+  "segmentation": "fixed windows; boundaries are NOT inferred item boundaries",
+  "windows": [
+    {
+      "start_s": 60.0,
+      "end_s": 120.0,
+      "audio": {
+        "source_sr": 44100,
+        "channels": 2,
+        "downmix": "mean",
+        "downmix_power_ratio": 0.6078346318788549,
+        "clipping_fraction": 0.0,
+        "rms": 0.0931259310751001
+      },
+      "tonic_hz": 147.07455444335938,
+      "voiced_s": 44.73034013605442,
+      "status": "candidate_uncalibrated",
+      "probabilities": {
+        "Aṭāna": 0.0625,
+        "Behāg": 0.0,
+        "Bhairavi": 0.03125,
+        "Bilahari": 0.015625,
+        "Bēgaḍa": 0.015625,
+        "Bṛndāvana sāranga": 0.0,
+        "Cakravākaṁ": 0.0,
+        "Dhanyāsi": 0.0,
+        "Dvijāvanti": 0.03125,
+        "Gauḷa": 0.0,
+        "Hamsadhvāni": 0.0,
+        "Harikāmbhōji": 0.015625,
+        "Haṁsānandi": 0.0,
+        "Hindōḷaṁ": 0.015625,
+        "Jaganmōhini": 0.0,
+        "Janaranjani": 0.015625,
+        "Jōnpuri": 0.0,
+        "Kalyāṇi": 0.0,
+        "Kamās": 0.03125,
+        "Karaharapriya": 0.125,
+        "Kāmavardani": 0.0,
+        "Kānaḍa": 0.078125,
+        "Kāpi": 0.03125,
+        "Kāṁbhōji": 0.09375,
+        "Latāngi": 0.0,
+        "Madhyamāvati": 0.015625,
+        "Mukhāri": 0.015625,
+        "Māyāmāḷavagauḷa": 0.0,
+        "Mōhanaṁ": 0.03125,
+        "Nāṭa": 0.0,
+        "Nāṭakurinji": 0.0,
+        "Nīlāṁbari": 0.0,
+        "Puṇṇāgavarāḷi": 0.0,
+        "Pūrvīkaḷyāṇi": 0.03125,
+        "Pūrṇacandrika": 0.0,
+        "Rītigauḷa": 0.03125,
+        "Sahānā": 0.109375,
+        "Sencuruṭṭi": 0.015625,
+        "Sindhubhairavi": 0.0,
+        "Suraṭi": 0.03125,
+        "Sāma": 0.09375,
+        "Sāvēri": 0.0,
+        "Tōḍi": 0.0,
+        "Varāḷi": 0.0,
+        "Vasanta": 0.03125,
+        "Ābhōgi": 0.0,
+        "Ānandabhairavi": 0.015625,
+        "Śankarābharaṇaṁ": 0.0,
+        "Śrīranjani": 0.0,
+        "Śuddadhanyāsi": 0.0,
+        "Ṣanmukhapriya": 0.015625
+      },
+      "candidates": [
+        {
+          "raga": "Karaharapriya",
+          "score": 0.125
+        },
+        {
+          "raga": "Sahānā",
+          "score": 0.109375
+        },
+        {
+          "raga": "Kāṁbhōji",
+          "score": 0.09375
+        },
+        {
+          "raga": "Sāma",
+          "score": 0.09375
+        },
+        {
+          "raga": "Kānaḍa",
+          "score": 0.078125
+        }
+      ]
+    }
+  ]
+}

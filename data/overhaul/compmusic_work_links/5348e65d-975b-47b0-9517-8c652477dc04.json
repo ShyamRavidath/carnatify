@@ -1,0 +1,14 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/5348e65d-975b-47b0-9517-8c652477dc04",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:38:05.461646+00:00",
+  "recording": {
+    "disambiguation": "",
+    "first-release-date": "2010",
+    "relations": [],
+    "title": "Brochevaarevare",
+    "id": "5348e65d-975b-47b0-9517-8c652477dc04",
+    "length": 524695,
+    "video": false
+  }
+}

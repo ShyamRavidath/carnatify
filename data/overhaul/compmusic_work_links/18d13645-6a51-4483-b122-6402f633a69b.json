@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/18d13645-6a51-4483-b122-6402f633a69b",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:21:26.640051+00:00",
+  "recording": {
+    "id": "18d13645-6a51-4483-b122-6402f633a69b",
+    "first-release-date": "2008",
+    "relations": [
+      {
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work",
+        "source-credit": "",
+        "work": {
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "attributes": [],
+          "id": "881aae7a-44c5-431d-94a8-441bf8bbf920",
+          "type": "Song",
+          "language": "tel",
+          "disambiguation": "Rupaka tala krithi of Tyagaraja",
+          "languages": [
+            "tel"
+          ],
+          "title": "Upacharamu Jesevarunnaru",
+          "iswcs": []
+        },
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "end": null,
+        "ended": false,
+        "attribute-values": {},
+        "target-credit": "",
+        "type": "performance",
+        "direction": "forward"
+      }
+    ],
+    "length": 593000,
+    "disambiguation": "",
+    "title": "Upacharamu",
+    "video": false
+  }
+}

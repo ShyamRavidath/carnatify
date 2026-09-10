@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bhairavi__lalitE",
+  "audio": "data/concert_audio/Bhairavi/lalitE.mp3",
+  "audio_sha256": "a4a9f7a855670cedb26cab4f4c56f7e25ab414519d24b9cd2e9f16e1320c9f2d",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.072480708360672
+}

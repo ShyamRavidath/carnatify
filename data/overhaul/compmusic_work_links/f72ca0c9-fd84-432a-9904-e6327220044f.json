@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/f72ca0c9-fd84-432a-9904-e6327220044f",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:24:45.571897+00:00",
+  "recording": {
+    "length": 535000,
+    "video": false,
+    "id": "f72ca0c9-fd84-432a-9904-e6327220044f",
+    "disambiguation": "",
+    "title": "Kshinamai Tiruga",
+    "relations": [
+      {
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "end": null,
+        "ended": false,
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work",
+        "target-credit": "",
+        "work": {
+          "title": "Ksheenamai Tiruga",
+          "disambiguation": "",
+          "language": null,
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "id": "e45ad7ec-f037-4494-8261-67ea9d5b0566",
+          "type": "Song",
+          "attributes": [],
+          "languages": [],
+          "iswcs": []
+        },
+        "attribute-values": {},
+        "source-credit": "",
+        "direction": "forward",
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "type": "performance"
+      }
+    ],
+    "first-release-date": "2004"
+  }
+}

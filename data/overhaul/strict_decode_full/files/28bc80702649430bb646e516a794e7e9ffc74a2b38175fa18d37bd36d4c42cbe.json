@@ -1,0 +1,11 @@
+{
+  "track": "archive__Behāg__10 SmaraJanaka",
+  "audio": "data/concert_audio/Behāg/10 SmaraJanaka.mp3",
+  "audio_sha256": "28bc80702649430bb646e516a794e7e9ffc74a2b38175fa18d37bd36d4c42cbe",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7210951671004295
+}

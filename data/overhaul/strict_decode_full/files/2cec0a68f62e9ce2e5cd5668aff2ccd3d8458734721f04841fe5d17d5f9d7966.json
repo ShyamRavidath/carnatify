@@ -1,0 +1,11 @@
+{
+  "track": "archive__Tōḍi__munnu rAvaNa",
+  "audio": "data/concert_audio/Tōḍi/munnu rAvaNa.mp3",
+  "audio_sha256": "2cec0a68f62e9ce2e5cd5668aff2ccd3d8458734721f04841fe5d17d5f9d7966",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.115881540812552
+}

@@ -1,0 +1,90 @@
+{
+  "plan_sha256": "a39d9c445383938cf13c7c73d750908a67a756036e9b4e9a27784fe81ce0f25a",
+  "query": {
+    "track": "243_Kamalamba_Samrakshatu",
+    "audio": "saraga1.5_carnatic/Chaitra Sairam at Arkay by Chaitra Sairam/Kamalamba Samrakshatu/Chaitra Sairam - Kamalamba Samrakshatu.mp3",
+    "audio_sha256": "1908f6b9e00c867564b11df6a4c87a502f185d05fcaf60085442ceef27c8144a",
+    "start_s": 316.42257369614515,
+    "duration_s": 30
+  },
+  "audio": {
+    "source_sr": 44100,
+    "channels": 2,
+    "downmix": "mean",
+    "downmix_power_ratio": 0.9957220580294285,
+    "clipping_fraction": 0.0,
+    "rms": 0.04992788170235547
+  },
+  "waveform_sha256": "ab09a8e51a74daea2be2aecb63566358158084a9a716a39b3c269b01569d75fc",
+  "transcription_s": 44.83550583291799,
+  "hypotheses": {
+    "auto": {
+      "text": "Thank you.",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 29.98,
+          "text": " Thank you.",
+          "avg_logprob": -0.8242050806681315,
+          "no_speech_prob": 7.899337295391717e-10,
+          "compression_ratio": 0.5555555555555556
+        }
+      ],
+      "language": "en",
+      "status": "unverified_hypothesis"
+    },
+    "ta": {
+      "text": "நான் பார்க்ச் செய்தும்",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 29.98,
+          "text": " நான் பார்க்ச் செய்தும்",
+          "avg_logprob": -1.0402125482973845,
+          "no_speech_prob": 7.899337295391717e-10,
+          "compression_ratio": 1.1272727272727272
+        }
+      ],
+      "language": "ta",
+      "status": "unverified_hypothesis"
+    },
+    "te": {
+      "text": "కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాల",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 30.0,
+          "text": " కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాలా కాల",
+          "avg_logprob": -0.2013685777452257,
+          "no_speech_prob": 7.899337295391717e-10,
+          "compression_ratio": 12.346153846153847
+        }
+      ],
+      "language": "te",
+      "status": "unverified_hypothesis"
+    },
+    "hi": {
+      "text": "प्रच्छ तुमा रिकाम लाव नगर नीवासी अबरका माला",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 25.0,
+          "text": " प्रच्छ तुमा रिकाम लाव नगर नीवासी",
+          "avg_logprob": -0.7439230985419695,
+          "no_speech_prob": 7.899337295391717e-10,
+          "compression_ratio": 1.2285714285714286
+        },
+        {
+          "start": 25.0,
+          "end": 30.0,
+          "text": " अबरका माला",
+          "avg_logprob": -0.7882806232997349,
+          "no_speech_prob": 1.4544109250280712e-09,
+          "compression_ratio": 0.8
+        }
+      ],
+      "language": "hi",
+      "status": "unverified_hypothesis"
+    }
+  }
+}

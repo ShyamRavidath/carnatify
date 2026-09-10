@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/9788f26b-57f2-4a45-aa20-db1030129f3b",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:57:48.917546+00:00",
+  "recording": {
+    "title": "Raghupate Rama",
+    "disambiguation": "",
+    "video": false,
+    "first-release-date": "2011",
+    "id": "9788f26b-57f2-4a45-aa20-db1030129f3b",
+    "relations": [
+      {
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work",
+        "source-credit": "",
+        "work": {
+          "attributes": [],
+          "id": "148b6dba-2c01-4d0c-bfc2-f252e2c09701",
+          "type-id": null,
+          "disambiguation": "",
+          "languages": [
+            "tel"
+          ],
+          "title": "Raghupate Rama",
+          "iswcs": [],
+          "language": "tel",
+          "type": null
+        },
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "ended": false,
+        "end": null,
+        "type": "performance",
+        "attribute-values": {},
+        "target-credit": "",
+        "direction": "forward"
+      }
+    ],
+    "length": 1567910
+  }
+}

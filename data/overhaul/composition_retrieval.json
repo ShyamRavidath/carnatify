@@ -1,0 +1,1260 @@
+{
+  "protocol": "mixed-audio center 60s; whole reference annotated melody; no oracle raga or title filter",
+  "corpus_sha256": "5db2931c9fe087570d9339e5a19f44f80d728ff8f149e0fa5faf513cf1d1744d",
+  "audio_report_sha256": "986e04e364b2cc160087d97da9d1a24e5834ecdc02b4532292a6bfac92d0f1a0",
+  "n_references": 181,
+  "rows": [
+    {
+      "track": "17_Eranapai",
+      "work_id": "2d9ff47b-a9d4-4944-9cd3-55934fd8685e",
+      "raga": "Tōḍi",
+      "n_candidates": 157,
+      "answerable": true,
+      "rank": 1,
+      "top5": [
+        {
+          "track": "107_Eranapai",
+          "work_id": "2d9ff47b-a9d4-4944-9cd3-55934fd8685e",
+          "title": "Eranapai",
+          "raga": "Tōḍi",
+          "distance": 0.2813403095982294
+        },
+        {
+          "track": "194_Ramabhi_Rama_Manasu",
+          "work_id": "ac50f016-2c6a-4f00-8c96-df1ba616fbd7",
+          "title": "Ramabhi Rama Manasu",
+          "raga": "Dhanyāsi",
+          "distance": 0.3029027712345125
+        },
+        {
+          "track": "218_Sarasuda_Ninne_Kori",
+          "work_id": "be454ab9-c6df-4bc7-99ce-691bb9345db3",
+          "title": "Sarasuda Ninne Kori",
+          "raga": "Sāvēri",
+          "distance": 0.321470960378647
+        },
+        {
+          "track": "120_Velum_Mayilume",
+          "work_id": "a0b91e89-3869-4ed1-b3f7-20742f22f661",
+          "title": "Velum Mayilume",
+          "raga": "Sucaritra",
+          "distance": 0.32426722103899186
+        },
+        {
+          "track": "49_Shankari_Shankuru",
+          "work_id": "e5fccb08-d39d-4966-8cdf-521a0482bd10",
+          "title": "Shankari Shankuru",
+          "raga": "Sāvēri",
+          "distance": 0.3252670440890573
+        }
+      ],
+      "query_voiced_frames": 110
+    },
+    {
+      "track": "22_Hiranmayeem_Lakshmeem",
+      "work_id": "24ad75f0-b63e-4473-b337-08afc16508a9",
+      "raga": "Lalita",
+      "n_candidates": 159,
+      "answerable": true,
+      "rank": 98,
+      "top5": [
+        {
+          "track": "167_Sama_geeta_priyan",
+          "work_id": "5f017fe3-b7f6-42c7-a5aa-1f5959370b5e",
+          "title": "Sama geeta priyan",
+          "raga": "Gauḷa",
+          "distance": 0.292231363323
+        },
+        {
+          "track": "180_Ninne_Bhajana",
+          "work_id": "50677926-ba65-4c72-b991-4328691ad0d2",
+          "title": "Ninne Bhajana",
+          "raga": "Nāṭa",
+          "distance": 0.30050617045826405
+        },
+        {
+          "track": "192_Sri_Guru_Na_Palitosmi",
+          "work_id": "a3b2e71f-31b7-4ff6-a89a-84b4ee90172b",
+          "title": "Sri Guru Na Palitosmi",
+          "raga": "Pāḍi",
+          "distance": 0.30080002109209725
+        },
+        {
+          "track": "18_Parama_Purusham",
+          "work_id": "34659a8a-b012-4a9c-b61b-2aad3911632d",
+          "title": "Parama Purusham",
+          "raga": "Lalita pancamaṁ",
+          "distance": 0.30374747316042605
+        },
+        {
+          "track": "49_Shankari_Shankuru",
+          "work_id": "e5fccb08-d39d-4966-8cdf-521a0482bd10",
+          "title": "Shankari Shankuru",
+          "raga": "Sāvēri",
+          "distance": 0.3038394040531584
+        }
+      ],
+      "query_voiced_frames": 90
+    },
+    {
+      "track": "26_Lokavana_Chatura",
+      "work_id": "662026de-2cf4-41a4-8708-880be801624e",
+      "raga": "Bēgaḍa",
+      "n_candidates": 158,
+      "answerable": true,
+      "rank": 6,
+      "top5": [
+        {
+          "track": "33_Entara_Nitana",
+          "work_id": "fa9b676e-8f95-4412-8197-b93792170dcb",
+          "title": "Entara Nitana",
+          "raga": "Harikāmbhōji",
+          "distance": 0.3326295992423746
+        },
+        {
+          "track": "16_Evarura",
+          "work_id": "11d3ea14-7cb2-4a8e-b77b-232e7fb86af0",
+          "title": "Evarura",
+          "raga": "Mōhanaṁ",
+          "distance": 0.3393914732439764
+        },
+        {
+          "track": "241_Shri_Subramanyaya_Namaste",
+          "work_id": "3edf1388-7fe0-4e77-9f41-922a699ef3ac",
+          "title": "Shri Subramanyaya Namaste",
+          "raga": "Kāṁbhōji",
+          "distance": 0.34407739176832386
+        },
+        {
+          "track": "166_O_Rangashayee",
+          "work_id": "b5b002a9-cf58-445e-b347-a513f3d5b8a6",
+          "title": "O Rangashayee",
+          "raga": "Kāṁbhōji",
+          "distance": 0.34631785616792465
+        },
+        {
+          "track": "111_Sarasadalanayana",
+          "work_id": "ac774194-be09-4f96-b7b0-1c18399194e2",
+          "title": "Sarasadalanayana",
+          "raga": "Kamās",
+          "distance": 0.36400460076743124
+        }
+      ],
+      "query_voiced_frames": 116
+    },
+    {
+      "track": "27_Idhuthaano_Thillai_Sthalam",
+      "work_id": "36d7a60c-ff60-4d4d-8799-74e1109172ad",
+      "raga": "Behāg",
+      "n_candidates": 159,
+      "answerable": true,
+      "rank": 1,
+      "top5": [
+        {
+          "track": "115_Idhu_Thaano_Thillai_Sthalam",
+          "work_id": "36d7a60c-ff60-4d4d-8799-74e1109172ad",
+          "title": "Idhu Thaano Thillai Sthalam",
+          "raga": "Behāg",
+          "distance": 0.22845668718218834
+        },
+        {
+          "track": "142_Shobillu_Saptasvara",
+          "work_id": "f26b0cbe-9d79-410b-b98e-10e5eeda0bf4",
+          "title": "Shobillu Saptasvara",
+          "raga": "Jaganmōhini",
+          "distance": 0.2785235488166414
+        },
+        {
+          "track": "61_Sudhaamayee",
+          "work_id": "3418bfc3-d9a1-41c6-b901-485ff86c774f",
+          "title": "Sudhaamayee",
+          "raga": "Amṛtavarṣiṇi",
+          "distance": 0.3021189904461307
+        },
+        {
+          "track": "78_Rama_Neepai",
+          "work_id": "697da1f4-73a9-47e3-9643-cdbacfd576d7",
+          "title": "Rama Neepai",
+          "raga": "Kedāraṁ",
+          "distance": 0.30656338743865513
+        },
+        {
+          "track": "246_Anandaamrutakarshini",
+          "work_id": "d2294951-9ee5-4ad4-ad09-3e27f87569ce",
+          "title": "Anandaamrutakarshini",
+          "raga": "Amṛtavarṣiṇi",
+          "distance": 0.31052729524672057
+        }
+      ],
+      "query_voiced_frames": 96
+    },
+    {
+      "track": "28_Amba_Kamakshi",
+      "work_id": "a566c7d3-ecaa-41c1-8a38-f9e5e123dbeb",
+      "raga": "Bhairavi",
+      "n_candidates": 159,
+      "answerable": true,
+      "rank": 35,
+      "top5": [
+        {
+          "track": "232_Saraguna_Palimpa",
+          "work_id": "b656902b-1b7b-47cc-8594-837dc6e6e0e7",
+          "title": "Saraguna Palimpa",
+          "raga": "Kēdāragauḷa",
+          "distance": 0.3441769066747731
+        },
+        {
+          "track": "108_Pullum_Silambena_Kan",
+          "work_id": "37a22a82-57ea-41fe-be9e-5aa5114b6dab",
+          "title": "Pullum Silambena Kan",
+          "raga": "Śankarābharaṇaṁ",
+          "distance": 0.3454246033679
+        },
+        {
+          "track": "152_Vanajakshi_-_Varnam",
+          "work_id": "fc6d0917-c2c0-4e8e-a333-86ede869a9c7",
+          "title": "Vanajakshi - Varnam",
+          "raga": "Kalyāṇi",
+          "distance": 0.35331582223976077
+        },
+        {
+          "track": "165_Deenarakshaka",
+          "work_id": "43b79ca0-4ff0-43d4-ae21-29ff284a5284",
+          "title": "Deenarakshaka",
+          "raga": "Āhiri",
+          "distance": 0.3536021229984999
+        },
+        {
+          "track": "79_Etulabrotuva",
+          "work_id": "9da8d6db-ad0f-4a14-a0ba-19f469103047",
+          "title": "Etulabrotuva",
+          "raga": "Cakravākaṁ",
+          "distance": 0.3547582841181496
+        }
+      ],
+      "query_voiced_frames": 91
+    },
+    {
+      "track": "30_Pavamana_Suthudu_Mangalam",
+      "work_id": "325a7de3-1cc2-42c5-b34f-a9c5a38301c8",
+      "raga": "Saurāṣtraṁ",
+      "n_candidates": 158,
+      "answerable": true,
+      "rank": 1,
+      "top5": [
+        {
+          "track": "87_Pavamana_Suttudu_Pattu",
+          "work_id": "325a7de3-1cc2-42c5-b34f-a9c5a38301c8",
+          "title": "Pavamana Suttudu Pattu",
+          "raga": "Saurāṣtraṁ",
+          "distance": 0.28098740960870494
+        },
+        {
+          "track": "79_Etulabrotuva",
+          "work_id": "9da8d6db-ad0f-4a14-a0ba-19f469103047",
+          "title": "Etulabrotuva",
+          "raga": "Cakravākaṁ",
+          "distance": 0.2919498654348511
+        },
+        {
+          "track": "219_Gnanamosaga_Rada",
+          "work_id": "c6c9bd52-602c-4c20-be79-78c5b2dd79ca",
+          "title": "Gnanamosaga Rada",
+          "raga": "Gamakakriyā",
+          "distance": 0.29461200290492623
+        },
+        {
+          "track": "120_Velum_Mayilume",
+          "work_id": "a0b91e89-3869-4ed1-b3f7-20742f22f661",
+          "title": "Velum Mayilume",
+          "raga": "Sucaritra",
+          "distance": 0.30322709083557153
+        },
+        {
+          "track": "194_Ramabhi_Rama_Manasu",
+          "work_id": "ac50f016-2c6a-4f00-8c96-df1ba616fbd7",
+          "title": "Ramabhi Rama Manasu",
+          "raga": "Dhanyāsi",
+          "distance": 0.30406298445803787
+        }
+      ],
+      "query_voiced_frames": 112
+    },
+    {
+      "track": "39_Pavamana_Suthudu",
+      "work_id": "325a7de3-1cc2-42c5-b34f-a9c5a38301c8",
+      "raga": "Saurāṣtraṁ",
+      "n_candidates": 130,
+      "answerable": true,
+      "rank": 1,
+      "top5": [
+        {
+          "track": "87_Pavamana_Suttudu_Pattu",
+          "work_id": "325a7de3-1cc2-42c5-b34f-a9c5a38301c8",
+          "title": "Pavamana Suttudu Pattu",
+          "raga": "Saurāṣtraṁ",
+          "distance": 0.19382178386052457
+        },
+        {
+          "track": "59_Parvathi_Ninnu_Neranammiti",
+          "work_id": "4dba49fc-19ac-421e-b45b-1716843a50dc",
+          "title": "Parvathi Ninnu Neranammiti",
+          "raga": "Kalgaḍa",
+          "distance": 0.24864596767701982
+        },
+        {
+          "track": "180_Ninne_Bhajana",
+          "work_id": "50677926-ba65-4c72-b991-4328691ad0d2",
+          "title": "Ninne Bhajana",
+          "raga": "Nāṭa",
+          "distance": 0.25888841791429396
+        },
+        {
+          "track": "194_Ramabhi_Rama_Manasu",
+          "work_id": "ac50f016-2c6a-4f00-8c96-df1ba616fbd7",
+          "title": "Ramabhi Rama Manasu",
+          "raga": "Dhanyāsi",
+          "distance": 0.26104020398596073
+        },
+        {
+          "track": "26_Lokavana_Chatura",
+          "work_id": "662026de-2cf4-41a4-8708-880be801624e",
+          "title": "Lokavana Chatura",
+          "raga": "Bēgaḍa",
+          "distance": 0.26580263877260524
+        }
+      ],
+      "query_voiced_frames": 69
+    },
+    {
+      "track": "40_Kamakshi",
+      "work_id": "a566c7d3-ecaa-41c1-8a38-f9e5e123dbeb",
+      "raga": "Bhairavi",
+      "n_candidates": 130,
+      "answerable": true,
+      "rank": 1,
+      "top5": [
+        {
+          "track": "28_Amba_Kamakshi",
+          "work_id": "a566c7d3-ecaa-41c1-8a38-f9e5e123dbeb",
+          "title": "Amba Kamakshi",
+          "raga": "Bhairavi",
+          "distance": 0.34598207041621226
+        },
+        {
+          "track": "50_Karunimpa_Idi",
+          "work_id": "118eb8d2-e90e-40cc-aa6d-78ed6860ae88",
+          "title": "Karunimpa Idi",
+          "raga": "Sahānā",
+          "distance": 0.3677304819226267
+        },
+        {
+          "track": "243_Kamalamba_Samrakshatu",
+          "work_id": "bf3629ff-4142-428b-bca1-93964ac06f08",
+          "title": "Kamalamba Samrakshatu",
+          "raga": "Ānandabhairavi",
+          "distance": 0.376076709032059
+        },
+        {
+          "track": "215_Nee_Sari_evvaramma",
+          "work_id": "24d96d11-0733-4d20-a2f8-9576f0c6a949",
+          "title": "Nee Sari evvaramma",
+          "raga": "Bhairavi",
+          "distance": 0.37865520700812366
+        },
+        {
+          "track": "183_Chakkani_Raja",
+          "work_id": "9f0a9d69-75fa-463b-8d03-bf1f0353aba3",
+          "title": "Chakkani Raja",
+          "raga": "Karaharapriya",
+          "distance": 0.3788454870879653
+        }
+      ],
+      "query_voiced_frames": 80
+    },
+    {
+      "track": "50_Karunimpa_Idi",
+      "work_id": "118eb8d2-e90e-40cc-aa6d-78ed6860ae88",
+      "raga": "Sahānā",
+      "n_candidates": 157,
+      "answerable": true,
+      "rank": 1,
+      "top5": [
+        {
+          "track": "226_Karunimpa_Idi",
+          "work_id": "118eb8d2-e90e-40cc-aa6d-78ed6860ae88",
+          "title": "Karunimpa Idi",
+          "raga": "Sahānā",
+          "distance": 0.3352006950111035
+        },
+        {
+          "track": "89_Padavini",
+          "work_id": "8ef98b34-96c0-4b1e-bdaf-88a9c00fa2b5",
+          "title": "Padavini",
+          "raga": "Sālaga bhairavi",
+          "distance": 0.35703812391958506
+        },
+        {
+          "track": "189_Karuninchutakidi",
+          "work_id": "b1178022-3dbf-412c-8220-cdb5e18a4d0d",
+          "title": "Karuninchutakidi",
+          "raga": "Sindhumandāri",
+          "distance": 0.36137849125906674
+        },
+        {
+          "track": "15_Samajavarada",
+          "work_id": "059709b8-6f10-4a7b-b16d-c889d2d1a27d",
+          "title": "Samajavarada",
+          "raga": "Śudda sāvēri",
+          "distance": 0.3623390128679364
+        },
+        {
+          "track": "233_Nadatanum_Anisham",
+          "work_id": "e623654f-ed03-4823-8a20-107136da8c3b",
+          "title": "Nadatanum Anisham",
+          "raga": "Cittaranjani",
+          "distance": 0.3632110801812644
+        }
+      ],
+      "query_voiced_frames": 107
+    },
+    {
+      "track": "51_Pavamana_Suthudu_Mangalam",
+      "work_id": "325a7de3-1cc2-42c5-b34f-a9c5a38301c8",
+      "raga": "Saurāṣtraṁ",
+      "n_candidates": 157,
+      "answerable": true,
+      "rank": 131,
+      "top5": [
+        {
+          "track": "219_Gnanamosaga_Rada",
+          "work_id": "c6c9bd52-602c-4c20-be79-78c5b2dd79ca",
+          "title": "Gnanamosaga Rada",
+          "raga": "Gamakakriyā",
+          "distance": 0.31203264889316046
+        },
+        {
+          "track": "83_Neevada_Negana",
+          "work_id": "c86e44bb-6dde-4dc1-a0f7-5c92428779ad",
+          "title": "Neevada Negana",
+          "raga": "Sāranga",
+          "distance": 0.3161310016551866
+        },
+        {
+          "track": "235_Janakipathe_Jaya_Karunya_Jaladhe",
+          "work_id": "8927d020-9b43-447c-964e-970ca702bc21",
+          "title": "Janakipathe Jaya Karunya Jaladhe",
+          "raga": "Karaharapriya",
+          "distance": 0.3226147831043351
+        },
+        {
+          "track": "177_Kari_Kalabha_Mukham",
+          "work_id": "9e924961-a089-437c-b975-38675a5b0d07",
+          "title": "Kari Kalabha Mukham",
+          "raga": "Sāvēri",
+          "distance": 0.32606979753369486
+        },
+        {
+          "track": "193_Thoomani_Madatthu",
+          "work_id": "64d94339-1985-47d3-a4fb-927406474e22",
+          "title": "Thoomani Madatthu",
+          "raga": "Hamīr kaḷyaṇi",
+          "distance": 0.33727681837349294
+        }
+      ],
+      "query_voiced_frames": 107
+    },
+    {
+      "track": "59_Parvathi_Ninnu_Neranammiti",
+      "work_id": "4dba49fc-19ac-421e-b45b-1716843a50dc",
+      "raga": "Kalgaḍa",
+      "n_candidates": 153,
+      "answerable": true,
+      "rank": 134,
+      "top5": [
+        {
+          "track": "234_Seethamma",
+          "work_id": "f08ed52d-b88c-471c-9c2b-8bdda093207b",
+          "title": "Seethamma",
+          "raga": "Vasanta",
+          "distance": 0.30558756946288457
+        },
+        {
+          "track": "194_Ramabhi_Rama_Manasu",
+          "work_id": "ac50f016-2c6a-4f00-8c96-df1ba616fbd7",
+          "title": "Ramabhi Rama Manasu",
+          "raga": "Dhanyāsi",
+          "distance": 0.3104694159989506
+        },
+        {
+          "track": "157_Janani",
+          "work_id": "c9c86e19-a5b8-41f9-be4d-bf6327e30888",
+          "title": "Janani",
+          "raga": "Rītigauḷa",
+          "distance": 0.3170260398658283
+        },
+        {
+          "track": "32_Gopanandana",
+          "work_id": "11e667be-c1f6-4e04-b83d-aea4aa2881f3",
+          "title": "Gopanandana",
+          "raga": "Bhūṣāvaḷi",
+          "distance": 0.3262439234969545
+        },
+        {
+          "track": "22_Hiranmayeem_Lakshmeem",
+          "work_id": "24ad75f0-b63e-4473-b337-08afc16508a9",
+          "title": "Hiranmayeem Lakshmeem",
+          "raga": "Lalita",
+          "distance": 0.32835707799675556
+        }
+      ],
+      "query_voiced_frames": 97
+    },
+    {
+      "track": "72_Ni_Ninaindhal_Aagadhadhu",
+      "work_id": "c22021ef-0133-4c4b-9322-771a439b34f0",
+      "raga": "Jōnpuri",
+      "n_candidates": 158,
+      "answerable": true,
+      "rank": 77,
+      "top5": [
+        {
+          "track": "38_Raagam_Thaanam_Pallavi",
+          "work_id": "9d72b7ba-3f59-4db1-b6ba-e1205f802cee",
+          "title": "Raagam Thaanam Pallavi",
+          "raga": "Kāpi",
+          "distance": 0.3885526768796076
+        },
+        {
+          "track": "242_Mamava_Pattabhi_Rama",
+          "work_id": "ba2a294b-1d14-420b-b90f-a7b1431d620f",
+          "title": "Mamava Pattabhi Rama",
+          "raga": "Maṇirangu",
+          "distance": 0.3886882942002098
+        },
+        {
+          "track": "120_Velum_Mayilume",
+          "work_id": "a0b91e89-3869-4ed1-b3f7-20742f22f661",
+          "title": "Velum Mayilume",
+          "raga": "Sucaritra",
+          "distance": 0.39009374090143134
+        },
+        {
+          "track": "32_Gopanandana",
+          "work_id": "11e667be-c1f6-4e04-b83d-aea4aa2881f3",
+          "title": "Gopanandana",
+          "raga": "Bhūṣāvaḷi",
+          "distance": 0.3957817291354272
+        },
+        {
+          "track": "157_Janani",
+          "work_id": "c9c86e19-a5b8-41f9-be4d-bf6327e30888",
+          "title": "Janani",
+          "raga": "Rītigauḷa",
+          "distance": 0.4042160479872073
+        }
+      ],
+      "query_voiced_frames": 111
+    },
+    {
+      "track": "77_Avani_Sutha",
+      "work_id": "b4ec9ea4-d7be-4bdb-b31b-6ecd80f2ac38",
+      "raga": "Nādanāmakriya",
+      "n_candidates": 158,
+      "answerable": true,
+      "rank": 157,
+      "top5": [
+        {
+          "track": "230_Chintayama_Kanda",
+          "work_id": "acc03a73-2d39-4b24-81e4-07ba16c4765b",
+          "title": "Chintayama Kanda",
+          "raga": "Bhairavi",
+          "distance": 0.2811829190735425
+        },
+        {
+          "track": "31_Karuna_Ela_Gante",
+          "work_id": "42c428ac-08f9-4cbd-a381-2a66c49ac2e6",
+          "title": "Karuna Ela Gante",
+          "raga": "Varāḷi",
+          "distance": 0.2989123337859409
+        },
+        {
+          "track": "118_Tulasi_Bilva",
+          "work_id": "f2ffe5af-d7ff-4a4a-8792-c5a6309e61cb",
+          "title": "Tulasi Bilva",
+          "raga": "Kēdāragauḷa",
+          "distance": 0.31063844118643263
+        },
+        {
+          "track": "231_Emani_Migula",
+          "work_id": "e1512c70-0e18-4111-a7e6-62c8d35ad43e",
+          "title": "Emani Migula",
+          "raga": "Tōḍi",
+          "distance": 0.32330161748676134
+        },
+        {
+          "track": "28_Amba_Kamakshi",
+          "work_id": "a566c7d3-ecaa-41c1-8a38-f9e5e123dbeb",
+          "title": "Amba Kamakshi",
+          "raga": "Bhairavi",
+          "distance": 0.32853509767339867
+        }
+      ],
+      "query_voiced_frames": 109
+    },
+    {
+      "track": "80_Lokavana_Chatura",
+      "work_id": "662026de-2cf4-41a4-8708-880be801624e",
+      "raga": "Bēgaḍa",
+      "n_candidates": 159,
+      "answerable": true,
+      "rank": 38,
+      "top5": [
+        {
+          "track": "182_Dinamani_Vamsa",
+          "work_id": "19d7d202-6282-4463-9bbb-976a8d97f819",
+          "title": "Dinamani Vamsa",
+          "raga": "Harikāmbhōji",
+          "distance": 0.290025483670636
+        },
+        {
+          "track": "166_O_Rangashayee",
+          "work_id": "b5b002a9-cf58-445e-b347-a513f3d5b8a6",
+          "title": "O Rangashayee",
+          "raga": "Kāṁbhōji",
+          "distance": 0.3036859000954675
+        },
+        {
+          "track": "155_Nadopasana",
+          "work_id": "fc1469a0-8408-4268-b1c9-c58c534ae5d4",
+          "title": "Nadopasana",
+          "raga": "Bēgaḍa",
+          "distance": 0.3082983253158143
+        },
+        {
+          "track": "33_Entara_Nitana",
+          "work_id": "fa9b676e-8f95-4412-8197-b93792170dcb",
+          "title": "Entara Nitana",
+          "raga": "Harikāmbhōji",
+          "distance": 0.31269984445839305
+        },
+        {
+          "track": "241_Shri_Subramanyaya_Namaste",
+          "work_id": "3edf1388-7fe0-4e77-9f41-922a699ef3ac",
+          "title": "Shri Subramanyaya Namaste",
+          "raga": "Kāṁbhōji",
+          "distance": 0.31639255407814687
+        }
+      ],
+      "query_voiced_frames": 107
+    },
+    {
+      "track": "87_Pavamana_Suttudu_Pattu",
+      "work_id": "325a7de3-1cc2-42c5-b34f-a9c5a38301c8",
+      "raga": "Saurāṣtraṁ",
+      "n_candidates": 158,
+      "answerable": true,
+      "rank": 3,
+      "top5": [
+        {
+          "track": "16_Evarura",
+          "work_id": "11d3ea14-7cb2-4a8e-b77b-232e7fb86af0",
+          "title": "Evarura",
+          "raga": "Mōhanaṁ",
+          "distance": 0.35237850808651644
+        },
+        {
+          "track": "227_Endaro_Mahanubhavulu",
+          "work_id": "bf2d3e31-8458-451e-a374-d4d769f7d7c0",
+          "title": "Endaro Mahanubhavulu",
+          "raga": "Śrī",
+          "distance": 0.3621581693676031
+        },
+        {
+          "track": "51_Pavamana_Suthudu_Mangalam",
+          "work_id": "325a7de3-1cc2-42c5-b34f-a9c5a38301c8",
+          "title": "Pavamana Suthudu Mangalam",
+          "raga": "Saurāṣtraṁ",
+          "distance": 0.3662845572578572
+        },
+        {
+          "track": "118_Tulasi_Bilva",
+          "work_id": "f2ffe5af-d7ff-4a4a-8792-c5a6309e61cb",
+          "title": "Tulasi Bilva",
+          "raga": "Kēdāragauḷa",
+          "distance": 0.3701480350761768
+        },
+        {
+          "track": "26_Lokavana_Chatura",
+          "work_id": "662026de-2cf4-41a4-8708-880be801624e",
+          "title": "Lokavana Chatura",
+          "raga": "Bēgaḍa",
+          "distance": 0.3720318595939707
+        }
+      ],
+      "query_voiced_frames": 107
+    },
+    {
+      "track": "94_Hiranmayeem",
+      "work_id": "24ad75f0-b63e-4473-b337-08afc16508a9",
+      "raga": "Lalita",
+      "n_candidates": 158,
+      "answerable": true,
+      "rank": 3,
+      "top5": [
+        {
+          "track": "82_Koluvamaregatha",
+          "work_id": "a1aed288-5108-457e-a6c1-a67deac35e01",
+          "title": "Koluvamaregatha",
+          "raga": "Tōḍi",
+          "distance": 0.2939661999081459
+        },
+        {
+          "track": "219_Gnanamosaga_Rada",
+          "work_id": "c6c9bd52-602c-4c20-be79-78c5b2dd79ca",
+          "title": "Gnanamosaga Rada",
+          "raga": "Gamakakriyā",
+          "distance": 0.3021130947179575
+        },
+        {
+          "track": "22_Hiranmayeem_Lakshmeem",
+          "work_id": "24ad75f0-b63e-4473-b337-08afc16508a9",
+          "title": "Hiranmayeem Lakshmeem",
+          "raga": "Lalita",
+          "distance": 0.3098559292249904
+        },
+        {
+          "track": "45_Apparama_Bhakti",
+          "work_id": "952680aa-ad9b-4a6d-8c32-6cd099a249e5",
+          "title": "Apparama Bhakti",
+          "raga": "Kāmavardani/Pantuvarāḷi",
+          "distance": 0.3115319576374322
+        },
+        {
+          "track": "18_Parama_Purusham",
+          "work_id": "34659a8a-b012-4a9c-b61b-2aad3911632d",
+          "title": "Parama Purusham",
+          "raga": "Lalita pancamaṁ",
+          "distance": 0.31483689823816013
+        }
+      ],
+      "query_voiced_frames": 86
+    },
+    {
+      "track": "100_Pavamaana_Suthudu_Pattu",
+      "work_id": "325a7de3-1cc2-42c5-b34f-a9c5a38301c8",
+      "raga": "Saurāṣtraṁ",
+      "n_candidates": 130,
+      "answerable": true,
+      "rank": 1,
+      "top5": [
+        {
+          "track": "87_Pavamana_Suttudu_Pattu",
+          "work_id": "325a7de3-1cc2-42c5-b34f-a9c5a38301c8",
+          "title": "Pavamana Suttudu Pattu",
+          "raga": "Saurāṣtraṁ",
+          "distance": 0.22773868325683816
+        },
+        {
+          "track": "120_Velum_Mayilume",
+          "work_id": "a0b91e89-3869-4ed1-b3f7-20742f22f661",
+          "title": "Velum Mayilume",
+          "raga": "Sucaritra",
+          "distance": 0.3002730318241651
+        },
+        {
+          "track": "79_Etulabrotuva",
+          "work_id": "9da8d6db-ad0f-4a14-a0ba-19f469103047",
+          "title": "Etulabrotuva",
+          "raga": "Cakravākaṁ",
+          "distance": 0.3008431686295406
+        },
+        {
+          "track": "191_Mati_Matiki",
+          "work_id": "266f1f9b-9c77-4bc9-83fe-fbae3484a351",
+          "title": "Mati Matiki",
+          "raga": "Mōhanaṁ",
+          "distance": 0.3044857927494581
+        },
+        {
+          "track": "26_Lokavana_Chatura",
+          "work_id": "662026de-2cf4-41a4-8708-880be801624e",
+          "title": "Lokavana Chatura",
+          "raga": "Bēgaḍa",
+          "distance": 0.3076175966196592
+        }
+      ],
+      "query_voiced_frames": 72
+    },
+    {
+      "track": "107_Eranapai",
+      "work_id": "2d9ff47b-a9d4-4944-9cd3-55934fd8685e",
+      "raga": "Tōḍi",
+      "n_candidates": 130,
+      "answerable": true,
+      "rank": 1,
+      "top5": [
+        {
+          "track": "17_Eranapai",
+          "work_id": "2d9ff47b-a9d4-4944-9cd3-55934fd8685e",
+          "title": "Eranapai",
+          "raga": "Tōḍi",
+          "distance": 0.34204374609641663
+        },
+        {
+          "track": "13_Thillana_Purnachandrika",
+          "work_id": "cab2c14e-06c3-4f06-a378-c3e09e00b884",
+          "title": "Thillana Purnachandrika",
+          "raga": "Pūrṇacandrika",
+          "distance": 0.3653829400979199
+        },
+        {
+          "track": "15_Samajavarada",
+          "work_id": "059709b8-6f10-4a7b-b16d-c889d2d1a27d",
+          "title": "Samajavarada",
+          "raga": "Śudda sāvēri",
+          "distance": 0.37309929745868553
+        },
+        {
+          "track": "49_Shankari_Shankuru",
+          "work_id": "e5fccb08-d39d-4966-8cdf-521a0482bd10",
+          "title": "Shankari Shankuru",
+          "raga": "Sāvēri",
+          "distance": 0.3796898823339963
+        },
+        {
+          "track": "120_Velum_Mayilume",
+          "work_id": "a0b91e89-3869-4ed1-b3f7-20742f22f661",
+          "title": "Velum Mayilume",
+          "raga": "Sucaritra",
+          "distance": 0.38037855578857716
+        }
+      ],
+      "query_voiced_frames": 103
+    },
+    {
+      "track": "115_Idhu_Thaano_Thillai_Sthalam",
+      "work_id": "36d7a60c-ff60-4d4d-8799-74e1109172ad",
+      "raga": "Behāg",
+      "n_candidates": 158,
+      "answerable": true,
+      "rank": 1,
+      "top5": [
+        {
+          "track": "27_Idhuthaano_Thillai_Sthalam",
+          "work_id": "36d7a60c-ff60-4d4d-8799-74e1109172ad",
+          "title": "Idhuthaano Thillai Sthalam",
+          "raga": "Behāg",
+          "distance": 0.3400593729729351
+        },
+        {
+          "track": "63_Vanajaksha_Ninne_Nammiti",
+          "work_id": "da2f1dd3-50e2-423f-9e35-4942bdae8b38",
+          "title": "Vanajaksha Ninne Nammiti",
+          "raga": "Behāg",
+          "distance": 0.34849155494507345
+        },
+        {
+          "track": "14_Angakaram",
+          "work_id": "4d5d7e2f-c670-4e06-8dfe-49ee61dd8914",
+          "title": "Angakaram",
+          "raga": "Suraṭi",
+          "distance": 0.3550120450080711
+        },
+        {
+          "track": "246_Anandaamrutakarshini",
+          "work_id": "d2294951-9ee5-4ad4-ad09-3e27f87569ce",
+          "title": "Anandaamrutakarshini",
+          "raga": "Amṛtavarṣiṇi",
+          "distance": 0.3550164566395132
+        },
+        {
+          "track": "222_Madhava_Mamava",
+          "work_id": "7cb9b603-d6e6-4c4e-b291-32e7b0a64eaf",
+          "title": "Madhava Mamava",
+          "raga": "Nīlāṁbari",
+          "distance": 0.3592289971544389
+        }
+      ],
+      "query_voiced_frames": 94
+    },
+    {
+      "track": "139_Mangalam_Avanisutanatha",
+      "work_id": "b4ec9ea4-d7be-4bdb-b31b-6ecd80f2ac38",
+      "raga": "Nādanāmakriya",
+      "n_candidates": 154,
+      "answerable": true,
+      "rank": 154,
+      "top5": [
+        {
+          "track": "31_Karuna_Ela_Gante",
+          "work_id": "42c428ac-08f9-4cbd-a381-2a66c49ac2e6",
+          "title": "Karuna Ela Gante",
+          "raga": "Varāḷi",
+          "distance": 0.2706729320057654
+        },
+        {
+          "track": "231_Emani_Migula",
+          "work_id": "e1512c70-0e18-4111-a7e6-62c8d35ad43e",
+          "title": "Emani Migula",
+          "raga": "Tōḍi",
+          "distance": 0.28175340545804894
+        },
+        {
+          "track": "118_Tulasi_Bilva",
+          "work_id": "f2ffe5af-d7ff-4a4a-8792-c5a6309e61cb",
+          "title": "Tulasi Bilva",
+          "raga": "Kēdāragauḷa",
+          "distance": 0.2847209832124545
+        },
+        {
+          "track": "103_Paarengum",
+          "work_id": "6e2992f6-ddf4-4cee-8b28-e431c4cc5083",
+          "title": "Paarengum",
+          "raga": "Kalyāṇi",
+          "distance": 0.29948458201006845
+        },
+        {
+          "track": "215_Nee_Sari_evvaramma",
+          "work_id": "24d96d11-0733-4d20-a2f8-9576f0c6a949",
+          "title": "Nee Sari evvaramma",
+          "raga": "Bhairavi",
+          "distance": 0.3039637392027337
+        }
+      ],
+      "query_voiced_frames": 114
+    },
+    {
+      "track": "164_Mangalam",
+      "work_id": "325a7de3-1cc2-42c5-b34f-a9c5a38301c8",
+      "raga": "Saurāṣtraṁ",
+      "n_candidates": 130,
+      "answerable": true,
+      "rank": 1,
+      "top5": [
+        {
+          "track": "30_Pavamana_Suthudu_Mangalam",
+          "work_id": "325a7de3-1cc2-42c5-b34f-a9c5a38301c8",
+          "title": "Pavamana Suthudu Mangalam",
+          "raga": "Saurāṣtraṁ",
+          "distance": 0.22498059862538397
+        },
+        {
+          "track": "59_Parvathi_Ninnu_Neranammiti",
+          "work_id": "4dba49fc-19ac-421e-b45b-1716843a50dc",
+          "title": "Parvathi Ninnu Neranammiti",
+          "raga": "Kalgaḍa",
+          "distance": 0.2844669648220666
+        },
+        {
+          "track": "194_Ramabhi_Rama_Manasu",
+          "work_id": "ac50f016-2c6a-4f00-8c96-df1ba616fbd7",
+          "title": "Ramabhi Rama Manasu",
+          "raga": "Dhanyāsi",
+          "distance": 0.29635843565589526
+        },
+        {
+          "track": "26_Lokavana_Chatura",
+          "work_id": "662026de-2cf4-41a4-8708-880be801624e",
+          "title": "Lokavana Chatura",
+          "raga": "Bēgaḍa",
+          "distance": 0.30150180578231833
+        },
+        {
+          "track": "180_Ninne_Bhajana",
+          "work_id": "50677926-ba65-4c72-b991-4328691ad0d2",
+          "title": "Ninne Bhajana",
+          "raga": "Nāṭa",
+          "distance": 0.3028563146842156
+        }
+      ],
+      "query_voiced_frames": 95
+    },
+    {
+      "track": "184_Ardhanareeshwaram",
+      "work_id": "869ce608-91dc-4667-a59a-2f2a3333e5fa",
+      "raga": "Kumudakriyā",
+      "n_candidates": 159,
+      "answerable": true,
+      "rank": 7,
+      "top5": [
+        {
+          "track": "194_Ramabhi_Rama_Manasu",
+          "work_id": "ac50f016-2c6a-4f00-8c96-df1ba616fbd7",
+          "title": "Ramabhi Rama Manasu",
+          "raga": "Dhanyāsi",
+          "distance": 0.32264449397722894
+        },
+        {
+          "track": "45_Apparama_Bhakti",
+          "work_id": "952680aa-ad9b-4a6d-8c32-6cd099a249e5",
+          "title": "Apparama Bhakti",
+          "raga": "Kāmavardani/Pantuvarāḷi",
+          "distance": 0.3275075231112687
+        },
+        {
+          "track": "136_Dudukugala",
+          "work_id": "9090958b-6221-4d55-8857-f3306a5308cc",
+          "title": "Dudukugala",
+          "raga": "Gauḷa",
+          "distance": 0.33074087173331035
+        },
+        {
+          "track": "23_Niraimadi_Mugam_Thiruppugazh",
+          "work_id": "d25e872e-7542-45e8-b9d7-968c177df7ad",
+          "title": "Niraimadi Mugam Thiruppugazh",
+          "raga": "Haṁsānandi",
+          "distance": 0.33446325016956724
+        },
+        {
+          "track": "18_Parama_Purusham",
+          "work_id": "34659a8a-b012-4a9c-b61b-2aad3911632d",
+          "title": "Parama Purusham",
+          "raga": "Lalita pancamaṁ",
+          "distance": 0.33539428196701365
+        }
+      ],
+      "query_voiced_frames": 102
+    },
+    {
+      "track": "185_Pavamana_Suthudu_Pattu",
+      "work_id": "325a7de3-1cc2-42c5-b34f-a9c5a38301c8",
+      "raga": "Saurāṣtraṁ",
+      "n_candidates": 159,
+      "answerable": true,
+      "rank": 1,
+      "top5": [
+        {
+          "track": "87_Pavamana_Suttudu_Pattu",
+          "work_id": "325a7de3-1cc2-42c5-b34f-a9c5a38301c8",
+          "title": "Pavamana Suttudu Pattu",
+          "raga": "Saurāṣtraṁ",
+          "distance": 0.2906937501531968
+        },
+        {
+          "track": "241_Shri_Subramanyaya_Namaste",
+          "work_id": "3edf1388-7fe0-4e77-9f41-922a699ef3ac",
+          "title": "Shri Subramanyaya Namaste",
+          "raga": "Kāṁbhōji",
+          "distance": 0.3163307547569277
+        },
+        {
+          "track": "16_Evarura",
+          "work_id": "11d3ea14-7cb2-4a8e-b77b-232e7fb86af0",
+          "title": "Evarura",
+          "raga": "Mōhanaṁ",
+          "distance": 0.31805126058294436
+        },
+        {
+          "track": "67_Paahi_Maam_Sri",
+          "work_id": "0e302d74-313d-4b10-94e1-a13cdb8eb7cf",
+          "title": "Paahi Maam Sri",
+          "raga": "Janaranjani",
+          "distance": 0.32442679975895194
+        },
+        {
+          "track": "191_Mati_Matiki",
+          "work_id": "266f1f9b-9c77-4bc9-83fe-fbae3484a351",
+          "title": "Mati Matiki",
+          "raga": "Mōhanaṁ",
+          "distance": 0.32763189736832987
+        }
+      ],
+      "query_voiced_frames": 94
+    },
+    {
+      "track": "214_Parvathi_Ninu_Ne_Nera_Nammithi",
+      "work_id": "4dba49fc-19ac-421e-b45b-1716843a50dc",
+      "raga": "Kalgaḍa",
+      "n_candidates": 159,
+      "answerable": true,
+      "rank": 151,
+      "top5": [
+        {
+          "track": "49_Shankari_Shankuru",
+          "work_id": "e5fccb08-d39d-4966-8cdf-521a0482bd10",
+          "title": "Shankari Shankuru",
+          "raga": "Sāvēri",
+          "distance": 0.32225953290337034
+        },
+        {
+          "track": "177_Kari_Kalabha_Mukham",
+          "work_id": "9e924961-a089-437c-b975-38675a5b0d07",
+          "title": "Kari Kalabha Mukham",
+          "raga": "Sāvēri",
+          "distance": 0.3243287506856419
+        },
+        {
+          "track": "83_Neevada_Negana",
+          "work_id": "c86e44bb-6dde-4dc1-a0f7-5c92428779ad",
+          "title": "Neevada Negana",
+          "raga": "Sāranga",
+          "distance": 0.32543273787749466
+        },
+        {
+          "track": "175_Thappi_Bratikipova",
+          "work_id": "897d156f-da68-4141-a8fc-7336d2bc8c19",
+          "title": "Thappi Bratikipova",
+          "raga": "Tōḍi",
+          "distance": 0.33220738511336495
+        },
+        {
+          "track": "20_Aparadhamula",
+          "work_id": "16eeca7b-1ed2-4e1c-a576-5c4e64d10000",
+          "title": "Aparadhamula",
+          "raga": "Latāngi",
+          "distance": 0.34020367572182114
+        }
+      ],
+      "query_voiced_frames": 95
+    },
+    {
+      "track": "220_Nenindal_Agaadadu_undo",
+      "work_id": "c22021ef-0133-4c4b-9322-771a439b34f0",
+      "raga": "Jōnpuri",
+      "n_candidates": 159,
+      "answerable": true,
+      "rank": 1,
+      "top5": [
+        {
+          "track": "72_Ni_Ninaindhal_Aagadhadhu",
+          "work_id": "c22021ef-0133-4c4b-9322-771a439b34f0",
+          "title": "Ni Ninaindhal Aagadhadhu",
+          "raga": "Jōnpuri",
+          "distance": 0.3123757354418439
+        },
+        {
+          "track": "68_Eppadi_Manam_Thunindhadho",
+          "work_id": "2b1755b8-d1ec-4a4b-854a-93b05a33be10",
+          "title": "Eppadi Manam Thunindhadho",
+          "raga": "Hussēnī",
+          "distance": 0.3426026616777693
+        },
+        {
+          "track": "73_Chandrashekharam_Sada_Bhajeham",
+          "work_id": "359cda3b-f441-4c44-a7cf-e74498482729",
+          "title": "Chandrashekharam Sada Bhajeham",
+          "raga": "Mārgahindōḷaṁ",
+          "distance": 0.34444860628673013
+        },
+        {
+          "track": "237_Manasaramathi",
+          "work_id": "ffc6991b-4101-4546-8c87-d4f93bd5505b",
+          "title": "Manasaramathi",
+          "raga": "Sārāmati",
+          "distance": 0.34466066950843455
+        },
+        {
+          "track": "120_Velum_Mayilume",
+          "work_id": "a0b91e89-3869-4ed1-b3f7-20742f22f661",
+          "title": "Velum Mayilume",
+          "raga": "Sucaritra",
+          "distance": 0.3448058700561524
+        }
+      ],
+      "query_voiced_frames": 105
+    },
+    {
+      "track": "226_Karunimpa_Idi",
+      "work_id": "118eb8d2-e90e-40cc-aa6d-78ed6860ae88",
+      "raga": "Sahānā",
+      "n_candidates": 155,
+      "answerable": true,
+      "rank": 1,
+      "top5": [
+        {
+          "track": "50_Karunimpa_Idi",
+          "work_id": "118eb8d2-e90e-40cc-aa6d-78ed6860ae88",
+          "title": "Karunimpa Idi",
+          "raga": "Sahānā",
+          "distance": 0.29086417319873986
+        },
+        {
+          "track": "33_Entara_Nitana",
+          "work_id": "fa9b676e-8f95-4412-8197-b93792170dcb",
+          "title": "Entara Nitana",
+          "raga": "Harikāmbhōji",
+          "distance": 0.338351889823874
+        },
+        {
+          "track": "166_O_Rangashayee",
+          "work_id": "b5b002a9-cf58-445e-b347-a513f3d5b8a6",
+          "title": "O Rangashayee",
+          "raga": "Kāṁbhōji",
+          "distance": 0.346181543171406
+        },
+        {
+          "track": "172_Kaalaharanamelara",
+          "work_id": "9196ebc0-c2b5-4d94-a5cd-f1b7265644d4",
+          "title": "Kaalaharanamelara",
+          "raga": "Śuddadhanyāsi",
+          "distance": 0.3486747160553934
+        },
+        {
+          "track": "80_Lokavana_Chatura",
+          "work_id": "662026de-2cf4-41a4-8708-880be801624e",
+          "title": "Lokavana Chatura",
+          "raga": "Bēgaḍa",
+          "distance": 0.3551654254396757
+        }
+      ],
+      "query_voiced_frames": 96
+    },
+    {
+      "track": "240_Ardhanarishwaram",
+      "work_id": "869ce608-91dc-4667-a59a-2f2a3333e5fa",
+      "raga": "Kumudakriyā",
+      "n_candidates": 159,
+      "answerable": true,
+      "rank": 1,
+      "top5": [
+        {
+          "track": "184_Ardhanareeshwaram",
+          "work_id": "869ce608-91dc-4667-a59a-2f2a3333e5fa",
+          "title": "Ardhanareeshwaram",
+          "raga": "Kumudakriyā",
+          "distance": 0.26458883735598365
+        },
+        {
+          "track": "18_Parama_Purusham",
+          "work_id": "34659a8a-b012-4a9c-b61b-2aad3911632d",
+          "title": "Parama Purusham",
+          "raga": "Lalita pancamaṁ",
+          "distance": 0.289361896928476
+        },
+        {
+          "track": "17_Eranapai",
+          "work_id": "2d9ff47b-a9d4-4944-9cd3-55934fd8685e",
+          "title": "Eranapai",
+          "raga": "Tōḍi",
+          "distance": 0.31189186378401174
+        },
+        {
+          "track": "13_Thillana_Purnachandrika",
+          "work_id": "cab2c14e-06c3-4f06-a378-c3e09e00b884",
+          "title": "Thillana Purnachandrika",
+          "raga": "Pūrṇacandrika",
+          "distance": 0.31372190567911906
+        },
+        {
+          "track": "49_Shankari_Shankuru",
+          "work_id": "e5fccb08-d39d-4966-8cdf-521a0482bd10",
+          "title": "Shankari Shankuru",
+          "raga": "Sāvēri",
+          "distance": 0.3163839183291613
+        }
+      ],
+      "query_voiced_frames": 98
+    }
+  ],
+  "summary": {
+    "n_queries": 27,
+    "n_answerable": 27,
+    "top1": 0.5185185185185185,
+    "top5": 0.5925925925925926,
+    "mrr": 0.5588463152966692
+  },
+  "requires_new_manual_labels": false,
+  "status": "development retrieval experiment, no validated acceptance threshold",
+  "elapsed_s": 18.093514250125736
+}

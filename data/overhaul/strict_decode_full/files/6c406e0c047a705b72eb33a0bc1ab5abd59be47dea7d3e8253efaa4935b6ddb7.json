@@ -1,0 +1,11 @@
+{
+  "track": "archive__Mukhāri__pAlisamma muddusAradE",
+  "audio": "data/concert_audio/Mukhāri/pAlisamma muddusAradE.mp3",
+  "audio_sha256": "6c406e0c047a705b72eb33a0bc1ab5abd59be47dea7d3e8253efaa4935b6ddb7",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6110581248067319
+}

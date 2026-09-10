@@ -1,0 +1,11 @@
+{
+  "track": "archive__Cakravākaṁ__vinarAda nAmanavi",
+  "audio": "data/concert_audio/Cakravākaṁ/vinarAda nAmanavi.mp3",
+  "audio_sha256": "9c62ca81a428ab8f079f1fbddd5f86dda77efb7f9637fbe44de08994225e321e",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.5900240410119295
+}

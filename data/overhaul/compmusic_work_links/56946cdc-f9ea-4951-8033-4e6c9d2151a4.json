@@ -1,0 +1,40 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/56946cdc-f9ea-4951-8033-4e6c9d2151a4",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:38:41.388240+00:00",
+  "recording": {
+    "video": false,
+    "length": 410000,
+    "id": "56946cdc-f9ea-4951-8033-4e6c9d2151a4",
+    "title": "Vishweshsra",
+    "relations": [
+      {
+        "work": {
+          "disambiguation": "",
+          "title": "Vishveshvar Darshan Kar",
+          "languages": [],
+          "type": null,
+          "id": "197e22d6-c1d8-44e0-81c1-b25a90daf790",
+          "type-id": null,
+          "attributes": [],
+          "iswcs": [],
+          "language": null
+        },
+        "attributes": [],
+        "end": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-values": {},
+        "direction": "forward",
+        "target-type": "work",
+        "type": "performance",
+        "begin": null,
+        "source-credit": "",
+        "target-credit": "",
+        "attribute-ids": {},
+        "ended": false
+      }
+    ],
+    "disambiguation": "",
+    "first-release-date": "2006-10"
+  }
+}

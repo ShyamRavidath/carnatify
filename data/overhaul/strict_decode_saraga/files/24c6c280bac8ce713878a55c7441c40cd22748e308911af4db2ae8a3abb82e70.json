@@ -1,0 +1,11 @@
+{
+  "track": "23_Niraimadi_Mugam_Thiruppugazh",
+  "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Niraimadi Mugam Thiruppugazh/Vignesh Ishwar - Niraimadi Mugam Thiruppugazh.mp3",
+  "audio_sha256": "24c6c280bac8ce713878a55c7441c40cd22748e308911af4db2ae8a3abb82e70",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.24262504186481237
+}

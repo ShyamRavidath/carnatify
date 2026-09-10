@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nīlāṁbari__Siddhishwaraya",
+  "audio": "data/concert_audio/Nīlāṁbari/Siddhishwaraya.mp3",
+  "audio_sha256": "df8e4e50515a23a660d269d62ed70146654aaf51125570fb2bfbe102db2b3b03",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.8273991248570383
+}

@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/b09089ff-2cb2-4d3e-b10d-f2ee6afb5451",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:04:07.367483+00:00",
+  "recording": {
+    "title": "Paridaanamichite",
+    "length": 1227000,
+    "video": false,
+    "id": "b09089ff-2cb2-4d3e-b10d-f2ee6afb5451",
+    "relations": [
+      {
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "type": "performance",
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "ended": false,
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ],
+        "work": {
+          "iswcs": [],
+          "attributes": [],
+          "disambiguation": "",
+          "languages": [],
+          "type": null,
+          "id": "f00824f2-eead-465a-871f-4ff91911ada4",
+          "language": null,
+          "type-id": null,
+          "title": "Paridaanamichite"
+        },
+        "direction": "forward",
+        "target-credit": "",
+        "source-credit": "",
+        "end": null,
+        "attribute-values": {}
+      }
+    ],
+    "first-release-date": "2009",
+    "disambiguation": ""
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bhairavi__upachAramu",
+  "audio": "data/concert_audio/Bhairavi/upachAramu.mp3",
+  "audio_sha256": "be7bb7a173bceba2044057a9d9be0b36a54eb9bfa8a99af513332e8337408a96",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 3.621887707617134
+}

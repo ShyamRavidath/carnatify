@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ṣanmukhapriya__07 RTP",
+  "audio": "data/concert_audio/Ṣanmukhapriya/07 RTP.mp3",
+  "audio_sha256": "e97563a2101d92eb64ae85e16f115993cf59c48c21b2fd027bdf767f2e21ac70",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.5719791250303388
+}

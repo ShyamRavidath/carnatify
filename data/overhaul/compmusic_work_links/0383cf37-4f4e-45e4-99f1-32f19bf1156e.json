@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/0383cf37-4f4e-45e4-99f1-32f19bf1156e",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:13:33.323248+00:00",
+  "recording": {
+    "title": "Karunimpa Idi Manchi",
+    "disambiguation": "",
+    "video": false,
+    "first-release-date": "2007",
+    "id": "0383cf37-4f4e-45e4-99f1-32f19bf1156e",
+    "length": 469000,
+    "relations": [
+      {
+        "work": {
+          "language": "tel",
+          "type": "Song",
+          "iswcs": [],
+          "languages": [
+            "tel"
+          ],
+          "title": "Karunimpa",
+          "disambiguation": "",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "id": "118eb8d2-e90e-40cc-aa6d-78ed6860ae88",
+          "attributes": []
+        },
+        "source-credit": "",
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ],
+        "direction": "forward",
+        "target-credit": "",
+        "attribute-values": {},
+        "type": "performance",
+        "end": null,
+        "ended": false,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        }
+      }
+    ]
+  }
+}

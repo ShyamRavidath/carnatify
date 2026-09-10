@@ -1,0 +1,11 @@
+{
+  "track": "archive__Hindōḷaṁ__karuNAlaya nidhiyE",
+  "audio": "data/concert_audio/Hindōḷaṁ/karuNAlaya nidhiyE.mp3",
+  "audio_sha256": "8ea7f1221494a57fb49589ca7d107fd7608f963692a9c9a31b3b370ec617843e",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.445545416790992
+}

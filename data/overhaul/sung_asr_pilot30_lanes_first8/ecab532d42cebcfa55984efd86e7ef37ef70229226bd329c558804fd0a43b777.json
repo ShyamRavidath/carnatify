@@ -1,0 +1,122 @@
+{
+  "plan_sha256": "a39d9c445383938cf13c7c73d750908a67a756036e9b4e9a27784fe81ce0f25a",
+  "query": {
+    "track": "180_Ninne_Bhajana",
+    "audio": "saraga1.5_carnatic/V Shankarnarayanan at Arkay by V Shankaranarayanan/Ninne Bhajana/Ninne Bhajana.mp3.mp3",
+    "audio_sha256": "1c5434fcc2804ab78600ed0af508a5f3197b058992bfeaeec5f80177c43d84c3",
+    "start_s": 309.63073696145125,
+    "duration_s": 30
+  },
+  "audio": {
+    "source_sr": 44100,
+    "channels": 2,
+    "downmix": "mean",
+    "downmix_power_ratio": 0.9699454139936552,
+    "clipping_fraction": 0.0,
+    "rms": 0.08886665756693808
+  },
+  "waveform_sha256": "60e18d21da2999476f56beae6c4af2c79a327dddadbc7580e68e8e169cac744f",
+  "transcription_s": 63.20476554101333,
+  "hypotheses": {
+    "auto": {
+      "text": "I am a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 30.0,
+          "text": " I am a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a man who is a",
+          "avg_logprob": -0.15273551093207466,
+          "no_speech_prob": 7.425795534032886e-10,
+          "compression_ratio": 23.258064516129032
+        }
+      ],
+      "language": "en",
+      "status": "unverified_hypothesis"
+    },
+    "ta": {
+      "text": "காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன் காப்பாக்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் ப",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன்",
+          "avg_logprob": -0.3406080118815104,
+          "no_speech_prob": 7.425795534032886e-10,
+          "compression_ratio": 11.448275862068966
+        },
+        {
+          "start": 2.0,
+          "end": 4.0,
+          "text": " காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன்",
+          "avg_logprob": -0.3406080118815104,
+          "no_speech_prob": 7.425795534032886e-10,
+          "compression_ratio": 11.448275862068966
+        },
+        {
+          "start": 4.0,
+          "end": 6.0,
+          "text": " காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன் காத்திருக்கிறேன்",
+          "avg_logprob": -0.3406080118815104,
+          "no_speech_prob": 7.425795534032886e-10,
+          "compression_ratio": 11.448275862068966
+        },
+        {
+          "start": 6.0,
+          "end": 30.0,
+          "text": " காப்பாக்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் பார்க்காம் ப",
+          "avg_logprob": -0.380430908203125,
+          "no_speech_prob": 1.334175991907216e-09,
+          "compression_ratio": 15.704545454545455
+        }
+      ],
+      "language": "ta",
+      "status": "unverified_hypothesis"
+    },
+    "te": {
+      "text": "మాదిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండ",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 30.0,
+          "text": " మాదిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండ",
+          "avg_logprob": -0.18451348198784723,
+          "no_speech_prob": 7.425795534032886e-10,
+          "compression_ratio": 10.40625
+        }
+      ],
+      "language": "te",
+      "status": "unverified_hypothesis"
+    },
+    "hi": {
+      "text": "आजे जलनो दनिन्ने भजनाम सेगो आड़नो निन्ने पमागा मार्जा निन्ने ने वब बब बगा मवानी ने बब बब",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 22.0,
+          "text": " आजे जलनो दनिन्ने भजनाम सेगो आड़नो निन्ने पमागा मार्जा निन्ने",
+          "avg_logprob": -0.5196096692766462,
+          "no_speech_prob": 7.425795534032886e-10,
+          "compression_ratio": 1.7608695652173914
+        },
+        {
+          "start": 22.0,
+          "end": 23.0,
+          "text": " ने",
+          "avg_logprob": -0.5911549517982885,
+          "no_speech_prob": 5.39698952195522e-10,
+          "compression_ratio": 1.3958333333333333
+        },
+        {
+          "start": 23.0,
+          "end": 30.0,
+          "text": " वब बब बगा मवानी ने बब बब",
+          "avg_logprob": -0.5911549517982885,
+          "no_speech_prob": 5.39698952195522e-10,
+          "compression_ratio": 1.3958333333333333
+        }
+      ],
+      "language": "hi",
+      "status": "unverified_hypothesis"
+    }
+  }
+}

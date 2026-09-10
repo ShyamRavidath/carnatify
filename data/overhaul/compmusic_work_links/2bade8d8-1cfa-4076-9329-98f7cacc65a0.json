@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/2bade8d8-1cfa-4076-9329-98f7cacc65a0",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:25:29.018790+00:00",
+  "recording": {
+    "length": 1785000,
+    "relations": [
+      {
+        "work": {
+          "id": "054e2475-d3e2-4c16-bc69-78b776828ca9",
+          "attributes": [],
+          "type-id": null,
+          "disambiguation": "",
+          "iswcs": [],
+          "languages": [],
+          "title": "Nadamadi",
+          "type": null,
+          "language": null
+        },
+        "source-credit": "",
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ],
+        "direction": "forward",
+        "target-credit": "",
+        "attribute-values": {},
+        "type": "performance",
+        "end": null,
+        "ended": false,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        }
+      }
+    ],
+    "id": "2bade8d8-1cfa-4076-9329-98f7cacc65a0",
+    "first-release-date": "2009",
+    "video": false,
+    "disambiguation": "",
+    "title": "Nadamadi"
+  }
+}

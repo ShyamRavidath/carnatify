@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bēgaḍa__amba alankAri",
+  "audio": "data/concert_audio/Bēgaḍa/amba alankAri.mp3",
+  "audio_sha256": "41e03add9233153291659da5ff5bea84637365d82b17a2020c895d12b7d82b9c",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5666526248678565
+}

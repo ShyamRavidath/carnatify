@@ -1,0 +1,42 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/0a1c2ae7-e933-458d-afac-fa081338d5de",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:18:30.379040+00:00",
+  "recording": {
+    "first-release-date": "2015-06-22",
+    "title": "Rakta Ganapatim",
+    "relations": [
+      {
+        "attributes": [],
+        "attribute-values": {},
+        "begin": null,
+        "direction": "forward",
+        "attribute-ids": {},
+        "target-credit": "",
+        "work": {
+          "disambiguation": "",
+          "languages": [
+            "san"
+          ],
+          "iswcs": [],
+          "id": "c7d574e6-4292-40bb-bc95-3774dcf394a6",
+          "type-id": null,
+          "title": "Rakta Ganapatim",
+          "type": null,
+          "attributes": [],
+          "language": "san"
+        },
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "type": "performance",
+        "target-type": "work",
+        "end": null,
+        "ended": false,
+        "source-credit": ""
+      }
+    ],
+    "id": "0a1c2ae7-e933-458d-afac-fa081338d5de",
+    "video": false,
+    "length": 420153,
+    "disambiguation": ""
+  }
+}

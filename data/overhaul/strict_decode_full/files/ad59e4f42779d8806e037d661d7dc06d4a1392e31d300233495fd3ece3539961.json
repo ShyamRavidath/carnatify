@@ -1,0 +1,11 @@
+{
+  "track": "archive__Lalita__kOteerAngata Slokam Adi Shankara",
+  "audio": "data/concert_audio/Lalita/kOteerAngata Slokam Adi Shankara.mp3",
+  "audio_sha256": "ad59e4f42779d8806e037d661d7dc06d4a1392e31d300233495fd3ece3539961",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7122262082993984
+}

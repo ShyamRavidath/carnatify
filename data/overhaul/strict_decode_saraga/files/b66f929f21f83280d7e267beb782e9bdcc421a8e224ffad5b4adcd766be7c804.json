@@ -1,0 +1,11 @@
+{
+  "track": "242_Mamava_Pattabhi_Rama",
+  "audio": "saraga1.5_carnatic/Chaitra Sairam at Arkay by Chaitra Sairam/Mamava Pattabhi Rama/Chaitra Sairam - Mamava Pattabhi Rama.mp3",
+  "audio_sha256": "b66f929f21f83280d7e267beb782e9bdcc421a8e224ffad5b4adcd766be7c804",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5581975830718875
+}

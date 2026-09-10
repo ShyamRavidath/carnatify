@@ -1,0 +1,11 @@
+{
+  "track": "archive__Harikāmbhōji__107 Rama Nannu Brovara",
+  "audio": "data/concert_audio/Harikāmbhōji/107 Rama Nannu Brovara.mp3",
+  "audio_sha256": "de2909120f2b5e1c5c734b4fd31ac60f867998f795f125b4584cb3a96125391b",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.6288240416906774
+}

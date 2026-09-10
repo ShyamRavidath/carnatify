@@ -1,0 +1,65 @@
+{
+  "inputs": {
+    "data/overhaul/broader_audio_deduplicated/manifest.json": "820a8b09ca9356335f9f7d7d6e33a2d6d4588f7d071702ca5ffaa9f9f629cd52",
+    "data/overhaul/archive_audio_identity_refreshed.json": "c1acc55e9f240bd160a86c6b80b62caad906b0c2796442d0cf859944dc3d0372",
+    "data/overhaul/annotated_corpus_v2.json": "7ab2e7c3a91f89397e225c63b458f432aaf9ba00402c228126e9bbbd7a0fc056",
+    "data/overhaul/saraga_audio_results.json": "986e04e364b2cc160087d97da9d1a24e5834ecdc02b4532292a6bfac92d0f1a0"
+  },
+  "policy": {
+    "version": "chromaprint_1.5.1_test2_native_mono_blocks30_v1",
+    "library_sha256": "cd6276fc1dadd7e6d02ed0b63c392980fa7844cb3f6b03d82c01d9deb2f677fc",
+    "block_s": 30,
+    "clipping": "clip normalized mono to [-1,1], count affected samples",
+    "downmix": "shared phase_safe_mono per native-rate block"
+  },
+  "rows": [
+    {
+      "track": "112_Rama_Rama_Guna_Seema",
+      "role": "evaluation",
+      "audio": "saraga1.5_carnatic/Cherthala Ranganatha Sharma at Arkay by Cherthala Ranganatha Sharma/Rama Rama Guna Seema/Rama Rama Guna Seema.mp3.mp3",
+      "sha256": "00861240ceb1ef403cc561c302fc0496212ab007b3fa848e8a0178cf69bdfe07"
+    },
+    {
+      "track": "19_Marubari",
+      "role": "evaluation",
+      "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Marubari/Ashwath Narayanan - Marubari.mp3",
+      "sha256": "00c02c89014988ff9f2bb778b0efbeef6cb2b47e1a4b28cb7c0854ab261366a0"
+    },
+    {
+      "track": "archive__Rītigauḷa__cErarAvadEmi",
+      "role": "train",
+      "audio": "data/concert_audio/Rītigauḷa/cErarAvadEmi.mp3",
+      "sha256": "00d635a69617c6211bc1af39359d8d8debe6937577012c1df0d9054862faec9f"
+    },
+    {
+      "track": "archive__Behāg__Orutti magaAi",
+      "role": "train",
+      "audio": "data/concert_audio/Behāg/Orutti magaAi.mp3",
+      "sha256": "011d70aa295a6fe35a3ec7e9980b01147a1fcad62d780229fdf5ecdd065f2b3c"
+    },
+    {
+      "track": "archive__Sāma__annapoorNE",
+      "role": "train",
+      "audio": "data/concert_audio/Sāma/annapoorNE.mp3",
+      "sha256": "02625ff0f7aca1f864797caf824cabefb6ca5997301edb42a5c3a830fd167aed"
+    },
+    {
+      "track": "17_Eranapai",
+      "role": "evaluation",
+      "audio": "saraga1.5_carnatic/Ashwath Narayanan at Arkay by Ashwath Narayanan/Eranapai/Ashwath Narayanan - Eranapai.mp3",
+      "sha256": "02dd72fdcd3ac4eeba086bb365b311bceabed8c18da70db6816bf244bcdbdef0"
+    },
+    {
+      "track": "223_Ramachandraya_Mangalam",
+      "role": "evaluation",
+      "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Ramachandraya Mangalam/Rithvik Raja - Ramachandraya Mangalam.mp3",
+      "sha256": "02e3104b83832dcafccac129d263de0ec6044423439f33f6ab301e355288937f"
+    },
+    {
+      "track": "55_Enadhu_Manam_Kavalai",
+      "role": "evaluation",
+      "audio": "saraga1.5_carnatic/Dr S Sundar at Arkay by S Sundar/Enadhu Manam Kavalai/Enadhu Manam Kavalai.mp3.mp3",
+      "sha256": "032207cd757605b0469bafe7bcc291b512acb0b6e461a96abdde6605ebe90b06"
+    }
+  ]
+}

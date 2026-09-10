@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bhairavi__tonDru nigazhdandai",
+  "audio": "data/concert_audio/Bhairavi/tonDru nigazhdandai.mp3",
+  "audio_sha256": "c191e5ac96a34020dcbd0f206cd7b8a30207a90373a3177be794e3e340412d3e",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4032596661709249
+}

@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/3cbe1ecb-896f-48d3-948d-bc0c76dc2687",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:30:49.423226+00:00",
+  "recording": {
+    "title": "Keechu Keechu",
+    "length": 348000,
+    "relations": [
+      {
+        "target-credit": "",
+        "end": null,
+        "attribute-values": {},
+        "source-credit": "",
+        "direction": "forward",
+        "attributes": [
+          "live"
+        ],
+        "work": {
+          "title": "Keechu Keechu",
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "language": "tam",
+          "id": "58df7323-4dc6-4489-93f4-7946d4788469",
+          "type": "Song",
+          "languages": [
+            "tam"
+          ],
+          "attributes": [],
+          "disambiguation": "",
+          "iswcs": []
+        },
+        "target-type": "work",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "ended": false,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "type": "performance",
+        "begin": null
+      }
+    ],
+    "video": false,
+    "id": "3cbe1ecb-896f-48d3-948d-bc0c76dc2687",
+    "disambiguation": "",
+    "first-release-date": "2006"
+  }
+}

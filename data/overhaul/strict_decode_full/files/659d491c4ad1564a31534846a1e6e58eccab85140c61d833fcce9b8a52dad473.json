@@ -1,0 +1,11 @@
+{
+  "track": "archive__Hindōḷaṁ__manasulOnimarmamulu",
+  "audio": "data/concert_audio/Hindōḷaṁ/manasulOnimarmamulu.mp3",
+  "audio_sha256": "659d491c4ad1564a31534846a1e6e58eccab85140c61d833fcce9b8a52dad473",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.468130124732852
+}

@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/288a73f9-c6eb-4425-a7f2-d20e0b607e84",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:24:40.779229+00:00",
+  "recording": {
+    "length": 649000,
+    "id": "288a73f9-c6eb-4425-a7f2-d20e0b607e84",
+    "video": false,
+    "disambiguation": "",
+    "title": "Paamalai",
+    "relations": [
+      {
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "attributes": [
+          "live"
+        ],
+        "end": null,
+        "ended": false,
+        "target-credit": "",
+        "target-type": "work",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "type": "performance",
+        "source-credit": "",
+        "work": {
+          "iswcs": [],
+          "languages": [],
+          "type-id": null,
+          "attributes": [],
+          "type": null,
+          "id": "d348d629-4756-413e-bdc8-68a506d4c4cb",
+          "disambiguation": "",
+          "title": "Paamalai",
+          "language": null
+        },
+        "attribute-values": {},
+        "begin": null,
+        "direction": "forward"
+      }
+    ],
+    "first-release-date": "2011"
+  }
+}

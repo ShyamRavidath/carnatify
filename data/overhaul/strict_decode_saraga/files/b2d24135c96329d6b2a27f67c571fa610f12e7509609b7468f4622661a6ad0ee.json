@@ -1,0 +1,11 @@
+{
+  "track": "224_Sapasyat_Kausalya",
+  "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Sapasyat Kausalya/Rithvik Raja - Sapasyat Kausalya.mp3",
+  "audio_sha256": "b2d24135c96329d6b2a27f67c571fa610f12e7509609b7468f4622661a6ad0ee",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5563133340328932
+}

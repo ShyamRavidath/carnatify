@@ -1,0 +1,11 @@
+{
+  "track": "archive__Tōḍi__enduku dayarAdurA",
+  "audio": "data/concert_audio/Tōḍi/enduku dayarAdurA.mp3",
+  "audio_sha256": "894ed74ad534994470eea0d7c1c063df65c5dec07daf6a654a8140b9bca17877",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.523672125302255
+}

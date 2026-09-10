@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāpi__Kunnakudi Venkatrama Iyer kaNmaNiyE sollaDi",
+  "audio": "data/concert_audio/Kāpi/Kunnakudi Venkatrama Iyer kaNmaNiyE sollaDi.mp3",
+  "audio_sha256": "4dba37d571af784b16514c095629c5b2ffde72fdfc9a6c86b3021bd3165f5618",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2914998750202358
+}

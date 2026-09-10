@@ -1,0 +1,42 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/3d65a06b-af6d-46d2-bd44-10cd5136c844",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:30:57.262396+00:00",
+  "recording": {
+    "title": "Dudukugala",
+    "length": 801750,
+    "video": false,
+    "id": "3d65a06b-af6d-46d2-bd44-10cd5136c844",
+    "relations": [
+      {
+        "begin": null,
+        "attribute-ids": {},
+        "type": "performance",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "ended": false,
+        "target-type": "work",
+        "attributes": [],
+        "work": {
+          "iswcs": [],
+          "disambiguation": "",
+          "attributes": [],
+          "languages": [
+            "tel"
+          ],
+          "type": null,
+          "id": "9090958b-6221-4d55-8857-f3306a5308cc",
+          "language": "tel",
+          "type-id": null,
+          "title": "Duduku Gala"
+        },
+        "direction": "forward",
+        "source-credit": "",
+        "end": null,
+        "attribute-values": {},
+        "target-credit": ""
+      }
+    ],
+    "first-release-date": "2015-06-21",
+    "disambiguation": ""
+  }
+}

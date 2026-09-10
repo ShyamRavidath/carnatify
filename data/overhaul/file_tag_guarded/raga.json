@@ -1,0 +1,436 @@
+{
+  "model_sha256": "2f7b88927602c62e4625ddc9efe1dc984f9856385ea5ab09fd763b0920534bee",
+  "classes": [
+    "Amṛtavarṣiṇi",
+    "Aṭāna",
+    "Behāg",
+    "Bhairavi",
+    "Bilahari",
+    "Bēgaḍa",
+    "Bṛndāvana sāranga",
+    "Cakravākaṁ",
+    "Cittaranjani",
+    "Dhanyāsi",
+    "Dvijāvanti",
+    "Dēvagāndhāri",
+    "Gauḷa",
+    "Hamsadhvāni",
+    "Harikāmbhōji",
+    "Haṁsānandi",
+    "Hindōḷaṁ",
+    "Hussēnī",
+    "Jaganmōhini",
+    "Janaranjani",
+    "Jōnpuri",
+    "Kalyāṇi",
+    "Kamās",
+    "Karaharapriya",
+    "Karṇāṭaka dēvagāndhāri",
+    "Kedāraṁ",
+    "Kuntalavarāḷi",
+    "Kāmavardani",
+    "Kānaḍa",
+    "Kāpi",
+    "Kāṁbhōji",
+    "Kēdāragauḷa",
+    "Lalita",
+    "Latāngi",
+    "Madhyamāvati",
+    "Maṇirangu",
+    "Mukhāri",
+    "Mānḍu",
+    "Māyāmāḷavagauḷa",
+    "Mōhanaṁ",
+    "Nādanāmakriya",
+    "Nāṭa",
+    "Nāṭakurinji",
+    "Nīlāṁbari",
+    "Puṇṇāgavarāḷi",
+    "Pūrvīkaḷyāṇi",
+    "Pūrṇacandrika",
+    "Rītigauḷa",
+    "Sahānā",
+    "Saurāṣtraṁ",
+    "Sencuruṭṭi",
+    "Sindhubhairavi",
+    "Suraṭi",
+    "Sāma",
+    "Sāranga",
+    "Sāvēri",
+    "Tōḍi",
+    "Vakuḷābharaṇaṁ",
+    "Varāḷi",
+    "Vasanta",
+    "Yadukula kāṁbōji",
+    "Ābhōgi",
+    "Āhiri",
+    "Ānandabhairavi",
+    "Śankarābharaṇaṁ",
+    "Śrī",
+    "Śrīranjani",
+    "Śuddadhanyāsi",
+    "Ṣanmukhapriya"
+  ],
+  "feature_version": "melody_v1_voiced_compressed",
+  "calibration": {
+    "temperature": 0.10803261186419252,
+    "nll_before": 4.087459277623689,
+    "nll_after": 3.397065183142342,
+    "n_groups": 219,
+    "gate": {
+      "threshold": 0.1777611239894491,
+      "coverage": 0.47989276139410186,
+      "precision": 0.8,
+      "answers": 1790,
+      "status": "empirical_in_vocabulary_calibration_only"
+    },
+    "status": "OOF training calibration; independent validation still required"
+  },
+  "class_support": {
+    "Amṛtavarṣiṇi": {
+      "n_tracks": 2,
+      "n_groups": 2,
+      "limited_support": true
+    },
+    "Aṭāna": {
+      "n_tracks": 37,
+      "n_groups": 30,
+      "limited_support": false
+    },
+    "Behāg": {
+      "n_tracks": 27,
+      "n_groups": 24,
+      "limited_support": false
+    },
+    "Bhairavi": {
+      "n_tracks": 32,
+      "n_groups": 23,
+      "limited_support": false
+    },
+    "Bilahari": {
+      "n_tracks": 31,
+      "n_groups": 28,
+      "limited_support": false
+    },
+    "Bēgaḍa": {
+      "n_tracks": 22,
+      "n_groups": 20,
+      "limited_support": false
+    },
+    "Bṛndāvana sāranga": {
+      "n_tracks": 3,
+      "n_groups": 3,
+      "limited_support": true
+    },
+    "Cakravākaṁ": {
+      "n_tracks": 11,
+      "n_groups": 9,
+      "limited_support": false
+    },
+    "Cittaranjani": {
+      "n_tracks": 3,
+      "n_groups": 3,
+      "limited_support": true
+    },
+    "Dhanyāsi": {
+      "n_tracks": 22,
+      "n_groups": 18,
+      "limited_support": false
+    },
+    "Dvijāvanti": {
+      "n_tracks": 9,
+      "n_groups": 9,
+      "limited_support": false
+    },
+    "Dēvagāndhāri": {
+      "n_tracks": 13,
+      "n_groups": 11,
+      "limited_support": false
+    },
+    "Gauḷa": {
+      "n_tracks": 15,
+      "n_groups": 12,
+      "limited_support": false
+    },
+    "Hamsadhvāni": {
+      "n_tracks": 25,
+      "n_groups": 20,
+      "limited_support": false
+    },
+    "Harikāmbhōji": {
+      "n_tracks": 27,
+      "n_groups": 22,
+      "limited_support": false
+    },
+    "Haṁsānandi": {
+      "n_tracks": 14,
+      "n_groups": 11,
+      "limited_support": false
+    },
+    "Hindōḷaṁ": {
+      "n_tracks": 17,
+      "n_groups": 16,
+      "limited_support": false
+    },
+    "Hussēnī": {
+      "n_tracks": 12,
+      "n_groups": 11,
+      "limited_support": false
+    },
+    "Jaganmōhini": {
+      "n_tracks": 7,
+      "n_groups": 7,
+      "limited_support": false
+    },
+    "Janaranjani": {
+      "n_tracks": 8,
+      "n_groups": 8,
+      "limited_support": false
+    },
+    "Jōnpuri": {
+      "n_tracks": 10,
+      "n_groups": 9,
+      "limited_support": false
+    },
+    "Kalyāṇi": {
+      "n_tracks": 33,
+      "n_groups": 17,
+      "limited_support": false
+    },
+    "Kamās": {
+      "n_tracks": 30,
+      "n_groups": 23,
+      "limited_support": false
+    },
+    "Karaharapriya": {
+      "n_tracks": 29,
+      "n_groups": 24,
+      "limited_support": false
+    },
+    "Karṇāṭaka dēvagāndhāri": {
+      "n_tracks": 1,
+      "n_groups": 1,
+      "limited_support": true
+    },
+    "Kedāraṁ": {
+      "n_tracks": 6,
+      "n_groups": 5,
+      "limited_support": false
+    },
+    "Kuntalavarāḷi": {
+      "n_tracks": 5,
+      "n_groups": 4,
+      "limited_support": false
+    },
+    "Kāmavardani": {
+      "n_tracks": 36,
+      "n_groups": 28,
+      "limited_support": false
+    },
+    "Kānaḍa": {
+      "n_tracks": 27,
+      "n_groups": 23,
+      "limited_support": false
+    },
+    "Kāpi": {
+      "n_tracks": 28,
+      "n_groups": 19,
+      "limited_support": false
+    },
+    "Kāṁbhōji": {
+      "n_tracks": 22,
+      "n_groups": 14,
+      "limited_support": false
+    },
+    "Kēdāragauḷa": {
+      "n_tracks": 14,
+      "n_groups": 13,
+      "limited_support": false
+    },
+    "Lalita": {
+      "n_tracks": 4,
+      "n_groups": 3,
+      "limited_support": true
+    },
+    "Latāngi": {
+      "n_tracks": 13,
+      "n_groups": 12,
+      "limited_support": false
+    },
+    "Madhyamāvati": {
+      "n_tracks": 26,
+      "n_groups": 21,
+      "limited_support": false
+    },
+    "Maṇirangu": {
+      "n_tracks": 6,
+      "n_groups": 6,
+      "limited_support": false
+    },
+    "Mukhāri": {
+      "n_tracks": 23,
+      "n_groups": 21,
+      "limited_support": false
+    },
+    "Mānḍu": {
+      "n_tracks": 3,
+      "n_groups": 3,
+      "limited_support": true
+    },
+    "Māyāmāḷavagauḷa": {
+      "n_tracks": 22,
+      "n_groups": 19,
+      "limited_support": false
+    },
+    "Mōhanaṁ": {
+      "n_tracks": 33,
+      "n_groups": 23,
+      "limited_support": false
+    },
+    "Nādanāmakriya": {
+      "n_tracks": 7,
+      "n_groups": 6,
+      "limited_support": false
+    },
+    "Nāṭa": {
+      "n_tracks": 34,
+      "n_groups": 24,
+      "limited_support": false
+    },
+    "Nāṭakurinji": {
+      "n_tracks": 18,
+      "n_groups": 16,
+      "limited_support": false
+    },
+    "Nīlāṁbari": {
+      "n_tracks": 11,
+      "n_groups": 10,
+      "limited_support": false
+    },
+    "Puṇṇāgavarāḷi": {
+      "n_tracks": 13,
+      "n_groups": 11,
+      "limited_support": false
+    },
+    "Pūrvīkaḷyāṇi": {
+      "n_tracks": 31,
+      "n_groups": 25,
+      "limited_support": false
+    },
+    "Pūrṇacandrika": {
+      "n_tracks": 9,
+      "n_groups": 7,
+      "limited_support": false
+    },
+    "Rītigauḷa": {
+      "n_tracks": 26,
+      "n_groups": 25,
+      "limited_support": false
+    },
+    "Sahānā": {
+      "n_tracks": 22,
+      "n_groups": 18,
+      "limited_support": false
+    },
+    "Saurāṣtraṁ": {
+      "n_tracks": 7,
+      "n_groups": 6,
+      "limited_support": false
+    },
+    "Sencuruṭṭi": {
+      "n_tracks": 21,
+      "n_groups": 15,
+      "limited_support": false
+    },
+    "Sindhubhairavi": {
+      "n_tracks": 32,
+      "n_groups": 24,
+      "limited_support": false
+    },
+    "Suraṭi": {
+      "n_tracks": 22,
+      "n_groups": 18,
+      "limited_support": false
+    },
+    "Sāma": {
+      "n_tracks": 26,
+      "n_groups": 22,
+      "limited_support": false
+    },
+    "Sāranga": {
+      "n_tracks": 3,
+      "n_groups": 3,
+      "limited_support": true
+    },
+    "Sāvēri": {
+      "n_tracks": 28,
+      "n_groups": 20,
+      "limited_support": false
+    },
+    "Tōḍi": {
+      "n_tracks": 30,
+      "n_groups": 16,
+      "limited_support": false
+    },
+    "Vakuḷābharaṇaṁ": {
+      "n_tracks": 3,
+      "n_groups": 3,
+      "limited_support": true
+    },
+    "Varāḷi": {
+      "n_tracks": 25,
+      "n_groups": 20,
+      "limited_support": false
+    },
+    "Vasanta": {
+      "n_tracks": 21,
+      "n_groups": 16,
+      "limited_support": false
+    },
+    "Yadukula kāṁbōji": {
+      "n_tracks": 16,
+      "n_groups": 15,
+      "limited_support": false
+    },
+    "Ābhōgi": {
+      "n_tracks": 10,
+      "n_groups": 10,
+      "limited_support": false
+    },
+    "Āhiri": {
+      "n_tracks": 5,
+      "n_groups": 5,
+      "limited_support": false
+    },
+    "Ānandabhairavi": {
+      "n_tracks": 23,
+      "n_groups": 17,
+      "limited_support": false
+    },
+    "Śankarābharaṇaṁ": {
+      "n_tracks": 29,
+      "n_groups": 20,
+      "limited_support": false
+    },
+    "Śrī": {
+      "n_tracks": 10,
+      "n_groups": 9,
+      "limited_support": false
+    },
+    "Śrīranjani": {
+      "n_tracks": 21,
+      "n_groups": 18,
+      "limited_support": false
+    },
+    "Śuddadhanyāsi": {
+      "n_tracks": 4,
+      "n_groups": 2,
+      "limited_support": true
+    },
+    "Ṣanmukhapriya": {
+      "n_tracks": 33,
+      "n_groups": 29,
+      "limited_support": false
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ṣanmukhapriya__Kannanai Pani Maname",
+  "audio": "data/concert_audio/Ṣanmukhapriya/Kannanai Pani Maname.mp3",
+  "audio_sha256": "0f620cd4adb9bc8b3822d4fcf476b9213b055a50f3d2a0426e2fa089ab1415e1",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6109491251409054
+}

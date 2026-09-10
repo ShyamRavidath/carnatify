@@ -1,0 +1,42 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/a8ecff2f-f2ce-406f-a7a9-a5976b99521c",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:02:22.371428+00:00",
+  "recording": {
+    "relations": [
+      {
+        "direction": "forward",
+        "attribute-values": {},
+        "target-credit": "",
+        "type": "performance",
+        "end": null,
+        "ended": false,
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-ids": {},
+        "work": {
+          "iswcs": [],
+          "languages": [
+            "san"
+          ],
+          "title": "Kamalamba",
+          "disambiguation": "",
+          "language": "san",
+          "type": null,
+          "id": "bf3629ff-4142-428b-bca1-93964ac06f08",
+          "attributes": [],
+          "type-id": null
+        },
+        "source-credit": "",
+        "attributes": [],
+        "target-type": "work"
+      }
+    ],
+    "length": 662857,
+    "first-release-date": "2015-06-22",
+    "id": "a8ecff2f-f2ce-406f-a7a9-a5976b99521c",
+    "video": false,
+    "title": "Kamalamba Samrakshatu",
+    "disambiguation": ""
+  }
+}

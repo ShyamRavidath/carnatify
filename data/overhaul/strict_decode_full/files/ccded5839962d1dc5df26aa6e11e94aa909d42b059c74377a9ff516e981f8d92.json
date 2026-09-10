@@ -1,0 +1,11 @@
+{
+  "track": "archive__Mōhanaṁ__srirRamA ramani",
+  "audio": "data/concert_audio/Mōhanaṁ/srirRamA ramani.mp3",
+  "audio_sha256": "ccded5839962d1dc5df26aa6e11e94aa909d42b059c74377a9ff516e981f8d92",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.1106212502345443
+}

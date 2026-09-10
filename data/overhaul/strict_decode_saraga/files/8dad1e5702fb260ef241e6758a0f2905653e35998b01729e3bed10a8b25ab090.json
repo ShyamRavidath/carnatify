@@ -1,0 +1,11 @@
+{
+  "track": "230_Chintayama_Kanda",
+  "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Chintayama Kanda/Rithvik Raja - Chintayama Kanda.mp3",
+  "audio_sha256": "8dad1e5702fb260ef241e6758a0f2905653e35998b01729e3bed10a8b25ab090",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.3536084168590605
+}

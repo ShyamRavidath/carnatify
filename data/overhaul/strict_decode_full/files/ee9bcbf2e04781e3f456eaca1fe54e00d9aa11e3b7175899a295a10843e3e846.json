@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bṛndāvana sāranga__kamalaapta kula",
+  "audio": "data/concert_audio/Bṛndāvana sāranga/kamalaapta kula.mp3",
+  "audio_sha256": "ee9bcbf2e04781e3f456eaca1fe54e00d9aa11e3b7175899a295a10843e3e846",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.9003690001554787
+}

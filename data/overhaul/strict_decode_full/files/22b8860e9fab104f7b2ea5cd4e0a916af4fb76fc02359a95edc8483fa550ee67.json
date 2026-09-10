@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sāma__sarasa",
+  "audio": "data/concert_audio/Sāma/sarasa.mp3",
+  "audio_sha256": "22b8860e9fab104f7b2ea5cd4e0a916af4fb76fc02359a95edc8483fa550ee67",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.45090329088270664
+}

@@ -1,0 +1,40 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/41a138f7-59a4-4ef9-ae37-5b9fd097269c",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:32:09.628504+00:00",
+  "recording": {
+    "relations": [
+      {
+        "direction": "forward",
+        "attributes": [],
+        "work": {
+          "title": "Santanagopala",
+          "type-id": null,
+          "language": null,
+          "id": "adc657a9-8793-40e1-ae1e-bd066e3c4ac8",
+          "type": null,
+          "languages": [],
+          "attributes": [],
+          "disambiguation": "",
+          "iswcs": []
+        },
+        "end": null,
+        "attribute-values": {},
+        "source-credit": "",
+        "target-credit": "",
+        "begin": null,
+        "attribute-ids": {},
+        "type": "performance",
+        "target-type": "work",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "ended": false
+      }
+    ],
+    "video": false,
+    "id": "41a138f7-59a4-4ef9-ae37-5b9fd097269c",
+    "disambiguation": "",
+    "first-release-date": "2008-11",
+    "title": "Santhana Gopalakrishnam",
+    "length": 525000
+  }
+}

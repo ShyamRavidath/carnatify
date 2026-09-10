@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/bab265f4-6e15-4011-a748-0ca239c4512a",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:05:44.373157+00:00",
+  "recording": {
+    "length": 879000,
+    "title": "Sarasa Samamukha",
+    "disambiguation": "",
+    "first-release-date": "2000",
+    "relations": [
+      {
+        "attributes": [
+          "live"
+        ],
+        "work": {
+          "language": null,
+          "title": "Sarasa Samamukha",
+          "type-id": null,
+          "languages": [],
+          "attributes": [],
+          "disambiguation": "",
+          "iswcs": [],
+          "id": "cb2e54e5-e2c7-4d4c-99e3-e66c6be003ea",
+          "type": null
+        },
+        "direction": "forward",
+        "source-credit": "",
+        "end": null,
+        "attribute-values": {},
+        "target-credit": "",
+        "begin": null,
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "type": "performance",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "ended": false,
+        "target-type": "work"
+      }
+    ],
+    "id": "bab265f4-6e15-4011-a748-0ca239c4512a",
+    "video": false
+  }
+}

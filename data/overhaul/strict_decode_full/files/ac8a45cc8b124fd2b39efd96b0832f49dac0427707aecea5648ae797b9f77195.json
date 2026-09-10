@@ -1,0 +1,11 @@
+{
+  "track": "archive__Vasanta__seetamma mAyamma",
+  "audio": "data/concert_audio/Vasanta/seetamma mAyamma.mp3",
+  "audio_sha256": "ac8a45cc8b124fd2b39efd96b0832f49dac0427707aecea5648ae797b9f77195",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2907071248628199
+}

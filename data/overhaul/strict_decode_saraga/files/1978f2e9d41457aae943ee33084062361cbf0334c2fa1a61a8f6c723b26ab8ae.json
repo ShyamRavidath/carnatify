@@ -1,0 +1,11 @@
+{
+  "track": "167_Sama_geeta_priyan",
+  "audio": "saraga1.5_carnatic/Sanjay at Sastri Hall by Sanjay Subrahmanyan/Sama geeta priyan/Sanjay Subrahmanyan - Sama geeta priyan.mp3",
+  "audio_sha256": "1978f2e9d41457aae943ee33084062361cbf0334c2fa1a61a8f6c723b26ab8ae",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.3628404587507248
+}

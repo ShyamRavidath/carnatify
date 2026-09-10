@@ -1,0 +1,11 @@
+{
+  "track": "archive__Mōhanaṁ__rAma ninnE",
+  "audio": "data/concert_audio/Mōhanaṁ/rAma ninnE.mp3",
+  "audio_sha256": "38d9b7bc6d2405eb70c5424ce3ab0c2f4a0d7c21143cc053586414fb6843f575",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.5101456246338785
+}

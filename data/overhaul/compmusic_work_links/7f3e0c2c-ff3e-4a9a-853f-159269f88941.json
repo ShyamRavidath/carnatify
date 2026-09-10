@@ -1,0 +1,45 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/7f3e0c2c-ff3e-4a9a-853f-159269f88941",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:50:24.482262+00:00",
+  "recording": {
+    "relations": [
+      {
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "attributes": [
+          "live"
+        ],
+        "end": null,
+        "ended": false,
+        "target-credit": "",
+        "target-type": "work",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "type": "performance",
+        "source-credit": "",
+        "work": {
+          "iswcs": [],
+          "languages": [
+            "qaa"
+          ],
+          "attributes": [],
+          "id": "d6cb71ce-109c-42b5-910f-e0bd42d8e681",
+          "type": null,
+          "type-id": null,
+          "disambiguation": "",
+          "title": "Tulasi Dalamulache",
+          "language": "qaa"
+        },
+        "attribute-values": {},
+        "direction": "forward",
+        "begin": null
+      }
+    ],
+    "id": "7f3e0c2c-ff3e-4a9a-853f-159269f88941",
+    "video": false,
+    "length": 483994,
+    "disambiguation": "",
+    "title": "Thulasidala"
+  }
+}

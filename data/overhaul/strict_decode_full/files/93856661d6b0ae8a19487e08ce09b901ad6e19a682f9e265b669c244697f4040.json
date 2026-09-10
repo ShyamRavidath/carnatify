@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nāṭa__Sakti gaNapatim",
+  "audio": "data/concert_audio/Nāṭa/Sakti gaNapatim.mp3",
+  "audio_sha256": "93856661d6b0ae8a19487e08ce09b901ad6e19a682f9e265b669c244697f4040",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.169443415943533
+}

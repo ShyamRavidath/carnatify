@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kamās__sundara",
+  "audio": "data/concert_audio/Kamās/sundara.mp3",
+  "audio_sha256": "3e275db09bc657a95c47030b509d7ca245ab3bae4ae8e0243d4371862c73c71c",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2941726250573993
+}

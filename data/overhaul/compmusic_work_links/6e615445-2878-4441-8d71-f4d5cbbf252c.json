@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/6e615445-2878-4441-8d71-f4d5cbbf252c",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:45:52.375896+00:00",
+  "recording": {
+    "video": false,
+    "length": 3050000,
+    "id": "6e615445-2878-4441-8d71-f4d5cbbf252c",
+    "title": "Minakshi",
+    "relations": [
+      {
+        "direction": "forward",
+        "target-type": "work",
+        "type": "performance",
+        "begin": null,
+        "work": {
+          "languages": [],
+          "type": null,
+          "id": "023db52f-b669-41b1-b8fe-3502b561f5cb",
+          "type-id": null,
+          "iswcs": [],
+          "attributes": [],
+          "language": null,
+          "disambiguation": "",
+          "title": "Minakshi"
+        },
+        "end": null,
+        "attributes": [
+          "live"
+        ],
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-values": {},
+        "source-credit": "",
+        "target-credit": "",
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "ended": false
+      }
+    ],
+    "disambiguation": "",
+    "first-release-date": "2009"
+  }
+}

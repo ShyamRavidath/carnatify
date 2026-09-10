@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sindhubhairavi__visweswara darshan",
+  "audio": "data/concert_audio/Sindhubhairavi/visweswara darshan.mp3",
+  "audio_sha256": "5ae6c30987948fceb69d51be31b7db73ed49f0a3a219769fbf3f9be38bb02ce7",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6620423337444663
+}

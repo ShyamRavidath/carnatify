@@ -1,0 +1,11 @@
+{
+  "track": "archive__Bilahari__Intha Kannananda",
+  "audio": "data/concert_audio/Bilahari/Intha Kannananda.mp3",
+  "audio_sha256": "f282bb068db5f4e13bd55d442affe7b3888b8ea9ae8ed4cb267063d473ed4950",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 4.4689821670763195
+}

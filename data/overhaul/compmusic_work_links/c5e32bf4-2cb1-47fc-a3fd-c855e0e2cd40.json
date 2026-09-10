@@ -1,0 +1,14 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/c5e32bf4-2cb1-47fc-a3fd-c855e0e2cd40",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:09:39.994629+00:00",
+  "recording": {
+    "title": "Paridanamiccite",
+    "length": 274024,
+    "video": false,
+    "id": "c5e32bf4-2cb1-47fc-a3fd-c855e0e2cd40",
+    "relations": [],
+    "first-release-date": "2011",
+    "disambiguation": ""
+  }
+}

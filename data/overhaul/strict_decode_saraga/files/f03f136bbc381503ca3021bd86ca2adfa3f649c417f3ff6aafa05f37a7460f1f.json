@@ -1,0 +1,11 @@
+{
+  "track": "225_Seetapati_Namanasuna",
+  "audio": "saraga1.5_carnatic/Rithvik Raja at Arkay by Rithvik Raja/Seetapati Namanasuna/Rithvik Raja - Seetapati Namanasuna.mp3",
+  "audio_sha256": "f03f136bbc381503ca3021bd86ca2adfa3f649c417f3ff6aafa05f37a7460f1f",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.3051827498711646
+}

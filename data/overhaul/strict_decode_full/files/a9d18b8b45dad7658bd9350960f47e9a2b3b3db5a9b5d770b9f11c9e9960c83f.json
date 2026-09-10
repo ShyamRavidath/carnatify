@@ -1,0 +1,11 @@
+{
+  "track": "archive__Sindhubhairavi__manava xxxx",
+  "audio": "data/concert_audio/Sindhubhairavi/manava xxxx.mp3",
+  "audio_sha256": "a9d18b8b45dad7658bd9350960f47e9a2b3b3db5a9b5d770b9f11c9e9960c83f",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.9395577078685164
+}

@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/62976b60-ccfd-4b2e-8491-2c457407cd8b",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:41:45.661965+00:00",
+  "recording": {
+    "relations": [
+      {
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "attributes": [
+          "live"
+        ],
+        "ended": false,
+        "end": null,
+        "target-type": "work",
+        "target-credit": "",
+        "source-credit": "",
+        "work": {
+          "type-id": null,
+          "attributes": [],
+          "type": null,
+          "id": "d5f6d605-940d-47e5-bd0f-570b276d2efd",
+          "language": null,
+          "title": "Sri Rama Jaya Rama",
+          "disambiguation": "",
+          "iswcs": [],
+          "languages": []
+        },
+        "attribute-values": {},
+        "begin": null,
+        "direction": "forward",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "type": "performance"
+      }
+    ],
+    "first-release-date": "2008",
+    "id": "62976b60-ccfd-4b2e-8491-2c457407cd8b",
+    "video": false,
+    "length": 271000,
+    "title": "Sri Rama Jaya Rama",
+    "disambiguation": ""
+  }
+}

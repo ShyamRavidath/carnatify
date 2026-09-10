@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāmavardani__Siva Siva Siva",
+  "audio": "data/concert_audio/Kāmavardani/Siva Siva Siva.mp3",
+  "audio_sha256": "478378ef4a37607a7c6dd7e70f44723c304fd472e40a1a9aa01771d18d0b5110",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.138903749641031
+}

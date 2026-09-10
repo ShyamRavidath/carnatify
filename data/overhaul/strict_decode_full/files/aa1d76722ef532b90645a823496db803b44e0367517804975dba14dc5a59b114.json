@@ -1,0 +1,11 @@
+{
+  "track": "archive__Pūrṇacandrika__rAmachandra pAhi satatam ravi vamSa deepa",
+  "audio": "data/concert_audio/Pūrṇacandrika/rAmachandra pAhi satatam ravi vamSa deepa.mp3",
+  "audio_sha256": "aa1d76722ef532b90645a823496db803b44e0367517804975dba14dc5a59b114",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.4317852091044188
+}

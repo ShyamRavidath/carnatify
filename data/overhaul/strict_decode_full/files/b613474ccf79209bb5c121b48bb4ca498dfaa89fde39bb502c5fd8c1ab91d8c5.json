@@ -1,0 +1,11 @@
+{
+  "track": "archive__Cittaranjani__Maaye",
+  "audio": "data/concert_audio/Cittaranjani/Maaye.mp3",
+  "audio_sha256": "b613474ccf79209bb5c121b48bb4ca498dfaa89fde39bb502c5fd8c1ab91d8c5",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7162732500582933
+}

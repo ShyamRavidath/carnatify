@@ -1,0 +1,11 @@
+{
+  "track": "65_Devadi_Devanukku_Jaya_Mangalam",
+  "audio": "saraga1.5_carnatic/Dr S Sundar at Arkay by S Sundar/Devadi Devanukku Jaya Mangalam/Devadi Devanukku Jaya Mangalam.mp3.mp3",
+  "audio_sha256": "ebe07662e8f3011deaa56a113796f140f2fcc13c49ad3467ea3800ef23b8926f",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2948597497306764
+}

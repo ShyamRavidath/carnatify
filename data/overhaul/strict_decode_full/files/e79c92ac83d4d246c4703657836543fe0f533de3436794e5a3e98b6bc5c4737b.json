@@ -1,0 +1,11 @@
+{
+  "track": "archive__Dvijāvanti__07 akilAndEswari",
+  "audio": "data/concert_audio/Dvijāvanti/07 akilAndEswari.mp3",
+  "audio_sha256": "e79c92ac83d4d246c4703657836543fe0f533de3436794e5a3e98b6bc5c4737b",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.1558811250142753
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Rītigauḷa__cEra rAvadEmi",
+  "audio": "data/concert_audio/Rītigauḷa/cEra rAvadEmi.mp3",
+  "audio_sha256": "b17429b5bf7b4a04dd204a63e4b61d9649deaefcfd65665cf9e052f030258a98",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.21288050012663
+}

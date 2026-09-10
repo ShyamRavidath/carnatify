@@ -1,0 +1,11 @@
+{
+  "track": "archive__Nādanāmakriya__Dasana Madiko",
+  "audio": "data/concert_audio/Nādanāmakriya/Dasana Madiko.mp3",
+  "audio_sha256": "7d0fb4378be01c8136c5b28cd08f5eee59180dff635e50f1b6c4f01941652c8e",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 1.0208422499708831
+}

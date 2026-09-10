@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/189d1ce0-1c6d-4038-b28f-d55245039fcd",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:21:22.605947+00:00",
+  "recording": {
+    "title": "Vallabha Nayakasya",
+    "disambiguation": "",
+    "video": false,
+    "first-release-date": "2005",
+    "id": "189d1ce0-1c6d-4038-b28f-d55245039fcd",
+    "relations": [
+      {
+        "target-type": "work",
+        "attributes": [
+          "live"
+        ],
+        "source-credit": "",
+        "work": {
+          "language": null,
+          "type": null,
+          "iswcs": [],
+          "languages": [],
+          "title": "Vallabha Nayakasya",
+          "disambiguation": "",
+          "type-id": null,
+          "id": "79b0c7be-0c7d-4b93-a31f-8c7160fb48be",
+          "attributes": []
+        },
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "ended": false,
+        "end": null,
+        "type": "performance",
+        "target-credit": "",
+        "attribute-values": {},
+        "direction": "forward"
+      }
+    ],
+    "length": 400000
+  }
+}

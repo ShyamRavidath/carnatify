@@ -1,0 +1,11 @@
+{
+  "track": "189_Karuninchutakidi",
+  "audio": "saraga1.5_carnatic/Sumithra Vasudev at Arkay by Sumithra Vasudev/Karuninchutakidi/Karuninchutakidi.mp3.mp3",
+  "audio_sha256": "bd694d7f9b0e72e901e375bfe661e7df63ec9193730c36c49da7d0d048943206",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.28875504108145833
+}

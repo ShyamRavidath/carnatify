@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kuntalavarāḷi__mAlE maNivaNNA tiruppAvai",
+  "audio": "data/concert_audio/Kuntalavarāḷi/mAlE maNivaNNA tiruppAvai.mp3",
+  "audio_sha256": "8bad844a01619c8f2273bc76c0dae90a2028e6ce03e600378b254163933048ed",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.2331334170885384
+}

@@ -1,0 +1,11 @@
+{
+  "track": "24_Evvari_Bodhana",
+  "audio": "saraga1.5_carnatic/Vignesh Ishwar at Nada Inbam by Vignesh Ishwar/Evvari Bodhana/Vignesh Ishwar - Evvari Bodhana.mp3",
+  "audio_sha256": "e4aa9e674825e26270f2eea4d99b200cacaff1f9c960bc4542ed5e140a49ff79",
+  "plan_sha256": "12fad50479cca059f66c263e347bb105074467abea0bdc7f3e8794afc3bdaefc",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.4541598749347031
+}

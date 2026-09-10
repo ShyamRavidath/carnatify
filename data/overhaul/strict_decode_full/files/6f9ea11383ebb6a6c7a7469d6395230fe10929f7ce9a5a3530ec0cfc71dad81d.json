@@ -1,0 +1,11 @@
+{
+  "track": "archive__Hindōḷaṁ__ivanai ninaindavar",
+  "audio": "data/concert_audio/Hindōḷaṁ/ivanai ninaindavar.mp3",
+  "audio_sha256": "6f9ea11383ebb6a6c7a7469d6395230fe10929f7ce9a5a3530ec0cfc71dad81d",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3952811658382416
+}

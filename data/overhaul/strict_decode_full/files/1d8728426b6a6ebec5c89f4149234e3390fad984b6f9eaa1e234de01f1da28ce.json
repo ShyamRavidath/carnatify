@@ -1,0 +1,11 @@
+{
+  "track": "archive__Gauḷa__tyAgarAja pAlayasumAm",
+  "audio": "data/concert_audio/Gauḷa/tyAgarAja pAlayasumAm.mp3",
+  "audio_sha256": "1d8728426b6a6ebec5c89f4149234e3390fad984b6f9eaa1e234de01f1da28ce",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6683184579014778
+}

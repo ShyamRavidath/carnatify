@@ -1,0 +1,11 @@
+{
+  "track": "archive__Kāmavardani__Ninne Nera",
+  "audio": "data/concert_audio/Kāmavardani/Ninne Nera.mp3",
+  "audio_sha256": "9cc54ae5dd7c45e77e2b5de0a15ee1964ec31b722635db43bcbd1f6a1c807e4f",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 2.4197274171747267
+}

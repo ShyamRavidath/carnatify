@@ -1,0 +1,42 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/d81fb8b2-3222-49f9-aeb1-b46f733692ad",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:13:40.637652+00:00",
+  "recording": {
+    "id": "d81fb8b2-3222-49f9-aeb1-b46f733692ad",
+    "first-release-date": "2015-06-22",
+    "length": 222720,
+    "relations": [
+      {
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "attribute-ids": {},
+        "end": null,
+        "ended": false,
+        "target-credit": "",
+        "attribute-values": {},
+        "type": "performance",
+        "direction": "forward",
+        "target-type": "work",
+        "attributes": [],
+        "source-credit": "",
+        "work": {
+          "type-id": null,
+          "id": "8570d3aa-4d76-46fe-83f8-7697471f43a2",
+          "attributes": [],
+          "language": "tam",
+          "type": null,
+          "title": "Va Va Brindavana",
+          "languages": [
+            "tam"
+          ],
+          "iswcs": [],
+          "disambiguation": ""
+        }
+      }
+    ],
+    "disambiguation": "",
+    "title": "Va Va Brindavana",
+    "video": false
+  }
+}

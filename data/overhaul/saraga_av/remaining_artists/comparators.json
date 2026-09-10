@@ -1,0 +1,25 @@
+{
+  "plan_sha256": "25046e50b5e2b4f61fa0003f38db1ba7714b39a359e81d864dbf83f93d0f746f",
+  "models": {
+    "combined": {
+      "path": "data/overhaul/combined/raga_ridge.joblib",
+      "sha256": "8c28ee71b493a628b254d0ea4a032a742121f372ec0c8d9cd6d2c94fa2c894e5"
+    },
+    "forest800": {
+      "path": "data/overhaul/raga_forest800.joblib",
+      "sha256": "c01e3213b7640667259bee6c8cd77c3d9873685e0d97a254f63accc810746063"
+    },
+    "multiscale": {
+      "path": "data/overhaul/multiscale/raga.joblib",
+      "sha256": "322002bcd93d858d931faf70ec86b7ccc2b5a93c953ff3cef662dd6a4c5f1e88"
+    },
+    "broader": {
+      "path": "data/overhaul/broader/raga.joblib",
+      "sha256": "59544dd8dd7854952584bf848042f6c33cc41c00f71aae554c4e35d10915352e"
+    }
+  },
+  "query": "deterministic center 180 seconds with estimated tonic only",
+  "window_s": 180,
+  "metrics": "top1 all; paired common-vocabulary top1; top3; empirical threshold precision",
+  "status": "frozen before inspecting any fresh audio predictions"
+}

@@ -1,0 +1,11 @@
+{
+  "track": "archive__Puṇṇāgavarāḷi__24 Tava Dasoham",
+  "audio": "data/concert_audio/Puṇṇāgavarāḷi/24 Tava Dasoham.mp3",
+  "audio_sha256": "0c9a2c3d7ac6c277794672954057951bdfa83f119c1bda7bda6659157726428b",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.6578994584269822
+}

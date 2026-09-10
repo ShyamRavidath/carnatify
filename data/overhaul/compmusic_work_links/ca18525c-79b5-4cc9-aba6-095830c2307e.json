@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/ca18525c-79b5-4cc9-aba6-095830c2307e",
+  "status": 200,
+  "fetched_at": "2026-09-09T06:10:06.550548+00:00",
+  "recording": {
+    "title": "Sitapathe",
+    "relations": [
+      {
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "ended": false,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "attribute-values": {},
+        "work": {
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "language": "tel",
+          "attributes": [],
+          "iswcs": [],
+          "type": "Song",
+          "languages": [
+            "tel"
+          ],
+          "id": "90997d72-dd8f-4089-ba62-e41e9a3f541e",
+          "title": "Sitapate na manasuna",
+          "disambiguation": "Sitapati, Seethapati, Seethapate, Seetapathe in raga Khamas by thyagaraja"
+        },
+        "end": null,
+        "attributes": [
+          "live"
+        ],
+        "begin": null,
+        "type": "performance",
+        "direction": "forward",
+        "target-type": "work",
+        "target-credit": "",
+        "source-credit": ""
+      }
+    ],
+    "disambiguation": "",
+    "first-release-date": "2001",
+    "video": false,
+    "length": 874000,
+    "id": "ca18525c-79b5-4cc9-aba6-095830c2307e"
+  }
+}

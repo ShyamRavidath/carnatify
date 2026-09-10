@@ -1,0 +1,46 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/7786af52-fc31-492d-9ed7-6b230644a303",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:48:48.485899+00:00",
+  "recording": {
+    "video": false,
+    "disambiguation": "",
+    "title": "Raksha Bettare",
+    "relations": [
+      {
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "begin": null,
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "ended": false,
+        "end": null,
+        "type": "performance",
+        "attribute-values": {},
+        "target-credit": "",
+        "direction": "forward",
+        "attributes": [
+          "live"
+        ],
+        "target-type": "work",
+        "source-credit": "",
+        "work": {
+          "type": "Song",
+          "language": "tel",
+          "disambiguation": "",
+          "title": "Raksha bettare",
+          "languages": [
+            "tel"
+          ],
+          "iswcs": [],
+          "type-id": "f061270a-2fd6-32f1-a641-f0f8676d14e6",
+          "id": "3b1a184a-e061-4d31-a106-9cfaf37fc2c2",
+          "attributes": []
+        }
+      }
+    ],
+    "length": 3114000,
+    "id": "7786af52-fc31-492d-9ed7-6b230644a303",
+    "first-release-date": "2009"
+  }
+}

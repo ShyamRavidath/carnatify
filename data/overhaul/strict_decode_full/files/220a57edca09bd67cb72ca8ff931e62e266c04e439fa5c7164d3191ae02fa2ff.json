@@ -1,0 +1,11 @@
+{
+  "track": "archive__Ānandabhairavi__Sadbhaktiyu",
+  "audio": "data/concert_audio/Ānandabhairavi/Sadbhaktiyu.mp3",
+  "audio_sha256": "220a57edca09bd67cb72ca8ff931e62e266c04e439fa5c7164d3191ae02fa2ff",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.7829518751241267
+}

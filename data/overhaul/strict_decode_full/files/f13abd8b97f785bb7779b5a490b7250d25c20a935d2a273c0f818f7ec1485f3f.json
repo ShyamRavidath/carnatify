@@ -1,0 +1,11 @@
+{
+  "track": "archive__Hindōḷaṁ__abhaya varade SAradE",
+  "audio": "data/concert_audio/Hindōḷaṁ/abhaya varade SAradE.mp3",
+  "audio_sha256": "f13abd8b97f785bb7779b5a490b7250d25c20a935d2a273c0f818f7ec1485f3f",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.9947635834105313
+}

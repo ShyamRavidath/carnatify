@@ -1,0 +1,11 @@
+{
+  "track": "archive__Haṁsānandi__Eru Mayil",
+  "audio": "data/concert_audio/Haṁsānandi/Eru Mayil.mp3",
+  "audio_sha256": "b6cea357c00b815bfe2668f11d9324ead219e0540009d1a4695cc1326e6c38c6",
+  "plan_sha256": "bb66b3dcc2e3db9f045664f8d4b445b3517c89dfa7aabba78a40125967bc4292",
+  "status": "clean",
+  "returncode": 0,
+  "stderr_bytes": 0,
+  "stderr_excerpt": "",
+  "elapsed_s": 0.3468221668154001
+}

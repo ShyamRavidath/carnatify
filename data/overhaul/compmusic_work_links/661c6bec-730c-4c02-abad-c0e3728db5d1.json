@@ -1,0 +1,44 @@
+{
+  "url": "https://musicbrainz.org/ws/2/recording/661c6bec-730c-4c02-abad-c0e3728db5d1",
+  "status": 200,
+  "fetched_at": "2026-09-09T05:42:39.765554+00:00",
+  "recording": {
+    "id": "661c6bec-730c-4c02-abad-c0e3728db5d1",
+    "video": false,
+    "length": 503000,
+    "disambiguation": "",
+    "title": "Gananadhaya",
+    "relations": [
+      {
+        "attribute-ids": {
+          "live": "70007db6-a8bc-46d7-a770-80e6a0bb551a"
+        },
+        "attributes": [
+          "live"
+        ],
+        "ended": false,
+        "end": null,
+        "target-credit": "",
+        "target-type": "work",
+        "type": "performance",
+        "type-id": "a3005666-a872-32c3-ad06-98af558e99b0",
+        "begin": null,
+        "direction": "forward",
+        "source-credit": "",
+        "attribute-values": {},
+        "work": {
+          "iswcs": [],
+          "languages": [],
+          "attributes": [],
+          "id": "532a21d7-51e0-434b-b899-edf07a378c63",
+          "type": null,
+          "type-id": null,
+          "title": "Gananathaya",
+          "disambiguation": "",
+          "language": null
+        }
+      }
+    ],
+    "first-release-date": "2010"
+  }
+}
