@@ -29,6 +29,7 @@ cp "$ROOT/data/karnatik_lyrics.json" "$HERE/data/karnatik_lyrics.json"
 # clip identification: matcher lives in identify_clip.py (single source of
 # truth), served by clip_identify.py
 cp "$ROOT/identify_clip.py" "$HERE/identify_clip.py"
+cp "$ROOT/registry_hygiene.py" "$HERE/registry_hygiene.py"
 
 # Drop compiled caches so they don't bloat the image.
 find "$HERE/src" -name "__pycache__" -type d -prune -exec rm -rf {} +

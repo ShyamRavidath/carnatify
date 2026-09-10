@@ -49,6 +49,7 @@ from collections import Counter
 from pathlib import Path
 
 import numpy as np
+from registry_hygiene import nonmusical_registry_reason
 
 ROOT = Path(__file__).parent
 MODELS = ROOT / 'models'
@@ -281,6 +282,10 @@ def load_targets():
     entries = []
     if REGISTRY.exists():
         for r in json.loads(REGISTRY.read_text()):
+            # Preserve stable IDs and reviewed links; never rebuild/renumber
+            # the registry merely to remove scraped concert-header rows.
+            if nonmusical_registry_reason(r):
+                continue
             variants = [r['canonical']] + r['aliases']
             folded = [fold(v) for v in variants]
             lyr = next((lyr_by_fold[f] for f in folded if f in lyr_by_fold),
@@ -1007,46 +1012,41 @@ def tdms_multi(freqs, tonic, hop_s):
 
 
 def raga_top5(path: Path):
-    """Clip RF over TDMS; tonic = drone estimate + 12-rotation vote.
+    """Legacy clip RF over TDMS using one acoustically estimated tonic.
 
-    Wild-clip accuracy is weak (0/10 top-1 measured); confidence is always
-    reported "low" so the UI never bluffs.
+    A failed tonic estimate must not be replaced with an arbitrary tuning, and
+    maximizing class confidence over twelve rotations is not tonic estimation.
+    This legacy fallback remains low-confidence; candidate pipeline graduation
+    is separate from this numerical/semantic repair.
     """
     import essentia.standard as es
     import joblib
-    if not hasattr(raga_top5, '_clf'):
-        raga_top5._clf = joblib.load(MODELS / 'raga_clip_rf.pkl')
-    clf = raga_top5._clf
+    from carnatify.audio.utils import load_audio_window
     melodia = es.PredominantPitchMelodia(
-        frameSize=2048, hopSize=128,
+        sampleRate=44100, frameSize=2048, hopSize=128,
         minFrequency=90, maxFrequency=900, voicingTolerance=0.6)
-    y = es.MonoLoader(filename=str(path), sampleRate=44100)()
-    f0, _ = melodia(es.EqualLoudness()(y))
+    # Root clip identification is bounded; multi-hour analysis uses the concert
+    # pipeline. Stereo phase guarding and sample-rate conversion are shared.
+    y, sr, _ = load_audio_window(path, 0, 60, 44100)
+    f0, _ = melodia(es.EqualLoudness(sampleRate=sr)(y))
     if (f0 > 0).sum() * MEL_HOP_S < 10:
         return [], 'too little melody detected'
     tonic0 = None
     try:
-        t_est = float(es.TonicIndianArtMusic()(y))
+        t_est = float(es.TonicIndianArtMusic(sampleRate=sr)(y))
         if 80.0 <= t_est <= 400.0:
             tonic0 = t_est
     except Exception:
         pass
-    base = tonic0 if tonic0 else 146.83
-    cands = []
-    for k in range(12):
-        t_k = base * (2.0 ** (k / 12.0))
-        while t_k > 400.0:
-            t_k /= 2.0
-        while t_k < 80.0:
-            t_k *= 2.0
-        td = tdms_multi(f0, t_k, MEL_HOP_S)
-        if td is None:
-            continue
-        proba = clf.predict_proba(td[None, :])[0]
-        cands.append((float(proba.max()), proba))
-    if not cands:
+    if tonic0 is None:
+        return [], 'tonic estimation failed; no arbitrary tuning substituted'
+    td = tdms_multi(f0, tonic0, MEL_HOP_S)
+    if td is None:
         return [], 'TDMS failed'
-    _, proba = max(cands, key=lambda x: x[0])
+    if not hasattr(raga_top5, '_clf'):
+        raga_top5._clf = joblib.load(MODELS / 'raga_clip_rf.pkl')
+    clf = raga_top5._clf
+    proba = clf.predict_proba(td[None, :])[0]
     order = np.argsort(-proba)
     return ([{'raga': str(clf.classes_[i]), 'p': round(float(proba[i]), 3)}
              for i in order[:5]], None)

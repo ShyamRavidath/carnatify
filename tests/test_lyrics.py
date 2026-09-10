@@ -92,7 +92,7 @@ def test_meaning_cache_avoids_regeneration(tmp_path, entry: LyricsEntry):
         text = "A devotional invocation of Ganapati."
 
     class _FakeResponse:
-        content = [_FakeBlock()]
+        text = _FakeBlock.text
 
     class _FakeMessages:
         def __init__(self):
@@ -105,6 +105,9 @@ def test_meaning_cache_avoids_regeneration(tmp_path, entry: LyricsEntry):
     class _FakeClient:
         def __init__(self):
             self.messages = _FakeMessages()
+
+        def generate_content(self, prompt):
+            return self.messages.create(prompt=prompt)
 
     fake_client = _FakeClient()
     gen = MeaningGenerator(cache_path=cache_path, client=fake_client)
@@ -142,6 +145,11 @@ def test_meaning_cache_file_keyed_by_composition_id(tmp_path, entry: LyricsEntry
 
     class _FakeClient:
         messages = _FakeMessages()
+
+        def generate_content(self, prompt):
+            class _Response:
+                text = _FakeBlock.text
+            return _Response()
 
     gen = MeaningGenerator(cache_path=cache_path, client=_FakeClient())
     gen.generate(entry)

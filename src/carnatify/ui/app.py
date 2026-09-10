@@ -120,7 +120,7 @@ def _render_lyrics(result: CarnatifyResult) -> None:
 
 
 def _load_uploaded_audio(uploaded) -> tuple[np.ndarray, int]:
-    """Persist the upload to a temp file so librosa can decode any container."""
+    """Persist the supported upload for the shared phase-safe clip decoder."""
     suffix = Path(uploaded.name).suffix or ".wav"
     with tempfile.NamedTemporaryFile(suffix=suffix, delete=False) as tmp:
         tmp.write(uploaded.getbuffer())

@@ -19,6 +19,7 @@ from __future__ import annotations
 import json
 import logging
 import os
+import sys
 import threading
 import time
 import uuid
@@ -27,6 +28,10 @@ from pathlib import Path
 logger = logging.getLogger("carnatify.identify")
 
 _HERE = Path(__file__).resolve().parent
+# build_space.sh creates a standalone copy. In a checkout, prefer the actual
+# matcher source over that potentially stale staging artifact.
+if (_HERE.parent / 'pyproject.toml').is_file():
+    sys.path.insert(0, str(_HERE.parent))
 _FEEDBACK_DIR = _HERE / "data" / "feedback"
 _FEEDBACK_REPO = os.environ.get("FEEDBACK_REPO", "")  # e.g. "deepti/carnatify-feedback"
 

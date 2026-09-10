@@ -43,18 +43,23 @@ logger = logging.getLogger("carnatify")
 
 # ── resource resolution ─────────────────────────────────────────────────────
 # In the Docker image, src/ models/ and lyrics.db are copied next to this file.
-# For local dev they live one level up in the repo root. Prefer bundled, else
-# fall back to the repo root so the same code runs in both places.
+# For local dev they live one level up in the repo root. Use repository sources
+# in a checkout so an old staging copy cannot shadow a
+# local fix. A standalone Space has no parent pyproject and uses its bundle.
 _HERE = Path(__file__).resolve().parent
 _ROOT = _HERE.parent
 
 
 def _resolve(rel: str) -> Path:
+    source = _ROOT / rel
+    if (_ROOT / 'pyproject.toml').is_file() and source.exists():
+        return source
     bundled = _HERE / rel
-    return bundled if bundled.exists() else _ROOT / rel
+    return bundled if bundled.exists() else source
 
 
 sys.path.insert(0, str(_resolve("src")))
+from carnatify.audio.utils import load_upload_audio
 
 from carnatify.ml.raga_classifier import predict_raga  # noqa: E402
 from carnatify.ml.composition_matcher import match_composition  # noqa: E402
@@ -202,19 +207,26 @@ def _estimate_tonic_mix(audio_path: str) -> float | None:
     try:
         import essentia.standard as es
     except ImportError:
-        logger.warning("essentia not installed — falling back to median-F0 tonic")
+        logger.warning("essentia not installed — tonic-dependent predictions unavailable")
         return None
     import librosa
 
     try:
-        y_mix, _ = librosa.load(audio_path, sr=22050, mono=True, duration=180.0)
+        y_mix, _ = load_upload_audio(audio_path, 22050, 60.0)
         if len(y_mix) < 22050 * 10:
             return None
         tonic = float(es.TonicIndianArtMusic(sampleRate=22050)(y_mix))
     except Exception as exc:
-        logger.warning("Tonic estimation failed (%s) — falling back to median-F0", exc)
+        logger.warning("Tonic estimation failed (%s) — tonic-dependent predictions unavailable", exc)
         return None
     return tonic if 80.0 <= tonic <= 400.0 else None
+
+
+def _require_tonic(tonic):
+    """Never manufacture Sa from a phrase median or arbitrary constant."""
+    if tonic is None or not np.isfinite(tonic) or tonic <= 0:
+        raise HTTPException(status_code=422, detail='Could not establish tonic Sa; tonic-dependent identification is unavailable for this clip.')
+    return float(tonic)
 
 
 def _separate_vocals_sync(audio_path: str, out_dir: str) -> str:
@@ -281,7 +293,7 @@ async def predict_audio(request: Request, file: UploadFile = File(...)):
 
         # Decode to confirm it's valid audio before running the expensive Demucs step.
         try:
-            y_check, sr_check = librosa.load(tmp_path, sr=22050, mono=True, duration=5.0)
+            y_check, sr_check = load_upload_audio(tmp_path, 22050, 5.0)
         except Exception as exc:
             raise HTTPException(
                 status_code=422,
@@ -291,7 +303,7 @@ async def predict_audio(request: Request, file: UploadFile = File(...)):
             raise HTTPException(status_code=422, detail="clip too short, need at least 15 seconds")
 
         # Tonic from the mixed audio, while the upload still exists on disk.
-        tonic_est = _estimate_tonic_mix(tmp_path)
+        tonic_est = _require_tonic(_estimate_tonic_mix(tmp_path))
 
         # Re-encode as a true 2-channel wav, trimmed to 60s, before Demucs:
         # (a) torch>=2's mono->stereo expand() creates an aliased view that
@@ -301,7 +313,7 @@ async def predict_audio(request: Request, file: UploadFile = File(...)):
         import soundfile as sf_write
 
         demucs_dir = tempfile.mkdtemp()
-        y_mix, sr_mix = librosa.load(tmp_path, sr=44100, mono=True, duration=60.0)
+        y_mix, sr_mix = load_upload_audio(tmp_path, 44100, 60.0)
         demucs_in = os.path.join(demucs_dir, "input.wav")
         sf_write.write(demucs_in, np.repeat(y_mix[:, None], 2, axis=1), sr_mix)
 
@@ -319,7 +331,7 @@ async def predict_audio(request: Request, file: UploadFile = File(...)):
 
         # Load the isolated vocal track for pitch extraction.
         try:
-            y, sr = librosa.load(vocal_path, sr=22050, mono=True, duration=60.0)
+            y, sr = load_upload_audio(vocal_path, 22050, 60.0)
         except Exception as exc:
             raise HTTPException(status_code=422, detail=f"Could not load separated vocals: {exc}")
 
@@ -337,11 +349,7 @@ async def predict_audio(request: Request, file: UploadFile = File(...)):
     # see train_raga_v2_saraga.py, which extracts features the same way.
     f0, voiced_flag, _ = librosa.pyin(y, fmin=60, fmax=1000, sr=sr)
     frequencies = f0[voiced_flag].astype(np.float64)
-    if tonic_est is not None:
-        tonic, tonic_method = tonic_est, "essentia"
-    else:
-        tonic = float(np.median(frequencies)) if len(frequencies) else 130.0
-        tonic_method = "median_f0"
+    tonic, tonic_method = tonic_est, "essentia"
     logger.info("Tonic: %.2f Hz (%s)", tonic, tonic_method)
 
     if len(frequencies) < 10:
@@ -413,7 +421,7 @@ async def identify(request: Request, file: UploadFile = File(...), fast: bool = 
             tmp.write(data)
             tmp_path = tmp.name
         try:
-            y16, _ = librosa.load(tmp_path, sr=16000, mono=True, duration=90.0)
+            y16, _ = load_upload_audio(tmp_path, 16000, 90.0)
         except Exception as exc:
             raise HTTPException(status_code=422, detail=f"Could not decode audio: {exc}")
         if len(y16) < 16000 * 15:
@@ -430,14 +438,14 @@ async def identify(request: Request, file: UploadFile = File(...), fast: bool = 
         if not fast:
             import soundfile as sf_write
             demucs_dir = tempfile.mkdtemp()
-            y_mix, sr_mix = librosa.load(tmp_path, sr=44100, mono=True, duration=90.0)
+            y_mix, sr_mix = load_upload_audio(tmp_path, 44100, 90.0)
             demucs_in = os.path.join(demucs_dir, "input.wav")
             sf_write.write(demucs_in, np.repeat(y_mix[:, None], 2, axis=1), sr_mix)
             try:
                 async with _DEMUCS_SEM:
                     vocal_path = await loop.run_in_executor(
                         None, lambda: _separate_vocals_sync(demucs_in, demucs_dir))
-                v16, _ = librosa.load(vocal_path, sr=16000, mono=True)
+                v16, _ = load_upload_audio(vocal_path, 16000, 90.0)
                 v16 = v16.astype(np.float32)
                 variants["stem"] = await loop.run_in_executor(
                     None, lambda: clip_identify.transcribe_multi(
@@ -448,16 +456,14 @@ async def identify(request: Request, file: UploadFile = File(...), fast: bool = 
         result = clip_identify.identify_from_variants(variants)
 
         # raga (existing production classifier) as secondary, honest-low display
-        y22, sr22 = librosa.load(tmp_path, sr=22050, mono=True, duration=60.0)
+        y22, sr22 = load_upload_audio(tmp_path, 22050, 60.0)
         raga_preds = []
         try:
             f0, voiced_flag, _ = librosa.pyin(y22, fmin=60, fmax=1000, sr=sr22)
             frequencies = f0[voiced_flag].astype(np.float64)
-            tonic = tonic_est if tonic_est else (
-                float(np.median(frequencies)) if len(frequencies) else 130.0)
-            if len(frequencies) >= 10 and _RAGA_MODEL.exists() and _RAGA_ENC.exists():
+            if tonic_est is not None and len(frequencies) >= 10 and _RAGA_MODEL.exists() and _RAGA_ENC.exists():
                 raga_preds = predict_raga(
-                    frequencies, tonic,
+                    frequencies, tonic_est,
                     model_path=_RAGA_MODEL, label_encoder_path=_RAGA_ENC, top_k=3)
         except Exception as exc:
             logger.warning("Raga pass failed: %s", exc)
