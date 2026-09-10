@@ -32,6 +32,8 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
+import re
 import sys
 import unicodedata
 from pathlib import Path
@@ -106,6 +108,9 @@ def parse_time(t: str) -> float | None:
         vals = [float(p) for p in parts]
     except ValueError:
         return None
+    if (not vals or any(not math.isfinite(v) or v < 0 for v in vals)
+            or any(v >= 60 for v in vals[1:])):
+        return None
     if len(vals) == 2:
         return vals[0] * 60 + vals[1]
     if len(vals) == 3:
@@ -113,6 +118,34 @@ def parse_time(t: str) -> float | None:
     if len(vals) == 1:
         return vals[0]
     return None
+
+
+def parse_row(raw: str) -> dict[str, str]:
+    """Accept TSV and the space-aligned form shown in the original example.
+
+    Confidence is a field delimiter only when surrounded by whitespace. Missing
+    confidence remains empty; it is never silently promoted to high.
+    """
+    fields = raw.rstrip().split('\t')
+    original_fields = raw.split('\t')
+    if (len(original_fields) >= 3 and not original_fields[2].strip()
+            and re.fullmatch(r'long_concert_\d+', original_fields[0].strip())
+            and (not original_fields[1].strip() or parse_time(original_fields[1]) is not None)):
+        return dict(zip(COLUMNS, [x.strip() for x in original_fields] + [''] * len(COLUMNS)))
+    if len(fields) >= 3 and fields[0].strip().startswith('long_concert_') and not re.search(r'\s', fields[0].strip()) and parse_time(fields[1]) is not None and fields[2].strip():
+        return dict(zip(COLUMNS, [x.strip() for x in fields] + [''] * len(COLUMNS)))
+    match = re.match(r'^\s*(long_concert_\d+)\s+(\S+)\s+(.+?)\s*$', raw)
+    if not match:
+        return dict(zip(COLUMNS, [x.strip() for x in fields] + [''] * len(COLUMNS)))
+    concert, start, tail = match.groups()
+    conf = re.search(r'\s+(high|medium|low)(?:\s+|$)', tail, re.I)
+    content = tail[:conf.start()] if conf else tail
+    parts = re.split(r'\t+| {2,}', content.strip(), maxsplit=2)
+    if len(parts) < 2:
+        raise ValueError('ambiguous row: separate raga and item with a tab or two spaces')
+    return dict(concert=concert, start=start, raga=parts[0].strip(),
+                item=parts[1].strip(), confidence=conf.group(1).lower() if conf else '',
+                notes=tail[conf.end():].strip() if conf else (parts[2].strip() if len(parts) > 2 else ''))
 
 
 def corpus_vocabulary() -> dict[str, str]:
@@ -176,11 +209,13 @@ def validate(labels: Path = LABELS, out: Path = OUT) -> int:
     for ln, raw in enumerate(LABELS_.read_text().splitlines(), 1):
         if not raw.strip() or raw.lstrip().startswith('#'):
             continue
-        f = raw.split('\t')
-        if f[0].strip() == 'concert':
+        if raw.split('\t')[0].strip() == 'concert':
             continue
-        f += [''] * (len(COLUMNS) - len(f))
-        r = dict(zip(COLUMNS, (x.strip() for x in f)))
+        try:
+            r = parse_row(raw)
+        except ValueError as exc:
+            errors.append(f'line {ln}: {exc}')
+            continue
         r['line'] = ln
         r['start_s'] = parse_time(r['start'])
         if r['concert'] not in dur:
@@ -196,7 +231,7 @@ def validate(labels: Path = LABELS, out: Path = OUT) -> int:
             errors.append(f'line {ln}: {r["raga"]!r} has no start time — '
                           f'every labelled song needs one')
             continue
-        if r['start_s'] > dur[r['concert']]:
+        if r['start_s'] >= dur[r['concert']]:
             errors.append(f'line {ln}: start {r["start"]} past end of '
                           f'{r["concert"]} ({dur[r["concert"]]/60:.1f} min)')
             continue
@@ -224,7 +259,12 @@ def validate(labels: Path = LABELS, out: Path = OUT) -> int:
             if length < 30:
                 warnings.append(f'line {r["line"]}: item is only {length:.0f} s')
             fold = _fold(r['raga'])
-            excluded = fold in {'', 'ragamalika', 'unsure', 'unknown', 'na'}
+            excluded = fold in {'', 'ragamalika', 'unsure', 'unknown', 'na',
+                                'thani', 'tani', 'taniavarthanam', 'speech',
+                                'applause', 'tuning', 'silence', 'noise'}
+            if r['notes']:
+                warnings.append(f'line {r["line"]}: notes are descriptive only; '
+                                'use an explicit interval manifest before scoring song ends/exclusions')
             items.append({
                 'concert': concert, 'line': r['line'],
                 'start_s': round(r['start_s'], 3), 'end_s': round(end, 3),
@@ -247,6 +287,10 @@ def validate(labels: Path = LABELS, out: Path = OUT) -> int:
 
     unfilled = sorted(set(dur) - set(by_concert))
     report = {
+        'ready_for_scoring': False,
+        'boundary_contract': ('Syntax/vocabulary validation only. Ends are inferred '
+                              'from the next start or file end; use a reviewed '
+                              'explicit interval manifest for scoring.'),
         'n_concerts_labelled': len(by_concert),
         'n_blank_rows_ignored': n_blank[0],
         'unfilled_concerts': unfilled,
@@ -261,7 +305,8 @@ def validate(labels: Path = LABELS, out: Path = OUT) -> int:
         'errors': errors, 'warnings': warnings,
         'items': items,
     }
-    out.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(report, ensure_ascii=False, indent=2, allow_nan=False) + '\n')
 
     print(f'concerts labelled     {report["n_concerts_labelled"]}/{len(dur)}'
           + (f'  (not yet done: {", ".join(unfilled)})' if unfilled else ''))
