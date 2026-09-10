@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "policy": "Exclude documented invalid single-raga supervision; never relabel or delete audio",
+  "rows": [
+    {
+      "audio_sha256": "bac1b19a023e09f370977cb91e10f8524c18d26cd43ae19d99dddf8c9e7ad665",
+      "track": "archive__Bhairavi__Veena Dhanammal ottupetra Ananda",
+      "reason": "Exact publisher file and title say Ananda-bhairavi, contradicting the Bhairavi training label; exclude unsupported supervision without guessing a replacement.",
+      "source_url": "https://archive.org/details/assorted-artists-78rpm",
+      "evidence_path": "data/overhaul/archive_training_metadata/ab88c128b280581f2d79957c1175b534e634f0825a4a56f6e130278cc165557a.raw.json",
+      "evidence_sha256": "e6b1acd3d6b717a2712cfe8fdca21925966e8f9f03791271fc5a2c1cb92f75c8"
+    },
+    {
+      "audio_sha256": "be81a269bf518a3d79d5a71b1de57a94bac17a5666d031f0b770dcdab5f54854",
+      "track": "archive__Cakravākaṁ__Melakartha Chakkaram Mayamalavagaula",
+      "reason": "The lecture-demonstration file explicitly covers Mayamalavagaula and Chakravakam; a uniform Chakravakam label lacks time-aligned support.",
+      "source_url": "https://archive.org/details/melakartalecdems",
+      "evidence_path": "data/overhaul/archive_training_metadata/39552ca0de20454604ad2f56fbe5a72a3d81cf5eb8f5daa4c851f1262bf67947.raw.json",
+      "evidence_sha256": "b690e9d6d76cbe3e71ea2a056c9b5e2ae2023fba61eb62d15de1a0c1bcd4f9ad"
+    },
+    {
+      "audio_sha256": "d8feb7713367f5b1d1ed1f4966fccc5479a6a021dfc934688926f0a18b19bbb1",
+      "track": "archive__Dhanyāsi__namasivAya",
+      "reason": "Exact publisher file and title identify sankarAbaraNam, contradicting Dhanyasi; quarantine rather than relabel.",
+      "source_url": "https://archive.org/details/37-ess",
+      "evidence_path": "data/overhaul/archive_training_metadata/1d1a44b6c860d13e52d695d672a8f9aec9d9f1bb9019c60e017d1767bc690bd0.raw.json",
+      "evidence_sha256": "3ce0c88841cec9584d785e55104d2a3bc34a516a670d2dcfab99458c1f8bf013"
+    },
+    {
+      "audio_sha256": "eaf3c679afc2d982d8c781c72eb9f9034f9521c303b6819655434add2769009b",
+      "track": "archive__Nāṭa__NeraNammithiVarnam Kanada",
+      "reason": "Exact publisher file and title identify Kanada; Ata is a tala token, not evidence for the Nata raga training label.",
+      "source_url": "https://archive.org/details/MaharajapuramSrinivasan_22ndOctober2008_Part1",
+      "evidence_path": "data/overhaul/archive_training_metadata/41b0640fb64a64ef1623c94d8e448389572d9a31fe85016756a89b3ac8edf67f.raw.json",
+      "evidence_sha256": "a67ac77d3c4ae841bcc5c432789fa109e9018df9c3f80e87c1c889bd9c6654dc"
+    },
+    {
+      "audio_sha256": "d937cb5f2853059e9419985fd74ef1ce40d6d318ffd9da5f5f999930cdba34ec",
+      "track": "archive__Nāṭa__Sanjay NeraNammithi Kanada",
+      "reason": "Exact publisher file and title identify Kanada, contradicting Nata; quarantine rather than relabel.",
+      "source_url": "https://archive.org/details/SanjaySubramanian_26thMay2008_Part1",
+      "evidence_path": "data/overhaul/archive_training_metadata/bd9d24827b7e585fa258f7fb3f943963729e2bb42464f53a5948610e68c87804.raw.json",
+      "evidence_sha256": "5d0ed132ad9de45255f213255bdc353585a8eb7ac9b904023e774f6d0e6436a6"
+    },
+    {
+      "audio_sha256": "d7ed57b1598766a552023a32e6d97e5824084978fb49e16d67b8e975fd886b9c",
+      "track": "archive__Nāṭa__varNam",
+      "reason": "Exact publisher file and title identify Bhairavi, contradicting Nata; quarantine rather than relabel.",
+      "source_url": "https://archive.org/details/32-ess-ts",
+      "evidence_path": "data/overhaul/archive_training_metadata/ea629e4f0f2c6d056d40495d21c42c29df8d01df5699968bf168285e00bacb6f.raw.json",
+      "evidence_sha256": "d22bd9a228c5f15b9090c57e511540eeb343d001b1f6f5007b05fd340fd6eff0"
+    },
+    {
+      "audio_sha256": "2f6645f90baea07d16ffd8f1d7c7bffb628978dfd6b4e8bb5d1afc0f550c5040",
+      "track": "archive__Mukhāri__20081202 2100 IMCpresents In Memoriam",
+      "reason": "The complete 58-minute radio programme includes multiple ragas and German/English spoken moderation; its Mukhari training label cannot apply to uniformly sampled windows.",
+      "source_url": "https://archive.org/details/InMemoriam-Mumbai1126-RagasOfPeace",
+      "evidence_path": "data/overhaul/archive_identity_metadata/a530c866653a6ce8f5079016f5112031de75a43dc3b5f2458164d215a4d0ec9c.raw.json",
+      "evidence_sha256": "053adddf95bdf95b1273543707a490746c8cd926283977ac7174e4682cfcded4"
+    }
+  ]
+}

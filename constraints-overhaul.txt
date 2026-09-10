@@ -1,0 +1,17 @@
+# Observed working core stack on macOS / CPython 3.11 (September 2026).
+# Constraints, not a complete transitive lock file or a cross-platform promise.
+# Audio-event dependencies are isolated by scripts/fetch_audio_event_model.py.
+numpy==2.4.6
+scipy==1.17.1
+scikit-learn==1.9.0
+joblib==1.5.3
+essentia==2.1b6.dev1389
+librosa==0.11.0
+soundfile==0.14.0
+torch==2.5.1
+torchaudio==2.5.1
+numba==0.65.1
+mirdata==1.0.0
+pytest==9.1.1
+# Optional neural pitch experiment; not required by the default Melodia path.
+onnxruntime==1.27.0

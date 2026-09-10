@@ -127,3 +127,37 @@ data/duration_probe/**/*.wav
 # Test pollution: tests/test_raga.py trains a checkpoint into models/.
 # Harmless, but it should not show up as an untracked file after a test run.
 /models/test_raga_tmp.pt
+
+# Regenerable development features and unpromoted candidate weights.
+/data/architecture_audit/features.npz
+/data/architecture_audit/candidate.joblib
+/data/overhaul/runtime_deps/
+/data/overhaul/models/
+/data/overhaul/cache/
+/data/overhaul/*.joblib
+/data/overhaul/**/*.joblib
+/data/overhaul/**/features.npz
+/data/overhaul/saraga_av/audio/
+/data/overhaul/saraga_av/metadata/
+/data/overhaul/saraga_av/metadata.zip
+
+# September-overhaul artifacts that are regenerable, third-party, or binary.
+# Plans, manifests, receipts, and result JSON stay tracked so every number in
+# HANDOFF.md / OVERHAUL_EXECUTION.md remains auditable; caches do not.
+/data/overhaul/build_deps/
+/data/overhaul/chromaprint/
+/data/overhaul/**/tracks/
+/data/overhaul/**/prefix/
+/data/overhaul/**/cache/
+/data/overhaul/**/*.npz
+/data/overhaul/**/*.wav
+/data/overhaul/**/*.mp3
+/data/overhaul/**/*.pt
+/data/overhaul/**/*.tar.gz
+/data/overhaul/saraga_av/remaining_artists/audio/
+/data/overhaul/musicfm_raga_probe/
+/data/overhaul/musicfm_raga_probe_tonic/
+/data/overhaul/musicfm_finetune_pilot*/
+/data/raga_coverage/matrix.npz
+/data/long_concerts/labels_validation.json
+/data/overhaul/**/*.lock
