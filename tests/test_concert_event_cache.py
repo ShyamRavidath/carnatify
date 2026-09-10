@@ -4,15 +4,18 @@ from types import SimpleNamespace
 import numpy as np
 import pytest
 from scripts import concert_pipeline as module
+import carnatify.ml.raga_runtime as runtime
+from carnatify.ml.melody_features import FEATURE_VERSIONS
 
 
 def test_exact_frontend_uses_events_only_cache_and_resumes(tmp_path,monkeypatch):
     model=SimpleNamespace(classes_=np.array(['A','B']),n_jobs=4,
                           predict_proba=lambda x:np.array([[.8,.2]]))
     bundle=dict(model=model,representation='voiced',
-                feature_version=module.FEATURE_VERSIONS['voiced'],
+                feature_version=FEATURE_VERSIONS['voiced'],
                 calibration=dict(gate=dict(threshold=.5),status='development'))
-    monkeypatch.setattr(module.joblib,'load',lambda p:bundle)
+    monkeypatch.setattr(module.RagaCandidate,'load',
+                        classmethod(lambda cls,ref,**kw:runtime.RagaCandidate(bundle,'b'*64,'fake',ref)))
     monkeypatch.setattr(module.sf,'info',lambda p:SimpleNamespace(duration=10.))
     monkeypatch.setattr(module,'sha',lambda p:'a'*64)
     monkeypatch.setattr(module,'load_audio_window',lambda *a:
@@ -43,6 +46,7 @@ def test_exact_frontend_uses_events_only_cache_and_resumes(tmp_path,monkeypatch)
                         (np.full(4000,220.),dict(tonic_hz=110.,extraction_failure=None,
                             contract=query_contract('a'*64,0,10))))
     monkeypatch.setattr(module,'feature_vector',lambda *a:np.ones(2))
+    monkeypatch.setattr(runtime,'feature_vector',lambda *a:np.ones(2))
     output=tmp_path/'report.json';cache=tmp_path/'cache'
     monkeypatch.setattr(module.sys,'argv',['concert_pipeline','audio.wav',
                         '--output',str(output),'--cache',str(cache),

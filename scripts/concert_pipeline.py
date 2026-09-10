@@ -13,14 +13,13 @@ os.environ.setdefault('HF_HOME',str(ROOT/'data/overhaul/cache/huggingface'))
 os.environ.setdefault('TRANSFORMERS_CACHE',str(ROOT/'data/overhaul/cache/huggingface'))
 sys.path[:0]=[str(ROOT/'data/overhaul/runtime_deps'),str(ROOT),str(ROOT/'src')]
 import numpy as np
-import joblib
 import soundfile as sf
 from scripts.raga_pipeline import sha,write_json
 from carnatify.audio.utils import load_audio_window
 from carnatify.audio.events import AudioEventClassifier,calibrated_event
-from carnatify.ml.melody_features import FEATURE_VERSIONS,feature_vector
+from carnatify.ml.melody_features import feature_vector
 from carnatify.ml.concert_segments import decode_concert,candidate_only_segments
-from carnatify.ml.inference_runtime import serial_forest_prediction
+from carnatify.ml.raga_runtime import RagaCandidate,RagaGate,score_contour
 from carnatify.audio.melody_frontend import extract_query,composition_query, VERSION as QUERY_FRONTEND_VERSION
 from carnatify.audio.cache_io import atomic_npz
 
@@ -72,6 +71,7 @@ def main():
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument('audio',type=Path)
     ap.add_argument('--model',type=Path,default=ROOT/'data/overhaul/raga_ridge.joblib')
+    ap.add_argument('--gate',type=Path,help='Registered gate JSON (configs/raga_candidates.json); off by default')
     ap.add_argument('--events-model',type=Path,default=ROOT/'data/overhaul/models/audio_events')
     ap.add_argument('--output',type=Path,required=True)
     ap.add_argument('--cache',type=Path,default=ROOT/'data/overhaul/cache/concerts')
@@ -99,9 +99,10 @@ def main():
         ap.error('Experimental song context/prior requires the exact-query frontend')
     if args.composition_raga_prior and not args.composition_catalog:
         ap.error('--composition-raga-prior requires --composition-catalog')
-    bundle=joblib.load(args.model);representation=bundle.get('representation','elapsed')
-    if FEATURE_VERSIONS[representation]!=bundle['feature_version']:raise ValueError('Model feature contract mismatch')
-    model=serial_forest_prediction(bundle['model']);total=sf.info(str(args.audio)).duration
+    candidate=RagaCandidate.load(str(args.model));bundle=candidate.bundle
+    representation=candidate.representation;model=candidate.model
+    gate=RagaGate.load(args.gate) if args.gate else None
+    total=sf.info(str(args.audio)).duration
     composition_catalog=None
     if args.composition_catalog:
         from carnatify.ml.composition_catalog import CompositionCatalog
@@ -191,15 +192,15 @@ def main():
         if not args.legacy_block_frontend:
             row['query_extraction_failure']=query_meta['extraction_failure']
         voiced=float(np.sum(np.isfinite(f)&(f>0))*HOP)
-        if tonic is None or voiced<10:
-            row.update(status='insufficient_melody',voiced_s=voiced)
+        scored=score_contour(candidate,f,tonic,HOP,gate,top_k=len(candidate.classes))
+        if not scored['answered']:
+            row.update(status=scored['reason'] if scored['reason']!='missing_tonic' else 'insufficient_melody',
+                       voiced_s=voiced)
         else:
-            vector=feature_vector(f,tonic,HOP,representation)
-            if vector is None:row['status']='insufficient_transitions'
-            else:
-                p=model.predict_proba(vector[None])[0]
-                row.update(status='candidate',voiced_s=voiced,
-                           probabilities={str(c):float(v) for c,v in zip(model.classes_,p)})
+            row.update(status='candidate',voiced_s=voiced,
+                       probabilities={r['raga']:r['probability'] for r in scored['ranked']},
+                       signals=scored['signals'],accepted=scored['accepted'],
+                       raga_model=scored['model']['sha256'])
         if composition_catalog:
             song_end=min(start+args.composition_window_s,total)
             if args.silence_bounded_context:
@@ -243,18 +244,19 @@ def main():
     # Current bundles have development-only gates; transfer tests exposed false
     # confident answers. Retain ranking, but do not assert validated identities.
     segments=candidate_only_segments(segments)
-    report=dict(audio=str(args.audio),audio_sha256=audio_hash,model_sha256=sha(args.model),
+    report=dict(audio=str(args.audio),audio_sha256=audio_hash,model_sha256=candidate.sha256,
         event_model_sha256=event_hash,feature_version=bundle['feature_version'],duration_s=total,
         block_frontend=block_version,
         silence_bounded_context=args.silence_bounded_context,
         silence_boundary_policy='interior_rms_1e-5_trim50ms_anchors_v2' if args.silence_bounded_context else None,
         raga_context_s=args.window_s,composition_context_s=args.composition_window_s,
         composition_raga_prior_weight=.1 if args.composition_raga_prior else 0.,
-        composition_raga_prior_model_sha256=sha(args.model) if args.composition_raga_prior else None,
+        composition_raga_prior_model_sha256=candidate.sha256 if args.composition_raga_prior else None,
         composition_frontend='legacy_block_slice' if args.legacy_block_frontend else 'independent_exact_query_v1',
         query_frontend='legacy_block_concat' if args.legacy_block_frontend else QUERY_FRONTEND_VERSION,
         requires_manual_labels=False,label_origin='automatic_prediction',
         calibration_status=bundle['calibration']['status'],threshold=threshold,
+        raga_candidate=candidate.describe(),gate=gate.describe() if gate else None,
         identity_status='candidate_only; production rejection calibration not established',
         activity_calibration_sha256=sha(args.activity_calibration) if activity_calibration else None,
         activity_calibration_status=activity_calibration['status'] if activity_calibration else 'uncalibrated',

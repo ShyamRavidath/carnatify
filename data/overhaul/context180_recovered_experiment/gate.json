@@ -1,0 +1,11 @@
+{
+  "name": "margin_v1_context180",
+  "signal": "margin",
+  "threshold": 0.16277227656365623,
+  "status": "registered; dev bar (precision>=0.85, OOV-FA<=0.15) FAILED narrowly (82.9% / 15.6% at 38% coverage); off in the product by rule",
+  "selected_on": "group- and class-disjoint leave-class-bin-out pool of 17,735 training windows; dev applied once",
+  "prereg": "data/overhaul/ABSTAIN_GATE_PREREG.md",
+  "result": "data/overhaul/ABSTAIN_GATE.md",
+  "model_sha256": "f594584402cb2ae35532612e673c194661706fcdfe4b69bbecc69b6d50316e2b",
+  "harness_sha256": "b33382c25b2984bdcf9097206c5a6c788bb6197e0e4bf7be568b74be9a7104f7"
+}

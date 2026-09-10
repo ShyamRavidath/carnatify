@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "note": "Named raga candidates. RagaCandidate.load(name) refuses a bundle whose SHA256 differs. Status is documentation, not permission: nothing here is wired into the product until Deepti says so.",
+  "reference": "context180",
+  "candidates": {
+    "context180": {
+      "bundle": "data/overhaul/context180_recovered_experiment/training/raga.joblib",
+      "sha256": "f594584402cb2ae35532612e673c194661706fcdfe4b69bbecc69b6d50316e2b",
+      "gate": "data/overhaul/context180_recovered_experiment/gate.json",
+      "status": "reference candidate (CANDIDATE_VERDICT.md, 2026-09-10); grouped CV 76.67%; dev known top-1 102/139; not deployed",
+      "training": "data/overhaul/context180_recovered_experiment/training/manifest.json",
+      "window_s": 180,
+      "classes": 69
+    },
+    "strict_decode_comparator": {
+      "bundle": "data/overhaul/file_artist_strict_decode/raga.joblib",
+      "sha256": "9de6629ce13442bf04ca4b7a6eac54c898343b3ff0316dc425a1a6aa57ad2458",
+      "gate": null,
+      "status": "cleaning-only 60 s comparator; grouped CV 68.79%; dev known top-1 97/139",
+      "training": "data/overhaul/file_artist_strict_decode/manifest.json",
+      "window_s": 60,
+      "classes": 69
+    }
+  }
+}

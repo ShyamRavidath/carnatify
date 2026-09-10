@@ -20,7 +20,7 @@ from normalize_ragas import fold
 from carnatify.ml.melody_features import feature_vector
 from carnatify.audio.pitch_profiles import PROFILES,melodia_parameters,cache_suffix,HPSS_PARAMETERS
 from carnatify.ml.evaluation_integrity import assert_unseen_tracks,assert_unseen_audio
-from carnatify.ml.inference_runtime import serial_forest_prediction
+from carnatify.ml.raga_runtime import RagaCandidate,RagaGate,score_contour
 from carnatify.audio.melody_frontend import extract_waveform
 from carnatify.audio.cache_io import atomic_npz
 
@@ -57,7 +57,9 @@ def main():
     ap.add_argument('--workers',type=int,default=4)
     ap.add_argument('--extraction-profile',choices=sorted(PROFILES),default='default')
     ap.add_argument('--window-s',type=int,choices=[60,180],default=60)
-    ap.add_argument('--model',type=Path,default=ROOT/'data/overhaul/raga_ridge.joblib')
+    ap.add_argument('--model',default=str(ROOT/'data/overhaul/raga_ridge.joblib'),
+                    help='Registry name from configs/raga_candidates.json or a bundle path')
+    ap.add_argument('--gate',type=Path,help='Registered gate JSON; without it the bundle legacy gate is reported')
     ap.add_argument('--name',default='ridge',help='Candidate name in the result arms')
     ap.add_argument('--out',type=Path,default=ROOT/'data/overhaul/saraga_audio_results.json')
     ap.add_argument('--skip-baseline',action='store_true',help='Evaluate candidate alone; legacy baseline has incomplete byte provenance')
@@ -68,19 +70,22 @@ def main():
     rows=sorted([r for r in corpus['rows'] if not r['known_source_overlap']],key=lambda r:r['track'])
     if args.limit:rows=rows[:args.limit]
     rows=[{**r,'extraction_profile':args.extraction_profile,'window_s':args.window_s} for r in rows]
-    import joblib
     if args.name=='audited_rf':raise ValueError('Candidate name collides with baseline')
-    models={args.name:joblib.load(args.model)}
+    candidates={args.name:RagaCandidate.load(args.model)}
     if not args.skip_baseline:
-        models['audited_rf']=joblib.load(ROOT/'data/architecture_audit/candidate.joblib')
-    for name,bundle in models.items():
+        candidates['audited_rf']=RagaCandidate.load(str(ROOT/'data/architecture_audit/candidate.joblib'))
+    gate=RagaGate.load(args.gate) if args.gate else None
+    models={}
+    for name,candidate in candidates.items():
+        bundle=candidate.bundle
         if not bundle.get('training_audio_sha256') and not args.allow_unverified_audio_split:
             raise ValueError(f'{name} has no training audio hash inventory; use an audited candidate, '
                              '--skip-baseline, or explicitly --allow-unverified-audio-split for diagnostics')
         assert_unseen_tracks(bundle,rows)
-        serial_forest_prediction(bundle['model'])
+        models[name]=bundle
     report=dict(protocol=f'all eligible Saraga tracks; deterministic center {args.window_s} seconds; existing labels only',
-        corpus_sha256=sha(args.corpus),model_sha256=sha(args.model),
+        corpus_sha256=sha(args.corpus),model_sha256=candidates[args.name].sha256,
+        models={name:c.describe() for name,c in candidates.items()},gate=gate.describe() if gate else None,
         baseline_sha256=sha(ROOT/'data/architecture_audit/candidate.joblib'),
         n_selected=len(rows),rows=[],summary={},requires_new_manual_labels=False,
         extraction_profile=args.extraction_profile,window_s=args.window_s,
@@ -98,24 +103,28 @@ def main():
                 f0=z['f0'];meta=json.loads(str(z['meta']))
             result=dict(track=row['track'],source=row['source'],raga=row['raga'],metadata=meta,predictions={})
             voiced=float(np.sum(f0>0)*128/44100)
-            for name,bundle in models.items():
+            for name,candidate in candidates.items():
+                bundle=candidate.bundle
                 assert_unseen_audio(bundle,meta['audio_sha256'])
-                clf=bundle['model'];representation=bundle.get('representation','elapsed')
                 for tonic_name,tonic in [('estimated',meta['tonic_estimated']),('annotated',row['tonic'])]:
                     key=f'{name}_{tonic_name}'
-                    truth_key=fold(row['raga']);class_keys=[fold(c) for c in clf.classes_]
+                    truth_key=fold(row['raga']);class_keys=[fold(c) for c in candidate.classes]
                     if len(set(class_keys))!=len(class_keys):raise ValueError('Duplicate canonical model classes')
+                    tonic=tonic if tonic is not None and np.isfinite(float(tonic)) else None
+                    scored=score_contour(candidate,f0,float(tonic) if tonic else None,128/44100,gate)
                     pred=dict(in_vocabulary=truth_key in class_keys,correct=False,top3_correct=False,
-                              answered=False,accepted=False,top3=[],voiced_s=voiced)
-                    if tonic and np.isfinite(tonic) and tonic>0 and voiced>=10:
-                        vector=feature_vector(f0,tonic,128/44100,representation)
-                        if vector is not None:
-                            p=clf.predict_proba(vector[None])[0];order=np.argsort(-p)[:3]
-                            top=[str(clf.classes_[i]) for i in order]
-                            pred.update(answered=True,top3=top,correct=fold(top[0])==truth_key,
-                                        top3_correct=truth_key in [fold(c) for c in top],confidence=float(p[order[0]]))
+                              answered=scored['answered'],accepted=False,top3=[],voiced_s=voiced,
+                              reason=scored['reason'],signals=scored['signals'])
+                    if scored['answered']:
+                        top=[r['raga'] for r in scored['ranked'][:3]]
+                        pred.update(top3=top,correct=fold(top[0])==truth_key,
+                                    top3_correct=truth_key in [fold(c) for c in top],
+                                    confidence=scored['ranked'][0]['probability'])
+                        if gate is not None:pred['accepted']=scored['accepted']
+                        else:
+                            # Legacy in-bundle gate on the calibrated posterior; measured unsafe (ABSTAIN_GATE.md).
                             threshold=bundle.get('calibration',{}).get('gate',{}).get('threshold',1.000001)
-                            pred['accepted']=bool(p[order[0]]>=threshold)
+                            pred['accepted']=bool(scored['ranked'][0]['probability']>=threshold)
                     result['predictions'][key]=pred
             report['rows'].append(result)
             for arm in result['predictions']:
