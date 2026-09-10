@@ -1,5 +1,11 @@
 # Carnatify
 
+> 2026-09-10: one raga scoring contract, `src/carnatify/ml/raga_runtime.py`,
+> with a SHA-verified candidate registry (`configs/raga_candidates.json`) and
+> registered gates. Reference candidate, verdict, gate and field numbers are in
+> `HANDOFF.md` (top section) and `data/overhaul/{CANDIDATE_VERDICT,ABSTAIN_GATE,FIELD}.md`.
+> `scripts/INDEX.md` says which of the 135 scripts are current.
+>
 > September 2026 overhaul: a separate, reproducible **candidate** pipeline now
 > runs end to end. It has not replaced the deployed models and does not establish
 > state-of-the-art performance. See the [current audit](ARCHITECTURE_AUDIT_2026-09-08.md)

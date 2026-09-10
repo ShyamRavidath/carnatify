@@ -1,5 +1,61 @@
 # Carnatify: authoritative handoff for the next engineering agent
 
+## 2026-09-10 tech-lead pass: read this before the September 9 sections
+
+Goal that was set and completed: **one trustworthy raga path: audited
+candidate, honest abstain gate, single contract, green tests, committed.**
+Every number below has a prereg committed before its harness; the docs named
+here are the receipts. This section takes precedence over everything after it.
+
+1. **Worktree landed.** The September overhaul (199 untracked files, 1.4 GB
+   of which was caches) is now 13 topic commits from `b70cb91` to `38cb399`.
+   Caches, arrays, audio, the cmake wheel and the chromaprint checkout are
+   gitignored; plans, manifests, receipts and result JSON are tracked.
+   Only `data/long_concerts/LABELS.tsv` and `.claude/settings.local.json`
+   remain modified: they are Deepti's and were not touched.
+2. **Verdict on context180** (`data/overhaul/CANDIDATE_VERDICT.md`, harness
+   `scripts/candidate_verdict.py`). Paired cluster bootstrap over the 133
+   groups: **+7.88 pp CV, 95% [+5.69, +10.19]**; archive rows +9.18, CompMusic
+   reference-pitch rows +4.97, so about five points are duration/window and
+   about four are the tonic/DSP match. Dev 184 queries, 17 artist clusters:
+   +3.60 pp known top-1, [−1.68, +8.57], includes zero; top-3 unchanged at
+   118/139. **Promoted to reference candidate** by the registered rule.
+   Do not quote 102/139 as external evidence.
+3. **Abstain gate** (`data/overhaul/ABSTAIN_GATE.md`, harness
+   `scripts/abstain_gate.py`). Selected on a 17,735-window leave-class-bin-out
+   pool that never sees dev: signal `margin` (top-1 minus top-2 raw ridge
+   score) ≥ 0.1628. Dev, applied once: **70/184 accepted, 82.9% precision
+   [75.0, 92.7], 7/45 OOV accepted (15.6%)**, versus the bundle's own gate at
+   145 accepted, 65.5%, 29/45. Registered bar 85% / 15% **fails narrowly**;
+   by rule the gate is **off in the product**. The dev trade-off curve is in
+   the doc for Deepti to choose from; any point taken from it is dev-tuned.
+4. **Field** (`data/overhaul/FIELD.md`). Six labelled items, oracle
+   boundaries, 180 s: **3/5 in-vocabulary top-1**, gate accepts 2 (both
+   correct) and abstains on Dhēnukā with 0.009 to spare. Same 3/6 as the
+   previous guarded candidates: **the CV gain did not show up in the field.**
+   Śankarābharaṇaṁ and Tōḍi are wrong with near-zero margin.
+5. **One contract.** `src/carnatify/ml/raga_runtime.py`: `RagaCandidate.load`
+   (name from `configs/raga_candidates.json`, SHA256-verified, or a path),
+   `RagaGate.load` (registered JSON, never invented), `score_contour` and
+   `identify_raga` returning one `RagaResult` dict with ranked classes, the
+   three signals, the gate decision, and the model identity. The dev
+   evaluator, the field evaluator and `concert_pipeline.py` all go through it.
+   `scripts/INDEX.md` classifies all 135 scripts (current / audits / August
+   harnesses / archive). Tests: 503 passed, 1 xfailed.
+6. **Not wired into the product.** `backend/main.py` and `identify_clip.py`
+   still serve the legacy models, per Deepti's August directive. Wiring the
+   reference candidate is gated on her decision and, if the gate is to speak,
+   on a bar it has not met. The registry status string says so.
+
+What I would do next, in order: (a) label the other eight concerts, which is
+the only cheap thing that makes the field number mean anything; (b) decide
+the gate operating point from the published curve, or keep it off; (c) wire
+`identify_raga` with the gate closed so the product shows ranked candidates
+as candidates; (d) only then spend on the model again, and start with the
+two near-zero-margin field failures, not with a new encoder.
+
+The 2026-09-09 handoff follows unchanged.
+
 Prepared 2026-09-09, after the user reported only 8% weekly usage remaining and
 explicitly requested a comprehensive handoff rather than more autonomous LLM work.
 
