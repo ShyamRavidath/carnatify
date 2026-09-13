@@ -90,7 +90,10 @@ candidate or the gate's status (off).
   180 s windows, gate reported, outputs under
   `data/overhaul/context180_recovered_experiment/blind_concerts/`. Queries are
   cached, so scoring against the labels when they land is instant. No number
-  is read from these until the labels exist.
+  is read from these until the labels exist. **Complete**: 1,178 windows, 438
+  gate-accepted; see `data/overhaul/BLIND_CONCERTS.md`. Concert 2 shows the
+  model at its most confident during the Hindōḷaṁ *alapana* (margin 0.91):
+  label alapana as its own row with the raga.
 
 The 2026-09-09 handoff follows unchanged.
 
