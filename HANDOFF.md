@@ -54,6 +54,44 @@ the gate operating point from the published curve, or keep it off; (c) wire
 as candidates; (d) only then spend on the model again, and start with the
 two near-zero-margin field failures, not with a new encoder.
 
+### 2026-09-13 follow-up, run while Deepti labels the remaining concerts
+
+Five cheap items, each with its receipt; none changes the reference
+candidate or the gate's status (off).
+
+- **Field failures diagnosed** (`data/overhaul/FIELD_FAILURES.md`). Both
+  near-zero-margin misses are right-mela-wrong-raga: c1_1 Śankarābharaṇaṁ is
+  heard as Bēgaḍa / Dēvagāndhāri / Behāg / Bilahari (its janyas) in 15 of 20
+  windows; c2_1 Tōḍi as Sāvēri / Dhanyāsi / Māyāmāḷavagauḷa / Cakravākaṁ (same
+  R1 M1 D1 skeleton) in 8 of 8. Tonic is stable to 0 cents across windows;
+  position, duration and 0/+5/+7 tonic candidates rescue nothing. Two
+  predictions refuted (tonic instability, Tōḍi top-3). The next model lever,
+  if any, is phrase-level evidence within a mela, not more classes/duration/tonic.
+- **Wild clips** (`data/overhaul/WILD.md`). Reference candidate on the frozen
+  27: **16/27 = 59.3%**, top-3 20/27, the same integers as the July `raga_v3`
+  number on a 69-class answer space. Gate: 11 accepted, 8 correct (72.7%),
+  0/2 OOV accepted; the most confident wrong answer anywhere (Mōhanaṁ →
+  Hindōḷaṁ, margin 0.416) is here. Third set where gate precision misses its bar.
+  **Together with FIELD.md: the CV gain has now failed to transfer on two
+  independent phone-audio sets.**
+- **Off-tier fetch** (`data/overhaul/OFFTIER_FETCH.md`). Ten off-vocabulary
+  ragas would cross the five-track admission line with reachable archive.org
+  audio (Ranjani 16, Simhēndra madhyamaṁ 10, then 5–7 each). The August
+  "185 off-tier pairs" contained 93 files where the tala word *Adi* matched
+  the raga Pāḍi through the fetchers' vowel-folded matcher; the bug is in
+  `download_targeted_deficits.py`, excluded in the new script, not yet fixed
+  at source. Real off-tier supply: 79 pairs across 21 ragas. No fetch run.
+- **Backend** (`backend/main.py` `/identify-raga`, tests in
+  `tests/test_backend_identify_raga.py`). Serves the registry's reference
+  candidate through `raga_runtime`: ranked candidates, the three signals,
+  `gate.would_accept` for information, `asserted: false` always. Legacy
+  routes untouched. 503 on a deployment without the registry. Not deployed.
+- **Blind concert runs**: `concert_pipeline.py` over all 11 frozen concerts,
+  180 s windows, gate reported, outputs under
+  `data/overhaul/context180_recovered_experiment/blind_concerts/`. Queries are
+  cached, so scoring against the labels when they land is instant. No number
+  is read from these until the labels exist.
+
 The 2026-09-09 handoff follows unchanged.
 
 Prepared 2026-09-09, after the user reported only 8% weekly usage remaining and
