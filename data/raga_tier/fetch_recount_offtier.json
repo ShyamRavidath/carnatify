@@ -1,0 +1,900 @@
+{
+ "status": "offline reachability arithmetic; upper bound on candidate recordings, not trained tracks",
+ "matcher_bug_noted": "download_targeted_deficits vowel-folded matcher maps the tala word Adi to raga Pāḍi; excluded here",
+ "mp3_files_in_cached_metadata": 6692,
+ "admission_min_tracks": 5,
+ "reference_classes": 69,
+ "off_vocabulary_ragas_with_reachable_audio": 21,
+ "off_vocabulary_reachable_pairs": 79,
+ "off_vocabulary_ragas_that_would_cross_admission": 12,
+ "crossing": [
+  {
+   "raga": "ragamalika",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 18,
+   "reachable_new": 0
+  },
+  {
+   "raga": "Ranjani",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 1,
+   "reachable_new": 15
+  },
+  {
+   "raga": "Simhēndra madhyamaṁ",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 0,
+   "reachable_new": 10
+  },
+  {
+   "raga": "Kathanakutūhalaṁ",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 2,
+   "reachable_new": 5
+  },
+  {
+   "raga": "Mandāri",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 2,
+   "reachable_new": 5
+  },
+  {
+   "raga": "Rasikapriya",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 2,
+   "reachable_new": 4
+  },
+  {
+   "raga": "Śudda sāvēri",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 1,
+   "reachable_new": 5
+  },
+  {
+   "raga": "Dhanaśrī",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 2,
+   "reachable_new": 3
+  },
+  {
+   "raga": "Kalāvati",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 1,
+   "reachable_new": 4
+  },
+  {
+   "raga": "Sarasvatī manōhari",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 5,
+   "reachable_new": 0
+  },
+  {
+   "raga": "Sindhumandāri",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 0,
+   "reachable_new": 5
+  },
+  {
+   "raga": "Yamuna kalyāṇi",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 0,
+   "reachable_new": 5
+  }
+ ],
+ "thin_in_vocabulary_classes": 20,
+ "thin_classes_with_reachable_audio": 16,
+ "thin": [
+  {
+   "raga": "Pūrṇacandrika",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 9,
+   "on_disk_recordings": 14,
+   "reachable_new": 6
+  },
+  {
+   "raga": "Saurāṣtraṁ",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 7,
+   "on_disk_recordings": 9,
+   "reachable_new": 4
+  },
+  {
+   "raga": "Dvijāvanti",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 9,
+   "on_disk_recordings": 12,
+   "reachable_new": 2
+  },
+  {
+   "raga": "Janaranjani",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 8,
+   "on_disk_recordings": 15,
+   "reachable_new": 2
+  },
+  {
+   "raga": "Kuntalavarāḷi",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 5,
+   "on_disk_recordings": 5,
+   "reachable_new": 2
+  },
+  {
+   "raga": "Mānḍu",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 3,
+   "on_disk_recordings": 6,
+   "reachable_new": 2
+  },
+  {
+   "raga": "Śuddadhanyāsi",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 4,
+   "on_disk_recordings": 13,
+   "reachable_new": 2
+  },
+  {
+   "raga": "Āhiri",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 5,
+   "on_disk_recordings": 9,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Amṛtavarṣiṇi",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 2,
+   "on_disk_recordings": 7,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Jaganmōhini",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 7,
+   "on_disk_recordings": 16,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Jōnpuri",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 9,
+   "on_disk_recordings": 14,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Kedāraṁ",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 6,
+   "on_disk_recordings": 9,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Lalita",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 4,
+   "on_disk_recordings": 7,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Maṇirangu",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 6,
+   "on_disk_recordings": 8,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Nādanāmakriya",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 7,
+   "on_disk_recordings": 7,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Sāranga",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 3,
+   "on_disk_recordings": 6,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Bṛndāvana sāranga",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 3,
+   "on_disk_recordings": 12,
+   "reachable_new": 0
+  },
+  {
+   "raga": "Cittaranjani",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 3,
+   "on_disk_recordings": 8,
+   "reachable_new": 0
+  },
+  {
+   "raga": "Karṇāṭaka dēvagāndhāri",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 1,
+   "on_disk_recordings": 6,
+   "reachable_new": 0
+  },
+  {
+   "raga": "Vakuḷābharaṇaṁ",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 3,
+   "on_disk_recordings": 7,
+   "reachable_new": 0
+  }
+ ],
+ "per_raga": [
+  {
+   "raga": "Tōḍi",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 30,
+   "on_disk_recordings": 23,
+   "reachable_new": 26
+  },
+  {
+   "raga": "Kalyāṇi",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 33,
+   "on_disk_recordings": 26,
+   "reachable_new": 24
+  },
+  {
+   "raga": "Ranjani",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 1,
+   "reachable_new": 15
+  },
+  {
+   "raga": "Śrī",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 10,
+   "on_disk_recordings": 0,
+   "reachable_new": 13
+  },
+  {
+   "raga": "Sāvēri",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 28,
+   "on_disk_recordings": 27,
+   "reachable_new": 12
+  },
+  {
+   "raga": "Hamsadhvāni",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 25,
+   "on_disk_recordings": 30,
+   "reachable_new": 10
+  },
+  {
+   "raga": "Kamās",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 30,
+   "on_disk_recordings": 23,
+   "reachable_new": 10
+  },
+  {
+   "raga": "Simhēndra madhyamaṁ",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 0,
+   "reachable_new": 10
+  },
+  {
+   "raga": "Kāmavardani",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 36,
+   "on_disk_recordings": 30,
+   "reachable_new": 9
+  },
+  {
+   "raga": "Nāṭa",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 33,
+   "on_disk_recordings": 28,
+   "reachable_new": 9
+  },
+  {
+   "raga": "Śankarābharaṇaṁ",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 29,
+   "on_disk_recordings": 27,
+   "reachable_new": 9
+  },
+  {
+   "raga": "Kāṁbhōji",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 22,
+   "on_disk_recordings": 27,
+   "reachable_new": 8
+  },
+  {
+   "raga": "Kānaḍa",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 26,
+   "on_disk_recordings": 27,
+   "reachable_new": 8
+  },
+  {
+   "raga": "Behāg",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 26,
+   "on_disk_recordings": 18,
+   "reachable_new": 7
+  },
+  {
+   "raga": "Madhyamāvati",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 26,
+   "on_disk_recordings": 28,
+   "reachable_new": 7
+  },
+  {
+   "raga": "Mōhanaṁ",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 33,
+   "on_disk_recordings": 26,
+   "reachable_new": 6
+  },
+  {
+   "raga": "Pūrṇacandrika",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 9,
+   "on_disk_recordings": 14,
+   "reachable_new": 6
+  },
+  {
+   "raga": "Sindhubhairavi",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 32,
+   "on_disk_recordings": 27,
+   "reachable_new": 6
+  },
+  {
+   "raga": "Vasanta",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 21,
+   "on_disk_recordings": 28,
+   "reachable_new": 6
+  },
+  {
+   "raga": "Kathanakutūhalaṁ",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 2,
+   "reachable_new": 5
+  },
+  {
+   "raga": "Mandāri",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 2,
+   "reachable_new": 5
+  },
+  {
+   "raga": "Pūrvīkaḷyāṇi",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 31,
+   "on_disk_recordings": 27,
+   "reachable_new": 5
+  },
+  {
+   "raga": "Ṣanmukhapriya",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 33,
+   "on_disk_recordings": 25,
+   "reachable_new": 5
+  },
+  {
+   "raga": "Sindhumandāri",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 0,
+   "reachable_new": 5
+  },
+  {
+   "raga": "Śudda sāvēri",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 1,
+   "reachable_new": 5
+  },
+  {
+   "raga": "Yamuna kalyāṇi",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 0,
+   "reachable_new": 5
+  },
+  {
+   "raga": "Aṭāna",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 36,
+   "on_disk_recordings": 26,
+   "reachable_new": 4
+  },
+  {
+   "raga": "Harikāmbhōji",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 27,
+   "on_disk_recordings": 26,
+   "reachable_new": 4
+  },
+  {
+   "raga": "Kalāvati",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 1,
+   "reachable_new": 4
+  },
+  {
+   "raga": "Kāpi",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 28,
+   "on_disk_recordings": 28,
+   "reachable_new": 4
+  },
+  {
+   "raga": "Mukhāri",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 23,
+   "on_disk_recordings": 15,
+   "reachable_new": 4
+  },
+  {
+   "raga": "Rasikapriya",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 2,
+   "reachable_new": 4
+  },
+  {
+   "raga": "Saurāṣtraṁ",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 7,
+   "on_disk_recordings": 9,
+   "reachable_new": 4
+  },
+  {
+   "raga": "Ānandabhairavi",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 23,
+   "on_disk_recordings": 18,
+   "reachable_new": 3
+  },
+  {
+   "raga": "Bhairavi",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 32,
+   "on_disk_recordings": 25,
+   "reachable_new": 3
+  },
+  {
+   "raga": "Dhanaśrī",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 2,
+   "reachable_new": 3
+  },
+  {
+   "raga": "Dhanyāsi",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 22,
+   "on_disk_recordings": 23,
+   "reachable_new": 3
+  },
+  {
+   "raga": "Sālaga bhairavi",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 0,
+   "reachable_new": 3
+  },
+  {
+   "raga": "Vāgadīśvari",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 1,
+   "reachable_new": 3
+  },
+  {
+   "raga": "Bēgaḍa",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 22,
+   "on_disk_recordings": 21,
+   "reachable_new": 2
+  },
+  {
+   "raga": "Bilahari",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 31,
+   "on_disk_recordings": 22,
+   "reachable_new": 2
+  },
+  {
+   "raga": "Cakravākaṁ",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 11,
+   "on_disk_recordings": 15,
+   "reachable_new": 2
+  },
+  {
+   "raga": "Dēś",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 0,
+   "reachable_new": 2
+  },
+  {
+   "raga": "Dvijāvanti",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 9,
+   "on_disk_recordings": 12,
+   "reachable_new": 2
+  },
+  {
+   "raga": "Gaṁbhīra nāṭa",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 2,
+   "reachable_new": 2
+  },
+  {
+   "raga": "Hindōḷaṁ",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 17,
+   "on_disk_recordings": 24,
+   "reachable_new": 2
+  },
+  {
+   "raga": "Janaranjani",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 8,
+   "on_disk_recordings": 15,
+   "reachable_new": 2
+  },
+  {
+   "raga": "Karaharapriya",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 29,
+   "on_disk_recordings": 25,
+   "reachable_new": 2
+  },
+  {
+   "raga": "Kuntalavarāḷi",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 5,
+   "on_disk_recordings": 5,
+   "reachable_new": 2
+  },
+  {
+   "raga": "Mānḍu",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 3,
+   "on_disk_recordings": 6,
+   "reachable_new": 2
+  },
+  {
+   "raga": "Rītigauḷa",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 26,
+   "on_disk_recordings": 24,
+   "reachable_new": 2
+  },
+  {
+   "raga": "Sahānā",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 22,
+   "on_disk_recordings": 12,
+   "reachable_new": 2
+  },
+  {
+   "raga": "Sucaritra",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 0,
+   "reachable_new": 2
+  },
+  {
+   "raga": "Śuddadhanyāsi",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 4,
+   "on_disk_recordings": 13,
+   "reachable_new": 2
+  },
+  {
+   "raga": "Suraṭi",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 22,
+   "on_disk_recordings": 15,
+   "reachable_new": 2
+  },
+  {
+   "raga": "Varāḷi",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 25,
+   "on_disk_recordings": 23,
+   "reachable_new": 2
+  },
+  {
+   "raga": "Ābhōgi",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 10,
+   "on_disk_recordings": 11,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Āhiri",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 5,
+   "on_disk_recordings": 9,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Amṛtavarṣiṇi",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 2,
+   "on_disk_recordings": 7,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Bahudāri",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 1,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Bhūṣāvaḷi",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 0,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Gamakakriyā",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 0,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Gauḷa",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 15,
+   "on_disk_recordings": 13,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Haṁsānandi",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 14,
+   "on_disk_recordings": 24,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Jaganmōhini",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 7,
+   "on_disk_recordings": 16,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Jōnpuri",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 9,
+   "on_disk_recordings": 14,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Kēdāragauḷa",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 14,
+   "on_disk_recordings": 13,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Kedāraṁ",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 6,
+   "on_disk_recordings": 9,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Lalita",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 4,
+   "on_disk_recordings": 7,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Latāngi",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 13,
+   "on_disk_recordings": 17,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Maṇirangu",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 6,
+   "on_disk_recordings": 8,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Mārgahindōḷaṁ",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 0,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Māyāmāḷavagauḷa",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 22,
+   "on_disk_recordings": 11,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Nādanāmakriya",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 7,
+   "on_disk_recordings": 7,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Nāṭakapriya",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 1,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Nāṭakurinji",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 18,
+   "on_disk_recordings": 11,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Puṇṇāgavarāḷi",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 13,
+   "on_disk_recordings": 21,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Sāma",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 26,
+   "on_disk_recordings": 21,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Sārāmati",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 1,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Sāranga",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 3,
+   "on_disk_recordings": 6,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Sencuruṭṭi",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 21,
+   "on_disk_recordings": 12,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Śrīranjani",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 21,
+   "on_disk_recordings": 19,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Yadukula kāṁbōji",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 16,
+   "on_disk_recordings": 9,
+   "reachable_new": 1
+  },
+  {
+   "raga": "Bṛndāvana sāranga",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 3,
+   "on_disk_recordings": 12,
+   "reachable_new": 0
+  },
+  {
+   "raga": "Cittaranjani",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 3,
+   "on_disk_recordings": 8,
+   "reachable_new": 0
+  },
+  {
+   "raga": "Dēvagāndhāri",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 13,
+   "on_disk_recordings": 9,
+   "reachable_new": 0
+  },
+  {
+   "raga": "Hamīr kaḷyaṇi",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 4,
+   "reachable_new": 0
+  },
+  {
+   "raga": "Hussēnī",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 12,
+   "on_disk_recordings": 7,
+   "reachable_new": 0
+  },
+  {
+   "raga": "Karṇāṭaka dēvagāndhāri",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 1,
+   "on_disk_recordings": 6,
+   "reachable_new": 0
+  },
+  {
+   "raga": "Lalita pancamaṁ",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 1,
+   "reachable_new": 0
+  },
+  {
+   "raga": "Nīlāṁbari",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 11,
+   "on_disk_recordings": 16,
+   "reachable_new": 0
+  },
+  {
+   "raga": "ragamalika",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 18,
+   "reachable_new": 0
+  },
+  {
+   "raga": "Sarasvatī manōhari",
+   "in_reference_vocabulary": false,
+   "reference_training_tracks": 0,
+   "on_disk_recordings": 5,
+   "reachable_new": 0
+  },
+  {
+   "raga": "Vakuḷābharaṇaṁ",
+   "in_reference_vocabulary": true,
+   "reference_training_tracks": 3,
+   "on_disk_recordings": 7,
+   "reachable_new": 0
+  }
+ ]
+}
