@@ -1,0 +1,784 @@
+{
+  "status": "diagnostic sweeps on labelled items; no tuning, no model change",
+  "prereg": "data/overhaul/FIELD_FAILURE_PREREG.md",
+  "model": {
+    "name": "context180",
+    "sha256": "f594584402cb2ae35532612e673c194661706fcdfe4b69bbecc69b6d50316e2b",
+    "path": "/Users/shyamravidath/carnatify/data/overhaul/context180_recovered_experiment/training/raga.joblib",
+    "feature_version": "melody_v1_voiced_compressed",
+    "representation": "voiced",
+    "window_s": 180,
+    "n_classes": 69
+  },
+  "gate": {
+    "name": "margin_v1_context180",
+    "signal": "margin",
+    "threshold": 0.16277227656365623,
+    "status": "registered; dev bar (precision>=0.85, OOV-FA<=0.15) FAILED narrowly (82.9% / 15.6% at 38% coverage); off in the product by rule",
+    "source": "/Users/shyamravidath/carnatify/data/overhaul/context180_recovered_experiment/gate.json"
+  },
+  "step_s": 30.0,
+  "items": {
+    "c1_1": {
+      "concert": "long_concert_1",
+      "truth": "Śankarābharaṇaṁ",
+      "interval_s": [
+        2,
+        755
+      ],
+      "n_position_windows": 20,
+      "position_top1_correct": 5,
+      "position_top3_correct": 11,
+      "position_accepted": 0,
+      "position_accepted_correct": 0,
+      "tonic_median_hz": 138.8064422607422,
+      "tonic_cents_from_median": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "tonic_windows_over_50c": 0,
+      "position": [
+        {
+          "answered": true,
+          "top3": [
+            "Bēgaḍa",
+            "Pūrvīkaḷyāṇi",
+            "Ānandabhairavi"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.09585976492307946,
+          "accepted": false,
+          "start_s": 2.0,
+          "duration_s": 180.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 114.7675283446712
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Bēgaḍa",
+            "Pūrvīkaḷyāṇi",
+            "Aṭāna"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.08764083646878351,
+          "accepted": false,
+          "start_s": 32.0,
+          "duration_s": 180.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 116.08816326530612
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Bēgaḍa",
+            "Śankarābharaṇaṁ",
+            "Aṭāna"
+          ],
+          "correct": false,
+          "top3_correct": true,
+          "margin": 0.0349186560287813,
+          "accepted": false,
+          "start_s": 62.0,
+          "duration_s": 180.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 114.54113378684808
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Bēgaḍa",
+            "Śankarābharaṇaṁ",
+            "Aṭāna"
+          ],
+          "correct": false,
+          "top3_correct": true,
+          "margin": 0.01090438969987595,
+          "accepted": false,
+          "start_s": 92.0,
+          "duration_s": 180.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 116.22748299319728
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Śankarābharaṇaṁ",
+            "Bēgaḍa",
+            "Aṭāna"
+          ],
+          "correct": true,
+          "top3_correct": true,
+          "margin": 0.007002694696112144,
+          "accepted": false,
+          "start_s": 122.0,
+          "duration_s": 180.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 112.26848072562359
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Śankarābharaṇaṁ",
+            "Dēvagāndhāri",
+            "Dhanyāsi"
+          ],
+          "correct": true,
+          "top3_correct": true,
+          "margin": 0.012307195299098517,
+          "accepted": false,
+          "start_s": 152.0,
+          "duration_s": 180.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 108.7071201814059
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Śankarābharaṇaṁ",
+            "Dēvagāndhāri",
+            "Mukhāri"
+          ],
+          "correct": true,
+          "top3_correct": true,
+          "margin": 0.05129833190251487,
+          "accepted": false,
+          "start_s": 182.0,
+          "duration_s": 180.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 113.62104308390023
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Dēvagāndhāri",
+            "Śankarābharaṇaṁ",
+            "Nāṭa"
+          ],
+          "correct": false,
+          "top3_correct": true,
+          "margin": 0.06022600164501002,
+          "accepted": false,
+          "start_s": 212.0,
+          "duration_s": 180.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 116.85732426303855
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Dēvagāndhāri",
+            "Behāg",
+            "Nāṭa"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.09428550747612219,
+          "accepted": false,
+          "start_s": 242.0,
+          "duration_s": 180.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 115.40607709750567
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Dēvagāndhāri",
+            "Kalyāṇi",
+            "Aṭāna"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.03042733634747563,
+          "accepted": false,
+          "start_s": 272.0,
+          "duration_s": 180.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 116.09396825396826
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Kalyāṇi",
+            "Dēvagāndhāri",
+            "Behāg"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.011839942384878288,
+          "accepted": false,
+          "start_s": 302.0,
+          "duration_s": 180.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 117.56553287981859
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Dēvagāndhāri",
+            "Kalyāṇi",
+            "Behāg"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.04422835296297789,
+          "accepted": false,
+          "start_s": 332.0,
+          "duration_s": 180.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 118.31437641723356
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Behāg",
+            "Dēvagāndhāri",
+            "Kalyāṇi"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.004609123867537868,
+          "accepted": false,
+          "start_s": 362.0,
+          "duration_s": 180.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 118.64816326530612
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Behāg",
+            "Dēvagāndhāri",
+            "Saurāṣtraṁ"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.009064415524958402,
+          "accepted": false,
+          "start_s": 392.0,
+          "duration_s": 180.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 117.76580498866214
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Behāg",
+            "Bilahari",
+            "Pūrvīkaḷyāṇi"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.04222634495105648,
+          "accepted": false,
+          "start_s": 422.0,
+          "duration_s": 180.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 116.54385487528344
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Bilahari",
+            "Śankarābharaṇaṁ",
+            "Pūrvīkaḷyāṇi"
+          ],
+          "correct": false,
+          "top3_correct": true,
+          "margin": 0.003260541417572149,
+          "accepted": false,
+          "start_s": 452.0,
+          "duration_s": 180.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 115.80371882086168
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Śankarābharaṇaṁ",
+            "Behāg",
+            "Bēgaḍa"
+          ],
+          "correct": true,
+          "top3_correct": true,
+          "margin": 0.010667863243726039,
+          "accepted": false,
+          "start_s": 482.0,
+          "duration_s": 180.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 116.29714285714286
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Bēgaḍa",
+            "Śankarābharaṇaṁ",
+            "Behāg"
+          ],
+          "correct": false,
+          "top3_correct": true,
+          "margin": 0.008321589651956174,
+          "accepted": false,
+          "start_s": 512.0,
+          "duration_s": 180.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 112.860589569161
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Śankarābharaṇaṁ",
+            "Bilahari",
+            "Janaranjani"
+          ],
+          "correct": true,
+          "top3_correct": true,
+          "margin": 0.006150758184875205,
+          "accepted": false,
+          "start_s": 542.0,
+          "duration_s": 180.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 109.11637188208617
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Bilahari",
+            "Janaranjani",
+            "Śankarābharaṇaṁ"
+          ],
+          "correct": false,
+          "top3_correct": true,
+          "margin": 0.009708710214443528,
+          "accepted": false,
+          "start_s": 572.0,
+          "duration_s": 180.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 109.44725623582767
+        }
+      ],
+      "duration": [
+        {
+          "answered": true,
+          "top3": [
+            "Dēvagāndhāri",
+            "Kalyāṇi",
+            "Śankarābharaṇaṁ"
+          ],
+          "correct": false,
+          "top3_correct": true,
+          "margin": 0.16665984801034606,
+          "accepted": true,
+          "start_s": 348.5,
+          "duration_s": 60.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 40.18213151927438
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Dēvagāndhāri",
+            "Kalyāṇi",
+            "Behāg"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.09406361071958802,
+          "accepted": false,
+          "start_s": 318.5,
+          "duration_s": 120.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 76.28625850340136
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Dēvagāndhāri",
+            "Kalyāṇi",
+            "Nāṭa"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.008548266105041336,
+          "accepted": false,
+          "start_s": 288.5,
+          "duration_s": 180.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 113.06376417233561
+        }
+      ],
+      "tonic_sweep": [
+        {
+          "answered": true,
+          "top3": [
+            "Dēvagāndhāri",
+            "Kalyāṇi",
+            "Nāṭa"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.008548266105041336,
+          "accepted": false,
+          "start_s": 288.5,
+          "duration_s": 180.0,
+          "tonic_hz": 138.8064422607422,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 113.06376417233561,
+          "semitones": 0
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Aṭāna",
+            "Hindōḷaṁ",
+            "Behāg"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.005161518810232302,
+          "accepted": false,
+          "start_s": 288.5,
+          "duration_s": 180.0,
+          "tonic_hz": 185.2843711451904,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 113.06376417233561,
+          "semitones": 5
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Rītigauḷa",
+            "Kāpi",
+            "Mōhanaṁ"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.08653835490057205,
+          "accepted": false,
+          "start_s": 288.5,
+          "duration_s": 180.0,
+          "tonic_hz": 207.9746747553445,
+          "tonic_estimated_hz": 138.8064422607422,
+          "voiced_s": 113.06376417233561,
+          "semitones": 7
+        }
+      ]
+    },
+    "c2_1": {
+      "concert": "long_concert_2",
+      "truth": "Tōḍi",
+      "interval_s": [
+        12,
+        422
+      ],
+      "n_position_windows": 8,
+      "position_top1_correct": 0,
+      "position_top3_correct": 3,
+      "position_accepted": 0,
+      "position_accepted_correct": 0,
+      "tonic_median_hz": 139.6118927001953,
+      "tonic_cents_from_median": [
+        10.016719924042604,
+        10.016719924042604,
+        -488.80859890553666,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "tonic_windows_over_50c": 1,
+      "position": [
+        {
+          "answered": true,
+          "top3": [
+            "Sāvēri",
+            "Tōḍi",
+            "Māyāmāḷavagauḷa"
+          ],
+          "correct": false,
+          "top3_correct": true,
+          "margin": 0.015196147632781987,
+          "accepted": false,
+          "start_s": 12.0,
+          "duration_s": 180.0,
+          "tonic_hz": 140.42201232910156,
+          "tonic_estimated_hz": 140.42201232910156,
+          "voiced_s": 109.26730158730159
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Sāvēri",
+            "Tōḍi",
+            "Māyāmāḷavagauḷa"
+          ],
+          "correct": false,
+          "top3_correct": true,
+          "margin": 0.06840304276041298,
+          "accepted": false,
+          "start_s": 42.0,
+          "duration_s": 180.0,
+          "tonic_hz": 140.42201232910156,
+          "tonic_estimated_hz": 140.42201232910156,
+          "voiced_s": 109.57786848072563
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Nādanāmakriya",
+            "Pūrṇacandrika",
+            "Rītigauḷa"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.09141663559818725,
+          "accepted": false,
+          "start_s": 72.0,
+          "duration_s": 180.0,
+          "tonic_hz": 210.53810119628906,
+          "tonic_estimated_hz": 210.53810119628906,
+          "voiced_s": 108.98575963718821
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Dhanyāsi",
+            "Tōḍi",
+            "Amṛtavarṣiṇi"
+          ],
+          "correct": false,
+          "top3_correct": true,
+          "margin": 0.03629467481271398,
+          "accepted": false,
+          "start_s": 102.0,
+          "duration_s": 180.0,
+          "tonic_hz": 139.6118927001953,
+          "tonic_estimated_hz": 139.6118927001953,
+          "voiced_s": 107.61868480725624
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Sāvēri",
+            "Māyāmāḷavagauḷa",
+            "Cakravākaṁ"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.012148834236444195,
+          "accepted": false,
+          "start_s": 132.0,
+          "duration_s": 180.0,
+          "tonic_hz": 139.6118927001953,
+          "tonic_estimated_hz": 139.6118927001953,
+          "voiced_s": 109.18022675736961
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Māyāmāḷavagauḷa",
+            "Cakravākaṁ",
+            "Amṛtavarṣiṇi"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.01979469815910484,
+          "accepted": false,
+          "start_s": 162.0,
+          "duration_s": 180.0,
+          "tonic_hz": 139.6118927001953,
+          "tonic_estimated_hz": 139.6118927001953,
+          "voiced_s": 104.50430839002267
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Cakravākaṁ",
+            "Māyāmāḷavagauḷa",
+            "Amṛtavarṣiṇi"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.020496885860227465,
+          "accepted": false,
+          "start_s": 192.0,
+          "duration_s": 180.0,
+          "tonic_hz": 139.6118927001953,
+          "tonic_estimated_hz": 139.6118927001953,
+          "voiced_s": 106.7914739229025
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Māyāmāḷavagauḷa",
+            "Cakravākaṁ",
+            "Lalita"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.07125755080169771,
+          "accepted": false,
+          "start_s": 222.0,
+          "duration_s": 180.0,
+          "tonic_hz": 139.6118927001953,
+          "tonic_estimated_hz": 139.6118927001953,
+          "voiced_s": 107.74639455782314
+        }
+      ],
+      "duration": [
+        {
+          "answered": true,
+          "top3": [
+            "Pūrṇacandrika",
+            "Amṛtavarṣiṇi",
+            "Nīlāṁbari"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.045347044901896005,
+          "accepted": false,
+          "start_s": 187.0,
+          "duration_s": 60.0,
+          "tonic_hz": 141.23684692382812,
+          "tonic_estimated_hz": 141.23684692382812,
+          "voiced_s": 38.269387755102045
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Cakravākaṁ",
+            "Dhanyāsi",
+            "Amṛtavarṣiṇi"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.014966774744767264,
+          "accepted": false,
+          "start_s": 157.0,
+          "duration_s": 120.0,
+          "tonic_hz": 139.6118927001953,
+          "tonic_estimated_hz": 139.6118927001953,
+          "voiced_s": 69.62213151927438
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Cakravākaṁ",
+            "Dhanyāsi",
+            "Amṛtavarṣiṇi"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.01858733444304761,
+          "accepted": false,
+          "start_s": 127.0,
+          "duration_s": 180.0,
+          "tonic_hz": 139.6118927001953,
+          "tonic_estimated_hz": 139.6118927001953,
+          "voiced_s": 108.31818594104308
+        }
+      ],
+      "tonic_sweep": [
+        {
+          "answered": true,
+          "top3": [
+            "Cakravākaṁ",
+            "Dhanyāsi",
+            "Amṛtavarṣiṇi"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.01858733444304761,
+          "accepted": false,
+          "start_s": 127.0,
+          "duration_s": 180.0,
+          "tonic_hz": 139.6118927001953,
+          "tonic_estimated_hz": 139.6118927001953,
+          "voiced_s": 108.31818594104308,
+          "semitones": 0
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Hamsadhvāni",
+            "Śrī",
+            "Bhairavi"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.10497545671212549,
+          "accepted": false,
+          "start_s": 127.0,
+          "duration_s": 180.0,
+          "tonic_hz": 186.3595184923312,
+          "tonic_estimated_hz": 139.6118927001953,
+          "voiced_s": 108.31818594104308,
+          "semitones": 5
+        },
+        {
+          "answered": true,
+          "top3": [
+            "Nādanāmakriya",
+            "Pūrṇacandrika",
+            "Rītigauḷa"
+          ],
+          "correct": false,
+          "top3_correct": false,
+          "margin": 0.07856312573925295,
+          "accepted": false,
+          "start_s": 127.0,
+          "duration_s": 180.0,
+          "tonic_hz": 209.18148684885054,
+          "tonic_estimated_hz": 139.6118927001953,
+          "voiced_s": 108.31818594104308,
+          "semitones": 7
+        }
+      ]
+    }
+  },
+  "elapsed_s": 255.61020679119974
+}
