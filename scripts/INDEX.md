@@ -21,6 +21,9 @@ code goes through `src/carnatify/ml/raga_runtime.py`, not a new script.
 | `abstain_gate.py` | Leave-class-bin-out gate selection and one-shot dev evaluation (`ABSTAIN_GATE_PREREG.md`) |
 | `evaluate_annotated_raga.py` | 184-query Saraga development evaluation through `raga_runtime` |
 | `evaluate_labeled_intervals.py` | Oracle-boundary field diagnostic on Deepti's labelled items through `raga_runtime` |
+| `diagnose_field_failures.py` | Position / duration / tonic-candidate sweeps on labelled field items (`FIELD_FAILURE_PREREG.md`) |
+| `evaluate_wild_clips.py` | Frozen 27 wild clips, whole clip, through `raga_runtime` (`WILD_PREREG.md`) |
+| `raga_fetch_offtier.py` | Offline off-vocabulary reachability against the 69-class vocabulary (`OFFTIER_FETCH.md`) |
 | `concert_pipeline.py` | Bounded whole-concert inference: activity, raga evidence, unverified segments |
 | `long_concert_freeze.py`, `long_concert_labels.py`, `long_concert_score.py` | Frozen-hash check, label template/validator, interval scorer for the 11 concerts |
 | `summarize_overhaul.py` | `paired_interval`: the cluster bootstrap every paired number uses |
