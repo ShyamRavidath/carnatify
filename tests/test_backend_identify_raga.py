@@ -1,0 +1,92 @@
+"""/identify-raga: ranked candidates through the contract, never an asserted answer."""
+from pathlib import Path
+import numpy as np
+import pytest
+import joblib
+from fastapi.testclient import TestClient
+
+from carnatify.ml.raga_runtime import RagaCandidate, RagaGate
+from carnatify.ml.distribution_classifier import DistributionKernelRidge
+from carnatify.ml.melody_features import FEATURE_VERSIONS, feature_vector
+
+HOP = 128 / 44100
+
+
+def contour(pattern, seconds=30, tonic=150.0):
+    n = int(seconds / HOP)
+    steps = np.repeat(np.array(pattern, dtype=float), max(1, n // len(pattern)))[:n]
+    return tonic * 2 ** (steps / 1200)
+
+
+@pytest.fixture
+def candidate(tmp_path):
+    rng = np.random.default_rng(1)
+    X, y = [], []
+    for label, pattern in (('A', [0, 200, 400, 700, 900]), ('B', [0, 100, 300, 700, 800])):
+        for _ in range(4):
+            X.append(feature_vector(contour(np.array(pattern) + rng.normal(0, 15, len(pattern))), 150.0, HOP, 'voiced'))
+            y.append(label)
+    model = DistributionKernelRidge(alpha=.1, gamma=2, mode='tdms').fit(np.stack(X), np.array(y))
+    path = tmp_path / 'raga.joblib'
+    joblib.dump(dict(model=model, representation='voiced', feature_version=FEATURE_VERSIONS['voiced'],
+                     window_s=30, calibration=dict(temperature=.1)), path)
+    return RagaCandidate.load(str(path))
+
+
+@pytest.fixture
+def api(monkeypatch, candidate):
+    from backend import main
+    monkeypatch.setattr(main.limiter, 'enabled', False)
+    monkeypatch.setattr(main, '_separate_vocals_sync', lambda *a: pytest.fail('No separation on this route'))
+    gate = RagaGate('margin', 1e9, 'never', 'test gate that never accepts')
+    monkeypatch.setattr(main, '_get_raga_candidate', lambda: (candidate, gate))
+    seen = []
+
+    def extract(path):
+        assert Path(path).exists()
+        seen.append(Path(path))
+        return contour([0, 200, 400, 700, 900]), 150.0, HOP, 30.0
+    monkeypatch.setattr(main, '_extract_melody_mix', extract)
+    with TestClient(main.app) as client:
+        yield client, seen
+
+
+def test_identify_raga_returns_candidates_never_asserts_and_cleans_upload(api):
+    client, seen = api
+    r = client.post('/identify-raga', files={'file': ('clip.wav', b'x' * 2000, 'audio/wav')})
+    assert r.status_code == 200, r.text
+    body = r.json()
+    assert body['asserted'] is False and body['answered'] is True
+    assert body['candidates'][0]['raga'] == 'A'
+    assert set(body['signals']) == {'max_score', 'margin', 'softmax_max'}
+    assert body['gate']['would_accept'] is False and body['gate']['name'] == 'never'
+    assert body['model']['feature_version'] == FEATURE_VERSIONS['voiced']
+    assert seen and not seen[0].exists()
+
+
+def test_identify_raga_abstains_without_tonic(api, monkeypatch):
+    from backend import main
+    client, _ = api
+    monkeypatch.setattr(main, '_extract_melody_mix', lambda p: (contour([0, 200, 400, 700, 900]), None, HOP, 30.0))
+    body = client.post('/identify-raga', files={'file': ('clip.wav', b'x', 'audio/wav')}).json()
+    assert body['answered'] is False and body['reason'] == 'missing_tonic' and body['candidates'] == []
+
+
+def test_identify_raga_503_when_candidate_missing(monkeypatch):
+    from backend import main
+    monkeypatch.setattr(main.limiter, 'enabled', False)
+    monkeypatch.setattr(main, '_get_raga_candidate', lambda: (None, None))
+    with TestClient(main.app) as client:
+        r = client.post('/identify-raga', files={'file': ('clip.wav', b'x', 'audio/wav')})
+    assert r.status_code == 503
+
+
+def test_identify_raga_rejects_unknown_content_type(api):
+    client, _ = api
+    r = client.post('/identify-raga', files={'file': ('clip.bin', b'x', 'application/octet-stream')})
+    assert r.status_code == 415
+
+
+def test_committed_registry_resolves_from_backend_root():
+    from backend import main
+    assert main._RAGA_REGISTRY.exists()

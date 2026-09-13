@@ -389,6 +389,90 @@ async def predict_audio(request: Request, file: UploadFile = File(...)):
     }
 
 
+# ── reference raga candidate: ranked candidates, never an asserted answer ────
+# Wired 2026-09-13 through the single scoring contract. The registered gate is
+# reported (`would_accept`) but the route never asserts an identity: the gate
+# missed its preregistered bar (data/overhaul/ABSTAIN_GATE.md). The legacy
+# /predict-audio and /identify routes are unchanged.
+_RAGA_REGISTRY = _resolve("configs/raga_candidates.json")
+_RAGA_CANDIDATE = None
+
+
+def _get_raga_candidate():
+    """Lazy, cached; None when the registry or bundle is absent (e.g. a Space)."""
+    global _RAGA_CANDIDATE
+    if _RAGA_CANDIDATE is None:
+        try:
+            from carnatify.ml.raga_runtime import RagaCandidate, ROOT as _RT_ROOT
+            registry = json.loads(_RAGA_REGISTRY.read_text())
+            name = registry["reference"]
+            candidate = RagaCandidate.load(name, registry=_RAGA_REGISTRY)
+            gate = candidate.default_gate(registry=_RAGA_REGISTRY)
+            _RAGA_CANDIDATE = (candidate, gate)
+        except Exception as exc:  # missing files, hash mismatch, import error
+            logger.warning("Reference raga candidate unavailable: %s", exc)
+            _RAGA_CANDIDATE = (None, None)
+    return _RAGA_CANDIDATE
+
+
+def _extract_melody_mix(audio_path: str):
+    """Original-mix tonic plus Melodia on a bounded window: the training contract."""
+    from carnatify.audio.melody_frontend import extract_waveform, HOP_S
+    y, sr = load_upload_audio(audio_path, 44100, 180.0)
+    if len(y) / sr < 10.0:
+        return None, None, HOP_S, float(len(y) / sr)
+    f0, tonic = extract_waveform(y, sr)
+    return f0, tonic, HOP_S, float(len(y) / sr)
+
+
+@app.post("/identify-raga")
+@limiter.limit("4/minute")
+async def identify_raga_route(request: Request, file: UploadFile = File(...)):
+    from carnatify.ml.raga_runtime import score_contour
+
+    candidate, gate = _get_raga_candidate()
+    if candidate is None:
+        raise HTTPException(status_code=503, detail="Reference raga candidate is not available on this deployment.")
+    data = await file.read()
+    if len(data) > 30 * 1024 * 1024:
+        raise HTTPException(status_code=413, detail="File too large (30 MB limit)")
+    suffix = {"ogg": ".ogg", "opus": ".ogg", "mp4": ".m4a", "m4a": ".m4a", "aac": ".m4a",
+              "webm": ".webm", "mpeg": ".mp3", "mp3": ".mp3", "wav": ".wav"}
+    ct = (file.content_type or "").lower()
+    ext = next((v for k, v in suffix.items() if k in ct), None)
+    if ext is None:
+        raise HTTPException(status_code=415, detail=f"Unsupported audio content-type: {file.content_type or 'none'}.")
+    tmp_path = None
+    try:
+        with tempfile.NamedTemporaryFile(suffix=ext, delete=False) as tmp:
+            tmp.write(data)
+            tmp_path = tmp.name
+        try:
+            loop = asyncio.get_running_loop()
+            f0, tonic, hop_s, duration = await loop.run_in_executor(None, lambda: _extract_melody_mix(tmp_path))
+        except Exception as exc:
+            raise HTTPException(status_code=422, detail=f"Could not decode audio: {exc}")
+    finally:
+        if tmp_path and os.path.exists(tmp_path):
+            os.unlink(tmp_path)
+    if f0 is None:
+        raise HTTPException(status_code=422, detail="clip too short, need at least 10 seconds")
+    result = score_contour(candidate, f0, tonic, hop_s, gate)
+    return {
+        "asserted": False,
+        "answered": result["answered"],
+        "reason": result["reason"],
+        "candidates": [{"raga": r["raga"], "probability": r["probability"], "score": r["score"]}
+                       for r in result["ranked"]],
+        "signals": result["signals"],
+        "gate": {**(result["gate"] or {}), "would_accept": result["accepted"]} if result["gate"] else None,
+        "tonic": tonic,
+        "voiced_s": result["voiced_s"],
+        "duration": duration,
+        "model": result["model"],
+    }
+
+
 @app.post("/identify")
 @limiter.limit("2/minute")
 async def identify(request: Request, file: UploadFile = File(...), fast: bool = False):
