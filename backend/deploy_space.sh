@@ -12,7 +12,7 @@ HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT="$(cd "$HERE/.." && pwd)"
 PY="${PY:-$ROOT/venv_train/bin/python}"
 
-"$HERE/build_space.sh"
+bash "$HERE/build_space.sh"
 
 # upload_folder stores large files (the 138 MB raga.joblib) via LFS/Xet
 # automatically; no git clone or `git lfs track` needed.
