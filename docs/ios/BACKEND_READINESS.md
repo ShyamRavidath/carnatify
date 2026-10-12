@@ -1,5 +1,16 @@
 # Backend readiness for a native iOS client
 
+## Live check (2026-10-11, after redeploy)
+Space `shyamravidath/carnatify` rebuilt from `3db6644` (`backend/deploy_space.sh`; essentia pinned to
+`2.1b6.dev1389` because `>=2.1b6` matches no PyPI release). `GET /health` -> `{"status":"ok"}`.
+`POST /identify-raga`, clips encoded like the app (AAC m4a, 44.1 kHz mono, 64 kbps):
+- 180 s Hindolam excerpt (`long_concert_2.mp3` from 16:00), sent as `application/octet-stream`:
+  200 in 13.0 s, top-3 Hindōḷaṁ 0.539 / Nāṭa 0.043 / Lalita 0.039, gate would_accept, no server paths in body.
+- 71 s "Amba Kamakshi" (Bhairavi, `~/sung_tests`), `audio/m4a`: 200, Bhairavi 0.434 / Mukhāri 0.135 / Śrī 0.067;
+  31.7 s on first call after boot (model load), 5.9 s on repeat.
+
+The audit below predates the redeploy and the round-2 decisions.
+
 Audit of `backend/main.py` at `5715742` (branch `probe/duration-and-negative-arm`), 2026-10-11.
 Nothing in the backend was changed. Tags: **[M]** measured locally (FastAPI `TestClient`, `venv_train`,
 real models, no mocks); **[C]** read from code; **[D]** from DEPLOY.md. Harness, clips and raw JSONL
