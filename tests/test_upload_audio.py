@@ -59,6 +59,6 @@ def test_backend_uses_only_explicitly_bounded_shared_upload_decoding():
                    and n.func.attr=='load' for n in ast.walk(tree))
     calls=[n for n in ast.walk(tree) if isinstance(n,ast.Call) and isinstance(n.func,ast.Name)
            and n.func.id=='load_upload_audio']
-    assert len(calls)==8
+    assert len(calls)==9  # 8 legacy sites + /identify-raga
     assert all(len(n.args)==3 and isinstance(n.args[2],ast.Constant)
                and 0<n.args[2].value<=180 for n in calls)

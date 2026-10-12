@@ -256,6 +256,17 @@ def _separate_vocals_sync(audio_path: str, out_dir: str) -> str:
     return str(vocal_path)
 
 
+_UPLOAD_SUFFIXES = (("ogg", ".ogg"), ("opus", ".ogg"), ("mp4", ".m4a"), ("m4a", ".m4a"),
+                    ("aac", ".m4a"), ("webm", ".webm"), ("mpeg", ".mp3"), ("mp3", ".mp3"),
+                    ("wav", ".wav"))
+
+
+def _upload_suffix(content_type: str | None) -> str | None:
+    """Temp-file suffix for an upload so ffmpeg picks the right demuxer; None if unsupported."""
+    ct = (content_type or "").lower()
+    return next((s for k, s in _UPLOAD_SUFFIXES if k in ct), None)
+
+
 @app.post("/predict-audio")
 @limiter.limit("2/minute")
 async def predict_audio(request: Request, file: UploadFile = File(...)):
@@ -265,19 +276,8 @@ async def predict_audio(request: Request, file: UploadFile = File(...)):
     if len(data) > 30 * 1024 * 1024:
         raise HTTPException(status_code=413, detail="File too large (30 MB limit)")
 
-    # Determine file suffix from content-type so ffmpeg picks the right demuxer.
-    ct = (file.content_type or "").lower()
-    if "ogg" in ct or "opus" in ct:
-        suffix = ".ogg"
-    elif "mp4" in ct or "m4a" in ct or "aac" in ct:
-        suffix = ".m4a"
-    elif "webm" in ct:
-        suffix = ".webm"
-    elif "mpeg" in ct or "mp3" in ct:
-        suffix = ".mp3"
-    elif "wav" in ct:
-        suffix = ".wav"
-    else:
+    suffix = _upload_suffix(file.content_type)
+    if suffix is None:
         raise HTTPException(
             status_code=415,
             detail=f"Unsupported audio content-type: {file.content_type or 'none'}. "
@@ -288,8 +288,8 @@ async def predict_audio(request: Request, file: UploadFile = File(...)):
     demucs_dir = None
     try:
         with tempfile.NamedTemporaryFile(suffix=suffix, delete=False) as tmp:
-            tmp.write(data)
             tmp_path = tmp.name
+            tmp.write(data)
 
         # Decode to confirm it's valid audio before running the expensive Demucs step.
         try:
@@ -399,19 +399,28 @@ _RAGA_CANDIDATE = None
 
 
 def _get_raga_candidate():
-    """Lazy, cached; None when the registry or bundle is absent (e.g. a Space)."""
+    """Lazy; (None, None) when the registry or bundle is absent (e.g. a Space).
+
+    Only a successful load is cached, so a transient failure is retried on the
+    next request. A gate that fails to load degrades to gate=None (no
+    would_accept field) instead of taking the whole route down.
+    """
     global _RAGA_CANDIDATE
-    if _RAGA_CANDIDATE is None:
-        try:
-            from carnatify.ml.raga_runtime import RagaCandidate, ROOT as _RT_ROOT
-            registry = json.loads(_RAGA_REGISTRY.read_text())
-            name = registry["reference"]
-            candidate = RagaCandidate.load(name, registry=_RAGA_REGISTRY)
-            gate = candidate.default_gate(registry=_RAGA_REGISTRY)
-            _RAGA_CANDIDATE = (candidate, gate)
-        except Exception as exc:  # missing files, hash mismatch, import error
-            logger.warning("Reference raga candidate unavailable: %s", exc)
-            _RAGA_CANDIDATE = (None, None)
+    if _RAGA_CANDIDATE is not None:
+        return _RAGA_CANDIDATE
+    try:
+        from carnatify.ml.raga_runtime import RagaCandidate
+        registry = json.loads(_RAGA_REGISTRY.read_text())
+        candidate = RagaCandidate.load(registry["reference"], registry=_RAGA_REGISTRY)
+    except Exception as exc:  # missing files, hash mismatch, import error
+        logger.warning("Reference raga candidate unavailable: %s", exc)
+        return None, None
+    try:
+        gate = candidate.default_gate(registry=_RAGA_REGISTRY)
+    except Exception as exc:  # missing or malformed gate file
+        logger.warning("Registered raga gate unavailable, scoring without it: %s", exc)
+        gate = None
+    _RAGA_CANDIDATE = (candidate, gate)
     return _RAGA_CANDIDATE
 
 
@@ -436,17 +445,14 @@ async def identify_raga_route(request: Request, file: UploadFile = File(...)):
     data = await file.read()
     if len(data) > 30 * 1024 * 1024:
         raise HTTPException(status_code=413, detail="File too large (30 MB limit)")
-    suffix = {"ogg": ".ogg", "opus": ".ogg", "mp4": ".m4a", "m4a": ".m4a", "aac": ".m4a",
-              "webm": ".webm", "mpeg": ".mp3", "mp3": ".mp3", "wav": ".wav"}
-    ct = (file.content_type or "").lower()
-    ext = next((v for k, v in suffix.items() if k in ct), None)
+    ext = _upload_suffix(file.content_type)
     if ext is None:
         raise HTTPException(status_code=415, detail=f"Unsupported audio content-type: {file.content_type or 'none'}.")
     tmp_path = None
     try:
         with tempfile.NamedTemporaryFile(suffix=ext, delete=False) as tmp:
-            tmp.write(data)
             tmp_path = tmp.name
+            tmp.write(data)
         try:
             loop = asyncio.get_running_loop()
             f0, tonic, hop_s, duration = await loop.run_in_executor(None, lambda: _extract_melody_mix(tmp_path))
@@ -491,10 +497,7 @@ async def identify(request: Request, file: UploadFile = File(...), fast: bool = 
         raise HTTPException(status_code=413, detail="File too large (30 MB limit)")
 
     ct = (file.content_type or "").lower()
-    suffix = next((s for k, s in (("ogg", ".ogg"), ("opus", ".ogg"), ("mp4", ".m4a"),
-                                  ("m4a", ".m4a"), ("aac", ".m4a"), ("webm", ".webm"),
-                                  ("mpeg", ".mp3"), ("mp3", ".mp3"), ("wav", ".wav"))
-                   if k in ct), None)
+    suffix = _upload_suffix(ct)
     if suffix is None:
         raise HTTPException(status_code=415, detail=f"Unsupported content-type: {ct or 'none'}")
 
@@ -502,8 +505,8 @@ async def identify(request: Request, file: UploadFile = File(...), fast: bool = 
     demucs_dir = None
     try:
         with tempfile.NamedTemporaryFile(suffix=suffix, delete=False) as tmp:
-            tmp.write(data)
             tmp_path = tmp.name
+            tmp.write(data)
         try:
             y16, _ = load_upload_audio(tmp_path, 16000, 90.0)
         except Exception as exc:

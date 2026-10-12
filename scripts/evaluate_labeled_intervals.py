@@ -51,6 +51,8 @@ def main():
     ap.add_argument('--out', type=Path, required=True)
     ap.add_argument('--tonic-mixture',action='store_true',help='Fixed experimental 0.8/0.1/0.1 Sa/Pa posterior mixture; no gate')
     args = ap.parse_args()
+    if args.tonic_mixture and args.gate:
+        ap.error('--tonic-mixture replaces the ranking the gate scored; it cannot be combined with --gate')
     if args.pitch_frontend!='melodia' and args.profile!='default':
         ap.error('Alternative frontends require the unchanged original-mix tonic profile')
     separator=None
@@ -90,6 +92,9 @@ def main():
     report['pitch_frontend']=args.pitch_frontend
     if args.tonic_mixture:
         report['tonic_policy']='fixed posterior mixture at 0,5,7 semitones with weights 0.8,0.1,0.1; no production gate'
+    totals = {name: dict(n=0, correct=0, n_in_vocabulary=0, correct_in_vocabulary=0, top3_in_vocabulary=0,
+                         n_accepted=0, accepted_correct=0, accepted_oov=0) for name in candidates}
+    report['summary'] = totals
     for query in queries:
         concert = query['concert']
         f0, meta = extract_query(paths[concert], concerts[concert]['sha256'],
@@ -126,19 +131,18 @@ def main():
                 pred.update(top3=top, confidence=confidence, correct=fold(top[0]) == fold(query['truth']))
             row['predictions'][name] = pred
         report['rows'].append(row)
-        for name in candidates:
-            preds = [r['predictions'][name] for r in report['rows']]
-            known = [p for p in preds if p['in_vocabulary']]
-            report['summary'][name] = dict(n=len(preds), correct=sum(p['correct'] for p in preds),
-                                          n_in_vocabulary=len(known),
-                                          correct_in_vocabulary=sum(p['correct'] for p in known),
-                                          top3_in_vocabulary=sum(fold(query_truth) in {fold(c) for c in p['top3']}
-                                                                 for p, query_truth in
-                                                                 ((p, r['truth']) for p, r in zip(preds, report['rows'])
-                                                                  if p['in_vocabulary'])),
-                                          n_accepted=sum(p['accepted'] for p in preds),
-                                          accepted_correct=sum(p['accepted'] and p['correct'] for p in preds),
-                                          accepted_oov=sum(p['accepted'] and not p['in_vocabulary'] for p in preds))
+        for name, p in row['predictions'].items():
+            t = totals[name]
+            t['n'] += 1
+            t['correct'] += p['correct']
+            t['n_accepted'] += p['accepted']
+            t['accepted_correct'] += p['accepted'] and p['correct']
+            if p['in_vocabulary']:
+                t['n_in_vocabulary'] += 1
+                t['correct_in_vocabulary'] += p['correct']
+                t['top3_in_vocabulary'] += fold(query['truth']) in {fold(c) for c in p['top3']}
+            else:
+                t['accepted_oov'] += p['accepted']
         write_json(args.out, report)
         print(query['item_id'], {k: v['top3'] for k,v in row['predictions'].items()}, flush=True)
     print(json.dumps(report['summary'], indent=2))

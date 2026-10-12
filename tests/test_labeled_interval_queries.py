@@ -14,3 +14,13 @@ def test_longest_interval_once_per_item_and_no_new_labels():
     labels['intervals'][1]['raga']='B'
     with pytest.raises(ValueError):
         plan_queries(labels)
+
+
+def test_tonic_mixture_cannot_be_combined_with_gate(monkeypatch, tmp_path):
+    import sys
+    from scripts import evaluate_labeled_intervals as ev
+    monkeypatch.setattr(sys, 'argv', ['x', '--models', 'm', '--out', str(tmp_path / 'o.json'),
+                                      '--gate', str(tmp_path / 'g.json'), '--tonic-mixture'])
+    with pytest.raises(SystemExit) as exc:
+        ev.main()
+    assert exc.value.code == 2

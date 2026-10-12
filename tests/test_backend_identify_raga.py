@@ -90,3 +90,29 @@ def test_identify_raga_rejects_unknown_content_type(api):
 def test_committed_registry_resolves_from_backend_root():
     from backend import main
     assert main._RAGA_REGISTRY.exists()
+
+
+def test_raga_candidate_load_failure_is_retried_not_cached(monkeypatch, tmp_path):
+    from backend import main
+    monkeypatch.setattr(main, '_RAGA_CANDIDATE', None)
+    monkeypatch.setattr(main, '_RAGA_REGISTRY', tmp_path / 'missing.json')
+    assert main._get_raga_candidate() == (None, None)
+    assert main._RAGA_CANDIDATE is None
+
+
+def test_raga_gate_failure_degrades_to_no_gate(monkeypatch, candidate):
+    from backend import main
+    import carnatify.ml.raga_runtime as rt
+    monkeypatch.setattr(main, '_RAGA_CANDIDATE', None)
+    monkeypatch.setattr(rt.RagaCandidate, 'load', classmethod(lambda cls, *a, **k: candidate))
+    monkeypatch.setattr(rt.RagaCandidate, 'default_gate', lambda self, **k: (_ for _ in ()).throw(FileNotFoundError('gate.json')))
+    assert main._get_raga_candidate() == (candidate, None)
+    assert main._RAGA_CANDIDATE == (candidate, None)
+
+
+@pytest.mark.parametrize('ct,suffix', [('audio/webm;codecs=opus', '.ogg'), ('audio/mp4', '.m4a'),
+                                       ('audio/mpeg', '.mp3'), ('audio/x-wav', '.wav'),
+                                       ('application/octet-stream', None), (None, None)])
+def test_upload_suffix_shared_by_all_routes(ct, suffix):
+    from backend import main
+    assert main._upload_suffix(ct) == suffix
