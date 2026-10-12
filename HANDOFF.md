@@ -1,5 +1,133 @@
 # Carnatify: authoritative handoff for the next engineering agent
 
+## 2026-10-11 handoff: review staging and the labels that are still pending
+
+Written at Deepti's request before she finishes `data/long_concerts/LABELS.tsv`.
+This section states where things are; the 2026-09-10 and 2026-09-13 sections
+below hold the results and their receipts and are not repeated here.
+
+### Goal
+
+The set goal, **one trustworthy raga path: audited candidate, honest abstain
+gate, single contract, green tests, committed**, is complete (see the next
+section). What is in flight now is narrower:
+
+1. Get the session's code (not the September landing, not the receipts)
+   through an independent review before anything built on it moves.
+2. Score the reference candidate against Deepti's labels for concerts 4–11
+   once they exist, so the field number rests on more than six items.
+3. Hand Deepti the two decisions that are hers: a gate operating point (or
+   gate stays off) and whether `identify_raga` is wired into the product.
+
+Nothing in this section changes the reference candidate, the gate, or its
+status (off).
+
+### Current state of the code
+
+- **Working branch** `probe/duration-and-negative-arm` at `6c7611d`. All
+  session work is committed there. Tests at last full run (2026-09-13):
+  503 passed, 1 xfailed; the 12 contract and backend tests were re-run green
+  on the review branch on 2026-10-11. Nothing has been pushed by me, nothing
+  deployed; both are Deepti's.
+- **Review branch** `review/raga-runtime` at `c352467`: one squashed commit
+  on top of `38cb399` (the September landing) holding exactly the session's
+  15 code files: `src/carnatify/ml/raga_runtime.py`, `backend/main.py`,
+  `configs/raga_candidates.json`, the `gate.json`, eight scripts
+  (`candidate_verdict`, `abstain_gate`, `evaluate_labeled_intervals`,
+  `evaluate_annotated_raga`, `concert_pipeline`, `diagnose_field_failures`,
+  `evaluate_wild_clips`, `raga_fetch_offtier`) and three tests. 1,398
+  insertions, 65 deletions. Verified byte-identical to the working branch's
+  versions of those files. **Not a development branch**: fix anything on the
+  working branch and rebuild this one if a re-review is needed.
+- **Base branch** `base/sept-landing` at `38cb399`, created only so
+  ultrareview has a named base. Local `main` is back at `1ba3e1f`, equal to
+  origin.
+- **Checked out at the time of writing**: `review/raga-runtime`, for the
+  review. Return with `git checkout probe/duration-and-negative-arm`; the two
+  uncommitted files carry over because they are identical in both commits.
+- **Uncommitted, Deepti's, never touched by an agent**:
+  `data/long_concerts/LABELS.tsv` (concerts 1–3 labelled, 4–11 still blank
+  rows) and `.claude/settings.local.json`.
+- **Product**: `backend/main.py` has the `/identify-raga` route (ranked
+  candidates, `asserted: false`, gate reported as information only); legacy
+  routes untouched. Not deployed.
+- **Caches**: all 11 frozen concerts are already extracted at 180 s / 30 s
+  hop under `data/overhaul/cache/concerts/queries/`, so scoring new labels
+  costs seconds, not hours. Wild clips cached under
+  `data/overhaul/cache/wild/`. Caches are gitignored.
+
+### Files being edited
+
+No agent edit is mid-flight. Deepti is editing `LABELS.tsv`. The file mixes
+tabs and runs of spaces between columns (see the concert 2 and 3 rows); the
+previous conversion to intervals was done by hand, so any parser written for
+it must split on two or more whitespace characters, not on tabs alone.
+
+### What was tried and failed in this stretch
+
+- **Moving local `main` to `38cb399` to narrow ultrareview.** Ultrareview does
+  not read local `main`; it still saw 3,863 files / 2.8 M lines against its
+  own default base (limits: 500 files, 8,000 lines). Restored `main` to
+  `1ba3e1f` the same hour. The working alternative is a named base:
+  `/ultrareview base/sept-landing` from the review branch. Whether a
+  local-only base branch is accepted by the cloud run had not yet been
+  confirmed when this was written; if refused, the fallback is a local
+  `/code-review xhigh` on the same branch.
+- **Building the review branch in zsh with `$FILES` unquoted** failed with
+  `path does not exist in HEAD` because zsh does not word-split variables;
+  redone through `bash -c` with `"$@"`. `git worktree remove` needed
+  `--force`.
+- **`git rev-parse --short a b c`** fails with "Needed a single revision" in
+  the installed git; one ref per call.
+- **Field evaluation cannot run on the current label file.**
+  `data/architecture_audit/label_intervals.json` pins
+  `source_sha256 = a0d137ea…` of `LABELS.tsv`; the committed file and
+  Deepti's working copy both hash differently now, and
+  `evaluate_labeled_intervals.py` and `diagnose_field_failures.py` exit with
+  "Label source changed" on a mismatch. This is the guard doing its job, not
+  a bug, but it means step 3 below is required before any new field number.
+- Earlier failures in this session (migrated cache test, `sha(args.model)`
+  in `concert_pipeline`, libsndfile on m4a, tala word *Adi* matching Pāḍi)
+  are described with their fixes in the 2026-09-13 section. The experimental
+  negatives (field 3/5, wild 16/27, gate 83/16 vs 85/15, position/duration/
+  tonic sweeps rescuing nothing) are in FIELD.md, WILD.md, ABSTAIN_GATE.md and
+  FIELD_FAILURES.md.
+
+### The next step, in order
+
+1. **Review.** Deepti runs `/ultrareview base/sept-landing` on
+   `review/raga-runtime`. Triage findings against the receipts: a bug in
+   `raga_runtime.py`, `abstain_gate.py` or `candidate_verdict.py` can change
+   a headline number and would require re-running the affected harness, with
+   its prereg still binding. Fix on the working branch, commit, rebuild the
+   review branch only if a second pass is wanted.
+2. **Back to the working branch**: `git checkout probe/duration-and-negative-arm`.
+   `base/sept-landing` and `review/raga-runtime` can then be deleted.
+3. **Labels to intervals.** When `LABELS.tsv` is finished, write a small
+   converter (`scripts/labels_to_intervals.py`, parsing `m:ss` starts,
+   whitespace-run columns, `#` comments, blank-raga rows dropped, end of each
+   row at the next row's start or the concert's end, explicit exclusions from
+   the notes such as *tani* and *after song ends*) that emits
+   `label_intervals.json` with the new `source_sha256`, validated through
+   `scripts.long_concert_score.validate_intervals` against
+   `FROZEN_CONCERTS.json`. Keep the existing nine intervals' recovered values
+   as a regression check. Alapana rows carry the raga like any other row.
+   Commit `label_intervals.json`; `LABELS.tsv` itself is Deepti's to commit.
+4. **Score.** No tuning, one run:
+   `venv_train/bin/python scripts/evaluate_labeled_intervals.py --models context180
+   --gate data/overhaul/context180_recovered_experiment/gate.json --window-s 180
+   --out data/overhaul/context180_recovered_experiment/field_all.json`,
+   then the same with `strict_decode_comparator` for the paired read. Append
+   the result to `data/overhaul/FIELD.md` beside the 3/5 figure; the
+   predictions registered in FIELD_PREREG.md still apply. Read the accepted
+   rows of `BLIND_CONCERTS.md` against the labels at the same time, since
+   those 1,178 windows are the same cached queries.
+5. **Deepti's decisions**, with the field number in hand: gate point from
+   the ABSTAIN_GATE.md curve or keep it off; wire `identify_raga` behind the
+   closed gate so the product shows candidates as candidates, or leave the
+   legacy models. Only after those: any model work, starting from the
+   within-mela confusions in FIELD_FAILURES.md.
+
 ## 2026-09-10 tech-lead pass: read this before the September 9 sections
 
 Goal that was set and completed: **one trustworthy raga path: audited
