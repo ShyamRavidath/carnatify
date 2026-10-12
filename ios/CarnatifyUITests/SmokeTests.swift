@@ -23,8 +23,8 @@ final class SmokeTests: XCTestCase {
         waitForExpectations(timeout: 5)
         finish.tap()
         XCTAssertTrue(app.staticTexts["Hindōḷaṁ"].waitForExistence(timeout: 10))
-        app.buttons["findCompositionButton"].tap()
-        XCTAssertTrue(app.staticTexts["Sāmagāna lōlanē"].waitForExistence(timeout: 10))
+        // v1 is raga-only (AppConfig.compositionEnabled == false).
+        XCTAssertFalse(app.buttons["findCompositionButton"].exists)
     }
 
     func testServerFailureOffersRetry() {

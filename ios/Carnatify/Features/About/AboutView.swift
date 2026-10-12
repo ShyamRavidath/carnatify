@@ -7,7 +7,10 @@ struct AboutView: View {
         NavigationStack {
             List {
                 Section("How it works") {
-                    Text("Carnatify listens to a recording of Carnatic music and suggests which raga it might be, ranked from most to least likely. It can also try to match the lyrics to a known composition.")
+                    Text("Carnatify listens to a recording of Carnatic music and suggests which raga it might be, ranked from most to least likely.")
+                    if AppConfig.compositionEnabled {
+                        Text("It can also try to match the lyrics to a known composition.")
+                    }
                     Text("Suggestions can be wrong, especially for short or noisy clips and for ragas that share the same notes.")
                 }
                 Section("Your privacy") {

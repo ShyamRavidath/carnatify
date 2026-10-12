@@ -12,7 +12,8 @@ final class ListenModelTests: XCTestCase {
     }
 
     func testFullFlowReachesResultAndComposition() async throws {
-        let model = ListenModel(service: APIStub(mode: .confident), recorder: StubRecorder())
+        let model = ListenModel(service: APIStub(mode: .confident), recorder: StubRecorder(),
+                                compositionEnabled: true)
         model.startListening()
         try await waitUntil { model.canFinish }   // stub clock runs 20x
         model.finishListening()
@@ -22,6 +23,36 @@ final class ListenModelTests: XCTestCase {
         model.reset()
         XCTAssertEqual(model.phase, .idle)
         XCTAssertEqual(model.composition, .notRequested)
+    }
+
+    func testCompositionOffIgnoresFindComposition() async throws {
+        let model = ListenModel(service: APIStub(mode: .confident), recorder: StubRecorder(),
+                                compositionEnabled: false)
+        model.startListening()
+        try await waitUntil { model.canFinish }
+        model.finishListening()
+        try await waitUntil { if case .result = model.phase { return true } else { return false } }
+        model.findComposition()
+        XCTAssertEqual(model.composition, .notRequested)
+    }
+
+    func testSampleIsAnalyzedFromACopyAndBundleFileSurvives() async throws {
+        let sample = FileManager.default.temporaryDirectory.appendingPathComponent("test-sample.m4a")
+        try Data("fake".utf8).write(to: sample)
+        defer { try? FileManager.default.removeItem(at: sample) }
+        let model = ListenModel(service: APIStub(mode: .confident), recorder: StubRecorder(),
+                                sampleClip: sample, compositionEnabled: false)
+        XCTAssertTrue(model.hasSample)
+        model.analyzeSample()
+        try await waitUntil { if case .result = model.phase { return true } else { return false } }
+        XCTAssertTrue(FileManager.default.fileExists(atPath: sample.path))
+    }
+
+    func testNoSampleMeansNoSampleButton() {
+        let model = ListenModel(service: APIStub(mode: .confident), recorder: StubRecorder(), sampleClip: nil)
+        XCTAssertFalse(model.hasSample)
+        model.analyzeSample()
+        XCTAssertEqual(model.phase, .idle)
     }
 
     func testServerErrorShowsFailure() async throws {

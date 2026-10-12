@@ -5,7 +5,8 @@ import SwiftUI
 struct ResultsView: View {
     let result: RagaIdentification
     let composition: ListenModel.CompositionPhase
-    let findComposition: () -> Void
+    /// nil hides the composition section (v1 is raga-only, AppConfig.compositionEnabled).
+    let findComposition: (() -> Void)?
     let done: () -> Void
 
     var body: some View {
@@ -27,8 +28,10 @@ struct ResultsView: View {
             }
             .accessibilityIdentifier("ragaSection")
 
-            Section("Composition") {
-                CompositionSection(phase: composition, find: findComposition)
+            if let findComposition {
+                Section("Composition") {
+                    CompositionSection(phase: composition, find: findComposition)
+                }
             }
 
             Section {

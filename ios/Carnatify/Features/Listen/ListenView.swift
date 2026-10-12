@@ -22,11 +22,21 @@ struct ListenView: View {
         }
     }
 
+    private var trySample: (() -> Void)? {
+        guard model.hasSample else { return nil }
+        return { model.analyzeSample() }
+    }
+
+    private var findComposition: (() -> Void)? {
+        guard model.compositionEnabled else { return nil }
+        return { model.findComposition() }
+    }
+
     @ViewBuilder
     private var content: some View {
         switch model.phase {
         case .idle:
-            IdlePrompt(start: model.startListening)
+            IdlePrompt(start: model.startListening, trySample: trySample)
         case .permissionDenied:
             PermissionDeniedView(retry: model.reset)
         case .recording:
@@ -37,7 +47,8 @@ struct ListenView: View {
                 .accessibilityIdentifier("analyzing")
         case .result(let result):
             ResultsView(result: result, composition: model.composition,
-                        findComposition: model.findComposition, done: model.reset)
+                        findComposition: findComposition,
+                        done: model.reset)
         case .failed(let error):
             FailureView(message: error.userMessage, retry: model.reset)
         }
@@ -46,6 +57,7 @@ struct ListenView: View {
 
 private struct IdlePrompt: View {
     let start: () -> Void
+    let trySample: (() -> Void)?
 
     var body: some View {
         VStack(spacing: 24) {
@@ -69,6 +81,10 @@ private struct IdlePrompt: View {
             .buttonStyle(.borderedProminent)
             .controlSize(.large)
             .accessibilityIdentifier("listenButton")
+            if let trySample {
+                Button("No music nearby? Try a sample", action: trySample)
+                    .accessibilityIdentifier("trySampleButton")
+            }
         }
     }
 }

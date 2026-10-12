@@ -27,17 +27,42 @@ final class ListenModel {
 
     private let service: IdentificationService
     private let recorder: ClipRecording
+    private let sampleClip: URL?
+    let compositionEnabled: Bool
     private var meterTask: Task<Void, Never>?
     private var workTask: Task<Void, Never>?
-    /// Kept only until the user leaves the result, so the composition step can reuse it.
+    /// Kept only until the result arrives (or, with composition on, until the user leaves
+    /// the result so the composition step can reuse it).
     private var clipURL: URL?
 
-    init(service: IdentificationService, recorder: ClipRecording) {
+    init(service: IdentificationService, recorder: ClipRecording,
+         sampleClip: URL? = AppConfig.sampleClipURL,
+         compositionEnabled: Bool = AppConfig.compositionEnabled) {
         self.service = service
         self.recorder = recorder
+        self.sampleClip = sampleClip
+        self.compositionEnabled = compositionEnabled
     }
 
     var canFinish: Bool { phase == .recording && elapsed >= AppConfig.minimumClipSeconds }
+    var hasSample: Bool { sampleClip != nil }
+
+    /// Sends the bundled sample instead of a recording. A copy is analyzed so the
+    /// usual clip cleanup never touches the bundle.
+    func analyzeSample() {
+        guard let sampleClip, phase == .idle else { return }
+        clearState()
+        let copy = FileManager.default.temporaryDirectory
+            .appendingPathComponent("sample-\(UUID().uuidString).m4a")
+        do {
+            try FileManager.default.copyItem(at: sampleClip, to: copy)
+        } catch {
+            phase = .failed(.network("Could not open the sample recording."))
+            return
+        }
+        clipURL = copy
+        analyze(copy)
+    }
 
     func startListening() {
         guard phase != .recording, phase != .analyzing else { return }
@@ -78,7 +103,7 @@ final class ListenModel {
     }
 
     func findComposition() {
-        guard case .result = phase, let clipURL, composition != .loading else { return }
+        guard compositionEnabled, case .result = phase, let clipURL, composition != .loading else { return }
         composition = .loading
         workTask = Task {
             do {
@@ -113,6 +138,7 @@ final class ListenModel {
             do {
                 let result = try await service.identifyRaga(clip: url)
                 phase = .result(result)
+                if !compositionEnabled { deleteClip() }
             } catch let error as APIError {
                 phase = .failed(error)
                 deleteClip()
