@@ -267,6 +267,41 @@ def _upload_suffix(content_type: str | None) -> str | None:
     return next((s for k, s in _UPLOAD_SUFFIXES if k in ct), None)
 
 
+def _sniff_suffix(data: bytes) -> str | None:
+    """Container from the file's magic bytes; None if unrecognised.
+
+    iOS clients often label uploads application/octet-stream or audio/x-caf, which the
+    content-type table rejects even though the decoder reads them fine (audited
+    2026-10-11, docs/ios/BACKEND_READINESS.md). The bytes are the better witness.
+    """
+    head = data[:12]
+    if head[4:8] == b"ftyp":
+        return ".m4a"
+    if head[:4] == b"caff":
+        return ".caf"
+    if head[:4] == b"RIFF" and head[8:12] == b"WAVE":
+        return ".wav"
+    if head[:4] == b"OggS":
+        return ".ogg"
+    if head[:4] == b"fLaC":
+        return ".flac"
+    if head[:4] == b"\x1a\x45\xdf\xa3":
+        return ".webm"
+    if head[:3] == b"ID3" or (len(head) >= 2 and head[0] == 0xFF and head[1] & 0xE0 == 0xE0):
+        return ".mp3"
+    return None
+
+
+def _resolve_upload_suffix(content_type: str | None, data: bytes) -> str | None:
+    """Sniffed container first, declared content-type as fallback; None means 415."""
+    return _sniff_suffix(data) or _upload_suffix(content_type)
+
+
+def _public_identity(d: dict | None, drop: tuple[str, ...]) -> dict | None:
+    """Strip server filesystem paths from identity dicts before they leave the API."""
+    return None if d is None else {k: v for k, v in d.items() if k not in drop}
+
+
 @app.post("/predict-audio")
 @limiter.limit("2/minute")
 async def predict_audio(request: Request, file: UploadFile = File(...)):
@@ -276,7 +311,7 @@ async def predict_audio(request: Request, file: UploadFile = File(...)):
     if len(data) > 30 * 1024 * 1024:
         raise HTTPException(status_code=413, detail="File too large (30 MB limit)")
 
-    suffix = _upload_suffix(file.content_type)
+    suffix = _resolve_upload_suffix(file.content_type, data)
     if suffix is None:
         raise HTTPException(
             status_code=415,
@@ -445,7 +480,7 @@ async def identify_raga_route(request: Request, file: UploadFile = File(...)):
     data = await file.read()
     if len(data) > 30 * 1024 * 1024:
         raise HTTPException(status_code=413, detail="File too large (30 MB limit)")
-    ext = _upload_suffix(file.content_type)
+    ext = _resolve_upload_suffix(file.content_type, data)
     if ext is None:
         raise HTTPException(status_code=415, detail=f"Unsupported audio content-type: {file.content_type or 'none'}.")
     tmp_path = None
@@ -471,11 +506,12 @@ async def identify_raga_route(request: Request, file: UploadFile = File(...)):
         "candidates": [{"raga": r["raga"], "probability": r["probability"], "score": r["score"]}
                        for r in result["ranked"]],
         "signals": result["signals"],
-        "gate": {**(result["gate"] or {}), "would_accept": result["accepted"]} if result["gate"] else None,
+        "gate": ({**_public_identity(result["gate"], ("source",)), "would_accept": result["accepted"]}
+                 if result["gate"] else None),
         "tonic": tonic,
         "voiced_s": result["voiced_s"],
         "duration": duration,
-        "model": result["model"],
+        "model": _public_identity(result["model"], ("path",)),
     }
 
 
@@ -497,7 +533,7 @@ async def identify(request: Request, file: UploadFile = File(...), fast: bool = 
         raise HTTPException(status_code=413, detail="File too large (30 MB limit)")
 
     ct = (file.content_type or "").lower()
-    suffix = _upload_suffix(ct)
+    suffix = _resolve_upload_suffix(ct, data)
     if suffix is None:
         raise HTTPException(status_code=415, detail=f"Unsupported content-type: {ct or 'none'}")
 
@@ -561,7 +597,7 @@ async def identify(request: Request, file: UploadFile = File(...), fast: bool = 
             shutil.rmtree(demucs_dir, ignore_errors=True)
 
     query_id = clip_identify.log_query(result, {
-        "fast": fast, "ip": _client_ip(request),
+        "fast": fast,
         "n_variants": len(variants)})
     return {
         "query_id": query_id,
@@ -590,7 +626,7 @@ def feedback(request: Request, req: FeedbackRequest) -> dict:
     clip_identify.log_feedback({
         "query_id": req.query_id, "verdict": req.verdict,
         "chosen_title": req.chosen_title, "user_title": req.user_title,
-        "user_raga": req.user_raga, "ip": _client_ip(request)})
+        "user_raga": req.user_raga})
     return {"status": "recorded", "thanks": True}
 
 

@@ -116,3 +116,32 @@ def test_raga_gate_failure_degrades_to_no_gate(monkeypatch, candidate):
 def test_upload_suffix_shared_by_all_routes(ct, suffix):
     from backend import main
     assert main._upload_suffix(ct) == suffix
+
+
+# ── iOS upload formats (docs/ios/BACKEND_READINESS.md, 2026-10-11) ──────────
+
+def test_sniff_suffix_recognises_ios_containers():
+    from backend.main import _sniff_suffix
+    assert _sniff_suffix(b"\x00\x00\x00\x20ftypM4A \x00\x00") == ".m4a"
+    assert _sniff_suffix(b"caff\x00\x01\x00\x00desc") == ".caf"
+    assert _sniff_suffix(b"RIFF\x24\x00\x00\x00WAVEfmt ") == ".wav"
+    assert _sniff_suffix(b"OggS\x00\x02\x00\x00\x00\x00\x00\x00") == ".ogg"
+    assert _sniff_suffix(b"ID3\x04\x00\x00\x00\x00\x00\x00\x00\x00") == ".mp3"
+    assert _sniff_suffix(b"\x1a\x45\xdf\xa3\x01\x00\x00\x00\x00\x00\x00\x1f") == ".webm"
+    assert _sniff_suffix(b"not audio at all") is None
+
+
+def test_resolve_suffix_prefers_bytes_over_declared_type():
+    from backend.main import _resolve_upload_suffix
+    m4a = b"\x00\x00\x00\x20ftypM4A \x00\x00"
+    assert _resolve_upload_suffix("application/octet-stream", m4a) == ".m4a"
+    assert _resolve_upload_suffix("audio/x-caf", b"caff\x00\x01\x00\x00") == ".caf"
+    assert _resolve_upload_suffix(None, m4a) == ".m4a"
+    assert _resolve_upload_suffix("audio/wav", b"garbage-bytes") == ".wav"
+    assert _resolve_upload_suffix("application/octet-stream", b"garbage-bytes") is None
+
+
+def test_public_identity_strips_server_paths():
+    from backend.main import _public_identity
+    assert _public_identity({"name": "m", "path": "/Users/x/raga.joblib"}, ("path",)) == {"name": "m"}
+    assert _public_identity(None, ("path",)) is None

@@ -1,0 +1,24 @@
+{
+ "query_id": "2e2f2cdd45d1",
+ "compositions": [],
+ "composition_confidence": "none",
+ "clip_type": "no_lyrics",
+ "asr_variant": null,
+ "transcript": "  helfen par surveye  likewise ol national medidas",
+ "message": "Couldn't hear clear lyrics — this may be alapana, instrumental, or too noisy. Raga guess below is low-confidence. Try a section with singing, ideally the pallavi.",
+ "raga": [
+  {
+   "name": "Varāḷi",
+   "confidence": 0.07333333333333333
+  },
+  {
+   "name": "Mōhanaṁ",
+   "confidence": 0.07333333333333333
+  },
+  {
+   "name": "Kēdāragauḷa",
+   "confidence": 0.07
+  }
+ ],
+ "raga_confidence": "low"
+}

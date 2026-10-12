@@ -1,0 +1,57 @@
+{
+ "asserted": false,
+ "answered": true,
+ "reason": null,
+ "candidates": [
+  {
+   "raga": "Latāngi",
+   "probability": 0.2195913851999234,
+   "score": 0.23427943305062904
+  },
+  {
+   "raga": "Mukhāri",
+   "probability": 0.05998019770406476,
+   "score": 0.14894568857508084
+  },
+  {
+   "raga": "Mōhanaṁ",
+   "probability": 0.05895216935365921,
+   "score": 0.14780891422741327
+  },
+  {
+   "raga": "Mānḍu",
+   "probability": 0.041288509926859965,
+   "score": 0.1243908048459259
+  },
+  {
+   "raga": "Jōnpuri",
+   "probability": 0.04015767391148253,
+   "score": 0.12256474410105245
+  }
+ ],
+ "signals": {
+  "max_score": 0.23427943305062904,
+  "margin": 0.0853337444755482,
+  "softmax_max": 0.2195913851999234
+ },
+ "gate": {
+  "name": "margin_v1_context180",
+  "signal": "margin",
+  "threshold": 0.16277227656365623,
+  "status": "registered; dev bar (precision>=0.85, OOV-FA<=0.15) FAILED narrowly (82.9% / 15.6% at 38% coverage); off in the product by rule",
+  "source": "gate.json",
+  "would_accept": false
+ },
+ "tonic": 168.98361206054688,
+ "voiced_s": 20.720907029478457,
+ "duration": 30.0,
+ "model": {
+  "name": "context180",
+  "sha256": "f594584402cb2ae35532612e673c194661706fcdfe4b69bbecc69b6d50316e2b",
+  "path": "raga.joblib",
+  "feature_version": "melody_v1_voiced_compressed",
+  "representation": "voiced",
+  "window_s": 180,
+  "n_classes": 69
+ }
+}

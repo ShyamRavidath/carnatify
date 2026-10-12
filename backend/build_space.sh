@@ -31,6 +31,17 @@ cp "$ROOT/data/karnatik_lyrics.json" "$HERE/data/karnatik_lyrics.json"
 cp "$ROOT/identify_clip.py" "$HERE/identify_clip.py"
 cp "$ROOT/registry_hygiene.py" "$HERE/registry_hygiene.py"
 
+# /identify-raga (the iOS app's raga route) serves the registry's reference
+# candidate through raga_runtime, which resolves registry paths relative to the
+# Space root. Without these three files the route returns 503. The bundle is
+# ~138 MB: the Space needs Git LFS for *.joblib.
+REF_BUNDLE="data/overhaul/context180_recovered_experiment/training/raga.joblib"
+REF_GATE="data/overhaul/context180_recovered_experiment/gate.json"
+mkdir -p "$HERE/configs" "$HERE/$(dirname "$REF_BUNDLE")"
+cp "$ROOT/configs/raga_candidates.json" "$HERE/configs/raga_candidates.json"
+cp "$ROOT/$REF_BUNDLE" "$HERE/$REF_BUNDLE"
+cp "$ROOT/$REF_GATE" "$HERE/$REF_GATE"
+
 # Drop compiled caches so they don't bloat the image.
 find "$HERE/src" -name "__pycache__" -type d -prune -exec rm -rf {} +
 

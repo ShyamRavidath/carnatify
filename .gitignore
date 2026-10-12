@@ -49,6 +49,9 @@ __pycache__/
 /backend/data/composition_registry.json
 /backend/identify_clip.py
 /backend/data/feedback/
+# reference raga candidate copied in for /identify-raga (138 MB bundle)
+/backend/configs/
+/backend/data/overhaul/
 data/karnatik_html/
 
 # ── Synthetic bootstrap audio (zero-cost pivot 0718) — manifests tracked, audio not ──
@@ -161,3 +164,7 @@ data/duration_probe/**/*.wav
 /data/raga_coverage/matrix.npz
 /data/long_concerts/labels_validation.json
 /data/overhaul/**/*.lock
+
+# Xcode per-user state
+ios/**/xcuserdata/
+ios/**/*.xcworkspace/xcuserdata/
