@@ -58,7 +58,7 @@ status (off).
 
 ### Files being edited
 
-No agent edit is mid-flight. Deepti is editing `LABELS.tsv`. The file mixes
+No agent edit is mid-flight (see "Added after the review ran" below for the review fixes). Deepti is editing `LABELS.tsv`. The file mixes
 tabs and runs of spaces between columns (see the concert 2 and 3 rows); the
 previous conversion to intervals was done by hand, so any parser written for
 it must split on two or more whitespace characters, not on tabs alone.
