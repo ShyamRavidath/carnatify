@@ -19,7 +19,7 @@ dtaidistance>=2.3            # imported by ml.dtw_matcher
 demucs>=4.0.0                # vocal source separation for /predict-audio
 
 google-generativeai>=0.8    # lyrics meaning generation (Gemini 2.0 Flash)
-essentia>=2.1b6              # TonicIndianArtMusic — drone-based Sa estimation in /predict-audio
+essentia==2.1b6.dev1389     # TonicIndianArtMusic; only .devN builds exist on PyPI (">=2.1b6" matches none)
 
 openai-whisper>=20240930    # /identify ASR (wild-clip validated engine)
 faster-whisper>=1.2         # optional: ASR_ENGINE=faster-whisper (benchmark on-Space first)
