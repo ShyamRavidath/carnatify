@@ -63,6 +63,28 @@ tabs and runs of spaces between columns (see the concert 2 and 3 rows); the
 previous conversion to intervals was done by hand, so any parser written for
 it must split on two or more whitespace characters, not on tabs alone.
 
+### Added after the review ran
+
+- **Review fixes landed** in `5715742` on the working branch: shared upload
+  suffix table, temp path set before write, candidate load failure no longer
+  cached, gate load failure degrades to "no gate", O(n) interval summary,
+  `--tonic-mixture` refuses `--gate`. The upload-decode count test that had
+  been red since 2026-09-13 is fixed. Full suite 2026-10-11 evening:
+  **517 passed, 1 xfailed**.
+- **Step 3 below is now done in code, not run.** `scripts/labels_to_intervals.py`
+  converts `LABELS.tsv` to the manifest deterministically (dry run by default,
+  `--write` to replace). It reproduces all nine hand-recovered intervals
+  exactly (`tests/test_labels_to_intervals.py`). It interprets only a few note
+  phrasings (song ends [at|around] T, thani ... until T, ignore rest of clip,
+  muted) and errors on any other `m:ss` in a note, so new notes either fit
+  those phrasings or the rules get extended. Current dry-run diff against the
+  committed manifest: Dhēnukā and Kalānidhi stay raw spellings (both
+  out-of-vocabulary either way), and the Kalānidhi row is primary now that it
+  says `high`.
+- **iOS app work started 2026-10-11.** Planning docs live under `docs/ios/`.
+  Pocock skills configured: local-markdown tracker in `.scratch/`, see the
+  Agent skills block in `CLAUDE.md`.
+
 ### What was tried and failed in this stretch
 
 - **Moving local `main` to `38cb399` to narrow ultrareview.** Ultrareview does
