@@ -79,8 +79,9 @@ it must split on two or more whitespace characters, not on tabs alone.
   muted) and errors on any other `m:ss` in a note, so new notes either fit
   those phrasings or the rules get extended. Current dry-run diff against the
   committed manifest: Dhēnukā and Kalānidhi stay raw spellings (both
-  out-of-vocabulary either way), and the Kalānidhi row is primary now that it
-  says `high`.
+  out-of-vocabulary either way), and the Kalānidhi row is primary because it
+  now says `high`. **That `high` was typed by the ultrareview pass, not by
+  Deepti**; she must confirm or blank it before `--write`.
 - **iOS app work started 2026-10-11.** Planning docs live under `docs/ios/`.
   Pocock skills configured: local-markdown tracker in `.scratch/`, see the
   Agent skills block in `CLAUDE.md`.
