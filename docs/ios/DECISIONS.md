@@ -14,8 +14,8 @@ Settled by Deepti in grilling rounds 1 and 2, 2026-10-11. Change only with her s
 | 7 | **Raga engine = `/identify-raga`** (audited `raga_runtime`, gate off, `asserted:false`). | Taken as agreed with round 1 ("I agree with your rule"); confirm if not. Legacy `/predict-audio` gave codec-dependent answers. |
 | 8 | **iPhone only, iOS 17+.** | Build with the Xcode 27 SDK; gate newer APIs. |
 | 9 | **Ship as fast as possible.** | Target: TestFlight first, submission right after review-risk items clear. |
-| 10 | **Bundled "Try a sample" clip** for App Review and users with no music nearby. | Deepti supplies an open-source recording; licence must allow redistribution inside an app (CC0 / CC BY / CC BY-SA; avoid NC/ND). Drop at `ios/Carnatify/Resources/sample-clip.m4a`; button appears automatically. Credit the performer in About if the licence asks. |
-| 11 | **Privacy + support pages** live on the Vercel site at `/privacy` and `/support`. | Static pages in `frontend/app/`; support email still a TODO in `frontend/lib/site.ts`. |
+| 10 | **Bundled "Try a sample" clip: deferred to a post-launch update** (round 3). v1 ships without the file, so the button stays hidden. Review notes instead tell the reviewer to play a public Carnatic recording near the phone. | Later: Deepti supplies an open-source recording; licence must allow redistribution inside an app (CC0 / CC BY / CC BY-SA; avoid NC/ND). Drop at `ios/Carnatify/Resources/sample-clip.m4a`; button appears automatically. Credit the performer in About if the licence asks. |
+| 11 | **Privacy + support pages** live on the Vercel site at `/privacy` and `/support`. | Static pages in `frontend/app/`; support email ravidath@gmail.com (`frontend/lib/site.ts`). |
 
 Facts checked while settling these:
 - No user audio or user-linked data reaches Gemini; it only turns a composition title into meaning text (`src/carnatify/lyrics/meaning_generator.py`). Guideline 5.1.2(i) is not triggered by v1.

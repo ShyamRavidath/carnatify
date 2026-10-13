@@ -20,20 +20,20 @@ Decisions are recorded in `docs/ios/DECISIONS.md` as the grilling rounds settle 
 - [x] Mic permission flow + purpose string; recording UI with level meter and a length guide.
 - [x] Results screen: ranked candidates shown as candidates, never asserted.
 - [x] Error, offline and slow-server states (review testers hit these).
-- [x] Privacy policy + support pages written (`frontend/app/privacy`, `frontend/app/support`). Deepti deploys to Vercel; support email still TODO in `frontend/lib/site.ts`.
+- [x] Privacy policy + support pages written (`frontend/app/privacy`, `frontend/app/support`). Deepti deploys to Vercel; support email ravidath@gmail.com.
 - [x] Composition hidden behind `AppConfig.compositionEnabled = false`; About copy matches.
 - [x] "Try a sample" flow; button appears when `ios/Carnatify/Resources/sample-clip.m4a` exists.
 
 ## Phase 2: hardening + submission (Codex-heavy)
 
 **Codex: start here.** Core app and backend are done and live. Your queue, in order:
-1. Build + run on Simulator against the live server (`-apiBaseURL` not needed; production URL is set). Record a real clip by playing `data/long_concerts/audio/long_concert_2.mp3` from 16:00 near the Mac mic, or use the sample once it lands. Expect Hindōḷaṁ top-1.
+1. Build + run on Simulator against the live server (`-apiBaseURL` not needed; production URL is set). Record a real clip by playing `data/long_concerts/audio/long_concert_2.mp3` from 16:00 near the Mac mic, Expect Hindōḷaṁ top-1.
 2. App icon: 1024x1024 in `Assets.xcassets/AppIcon` (no alpha). Ask Deepti for art direction or propose one.
 3. Register App ID `com.shyamravidath.carnatify` and create the App Store Connect record (team `M6L74ZB5KS`, `asc` CLI). Deepti approves any account action.
 4. Privacy nutrition label: Audio Data, collected, not linked, not tracking, app functionality. Age rating questionnaire. Category: Music.
 5. Screenshots (6.9" and 6.5" iPhone) from Simulator: idle, recording, results.
 6. Run `app-store-preflight-skills`; fix every finding.
-7. Review notes draft: what the app does, "tap Try a sample" path, first request may take up to a minute if the server was idle.
+7. Review notes draft: what the app does; v1 has no bundled sample, so tell the reviewer to play a public Carnatic recording (pick a stable YouTube link of a well-known Hindolam or Bhairavi kriti, ask Deepti to approve it) near the phone for 1-3 min; first request may take up to a minute if the server was idle.
 8. Archive + TestFlight upload is Deepti's action: prepare the exact commands and stop.
 - [ ] Simulator + device testing, gstack `/ios-qa`.
 - [ ] `PrivacyInfo.xcprivacy`, privacy nutrition labels, age rating.
@@ -47,6 +47,6 @@ Decisions are recorded in `docs/ios/DECISIONS.md` as the grilling rounds settle 
 
 ## Still open in Phase 1
 - [ ] App icon (asset catalog has an empty 1024 slot).
-- [ ] Sample clip file for App Review: Deepti picks an open-licence recording (CC0 / CC BY / CC BY-SA); trim to ~180 s, AAC m4a.
+- [ ] (post-launch update) Sample clip file: Deepti picks an open-licence recording (CC0 / CC BY / CC BY-SA); trim to ~180 s, AAC m4a.
 - [x] Live Space URL confirmed in `AppConfig.productionBaseURL`.
 - [x] Tests run on iOS 27.0 too.
